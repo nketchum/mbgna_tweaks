@@ -1,0 +1,13 @@
+# drush sql:sync @prod @self
+# drush rsync @prod:%files @self:%files --exclude-paths=php    (exclude files/php because that doesn't rsync)
+
+drush:
+  include:
+    - '${env.HOME}/drush/Commands'
+  paths:
+    alias-path:
+      - '${env.HOME}/drush/sites'
+options:
+  uri: 'https://recommended-project-d10.lndo.site/'
+ssh:
+  options: '-o PasswordAuthentication=no'

@@ -1,0 +1,46 @@
+name: recommended-project
+recipe: lamp
+config:
+  webroot: web
+  xdebug: false
+  php: 8.1
+  composer_version: 2
+services:
+  appserver:
+    config:
+      php: .lando/php.ini
+    ssl: true
+    build_as_root:
+      - apt-get update -y
+      - apt-get install vim -y
+      - apt-get install nodejs -y
+      - apt-get install npm -y
+      - npm install gulp-cli --global
+      - composer install --dev
+  database:
+    type: mysql:5.7
+    creds:
+      user: drupaluser
+      password: drupalpass
+      database: drupal
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+    portforward: 1026
+  pma:
+    type: phpmyadmin
+    hosts:
+      - database
+tooling:
+  npm:
+    service: appserver
+  node:
+    service: appserver
+  gulp:
+    service: appserver
+  yarn:
+    service: appserver
+  drush:
+    service: appserver
+    cmd: drush

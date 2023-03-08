@@ -1,0 +1,17 @@
+prod:
+  host: hostname.tld
+  user: myuser
+  root: /path/to/webroot
+  uri:  http://uri.tld
+
+stage:
+  host: hostname.tld
+  user: myuser
+  root: /path/to/webroot
+  uri:  http://uri.tld
+
+dev:
+  host: hostname.tld
+  user: myuser
+  root: /path/to/webroot
+  uri:  http://uri.tld
