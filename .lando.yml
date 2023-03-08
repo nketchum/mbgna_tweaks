@@ -1,5 +1,5 @@
-# Change "recommended-project" to the website/project/directory name.
-name: m-sandbox-01
+# Change "00" to an identifying character set.
+name: m-sandbox-00
 recipe: drupal9
 config:
   php: '8.1'
@@ -14,7 +14,7 @@ config:
 services:
   appserver:
     build_as_root:
-      # - composer install --ignore-platform-reqs
+      - composer install --ignore-platform-reqs
       - chmod -R 777 /app/private
       - chmod -R 777 /app/web/sites/default/files
       - apt-get update
@@ -23,8 +23,8 @@ services:
       volumes:
         # Change "DRIVE" to the drive name and 
         # change "PROJECT" to the website/project/directory name.
-        - "/Volumes/MSD01/Sites/m-sandbox-01/public:/app/web/sites/default/files"
-        - "/Volumes/MSD01/Sites/m-sandbox-01/private:/app/private"
+        - "/Volumes/MSD01/Sites/m-sandbox-00/public:/app/web/sites/default/files"
+        - "/Volumes/MSD01/Sites/m-sandbox-00/private:/app/private"
   mailhog:
     type: mailhog
     portforward: false
