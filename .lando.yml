@@ -17,6 +17,7 @@ services:
       # - composer install --ignore-platform-reqs
       - chmod -R 777 /app/private
       - chmod -R 777 /app/web/sites/default/files
+      # Vim
       - apt-get update
       - apt-get install -y vim
     overrides:
