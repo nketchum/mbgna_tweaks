@@ -23,6 +23,7 @@
         "drupal/ds": "^3.15",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_lb": "^1.0@RC",
+        "drupal/inline_entity_form": "^1.0@RC",
         "drupal/layout_builder_admin_theme": "^1.1",
         "drupal/layout_builder_operation_link": "^2.1",
         "drupal/layout_builder_restrictions": "^2.17",
