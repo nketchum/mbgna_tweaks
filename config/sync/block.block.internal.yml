@@ -1,0 +1,25 @@
+uuid: 80a9fd3b-9003-4a86-a066-6841fc02ea38
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.internal
+  module:
+    - system
+  theme:
+    - mbgna_dxpr
+id: internal
+theme: mbgna_dxpr
+region: prefooter
+weight: 0
+provider: null
+plugin: 'system_menu_block:internal'
+settings:
+  id: 'system_menu_block:internal'
+  label: Internal
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

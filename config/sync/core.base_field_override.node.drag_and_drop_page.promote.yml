@@ -1,13 +1,13 @@
-uuid: 8c2720d1-437b-4168-96fb-0c564257a2dd
+uuid: 00c425f8-2835-478b-9e44-eb4fb31407b8
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.example
-id: node.example.promote
+    - node.type.drag_and_drop_page
+id: node.drag_and_drop_page.promote
 field_name: promote
 entity_type: node
-bundle: example
+bundle: drag_and_drop_page
 label: 'Promoted to front page'
 description: ''
 required: false

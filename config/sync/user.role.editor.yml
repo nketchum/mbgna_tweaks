@@ -2,10 +2,21 @@ uuid: 4a1dc605-ac09-4b46-a0cf-12bbb6a19939
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.minimal_html
+    - taxonomy.vocabulary.kickers
   module:
-    - field_ui
+    - block
+    - block_content_permissions
+    - block_region_permissions
+    - contact
+    - dxpr_builder
+    - file
+    - filter
     - media
+    - menu_admin_per_menu
     - node
+    - path
     - system
     - taxonomy
     - toolbar
@@ -16,19 +27,35 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access files overview'
   - 'access media overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
+  - 'access user contact forms'
   - 'access user profiles'
-  - 'administer content types'
-  - 'administer node fields'
+  - 'administer blocks'
+  - 'administer dxpr_builder_profile'
+  - 'administer footer menu items'
+  - 'administer main menu items'
+  - 'administer mbgna_dxpr content_bottom'
+  - 'administer mbgna_dxpr footer'
+  - 'administer mbgna_dxpr sidebar_second'
   - 'administer nodes'
-  - 'administer taxonomy'
-  - 'administer taxonomy_term fields'
+  - 'administer pre-footer menu items'
+  - 'administer users'
   - 'bypass node access'
   - 'create media'
-  - 'delete all revisions'
+  - 'create simple_text block content'
+  - 'create terms in kickers'
+  - 'create url aliases'
   - 'delete any media'
-  - 'revert all revisions'
+  - 'delete any simple_text block content'
+  - 'delete terms in kickers'
+  - 'edit terms in kickers'
   - 'update any media'
+  - 'update any simple_text block content'
+  - 'use text format minimal_html'
+  - 'view all media revisions'
   - 'view own unpublished media'
   - 'view the administration theme'
+  - 'view user email addresses'

@@ -1,0 +1,23 @@
+uuid: 9316d925-6066-4177-98ae-061d7765373d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Minimal HTML'
+format: minimal_html
+weight: -9
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a> <em> <strong> <p> <small> <big>'
+      filter_html_help: false
+      filter_html_nofollow: true
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

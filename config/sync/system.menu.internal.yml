@@ -1,0 +1,8 @@
+uuid: 64411414-3721-4fb7-af6b-f7bfa6cce12d
+langcode: en
+status: true
+dependencies: {  }
+id: internal
+label: Internal
+description: 'Internal links such as portals.'
+locked: false

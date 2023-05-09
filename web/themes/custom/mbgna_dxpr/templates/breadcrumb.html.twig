@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Copy of Bootstrap5 breadcrumb.html.twig
+ *
+ * Description:
+ *   Drupal insists on using "Node" to specify the homepage
+ *   in breadcrumbs. An fast easy fix is just updating this
+ *   template file and do the replacement here.
+ *   The other problem is that Drupal breadcrumbs insist
+ *   that "node" is the front page url when it is not.
+ *
+ * @ingroup templates
+ */
+#}
+{% if breadcrumb and theme.settings.page_title_breadcrumbs %}
+  <ol class="breadcrumb">
+    {% for item in breadcrumb %}
+      <li {{ item.attributes }}>
+        {% if item.url and item.text %}
+          {% if item.text == "Node" %}<a href="/">Home</a>{% else %}<a href="{{ item.url }}">{{ item.text }}</a>{% endif %}
+        {% else %}
+          {{ item.text }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}

@@ -1,0 +1,12 @@
+uuid: 5d4242a1-2a8b-4c44-b9a0-ab172afc195b
+langcode: en
+status: true
+dependencies: {  }
+id: website_feedback
+label: 'Website Feedback'
+recipients:
+  - nketchum@umich.edu
+reply: ''
+weight: 0
+message: 'Thank you.'
+redirect: /

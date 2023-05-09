@@ -1,11 +1,18 @@
 uuid: f36171bb-ae96-4ebc-a581-395eabc8fa57
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: 'Basic page'
 type: basic_page
 description: 'Provides a basic page content type.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 0
 display_submitted: false

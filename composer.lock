@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4eab57575ef2b8777fe065efeef89ac8",
+    "content-hash": "568efe56d3dae2d9f5ffea7f10f8d629",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1331,6 +1331,116 @@
             }
         },
         {
+            "name": "drupal/allowed_formats",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/allowed_formats.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/allowed_formats-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "ac6c6d398f303608ced7e9cd9d4556a728dc41f0"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1669170410",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Northern Commerce (formerly Digital Echidna)",
+                    "homepage": "https://www.drupal.org/northern-commerce-formerly-digital-echidna",
+                    "role": "Supporting organization"
+                },
+                {
+                    "name": "Jordan Thompson (nord102)",
+                    "homepage": "https://www.drupal.org/u/nord102",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Wunder",
+                    "homepage": "https://www.drupal.org/wunder",
+                    "role": "Supporting organization"
+                },
+                {
+                    "name": "Florian Loretan (floretan)",
+                    "homepage": "https://www.drupal.org/u/floretan",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Limit which text formats are available for each field instance.",
+            "homepage": "https://www.drupal.org/project/allowed_formats",
+            "support": {
+                "source": "http://cgit.drupalcode.org/allowed_formats",
+                "issues": "https://www.drupal.org/project/issues/allowed_formats"
+            }
+        },
+        {
+            "name": "drupal/block_content_permissions",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_content_permissions.git",
+                "reference": "8.x-1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_content_permissions-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "1ecb7330f69be30b6cf05f8682d1957c1aaf605e"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "suggest": {
+                "drupal/block_region_permissions": "Block Region Permissions adds permissions for administering 'blocks' based on each theme's regions."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.11",
+                    "datestamp": "1674237116",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Roberson",
+                    "homepage": "https://www.drupal.org/u/joshuaroberson",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Block Content Permissions adds permissions for administering 'block content types' and 'block content'.",
+            "homepage": "https://www.drupal.org/project/block_content_permissions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_content_permissions",
+                "issues": "https://www.drupal.org/project/issues/block_content_permissions"
+            }
+        },
+        {
             "name": "drupal/block_form_alter",
             "version": "2.0.0",
             "source": {
@@ -1374,6 +1484,55 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/block_form_alter",
                 "issues": "https://www.drupal.org/project/issues/block_form_alter"
+            }
+        },
+        {
+            "name": "drupal/block_region_permissions",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_region_permissions.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_region_permissions-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "651b0201d9cb98a668e693e230307f3b51894222"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "suggest": {
+                "drupal/block_content_permissions": "Block Content Permissions adds permissions for administering 'block content types' and 'block content'."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1674237106",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Roberson",
+                    "homepage": "https://www.drupal.org/u/joshuaroberson",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Block Region Permissions adds permissions for administering 'blocks' based on each theme's regions.",
+            "homepage": "https://www.drupal.org/project/block_region_permissions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_region_permissions",
+                "issues": "https://www.drupal.org/project/issues/block_region_permissions"
             }
         },
         {
@@ -2364,6 +2523,89 @@
             }
         },
         {
+            "name": "drupal/easy_breadcrumb",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/easy_breadcrumb.git",
+                "reference": "2.0.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "e73a7c3568fccaf85b3df0ddd98d713f4d2f5415"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.5",
+                    "datestamp": "1673559799",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Greg Boggs",
+                    "homepage": "https://www.drupal.org/u/greg-boggs",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "hmartens",
+                    "homepage": "https://www.drupal.org/user/622826"
+                },
+                {
+                    "name": "loopduplicate",
+                    "homepage": "https://www.drupal.org/user/717290"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "NickDickinsonWilde",
+                    "homepage": "https://www.drupal.org/user/3094661"
+                },
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
+                    "name": "sonemonu",
+                    "homepage": "https://www.drupal.org/user/1667988"
+                },
+                {
+                    "name": "tatarbj",
+                    "homepage": "https://www.drupal.org/user/649590"
+                },
+                {
+                    "name": "volkswagenchick",
+                    "homepage": "https://www.drupal.org/user/3332522"
+                }
+            ],
+            "description": "Adds configuration to the system breadcrumbs.",
+            "homepage": "https://www.drupal.org/project/easy_breadcrumb",
+            "support": {
+                "source": "https://git.drupalcode.org/project/easy_breadcrumb",
+                "issues": "https://www.drupal.org/project/issues/easy_breadcrumb"
+            }
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "1.10.0",
             "source": {
@@ -2722,6 +2964,98 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/gtranslate",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gtranslate.git",
+                "reference": "3.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gtranslate-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "a449f1d81fc53667f0ae2b7687091d990f58d864"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.1",
+                    "datestamp": "1676306682",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "edo888",
+                    "homepage": "https://www.drupal.org/user/291183"
+                }
+            ],
+            "description": "Uses Google power to translate your website.",
+            "homepage": "https://www.drupal.org/project/gtranslate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gtranslate"
+            }
+        },
+        {
+            "name": "drupal/hide_revision_field",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/hide_revision_field.git",
+                "reference": "8.x-2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/hide_revision_field-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "122c6890589a356c5ecd678c6ed70892cdf3813b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.3",
+                    "datestamp": "1683524323",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cosmicdreams",
+                    "homepage": "https://www.drupal.org/user/42579"
+                },
+                {
+                    "name": "NickDickinsonWilde",
+                    "homepage": "https://www.drupal.org/user/3094661"
+                }
+            ],
+            "description": "Controls visibility of the revision field on content add/edit forms.",
+            "homepage": "https://www.drupal.org/project/hide_revision_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/hide_revision_field"
+            }
         },
         {
             "name": "drupal/inline_entity_form",
@@ -3692,6 +4026,62 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/media_library_form_element",
                 "issues": "https://www.drupal.org/project/issues/media_library_form_element"
+            }
+        },
+        {
+            "name": "drupal/menu_admin_per_menu",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_admin_per_menu.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_admin_per_menu-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "ec8c7a4a064aa285dfb722dad264da9936fc81b6"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1660918821",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anrikun",
+                    "homepage": "https://www.drupal.org/user/410199"
+                },
+                {
+                    "name": "JeroenT",
+                    "homepage": "https://www.drupal.org/user/2228934"
+                },
+                {
+                    "name": "jonas139",
+                    "homepage": "https://www.drupal.org/user/2873401"
+                },
+                {
+                    "name": "mkdok",
+                    "homepage": "https://www.drupal.org/user/3308753"
+                }
+            ],
+            "description": "Allows to give roles per menu admin permissions without giving them full administer menu permission.",
+            "homepage": "https://www.drupal.org/project/menu_admin_per_menu",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_admin_per_menu"
             }
         },
         {

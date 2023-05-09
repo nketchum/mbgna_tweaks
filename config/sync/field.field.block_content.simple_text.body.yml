@@ -1,20 +1,21 @@
-uuid: 6858ba35-4707-4b7f-8cc1-4cdecc5fd740
+uuid: 93269b5d-7b66-4b27-a025-196c90806cb1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.landing_page
+    - block_content.type.simple_text
+    - field.storage.block_content.body
   module:
     - allowed_formats
     - text
 third_party_settings:
   allowed_formats:
-    allowed_formats: {  }
-id: node.landing_page.body
+    allowed_formats:
+      - minimal_html
+id: block_content.simple_text.body
 field_name: body
-entity_type: node
-bundle: landing_page
+entity_type: block_content
+bundle: simple_text
 label: Body
 description: ''
 required: false

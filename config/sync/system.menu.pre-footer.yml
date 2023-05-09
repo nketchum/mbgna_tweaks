@@ -1,0 +1,8 @@
+uuid: 284ec582-b019-4f55-8a44-45802e283235
+langcode: en
+status: true
+dependencies: {  }
+id: pre-footer
+label: Pre-footer
+description: 'Appears above the main footer.'
+locked: false

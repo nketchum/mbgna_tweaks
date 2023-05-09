@@ -16,16 +16,16 @@ full_width_containers:
   cnt_secondary_header: cnt_secondary_header
   cnt_header_nav: cnt_header_nav
   cnt_page_title: cnt_page_title
+  cnt_content_top: cnt_content_top
+  cnt_content: cnt_content
+  cnt_content_bottom: cnt_content_bottom
   cnt_footer: cnt_footer
-  cnt_content_top: 0
-  cnt_content: 0
-  cnt_content_bottom: 0
 full_width_content_types:
   drag_and_drop_page: drag_and_drop_page
-  event: event
   example: example
   landing_page: landing_page
   basic_page: 0
+  event: 0
 block_design_regions:
   sidebar_first: sidebar_first
   sidebar_second: sidebar_second
@@ -40,12 +40,12 @@ block_design_regions:
   content: 0
   footer: 0
 boxed_layout: 0
-sticky_footer: 1
+sticky_footer: 0
 boxed_layout_boxbg: '#ffffff'
 box_max_width: '1580'
 layout_max_width: '1280'
-gutter_horizontal: '30'
-gutter_vertical: '30'
+gutter_horizontal: '0'
+gutter_vertical: '0'
 gutter_container: '60'
 gutter_horizontal_mobile: '30'
 gutter_vertical_mobile: '30'
@@ -70,15 +70,15 @@ h1_mobile_font_size: '52'
 h2_mobile_font_size: '38'
 h3_mobile_font_size: '29'
 h4_mobile_font_size: '24'
-body_font_face: '0Source+Sans+Pro:'
+body_font_face: '0Roboto:'
 body_font_face_selector: body
-headings_font_face: '0Source+Sans+Pro:300'
+headings_font_face: '0Roboto+Condensed:700'
 headings_font_face_selector: 'h1,h2,h3,h4,h5,h6,label,.field--label,.page-title, .html .tp-caption'
-nav_font_face: '0Source+Sans+Pro:'
+nav_font_face: '0Roboto+Condensed:'
 nav_font_face_selector: 'nav,nav ul li,nav a'
-sitename_font_face: '0Source+Sans+Pro:300'
+sitename_font_face: '0Roboto+Condensed:700'
 sitename_font_face_selector: '.site-name, .navbar-brand'
-blockquote_font_face: '0Source+Sans+Pro:300italic'
+blockquote_font_face: '0Roboto:300italic'
 blockquote_font_face_selector: 'blockquote, blockquote p'
 portfolio_details: top
 portfolio_sidebar: '4'
@@ -104,8 +104,8 @@ divider_length: '0'
 divider_position: '1'
 divider_color: ''
 divider_color_custom: '#eeeeee'
-page_title_breadcrumbs: 0
-page_title_home_hide: 1
+page_title_breadcrumbs: 1
+page_title_home_hide: 0
 page_title_align: left
 page_title_height: '120'
 page_title_animate: '0'
@@ -121,8 +121,8 @@ header_top_layout: '0'
 header_style: normal
 header_top_bg_opacity: '1'
 header_top_height: '100'
-header_top_fixed: 1
-header_top_sticky: 1
+header_top_fixed: 0
+header_top_sticky: 0
 header_top_sticky_show: always
 header_top_height_sticky_offset: '60'
 header_top_height_scroll: '50'
@@ -215,7 +215,7 @@ tooltip_placement: 'auto top'
 modal_enabled: 0
 modal_jquery_ui_bridge: 0
 cdn_provider: ''
-page_title_breadcrumbs_align: right
+page_title_breadcrumbs_align: left
 page_title_breadcrumbs_separator: /
 title_type:
   uppercase: 0

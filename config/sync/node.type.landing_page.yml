@@ -1,11 +1,18 @@
 uuid: 3013d2cc-3fe1-46c2-be98-bbe9beb9e704
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: 'Landing page'
 type: landing_page
 description: 'Provides a landing page that provides more options than a basic page.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 0
 display_submitted: false

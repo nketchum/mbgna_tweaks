@@ -1,6 +1,6 @@
 uuid: 17e65a43-8b73-4ea1-8426-281371430ced
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - mbgna_dxpr

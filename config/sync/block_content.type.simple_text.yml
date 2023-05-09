@@ -1,0 +1,8 @@
+uuid: 57a21e71-c061-43c7-a0b9-2fa965272306
+langcode: en
+status: true
+dependencies: {  }
+id: simple_text
+label: 'Simple text'
+revision: 0
+description: 'Provides a simple text block with minimal HTML formatting.'

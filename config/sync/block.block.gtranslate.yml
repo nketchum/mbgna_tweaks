@@ -1,0 +1,20 @@
+uuid: 03dc3f15-9e53-4f8e-8d20-23669c0e0e59
+langcode: en
+status: true
+dependencies:
+  module:
+    - gtranslate
+  theme:
+    - mbgna_dxpr
+id: gtranslate
+theme: mbgna_dxpr
+region: footer
+weight: -4
+provider: null
+plugin: gtranslate_block
+settings:
+  id: gtranslate_block
+  label: GTranslate
+  label_display: '0'
+  provider: gtranslate
+visibility: {  }
