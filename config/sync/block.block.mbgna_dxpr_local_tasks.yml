@@ -1,0 +1,22 @@
+uuid: 268d0bf2-3f1c-45bd-bcfa-2a62409c5684
+langcode: en
+status: false
+dependencies:
+  theme:
+    - mbgna_dxpr
+_core:
+  default_config_hash: bqcUyJfypWnp1brZbJafXVGafynv0TAEfKEDh4893qM
+id: mbgna_dxpr_local_tasks
+theme: mbgna_dxpr
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

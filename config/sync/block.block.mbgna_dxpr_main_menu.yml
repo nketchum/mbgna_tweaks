@@ -1,0 +1,27 @@
+uuid: 1b5cd19c-3878-4175-924a-02ec0005f70a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - mbgna_dxpr
+_core:
+  default_config_hash: sOBfLFUB4t3yuAG5cmsbqVnN31761mx5SUHgrjS3Lpk
+id: mbgna_dxpr_main_menu
+theme: mbgna_dxpr
+region: navigation_collapsible
+weight: 10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 9
+  expand_all_items: false
+visibility: {  }

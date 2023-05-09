@@ -1,36 +1,31 @@
-# Change "00" to an identifying character set.
 name: m-sandbox-01
 recipe: drupal9
 config:
-  php: '8.1'
   composer_version: '2.2.12'
-  via: apache:2.4
-  webroot: web
-  database: mysql:5.7
-  drush: true
-  xdebug: false
   config:
     php: .lando/php.ini
+  database: mysql:5.7
+  drush: true
+  php: '8.1'
+  via: apache:2.4
+  webroot: web
+  xdebug: false
 services:
   appserver:
     build_as_root:
-      # - composer install --ignore-platform-reqs
+      - apt-get update -y
+      - apt-get install -y vim
       - chmod -R 777 /app/private
       - chmod -R 777 /app/web/sites/default/files
-      # Vim
-      - apt-get update
-      - apt-get install -y vim
     overrides:
       volumes:
-        # Change "DRIVE" to the drive name and 
-        # change "PROJECT" to the website/project/directory name.
         - "/Volumes/MSD01/Sites/m-sandbox-01/public:/app/web/sites/default/files"
         - "/Volumes/MSD01/Sites/m-sandbox-01/private:/app/private"
   mailhog:
     type: mailhog
-    portforward: false
     hogfrom:
       - appserver
+    portforward: false
   pma:
     type: phpmyadmin
     hosts:
@@ -40,19 +35,23 @@ services:
     build:
       - npm install
     globals:
+      grunt-cli: latest
       gulp-cli: latest
-      webpack: latest
       npm: latest
+      webpack: latest
+      yarn: latest
 tooling:
-  npm:
+  drush:
+    service: appserver
+  grunt:
+    service: node
+  gulp:
     service: node
   node:
     service: appserver
-  gulp:
+  npm:
     service: node
   webpack:
     service: node
   yarn:
     service: node
-  drush:
-    service: appserver

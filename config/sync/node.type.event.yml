@@ -1,0 +1,11 @@
+uuid: 721abe9b-4d16-451c-87a5-ae7c73d9dd49
+langcode: en
+status: true
+dependencies: {  }
+name: Event
+type: event
+description: 'Provides an event content type.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

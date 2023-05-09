@@ -1,0 +1,8 @@
+uuid: b1a8ec5a-fbc3-4c78-8f2c-6ac0429510c4
+langcode: en
+status: true
+dependencies: {  }
+name: Kickers
+vid: kickers
+description: 'One or two words that appear above a headline to draw interest.'
+weight: 0

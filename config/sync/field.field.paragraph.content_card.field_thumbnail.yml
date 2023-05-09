@@ -1,0 +1,29 @@
+uuid: 9f51a813-f9db-4f80-b058-5332582705d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_thumbnail
+    - media.type.image
+    - paragraphs.paragraphs_type.content_card
+id: paragraph.content_card.field_thumbnail
+field_name: field_thumbnail
+entity_type: paragraph
+bundle: content_card
+label: Thumbnail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

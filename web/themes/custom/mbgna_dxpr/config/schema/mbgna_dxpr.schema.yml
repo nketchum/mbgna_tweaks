@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the MBGNA DXPR theme.
+
+mbgna_dxpr.settings:
+  type: theme_settings
+  label: 'MBGNA DXPR settings'

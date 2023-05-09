@@ -62,9 +62,12 @@
 /drupal
 
 # NK added
+.DS_Store
+Thumbs.db
+node_modules
 /web/README.md
 /web/libraries
 /web/modules/contrib
 /web/sites/default
 /web/themes/contrib
-node_modules
+/web/themes/custom/*/node_modules

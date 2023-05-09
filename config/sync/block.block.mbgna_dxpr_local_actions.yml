@@ -1,0 +1,20 @@
+uuid: eb4ee373-80a0-4fe9-be9b-1ba5579412f3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mbgna_dxpr
+_core:
+  default_config_hash: 72nlwRjqiXBAwD4_Wzf9YVMhGeEnqWlHF8NS6KoI7Js
+id: mbgna_dxpr_local_actions
+theme: mbgna_dxpr
+region: content
+weight: -30
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

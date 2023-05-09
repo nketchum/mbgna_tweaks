@@ -1,0 +1,29 @@
+uuid: 819a9510-56d2-4f4f-bb3d-71be36451870
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_kicker
+    - paragraphs.paragraphs_type.content_card
+    - taxonomy.vocabulary.kickers
+id: paragraph.content_card.field_kicker
+field_name: field_kicker
+entity_type: paragraph
+bundle: content_card
+label: Kicker
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      kickers: kickers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

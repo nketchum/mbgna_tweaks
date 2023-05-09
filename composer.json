@@ -21,6 +21,8 @@
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/ds": "^3.15",
+        "drupal/dxpr_builder": "^2.2",
+        "drupal/dxpr_theme": "^5.1",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_lb": "^1.0@RC",
         "drupal/inline_entity_form": "^1.0@RC",
@@ -100,11 +102,6 @@
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
-        "patches": {
-            "drupal/core": {
-                "3016507 - [PP-1] Break long text strings in layout edit":
-                "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch"
-            }
-        }
+        "patches": { }
     }
 }

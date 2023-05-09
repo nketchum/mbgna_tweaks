@@ -1,0 +1,23 @@
+uuid: f992fe68-8cfa-4fe3-ba58-2a01379c1ed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.content_card
+  module:
+    - link
+id: paragraph.content_card.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: content_card
+label: Link
+description: 'Leave the link text blank to suppress the button.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

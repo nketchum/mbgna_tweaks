@@ -1,0 +1,34 @@
+uuid: 4a1dc605-ac09-4b46-a0cf-12bbb6a19939
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_ui
+    - media
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer content types'
+  - 'administer node fields'
+  - 'administer nodes'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term fields'
+  - 'bypass node access'
+  - 'create media'
+  - 'delete all revisions'
+  - 'delete any media'
+  - 'revert all revisions'
+  - 'update any media'
+  - 'view own unpublished media'
+  - 'view the administration theme'

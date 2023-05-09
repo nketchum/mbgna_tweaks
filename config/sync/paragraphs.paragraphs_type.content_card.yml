@@ -1,0 +1,10 @@
+uuid: 6cf5d920-1fe0-4739-9fcf-de850cb33d84
+langcode: en
+status: true
+dependencies: {  }
+id: content_card
+label: 'Content card'
+icon_uuid: null
+icon_default: null
+description: 'Provides a teaser or blurb with an optional link.'
+behavior_plugins: {  }

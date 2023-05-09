@@ -1,0 +1,22 @@
+uuid: 57d40d3b-6611-4008-b5bf-284101fcf3ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mbgna_dxpr
+_core:
+  default_config_hash: KpBqqBIyNPTNavLklXPC1-cUAeuwAbBOsrvGussFh1E
+id: mbgna_dxpr_breadcrumbs
+theme: mbgna_dxpr
+region: page_title
+weight: 10
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
