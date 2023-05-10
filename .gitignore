@@ -65,6 +65,7 @@
 .DS_Store
 Thumbs.db
 node_modules
+/private
 /web/README.md
 /web/libraries
 /web/modules/contrib
