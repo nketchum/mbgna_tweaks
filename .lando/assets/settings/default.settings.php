@@ -23,11 +23,6 @@ if (file_exists($app_root . '/' . $site_path . '/settings.stage.php')) {
   include $app_root . '/' . $site_path . '/settings.stage.php';
 }
 
-// Dev settings. Overrides default, production, and stage.
-if (file_exists($app_root . '/' . $site_path . '/settings.dev.php')) {
-  include $app_root . '/' . $site_path . '/settings.dev.php';
-}
-
 // Local settings. Overrides everything.
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';

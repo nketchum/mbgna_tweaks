@@ -1,0 +1,13 @@
+uuid: 746b7e10-b337-47ac-b8a7-d2f1964b4ae6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mbgna_dxpr
+  menu:
+    - main
+id: main__mbgna_dxpr
+menu: main
+theme: mbgna_dxpr
+block_config: '{"animation":"none","duration":400,"delay":200,"style":"","auto-arrow":"1","always-show-submenu":"1","number-columns":1}'
+menu_config: '{"menu_link_content:0e101530-a627-4d6f-9cdf-83e8cb6ec8e3":{"rows_content":[[{"col_content":[{"block_id":"mbgna_dxpr_branding","type":"block","tb_item_config":[]}],"col_config":{"width":"12","class":"","hidewcol":"","showblocktitle":"1"}}]],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":""}},"menu_link_content:1008dc79-ff90-40a6-94c6-df7b7a46e50d":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":""}},"menu_link_content:ebb051a6-f057-4e19-b483-ed0da504e714":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":""}},"menu_link_content:f88df71d-21d4-4c59-9e8c-6a4ab19814f1":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":""}}}'

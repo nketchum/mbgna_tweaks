@@ -22,7 +22,6 @@ full_width_containers:
   cnt_footer: cnt_footer
 full_width_content_types:
   drag_and_drop_page: drag_and_drop_page
-  example: example
   landing_page: landing_page
   basic_page: 0
   event: 0
@@ -75,7 +74,7 @@ body_font_face_selector: body
 headings_font_face: '0Roboto+Condensed:700'
 headings_font_face_selector: 'h1,h2,h3,h4,h5,h6,label,.field--label,.page-title, .html .tp-caption'
 nav_font_face: '0Roboto+Condensed:'
-nav_font_face_selector: 'nav,nav ul li,nav a'
+nav_font_face_selector: 'nav,nav ul li,nav a, .nav-link'
 sitename_font_face: '0Roboto+Condensed:700'
 sitename_font_face_selector: '.site-name, .navbar-brand'
 blockquote_font_face: '0Roboto:300italic'

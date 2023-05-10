@@ -1,0 +1,25 @@
+uuid: af1bdedb-927b-4725-966f-00a4293a8043
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-menu
+  module:
+    - system
+  theme:
+    - mbgna_dxpr
+id: topmenu
+theme: mbgna_dxpr
+region: secondary_header
+weight: 0
+provider: null
+plugin: 'system_menu_block:top-menu'
+settings:
+  id: 'system_menu_block:top-menu'
+  label: 'Top menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

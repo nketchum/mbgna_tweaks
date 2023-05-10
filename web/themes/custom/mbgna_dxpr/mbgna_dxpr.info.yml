@@ -48,6 +48,12 @@ libraries-override:
   dxpr_theme/drupal-webform: false
   dxpr_theme/dxpr-theme-builder: false
   dxpr_theme/helper-classes: false
+  tb_megamenu/theme.tb_megamenu:
+    css:
+      theme:
+        css/tb_megamenu.bootstrap.css: false
+        css/tb_megamenu.base.css: false
+        css/tb_megamenu.default.css: false
 
 # Information added by Drupal.org packaging script on 2023-04-20
 version: '5.1.0'

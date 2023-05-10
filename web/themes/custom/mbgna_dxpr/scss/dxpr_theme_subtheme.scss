@@ -1,10 +1,121 @@
-// .page-title-full-width-container {
-//   margin-bottom: 0;
-// }
+@import "./dxpr_theme_subtheme.variables.scss";
+
+// 0-767 narrow
+// 768-1200 medium
+// 1201+ large
+
+// Narrow
+@media (max-width: 767px) {
+  .hide-on-narrow {
+    display: none;
+  }
+}
+
+// Medium
+@media (min-width: 768px) and (max-width: 1200px) {
+  .hide-on-medium {
+    display: none;
+  }
+}
+
+// Narrow
+@media (min-width: 1201px) {
+  .hide-on-wide {
+    display: none;
+  }
+}
+
+body {
+  background: #f9f9f9;
+}
 
 .navbar {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+a.highlight {
+  background-color: $maize-primary !important;
+  border-bottom-right-radius: 5px;
+  color: $black !important;
+}
+
+#secondary-header,
+#prefooter,
+#footer {
+  ul.nav {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+#secondary-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: right;
+  
+  ul.nav {
+    background-color: $lighter-gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    float:right;
+
+    & > li:first-child a {
+      padding-left: 1.5rem;
+    }
+
+    & > li:nth-last-child(2) a {
+      padding-right: 1.5rem;
+    }
+
+    & > li:last-child a {
+      padding-left: 1.5rem;
+    }
+
+    & > li > a {
+      font-size: $font-size-small;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+}
+
+ul.menu,
+.dxpr-theme-header ul.menu {
+  a {
+    text-transform: capitalize;
+
+    &.is-active {
+      color: inherit;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top {
+  .nav {
+    & > li {
+      & > a {
+        padding: 0 2.5vw 0 2.5vw;
+      }
+    }
+    & > li:last-child {
+      & > a {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header .wrap-branding {
+  height: 70px;
+  line-height: 70px;
+}
+
+#logo {
+  max-height: none !important;
+  max-width: none;
+  width: 400px;
 }
 
 .header-banner-thin .banner-image {
@@ -15,3 +126,24 @@
   content: " \203A ";
   margin-left: 5px;
 }
+
+// .tb-megamenu .nav-collapse.collapse {
+//   display: block;
+// }
+
+// @media (min-width: 981px) {
+//   .tb-megamenu-button {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 980px) {
+//   .tb-megamenu-button {
+//     display: block;
+//   }
+
+//   .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav,
+//   .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li {
+//     float: none;
+//   }  
+// }
