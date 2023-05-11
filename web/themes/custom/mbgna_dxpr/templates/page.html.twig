@@ -282,7 +282,7 @@
 {# Pre-footer #}
 {% if page.prefooter %}
   {% block prefooter %}
-    <footer id="prefooter" class="dxpr-theme-prefooter navbar clearfix" role="contentinfo">
+    <footer id="prefooter" class="dxpr-theme-prefooter dxpr-theme-fluid navbar clearfix" role="contentinfo">
       {% set container = theme.settings.full_width_containers.cnt_footer ? 'dxpr-theme-fluid' : 'container' %}
       <div class="{{ container }} footer-container">
         {% if not theme.settings.full_width_containers.cnt_footer %}
@@ -300,7 +300,7 @@
 {# Footer #}
 {% if page.footer %}
   {% block footer %}
-    <footer id="footer" class="dxpr-theme-footer navbar clearfix" role="contentinfo">
+    <footer id="footer" class="dxpr-theme-footer dxpr-theme-fluid avbar clearfix" role="contentinfo">
       {% set container = theme.settings.full_width_containers.cnt_footer ? 'dxpr-theme-fluid' : 'container' %}
       <div class="{{ container }} footer-container">
         {% if not theme.settings.full_width_containers.cnt_footer %}
@@ -318,4 +318,13 @@
 {% if not node.field_dth_page_layout.getString() and theme.settings.boxed_layout
   or node.field_dth_page_layout.getString() == 'boxed' %}
 </div><!-- end dxpr-theme-boxed-container -->
+{% endif %}
+
+{# Some features require hidden blocks #}
+{% if page.hidden %}
+  {% block hidden %}
+    <div class="hidden">
+      {{ page.hidden }}
+    </div>
+  {% endblock %}
 {% endif %}

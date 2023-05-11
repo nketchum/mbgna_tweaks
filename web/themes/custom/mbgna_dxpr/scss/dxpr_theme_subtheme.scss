@@ -29,11 +29,6 @@ body {
   background: #f9f9f9;
 }
 
-.navbar {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
 a.highlight {
   background-color: $maize-primary !important;
   border-bottom-right-radius: 5px;
@@ -80,6 +75,23 @@ a.highlight {
   }
 }
 
+.wrap-containers {
+  position: relative;
+}
+
+.secondary-header-container.dxpr-theme-fluid,
+.navbar-container.dxpr-theme-fluid,
+.page-title-container.dxpr-theme-fluid,
+.dxpr-theme-prefooter.dxpr-theme-fluid,
+.dxpr-theme-footer.dxpr-theme-fluid {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.tb-megamenu {
+  position: static;
+}
+
 ul.menu,
 .dxpr-theme-header ul.menu {
   a {
@@ -92,24 +104,63 @@ ul.menu,
   }
 }
 
-.body--dxpr-theme-nav-desktop .dxpr-theme-header--top {
-  .nav {
-    & > li {
-      & > a {
-        padding: 0 2.5vw 0 2.5vw;
+.body--dxpr-theme-nav-desktop {
+  .dxpr-theme-header--top {
+    .nav {
+      & > li {
+        & > a {
+          padding: 0 2.5vw 0 2.5vw;
+        }
+      }
+      & > li:last-child {
+        & > a {
+          padding-right: 0;
+        }
       }
     }
-    & > li:last-child {
-      & > a {
-        padding-right: 0;
-      }
+
+    .dxpr-theme-main-menu {
+      position: static !important;
     }
+  }
+
+  .dxpr-theme-header {
+    .wrap-branding {
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .mega-dropdown-menu {
+      background: gray;
+      left: 0;
+      position: absolute;
+      top: 100px;
+      width: 100%;
+    }
+  }
+
+  .dxpr-theme-header .wrap-branding {
+    height: 70px;
+    line-height: 70px;
   }
 }
 
-.body--dxpr-theme-nav-desktop .dxpr-theme-header .wrap-branding {
-  height: 70px;
-  line-height: 70px;
+.tb-megamenu-item.level-1 > .tb-megamenu-submenu {
+  height: calc(100vh - 135.2px);
+}
+
+.tb-megamenu-item.dropdown {
+  position: static;
+}
+
+.tb-megamenu-column-inner .block-inner > .block {
+  float: none;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.dxpr-theme-header--side .menu__level {
+  visibility: visible;
 }
 
 #logo {
@@ -126,24 +177,3 @@ ul.menu,
   content: " \203A ";
   margin-left: 5px;
 }
-
-// .tb-megamenu .nav-collapse.collapse {
-//   display: block;
-// }
-
-// @media (min-width: 981px) {
-//   .tb-megamenu-button {
-//     display: none;
-//   }
-// }
-
-// @media (max-width: 980px) {
-//   .tb-megamenu-button {
-//     display: block;
-//   }
-
-//   .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav,
-//   .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li {
-//     float: none;
-//   }  
-// }
