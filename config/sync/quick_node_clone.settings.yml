@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: 6XRelHPjACQVOo9yRQMmbXt-ysCA2Pt6l762bxQQbdw
+exclude:
+  node:
+    drag_and_drop_page:
+      - body
+      - field_dth_hide_regions
+      - field_dth_main_content_width
+      - field_dth_page_layout
+  paragraph: {  }
+text_to_prepend_to_title: 'Clone of'
+clone_status: false

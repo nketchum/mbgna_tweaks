@@ -328,3 +328,13 @@
     </div>
   {% endblock %}
 {% endif %}
+
+<script type="text/javascript">
+  setTimeout(function() {
+    console.log('timeout');
+    jQuery('.colorbox a').colorbox({
+      scalePhotos: true,
+      maxWidth: '50%'
+    });
+  }, 2000);
+</script>

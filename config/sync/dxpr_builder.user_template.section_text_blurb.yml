@@ -1,0 +1,9 @@
+uuid: 300484f9-7c07-427a-a145-e2360c3e93c1
+langcode: en
+status: true
+dependencies: {  }
+id: section_text_blurb
+label: 'Section text blurb'
+template: '<div class="az-element az-text az-element--controls-center" style="margin-top:7%;margin-bottom:2%;margin-left:25%;margin-right:25%;" data-az-id="gbt5l6srg1" data-azat-pid="gbt5l6srg1" id="gbt5l6srg1" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azat-style="margin-top:7%;margin-bottom:2%;margin-left:25%;margin-right:25%;" data-azcnt="true"><h3 style="text-align: center;">Lorem ipsum dolor</h3><p style="text-align: center;">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p></div>'
+uid: 1
+global: true
