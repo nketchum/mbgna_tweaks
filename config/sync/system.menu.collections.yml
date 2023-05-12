@@ -1,0 +1,8 @@
+uuid: 4e24b33a-3f83-4a1e-b3cf-cfd5ff5f9c02
+langcode: en
+status: true
+dependencies: {  }
+id: collections
+label: Collections
+description: 'Provides a section-specific menu.'
+locked: false

@@ -9,6 +9,9 @@ stage:
   user: nketchum
   root: /var/www/m-sandbox-01/web
   uri:  https://m-sandbox-01.nketchum.com
+  paths:
+   - files: /var/www/m-sandbox-01/web/sites/default/files
+   - private: /var/www/m-sandbox-01/private
 
 dev:
   host: hostname.tld
