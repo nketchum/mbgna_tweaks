@@ -25,6 +25,14 @@
   }
 }
 
+.vr-right-white {
+  border-right: 2px solid rgba(255,255,255,0.15);
+}
+
+.font-condensed {
+  font-family: 'Roboto Condensed';
+}
+
 a.highlight {
   background-color: $maize-primary !important;
   border-bottom-right-radius: 5px;
@@ -76,6 +84,7 @@ body {
 
     & > li:last-child a {
       padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     & > li > a {
@@ -93,6 +102,76 @@ body {
   ul.nav {
     display: flex;
     flex-direction: row;
+  }
+}
+
+#prefooter {
+  display: block;
+}
+
+#footer {
+  .views-title {
+    float:left;
+
+    h2 {
+      float: left;
+      font-family: 'Roboto Condensed';
+      font-size: 18px;
+      font-weight: 700;
+      height: 21px;
+      line-height: 21px;
+      margin: 0;
+    }
+  }
+
+  .nav {
+    a {
+      color: $blue-secondary;
+      line-height: 20px;
+      font-size: inherit;
+    }
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+}
+
+#menu-internal {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin: 30px 0;
+  padding: 15px 0;
+}
+
+#menu-prefooter {
+  .nav {
+    a {
+      background-color: $maize-primary;
+      color: $black;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 15px;
+      padding: 15px;
+    }
+
+    li:last-child a {
+      margin-right: 0;
+    }
+  }
+}
+
+.menu-closure {
+  .nav {
+    a {
+      color: $blue-secondary;
+    }
+
+    li:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
   }
 }
 
@@ -120,6 +199,12 @@ ul.menu,
         max-height: none !important;
         max-width: none;
         width: 400px;
+      }
+    }
+    .dropdown {
+      span {
+        padding: 0;
+        pointer-events: inherit;
       }
     }
     .dxpr-theme-main-menu {
@@ -154,8 +239,22 @@ ul.menu,
                     & > .tb-megamenu-row {
                       & > .tb-megamenu-column {
                         & > .tb-megamenu-column-inner {
+                          & > .tb-megamenu-subnav {
+                            display: none;
+                          }
+
                           & > .tb-megamenu-block {
                             & > .block-inner {
+                              .nav {
+                                float: none;
+
+                                li {
+                                  a {
+                                    color: #fff;
+                                  }
+                                }
+                              }
+
                               & > .block {
                                 float: none;
                                 padding-left: 5%;
@@ -266,5 +365,13 @@ ul.menu,
     color: #fff;
     padding: 5px;
     margin-right: 5px;
+  }
+}
+
+.gtranslate_wrapper {
+  a {
+    color: $blue-secondary;
+    display: inline-block;
+    margin-right: 10px;
   }
 }

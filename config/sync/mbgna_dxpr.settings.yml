@@ -71,7 +71,7 @@ h3_mobile_font_size: '29'
 h4_mobile_font_size: '24'
 body_font_face: '0Roboto:'
 body_font_face_selector: body
-headings_font_face: '0Roboto+Condensed:700'
+headings_font_face: '0Playfair+Display:800'
 headings_font_face_selector: 'h1,h2,h3,h4,h5,h6,label,.field--label,.page-title, .html .tp-caption'
 nav_font_face: '0Roboto+Condensed:'
 nav_font_face_selector: 'nav,nav ul li,nav a, .nav-link'

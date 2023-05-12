@@ -1,0 +1,31 @@
+uuid: 64a8159d-77fd-4c87-93e6-6651b839d91a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - mbgna_dxpr
+id: mainnavigation_2
+theme: mbgna_dxpr
+region: hidden
+weight: -8
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main:menu_link_content:6aa67630-d6be-4ba1-841f-dd8c36d5fd30'
+  suggestion: main
+visibility: {  }

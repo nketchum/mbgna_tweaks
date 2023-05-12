@@ -57,6 +57,7 @@
         "drupal/link_attributes": "^1.13",
         "drupal/media_entity_slideshow": "^2.5",
         "drupal/menu_admin_per_menu": "^1.5",
+        "drupal/menu_block": "^1.10",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
         "drupal/quick_node_clone": "^1.16",
