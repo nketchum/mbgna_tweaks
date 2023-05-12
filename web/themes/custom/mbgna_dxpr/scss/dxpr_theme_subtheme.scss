@@ -31,6 +31,12 @@ a.highlight {
   color: $black !important;
 }
 
+a,
+.btn-link,
+.nav-link {
+  color: $blue-secondary;
+}
+
 body {
   background: #f9f9f9;
 }
@@ -229,5 +235,36 @@ ul.menu,
     text-indent: 0;
     top: 0;
     width: 30px;
+  }
+}
+
+.landing-card-large {
+  .landing-link-list {
+    ul {
+      font-size: 14px;
+      font-weight: bold;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }  
+}
+
+.location-label{
+  strong {
+    background: $black;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    margin-right: 5px;
   }
 }
