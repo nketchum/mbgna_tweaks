@@ -12,6 +12,7 @@ module:
   block_content_permissions: 0
   block_region_permissions: 0
   breakpoint: 0
+  ckeditor5: 0
   color: 0
   color_field: 0
   colorbox: 0
@@ -40,6 +41,7 @@ module:
   inline_form_errors: 0
   link: 0
   link_attributes: 0
+  mbgna_tweaks: 0
   media: 0
   media_library: 0
   menu_block: 0
@@ -49,6 +51,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraph_view_mode: 0
   path: 0
   path_alias: 0
   quick_node_clone: 0

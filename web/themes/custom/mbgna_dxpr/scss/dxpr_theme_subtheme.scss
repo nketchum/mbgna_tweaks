@@ -282,6 +282,27 @@ ul.menu,
   }
 }
 
+// Sidebar menus
+#block-mbgna-dxpr-content {
+  ul.nav {
+    font-family: "Roboto Condensed", Roboto, sans-serif;
+    margin-left: 0;
+    margin-right: 25%;
+    margin-top: 30px;
+
+    .dropdown {
+      padding: 0 0 10px;
+      border-bottom: 1px solid #ccc;
+      margin: 0 0 10px;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
 .dxpr-theme-header--side .menu__level {
   visibility: visible;
 }
@@ -374,4 +395,8 @@ ul.menu,
     display: inline-block;
     margin-right: 10px;
   }
+}
+
+.shape-background-tall {
+  background-size: 30%;
 }

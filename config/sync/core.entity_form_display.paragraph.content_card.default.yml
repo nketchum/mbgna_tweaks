@@ -5,14 +5,16 @@ dependencies:
   config:
     - field.field.paragraph.content_card.field_heading
     - field.field.paragraph.content_card.field_kicker
-    - field.field.paragraph.content_card.field_link
+    - field.field.paragraph.content_card.field_links
     - field.field.paragraph.content_card.field_subheading
     - field.field.paragraph.content_card.field_text
     - field.field.paragraph.content_card.field_thumbnail
+    - field.field.paragraph.content_card.paragraph_view_mode
     - paragraphs.paragraphs_type.content_card
   module:
     - link
     - media_library
+    - paragraph_view_mode
     - text
 id: paragraph.content_card.default
 targetEntityType: paragraph
@@ -33,7 +35,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_link:
+  field_links:
     type: link_default
     weight: 5
     region: content
@@ -63,6 +65,16 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: -100
+    region: content
+    settings:
+      view_modes:
+        default: Default
+      default_view_mode: default
+      form_mode_bind: true
     third_party_settings: {  }
 hidden:
   created: true

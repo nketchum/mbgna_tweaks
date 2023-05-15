@@ -1,8 +1,0 @@
-uuid: 4a217714-16ff-4e3f-9666-48e3f6a22bad
-langcode: en
-status: true
-dependencies: {  }
-id: events
-label: Events
-description: 'Provides a section-specific menu.'
-locked: false

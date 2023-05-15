@@ -1,0 +1,7 @@
+uuid: abcbdb8e-7b7a-4307-8116-997c0bbcb34e
+langcode: en
+status: true
+dependencies: {  }
+name: large_vertical_rectangle
+label: 'Large vertical rectangle'
+effects: {  }

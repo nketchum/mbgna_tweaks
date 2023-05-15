@@ -1,8 +1,0 @@
-uuid: c5493471-cf52-4e51-894f-cea16fa81340
-langcode: en
-status: true
-dependencies: {  }
-id: community
-label: Community
-description: 'Provides a section-specific menu.'
-locked: false

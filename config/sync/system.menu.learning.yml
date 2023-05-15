@@ -1,8 +1,0 @@
-uuid: a5c81489-1b0f-44f0-90a2-1a64c72db6cc
-langcode: en
-status: true
-dependencies: {  }
-id: learning
-label: Learning
-description: 'Provides a section-specific menu.'
-locked: false

@@ -1,0 +1,24 @@
+uuid: 63c202ab-9a71-4bee-a0db-ee78154599ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.kickers
+id: taxonomy_term.kickers.default
+targetEntityType: taxonomy_term
+bundle: kickers
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

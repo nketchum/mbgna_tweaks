@@ -1,0 +1,29 @@
+uuid: 6b91c8f1-c063-49bc-882c-99741f129f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_watermark
+    - media.type.image
+    - paragraphs.paragraphs_type.content_section
+id: paragraph.content_section.field_watermark
+field_name: field_watermark
+entity_type: paragraph
+bundle: content_section
+label: 'Watermark image'
+description: 'Appears as a faint background decoration.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

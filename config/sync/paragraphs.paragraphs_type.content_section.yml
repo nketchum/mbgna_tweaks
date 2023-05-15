@@ -1,0 +1,10 @@
+uuid: bdef8a33-f8d2-46e0-86b5-91a014bae463
+langcode: en
+status: true
+dependencies: {  }
+id: content_section
+label: 'Content section'
+icon_uuid: null
+icon_default: null
+description: 'Provides a section for content for landing and similar pages.'
+behavior_plugins: {  }
