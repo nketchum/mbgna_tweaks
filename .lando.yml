@@ -42,9 +42,6 @@ services:
       webpack: latest
       yarn: latest
     command: cd /app/web/themes/contrib/mbgna_dxpr && node_modules/.bin/grunt watch
-  proxy:
-    node:
-      - bs.m-sandbox-01.lndo.site:3000
 tooling:
   drush:
     service: appserver
