@@ -4,6 +4,12 @@
 // 768-1200 medium
 // 1201+ large
 
+@media (max-width: 767px) {
+  .medium-top-margin {
+    margin-top: 90px;
+  }
+}
+
 // Narrow
 @media (max-width: 767px) {
   .hide-on-narrow {
@@ -29,13 +35,60 @@
   border-right: 2px solid rgba(255,255,255,0.15);
 }
 
-.font-condensed {
-  font-family: 'Roboto Condensed';
+@media (max-width: 767px) {
+  .standard-layout {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    .container-fluid,
+    .dxpr-theme-fluid.navbar-container,
+    .dxpr-theme-fluid.page-title-container {
+      padding-left: 0;
+      padding-right: 0;
+
+      .az-row .az-row .az-column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+
+span[style*="color:#888888;"] > mark,
+
+
+// Erase this wherever it is in one of the drag and drop pages.
+.font-condensed {}
+
+// Highlighted CKeditor text. Tricky because DXPR text editing
+//  applies styles direclty and does not assign the span any css class.
+//  .highlighted is for the mbgna custom text editing.
+span[style*="color:#888888;"] > mark,
+.highlighted {
+  background: $maize-primary;
+  color: $black;
+  padding: 0.15em;
 }
 
 .btn {
   font-size: 14px !important;
   margin-top: 15px !important;
+
+  &.btn-success {
+    padding: 4px 8px;
+    margin-top: 0 !important;
+    margin-left: 0;
+    color: #26292b;
+    font-size: 14px;
+    border-color: #ffcb05;
+    background-color: #ffcb05;
+    border-radius: 6px;
+  }
 }
 
 .form-btn {
@@ -80,6 +133,14 @@ h5 a {
 }
 h6 a {
   color: #0D57AA;
+}
+
+h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+}
+
+h4:not(:first-child) {
+  margin-top: 1.5em;
 }
 
 a.highlight {
@@ -138,7 +199,6 @@ body {
 .body--dxpr-theme-nav-mobile {
   .dxpr-theme-header {
     padding: 15px 0;
-    margin-bottom: -30px;
   }
 
   #logo {
@@ -170,7 +230,7 @@ body {
   justify-content: right;
   
   ul.nav {
-    background-color: $lighter-gray;
+    background-color: $light-gray;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     float:right;
@@ -216,11 +276,10 @@ body {
 
     h2 {
       float: left;
-      font-family: 'Roboto Condensed';
-      font-size: 18px;
+      font-family: $font-family-sans-serif;
+      font-size: 14px;
       font-weight: 700;
-      height: 21px;
-      line-height: 21px;
+      line-height: 20px;
       margin: 0;
     }
   }
@@ -229,7 +288,7 @@ body {
     a {
       color: $blue-secondary;
       line-height: 20px;
-      font-size: inherit;
+      font-size: 14px;
     }
   }
 
@@ -243,6 +302,18 @@ body {
   border-top: 1px solid #ccc;
   margin: 30px 0;
   padding: 15px 0;
+
+  @media (max-width: 767px) {
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    .nav {
+      a {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 #menu-prefooter {
@@ -251,9 +322,16 @@ body {
       background-color: $maize-primary;
       color: $black;
       font-size: 14px;
-      font-weight: 700;
       margin-right: 15px;
-      padding: 15px;
+      padding: 10px;
+
+      @media (max-width: 767px) {
+        background-color: transparent;
+        color: #0D57AA;
+        font-size: 11px;
+        margin-right: 10px;
+        padding: 0;
+      }
     }
 
     li:last-child a {
@@ -376,15 +454,23 @@ ul.menu,
 // Sidebar menus
 #block-mbgna-dxpr-content {
   ul.nav {
-    font-family: "Roboto Condensed", Roboto, sans-serif;
+    font-family: $font-family-sans-serif;
     margin-left: 0;
     margin-right: 25%;
     margin-top: 30px;
 
     .dropdown {
-      padding: 0 0 10px;
-      border-bottom: 1px solid #ccc;
-      margin: 0 0 10px;
+      padding: 0 0 14px;
+      border-bottom: 2px solid $lighter-gray;
+      margin: 0 0 14px;
+
+      a::after {
+        border: none;
+        content: '\203A';
+        display: inline-block;
+        margin-left: 0.25em;
+        vertical-align: inherit;
+      }
 
       &:last-child {
         border-bottom: none;
@@ -398,7 +484,12 @@ ul.menu,
   visibility: visible;
 }
 
-.header-banner-thin {
+.breadcrumb li:before {
+  content: " \203A ";
+  margin-left: 5px;
+}
+
+.banner-thin {
   @media (max-width: 767px) {
     background: #0D57AA;
     &,
@@ -411,11 +502,10 @@ ul.menu,
   .banner-image {
     border-bottom-left-radius: 90px;
   }
-}
 
-.breadcrumb li:before {
-  content: " \203A ";
-  margin-left: 5px;
+  .breadcrumb {
+    font-size: 14px;
+  }
 }
 
 .banner-full,
@@ -426,7 +516,6 @@ ul.menu,
   .breadcrumb {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     display: inline-block;
-    font-family: "Roboto Condensed";
     min-width: 50%;
     padding-right: 15px;
     padding-top: 10px;
@@ -437,7 +526,6 @@ ul.menu,
   }
 
   .banner-hours p {
-    font-family: "Roboto Condensed", "Roboto", Helvetica, Arial, sans-serif;
     line-height: 1.5em;
   }
 
@@ -545,7 +633,6 @@ ul.menu,
 .know-before-you-go {
   a {
     display: inline-block;
-    font-family: "Roboto Condensed", Roboto, sans-serif;
     font-weight: bold;
     position: relative;
     padding-left: 45px !important;
@@ -653,48 +740,28 @@ ul.menu,
     }
   }
 
-  #menu-prefooter {
-    .nav {
-      a {
-        background-color: transparent;
-        color: #0D57AA;
-        font-size: 13px;
-        font-weight: 300;
-        margin-right: 10px;
-        padding: 0;
-      }
-    }
-  }
-
-  #menu-internal {
-    margin-top: 30px !important;
-    margin-bottom: 15px !important;
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    .nav {
-      a {
-        font-size: 14px;
-      }
-    }
-  }
-
   #prefooter {
     margin-top: 60px;
   }
 
   #footer {
     p {
-      font-size: 13px !important;
+      font-size: 11px !important;
     }
 
     h2 {
-      font-size: 14px !important;
+      font-size: 12px !important;
       margin-right: 10px !important;
       line-height: 20px !important;
     }
+    .nav {
+      a {
+        font-size: 11px;
+      }
+    }
 
     .footer-address {
-      margin: 45px 0 !important;
+      margin: 45px 0 30px !important;
       padding: 0 !important;
 
       .address-1,
@@ -713,9 +780,10 @@ ul.menu,
     }
 
     .social-icons {
+      border-top: 1px solid #ccc;
+      justify-content: center;
       margin: 45px 0 0;
       padding: 30px 0 0;
-      border-top: 1px solid #ccc;
 
       & > div {
         float: left;
@@ -731,13 +799,16 @@ ul.menu,
 
     .footer-content {
       margin-top: 0 !important;
+      text-align: center;
+
+      ul.nav {
+        justify-content: center;
+      }
     }
 
     .gtranslate_wrapper {
-      border-top: 1px solid #ddd;
-      font-family: "Roboto Condensed";
-      font-size: 13px;
-      margin-top: 15px;
+      border-top: 1px solid #ccc;
+      font-size: 11px;
       padding: 10px 0;
     }
 

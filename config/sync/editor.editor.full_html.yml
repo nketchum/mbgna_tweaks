@@ -1,0 +1,79 @@
+uuid: d7b81c4e-5217-478c-a174-6d2dfc7da0a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor5
+format: full_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - undo
+      - redo
+      - heading
+      - style
+      - bold
+      - italic
+      - strikethrough
+      - subscript
+      - superscript
+      - '|'
+      - code
+      - codeBlock
+      - '|'
+      - bulletedList
+      - numberedList
+      - blockQuote
+      - '|'
+      - link
+      - drupalMedia
+      - drupalInsertImage
+      - insertTable
+      - specialCharacters
+      - horizontalLine
+      - '|'
+      - alignment
+      - indent
+      - outdent
+      - '|'
+      - removeFormat
+      - sourceEditing
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading3
+        - heading4
+        - heading5
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Highlighted paragraph'
+          element: '<p class="highlighted">'
+        -
+          label: 'Highlighted span'
+          element: '<span class="highlighted">'
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_list:
+      reversed: false
+      startIndex: false
+    ckeditor5_alignment:
+      enabled_alignments:
+        - left
+        - center
+        - right
+    ckeditor5_imageResize:
+      allow_resize: false
+    media_media:
+      allow_view_mode_override: false
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0
