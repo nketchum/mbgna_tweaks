@@ -870,9 +870,13 @@ ul.menu,
     font-size: 22px;
   }
 
-  .comment-form__title {
+  .comment-form__title: {
     font-size: 22px;
     margin-top: 60px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   label {
