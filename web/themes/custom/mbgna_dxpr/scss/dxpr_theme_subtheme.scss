@@ -896,3 +896,28 @@ ul.menu,
   }
 }
 
+.path-node.page-node-type-basic-page {
+  .breadcrumb {
+    left: auto !important;
+  }
+
+  .main-container {
+    .block-system-main-block {
+      margin: 0 5%;
+
+      article.basic-page.full {
+        margin: 60px auto;
+        padding: 0 60px;
+
+        .field {
+          margin-bottom: 30px;
+        }
+
+        .field--name-body {
+          max-width: 800px;
+        }
+      }
+    }
+
+  }
+}
