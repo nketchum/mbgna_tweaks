@@ -10,6 +10,7 @@ dependencies:
     - block
     - block_content_permissions
     - block_region_permissions
+    - comment
     - contact
     - dxpr_builder
     - file
@@ -27,6 +28,7 @@ weight: 2
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access comments'
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
@@ -35,6 +37,7 @@ permissions:
   - 'access user contact forms'
   - 'access user profiles'
   - 'administer blocks'
+  - 'administer comments'
   - 'administer dxpr_builder_profile'
   - 'administer footer menu items'
   - 'administer main menu items'

@@ -1,0 +1,37 @@
+uuid: a750b994-7cb4-476b-95f1-8d9f7de301a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.minimal_html
+    - node.type.basic_page
+  module:
+    - comment
+    - contact
+    - filter
+    - node
+    - system
+    - toolbar
+id: working_group_member
+label: 'Working group member'
+weight: 4
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'create basic_page content'
+  - 'delete basic_page revisions'
+  - 'delete own basic_page content'
+  - 'edit own basic_page content'
+  - 'edit own comments'
+  - 'post comments'
+  - 'revert basic_page revisions'
+  - 'skip comment approval'
+  - 'use text format minimal_html'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view user email addresses'

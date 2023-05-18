@@ -1,0 +1,23 @@
+uuid: 999925b7-4aba-47a2-a22e-251adc8d0696
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.collaborator_comment
+    - field.field.comment.collaborator_comment.comment_body
+  module:
+    - text
+id: comment.collaborator_comment.default
+targetEntityType: comment
+bundle: collaborator_comment
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

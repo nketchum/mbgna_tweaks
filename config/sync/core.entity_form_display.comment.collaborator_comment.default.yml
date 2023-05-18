@@ -1,0 +1,40 @@
+uuid: 6479ad5d-ad2c-4d39-a94e-7e934a827600
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.collaborator_comment
+    - field.field.comment.collaborator_comment.comment_body
+  module:
+    - allowed_formats
+    - text
+id: comment.collaborator_comment.default
+targetEntityType: comment
+bundle: collaborator_comment
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 10
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

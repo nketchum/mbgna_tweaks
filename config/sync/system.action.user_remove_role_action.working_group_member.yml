@@ -1,0 +1,14 @@
+uuid: f82b855e-d01c-4933-bc00-7c1c3144c36e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.working_group_member
+  module:
+    - user
+id: user_remove_role_action.working_group_member
+label: 'Remove the Working group member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: working_group_member

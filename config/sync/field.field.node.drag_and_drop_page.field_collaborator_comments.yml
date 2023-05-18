@@ -1,0 +1,33 @@
+uuid: d910463e-cfc6-4d2b-b5dd-585ec20e9ec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collaborator_comments
+    - node.type.drag_and_drop_page
+  module:
+    - comment
+id: node.drag_and_drop_page.field_collaborator_comments
+field_name: field_collaborator_comments
+entity_type: node
+bundle: drag_and_drop_page
+label: 'Collaborator comments'
+description: 'Comment with your critiques, suggestions, questions, or other thoughts about this page.'
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 10
+  anonymous: 0
+  form_location: true
+  preview: 0
+field_type: comment
