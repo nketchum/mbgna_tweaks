@@ -2,6 +2,8 @@ global-styling:
   css:
     theme:
       css/dxpr_theme_subtheme.css: {weight: 6}
+  js:
+    js/dist/colorbox.js: { minified: false }
 
 bootstrap-3:
   css:

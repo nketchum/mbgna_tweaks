@@ -1,0 +1,9 @@
+uuid: 7cf80e0f-2d20-439e-90dd-96d036c478f5
+langcode: en
+status: true
+dependencies: {  }
+id: layout_text_blurb
+label: 'Layout text blurb'
+template: '<div class="az-element az-section container-fluid-wrapper az-element--controls-top-left" style="" data-dxpr-builder-libraries="" data-az-id="gbpp2qo5ns" data-azat-pid="gbpp2qo5ns" id="gbpp2qo5ns" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="yes" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no"><div class="az-ctnr container-fluid" data-azcnt="true"><div class="az-element az-text landing-text-blurb" style="margin-top:7%;margin-bottom:2%;margin-left:30%;margin-right:30%;" data-az-id="gbg6rv4vr4" data-azat-pid="gbg6rv4vr4" id="gbg6rv4vr4" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azat-el_class="landing-text-blurb" data-azat-style="margin-top:7%;margin-bottom:2%;margin-left:30%;margin-right:30%;" data-azcnt="true"><h3 style="text-align: center;">Explore Nature’s Inspiring Wonder</h3><p style="text-align: center;">Flowers, plants, and gardens are not only inviting in themselves, they’re also great natural ambassadors to understand impacts on local ecosystems. Get outside and be enchanted.</p></div></div><div title="Add Section Below" class="control add-section btn btn-default glyphicon glyphicon-plus-sign"></div></div>'
+uid: 1
+global: true

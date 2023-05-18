@@ -1,0 +1,15 @@
+uuid: 1dae34b9-b774-4d48-8e3c-23e89c831836
+langcode: en
+status: true
+dependencies: {  }
+name: large_square_ish_rectangle
+label: 'Large square-ish rectangle'
+effects:
+  6d0645df-f69f-4832-ac27-787945aa7cfd:
+    uuid: 6d0645df-f69f-4832-ac27-787945aa7cfd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1460
+      height: 1200
+      anchor: center-center

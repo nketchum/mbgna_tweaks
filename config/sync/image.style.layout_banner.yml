@@ -1,0 +1,15 @@
+uuid: a60f1bc9-210a-4240-8d24-b484831fa296
+langcode: en
+status: true
+dependencies: {  }
+name: layout_banner
+label: 'Layout banner'
+effects:
+  eaf2d237-6c65-4e3d-8f63-6f6248e0d735:
+    uuid: eaf2d237-6c65-4e3d-8f63-6f6248e0d735
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 6000
+      height: 3000
+      anchor: center-center

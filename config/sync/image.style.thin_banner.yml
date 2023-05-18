@@ -1,0 +1,15 @@
+uuid: 53075bd3-783a-42c9-a182-261a07301482
+langcode: en
+status: true
+dependencies: {  }
+name: thin_banner
+label: 'Thin banner'
+effects:
+  02b182e5-c014-4731-b507-d03710c45c54:
+    uuid: 02b182e5-c014-4731-b507-d03710c45c54
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2400
+      height: 800
+      anchor: center-center

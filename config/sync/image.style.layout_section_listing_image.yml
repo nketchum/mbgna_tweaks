@@ -1,0 +1,15 @@
+uuid: ace12eba-34d0-4d57-969c-b78b05d08b3b
+langcode: en
+status: true
+dependencies: {  }
+name: layout_section_listing_image
+label: 'Layout section listing image'
+effects:
+  72c4caed-3665-4d06-bd14-10c7ca232cc5:
+    uuid: 72c4caed-3665-4d06-bd14-10c7ca232cc5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1390
+      height: 927
+      anchor: center-center
