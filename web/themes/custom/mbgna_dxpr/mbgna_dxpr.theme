@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Datetime\DrupalDateTime;
+
 /**
  * @file
  * DXPR Theme sub-theme.
@@ -53,6 +55,39 @@ function mbgna_dxpr_preprocess_page(&$variables) {
   foreach ($dxpr_theme_libraries as $dxpr_theme_library) {
     $variables['#attached']['library'][] = $dxpr_theme_library;
   }
+}
+
+/**
+ * Implements template_preprocess_node()
+ */
+function mbgna_dxpr_preprocess_node(&$variables) {
+  // // Convert times to timestamps for iCal.
+  // if (array_key_exists('field_date_smart', $variables['elements'])) {
+  //   // Get the timestamps.
+  //   $start_date = $variables['elements']['field_date_smart'][0]['#value'];
+  //   $end_date = $variables['elements']['field_date_smart'][0]['#end_value'];
+  //   // Convert to ical-friendly format.
+  //   $date_smart_ical_start = date('Ymd\THis', $start_date);
+  //   $date_smart_ical_end = date('Ymd\THis', $end_date);
+  //   // Convert into DateTime object.
+  //   $date_smart_ical_start = new DateTime($date_smart_ical_start, new DateTimeZone('America/Detroit'));
+  //   $date_smart_ical_end = new DateTime($date_smart_ical_end, new DateTimeZone('America/Detroit'));
+  //   // Add new fields to twig.
+  //   $variables['date_smart_ical_start'] = $date_smart_ical_start;
+  //   $variables['date_smart_ical_end'] = $date_smart_ical_end;
+  //   // All day events.
+  //   // Subtract the start timestamp from the end timestamp. An all-day event
+  //   // lasts 24 hours, except in Drupal it's denoted as 23 hours and 59 minutes.
+  //   // We need to subtract the two timestamps, add one minute (to get around the
+  //   // 23 hours and 59 minute problem) and divide by 60 seconds to get all the
+  //   // minutes, and then divide by 60 minutes to get all the hours, and then
+  //   // check if the hours equals exactly 24, in which case this is an all-day event.
+  //   // Having fun yet?
+  //   $duration_in_hours = ($end_date - $start_date + 60)/60/60;
+  //   if ($duration_in_hours === 24) {
+  //     $variables['date_smart_ical_all_day'] = TRUE;
+  //   }
+  // }
 }
 
 /**
@@ -128,3 +163,24 @@ function mbgna_dxpr_preprocess_input(&$variables) {
   $variables['#attached']['library'][] = 'mbgna_dxpr/drupal-search';
 }
 // phpcs:enable
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function mbgna_dxpr_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function mbgna_dxpr_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $node = $variables['elements']['#node'];
+  if ($node) {
+    $suggestions[] = 'node__'. $node->getType();
+  }
+}
