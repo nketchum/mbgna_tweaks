@@ -1,0 +1,14 @@
+uuid: 69d542e8-d6e0-41c7-a943-49154a21583a
+langcode: en
+status: true
+dependencies: {  }
+id: local_video
+label: 'Local video'
+description: 'Provides a local video media type.'
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_file
+field_map:
+  name: name

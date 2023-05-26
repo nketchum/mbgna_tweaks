@@ -1,0 +1,9 @@
+uuid: 77a79eda-02d6-40a7-b283-603d481c4b5d
+langcode: en
+status: true
+dependencies: {  }
+id: layout_banner_slideshow_test_
+label: 'Layout banner slideshow (test)'
+template: '<div id="gbjj2ut9k2" class="az-element az-carousel header-banner header-banner-carousel az-element--controls-top-left az-element--controls-spacer" style="" data-dxpr-builder-libraries="owlcarousel" data-az-id="gbaud8wdyb" data-azat-pid="gbjj2ut9k2" data-azb="az_carousel" data-az-human-readable="Carousel" data-az-human-readable-en="Carousel" data-azat-autoplay="yes" data-azat-pagination="yes" data-azat-pagination_orientation="inside" data-azat-pagination_shape="circle" data-azat-pagination_color="#ffffff" data-azat-pagination_active_color="#ffcb05" data-azat-navigation="no" data-azat-navigation_orientation="outside" data-azat-navigation_position="adjacent" data-azat-stoponhover="no" data-azat-an_infinite="no" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azat-el_class="header-banner header-banner-carousel"><div style="opacity: 1; display: block;" class="owl-carousel st-owl-theme st-owl-pager-inside st-owl-pager-circle" data-azcnt="true"><div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 9976px; left: 0px; display: block;"><div class="owl-item" style="width: 2494px;"></div><div class="owl-item" style="width: 2494px;"></div></div></div></div></div>'
+uid: 1
+global: true

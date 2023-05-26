@@ -28,6 +28,7 @@
     },
     "require": {
         "composer/installers": "^1.9",
+        "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.3",
         "drupal/allowed_formats": "^2.0",
         "drupal/asset_injector": "^2.17",
