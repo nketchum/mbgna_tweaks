@@ -1,0 +1,10 @@
+uuid: 63bfe81d-77e1-46ff-a50a-4daf20ba30b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_box
+label: 'Card (box)'
+targetEntityType: node
+cache: true

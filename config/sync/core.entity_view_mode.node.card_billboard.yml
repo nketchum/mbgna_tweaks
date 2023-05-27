@@ -1,0 +1,10 @@
+uuid: 9b817897-2473-49c4-bfea-0174a1d86cfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_billboard
+label: 'Card (billboard)'
+targetEntityType: node
+cache: true

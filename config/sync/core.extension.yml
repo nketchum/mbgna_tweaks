@@ -7,6 +7,7 @@ module:
   admin_toolbar_tools: 0
   allowed_formats: 0
   asset_injector: 0
+  blazy: 0
   block: 0
   block_class: 0
   block_content: 0
@@ -21,10 +22,12 @@ module:
   comment: 0
   config: 0
   contact: 0
+  crop: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
   devel: 0
+  devel_entity_updates: 0
   dxpr_builder_block: 0
   dxpr_builder_page: 0
   dxpr_theme_helper: 0
@@ -44,6 +47,7 @@ module:
   inline_form_errors: 0
   link: 0
   link_attributes: 0
+  manage_display: 0
   mbgna_tweaks: 0
   media: 0
   media_library: 0
@@ -57,7 +61,6 @@ module:
   paragraph_view_mode: 0
   path: 0
   path_alias: 0
-  plugin: 0
   quick_node_clone: 0
   smart_date: 0
   syslog: 0
