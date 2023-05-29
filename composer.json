@@ -59,6 +59,7 @@
         "drupal/dxpr_builder": "^2.2",
         "drupal/dxpr_theme": "^5.1",
         "drupal/easy_breadcrumb": "^2.0",
+        "drupal/field_formatter_class": "^1.6",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_lb": "^1.0@RC",
         "drupal/gtranslate": "^3.0",

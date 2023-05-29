@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_end_date
     - field.field.node.event.field_event_categories
     - field.field.node.event.field_image
+    - field.field.node.event.field_location
     - field.field.node.event.field_map_link
     - field.field.node.event.field_phone
     - field.field.node.event.field_start_date
@@ -52,13 +53,13 @@ content:
     third_party_settings: {  }
   field_address:
     type: address_default
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_date_smart:
     type: smartdate_inline
-    weight: 10
+    weight: 11
     region: content
     settings:
       modal: false
@@ -99,6 +100,12 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_location:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_map_link:
     type: link_default

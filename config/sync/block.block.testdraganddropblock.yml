@@ -10,8 +10,8 @@ dependencies:
     - mbgna_dxpr
 id: testdraganddropblock
 theme: mbgna_dxpr
-region: hidden
-weight: -7
+region: footer
+weight: -5
 provider: null
 plugin: 'block_content:2006cf37-b282-4f59-82a7-ed0855db1766'
 settings:

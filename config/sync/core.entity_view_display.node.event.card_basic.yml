@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.event.field_end_date
     - field.field.node.event.field_event_categories
     - field.field.node.event.field_image
+    - field.field.node.event.field_location
     - field.field.node.event.field_map_link
     - field.field.node.event.field_phone
     - field.field.node.event.field_start_date
     - field.field.node.event.field_website
     - node.type.event
   module:
+    - field_formatter_class
     - manage_display
     - smart_date
 id: node.event.card_basic
@@ -36,15 +38,18 @@ content:
       time_wrapper: true
       localize: false
       parts:
-        - start
-        - end
+        start: start
+        end: end
+        duration: '0'
       duration:
         separator: ' | '
         unit: ''
         decimals: 2
         suffix: h
-    third_party_settings: {  }
-    weight: 2
+    third_party_settings:
+      field_formatter_class:
+        class: card-subheading
+    weight: 3
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -52,17 +57,31 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: card-image
     weight: 0
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: card-kicker
+    weight: 1
     region: content
   title:
     type: title
     label: hidden
     settings:
       link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
-    weight: 1
+      tag: h4
+    third_party_settings:
+      field_formatter_class:
+        class: card-heading
+    weight: 2
     region: content
 hidden:
   body: true

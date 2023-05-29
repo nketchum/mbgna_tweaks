@@ -86,7 +86,7 @@ span[style*="color:#888888;"] > mark,
 
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 h1 a {
@@ -114,6 +114,10 @@ h3, h4, h5, h6 {
 
 h4:not(:first-child) {
   margin-top: 1.5em;
+}
+
+hr {
+  border-top-color: #ccc;
 }
 
 a.highlight {
@@ -374,88 +378,178 @@ ul.menu,
 }
 
 // Mega dropdown menu.
+.body--dxpr-theme-nav-desktop {
+  .dxpr-theme-header--top {
+    .dropdown {
+      span {
+        padding: 0;
+        pointer-events: inherit;
+      }
+    }
+    .dxpr-theme-main-menu {
+      position: static !important;
+
+      .tb-megamenu-main {
+        position: static;
+
+        & > .tb-megamenu-nav {
+          & > .tb-megamenu-item {
+            position: static;
+
+            &.level-1 {
+              & > a {
+                padding: 0 2.5vw 0 2.5vw;
+              }
+              &:last-child > a {
+                padding-right: 0;
+              }
+
+              & > .tb-megamenu-submenu {
+                height: calc(100vh - 135.2px);
+
+                &.mega-dropdown-menu {
+                  background: $blue-primary;
+                  left: 0;
+                  position: absolute;
+                  top: 100px;
+                  width: 100%;
+
+                  & > .mega-dropdown-inner {
+                    & > .tb-megamenu-row {
+                      & > .tb-megamenu-column {
+                        & > .tb-megamenu-column-inner {
+                          & > .tb-megamenu-subnav {
+                            display: none;
+                          }
+
+                          & > .tb-megamenu-block {
+                            & > .block-inner {
+                              .nav {
+                                float: none;
+
+                                li {
+                                  a {
+                                    color: #fff;
+                                  }
+                                }
+                              }
+
+                              & > .block {
+                                float: none;
+                                padding-left: 5%;
+                                padding-right: 5%;
+
+                                .nav > li > a {
+                                  height: auto;
+                                  line-height: inherit;
+                                  padding: 0;
+                                } 
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// // Clean up submenus (which are dropdowns by default) inside of 
+// // the tb menus in the full-page dropdown.
 // .body--dxpr-theme-nav-desktop {
 //   .dxpr-theme-header--top {
-//     .dropdown {
-//       span {
-//         padding: 0;
-//         pointer-events: inherit;
-//       }
-//     }
-//     .dxpr-theme-main-menu {
-//       position: static !important;
+//     // navbar-nav starts at 2nd level. Captures top-level 
+//     // links in the full-page dropdown.
+//     .nav.navbar-nav { 
+//       .expanded.dropdown {
+//         ul.dropdown-menu {
+//           min-width: auto;
+//           display: block;
+//           background: transparent;
+//           position: static;
 
-//       .tb-megamenu-main {
-//         position: static;
-
-//         & > .tb-megamenu-nav {
-//           & > .tb-megamenu-item {
-//             position: static;
-
-//             &.level-1 {
-//               & > a {
-//                 padding: 0 2.5vw 0 2.5vw;
-//               }
-//               &:last-child > a {
-//                 padding-right: 0;
-//               }
-
-//               & > .tb-megamenu-submenu {
-//                 height: calc(100vh - 135.2px);
-
-//                 &.mega-dropdown-menu {
-//                   background: $blue-primary;
-//                   left: 0;
-//                   position: absolute;
-//                   top: 100px;
-//                   width: 100%;
-
-//                   & > .mega-dropdown-inner {
-//                     & > .tb-megamenu-row {
-//                       & > .tb-megamenu-column {
-//                         & > .tb-megamenu-column-inner {
-//                           & > .tb-megamenu-subnav {
-//                             display: none;
-//                           }
-
-//                           & > .tb-megamenu-block {
-//                             & > .block-inner {
-//                               .nav {
-//                                 float: none;
-
-//                                 li {
-//                                   a {
-//                                     color: #fff;
-//                                   }
-//                                 }
-//                               }
-
-//                               & > .block {
-//                                 float: none;
-//                                 padding-left: 5%;
-//                                 padding-right: 5%;
-
-//                                 .nav > li > a {
-//                                   height: auto;
-//                                   line-height: inherit;
-//                                   padding: 0;
-//                                 } 
-//                               }
-//                             }
-//                           }
-//                         }
-//                       }
-//                     }
-//                   }
-//                 }
-//               }
-//             }
+//           li {
+            
 //           }
 //         }
 //       }
 //     }
 //   }
 // }
+
+.tb-megamenu-block {
+  .az-column {
+    .az-text {
+      h1, h2, h3 {
+        &, a {
+          font-family: "Playfair Display", serif !important;  
+        }
+      }
+    }
+  }
+}
+
+.body--dxpr-theme-nav-desktop {
+  .dxpr-theme-header--top {
+    ul.nav.navbar-nav,
+    ul.dropdown-menu {
+      min-width: auto;
+      display: block;
+      background: transparent;
+      position: static;
+
+      & > li {
+        width: 100% !important;
+
+        & > a {
+          font-size: 13px !important;
+          padding: 5px 0 !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        &:last-child > a {
+          border-bottom: none;
+        }
+      }
+    }
+    ul.nav.navbar-nav {
+      & > li {
+        margin-bottom: 0;
+
+        & > a {
+          font-size: 16px !important;
+          font-weight: bold;
+          padding: 15px 0 !important;
+          // border-bottom: none !important;
+
+          &.parent-link {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+          }
+        }
+      }
+
+      &.nav-cols {
+        float: left;
+
+        &.nav-cols-3 {
+          margin: 0 30px 30px 0;
+          width: calc(33% - 30px) !important;
+        }
+      }
+    }
+    ul.dropdown-menu {
+      margin-bottom: 30px !important;
+      overflow: hidden;
+    }
+  }
+}
 
 // Sidebar menus
 #block-mbgna-dxpr-content {
@@ -932,6 +1026,33 @@ ul.menu,
   }
 }
 
+.big-caption > * {
+  line-height: 1.25em;
+  margin: 0 0 0.5em;
+}
+
+.grid-icon {
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.view {
+  .more-link {
+    position: absolute;
+    top: -7.5px;
+    right: 0;
+
+    a {
+      background: $maize-primary;
+      border-radius: 5px;
+      color: $black;
+      display: inline-block;
+      font-weight: 700;
+      padding: 5px 15px;
+    }
+  }
+}
+
 .az-carousel .az-slide.header-banner-image,
 .az-carousel .az-slide.header-banner-video,
 .card-billboard {
@@ -965,6 +1086,14 @@ ul.menu,
 }
 
 .cards {
+  .views-title {
+    h2 {
+      // Match h3
+      font-size: 20px;
+      font-family: $font-family-sans-serif;
+    }
+  }
+
   img {
     width: 100%;
   }
@@ -987,12 +1116,22 @@ ul.menu,
   }
 }
 
-.big-caption > * {
-  line-height: 1.25em;
-  margin: 0 0 0.5em;
+.card-kicker {
+  color: #999;
+  margin: 5% 0 2.5%;
 }
 
-.grid-icon {
-  text-align: center;
-  margin: 0 0 15px;
+.card-heading {
+  h3, h4, h5 {
+    font-size: 1.35em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.card-subheading {
+  font-weight: bold;
+}
+
+.card-image img {
+  border-radius: 10px;
 }

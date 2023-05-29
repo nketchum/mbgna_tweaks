@@ -202,7 +202,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      title: 'Upcoming events'
+      title: 'Upcoming Events'
       pager:
         type: some
         options:
@@ -395,7 +395,7 @@ display:
         filter_groups: false
       use_more: true
       use_more_always: true
-      use_more_text: more
+      use_more_text: 'More events ›'
       link_display: page_1
       link_url: ''
       display_extenders: {  }
@@ -415,7 +415,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
-      title: 'Upcoming events'
+      title: 'Upcoming Events'
       defaults:
         title: false
       display_extenders: {  }
@@ -425,6 +425,7 @@ display:
         title: Events
         description: ''
         weight: 0
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''

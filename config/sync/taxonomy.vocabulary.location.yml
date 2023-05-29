@@ -1,0 +1,8 @@
+uuid: af172e11-fda3-4696-bf72-a95746e73774
+langcode: en
+status: true
+dependencies: {  }
+name: Location
+vid: location
+description: 'Major MBGNA locations and sites.'
+weight: 0
