@@ -52,15 +52,20 @@ span[style*="color:#888888;"] > mark,
   font-size: 14px !important;
   margin-top: 15px !important;
 
+  &.btn-primary,
   &.btn-success {
     padding: 4px 8px;
     margin-top: 0 !important;
     margin-left: 0;
-    color: #26292b;
     font-size: 14px;
+    border-radius: 6px;
+  }
+
+  &.btn-primary,
+  &.btn-success {
+    color: #26292b;
     border-color: #ffcb05;
     background-color: #ffcb05;
-    border-radius: 6px;
   }
 }
 
@@ -85,8 +90,15 @@ span[style*="color:#888888;"] > mark,
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 2em;
+.section-heading,
+.views-title {
+  & > h2, 
+  & > h3, 
+  & > h4 {
+    font-family: $font-family-sans-serif;
+    font-size: 22px;
+    margin-bottom: 2em;
+  }
 }
 
 h1 a {
@@ -114,6 +126,14 @@ h3, h4, h5, h6 {
 
 h4:not(:first-child) {
   margin-top: 1.5em;
+}
+
+h3, h4, h5 {
+  & strong {
+    & a {
+      font-weight: bold;
+    }
+  }
 }
 
 hr {
@@ -461,29 +481,6 @@ ul.menu,
   }
 }
 
-// // Clean up submenus (which are dropdowns by default) inside of 
-// // the tb menus in the full-page dropdown.
-// .body--dxpr-theme-nav-desktop {
-//   .dxpr-theme-header--top {
-//     // navbar-nav starts at 2nd level. Captures top-level 
-//     // links in the full-page dropdown.
-//     .nav.navbar-nav { 
-//       .expanded.dropdown {
-//         ul.dropdown-menu {
-//           min-width: auto;
-//           display: block;
-//           background: transparent;
-//           position: static;
-
-//           li {
-            
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 .tb-megamenu-block {
   .az-column {
     .az-text {
@@ -522,12 +519,11 @@ ul.menu,
     ul.nav.navbar-nav {
       & > li {
         margin-bottom: 0;
+        min-width: 0;
 
         & > a {
-          font-size: 16px !important;
-          font-weight: bold;
-          padding: 15px 0 !important;
-          // border-bottom: none !important;
+          font-size: 13px !important;
+          padding: 5px 0 !important;
 
           &.parent-link {
             border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
@@ -921,14 +917,6 @@ ul.menu,
       font-size: 11px;
       padding: 10px 0;
     }
-
-    // .nav {
-    //   a {
-    //     color: #0D57AA;
-    //     padding: 0;
-    //     margin-right: 10px;
-    //   }
-    // }
   }
 }
 
@@ -1086,14 +1074,6 @@ ul.menu,
 }
 
 .cards {
-  .views-title {
-    h2 {
-      // Match h3
-      font-size: 20px;
-      font-family: $font-family-sans-serif;
-    }
-  }
-
   img {
     width: 100%;
   }
@@ -1108,8 +1088,6 @@ ul.menu,
 
       .views-row {
         flex-basis: percentage(1/3);
-        // margin-left: -5%;
-        // margin-right: -5%;
         padding: 0 45px;
       }
     }
@@ -1134,4 +1112,13 @@ ul.menu,
 
 .card-image img {
   border-radius: 10px;
+}
+
+
+.visiting-information {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 }
