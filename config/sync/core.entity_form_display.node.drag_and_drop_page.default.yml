@@ -14,6 +14,7 @@ dependencies:
     - field_group
     - hide_revision_field
     - path
+    - text
   enforced:
     module:
       - dxpr_builder_page
@@ -41,6 +42,16 @@ targetEntityType: node
 bundle: drag_and_drop_page
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 10
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 2
@@ -136,5 +147,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  body: true
+hidden: {  }
