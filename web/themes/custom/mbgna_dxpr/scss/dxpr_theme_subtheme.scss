@@ -442,6 +442,15 @@ ul.menu,
   }
 }
 
+.dxpr-theme-header {
+  .dxpr-theme-main-menu {
+    a {
+      color: $maize-primary;
+    }
+  }  
+}
+
+
 // Mega dropdown menu.
 .body--dxpr-theme-nav-desktop {
   .dxpr-theme-header--top {
@@ -475,6 +484,7 @@ ul.menu,
                 &.mega-dropdown-menu {
                   background: $blue-primary;
                   left: 0;
+                  padding-top: 90px;
                   position: absolute;
                   top: 100px;
                   width: 100%;
@@ -494,15 +504,17 @@ ul.menu,
 
                                 li {
                                   a {
-                                    color: #fff;
+                                    color: $maize-primary;
                                   }
                                 }
                               }
 
                               & > .block {
                                 float: none;
-                                padding-left: 5%;
-                                padding-right: 5%;
+                                // padding-left: 5%;
+                                // padding-right: 5%;
+                                padding-left: 0;
+                                padding-right: 0;
 
                                 .nav > li > a {
                                   height: auto;
@@ -522,6 +534,67 @@ ul.menu,
           }
         }
       }
+    }
+  }
+}
+
+// Delete when done buidling the dropdown menu.
+.tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+  display: block !important;
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > a,
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > span {
+  padding: 0 60px;
+}
+
+.az-tabs.tabs-top {
+  display: flex !important;
+
+  & > .nav-tabs {
+    width: percentage(1/4);
+  }
+
+  & > .tab-content {
+    width: percentage(3/4);
+  }
+
+  & > .nav-tabs {
+    border-bottom: none;
+    padding-right: 45px;
+
+    & > .nav-item {
+      height: auto;
+      display: block;
+      float: none;
+
+      & > a {
+        background-color: $blue-secondary;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 5px !important;
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 5px !important;
+        border: none;
+        color: $white !important;
+        font-size: 18px !important;
+        font-weight: bold;
+        margin-bottom: 30px;
+        padding: 30px 60px !important;
+
+        &.active {
+          background-color: $maize-primary;
+          color: $black !important;
+        }
+      }
+    }
+  }
+
+  & > .tab-content {
+    padding-left: 45px;
+
+    .accordion-item {
+      background-color: transparent;
+      color: $white;
     }
   }
 }
@@ -551,8 +624,8 @@ ul.menu,
         width: 100% !important;
 
         & > a {
-          font-size: 13px !important;
-          padding: 5px 0 !important;
+          font-size: 16px !important;
+          padding: 15px 0 !important;
           border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         }
 
@@ -567,8 +640,8 @@ ul.menu,
         min-width: 0;
 
         & > a {
-          font-size: 13px !important;
-          padding: 5px 0 !important;
+          font-size: 16px !important;
+          padding: 15px 0 !important;
 
           &.parent-link {
             border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
