@@ -450,6 +450,17 @@ ul.menu,
   }  
 }
 
+.close-nav-dropdown {
+  cursor: pointer;
+  color: $black !important;
+  float: right;
+  font-size: 32px;
+  background: white;
+  line-height: 32px;
+  padding: 10px 15px;
+  margin-right: 30px;
+  margin-top: 10px;
+}
 
 // Mega dropdown menu.
 .body--dxpr-theme-nav-desktop {
@@ -482,9 +493,12 @@ ul.menu,
                 height: calc(100vh - 135.2px);
 
                 &.mega-dropdown-menu {
-                  background: $blue-primary;
+                  background-color: $blue-primary;
+                  background-image: url('/sites/default/files/dxpr_builder_images/dark-blue-garden-background.jpg');
+                  background-size: cover;
+                  background-position: center center;
                   left: 0;
-                  padding-top: 90px;
+                  padding-top: 30px;
                   position: absolute;
                   top: 100px;
                   width: 100%;
@@ -505,6 +519,10 @@ ul.menu,
                                 li {
                                   a {
                                     color: $maize-primary;
+
+                                    &::after {
+                                      content: ' \203A';
+                                    }
                                   }
                                 }
                               }
@@ -570,16 +588,17 @@ ul.menu,
 
       & > a {
         background-color: $blue-secondary;
-        border-bottom-left-radius: 0 !important;
+        border-bottom-left-radius: 5px !important;
         border-bottom-right-radius: 5px !important;
-        border-top-left-radius: 0 !important;
+        border-top-left-radius: 5px !important;
         border-top-right-radius: 5px !important;
         border: none;
         color: $white !important;
-        font-size: 18px !important;
-        font-weight: bold;
+        font-size: 20px !important;
+        font-weight: bold !important;
         margin-bottom: 30px;
         padding: 30px 60px !important;
+        text-align: center;
 
         &.active {
           background-color: $maize-primary;
