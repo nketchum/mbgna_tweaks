@@ -160,12 +160,12 @@ h1.display, h1.marginless-display, {
 
 .section-heading h2, .views-title > h2, 
 h2.display, h2.marginless-display, {
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .section-heading h3, .views-title > h3, 
 h3.display, h3.marginless-display, {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .section-heading h4, .views-title > h4, 
@@ -471,8 +471,18 @@ ul.menu,
         pointer-events: inherit;
       }
     }
+
     .dxpr-theme-main-menu {
       position: static !important;
+
+      .dropdown-toggle::after {
+        margin-left: 0.255em !important;
+        vertical-align: 0.255em !important;
+        border-top: 0.3em solid !important;
+        border-right: 0.3em solid transparent !important;
+        border-bottom: 0 !important;
+        border-left: 0.3em solid transparent !important;
+      }
 
       .tb-megamenu-main {
         position: static;
@@ -494,7 +504,7 @@ ul.menu,
 
                 &.mega-dropdown-menu {
                   background-color: $blue-primary;
-                  background-image: url('/sites/default/files/dxpr_builder_images/dark-blue-garden-background.jpg');
+                  background-image: url('/themes/custom/mbgna_dxpr/images/dropdown-menu-bg.jpg');
                   background-size: cover;
                   background-position: center center;
                   left: 0;
@@ -513,6 +523,21 @@ ul.menu,
 
                           & > .tb-megamenu-block {
                             & > .block-inner {
+                              .field--name-field-event-categories {
+                                a {
+                                  color: $gray;
+                                  text-transform: uppercase;
+                                  font-size: 14px;
+                                }
+                              }
+
+                              .teaser-title {
+                                &, & > a, & > div > a {
+                                  font-size: 18px;
+                                  font-weight: bold;
+                                }
+                              }
+
                               .nav {
                                 float: none;
 
@@ -529,8 +554,6 @@ ul.menu,
 
                               & > .block {
                                 float: none;
-                                // padding-left: 5%;
-                                // padding-right: 5%;
                                 padding-left: 0;
                                 padding-right: 0;
 
@@ -563,7 +586,8 @@ ul.menu,
 
 .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > a,
 .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > span {
-  padding: 0 60px;
+  padding: 0 60px !important;
+  color: inherit;
 }
 
 .az-tabs.tabs-top {
@@ -597,7 +621,7 @@ ul.menu,
         font-size: 20px !important;
         font-weight: bold !important;
         margin-bottom: 30px;
-        padding: 30px 60px !important;
+        padding: 30px 5% !important;
         text-align: center;
 
         &.active {
@@ -716,6 +740,15 @@ ul.menu,
       }
     }
   }
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.255em !important;
+  vertical-align: 0.255em !important;
+  border-top: 0.3em solid !important;
+  border-right: 0.3em solid transparent !important;
+  border-bottom: 0 !important;
+  border-left: 0.3em solid transparent !important;
 }
 
 .dxpr-theme-header--side .menu__level {

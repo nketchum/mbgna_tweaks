@@ -18,7 +18,7 @@
 					$(parents).css('display', 'none');
 					setTimeout(function() {
 						$(parents).removeAttr('style');
-					}, 1500);
+					}, 600);
 				});
     	});
     }
