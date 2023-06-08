@@ -1,8 +1,7 @@
 /**
  * @file
- * A JavaScript file that styles the page with bootstrap classes.
- *
- * @see sass/styles.scss for more info
+ * A JavaScript file that colorboxes links falling
+ * under a container with a "colorbox" css class.
  */
 (function($, Drupal, once) {
   Drupal.behaviors.mbgna_dxpr_theme_colorbox = {

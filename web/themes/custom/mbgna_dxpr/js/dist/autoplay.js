@@ -1,8 +1,6 @@
 /**
  * @file
- * A JavaScript file that styles the page with bootstrap classes.
- *
- * @see sass/styles.scss for more info
+ * A JavaScript file that autoplays banner videos.
  */
 (function($, Drupal, once) {
   Drupal.behaviors.mbgna_dxpr_theme_autoplay = {

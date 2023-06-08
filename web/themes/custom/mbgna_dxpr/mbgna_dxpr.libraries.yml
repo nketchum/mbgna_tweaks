@@ -3,9 +3,9 @@ global-styling:
     theme:
       css/dxpr_theme_subtheme.css: {weight: 6}
   js:
-    js/dist/colorbox.js: { minified: false }
-    js/dist/autoplay.js: { minified: false }
-    js/dist/nav.js: { minified: false }
+    js/minified/colorbox.min.js: { minified: true }
+    js/minified/autoplay.min.js: { minified: true }
+    js/minified/nav.min.js: { minified: true }
 
 bootstrap-3:
   css:

@@ -600,7 +600,7 @@ display:
         type: normal
         title: Events
         description: ''
-        weight: 0
+        weight: -47
         enabled: true
         expanded: false
         menu_name: main

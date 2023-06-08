@@ -5,12 +5,16 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - block_class
     - menu_block
   theme:
     - mbgna_dxpr
+third_party_settings:
+  block_class:
+    classes: 'hide-on-wide nav-mobile'
 id: mainnavigation_2
 theme: mbgna_dxpr
-region: hidden
+region: navigation_collapsible
 weight: -5
 provider: null
 plugin: 'menu_block:main'
@@ -24,8 +28,8 @@ settings:
   label_link: false
   label_type: block
   level: 1
-  depth: 0
-  expand_all_items: false
-  parent: 'main:menu_link_content:6aa67630-d6be-4ba1-841f-dd8c36d5fd30'
+  depth: 3
+  expand_all_items: true
+  parent: 'main:'
   suggestion: main
 visibility: {  }

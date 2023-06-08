@@ -279,9 +279,13 @@ body {
   #logo {
     width: calc(100% - 90px);
 
-    @media (max-width: 767px) {
-      width: 280px;
+    @media (max-width: 1200px) {
       margin-top: -15px;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 0;
     }
   }
 }
@@ -579,15 +583,109 @@ ul.menu,
   }
 }
 
-// Delete when done buidling the dropdown menu.
-// .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
-//   display: block !important;
-// }
-
 .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > a,
 .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > span {
   padding: 0 60px !important;
   color: inherit;
+}
+
+@media screen and (max-width: 1200px) {
+  #dxpr-theme-main-menu,
+  #dxpr-theme-main-menu .menu__breadcrumbs, 
+  #dxpr-theme-main-menu .menu__level {
+    width: 100%;
+  }
+}
+
+.html--dxpr-theme-nav-mobile--open .dxpr-theme-header--side .dxpr-theme-main-menu {
+  @media (max-width: 1200px) {
+    background-color: $blue-primary;
+  }
+
+  .nav-mobile {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    & > ul {
+      font-size: 20px;
+
+      & > li > span,
+      & > li > a {
+        display: block;
+        font-family: $font-family-serif;
+        font-weight: bold;
+        margin-bottom: 15px;
+        margin-top: 30px;
+        background: $maize-primary;
+        color: $blue-primary;
+        padding: 2.5px 10px;
+        margin-left: -10px;
+        border-radius: 5px;
+        margin-right: -10px;
+
+        &:hover {
+          color: $blue-primary;
+        }
+      }
+
+      & > li:first-child > span,
+      & > li:first-child > a {
+        margin-top: 0;
+      }
+      
+      & > li > ul {
+        font-size: 16px;
+
+        & > li {
+          margin: 5px 0;
+        }
+
+        & > li > a,
+        & > li > span {
+          font-weight: bold;
+        }
+
+        & > li > ul {
+          font-size: 14px;
+          margin-bottom: 15px;
+
+          a, span {
+            display: inline-block;
+            font-size: 12px;
+            padding: 2.5px 0;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    li > * {
+      color: $maize-primary;
+    }
+
+    a:hover {
+      color: $maize-primary;
+    }
+  }
+}
+
+.html--dxpr-theme-nav-mobile--open {
+  .body--dxpr-theme-nav-mobile .dxpr-theme-header #dxpr-theme-menu-toggle {
+    margin: -8px -10px 0 0 !important;
+    padding: 10px 24px 10px 0;
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+      margin: -42px -30px 0 0 !important;
+    }
+
+    span {
+        &::before, &::after {
+          background-color: $maize-primary;
+        }
+      }
+  } 
 }
 
 .az-tabs.tabs-top {

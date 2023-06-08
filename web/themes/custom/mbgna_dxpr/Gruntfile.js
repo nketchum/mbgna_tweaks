@@ -9,12 +9,9 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'js/minified/color.min.js': 'js/dist/color.js',
-          'js/minified/dxpr-theme-breadcrumbs.min.js': 'js/dist/dxpr-theme-breadcrumbs.js',
-          'js/minified/dxpr-theme-full-screen-search.min.js': 'js/dist/dxpr-theme-full-screen-search.js',
-          'js/minified/dxpr-theme-header.min.js': 'js/dist/dxpr-theme-header.js',
-          'js/minified/dxpr-theme-multilevel-mobile-nav.min.js': 'js/dist/dxpr-theme-multilevel-mobile-nav.js',
-          'js/minified/dxpr-theme-settings.admin.min.js': 'js/dist/dxpr-theme-settings.admin.js'
+          'js/minified/autoplay.min.js': 'js/dist/autoplay.js',
+          'js/minified/colorbox.min.js': 'js/dist/colorbox.js',
+          'js/minified/nav.min.js': 'js/dist/nav.js'
         }
       }
     },
@@ -24,13 +21,9 @@ module.exports = function(grunt) {
       },
       main: {
         files: {
-          'js/minified/classie.min.js': ['vendor/classie.js'],
-          'js/minified/color.min.js': ['js/minified/color.min.js'],
-          'js/minified/dxpr-theme-breadcrumbs.min.js': ['js/minified/dxpr-theme-breadcrumbs.min.js'],
-          'js/minified/dxpr-theme-full-screen-search.min.js': ['js/minified/dxpr-theme-full-screen-search.min.js'],
-          'js/minified/dxpr-theme-header.min.js': ['js/minified/dxpr-theme-header.min.js'],
-          'js/minified/dxpr-theme-multilevel-mobile-nav.min.js': ['js/minified/dxpr-theme-multilevel-mobile-nav.min.js'],
-          'js/minified/dxpr-theme-settings.admin.min.js': ['js/minified/dxpr-theme-settings.admin.min.js']
+          'js/minified/autoplay.min.js': 'js/dist/autoplay.js',
+          'js/minified/colorbox.min.js': 'js/dist/colorbox.js',
+          'js/minified/nav.min.js': 'js/dist/nav.js'
         },
       }
     },
