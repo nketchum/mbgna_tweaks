@@ -1365,6 +1365,16 @@ ul.menu,
       .views-row {
         flex-basis: percentage(1/3);
         padding: 0 45px;
+
+        @media (max-width: 767px) {
+          padding: 0 0 45px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
@@ -1396,5 +1406,83 @@ ul.menu,
     padding: 0;
     margin: 0;
     list-style: none;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .az-column {
+    padding: 0 !important;
+    float: none;
+    margin: 0 !important;
+  }
+
+  .mobile-margin-hz-0x {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .mobile-margin-hz-1x {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+
+  .mobile-margin-hz-2x {
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+  }
+
+  .mobile-margin-vt-0x {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .mobile-margin-vt-1x {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .mobile-margin-vt-2x {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .mobile-padding-hz-0x {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .mobile-padding-hz-1x {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .mobile-padding-hz-2x {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .mobile-padding-vt-0x {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .mobile-padding-vt-1x {
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
+  }
+
+  .mobile-padding-vt-2x {
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
+  }
+
+  .mobile-container-padding-hz {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
   }
 }
