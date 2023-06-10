@@ -1,6 +1,6 @@
 bootstrap: bs5
 cke_fonts: 'Display/Playfair Display, Georgia, serif;'
-cke_stylesset: "h1 display=h1.display\r\nh2 display=h2.display\r\nh3 display=h3.display\r\nh4 display=h4.display\r\nh5 display=h5.display\r\nh6 display=h6.display\r\np display=p.display\r\nh1 marginless display=h1.marginless-display\r\nh2 marginless display=h2.marginless-display\r\nh3 marginless display=h3.marginless-display\r\nh4 marginless display=h4.marginless-display\r\nh5 marginless display=h5.marginless-display\r\nh6 marginless display=h6.marginless-display\r\np marginless display=p.marginless-display"
+cke_stylesset: "h1 display=h1.display\r\nh2 display=h2.display\r\nh3 display=h3.display\r\nh4 display=h4.display\r\nh5 display=h5.display\r\nh6 display=h6.display\r\np display=p.display\r\nh1 marginless display=h1.marginless-display\r\nh2 marginless display=h2.marginless-display\r\nh3 marginless display=h3.marginless-display\r\nh4 marginless display=h4.marginless-display\r\nh5 marginless display=h5.marginless-display\r\nh6 marginless display=h6.marginless-display\r\np marginless display=p.marginless-display\r\np lead = p.lead"
 editor_assets_source: null
 format_filters: 0
 media_browser: ''

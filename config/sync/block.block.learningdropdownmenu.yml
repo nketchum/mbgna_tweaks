@@ -1,0 +1,25 @@
+uuid: 4f02c36d-e4bf-4211-bf63-8defe882d697
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:0a410595-84ba-4a96-bdee-0ddd62fbaeeb'
+  module:
+    - block_content
+  theme:
+    - mbgna_dxpr
+id: learningdropdownmenu
+theme: mbgna_dxpr
+region: hidden
+weight: -5
+provider: null
+plugin: 'block_content:0a410595-84ba-4a96-bdee-0ddd62fbaeeb'
+settings:
+  id: 'block_content:0a410595-84ba-4a96-bdee-0ddd62fbaeeb'
+  label: 'Learning dropdown menu'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
