@@ -294,6 +294,11 @@ body {
   #dxpr-theme-menu-toggle {
     margin: 17px 0 0 !important;
   }
+
+  // This actually holds just the logo. No nav.
+  .region-navigation {
+    width: calc(100% - 50px);
+  }
 }
 
 
@@ -342,6 +347,10 @@ body {
   ul.nav {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
   }
 }
 
@@ -352,6 +361,10 @@ body {
 #footer {
   .views-title {
     float:left;
+
+    @media (max-width: 767px) {
+      float: none;
+    }
 
     h2 {
       float: left;
@@ -368,6 +381,10 @@ body {
       color: $blue-secondary;
       line-height: 20px;
       font-size: 14px;
+
+      @media (max-width: 767px) {
+        padding-left: 0;
+      }
     }
   }
 
@@ -389,7 +406,7 @@ body {
     padding-bottom: 15px !important;
     .nav {
       a {
-        font-size: 12px;
+        // font-size: 12px;
       }
     }
   }
@@ -407,7 +424,7 @@ body {
       @media (max-width: 767px) {
         background-color: transparent;
         color: #0D57AA;
-        font-size: 11px;
+        font-size: 14px;
         margin-right: 10px;
         padding: 0;
       }
@@ -658,7 +675,6 @@ ul.menu,
             display: inline-block;
             font-size: 12px;
             padding: 2.5px 0;
-            text-transform: uppercase;
           }
         }
       }
@@ -940,6 +956,43 @@ ul.menu,
   }
 }
 
+
+@media (max-width: 767px) {
+  .header-banner-video > .az-element,
+  .header-banner-image > .az-element {
+    padding-top: 120px !important;
+    padding-bottom: 90px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-banner-carousel .owl-controls {
+    display: none !important;
+  }
+
+  .owl-wrapper{
+    display: flex !important;
+  }
+
+  .owl-item {
+    display: flex;
+
+    & > .az-slide {
+      display: flex;
+      width: 100%;
+
+      & > .az-slide {
+        display: flex;
+        width: 100%;
+
+        & > .az-element {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 // Left align dots.
 .st-owl-theme.st-owl-pager-inside .owl-pagination {
   left: 6%;
@@ -1128,17 +1181,19 @@ ul.menu,
 
   #footer {
     p {
-      font-size: 11px !important;
+      // font-size: 11px !important;
     }
 
     h2 {
-      font-size: 12px !important;
+      // font-size: 12px !important;
       margin-right: 10px !important;
       line-height: 20px !important;
     }
     .nav {
       a {
-        font-size: 11px;
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
+        // font-size: 11px;
       }
     }
 
