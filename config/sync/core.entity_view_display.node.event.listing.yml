@@ -1,9 +1,9 @@
-uuid: 841f973f-b8ac-410b-8859-60c8184637c8
+uuid: 66e3cb77-afa6-4eb7-a402-acf3dbd910fa
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card_basic
+    - core.entity_view_mode.node.listing
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_date_smart
@@ -16,14 +16,34 @@ dependencies:
     - field.field.node.event.field_website
     - node.type.event
   module:
+    - address
     - field_formatter_class
+    - link
     - manage_display
     - smart_date
-id: node.event.card_basic
+    - text
+id: node.event.listing
 targetEntityType: node
 bundle: event
-mode: card_basic
+mode: listing
 content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 3
+    region: content
+  field_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_date_smart:
     type: smartdate_default
     label: hidden
@@ -36,59 +56,70 @@ content:
       time_wrapper: true
       localize: false
       parts:
-        start: start
-        end: end
-        duration: '0'
+        - start
+        - end
       duration:
         separator: ' | '
         unit: ''
         decimals: 2
         suffix: h
-    third_party_settings:
-      field_formatter_class:
-        class: card-subheading
-    weight: 3
-    region: content
-  field_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings:
-      field_formatter_class:
-        class: card-image
+    third_party_settings: {  }
     weight: 0
     region: content
-  field_location:
+  field_dollar_amount:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_event_categories:
     type: entity_reference_label
     label: hidden
     settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: inline
+    settings:
       link: false
     third_party_settings:
       field_formatter_class:
-        class: card-kicker
-    weight: 1
+        class: ''
+    weight: 4
+    region: content
+  field_website:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
     region: content
   title:
     type: title
     label: hidden
     settings:
       link_to_entity: true
-      tag: h4
-    third_party_settings:
-      field_formatter_class:
-        class: card-heading
+      tag: h2
+    third_party_settings: {  }
     weight: 2
     region: content
 hidden:
-  body: true
   created: true
-  field_address: true
-  field_dollar_amount: true
-  field_event_categories: true
+  field_image: true
   field_map_link: true
   field_phone: true
-  field_website: true
   links: true
   uid: true

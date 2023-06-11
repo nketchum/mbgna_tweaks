@@ -18,6 +18,15 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * See the html.html.twig template for the list of variables.
  */
 function mbgna_dxpr_preprocess_html(&$variables) {
+  $variables['dxpr_body_class'] = 'is-not-dxpr-layout'; // default layout.
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    if ($content_type == 'drag_and_drop_page') {
+      $variables['dxpr_body_class'] = 'is-dxpr-layout';
+    }
+  }
+
   // If bootstrap basetheme is not loading bootstrap from CDN load it locally
   // This is default behavior starting from DXPR Theme 8.x-1.1.3 and 7.x-2.7.3.
   $bootstrap_cdn = theme_get_setting('cdn_provider');

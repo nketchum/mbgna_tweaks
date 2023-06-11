@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - block_visibility_conditions_node
   theme:
     - mbgna_dxpr
 _core:
@@ -20,10 +20,9 @@ settings:
   label_display: '0'
   provider: core
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+  not_node_type:
+    id: not_node_type
     bundles:
-      basic_page: basic_page
+      drag_and_drop_page: drag_and_drop_page
+      landing_page: landing_page
+    negate: null

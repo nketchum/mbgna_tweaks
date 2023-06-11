@@ -191,11 +191,11 @@
   and not page.sidebar_first|render|striptags|trim
   and not page.sidebar_second|render|striptags|trim ? '' : 'container' %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content clearfix">
-    {% if container != '' %}
+    {# {% if container != '' %} #}
     <div class="row">
-    {% endif %}
+    {# {% endif %} #}
       {# Sidebar First #}
-      {% if page.sidebar_first|render|striptags|trim %}
+      {% if page.sidebar_first|render|striptags %}
         {% block sidebar_first %}
           <aside class="col-sm-3" role="complementary">
             {{ page.sidebar_first }}
@@ -207,10 +207,10 @@
       {% if not node.field_dth_main_content_width.getString() %}
         {%
           set content_classes = [
-            page.sidebar_first|render|striptags|trim and page.sidebar_second|render|striptags|trim ? 'col-sm-6',
-            page.sidebar_first|render|striptags|trim and page.sidebar_second|render|striptags|trim is empty ? 'col-sm-9',
-            page.sidebar_second|render|striptags|trim and page.sidebar_first|render|striptags|trim is empty ? 'col-sm-9',
-            container != '' and page.sidebar_first|render|striptags|trim is empty and page.sidebar_second|render|striptags|trim is empty ? 'col-sm-12'
+            page.sidebar_first|render|striptags and page.sidebar_second|render|striptags|trim ? 'col-sm-6',
+            page.sidebar_first|render|striptags and page.sidebar_second|render|striptags|trim is empty ? 'col-sm-9',
+            page.sidebar_second|render|striptags and page.sidebar_first|render|striptags|trim is empty ? 'col-sm-9',
+            container != '' and page.sidebar_first|render|striptags is empty and page.sidebar_second|render|striptags is empty ? 'col-sm-12'
           ]
         %}
       {% else %}
@@ -249,16 +249,16 @@
       </section>
 
       {# Sidebar Second #}
-      {% if page.sidebar_second|render|striptags|trim %}
+      {% if page.sidebar_second|render|striptags %}
         {% block sidebar_second %}
           <aside class="col-sm-3" role="complementary">
             {{ page.sidebar_second }}
           </aside>
         {% endblock %}
       {% endif %}
-    {% if container != '' %}
+    {# {% if container != '' %} #}
     </div><!-- end .ow -->
-    {% endif %}
+    {# {% endif %} #}
   </div><!-- end main-container -->
 {% endblock %}
 

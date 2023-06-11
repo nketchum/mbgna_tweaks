@@ -7,19 +7,16 @@ dependencies:
     - field.field.node.event.field_address
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
-    - field.field.node.event.field_end_date
     - field.field.node.event.field_event_categories
     - field.field.node.event.field_image
     - field.field.node.event.field_location
     - field.field.node.event.field_map_link
     - field.field.node.event.field_phone
-    - field.field.node.event.field_start_date
     - field.field.node.event.field_website
     - node.type.event
   module:
     - address
     - allowed_formats
-    - datetime
     - hide_revision_field
     - link
     - media_library
@@ -82,12 +79,6 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
-  field_end_date:
-    type: datetime_default
-    weight: 19
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_event_categories:
     type: options_select
     weight: 15
@@ -121,12 +112,6 @@ content:
     region: content
     settings:
       placeholder: ''
-    third_party_settings: {  }
-  field_start_date:
-    type: datetime_default
-    weight: 18
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_website:
     type: link_default

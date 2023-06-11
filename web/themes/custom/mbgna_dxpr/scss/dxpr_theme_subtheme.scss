@@ -885,6 +885,30 @@ ul.menu,
   margin-left: 5px;
 }
 
+.is-not-dxpr-layout {
+  .breadcrumb {
+    position: static;
+    text-align: left;
+    margin-bottom: -15px;
+  }
+
+  .main-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 90px;
+  }
+
+  .page-title-full-width-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+  }
+
+  h1.page-title {
+    height: auto !important;
+  }
+}
+
 .banner-thin {
   @media (max-width: 767px) {
     background: #0D57AA;

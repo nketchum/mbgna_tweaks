@@ -7,12 +7,15 @@ module:
   admin_toolbar_tools: 0
   allowed_formats: 0
   asset_injector: 0
+  better_exposed_filters: 0
   blazy: 0
   block: 0
   block_class: 0
   block_content: 0
   block_content_permissions: 0
   block_region_permissions: 0
+  block_visibility_conditions: 0
+  block_visibility_conditions_node: 0
   breakpoint: 0
   calendar_link: 0
   ckeditor5: 0
@@ -36,6 +39,7 @@ module:
   editor: 0
   entity_reference_revisions: 0
   field: 0
+  field_display_label: 0
   field_formatter_class: 0
   field_group: 0
   field_ui: 0
@@ -46,6 +50,10 @@ module:
   image: 0
   inline_entity_form: 0
   inline_form_errors: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   link: 0
   link_attributes: 0
   manage_display: 0
