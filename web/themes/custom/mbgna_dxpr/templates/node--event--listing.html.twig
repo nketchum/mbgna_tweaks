@@ -79,7 +79,7 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content').addClass('row') }}>
-    <div class="col-8">
+    <div class="col-md-8 col-main">
       {{ content.field_event_categories }}
       {{ content.title }}
       {{ label }}
@@ -89,8 +89,7 @@
       {{ content.field_website }}
       <div class="clearfix text-formatted field field--name-event-link field--type-button field__item"><a href="{{ url }}" class="btn btn-primary">Learn more ›</a></div>
     </div>
-    <div class="col-4">
-      <div class="clearfix text-formatted field field--name-event-label field--type-text field__item">Event</div>
+    <div class="col-md-4 col-secondary">
       {{ content.field_date_smart }}
     </div>
   </div>

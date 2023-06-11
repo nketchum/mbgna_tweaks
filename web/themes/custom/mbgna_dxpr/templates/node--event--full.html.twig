@@ -79,6 +79,7 @@
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content') }}>
     {% block content %}
+      <h2 class="page-title">{{ node.label }}</h2>
       {{ content|without('flippy_pager') }}
 {#       {% set links = calendar_links(node.title, date_smart_ical_start, date_smart_ical_end, date_smart_ical_all_day, content.field_body, content.field_address) %}
         <ul>

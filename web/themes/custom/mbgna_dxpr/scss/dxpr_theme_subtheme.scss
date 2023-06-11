@@ -833,6 +833,18 @@ ul.menu,
   }
 }
 
+.region-sidebar-first,
+.region-sidebar-second {
+  color: inherit;
+}
+
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-content {
+  padding: 0;
+}
+
 // Sidebar menus
 #block-mbgna-dxpr-content {
   ul.nav {
@@ -904,8 +916,30 @@ ul.menu,
     margin-bottom: 60px;
   }
 
+  .main-container > .row {
+    & > aside:first-child {
+      padding-right: 2.5%;
+    }
+
+    & > section {
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+    }
+
+    & > aside:last-child {
+      padding-left: 2.5%;
+    }
+  }
+
   h1.page-title {
     height: auto !important;
+  }
+}
+
+.is-dxpr-layout {
+  .main-container > .row > * {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -1404,6 +1438,74 @@ ul.menu,
   }
 }
 
+.view.node-listing {
+  .views-row {
+    margin-bottom: 45px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .col-secondary {
+    display: flex;
+
+    & > .field {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .field--label-inline .field__label {
+    float: left;
+    min-width: 100px;
+  }
+
+  .field--name-field-event-categories {
+    margin-bottom: 1em;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  .field--name-body {
+    margin: 1em 0;
+    font-size: 18px;
+  }
+
+  .smart-date--date::after {
+    content: ' — ';
+  }
+
+  .smart-date--time time:last-child::before {
+    content: ' to ';
+    text-align: center;
+  }
+
+  .field--name-field-date-smart {
+    border-left: 4px solid #eee;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10%;
+    margin-left: 10%;
+    width: 100%;
+  }
+
+  @media (min-width: 1501px) {
+    time {
+      white-space: nowrap;
+    }
+  }
+  // time:last-child .smart-date--date::before {
+  //   content: ' — ';
+  // }
+}
+
+.views-exposed-form,
+.view-header {
+  h2 {
+    margin-bottom: 1.5em;
+  }
+}
+
 .az-carousel .az-slide.header-banner-image,
 .az-carousel .az-slide.header-banner-video,
 .card-billboard {
@@ -1496,9 +1598,33 @@ ul.menu,
   }
 }
 
+.bef-exposed-form legend {
+  margin: 0;
+}
 
+.bef-exposed-form .form--inline > .form-item {
+  float: none;
+}
 
+.bef-exposed-form .form--inline .form-item {
+  margin-right: 0;
+}
 
+.form-item-date-min,
+.form-item-date-max {
+  width: 50%;
+  float: left !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-item-date-min {
+  padding-right: 7.5px;
+}
+
+.form-item-date-max {
+  padding-left: 7.5px;
+}
 
 
 @media (max-width: 767px) {

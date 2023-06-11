@@ -8,6 +8,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - node.type.event
     - system.menu.main
+    - taxonomy.vocabulary.event_categories
     - taxonomy.vocabulary.location
   module:
     - better_exposed_filters
@@ -655,9 +656,154 @@ display:
           plugin_id: bundle
           value:
             event: event
+          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        title:
+          id: title
+          table: node_field_revision
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+          operator: allwords
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: 'Event Name'
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              editor: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+            placeholder: 'Search one or more words...'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_smart_value:
+          id: field_date_smart_value
+          table: node__field_date_smart
+          field: field_date_smart_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_smart_value_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_date_smart_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: date
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              editor: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+            min_placeholder: 'Starts no sooner than...'
+            max_placeholder: 'Starts no later than...'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_event_categories_target_id:
+          id: field_event_categories_target_id
+          table: node__field_event_categories
+          field: field_event_categories_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_categories_target_id_op
+            label: Category
+            description: ''
+            use_operator: false
+            operator: field_event_categories_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: categories
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              editor: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: event_categories
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
         field_location_target_id:
           id: field_location_target_id
           table: node__field_location
@@ -678,7 +824,7 @@ display:
             operator: field_location_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_location_target_id
+            identifier: location
             required: false
             remember: false
             multiple: false
@@ -707,56 +853,6 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        field_date_smart_value:
-          id: field_date_smart_value
-          table: node__field_date_smart
-          field: field_date_smart_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: between
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
-            granularity: second
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_date_smart_value_op
-            label: Date
-            description: ''
-            use_operator: false
-            operator: field_date_smart_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_date_smart_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              editor: '0'
-              super_administrator: '0'
-              working_group_member: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -771,12 +867,27 @@ display:
           view_mode: listing
       defaults:
         title: false
+        css_class: false
         exposed_form: false
         style: false
         row: false
         filters: false
         filter_groups: false
+        header: false
+      css_class: node-listing
       display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<h2 class="block-title">Events</h2>'
+          tokenize: false
       exposed_block: true
       display_extenders: {  }
       path: events
