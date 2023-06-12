@@ -1031,6 +1031,10 @@ ul.menu,
   }
 }
 
+.header-banner-video .inlinePlayButton {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .header-banner-carousel .owl-controls {
     display: none !important;
