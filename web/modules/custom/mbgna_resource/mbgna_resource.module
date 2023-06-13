@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * @file
+ * Provides a resource entity type.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\mbgna_resource\Entity\Resource;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function mbgna_resource_theme() {
+  return [
+    'resource' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for resource templates.
+ *
+ * Default template: resource.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the resource information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_resource(array &$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function mbgna_resource_user_cancel($edit, UserInterface $account, $method) {
+  switch ($method) {
+    case 'user_cancel_block_unpublish':
+      // Unpublish resources.
+      $storage = \Drupal::entityTypeManager()->getStorage('resource');
+      $resource_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->condition('status', 1)
+        ->execute();
+      foreach ($storage->loadMultiple($resource_ids) as $resource) {
+        $resource->set('status', FALSE);
+        $resource->save();
+      }
+      break;
+
+    case 'user_cancel_reassign':
+      // Anonymize resources.
+      $storage = \Drupal::entityTypeManager()->getStorage('resource');
+      $resource_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->execute();
+      foreach ($storage->loadMultiple($resource_ids) as $resource) {
+        $resource->setOwnerId(0);
+        $resource->save();
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete() for user entities.
+ */
+function mbgna_resource_user_predelete(UserInterface $account) {
+  // Delete resources.
+  $storage = \Drupal::entityTypeManager()->getStorage('resource');
+  $resource_ids = $storage->getQuery()
+    ->condition('uid', $account->id())
+    ->execute();
+  $resources = $storage->loadMultiple($resource_ids);
+  $storage->delete($resources);
+  // Delete old revisions.
+  $resource_ids = $storage->getQuery()
+    ->allRevisions()
+    ->condition('uid', $account->id())
+    ->execute();
+  foreach (array_keys($resource_ids) as $revision_id) {
+    $storage->deleteRevision($revision_id);
+  }
+}

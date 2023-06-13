@@ -1,0 +1,17 @@
+administer mbgna_resource configuration:
+  title: 'Administer mbgna_resource configuration'
+  description: 'Optional description.'
+  restrict access: true
+
+administer resource types:
+  title: 'Administer resource types'
+  description: 'Maintain the types of resource entity.'
+  restrict access: true
+delete resource:
+  title: Delete resource
+create resource:
+  title: Create resource
+view resource:
+  title: View resource
+edit resource:
+  title: Edit resource

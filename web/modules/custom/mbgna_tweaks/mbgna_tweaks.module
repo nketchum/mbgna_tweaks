@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for MBGNA Tweaks module.
+ */
+function mbgna_tweaks_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-events-page-1' && isset($form['date_wrapper'])) {
+    $form['date_wrapper']['date_wrapper']['date']['min']['#title'] = t('Starts between');
+    $form['date_wrapper']['date_wrapper']['date']['max']['#title'] = t('and');
+  }
+}

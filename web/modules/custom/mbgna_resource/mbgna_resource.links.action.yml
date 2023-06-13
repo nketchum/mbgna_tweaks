@@ -1,0 +1,11 @@
+resource.type_add:
+  title: 'Add resource type'
+  route_name: entity.resource_type.add_form
+  appears_on:
+    - entity.resource_type.collection
+
+resource.add_page:
+  title: 'Add resource'
+  route_name: entity.resource.add_page
+  appears_on:
+    - entity.resource.collection
