@@ -895,7 +895,7 @@ display:
         type: normal
         title: Events
         description: ''
-        weight: -47
+        weight: -57
         enabled: true
         expanded: false
         menu_name: main
