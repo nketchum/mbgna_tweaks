@@ -1,0 +1,6 @@
+uuid: f6b29065-bb29-4339-aba2-5eb2456e922b
+langcode: en
+status: true
+dependencies: {  }
+id: natural_area_data
+label: 'Natural area data'

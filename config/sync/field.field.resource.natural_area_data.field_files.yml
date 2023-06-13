@@ -1,0 +1,29 @@
+uuid: 9c5b873e-6da3-482e-96c8-05527b461d9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.resource.field_files
+    - mbgna_resource.resource_type.natural_area_data
+    - media.type.file
+id: resource.natural_area_data.field_files
+field_name: field_files
+entity_type: resource
+bundle: natural_area_data
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

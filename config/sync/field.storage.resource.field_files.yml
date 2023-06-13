@@ -1,0 +1,20 @@
+uuid: a45f398b-4d15-43b4-93da-9e3395d39730
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_resource
+    - media
+id: resource.field_files
+field_name: field_files
+entity_type: resource
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
