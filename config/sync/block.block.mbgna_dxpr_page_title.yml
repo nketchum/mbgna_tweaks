@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - block_visibility_conditions_node
+    - system
   theme:
     - mbgna_dxpr
 _core:
@@ -26,3 +27,7 @@ visibility:
       drag_and_drop_page: drag_and_drop_page
       landing_page: landing_page
     negate: null
+  request_path:
+    id: request_path
+    negate: true
+    pages: /events
