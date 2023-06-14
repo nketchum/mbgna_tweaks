@@ -1,0 +1,8 @@
+uuid: 061deb50-375b-4154-a277-ceb79c08db5d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Post type'
+vid: post_type
+description: 'Defines the kind of post.'
+weight: 0

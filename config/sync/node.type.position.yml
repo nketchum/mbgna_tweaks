@@ -1,0 +1,17 @@
+uuid: e189d19f-708b-48fd-8cbb-3b7de48245dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Position
+type: position
+description: 'Provides a position content type.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

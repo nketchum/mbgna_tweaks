@@ -1,0 +1,8 @@
+uuid: f86cee33-a99b-4e36-bc4b-f36ee62cb497
+langcode: en
+status: true
+dependencies: {  }
+name: 'Position type'
+vid: position_type
+description: 'Specifies the kind of position.'
+weight: 0

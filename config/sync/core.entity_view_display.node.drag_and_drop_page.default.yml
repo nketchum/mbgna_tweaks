@@ -3,16 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.collaborator_comment.default
     - field.field.node.drag_and_drop_page.body
     - field.field.node.drag_and_drop_page.field_collaborator_comments
     - field.field.node.drag_and_drop_page.field_dth_hide_regions
     - field.field.node.drag_and_drop_page.field_dth_main_content_width
     - field.field.node.drag_and_drop_page.field_dth_page_layout
+    - field.field.node.drag_and_drop_page.field_page_type
     - node.type.drag_and_drop_page
   module:
     - comment
     - dxpr_builder
-    - user
+    - manage_display
   enforced:
     module:
       - dxpr_builder_page
@@ -39,9 +41,28 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_page_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
 hidden:
+  created: true
   field_dth_hide_regions: true
   field_dth_main_content_width: true
   field_dth_page_layout: true
   field_dth_page_title_backgrou: true
   links: true
+  uid: true

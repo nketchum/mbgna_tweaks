@@ -6,9 +6,30 @@ dependencies:
     - field.field.resource.natural_area_data.field_files
     - mbgna_resource.resource_type.natural_area_data
   module:
+    - field_group
     - hide_revision_field
     - media_library
     - text
+third_party_settings:
+  field_group:
+    group_publishing_options:
+      children:
+        - revision_log
+        - uid
+        - created
+      label: 'Publishing options'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
 id: resource.natural_area_data.default
 targetEntityType: resource
 bundle: natural_area_data
@@ -16,7 +37,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -57,14 +78,14 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: false
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS

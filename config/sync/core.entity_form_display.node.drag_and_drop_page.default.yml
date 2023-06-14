@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.drag_and_drop_page.field_dth_hide_regions
     - field.field.node.drag_and_drop_page.field_dth_main_content_width
     - field.field.node.drag_and_drop_page.field_dth_page_layout
+    - field.field.node.drag_and_drop_page.field_page_type
     - node.type.drag_and_drop_page
   module:
     - comment
@@ -89,6 +90,12 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_page_type:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path

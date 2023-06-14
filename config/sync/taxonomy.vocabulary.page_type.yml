@@ -1,0 +1,8 @@
+uuid: 839bcd13-631e-40cd-866d-26a5bad324cb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Page type'
+vid: page_type
+description: 'Defines the kind of page.'
+weight: 0
