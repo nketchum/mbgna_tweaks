@@ -32,7 +32,6 @@ services:
       - database
   node:
     type: node
-    ssl:  true
     build:
       - npm install
     globals:
@@ -41,7 +40,6 @@ services:
       npm: latest
       webpack: latest
       yarn: latest
-    command: cd /app/web/themes/contrib/mbgna_dxpr && node_modules/.bin/grunt watch
 tooling:
   drush:
     service: appserver
