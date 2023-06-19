@@ -795,6 +795,18 @@ ul.menu,
   }
 }
 
+.accordion-item .accordion-body,
+.accordion-item .accordion-body h1,
+.accordion-item .accordion-body h2,
+.accordion-item .accordion-body h3,
+.accordion-item .accordion-body h4,
+.accordion-item .accordion-body h5,
+.accordion-item .accordion-body h6,
+.accordion-item .accordion-body label,
+.accordion-item .accordion-body .field--label {
+  color: $black;
+}
+
 .tb-megamenu-block {
   .az-column {
     .az-text {
