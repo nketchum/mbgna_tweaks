@@ -537,7 +537,7 @@ ul.menu,
               }
 
               & > .tb-megamenu-submenu {
-                height: calc(100vh - 135.2px);
+                min-height: calc(100vh - 135.2px);
 
                 &.mega-dropdown-menu {
                   background-color: $blue-primary;

@@ -11,7 +11,7 @@ dependencies:
 id: learningdropdownmenu
 theme: mbgna_dxpr
 region: hidden
-weight: -5
+weight: -6
 provider: null
 plugin: 'block_content:0a410595-84ba-4a96-bdee-0ddd62fbaeeb'
 settings:
