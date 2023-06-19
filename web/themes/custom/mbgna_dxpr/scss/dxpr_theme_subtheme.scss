@@ -209,6 +209,10 @@ a:hover, a:focus, .btn-link:hover, .btn-link:focus {
   color: #247ADB;
 }
 
+.html .nav-tabs > li > a:hover {
+  color: inherit;
+}
+
 p.lead {
   font-size: 1.15em;
   line-height: 1.5em;
@@ -220,6 +224,10 @@ body {
 
 .wrap-containers {
   position: relative;
+}
+
+.accordion-item {
+  color: inherit;
 }
 
 @media (max-width: 767px) {
@@ -764,6 +772,26 @@ ul.menu,
       background-color: transparent;
       color: $white;
     }
+  }
+}
+
+.az-tabs--grid--left {
+  .accordion-item {
+    background-color: transparent;
+  }
+  .tab-content {
+    padding-left: 30px;
+  }
+}
+
+#block-mbgna-dxpr-content ul.nav.nav-tabs.left-tabs {
+  margin: 0;
+  padding: 0;
+
+  li a.active {
+    background-color: $maize-primary !important;
+    border: none;
+    box-shadow: none;
   }
 }
 
