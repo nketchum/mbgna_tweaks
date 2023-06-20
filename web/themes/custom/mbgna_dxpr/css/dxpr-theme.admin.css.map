@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "dxpr-theme.admin.css",
+	"sources": [
+		"../scss/dxpr-theme.admin.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,IAAI,AAAA,WAAW,AAAC,CACd,UAAU,CAAE,eAAe,CAI5B,AALD,AAEE,IAFE,AAAA,WAAW,CAEb,iBAAiB,AAAC,CAChB,GAAG,CAAE,IAAI,CACV,AAGH,AAAA,IAAI,AAAA,cAAc,CAAC,iBAAiB,CAAC,YAAY,AAAC,CAChD,OAAO,CAAE,cAAc,CACxB"
+}

@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     babel: {
       options: {
-        sourceMap: false
+        sourceMap: true
       },
       dist: {
         files: {
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     sass: {
       options: {
         implementation: sass,
-        sourceMap: false,
+        sourceMap: true,
         outputStyle:'compressed'
       },
       dist: {

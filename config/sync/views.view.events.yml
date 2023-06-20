@@ -1,4 +1,4 @@
-uuid: ada99ee6-5e96-4f58-9a50-7d482b97663f
+uuid: b3082cdc-cb0b-42cc-9ce8-7c5a6708040f
 langcode: en
 status: true
 dependencies:
@@ -866,9 +866,11 @@ display:
           relationship: none
           view_mode: listing
       defaults:
+        query: true
         title: false
         css_class: false
         exposed_form: false
+        group_by: true
         style: false
         row: false
         filters: false

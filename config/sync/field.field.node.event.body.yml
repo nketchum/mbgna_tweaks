@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.body
     - node.type.event
   module:
+    - allowed_formats
+    - field_display_label
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  field_display_label:
+    display_label: Description
 id: node.event.body
 field_name: body
 entity_type: node

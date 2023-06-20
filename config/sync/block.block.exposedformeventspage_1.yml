@@ -1,4 +1,4 @@
-uuid: d1c90d2a-82f7-45c5-8c71-bba4edae0d02
+uuid: f727f286-1132-4271-bb1a-7468a8ddedde
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ dependencies:
 id: exposedformeventspage_1
 theme: mbgna_dxpr
 region: sidebar_first
-weight: -7
+weight: 0
 provider: null
 plugin: 'views_exposed_filter_block:events-page_1'
 settings:

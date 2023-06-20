@@ -5,9 +5,10 @@
 (function($, Drupal, once) {
   Drupal.behaviors.mbgna_dxpr_theme_autoplay = {
     attach(context, settings) {
-		document.querySelector('.video-banner video').play();
+      var player = null;
+      if (player = document.querySelector('.video-banner video')) {
+        player.play();  
+      }
     }
   };
 })(jQuery, Drupal, once);
-
-

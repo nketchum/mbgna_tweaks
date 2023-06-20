@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "dxpr_theme_subtheme.variables.css",
+	"sources": [
+		"../scss/dxpr_theme_subtheme.variables.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

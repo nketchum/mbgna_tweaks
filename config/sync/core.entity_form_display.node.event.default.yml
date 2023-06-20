@@ -55,7 +55,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_date_smart:
-    type: smartdate_inline
+    type: smartdate_default
     weight: 11
     region: content
     settings:
@@ -70,7 +70,6 @@ content:
       show_extra: false
       hide_date: false
       allday: true
-      separator: to
     third_party_settings: {  }
   field_dollar_amount:
     type: number

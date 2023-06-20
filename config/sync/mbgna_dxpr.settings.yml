@@ -45,7 +45,7 @@ sticky_footer: 0
 boxed_layout_boxbg: '#ffffff'
 box_max_width: '1580'
 layout_max_width: '1280'
-gutter_horizontal: '30'
+gutter_horizontal: '0'
 gutter_vertical: '0'
 gutter_container: '60'
 gutter_horizontal_mobile: '0'

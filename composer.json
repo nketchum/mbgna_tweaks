@@ -50,6 +50,7 @@
         "drupal/block_content_permissions": "^1.11",
         "drupal/block_region_permissions": "^1.5",
         "drupal/block_visibility_conditions": "^2.1",
+        "drupal/calendar": "^1.0@alpha",
         "drupal/calendar_link": "^3.0",
         "drupal/colorbox": "^2.0",
         "drupal/core-composer-scaffold": "^9.1",

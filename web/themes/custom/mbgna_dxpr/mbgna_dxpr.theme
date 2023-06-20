@@ -193,3 +193,28 @@ function mbgna_dxpr_theme_suggestions_node_alter(array &$suggestions, array $var
     $suggestions[] = 'node__'. $node->getType();
   }
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+use Drupal\views\ViewExecutable;
+/**
+ * Implements hook_views_pre_render().
+ */
+function mbgna_dxpr_views_pre_render(ViewExecutable $view) {
+  // Ensure unique company nodes.
+  if ($view->storage->get('id') === 'events') {
+    $i = 0;
+    $nodes = [];
+    foreach ($view->result as $result) {
+      $entity = $result->_entity;
+      $nid = $entity->get('nid')->value;
+      if (in_array($nid, $nodes)) {
+        unset($view->result[$i]);
+      } else {
+        $nodes[] = $entity->get('nid')->value;
+      }
+      $i++;
+    }
+  }
+}
