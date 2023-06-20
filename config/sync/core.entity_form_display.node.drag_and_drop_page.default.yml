@@ -12,30 +12,12 @@ dependencies:
     - node.type.drag_and_drop_page
   module:
     - comment
-    - field_group
     - hide_revision_field
     - path
     - text
   enforced:
     module:
       - dxpr_builder_page
-third_party_settings:
-  field_group:
-    group_dxpr_page_design:
-      children:
-        - field_dth_hide_regions
-        - field_dth_main_content_width
-        - field_dth_page_layout
-      label: 'DXPR Page Design'
-      region: content
-      parent_name: ''
-      weight: 6
-      format_type: details_sidebar
-      format_settings:
-        classes: ''
-        id: ''
-        open: false
-        required_fields: true
 _core:
   default_config_hash: trV0qUxWLkG_FdP5tM-aiyavYZmQd9l2ZOoO1ZSH3p0
 id: node.drag_and_drop_page.default
