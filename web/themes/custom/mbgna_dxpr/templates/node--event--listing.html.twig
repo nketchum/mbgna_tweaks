@@ -79,18 +79,19 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content').addClass('row') }}>
-    <div class="col-md-8 col-main">
+    <div class="col-md-6 col-lg-4 col-secondary">
+      <div class="field field--name-field-date-smart-wrapper field--type-field-wrapper">
+        {{ content.field_date_smart }}
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-8 col-main">
       {{ content.field_event_categories }}
       {{ content.title }}
-      {{ label }}
       {{ content.body }}
       {{ content.field_dollar_amount }}
       {{ content.field_location }}
       {{ content.field_website }}
       <div class="clearfix text-formatted field field--name-event-link field--type-button field__item"><a href="{{ url }}" class="btn btn-primary">Learn more ›</a></div>
-    </div>
-    <div class="col-md-4 col-secondary">
-      {{ content.field_date_smart }}
     </div>
   </div>
 </article>

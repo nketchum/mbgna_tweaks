@@ -1515,22 +1515,36 @@ ul.menu,
     font-size: 18px;
   }
 
-  .smart-date--date::after {
-    content: ' — ';
-  }
+  // .smart-date--date::after {
+  //   content: ' — ';
+  // }
 
-  .smart-date--time time:last-child::before {
-    content: ' to ';
-    text-align: center;
+  // .smart-date--time time:last-child::before {
+  //   content: ' to ';
+  //   text-align: center;
+  // }
+
+  .field--name-field-date-smart-wrapper {
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 60px;
+    width: 100%;
   }
 
   .field--name-field-date-smart {
-    border-left: 4px solid #eee;
-    font-size: 20px;
-    font-weight: bold;
-    padding-left: 10%;
-    margin-left: 10%;
-    width: 100%;
+    // @media (min-width: 768px) {
+    //   padding-right: 90px;
+    // }
+
+    .smart-date--date {
+      padding: 60px 30px;
+      background: $black;
+      color: $white;
+      border-radius: 10px;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   @media (min-width: 1501px) {
@@ -1538,9 +1552,6 @@ ul.menu,
       white-space: nowrap;
     }
   }
-  // time:last-child .smart-date--date::before {
-  //   content: ' — ';
-  // }
 }
 
 .views-exposed-form,

@@ -50,7 +50,7 @@ content:
     settings:
       timezone_override: ''
       format_type: medium
-      format: listing
+      format: date_only
       force_chronological: false
       add_classes: true
       time_wrapper: true
@@ -115,8 +115,10 @@ content:
     label: hidden
     settings:
       link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
+      tag: h3
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 2
     region: content
 hidden:

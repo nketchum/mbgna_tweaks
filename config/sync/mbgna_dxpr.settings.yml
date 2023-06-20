@@ -25,6 +25,8 @@ full_width_content_types:
   landing_page: landing_page
   basic_page: 0
   event: 0
+  position: 0
+  post: 0
 block_design_regions:
   sidebar_first: sidebar_first
   sidebar_second: sidebar_second
