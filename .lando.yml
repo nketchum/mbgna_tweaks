@@ -1,4 +1,4 @@
-name: m-sandbox-01
+name: m-sandbox-02
 recipe: drupal9
 config:
   composer_version: '2.2.12'
@@ -19,8 +19,8 @@ services:
       - chmod -R 777 /app/web/sites/default/files
     overrides:
       volumes:
-        - "/Volumes/MSD01/Sites/m-sandbox-01/public:/app/web/sites/default/files"
-        - "/Volumes/MSD01/Sites/m-sandbox-01/private:/app/private"
+        - "/Volumes/MSD01/Sites/m-sandbox-02/public:/app/web/sites/default/files"
+        - "/Volumes/MSD01/Sites/m-sandbox-02/private:/app/private"
   mailhog:
     type: mailhog
     hogfrom:

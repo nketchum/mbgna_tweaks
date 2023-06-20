@@ -1,32 +1,20 @@
-_core:
-  default_config_hash: bdxRdt6v6BjWkCSGMKcXIqaz21KWBP460luXGMMMC7M
-favicon:
-  use_default: true
-features:
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-  node_user_picture: true
-logo:
-  path: ''
-  url: ''
-  use_default: true
 header_mobile_breakpoint: '1200'
 full_width_containers:
   cnt_secondary_header: cnt_secondary_header
-  cnt_header_nav: cnt_header_nav
-  cnt_page_title: cnt_page_title
-  cnt_content_top: cnt_content_top
-  cnt_content: cnt_content
-  cnt_content_bottom: cnt_content_bottom
   cnt_footer: cnt_footer
+  cnt_header_nav: 0
+  cnt_page_title: 0
+  cnt_content_top: 0
+  cnt_content: 0
+  cnt_content_bottom: 0
 full_width_content_types:
   drag_and_drop_page: drag_and_drop_page
-  landing_page: landing_page
-  basic_page: 0
-  event: 0
-  position: 0
-  post: 0
+  article: 0
+  cms_blog: 0
+  cms_event: 0
+  cms_news: 0
+  cms_page: 0
+  cms_portfolio_project: 0
 block_design_regions:
   sidebar_first: sidebar_first
   sidebar_second: sidebar_second
@@ -40,46 +28,46 @@ block_design_regions:
   help: 0
   content: 0
   footer: 0
-boxed_layout: 0
-sticky_footer: 0
+boxed_layout: 1
+sticky_footer: 1
 boxed_layout_boxbg: '#ffffff'
 box_max_width: '1580'
 layout_max_width: '1280'
 gutter_horizontal: '30'
-gutter_vertical: '0'
+gutter_vertical: '30'
 gutter_container: '60'
-gutter_horizontal_mobile: '0'
-gutter_vertical_mobile: '0'
-gutter_container_mobile: '60'
+gutter_horizontal_mobile: '30'
+gutter_vertical_mobile: '30'
+gutter_container_mobile: '30'
 body_line_height: '1.6'
 body_font_size: '16'
 nav_font_size: '16'
 headings_line_height: '1.1'
 scale_factor: '1.34'
-h1_font_size: '32'
-h2_font_size: '28'
-h3_font_size: '22'
-h4_font_size: '18'
-blockquote_font_size: '18'
+h1_font_size: '52'
+h2_font_size: '38'
+h3_font_size: '29'
+h4_font_size: '21'
+blockquote_font_size: '21'
 blockquote_line_height: '1.5'
 headings_letter_spacing: '0'
 headings_uppercase: 0
-headings_bold: 1
-body_mobile_font_size: '16'
+headings_bold: 0
+body_mobile_font_size: '14'
 nav_mobile_font_size: '14'
-h1_mobile_font_size: '32'
-h2_mobile_font_size: '28'
-h3_mobile_font_size: '22'
-h4_mobile_font_size: '18'
-body_font_face: '0Roboto:'
+h1_mobile_font_size: '52'
+h2_mobile_font_size: '38'
+h3_mobile_font_size: '29'
+h4_mobile_font_size: '24'
+body_font_face: '0Source+Sans+Pro:'
 body_font_face_selector: body
-headings_font_face: '0Playfair+Display:700'
+headings_font_face: '0Source+Sans+Pro:300'
 headings_font_face_selector: 'h1,h2,h3,h4,h5,h6,label,.field--label,.page-title, .html .tp-caption'
-nav_font_face: '0Roboto:'
-nav_font_face_selector: 'nav,nav ul li,nav a, .nav-link'
-sitename_font_face: '0Roboto+Condensed:700'
+nav_font_face: '0Source+Sans+Pro:'
+nav_font_face_selector: 'nav,nav ul li,nav a'
+sitename_font_face: '0Source+Sans+Pro:300'
 sitename_font_face_selector: '.site-name, .navbar-brand'
-blockquote_font_face: '0Roboto:300'
+blockquote_font_face: '0Source+Sans+Pro:300italic'
 blockquote_font_face_selector: 'blockquote, blockquote p'
 portfolio_details: top
 portfolio_sidebar: '4'
@@ -105,8 +93,8 @@ divider_length: '0'
 divider_position: '1'
 divider_color: ''
 divider_color_custom: '#eeeeee'
-page_title_breadcrumbs: 1
-page_title_home_hide: 0
+page_title_breadcrumbs: 0
+page_title_home_hide: 1
 page_title_align: left
 page_title_height: '120'
 page_title_animate: '0'
@@ -122,8 +110,8 @@ header_top_layout: '0'
 header_style: normal
 header_top_bg_opacity: '1'
 header_top_height: '100'
-header_top_fixed: 0
-header_top_sticky: 0
+header_top_fixed: 1
+header_top_sticky: 1
 header_top_sticky_show: always
 header_top_height_sticky_offset: '60'
 header_top_height_scroll: '50'
@@ -153,8 +141,8 @@ dropdown_hover_text_color_custom: ''
 header_side_align: left
 header_side_direction: left
 header_side_width: '300'
-hamburger_menu: three-dash
-hamburger_animation: cross
+hamburger_menu: 'three-dash'
+hamburger_animation: 'cross'
 menu_type: uppercase
 menu_hover: opacity
 menu_border_position: bottom
@@ -196,8 +184,17 @@ block_divider_color_custom: '#eeeeee'
 block_divider_thickness: '4'
 block_divider_length: '10'
 block_divider_spacing: '20'
-page_title_image: ''
-background_image: ''
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+page_title_image: {  }
+background_image: {  }
 hidden_regions:
   navigation: 0
   navigation_collapsible: 0
@@ -216,15 +213,3 @@ tooltip_placement: 'auto top'
 modal_enabled: 0
 modal_jquery_ui_bridge: 0
 cdn_provider: ''
-page_title_breadcrumbs_align: left
-page_title_breadcrumbs_separator: /
-title_type:
-  uppercase: 0
-  bold: 0
-  italic: 0
-page_title_image_path: ''
-background_image_path: ''
-second_header_sticky: 0
-mark_menu_with_children: 0
-dropdown_width: '160'
-header_mobile_fixed: 0

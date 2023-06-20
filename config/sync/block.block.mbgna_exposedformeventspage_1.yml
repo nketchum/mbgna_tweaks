@@ -1,0 +1,33 @@
+uuid: 45dba07a-d1ef-4191-a049-e24f2a551b2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - block_visibility_conditions_node
+    - system
+    - views
+  theme:
+    - mbgna
+id: mbgna_exposedformeventspage_1
+theme: mbgna
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_exposed_filter_block:events-page_1'
+settings:
+  id: 'views_exposed_filter_block:events-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: Filter
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events

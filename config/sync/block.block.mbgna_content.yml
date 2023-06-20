@@ -1,0 +1,22 @@
+uuid: 72ad7f1b-def6-4980-bbb7-47d3053daead
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mbgna
+_core:
+  default_config_hash: FR6TscQ_wWvu_Oif0Ha6seHBgJwsupKvwisRs1yTxYw
+id: mbgna_content
+theme: mbgna
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

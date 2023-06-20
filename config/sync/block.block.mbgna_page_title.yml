@@ -1,0 +1,33 @@
+uuid: 35597fb1-1ad0-4511-9e9a-3953e37a4f0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_conditions_node
+    - system
+  theme:
+    - mbgna
+_core:
+  default_config_hash: 5p6onlbwg8IfOoLBo-hjKA7w3Wmb37ZZxGGxZp5vVm8
+id: mbgna_page_title
+theme: mbgna
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles:
+      drag_and_drop_page: drag_and_drop_page
+      landing_page: landing_page
+    negate: null
+  request_path:
+    id: request_path
+    negate: true
+    pages: /events

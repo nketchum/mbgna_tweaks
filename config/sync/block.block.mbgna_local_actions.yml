@@ -1,0 +1,20 @@
+uuid: d2e6b3fa-d7a2-4914-b0b6-e5f326f98c62
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mbgna
+_core:
+  default_config_hash: 72nlwRjqiXBAwD4_Wzf9YVMhGeEnqWlHF8NS6KoI7Js
+id: mbgna_local_actions
+theme: mbgna
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

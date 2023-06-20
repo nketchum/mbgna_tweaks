@@ -1,0 +1,25 @@
+uuid: f3f69026-8b77-4a23-ade3-f980024fd66f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-menu
+  module:
+    - system
+  theme:
+    - mbgna
+id: mbgna_topmenu
+theme: mbgna
+region: secondary_header
+weight: 0
+provider: null
+plugin: 'system_menu_block:top-menu'
+settings:
+  id: 'system_menu_block:top-menu'
+  label: 'Top menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
