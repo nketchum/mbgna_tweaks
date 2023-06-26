@@ -2,6 +2,8 @@ uuid: 5754ad7f-6c89-4687-82c1-2b71436f1c43
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
   module:
     - path
     - user
@@ -36,4 +38,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  commerce_remote_id: true
+  customer_profiles: true

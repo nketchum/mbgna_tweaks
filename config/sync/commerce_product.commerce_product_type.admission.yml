@@ -1,0 +1,15 @@
+uuid: fb3fd6f2-1154-4610-94e1-546f0728216d
+langcode: en
+status: true
+dependencies: {  }
+id: admission
+label: Admission
+traits: {  }
+locked: false
+description: 'Provides an admission product type.'
+variationType: admission
+variationTypes:
+  - admission_type
+  - default
+multipleVariations: true
+injectVariationFields: true

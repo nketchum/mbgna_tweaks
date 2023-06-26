@@ -150,7 +150,7 @@
 {% endif %}
 
 {# Page Title #}
-{# {% if page.page_title and not (theme.settings.page_title_home_hide and is_front) %}
+{% if page.page_title and not (theme.settings.page_title_home_hide and is_front) %}
 
   {% block page_title %}
   {% if title_bg_image_path %}
@@ -165,7 +165,7 @@
       </header>
     </div>
   {% endblock %}
-{% endif %} #}
+{% endif %}
 
 {# Content Top #}
 {% if page.content_top %}

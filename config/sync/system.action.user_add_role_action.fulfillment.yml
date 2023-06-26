@@ -1,0 +1,14 @@
+uuid: 737b78a8-3064-4e56-8e95-79b6b6e1fe0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.fulfillment
+  module:
+    - user
+id: user_add_role_action.fulfillment
+label: 'Add the Fulfillment role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: fulfillment

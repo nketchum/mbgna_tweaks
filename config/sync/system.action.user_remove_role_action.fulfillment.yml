@@ -1,0 +1,14 @@
+uuid: ee61c447-b9ee-4e2d-bca0-217b6832811d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.fulfillment
+  module:
+    - user
+id: user_remove_role_action.fulfillment
+label: 'Remove the Fulfillment role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: fulfillment

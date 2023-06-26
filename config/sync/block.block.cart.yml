@@ -1,37 +1,30 @@
-uuid: 17e65a43-8b73-4ea1-8426-281371430ced
+uuid: d9dfd3d8-6191-424f-8969-280ecf9c1e56
 langcode: en
 status: true
 dependencies:
   module:
     - block_visibility_conditions_node
+    - commerce_cart
     - commerce_product
-    - system
   theme:
     - mbgna_dxpr
-_core:
-  default_config_hash: 5p6onlbwg8IfOoLBo-hjKA7w3Wmb37ZZxGGxZp5vVm8
-id: mbgna_dxpr_page_title
+id: cart
 theme: mbgna_dxpr
-region: page_title
+region: sidebar_second
 weight: 0
 provider: null
-plugin: page_title_block
+plugin: commerce_cart
 settings:
-  id: page_title_block
-  label: 'Page title'
-  label_display: '0'
-  provider: core
+  id: commerce_cart
+  label: Cart
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
 visibility:
   not_node_type:
     id: not_node_type
-    bundles:
-      drag_and_drop_page: drag_and_drop_page
-      landing_page: landing_page
+    bundles: {  }
     negate: null
-  request_path:
-    id: request_path
-    negate: true
-    pages: /events
   'entity_bundle:commerce_product':
     id: 'entity_bundle:commerce_product'
     negate: false
@@ -39,3 +32,4 @@ visibility:
       commerce_product: '@commerce_product.product_route_context:commerce_product'
     bundles:
       admission: admission
+      default: default

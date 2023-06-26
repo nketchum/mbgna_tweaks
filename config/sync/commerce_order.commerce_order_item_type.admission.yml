@@ -1,0 +1,15 @@
+uuid: 2641bc3a-e59c-4c9b-8efd-7319bc4945f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: events
+id: admission
+label: Admission
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: admission

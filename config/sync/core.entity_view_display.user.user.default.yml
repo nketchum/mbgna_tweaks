@@ -2,6 +2,8 @@ uuid: 7a908f37-3e09-46de-adfe-0e0e26bbaceb
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
   module:
     - user
 id: user.user.default
@@ -10,4 +12,7 @@ bundle: user
 mode: default
 content: {  }
 hidden:
+  commerce_remote_id: true
+  customer_profiles: true
   member_for: true
+  name: true
