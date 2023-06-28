@@ -1,0 +1,15 @@
+uuid: 1336d537-db4c-4b2f-baad-244e4c4406cc
+langcode: en
+status: true
+dependencies: {  }
+name: large_thin_thumbnail
+label: 'Large thin thumbnail'
+effects:
+  2a93f1d9-947d-480a-a343-104aa0f6b94b:
+    uuid: 2a93f1d9-947d-480a-a343-104aa0f6b94b
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 800
+      height: 200
+      anchor: center-center
