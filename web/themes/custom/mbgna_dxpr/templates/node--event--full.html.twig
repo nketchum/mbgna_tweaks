@@ -91,7 +91,7 @@
         <div class="col-lg-8 col-md-6">
           {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 
             'field_location', 'field_address', 'field_map_link', 'field_dollar_amount', 'field_website', 
-            'field_phone', 'field_commerce_products') }}
+            'field_phone') }}
         </div>
       </div>
 {#       {% set links = calendar_links(node.title, date_smart_ical_start, date_smart_ical_end, date_smart_ical_all_day, content.field_body, content.field_address) %}
@@ -103,7 +103,8 @@
     {% endblock %}
     <div class="article-aside col-lg-4 col-md-6">
       <div class="article-aside-content">
-      {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 'body') }}
+      {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 'body', 
+      'field_commerce_products') }}
     </div>
   </div>
 </article>
