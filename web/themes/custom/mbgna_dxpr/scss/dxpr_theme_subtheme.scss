@@ -901,10 +901,14 @@ ul.menu,
     margin-right: 25%;
     margin-top: 30px;
 
-    .dropdown {
+    & > li {
       padding: 0 0 14px;
       border-bottom: 2px solid $lighter-gray;
       margin: 0 0 14px;
+
+      a {
+        padding: 0;
+      }
 
       a.is-active {
         background-color: transparent;
@@ -938,6 +942,15 @@ ul.menu,
 
 .dxpr-theme-header--side .menu__level {
   visibility: visible;
+}
+
+.region-sidebar-first,
+.region-sidebar-second,
+.sidebar-left,
+.sidebar-right {
+  ul.nav li > a.hide-on-sidebar {
+    display: none;
+  }
 }
 
 .breadcrumb li:before {

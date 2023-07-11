@@ -71,4 +71,5 @@ node_modules
 /web/modules/contrib
 /web/sites/default
 /web/themes/contrib
-/web/themes/custom/*/node_modules
+/web/themes/*/*/node_modules
+/web/themes/*/*/css

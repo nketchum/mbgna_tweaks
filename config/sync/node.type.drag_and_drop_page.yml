@@ -10,7 +10,11 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
+      - footer
+      - internal
       - main
+      - pre-footer
+      - top-menu
     parent: 'main:'
 _core:
   default_config_hash: VX_cEYaw47zZJZD8KR0AkDP-hokw4kfYtTtX8RPIeqA
