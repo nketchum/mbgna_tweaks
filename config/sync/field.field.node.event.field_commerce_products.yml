@@ -1,0 +1,34 @@
+uuid: 82d4f10a-7315-48c7-a86d-1769166f031c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.admission
+    - field.storage.node.field_commerce_products
+    - node.type.event
+  module:
+    - field_display_label
+third_party_settings:
+  field_display_label:
+    display_label: Admission
+id: node.event.field_commerce_products
+field_name: field_commerce_products
+entity_type: node
+bundle: event
+label: 'Commerce products'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      admission: admission
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

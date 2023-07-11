@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_address
+    - field.field.node.event.field_commerce_products
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
     - field.field.node.event.field_event_categories
@@ -42,6 +43,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_commerce_products:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 11
     region: content
   field_date_smart:
     type: smartdate_default

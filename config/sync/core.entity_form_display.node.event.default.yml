@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_address
+    - field.field.node.event.field_commerce_products
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
     - field.field.node.event.field_event_categories
@@ -18,6 +19,7 @@ dependencies:
     - address
     - allowed_formats
     - hide_revision_field
+    - inline_entity_form
     - link
     - media_library
     - path
@@ -53,6 +55,24 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_commerce_products:
+    type: inline_entity_form_complex
+    weight: 18
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: product
+      label_plural: products
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
     third_party_settings: {  }
   field_date_smart:
     type: smartdate_default

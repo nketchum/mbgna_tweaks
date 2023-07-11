@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 id: admission_attributes
-label: 'Admission attributes'
+label: Admission
 elementType: select

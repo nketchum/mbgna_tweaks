@@ -1,38 +1,40 @@
-uuid: 6aa372f8-5aa6-4029-9c8a-75f559ae8edf
+uuid: 85deaa41-df05-4cad-b848-0993915768b3
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_order.commerce_order_item_type.admission
-    - core.entity_form_mode.commerce_order_item.add_to_cart
   module:
     - commerce_order
-    - commerce_price
-    - commerce_product
-id: commerce_order_item.admission.add_to_cart
+id: commerce_order_item.admission.default
 targetEntityType: commerce_order_item
 bundle: admission
-mode: add_to_cart
+mode: default
 content:
   purchased_entity:
-    type: commerce_product_variation_attributes
-    weight: 0
+    type: entity_reference_autocomplete
+    weight: -1
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   quantity:
     type: commerce_quantity
-    weight: 2
+    weight: 1
     region: content
     settings:
       placeholder: ''
       step: '1'
     third_party_settings: {  }
   unit_price:
-    type: commerce_price_default
-    weight: 1
+    type: commerce_unit_price
+    weight: 2
     region: content
-    settings: {  }
+    settings:
+      require_confirmation: true
     third_party_settings: {  }
 hidden:
   adjustments: true
