@@ -1,0 +1,8 @@
+uuid: a6c4d8d4-30da-4050-9df2-a7dad60f788d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Additional bonsai style'
+vid: bonsai_style_additional
+description: 'Provides a list of additional bonsai styles.'
+weight: 0

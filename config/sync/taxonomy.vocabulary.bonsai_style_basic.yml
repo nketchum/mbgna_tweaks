@@ -1,0 +1,8 @@
+uuid: 5feb7486-4d51-41cd-9026-1d67b2f241b0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Basic bonsai style'
+vid: bonsai_style_basic
+description: 'Provides a list of basic bonsai styles.'
+weight: 0

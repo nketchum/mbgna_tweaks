@@ -1,0 +1,8 @@
+uuid: 7aaab2f6-fbd4-427f-89de-78ba568d49f5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Common name'
+vid: common_name
+description: 'Provides a list of common names for plants.'
+weight: 0

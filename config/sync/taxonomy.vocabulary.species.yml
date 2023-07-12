@@ -1,0 +1,8 @@
+uuid: 0ba3abd3-8c37-4972-9c96-daa1e482c61b
+langcode: en
+status: true
+dependencies: {  }
+name: Species
+vid: species
+description: 'Provides a list of species for plants.'
+weight: 0

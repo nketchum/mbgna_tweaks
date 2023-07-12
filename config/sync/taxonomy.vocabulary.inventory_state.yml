@@ -1,0 +1,8 @@
+uuid: 1e079b61-df1d-49c9-a764-1bf8bccc4a4a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Inventory state'
+vid: inventory_state
+description: 'Provides a list of inventory states to track items.'
+weight: 0

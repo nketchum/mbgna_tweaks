@@ -1,0 +1,43 @@
+uuid: efc2b9b6-84ca-48fd-8256-defc0d2e08e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.conservatory.body
+    - field.field.node.conservatory.field_dxpr_page
+    - node.type.conservatory
+  module:
+    - manage_display
+    - text
+id: node.conservatory.teaser
+targetEntityType: node
+bundle: conservatory
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  field_dxpr_page: true
+  uid: true

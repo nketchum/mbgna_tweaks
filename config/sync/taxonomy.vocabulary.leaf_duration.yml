@@ -1,0 +1,8 @@
+uuid: b4111257-fc8b-45e6-8628-d0f5ab0859ba
+langcode: en
+status: true
+dependencies: {  }
+name: 'Leaf duration'
+vid: leaf_duration
+description: 'Provides a selection of leaf durations for plants.'
+weight: 0

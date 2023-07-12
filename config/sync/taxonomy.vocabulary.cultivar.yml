@@ -1,0 +1,8 @@
+uuid: 8f609ee1-5a28-4535-a618-30ef7571624e
+langcode: en
+status: true
+dependencies: {  }
+name: Cultivar
+vid: cultivar
+description: 'Provides a list of cultivars for plants.'
+weight: 0

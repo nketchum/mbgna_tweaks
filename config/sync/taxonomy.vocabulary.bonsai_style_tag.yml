@@ -1,0 +1,8 @@
+uuid: 57986d88-0373-49b5-807c-ada50067eb5f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Bonsai style tag'
+vid: bonsai_style_tag
+description: 'Provides a list of bonsai style tags.'
+weight: 0

@@ -1,0 +1,31 @@
+uuid: d8dec8cf-c980-48d7-8569-4ca91b539c63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_garden_collection
+    - mbgna_plant.plant_type.plant_basic
+    - node.type.conservatory
+    - node.type.garden
+id: plant.plant_basic.field_garden_collection
+field_name: field_garden_collection
+entity_type: plant
+bundle: plant_basic
+label: Garden/collection
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      conservatory: conservatory
+      garden: garden
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

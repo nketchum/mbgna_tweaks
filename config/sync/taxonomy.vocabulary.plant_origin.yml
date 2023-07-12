@@ -1,0 +1,8 @@
+uuid: 65621b03-6834-4924-8ede-1ec4a305f57e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Plant origin'
+vid: plant_origin
+description: 'Provides a list of origins for plants.'
+weight: 0

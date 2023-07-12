@@ -1,0 +1,76 @@
+uuid: 38277b4c-98b7-468d-bd6d-9a32fcae0804
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.plant.plant_basic.field_garden_collection
+    - field.field.plant.plant_basic.field_legacy_id
+    - field.field.plant.plant_basic.field_mbgna_id
+    - mbgna_plant.plant_type.plant_basic
+  module:
+    - user
+id: plant.plant_basic.default
+targetEntityType: plant
+bundle: plant_basic
+mode: default
+content:
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_garden_collection:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_legacy_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_mbgna_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: enabled-disabled
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden: {  }

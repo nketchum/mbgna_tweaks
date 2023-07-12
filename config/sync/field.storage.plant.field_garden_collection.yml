@@ -1,0 +1,20 @@
+uuid: 834779bf-3132-4610-a373-552823c06bd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+    - node
+id: plant.field_garden_collection
+field_name: field_garden_collection
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

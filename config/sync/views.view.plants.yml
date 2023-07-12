@@ -1,16 +1,18 @@
-uuid: 5d6f47f2-63e7-497e-9297-cff0088605ec
+uuid: 545b8ffe-4ff5-4307-b1ce-f7c3d166805b
 langcode: en
 status: true
 dependencies:
+  config:
+    - user.role.super_administrator
   module:
-    - mbgna_resource
+    - mbgna_plant
     - user
-id: resources
-label: Resources
+id: plants
+label: Plants
 module: views
-description: ' Find and manage resources.'
+description: 'Provides a view for plant entities.'
 tag: ''
-base_table: resource
+base_table: plant
 base_field: id
 display:
   default:
@@ -19,11 +21,11 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Resources
+      title: Plants
       fields:
         label:
           id: label
-          table: resource
+          table: plant
           field: label
           relationship: none
           group_type: group
@@ -88,15 +90,15 @@ display:
           field_api_classes: false
         bundle:
           id: bundle
-          table: resource
+          table: plant
           field: bundle
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: plant
           entity_field: bundle
           plugin_id: field
-          label: 'Resource type'
+          label: 'Plant type'
           exclude: false
           alter:
             alter_text: false
@@ -218,12 +220,12 @@ display:
           field_api_classes: false
         status:
           id: status
-          table: resource
+          table: plant
           field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: plant
           entity_field: status
           plugin_id: field
           label: Status
@@ -285,12 +287,12 @@ display:
           field_api_classes: false
         changed:
           id: changed
-          table: resource
+          table: plant
           field: changed
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: plant
           entity_field: changed
           plugin_id: field
           label: Updated
@@ -352,14 +354,14 @@ display:
           field_api_classes: false
         operations:
           id: operations
-          table: resource
+          table: plant
           field: operations
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: plant
           plugin_id: entity_operations
-          label: 'Operations links'
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -400,7 +402,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: false
+          destination: true
       pager:
         type: full
         options:
@@ -437,7 +439,7 @@ display:
         options:
           perm: 'access content overview'
       cache:
-        type: tag
+        type: none
         options: {  }
       empty:
         area_text_custom:
@@ -449,19 +451,19 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No resources available.'
+          content: 'No plants available.'
           tokenize: false
       sorts: {  }
       arguments: {  }
       filters:
         label:
           id: label
-          table: resource
+          table: plant
           field: label
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: plant
           entity_field: label
           plugin_id: string
           operator: contains
@@ -476,7 +478,7 @@ display:
             operator: label_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: title
+            identifier: label
             required: false
             remember: false
             multiple: false
@@ -486,6 +488,7 @@ display:
               editor: '0'
               super_administrator: '0'
               working_group_member: '0'
+              fulfillment: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -501,12 +504,12 @@ display:
             group_items: {  }
         bundle:
           id: bundle
-          table: resource
+          table: plant
           field: bundle
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: plant
           entity_field: bundle
           plugin_id: bundle
           operator: in
@@ -515,13 +518,13 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: Type
+            label: 'Plant type'
             description: ''
             use_operator: false
             operator: bundle_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: type
+            identifier: bundle
             required: false
             remember: false
             multiple: false
@@ -531,6 +534,7 @@ display:
               editor: '0'
               super_administrator: '0'
               working_group_member: '0'
+              fulfillment: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -546,12 +550,12 @@ display:
             group_items: {  }
         status:
           id: status
-          table: resource
+          table: plant
           field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: plant
           entity_field: status
           plugin_id: boolean
           operator: '='
@@ -592,6 +596,136 @@ display:
                 title: Unpublished
                 operator: '='
                 value: '0'
+        status_1:
+          id: status_1
+          table: plant
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: plant
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        permission:
+          id: permission
+          table: user__roles
+          field: permission
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          plugin_id: user_permissions
+          operator: or
+          value:
+            'administer plant types': 'administer plant types'
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
+          operator: or
+          value:
+            super_administrator: super_administrator
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
       style:
         type: table
         options:
@@ -605,7 +739,7 @@ display:
             status: status
             changed: changed
             operations: operations
-          default: changed
+          default: '-1'
           info:
             label:
               sortable: true
@@ -666,12 +800,12 @@ display:
       relationships:
         uid:
           id: uid
-          table: resource
+          table: plant
           field: uid
           relationship: none
           group_type: group
           admin_label: User
-          entity_type: resource
+          entity_type: plant
           entity_field: uid
           plugin_id: standard
           required: true
@@ -694,21 +828,16 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/content/resources/%
+      path: admin/content/plant
       menu:
-        type: 'default tab'
-        title: Resources
+        type: tab
+        title: Plants
         description: ''
         weight: 0
         expanded: false
-        menu_name: main
+        menu_name: admin
         parent: ''
         context: '0'
-      tab_options:
-        type: normal
-        title: Resources
-        description: 'Find and manage resources'
-        weight: 0
     cache_metadata:
       max-age: -1
       contexts:

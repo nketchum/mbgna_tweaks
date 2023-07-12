@@ -1,0 +1,23 @@
+uuid: ab63b837-b271-4eb9-8569-7917bf2a1faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.garden
+  module:
+    - text
+id: node.garden.body
+field_name: body
+entity_type: node
+bundle: garden
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
