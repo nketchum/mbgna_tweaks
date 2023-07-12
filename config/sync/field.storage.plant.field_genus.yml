@@ -1,19 +1,19 @@
-uuid: 834779bf-3132-4610-a373-552823c06bd5
+uuid: fd762b08-4dd6-4de3-a1a2-8ed641787ccc
 langcode: en
 status: true
 dependencies:
   module:
     - mbgna_plant
-    - node
-id: plant.field_garden_collection
-field_name: field_garden_collection
+    - taxonomy
+id: plant.field_genus
+field_name: field_genus
 entity_type: plant
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

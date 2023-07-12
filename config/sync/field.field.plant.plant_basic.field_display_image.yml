@@ -1,28 +1,26 @@
-uuid: d8dec8cf-c980-48d7-8569-4ca91b539c63
+uuid: 6680e5cf-b087-4637-98f2-57fa1b580bdf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.plant.field_garden_collection
+    - field.storage.plant.field_display_image
     - mbgna_plant.plant_type.plant_basic
-    - node.type.conservatory
-    - node.type.garden
-id: plant.plant_basic.field_garden_collection
-field_name: field_garden_collection
+    - media.type.image
+id: plant.plant_basic.field_display_image
+field_name: field_display_image
 entity_type: plant
 bundle: plant_basic
-label: Garden/collection
-description: ''
+label: 'Display image'
+description: 'This is the main image to be prominently displayed.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      conservatory: conservatory
-      garden: garden
+      image: image
     sort:
       field: _none
       direction: ASC

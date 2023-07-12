@@ -1,0 +1,29 @@
+uuid: c1ec1fa5-e9ad-4255-b1a0-249665c99639
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_cultivar
+    - mbgna_plant.plant_type.plant_basic
+    - taxonomy.vocabulary.cultivar
+id: plant.plant_basic.field_cultivar
+field_name: field_cultivar
+entity_type: plant
+bundle: plant_basic
+label: Cultivar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cultivar: cultivar
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

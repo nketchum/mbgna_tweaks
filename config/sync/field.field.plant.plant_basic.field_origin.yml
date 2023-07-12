@@ -1,0 +1,29 @@
+uuid: bb45f6a7-55a0-4560-bc67-33a4105beefb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_origin
+    - mbgna_plant.plant_type.plant_basic
+    - taxonomy.vocabulary.plant_origin
+id: plant.plant_basic.field_origin
+field_name: field_origin
+entity_type: plant
+bundle: plant_basic
+label: Origin
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      plant_origin: plant_origin
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: 6817b9c6-ba17-405d-b544-d548bedff7ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.position_type
+id: taxonomy_term.position_type.default
+targetEntityType: taxonomy_term
+bundle: position_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

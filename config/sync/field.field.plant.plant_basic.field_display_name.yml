@@ -1,0 +1,19 @@
+uuid: 54e2fdf6-b47e-4924-9573-4914a0c907fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_display_name
+    - mbgna_plant.plant_type.plant_basic
+id: plant.plant_basic.field_display_name
+field_name: field_display_name
+entity_type: plant
+bundle: plant_basic
+label: 'Display name'
+description: 'This is the plant name to be shown to the general public.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

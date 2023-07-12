@@ -1,0 +1,24 @@
+uuid: 7c96d1b7-74d6-4a7b-a900-3d08baa55169
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.plant_origin
+id: taxonomy_term.plant_origin.default
+targetEntityType: taxonomy_term
+bundle: plant_origin
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

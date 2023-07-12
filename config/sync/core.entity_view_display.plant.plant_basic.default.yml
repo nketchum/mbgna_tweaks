@@ -3,11 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.plant.plant_basic.field_garden_collection
+    - field.field.plant.plant_basic.field_collections
+    - field.field.plant.plant_basic.field_cultivar
+    - field.field.plant.plant_basic.field_description
+    - field.field.plant.plant_basic.field_display_image
+    - field.field.plant.plant_basic.field_display_name
+    - field.field.plant.plant_basic.field_genus
     - field.field.plant.plant_basic.field_legacy_id
     - field.field.plant.plant_basic.field_mbgna_id
+    - field.field.plant.plant_basic.field_origin
+    - field.field.plant.plant_basic.field_species
     - mbgna_plant.plant_type.plant_basic
   module:
+    - text
     - user
 id: plant.plant_basic.default
 targetEntityType: plant
@@ -24,13 +32,53 @@ content:
     third_party_settings: {  }
     weight: 20
     region: content
-  field_garden_collection:
+  field_collections:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 23
+    weight: 31
+    region: content
+  field_cultivar:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_display_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_display_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_genus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 29
     region: content
   field_legacy_id:
     type: string
@@ -47,6 +95,22 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 21
+    region: content
+  field_origin:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_species:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 28
     region: content
   label:
     type: string
