@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11c1f066f697d814b9aa81d3af1b1400",
+    "content-hash": "ab7585b4a189984b32f13a2ce474e3ef",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6963,6 +6963,57 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.7.6"
             },
             "time": "2022-08-18T16:18:26+00:00"
+        },
+        {
+            "name": "mbgna/mbgna_plant",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nketchum/mbgna_plant.git",
+                "reference": "origin/main"
+            },
+            "type": "drupal-module"
+        },
+        {
+            "name": "mbgna/mbgna_resource",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nketchum/mbgna_resource.git",
+                "reference": "1d11844d4c442bb035d03a3f2b13bb852b6323da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nketchum/mbgna_resource/zipball/1d11844d4c442bb035d03a3f2b13bb852b6323da",
+                "reference": "1d11844d4c442bb035d03a3f2b13bb852b6323da",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10",
+                "php": "^8.1"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Provides resource entities for the site.",
+            "support": {
+                "issues": "https://github.com/nketchum/mbgna_resource/issues",
+                "source": "https://github.com/nketchum/mbgna_resource/tree/1.0.0"
+            },
+            "time": "2023-07-12T14:10:14+00:00"
+        },
+        {
+            "name": "mbgna/mbgna_tweaks",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nketchum/mbgna_tweaks.git",
+                "reference": "origin/main"
+            },
+            "type": "drupal-module"
         },
         {
             "name": "nikic/php-parser",
@@ -14886,7 +14937,10 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/calendar": 15,
-        "drupal/gin": 5
+        "drupal/gin": 5,
+        "mbgna/mbgna_plant": 20,
+        "mbgna/mbgna_resource": 20,
+        "mbgna/mbgna_tweaks": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

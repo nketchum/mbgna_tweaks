@@ -13,6 +13,45 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
+        "mbgna_plant": {
+            "type": "package",
+            "package": {
+                "name": "mbgna/mbgna_plant",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/nketchum/mbgna_plant.git",
+                    "type": "git",
+                    "reference": "origin/main"
+                }
+            }
+        },
+        "mbgna_resource": {
+            "type": "package",
+            "package": {
+                "name": "mbgna/mbgna_resources",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/nketchum/mbgna_resources.git",
+                    "type": "git",
+                    "reference": "origin/main"
+                }
+            }
+        },
+        "mbgna_tweaks": {
+            "type": "package",
+            "package": {
+                "name": "mbgna/mbgna_tweaks",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/nketchum/mbgna_tweaks.git",
+                    "type": "git",
+                    "reference": "origin/main"
+                }
+            }
+        },
         "colorbox": {
             "type": "package",
             "package": {
@@ -86,6 +125,9 @@
         "drush/drush": "^11.0",
         "jackmoore/colorbox": "master",
         "kenwheeler/slick": "^1.7",
+        "mbgna/mbgna_plant": "dev-main",
+        "mbgna/mbgna_resource": "dev-main",
+        "mbgna/mbgna_tweaks": "dev-main",
         "vlucas/phpdotenv": "^5.4"
     },
     "require-dev": {
