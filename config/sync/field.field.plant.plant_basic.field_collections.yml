@@ -1,0 +1,31 @@
+uuid: eeb0060d-60b7-45e9-baa7-ea317125c6d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_collections
+    - mbgna_plant.plant_type.plant_basic
+    - node.type.conservatory
+    - node.type.garden
+id: plant.plant_basic.field_collections
+field_name: field_collections
+entity_type: plant
+bundle: plant_basic
+label: Collections
+description: 'Begin typing the name of a garden or conservatory. Separate multiple items with a comma.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      conservatory: conservatory
+      garden: garden
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: conservatory
+field_type: entity_reference

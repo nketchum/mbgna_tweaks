@@ -1,0 +1,24 @@
+uuid: 7082de4a-235b-40bb-9b0a-c527ad714525
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bonsai_style_basic
+id: taxonomy_term.bonsai_style_basic.default
+targetEntityType: taxonomy_term
+bundle: bonsai_style_basic
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

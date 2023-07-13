@@ -1,0 +1,19 @@
+uuid: 7eb18de4-a6ef-4a0f-8b9f-de6bf1027034
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+    - text
+id: plant.field_3d_view
+field_name: field_3d_view
+entity_type: plant
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

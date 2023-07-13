@@ -1,0 +1,19 @@
+uuid: 945217ba-24d6-42b5-a6af-9c4c7ef25c33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_mbgna_id
+    - mbgna_plant.plant_type.plant_basic
+id: plant.plant_basic.field_mbgna_id
+field_name: field_mbgna_id
+entity_type: plant
+bundle: plant_basic
+label: 'MBGNA ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

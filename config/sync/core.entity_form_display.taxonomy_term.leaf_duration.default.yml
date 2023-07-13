@@ -1,0 +1,24 @@
+uuid: 135b4c1c-5d6e-4063-9b8e-61c6bd555753
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.leaf_duration
+id: taxonomy_term.leaf_duration.default
+targetEntityType: taxonomy_term
+bundle: leaf_duration
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

@@ -1,0 +1,24 @@
+uuid: 9994c5f6-45cd-4986-8522-434afd327711
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bonsai_style_additional
+id: taxonomy_term.bonsai_style_additional.default
+targetEntityType: taxonomy_term
+bundle: bonsai_style_additional
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

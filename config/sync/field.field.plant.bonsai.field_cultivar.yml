@@ -1,0 +1,29 @@
+uuid: 7b814266-b158-47ba-9634-c4d894f3b063
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_cultivar
+    - mbgna_plant.plant_type.bonsai
+    - taxonomy.vocabulary.cultivar
+id: plant.bonsai.field_cultivar
+field_name: field_cultivar
+entity_type: plant
+bundle: bonsai
+label: Cultivar
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cultivar: cultivar
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

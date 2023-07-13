@@ -1,0 +1,20 @@
+uuid: cb4bea81-deb9-440e-993a-4999a4e1cb33
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+    - taxonomy
+id: plant.field_species
+field_name: field_species
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

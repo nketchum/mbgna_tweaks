@@ -1,0 +1,18 @@
+uuid: 6d61dc52-c5d1-4cd8-9f13-b7a04d6ebb5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:menu_link_content:4f500d46-064f-43cf-8f36-653bf5fda3c9'
+name: Conservatory
+type: conservatory
+description: 'Provides a conservatory content type.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

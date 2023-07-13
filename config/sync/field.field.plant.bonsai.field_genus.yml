@@ -1,0 +1,29 @@
+uuid: 461d2b75-1c3b-4e7e-885d-e9e5432e0b8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_genus
+    - mbgna_plant.plant_type.bonsai
+    - taxonomy.vocabulary.genus
+id: plant.bonsai.field_genus
+field_name: field_genus
+entity_type: plant
+bundle: bonsai
+label: Genus
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      genus: genus
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

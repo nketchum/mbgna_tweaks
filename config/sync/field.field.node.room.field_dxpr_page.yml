@@ -1,0 +1,29 @@
+uuid: 70d19c19-cce7-4aa2-8f02-a4209b5b601f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dxpr_page
+    - node.type.drag_and_drop_page
+    - node.type.room
+id: node.room.field_dxpr_page
+field_name: field_dxpr_page
+entity_type: node
+bundle: room
+label: 'DXPR page'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      drag_and_drop_page: drag_and_drop_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

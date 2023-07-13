@@ -1,0 +1,29 @@
+uuid: f9ad26eb-c222-4cae-992d-44a86789f3df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_description
+    - mbgna_plant.plant_type.bonsai
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - minimal_html
+      - full_html
+id: plant.bonsai.field_description
+field_name: field_description
+entity_type: plant
+bundle: bonsai
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

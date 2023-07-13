@@ -1,0 +1,20 @@
+uuid: 775d3de8-2632-4d51-9568-3a623d5c728e
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+    - media
+id: plant.field_video
+field_name: field_video
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

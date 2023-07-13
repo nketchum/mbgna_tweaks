@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - block_visibility_conditions_node
+    - commerce_product
     - system
   theme:
     - mbgna_dxpr
@@ -24,6 +25,27 @@ visibility:
   not_node_type:
     id: not_node_type
     bundles:
+      conservatory: conservatory
       drag_and_drop_page: drag_and_drop_page
+      garden: garden
       landing_page: landing_page
+      room: room
+      trail: trail
     negate: null
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    negate: true
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'
+    bundles:
+      admission: admission
+      default: default
+      miscellaneous: miscellaneous
+  'entity_bundle:commerce_product_variation':
+    id: 'entity_bundle:commerce_product_variation'
+    negate: true
+    context_mapping:
+      commerce_product_variation: '@commerce_product.product_variation_route_context:commerce_product_variation'
+    bundles:
+      admission_type: admission_type
+      default: default

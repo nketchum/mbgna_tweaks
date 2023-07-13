@@ -1,0 +1,24 @@
+uuid: 23abf0a8-9433-45e6-b210-64c4958175c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.genus
+id: taxonomy_term.genus.default
+targetEntityType: taxonomy_term
+bundle: genus
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

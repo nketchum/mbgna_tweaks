@@ -1,0 +1,8 @@
+uuid: f23e5070-f94e-4c3c-bab0-2a8ee82db5f1
+langcode: en
+status: true
+dependencies: {  }
+name: Family
+vid: family
+description: 'Provides a list of families for plants.'
+weight: 0

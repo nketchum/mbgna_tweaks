@@ -1,0 +1,20 @@
+uuid: 79706f49-658c-4cab-b9bb-712431f1262f
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+    - taxonomy
+id: plant.field_cultivar
+field_name: field_cultivar
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

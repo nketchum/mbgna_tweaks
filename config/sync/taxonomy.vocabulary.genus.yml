@@ -1,0 +1,8 @@
+uuid: 6527166f-8ab0-4d34-a7a7-a29b813cd60d
+langcode: en
+status: true
+dependencies: {  }
+name: Genus
+vid: genus
+description: 'Provides a list of genera for plants.'
+weight: 0

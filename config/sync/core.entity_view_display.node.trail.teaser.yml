@@ -1,0 +1,43 @@
+uuid: fbc3af8d-f9db-4cc1-b16e-e1c8deb36526
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.trail.body
+    - field.field.node.trail.field_dxpr_page
+    - node.type.trail
+  module:
+    - manage_display
+    - text
+id: node.trail.teaser
+targetEntityType: node
+bundle: trail
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  field_dxpr_page: true
+  uid: true

@@ -1,0 +1,29 @@
+uuid: e61c474f-5663-4864-9a48-ce046e6a5088
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_family
+    - mbgna_plant.plant_type.plant_basic
+    - taxonomy.vocabulary.family
+id: plant.plant_basic.field_family
+field_name: field_family
+entity_type: plant
+bundle: plant_basic
+label: Family
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      family: family
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

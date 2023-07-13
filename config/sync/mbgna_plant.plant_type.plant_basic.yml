@@ -1,0 +1,6 @@
+uuid: e83f8f1d-087b-4886-97e7-616acb02a747
+langcode: en
+status: true
+dependencies: {  }
+id: plant_basic
+label: 'Basic plant'

@@ -1,0 +1,19 @@
+uuid: d2fbbb1a-86b2-4209-aa83-557cad19d60a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_display_name
+    - mbgna_plant.plant_type.bonsai
+id: plant.bonsai.field_display_name
+field_name: field_display_name
+entity_type: plant
+bundle: bonsai
+label: 'Display name'
+description: 'This is the plant name to be shown to the general public.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

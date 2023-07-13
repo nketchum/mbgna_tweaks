@@ -1,0 +1,9 @@
+status: 1
+pattern: '[plant:field_mbgna_id:value] [plant:field_display_name:value]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - mbgna_plant.plant_type.plant_basic

@@ -1,0 +1,29 @@
+uuid: e8583607-6af9-4390-a561-a0c2f1b0e814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_common_name
+    - mbgna_plant.plant_type.bonsai
+    - taxonomy.vocabulary.common_name
+id: plant.bonsai.field_common_name
+field_name: field_common_name
+entity_type: plant
+bundle: bonsai
+label: 'Common name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      common_name: common_name
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
