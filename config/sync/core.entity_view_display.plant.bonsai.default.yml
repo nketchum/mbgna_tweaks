@@ -1,29 +1,29 @@
-uuid: 38277b4c-98b7-468d-bd6d-9a32fcae0804
+uuid: 46d4f77d-c5df-4d93-a8da-59972cfaa37d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.plant.plant_basic.field_3d_view
-    - field.field.plant.plant_basic.field_collections
-    - field.field.plant.plant_basic.field_common_name
-    - field.field.plant.plant_basic.field_cultivar
-    - field.field.plant.plant_basic.field_description
-    - field.field.plant.plant_basic.field_display_image
-    - field.field.plant.plant_basic.field_display_name
-    - field.field.plant.plant_basic.field_family
-    - field.field.plant.plant_basic.field_genus
-    - field.field.plant.plant_basic.field_legacy_id
-    - field.field.plant.plant_basic.field_mbgna_id
-    - field.field.plant.plant_basic.field_origin
-    - field.field.plant.plant_basic.field_species
-    - field.field.plant.plant_basic.field_video
-    - mbgna_plant.plant_type.plant_basic
+    - field.field.plant.bonsai.field_3d_view
+    - field.field.plant.bonsai.field_collections
+    - field.field.plant.bonsai.field_common_name
+    - field.field.plant.bonsai.field_cultivar
+    - field.field.plant.bonsai.field_description
+    - field.field.plant.bonsai.field_display_image
+    - field.field.plant.bonsai.field_display_name
+    - field.field.plant.bonsai.field_family
+    - field.field.plant.bonsai.field_genus
+    - field.field.plant.bonsai.field_legacy_id
+    - field.field.plant.bonsai.field_mbgna_id
+    - field.field.plant.bonsai.field_origin
+    - field.field.plant.bonsai.field_species
+    - field.field.plant.bonsai.field_video
+    - mbgna_plant.plant_type.bonsai
   module:
     - text
     - user
-id: plant.plant_basic.default
+id: plant.bonsai.default
 targetEntityType: plant
-bundle: plant_basic
+bundle: bonsai
 mode: default
 content:
   created:
@@ -41,7 +41,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 35
+    weight: 21
     region: content
   field_collections:
     type: entity_reference_label
@@ -49,7 +49,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 31
+    weight: 22
     region: content
   field_common_name:
     type: entity_reference_label
@@ -57,7 +57,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 32
+    weight: 23
     region: content
   field_cultivar:
     type: entity_reference_label
@@ -65,23 +65,22 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 30
+    weight: 24
     region: content
   field_description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 26
+    weight: 25
     region: content
   field_display_image:
-    type: entity_reference_entity_view
+    type: entity_reference_label
     label: above
     settings:
-      view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
-    weight: 25
+    weight: 26
     region: content
   field_display_name:
     type: string
@@ -89,7 +88,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 24
+    weight: 27
     region: content
   field_family:
     type: entity_reference_label
@@ -97,7 +96,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 33
+    weight: 28
     region: content
   field_genus:
     type: entity_reference_label
@@ -113,7 +112,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 22
+    weight: 30
     region: content
   field_mbgna_id:
     type: string
@@ -121,7 +120,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 21
+    weight: 31
     region: content
   field_origin:
     type: entity_reference_label
@@ -129,7 +128,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 27
+    weight: 32
     region: content
   field_species:
     type: entity_reference_label
@@ -137,14 +136,13 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 28
+    weight: 33
     region: content
   field_video:
-    type: entity_reference_entity_view
+    type: entity_reference_label
     label: above
     settings:
-      view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 34
     region: content

@@ -1,0 +1,26 @@
+uuid: a4a29b87-5cc2-4596-b804-fe1f4b56e4c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_3d_view
+    - mbgna_plant.plant_type.plant_basic
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - code
+id: plant.plant_basic.field_3d_view
+field_name: field_3d_view
+entity_type: plant
+bundle: plant_basic
+label: '3D view'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19c2c859fa79e9d1919d48493a3bfbc6",
+    "content-hash": "4b44f9189033bec9e34f5e41c601c983",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7236,30 +7236,9 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nketchum/mbgna_resource.git",
-                "reference": "1d11844d4c442bb035d03a3f2b13bb852b6323da"
+                "reference": "origin/main"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nketchum/mbgna_resource/zipball/1d11844d4c442bb035d03a3f2b13bb852b6323da",
-                "reference": "1d11844d4c442bb035d03a3f2b13bb852b6323da",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10",
-                "php": "^8.1"
-            },
-            "default-branch": true,
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "Provides resource entities for the site.",
-            "support": {
-                "issues": "https://github.com/nketchum/mbgna_resource/issues",
-                "source": "https://github.com/nketchum/mbgna_resource/tree/1.0.0"
-            },
-            "time": "2023-07-12T14:10:14+00:00"
+            "type": "drupal-module"
         },
         {
             "name": "mbgna/mbgna_tweaks",

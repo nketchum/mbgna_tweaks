@@ -1,0 +1,20 @@
+uuid: 75044373-0778-43a0-81c5-510a90eb8d81
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+    - taxonomy
+id: plant.field_common_name
+field_name: field_common_name
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

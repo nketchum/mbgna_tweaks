@@ -1,0 +1,31 @@
+uuid: c815d3b0-ec99-4016-8005-d7b7b881d58d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_collections
+    - mbgna_plant.plant_type.bonsai
+    - node.type.conservatory
+    - node.type.garden
+id: plant.bonsai.field_collections
+field_name: field_collections
+entity_type: plant
+bundle: bonsai
+label: Collections
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      conservatory: conservatory
+      garden: garden
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
