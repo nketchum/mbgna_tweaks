@@ -1,0 +1,21 @@
+uuid: c5fc3fff-3878-4629-9845-104318c9d581
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_resource
+id: resource.field_display_name
+field_name: field_display_name
+entity_type: resource
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
