@@ -1,0 +1,23 @@
+uuid: 9791a32f-a2ab-4b60-baa5-a95a0cb5192d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.resource.field_links
+    - mbgna_resource.resource_type.natural_area_data
+  module:
+    - link
+id: resource.natural_area_data.field_links
+field_name: field_links
+entity_type: resource
+bundle: natural_area_data
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

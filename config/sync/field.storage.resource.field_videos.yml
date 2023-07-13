@@ -1,0 +1,20 @@
+uuid: 6174356d-af6f-40d4-bd6a-f48a8fad2679
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_resource
+    - media
+id: resource.field_videos
+field_name: field_videos
+entity_type: resource
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

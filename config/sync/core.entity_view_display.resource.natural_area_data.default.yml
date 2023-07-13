@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.resource.natural_area_data.field_display_name
     - field.field.resource.natural_area_data.field_files
+    - field.field.resource.natural_area_data.field_links
+    - field.field.resource.natural_area_data.field_videos
     - mbgna_resource.resource_type.natural_area_data
   module:
+    - link
     - text
 id: resource.natural_area_data.default
 targetEntityType: resource
@@ -19,6 +23,14 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_display_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_files:
     type: entity_reference_entity_view
     label: above
@@ -27,6 +39,27 @@ content:
       link: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_videos:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   label:
     type: string

@@ -1,0 +1,19 @@
+uuid: f25171ba-c046-451c-8d4e-e00fa97a3a5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - mbgna_resource
+id: resource.field_links
+field_name: field_links
+entity_type: resource
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

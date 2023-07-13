@@ -1,0 +1,9 @@
+status: 1
+pattern: '[resource:field_display_name:value]'
+escape: true
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - mbgna_resource.resource_type.natural_area_data
