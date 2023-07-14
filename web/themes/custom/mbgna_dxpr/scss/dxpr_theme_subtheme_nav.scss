@@ -207,3 +207,29 @@
     }
   }
 }
+
+// Adjust sizing behaviors.
+.navbar-container {
+  display: flex !important;
+
+  .dxpr-theme-main-menu {
+    width: 100%;
+
+    .block-tb-megamenu {
+      float: none;
+
+      & > .tb-megamenu > .nav > li {
+        padding: 0;
+      }
+
+      .tb-megamenu-nav {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav {
+  float: none;
+}
