@@ -1,0 +1,191 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+// MOBILE STYLES
+// Uses the core main navigation menu.
+.html--dxpr-theme-nav-mobile--open {
+  .body--dxpr-theme-nav-mobile {
+    .dxpr-theme-header {
+      #dxpr-theme-menu-toggle {
+        margin: -8px -10px 0 0 !important;
+        padding: 10px 24px 10px 0;
+
+        @media (min-width: 768px) and (max-width: 1200px) {
+          margin: -42px -30px 0 0 !important;
+        }
+
+        span {
+          &::before, &::after {
+            background-color: $maize-primary;
+          }
+        } 
+      }
+
+      .dxpr-theme-main-menu {
+        @media (max-width: 1200px) {
+          background-color: $blue-primary;
+        }
+
+        .nav-mobile {
+          ul {
+            list-style: none;
+            padding: 0;
+          }
+
+          & > ul {
+            font-size: 20px;
+
+            & > li > span,
+            & > li > a {
+              background: $maize-primary;
+              border-radius: 5px;
+              color: $blue-primary;
+              display: block;
+              font-family: $font-family-serif;
+              font-weight: bold;
+              margin-bottom: 15px;
+              margin-left: -10px;
+              margin-right: -10px;
+              margin-top: 30px;
+              padding: 2.5px 10px;
+
+              &:hover {
+                color: $blue-primary;
+              }
+            }
+
+            & > li:first-child > span,
+            & > li:first-child > a {
+              margin-top: 0;
+            }
+           
+            & > li > ul {
+              font-size: 16px;
+
+              & > li {
+                margin: 5px 0;
+              }
+
+              & > li > a,
+              & > li > span {
+                font-weight: bold;
+              }
+
+              & > li > ul {
+                border-top: 1px solid #ffcb05;
+                font-size: 14px;
+                margin-bottom: 15px;
+                margin-top: 5px;
+                padding-top: 5px;
+
+                a, span {
+                  display: inline-block;
+                  font-size: 12px;
+                  padding: 2.5px 0;
+                }
+              }
+            }
+          }
+
+          li > * {
+            color: $maize-primary;
+          }
+
+          a:hover {
+            color: $maize-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// DESKTOP STYLES
+// Uses the core main navigation menu.
+// These styles mainly affect the top level menu. Dropdown styles are
+// addressed here, but are mainly handled by DXPR drag-n-drop blocks
+// assigned to a top-level tb_megamenu item.
+.body--dxpr-theme-nav-desktop {
+  .dxpr-theme-header--top {
+    .tb-megamenu {
+      background: transparent;
+
+      &,
+      .dropup,
+      .dropdown {
+        position: static;
+      }
+
+      & > .nav {
+        float: none;
+
+        & > li {
+          height: 100px;
+          padding: 0 60px;
+
+          &.dropdown {
+            & > .dropdown-toggle {
+              .caret {
+                display: none;
+              }
+            }
+
+            &.active,
+            &.active.open {
+              & > .dropdown-toggle,
+              & > a:hover,
+              & > span.tb-megamenu-no-link:hover {
+                background-color: transparent;
+                border: none;
+              }
+            }
+          }
+
+          & > a,
+          & > span {
+            border-right: none;
+          }
+
+          .tb-megamenu-submenu {
+            left: auto !important;
+            max-width: 1200px;
+            padding: 0 !important;
+            right: 0;
+          }
+        }
+
+        & > li,
+        & .dropdown-menu li {
+          & > a,
+          & > span {
+            color: inherit;
+            height: auto;
+            line-height: 1em;
+            padding: 5px 0;
+            text-transform: none;
+          }
+        }
+
+        & .dropdown-menu {
+          li {
+            & > a,
+            & > span {
+              color: $blue-secondary;
+              padding: 0.67em 0;
+            }
+
+            &:first-child {
+              & > a,
+              & > span {
+                padding-top: 0 !important;
+              }
+            }
+          }
+        }
+      }
+
+      .row-fluid + .row-fluid {
+        border-top: none;
+      }
+    }
+  }
+}
