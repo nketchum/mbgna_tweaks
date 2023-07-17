@@ -135,6 +135,19 @@
         float: left;
       }
 
+      .nav {
+        li, & > li {
+          &.dropdown.active,
+          &.dropdown.open.active {
+            & > .dropdown-toggle,
+            & > a:hover,
+            & > span.tb-megamenu-no-link:hover {
+              color: inherit !important;
+            }
+          }
+        }
+      }
+
       & > .nav {
         float: none;
 

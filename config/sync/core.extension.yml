@@ -76,6 +76,7 @@ module:
   mbgna_resource: 0
   mbgna_tweaks: 0
   media: 0
+  media_entity_instagram: 0
   media_library: 0
   menu_block: 0
   menu_link_content: 0

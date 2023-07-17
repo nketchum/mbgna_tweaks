@@ -16,7 +16,7 @@ third_party_settings:
 id: visitdropdownmenuv2.0
 theme: mbgna_dxpr
 region: hidden
-weight: -9
+weight: -6
 provider: null
 plugin: 'block_content:939ac220-41de-4389-9ae7-7208e019808f'
 settings:

@@ -1,0 +1,15 @@
+uuid: 7bc42f03-39de-41bc-86e4-4cf8d96329bc
+langcode: en
+status: true
+dependencies: {  }
+name: medium_square_ish_rectangle
+label: 'Medium square-ish rectangle'
+effects:
+  fb344bbd-a4a4-41fb-a44a-a18987710bd8:
+    uuid: fb344bbd-a4a4-41fb-a44a-a18987710bd8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 360
+      anchor: center-center
