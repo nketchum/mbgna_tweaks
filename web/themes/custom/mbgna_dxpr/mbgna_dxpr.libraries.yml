@@ -6,6 +6,7 @@ global-styling:
     js/minified/colorbox.min.js: { minified: true }
     js/minified/autoplay.min.js: { minified: true }
     js/minified/nav.min.js: { minified: true }
+    js/minified/slideshow_banner.min.js: { minified: true }
 
 bootstrap-3:
   css:
