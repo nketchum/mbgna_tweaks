@@ -1,4 +1,4 @@
-uuid: 7c028363-9e34-4afd-b075-2cb350b3bf99
+uuid: 2329155a-5fb5-4e23-a964-33cd64f9ab90
 langcode: en
 status: true
 dependencies:
@@ -8,13 +8,14 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: plant.field_year_acquired
-field_name: field_year_acquired
+id: plant.field_breeder
+field_name: field_breeder
 entity_type: plant
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

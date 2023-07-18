@@ -1,12 +1,12 @@
-uuid: bc36fd8f-99ca-418a-bffa-1452382709d1
+uuid: a15d5cf1-eeae-46fb-a094-25edba20560d
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.bonsai_style_tag
-id: taxonomy_term.bonsai_style_tag.default
+    - taxonomy.vocabulary.countries
+id: taxonomy_term.countries.default
 targetEntityType: taxonomy_term
-bundle: bonsai_style_tag
+bundle: countries
 mode: default
 content:
   name:

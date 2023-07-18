@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
     - mbgna_plant
+third_party_settings:
+  field_permissions:
+    permission_type: public
 id: plant.field_mbgna_id
 field_name: field_mbgna_id
 entity_type: plant

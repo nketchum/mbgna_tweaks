@@ -1,0 +1,29 @@
+uuid: c02e0933-30d7-4276-ac59-9fe470022912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_peony_color
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.peony_color
+id: plant.peony.field_peony_color
+field_name: field_peony_color
+entity_type: plant
+bundle: peony
+label: Color
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      peony_color: peony_color
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

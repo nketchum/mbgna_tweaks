@@ -6,7 +6,6 @@ dependencies:
     - field.field.plant.bonsai.field_3d_view
     - field.field.plant.bonsai.field_collections
     - field.field.plant.bonsai.field_common_name
-    - field.field.plant.bonsai.field_cultivar
     - field.field.plant.bonsai.field_description
     - field.field.plant.bonsai.field_dimensions
     - field.field.plant.bonsai.field_display_image
@@ -184,24 +183,6 @@ content:
       override_labels: true
       label_singular: 'common name'
       label_plural: 'common names'
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      allow_duplicate: false
-      collapsible: false
-      collapsed: false
-      revision: false
-      removed_reference: keep
-    third_party_settings: {  }
-  field_cultivar:
-    type: inline_entity_form_complex
-    weight: 16
-    region: content
-    settings:
-      form_mode: default
-      override_labels: true
-      label_singular: cultivar
-      label_plural: cultivars
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS

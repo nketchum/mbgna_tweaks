@@ -1,0 +1,29 @@
+uuid: cfe75625-5134-4446-a9c4-618dd09e1146
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_species
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.species
+id: plant.peony.field_species
+field_name: field_species
+entity_type: plant
+bundle: peony
+label: Species
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      species: species
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

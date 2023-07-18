@@ -1,26 +1,26 @@
-uuid: c1ec1fa5-e9ad-4255-b1a0-249665c99639
+uuid: 73ef3459-9d0d-496b-aa83-9ff06f439ae6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.plant.field_cultivar
-    - mbgna_plant.plant_type.plant_basic
-    - taxonomy.vocabulary.cultivar
-id: plant.plant_basic.field_cultivar
-field_name: field_cultivar
+    - field.storage.plant.field_common_name
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.common_name
+id: plant.peony.field_common_name
+field_name: field_common_name
 entity_type: plant
-bundle: plant_basic
-label: Cultivar
+bundle: peony
+label: 'Common name'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      cultivar: cultivar
+      common_name: common_name
     sort:
       field: name
       direction: asc

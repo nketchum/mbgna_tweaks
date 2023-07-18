@@ -1,0 +1,29 @@
+uuid: 5b10127f-851c-45e9-a720-d925e9c64839
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_country_of_origin
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.countries
+id: plant.peony.field_country_of_origin
+field_name: field_country_of_origin
+entity_type: plant
+bundle: peony
+label: 'Country of origin'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      countries: countries
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

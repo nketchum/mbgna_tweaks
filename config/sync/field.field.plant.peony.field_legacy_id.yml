@@ -1,0 +1,19 @@
+uuid: 2f745565-495c-4f6c-8f14-83aa9c573e99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_legacy_id
+    - mbgna_plant.plant_type.peony
+id: plant.peony.field_legacy_id
+field_name: field_legacy_id
+entity_type: plant
+bundle: peony
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

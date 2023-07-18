@@ -6,7 +6,6 @@ dependencies:
     - field.field.plant.bonsai.field_3d_view
     - field.field.plant.bonsai.field_collections
     - field.field.plant.bonsai.field_common_name
-    - field.field.plant.bonsai.field_cultivar
     - field.field.plant.bonsai.field_description
     - field.field.plant.bonsai.field_dimensions
     - field.field.plant.bonsai.field_display_image
@@ -75,14 +74,6 @@ content:
       link: true
     third_party_settings: {  }
     weight: 23
-    region: content
-  field_cultivar:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 24
     region: content
   field_description:
     type: text_default

@@ -1,0 +1,29 @@
+uuid: 68a24dff-1f06-46cf-8e23-da4f448e34f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_description
+    - mbgna_plant.plant_type.peony
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - minimal_html
+      - full_html
+id: plant.peony.field_description
+field_name: field_description
+entity_type: plant
+bundle: peony
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

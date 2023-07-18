@@ -1,0 +1,19 @@
+uuid: 75480fc4-501b-4fab-9147-9bd0bf02016f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_breeder
+    - mbgna_plant.plant_type.peony
+id: plant.peony.field_breeder
+field_name: field_breeder
+entity_type: plant
+bundle: peony
+label: Breeder
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

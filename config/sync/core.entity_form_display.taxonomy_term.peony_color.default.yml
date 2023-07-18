@@ -1,12 +1,12 @@
-uuid: bc36fd8f-99ca-418a-bffa-1452382709d1
+uuid: cacf0212-0b86-4e7e-9752-bf0526d93c39
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.bonsai_style_tag
-id: taxonomy_term.bonsai_style_tag.default
+    - taxonomy.vocabulary.peony_color
+id: taxonomy_term.peony_color.default
 targetEntityType: taxonomy_term
-bundle: bonsai_style_tag
+bundle: peony_color
 mode: default
 content:
   name:
