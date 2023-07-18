@@ -261,3 +261,50 @@
     }
   }
 }
+
+// Tab navigation
+
+.nav-tabs > li > a {
+  color: $blue-secondary;
+}
+
+.nav-tabs {
+  .nav-item {
+    .nav-link {
+      &.active {
+        background: none !important;
+        border: none;
+        box-shadow: none !important;
+        color: $black;
+      }
+    }
+  }
+}
+
+.nav-tabs.left-tabs {
+  margin-top: 15px !important;
+}
+
+.tabs-top {
+  .nav-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 0 30px !important;
+
+    .nav-item {
+      border-bottom: none !important;
+
+      a {
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
