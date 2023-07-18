@@ -11,7 +11,7 @@ dependencies:
 id: eventsdropdownmenu
 theme: mbgna_dxpr
 region: hidden
-weight: -7
+weight: -9
 provider: null
 plugin: 'block_content:5abdae00-589f-4a8d-97c5-c24ee723603a'
 settings:

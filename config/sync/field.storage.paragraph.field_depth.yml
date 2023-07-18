@@ -1,0 +1,20 @@
+uuid: 34db4ae6-3a5b-43a3-bfa6-dc79cf5f3920
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_depth
+field_name: field_depth
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

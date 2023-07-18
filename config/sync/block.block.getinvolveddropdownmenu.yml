@@ -12,7 +12,7 @@ dependencies:
 id: getinvolveddropdownmenu
 theme: mbgna_dxpr
 region: hidden
-weight: -8
+weight: -5
 provider: null
 plugin: 'block_content:5b6bf9a4-94e5-4501-a3b8-e98a09fe4c11'
 settings:

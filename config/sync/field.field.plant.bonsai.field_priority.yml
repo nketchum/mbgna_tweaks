@@ -1,0 +1,21 @@
+uuid: cbe755f8-d30e-4b13-afee-71ec4b868a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_priority
+    - mbgna_plant.plant_type.bonsai
+  module:
+    - options
+id: plant.bonsai.field_priority
+field_name: field_priority
+entity_type: plant
+bundle: bonsai
+label: Priority
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

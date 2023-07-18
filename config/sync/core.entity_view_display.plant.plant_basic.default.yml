@@ -10,11 +10,13 @@ dependencies:
     - field.field.plant.plant_basic.field_description
     - field.field.plant.plant_basic.field_display_image
     - field.field.plant.plant_basic.field_display_name
+    - field.field.plant.plant_basic.field_donor
     - field.field.plant.plant_basic.field_family
     - field.field.plant.plant_basic.field_genus
     - field.field.plant.plant_basic.field_legacy_id
     - field.field.plant.plant_basic.field_mbgna_id
     - field.field.plant.plant_basic.field_origin
+    - field.field.plant.plant_basic.field_plant_images
     - field.field.plant.plant_basic.field_species
     - field.field.plant.plant_basic.field_video
     - mbgna_plant.plant_type.plant_basic
@@ -91,6 +93,14 @@ content:
     third_party_settings: {  }
     weight: 24
     region: content
+  field_donor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 37
+    region: content
   field_family:
     type: entity_reference_label
     label: above
@@ -130,6 +140,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 27
+    region: content
+  field_plant_images:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 36
     region: content
   field_species:
     type: entity_reference_label

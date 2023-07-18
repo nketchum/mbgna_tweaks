@@ -1,0 +1,20 @@
+uuid: f25cee71-a6a6-44f1-b32c-c730b8d2d742
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant.field_trained_since
+field_name: field_trained_since
+entity_type: plant
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -10,6 +10,7 @@ dependencies:
     - contact
     - media
     - system
+    - toolbar
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -20,8 +21,11 @@ permissions:
   - 'access checkout'
   - 'access content'
   - 'access site-wide contact form'
+  - 'access toolbar'
   - 'change own username'
   - 'manage own commerce_payment_method'
   - 'view commerce_product'
+  - 'view field_plant_donations'
   - 'view media'
   - 'view own commerce_order'
+  - 'view own field_plant_donations'

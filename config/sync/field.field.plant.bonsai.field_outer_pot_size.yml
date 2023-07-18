@@ -1,0 +1,19 @@
+uuid: da3aca97-b363-40c6-b41f-f27d1d42448b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_outer_pot_size
+    - mbgna_plant.plant_type.bonsai
+id: plant.bonsai.field_outer_pot_size
+field_name: field_outer_pot_size
+entity_type: plant
+bundle: bonsai
+label: 'Outer pot size'
+description: 'Measured in whole-number inches, e.g. "3x5x8"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

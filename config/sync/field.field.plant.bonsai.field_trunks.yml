@@ -1,0 +1,23 @@
+uuid: 24ca49d4-ca35-4069-85a4-322d864ff96d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_trunks
+    - mbgna_plant.plant_type.bonsai
+  module:
+    - options
+id: plant.bonsai.field_trunks
+field_name: field_trunks
+entity_type: plant
+bundle: bonsai
+label: Trunks
+description: 'Number of distinct trunks.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

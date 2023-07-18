@@ -1,0 +1,58 @@
+uuid: 3ca30391-3c9b-4489-9a79-22c72690d9de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.plant_dimensions.field_depth
+    - field.field.paragraph.plant_dimensions.field_height
+    - field.field.paragraph.plant_dimensions.field_width
+    - field.field.paragraph.plant_dimensions.field_year
+    - paragraphs.paragraphs_type.plant_dimensions
+id: paragraph.plant_dimensions.default
+targetEntityType: paragraph
+bundle: plant_dimensions
+mode: default
+content:
+  field_depth:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_height:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_width:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

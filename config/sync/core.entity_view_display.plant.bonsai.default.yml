@@ -8,17 +8,34 @@ dependencies:
     - field.field.plant.bonsai.field_common_name
     - field.field.plant.bonsai.field_cultivar
     - field.field.plant.bonsai.field_description
+    - field.field.plant.bonsai.field_dimensions
     - field.field.plant.bonsai.field_display_image
     - field.field.plant.bonsai.field_display_name
+    - field.field.plant.bonsai.field_donor
     - field.field.plant.bonsai.field_family
     - field.field.plant.bonsai.field_genus
+    - field.field.plant.bonsai.field_last_repot
     - field.field.plant.bonsai.field_legacy_id
+    - field.field.plant.bonsai.field_makeup
     - field.field.plant.bonsai.field_mbgna_id
     - field.field.plant.bonsai.field_origin
+    - field.field.plant.bonsai.field_outer_pot_size
+    - field.field.plant.bonsai.field_plant_images
+    - field.field.plant.bonsai.field_pot_notes
+    - field.field.plant.bonsai.field_priority
     - field.field.plant.bonsai.field_species
+    - field.field.plant.bonsai.field_status
+    - field.field.plant.bonsai.field_status_date
+    - field.field.plant.bonsai.field_trained_since
+    - field.field.plant.bonsai.field_trunks
     - field.field.plant.bonsai.field_video
+    - field.field.plant.bonsai.field_year_acquired
+    - field.field.plant.bonsai.field_year_started
     - mbgna_plant.plant_type.bonsai
   module:
+    - datetime
+    - entity_reference_revisions
+    - options
     - text
     - user
 id: plant.bonsai.default
@@ -74,6 +91,15 @@ content:
     third_party_settings: {  }
     weight: 25
     region: content
+  field_dimensions:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 40
+    region: content
   field_display_image:
     type: entity_reference_label
     label: above
@@ -89,6 +115,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 27
+    region: content
+  field_donor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 48
     region: content
   field_family:
     type: entity_reference_label
@@ -106,6 +140,15 @@ content:
     third_party_settings: {  }
     weight: 29
     region: content
+  field_last_repot:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 41
+    region: content
   field_legacy_id:
     type: string
     label: above
@@ -113,6 +156,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 30
+    region: content
+  field_makeup:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 38
     region: content
   field_mbgna_id:
     type: string
@@ -130,6 +181,37 @@ content:
     third_party_settings: {  }
     weight: 32
     region: content
+  field_outer_pot_size:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_plant_images:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 47
+    region: content
+  field_pot_notes:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 43
+    region: content
+  field_priority:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 46
+    region: content
   field_species:
     type: entity_reference_label
     label: above
@@ -138,6 +220,39 @@ content:
     third_party_settings: {  }
     weight: 33
     region: content
+  field_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_status_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  field_trained_since:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_trunks:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 39
+    region: content
   field_video:
     type: entity_reference_label
     label: above
@@ -145,6 +260,24 @@ content:
       link: true
     third_party_settings: {  }
     weight: 34
+    region: content
+  field_year_acquired:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_year_started:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 35
     region: content
   label:
     type: string

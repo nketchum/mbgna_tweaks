@@ -1,0 +1,20 @@
+uuid: 324d519f-8fa3-4a18-a33f-7268ba345407
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - mbgna_plant
+id: plant.field_last_repot
+field_name: field_last_repot
+entity_type: plant
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

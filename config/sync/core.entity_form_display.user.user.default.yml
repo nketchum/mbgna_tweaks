@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.user.user.commerce_remote_id
   module:
-    - path
+    - profile
     - user
 id: user.user.default
 targetEntityType: user
@@ -13,31 +13,31 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  contact:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  language:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
+  collections_donor_profiles:
+    type: profile_form
+    weight: 2
     region: content
-    settings: {  }
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+  customer_profiles:
+    type: profile_form
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
     third_party_settings: {  }
   timezone:
-    weight: 6
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   commerce_remote_id: true
-  customer_profiles: true
+  contact: true
+  language: true
+  path: true

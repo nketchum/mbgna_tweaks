@@ -1,0 +1,21 @@
+uuid: bf4b534e-3dfb-4977-8355-954a8022dbe8
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant.field_makeup
+field_name: field_makeup
+entity_type: plant
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

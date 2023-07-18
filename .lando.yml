@@ -10,6 +10,14 @@ config:
   via: apache:2.4
   webroot: web
   xdebug: false
+excludes:
+  - vendor
+  - node_modules
+  - modules/contrib
+  - themes/contrib
+  - "!modules/contrib/mbgna_plant"
+  - "!modules/contrib/mbgna_resource"
+  - "!modules/contrib/mbgna_tweaks"
 services:
   appserver:
     build_as_root:

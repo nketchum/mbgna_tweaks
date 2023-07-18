@@ -1,0 +1,23 @@
+uuid: 5f625d6d-0396-4c82-88e7-0d59d5528f0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_year_acquired
+    - mbgna_plant.plant_type.bonsai
+id: plant.bonsai.field_year_acquired
+field_name: field_year_acquired
+entity_type: plant
+bundle: bonsai
+label: 'Year acquired'
+description: 'Enter a four-digit year.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1950
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

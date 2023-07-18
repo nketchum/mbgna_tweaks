@@ -1,0 +1,23 @@
+uuid: 0fd11afe-f5d7-46f9-9255-7c0c3a2e0b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_trained_since
+    - mbgna_plant.plant_type.bonsai
+id: plant.bonsai.field_trained_since
+field_name: field_trained_since
+entity_type: plant
+bundle: bonsai
+label: 'Trained since'
+description: 'Enter a four-digit year.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
