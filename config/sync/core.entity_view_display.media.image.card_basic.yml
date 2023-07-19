@@ -19,7 +19,7 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: content
+      image_link: ''
       image_style: medium_square_ish_rectangle
       image_loading:
         attribute: lazy

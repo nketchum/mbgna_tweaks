@@ -1,5 +1,9 @@
-@import "./dxpr_theme_subtheme_components.scss";
+@import "./dxpr_theme_subtheme_block.scss";
+@import "./dxpr_theme_subtheme_component.scss";
+@import "./dxpr_theme_subtheme_node.scss";
+@import "./dxpr_theme_subtheme_node_event.scss";
 @import "./dxpr_theme_subtheme_nav.scss";
+@import "./dxpr_theme_subtheme_view.scss";
 
 a:hover, 
 a:focus, 

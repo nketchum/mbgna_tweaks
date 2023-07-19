@@ -1,12 +1,22 @@
 global-styling:
   css:
     theme:
-      css/dxpr_theme_subtheme.css: {weight: 6}
+      css/dxpr_theme_subtheme.css: {weight: 10}
+      css/dxpr_theme_subtheme_block.css: {weight: 11}
+      css/dxpr_theme_subtheme_component.css: {weight: 11}
+      css/dxpr_theme_subtheme_nav.css: {weight: 11}
+      css/dxpr_theme_subtheme_node.css: {weight: 11}
+      css/dxpr_theme_subtheme_view.css: {weight: 12s}
   js:
     js/minified/colorbox.min.js: { minified: true }
     js/minified/autoplay.min.js: { minified: true }
     js/minified/nav.min.js: { minified: true }
     js/minified/slideshow_banner.min.js: { minified: true }
+
+events:
+  css:
+    theme:
+      css/dxpr_theme_subtheme_event.css
 
 bootstrap-3:
   css:

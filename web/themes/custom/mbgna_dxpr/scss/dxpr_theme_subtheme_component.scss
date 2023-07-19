@@ -555,6 +555,7 @@ body {
   margin-left: 5px;
 }
 
+.embeds-dxpr-layout,
 .is-not-dxpr-layout {
   .page-title-container {
     .breadcrumb {
@@ -564,35 +565,26 @@ body {
     }
   }
 
-  .main-container {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-bottom: 90px;
-  }
-
   .page-title-full-width-container {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 60px;
   }
 
-  &.page-node-type-garden,
-  &.page-node-type-conservatory,
-  &.page-node-type-trail,
-  &.page-node-type-room,
-  &.path-product {
-    .main-container {
-      margin-bottom: 0;
-    }      
-  }
+  .main-container {
+    & > .row {
+      & > section {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-  .main-container > .row {
-    & > aside:first-child {
-      padding-right: 2.5%;
-    }
+      & > aside:first-child {
+        padding-right: 2.5%;
+      }
 
-    & > aside:last-child {
-      padding-left: 2.5%;
+      & > aside:last-child {
+        padding-left: 2.5%;
+      }
     }
   }
 
@@ -601,28 +593,17 @@ body {
   }
 }
 
-.is-dxpr-layout {
-  .main-container > .row > * {
-    padding-left: 0;
-    padding-right: 0;
+.is-not-dxpr-layout {
+  .main-container > .row > section {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
-.page-node-type-garden,
-.page-node-type-conservatory,
-.page-node-type-trail,
-.page-node-type-room,
-.path-product {
-  .main-container {
+.is-dxpr-layout {
+  .main-container > .row > section {
     padding-left: 0;
     padding-right: 0;
-
-    & > .row {
-      & > * {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
   }
 }
 
