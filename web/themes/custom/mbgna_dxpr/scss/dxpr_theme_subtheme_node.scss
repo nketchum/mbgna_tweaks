@@ -1,3 +1,5 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
 .field > img {
   width: 100%;
   height: auto;
@@ -63,5 +65,16 @@
     font-weight: 100;
     letter-spacing: 1px;
     text-transform: uppercase;
+  }
+}
+
+.field--name-field-commerce-products {
+  .field__item {
+    article {
+      border: 1px solid $gray;
+      background-color: $lightest-gray;
+      margin: 60px 0;
+      padding: 15px 30px;
+    }
   }
 }

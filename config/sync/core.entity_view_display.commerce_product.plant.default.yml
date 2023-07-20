@@ -1,15 +1,15 @@
-uuid: 625236f1-9d39-49ca-92b8-427de042212d
+uuid: 67cd809b-2ba3-49c0-9582-ea1a0f15eca2
 langcode: en
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_type.admission
-    - field.field.commerce_product.admission.body
+    - commerce_product.commerce_product_type.plant
+    - field.field.commerce_product.plant.body
   module:
     - commerce_product
-id: commerce_product.admission.default
+id: commerce_product.plant.default
 targetEntityType: commerce_product
-bundle: admission
+bundle: plant
 mode: default
 content:
   title:

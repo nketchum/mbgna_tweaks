@@ -1,0 +1,10 @@
+uuid: 861353c9-e1a5-46d1-8adb-cbbb765b4d54
+langcode: en
+status: true
+dependencies: {  }
+id: plant
+label: Plant
+traits: {  }
+locked: false
+orderItemType: plant
+generateTitle: true

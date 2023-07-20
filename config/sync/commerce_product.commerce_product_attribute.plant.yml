@@ -1,0 +1,7 @@
+uuid: 6f3f6bfa-e998-4997-a717-9761f6a310b3
+langcode: en
+status: true
+dependencies: {  }
+id: plant
+label: Plant
+elementType: select

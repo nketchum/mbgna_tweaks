@@ -1,0 +1,14 @@
+uuid: cf6acc04-e9d0-4263-85df-2db84ea695cf
+langcode: en
+status: true
+dependencies: {  }
+id: plant
+label: Plant
+traits: {  }
+locked: false
+description: 'Provides a plant product type.'
+variationType: null
+variationTypes:
+  - plant
+multipleVariations: true
+injectVariationFields: true

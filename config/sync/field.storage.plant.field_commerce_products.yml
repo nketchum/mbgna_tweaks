@@ -1,0 +1,24 @@
+uuid: 65801362-657b-402c-8512-fba70d7b4cfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+    - mbgna_plant
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: plant.field_commerce_products
+field_name: field_commerce_products
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: commerce_product
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

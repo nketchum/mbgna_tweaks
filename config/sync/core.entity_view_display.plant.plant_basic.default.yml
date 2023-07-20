@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.plant.plant_basic.field_3d_view
     - field.field.plant.plant_basic.field_collections
+    - field.field.plant.plant_basic.field_commerce_products
     - field.field.plant.plant_basic.field_common_name
     - field.field.plant.plant_basic.field_description
     - field.field.plant.plant_basic.field_display_image
@@ -43,6 +44,14 @@ content:
       field_formatter_class:
         class: ''
     weight: 8
+    region: content
+  field_commerce_products:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
     region: content
   field_common_name:
     type: entity_reference_label

@@ -1,0 +1,28 @@
+uuid: 8fd29e63-5ade-448a-8f99-812d4d8e0900
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+third_party_settings:
+  commerce_cart:
+    cart_block_view: commerce_cart_block
+    cart_form_view: commerce_cart_form
+    cart_expiration:
+      number: 30
+      unit: day
+    enable_cart_message: true
+  commerce_checkout:
+    checkout_flow: default
+id: plant
+label: Plant
+traits: {  }
+locked: false
+workflow: order_default
+numberPattern: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+receiptSubject: ''

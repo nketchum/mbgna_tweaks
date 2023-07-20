@@ -6,6 +6,7 @@ dependencies:
     - commerce_product.commerce_product_variation_type.default
     - core.entity_view_mode.commerce_product_variation.summary
     - field.field.commerce_product_variation.default.attribute_admission_attributes
+    - field.field.commerce_product_variation.default.attribute_plant
   module:
     - commerce_price
   enforced:
@@ -45,5 +46,6 @@ content:
     region: content
 hidden:
   attribute_admission_attributes: true
+  attribute_plant: true
   price: true
   sku: true

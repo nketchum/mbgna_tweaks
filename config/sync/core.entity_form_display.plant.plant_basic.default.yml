@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.plant.plant_basic.field_3d_view
     - field.field.plant.plant_basic.field_collections
+    - field.field.plant.plant_basic.field_commerce_products
     - field.field.plant.plant_basic.field_common_name
     - field.field.plant.plant_basic.field_description
     - field.field.plant.plant_basic.field_display_image
@@ -95,6 +96,7 @@ third_party_settings:
         - field_video
         - field_3d_view
         - field_donor
+        - field_commerce_products
       label: 'Basic information'
       region: content
       parent_name: group_plant
@@ -134,6 +136,24 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_commerce_products:
+    type: inline_entity_form_complex
+    weight: 17
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: product
+      label_plural: products
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
     third_party_settings: {  }
   field_common_name:
     type: inline_entity_form_complex
