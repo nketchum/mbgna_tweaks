@@ -114,7 +114,10 @@
   .dxpr-theme-header--top {
     // Menu headings
     h4 {
+      line-height: 1.35em;
       margin-bottom: 2em;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     .nav {
@@ -218,6 +221,8 @@
 
         & .dropdown-menu {
           li {
+            min-width: unset;
+            
             & > a,
             & > span {
               color: $blue-secondary;
