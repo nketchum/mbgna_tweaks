@@ -594,9 +594,14 @@ body {
 }
 
 .is-not-dxpr-layout {
-  .main-container > .row > section {
+  .main-container > .row > * {
     padding-left: 5%;
     padding-right: 5%;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      padding-left: 60px !important;
+    }
   }
 }
 

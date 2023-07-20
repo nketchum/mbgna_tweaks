@@ -5,6 +5,10 @@
     margin: 2% 0;
   }
 
+  .field--name-field-map-link {
+    margin-top: -15px;
+  }
+
   .field--name-field-date-smart {
     margin-top: 30px !important;
     margin-bottom: 60px !important;
@@ -19,4 +23,12 @@
       padding: 15px;
     }
   }
+
+  .field--type-link {
+    .btn {
+      margin-top: 5px !important;
+    }
+  }
 }
+
+
