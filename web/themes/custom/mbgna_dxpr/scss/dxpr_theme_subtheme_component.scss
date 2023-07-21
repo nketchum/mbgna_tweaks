@@ -238,6 +238,10 @@ body {
   color: inherit;
 }
 
+.navbar-container {
+  align-items: center;
+}
+
 @media (max-width: 767px) {
   .standard-layout {
     margin-left: 0 !important;
@@ -281,7 +285,9 @@ body {
 }
 
 .body--dxpr-theme-nav-desktop {
-  .dxpr-theme-header--top {
+  .dxpr-theme-header {
+    color:inherit;
+
     .wrap-branding {
       height: 70px;
       line-height: 70px;
@@ -555,7 +561,6 @@ body {
   margin-left: 5px;
 }
 
-.embeds-dxpr-layout,
 .is-not-dxpr-layout {
   .page-title-container {
     .breadcrumb {
@@ -565,26 +570,35 @@ body {
     }
   }
 
+  .main-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 90px;
+  }
+
   .page-title-full-width-container {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 60px;
   }
 
-  .main-container {
-    & > .row {
-      & > section {
-        padding-left: 0;
-        padding-right: 0;
-      }
+  &.page-node-type-garden,
+  &.page-node-type-conservatory,
+  &.page-node-type-trail,
+  &.page-node-type-room,
+  &.path-product {
+    .main-container {
+      margin-bottom: 0;
+    }      
+  }
 
-      & > aside:first-child {
-        padding-right: 2.5%;
-      }
+  .main-container > .row {
+    & > aside:first-child {
+      padding-right: 2.5%;
+    }
 
-      & > aside:last-child {
-        padding-left: 2.5%;
-      }
+    & > aside:last-child {
+      padding-left: 2.5%;
     }
   }
 
@@ -593,22 +607,28 @@ body {
   }
 }
 
-.is-not-dxpr-layout {
+.is-dxpr-layout {
   .main-container > .row > * {
-    padding-left: 5%;
-    padding-right: 5%;
-
-    &:nth-child(2),
-    &:nth-child(3) {
-      padding-left: 60px !important;
-    }
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-.is-dxpr-layout {
-  .main-container > .row > section {
+.page-node-type-garden,
+.page-node-type-conservatory,
+.page-node-type-trail,
+.page-node-type-room,
+.path-product {
+  .main-container {
     padding-left: 0;
     padding-right: 0;
+
+    & > .row {
+      & > * {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 }
 

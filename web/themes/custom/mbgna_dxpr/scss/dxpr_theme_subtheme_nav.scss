@@ -1,7 +1,7 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
-// MOBILE STYLES
-// Uses the core main navigation menu.
+// // MOBILE STYLES
+// // Uses the core main navigation menu.
 @media (max-width: 1200px) {
   .navbar-header {
     width: 100%;
@@ -110,166 +110,166 @@
 // These styles mainly affect the top level menu. Dropdown styles are
 // addressed here, but are mainly handled by DXPR drag-n-drop blocks
 // assigned to a top-level tb_megamenu item.
-.body--dxpr-theme-nav-desktop {
-  .dxpr-theme-header--top {
-    // Menu headings
-    h4 {
-      line-height: 1.35em;
-      margin-bottom: 2em;
-      overflow: hidden;
-      white-space: nowrap;
-    }
+// .body--dxpr-theme-nav-desktop {
+  // .dxpr-theme-header--top {
+    // // Menu headings
+    // h4 {
+    //   line-height: 1.35em;
+    //   margin-bottom: 2em;
+    //   overflow: hidden;
+    //   white-space: nowrap;
+    // }
 
-    .nav {
-      float: none;
-    }
+    // .nav {
+    //   float: none;
+    // }
 
-    .tb-megamenu {
-      background: transparent;
+    // .tb-megamenu {
+      // background: transparent;
 
-      &,
-      .dropup,
-      .dropdown {
-        position: static;
-      }
+      // &,
+      // .dropup,
+      // .dropdown {
+      //   position: static;
+      // }
 
-      .block,
-      nav nav {
-        float: left;
-      }
+      // .block,
+      // nav nav {
+      //   float: left;
+      // }
 
-      .nav {
-        li, & > li {
-          &.dropdown.active,
-          &.dropdown.open.active {
-            & > .dropdown-toggle,
-            & > a:hover,
-            & > span.tb-megamenu-no-link:hover {
-              background-color: transparent;
-              color: inherit !important;
-            }
-          }
-        }
-      }
+      // .nav {
+      //   li, & > li {
+      //     &.dropdown.active,
+      //     &.dropdown.open.active {
+      //       & > .dropdown-toggle,
+      //       & > a:hover,
+      //       & > span.tb-megamenu-no-link:hover {
+      //         background-color: transparent;
+      //         color: inherit !important;
+      //       }
+      //     }
+      //   }
+      // }
 
-      & > .nav {
-        float: none;
+      // & > .nav {
+        // float: none;
 
-        & > li {
-          height: 100px;
-          padding: 0 60px;
+        // & > li {
+          // height: 100px;
+          // padding: 0 60px;
 
-          &.dropdown {
-            cursor: pointer;
+          // &.dropdown {
+            // cursor: pointer;
 
-            & > .dropdown-toggle {
-              .caret {
-                display: none;
-              }
+            // & > .dropdown-toggle {
+            //   .caret {
+            //     display: none;
+            //   }
 
-              &::after {
-                margin-left: 0.255em !important;
-                vertical-align: 0.255em !important;
-                border-top: 0.3em solid !important;
-                border-right: 0.3em solid transparent !important;
-                border-bottom: 0 !important;
-                border-left: 0.3em solid transparent !important;
-              }
-            }
+            //   &::after {
+            //     margin-left: 0.255em !important;
+            //     vertical-align: 0.255em !important;
+            //     border-top: 0.3em solid !important;
+            //     border-right: 0.3em solid transparent !important;
+            //     border-bottom: 0 !important;
+            //     border-left: 0.3em solid transparent !important;
+            //   }
+            // }
 
-            &.active,
-            &.active.open {
-              & > .dropdown-toggle,
-              & > a:hover,
-              & > span.tb-megamenu-no-link:hover {
-                background-color: transparent;
-                border: none;
-              }
-            }
+            // &.active,
+            // &.active.open {
+            //   & > .dropdown-toggle,
+            //   & > a:hover,
+            //   & > span.tb-megamenu-no-link:hover {
+            //     background-color: transparent;
+            //     border: none;
+            //   }
+            // }
 
-            &.open {
-              & > .dropdown-toggle {
-                color: inherit; 
-              }
-            }
-          }
+            // &.open {
+            //   & > .dropdown-toggle {
+            //     color: inherit; 
+            //   }
+            // }
+          // }
 
-          & > a,
-          & > span {
-            border-right: none;
-          }
+          // & > a,
+          // & > span {
+          //   border-right: none;
+          // }
 
-          .tb-megamenu-submenu {
-            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
-            margin-left: 5%;
-            margin-right: 5%;
-            max-width: 100%;
-            padding: 0 !important;
-            right: 0;
-          }
-        }
+          // .tb-megamenu-submenu {
+            // box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+            // margin-left: 5%;
+            // margin-right: 5%;
+            // max-width: 100%;
+            // padding: 0 !important;
+            // right: 0;
+        //   }
+        // }
 
-        & > li,
-        & .dropdown-menu li {
-          & > a,
-          & > span {
-            color: inherit;
-            height: auto;
-            line-height: 1em;
-            padding: 5px 0;
-            text-transform: none;
-          }
-        }
+        // & > li,
+        // & .dropdown-menu li {
+        //   & > a,
+        //   & > span {
+        //     color: inherit;
+        //     height: auto;
+        //     line-height: 1em;
+        //     padding: 5px 0;
+        //     text-transform: none;
+        //   }
+        // }
 
-        & .dropdown-menu {
-          li {
-            min-width: unset;
+        // & .dropdown-menu {
+        //   li {
+        //     min-width: unset;
             
-            & > a,
-            & > span {
-              color: $blue-secondary;
-              padding: 0.67em 0;
-            }
+        //     & > a,
+        //     & > span {
+        //       color: $blue-secondary;
+        //       padding: 0.67em 0;
+        //     }
 
-            &:first-child {
-              & > a,
-              & > span {
-                padding-top: 0 !important;
-              }
-            }
-          }
-        }
-      }
+        //     &:first-child {
+        //       & > a,
+        //       & > span {
+        //         padding-top: 0 !important;
+        //       }
+        //     }
+        //   }
+        // }
+//       }
 
-      .row-fluid + .row-fluid {
-        border-top: none;
-      }
-    }
-  }
-}
+//       .row-fluid + .row-fluid {
+//         border-top: none;
+//       }
+//     }
+//   }
+// }
 
-// Adjust sizing behaviors.
-.navbar-container {
-  display: flex !important;
+// // Adjust sizing behaviors.
+// .navbar-container {
+//   display: flex !important;
 
-  .dxpr-theme-main-menu {
-    position: static !important;
-    width: 100%;
+//   .dxpr-theme-main-menu {
+//     position: static !important;
+//     width: 100%;
 
-    .block-tb-megamenu {
-      float: none;
+//     .block-tb-megamenu {
+//       float: none;
 
-      & > .tb-megamenu > .nav > li {
-        padding: 0;
-      }
+//       & > .tb-megamenu > .nav > li {
+//         padding: 0;
+//       }
 
-      .tb-megamenu-nav {
-        display: flex;
-        justify-content: space-evenly;
-      }
-    }
-  }
-}
+//       .tb-megamenu-nav {
+//         display: flex;
+//         justify-content: space-evenly;
+//       }
+//     }
+//   }
+// }
 
 // Tab navigation
 
@@ -316,4 +316,174 @@
       }
     }
   }
+}
+
+
+// Desktop styles
+.body--dxpr-theme-nav-desktop {
+  .dxpr-theme-header--top {
+    // Menu headings
+    h4 {
+      line-height: 1.35em;
+      margin-bottom: 2em;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn-default {
+      color: $white;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+@media (min-width: 1201px) {
+  .dxpr-theme-main-menu {
+    display: flex;
+    align-items: center;
+    position: static !important;
+
+    & > .region {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-container {
+  display: flex !important;
+}
+
+.dxpr-theme-main-menu {
+  width: 100%;
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .block {
+  float: none;
+}
+
+.tbm-main {
+  background-color: transparent;
+  position: static;
+}
+
+.tbm-nav {
+  justify-content: space-evenly;
+}
+
+.tbm-item.level-1 {
+  border-right: none;
+  display: table;
+}
+
+.tbm-item.level-1 > div > a,
+.tbm-item.level-1 > div > span {
+  display: table-cell;
+}
+
+.tbm-submenu {
+  border-color: #ddd;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 100%;
+  right: 0;
+  top: auto;
+  width: auto;
+}
+
+.tbm-submenu-toggle {
+  background-color: transparent;
+}
+
+.tb-megamenu-submenu {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+
+  .row-fluid + .row-fluid {
+    border-top: none;
+  }
+}
+
+.tbm-item.level-1 {
+  & > div {
+    & > a,
+    & > button,
+    & > span {
+      color: $blue-secondary;
+      display: inline-block;
+    }
+
+    & > a,
+    & > span {
+      font-weight: bold;
+      margin-top: 15px;
+      padding: 0;
+    }
+
+    & > button {
+      margin-top: 10px;
+    }
+  }
+}
+
+.tbm-link-container {
+  padding-bottom: 15px;
+}
+
+.tbm-link.level-1 {
+  &,
+  & .no-link {
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+.tbm-submenu-toggle:hover, 
+.tbm-submenu-toggle:focus {
+  background-color: transparent;
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav {
+  float: none;
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li {
+  display: block;
+  float: none;
+
+  & > a,
+  & > span {
+    border-bottom: 1px dotted #eee;
+    display: block;
+    margin-bottom: 7.5px;
+    padding: 0 0 7.5px;
+  }
+
+  &:last-child {
+    & > a,
+    & > span {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > a, 
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav > li > span {
+  height: auto;
+  line-height: 1.5em;
+  text-transform: unset;
+}
+
+#navbar.dxpr-theme-header--hover-opacity .menu .dropdown.expanded a.is-active {
+  background: $blue-secondary;
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
