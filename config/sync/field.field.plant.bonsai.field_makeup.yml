@@ -1,0 +1,19 @@
+uuid: 9a840a6e-7698-4fe2-86fe-e3f9397929a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_makeup
+    - mbgna_plant.plant_type.bonsai
+id: plant.bonsai.field_makeup
+field_name: field_makeup
+entity_type: plant
+bundle: bonsai
+label: Makeup
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

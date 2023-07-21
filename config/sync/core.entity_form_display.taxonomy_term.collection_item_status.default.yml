@@ -1,0 +1,24 @@
+uuid: 7a0179cb-f397-4e1b-9fca-96a4c90107d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.collection_item_status
+id: taxonomy_term.collection_item_status.default
+targetEntityType: taxonomy_term
+bundle: collection_item_status
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

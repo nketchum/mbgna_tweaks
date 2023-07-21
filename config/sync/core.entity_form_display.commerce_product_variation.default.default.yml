@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
     - field.field.commerce_product_variation.default.attribute_admission_attributes
+    - field.field.commerce_product_variation.default.attribute_plant
   module:
     - commerce_price
 _core:
@@ -17,6 +18,12 @@ content:
   attribute_admission_attributes:
     type: options_select
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  attribute_plant:
+    type: options_select
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

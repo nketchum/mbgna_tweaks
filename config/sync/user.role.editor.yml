@@ -22,7 +22,6 @@ dependencies:
     - path
     - system
     - taxonomy
-    - toolbar
 id: editor
 label: Editor
 weight: 2
@@ -34,7 +33,6 @@ permissions:
   - 'access files overview'
   - 'access media overview'
   - 'access taxonomy overview'
-  - 'access toolbar'
   - 'access user contact forms'
   - 'access user profiles'
   - 'administer blocks'
@@ -56,6 +54,7 @@ permissions:
   - 'delete any media'
   - 'delete any simple_text block content'
   - 'delete terms in kickers'
+  - 'edit field_plant_donations'
   - 'edit terms in kickers'
   - 'update any media'
   - 'update any simple_text block content'

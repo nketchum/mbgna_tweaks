@@ -1,0 +1,21 @@
+uuid: 72714907-b7ec-4fd6-8001-bc64f2c9783a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_status_date
+    - mbgna_plant.plant_type.bonsai
+  module:
+    - datetime
+id: plant.bonsai.field_status_date
+field_name: field_status_date
+entity_type: plant
+bundle: bonsai
+label: 'Status date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,24 @@
+uuid: ea40370d-7769-469d-8280-6c4cf554bc4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mbgna_plant
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: plant.field_status
+field_name: field_status
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

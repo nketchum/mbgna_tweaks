@@ -1,0 +1,8 @@
+uuid: 9d3c2d42-a114-42e1-8057-9fe053b4b614
+langcode: en
+status: true
+dependencies: {  }
+name: Countries
+vid: countries
+description: 'Provides a list of country names.'
+weight: 0

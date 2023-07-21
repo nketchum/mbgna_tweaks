@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_address
+    - field.field.node.event.field_commerce_external
     - field.field.node.event.field_commerce_products
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
@@ -55,6 +56,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_commerce_external:
+    type: link_default
+    weight: 19
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_commerce_products:
     type: inline_entity_form_complex

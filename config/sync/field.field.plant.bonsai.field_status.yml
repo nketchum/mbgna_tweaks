@@ -1,0 +1,29 @@
+uuid: 091c0ff1-e30d-4e93-8a1e-5ee16fbf88b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_status
+    - mbgna_plant.plant_type.bonsai
+    - taxonomy.vocabulary.collection_item_status
+id: plant.bonsai.field_status
+field_name: field_status
+entity_type: plant
+bundle: bonsai
+label: Status
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      collection_item_status: collection_item_status
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

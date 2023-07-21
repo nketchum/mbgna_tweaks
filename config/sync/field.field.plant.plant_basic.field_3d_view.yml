@@ -17,7 +17,7 @@ field_name: field_3d_view
 entity_type: plant
 bundle: plant_basic
 label: '3D view'
-description: ''
+description: 'Paste the embed code generated from https://www.360-javascriptviewer.com'
 required: false
 translatable: false
 default_value: {  }

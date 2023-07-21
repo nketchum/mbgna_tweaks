@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.card_basic
     - field.field.node.event.body
     - field.field.node.event.field_address
+    - field.field.node.event.field_commerce_external
     - field.field.node.event.field_commerce_products
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
@@ -54,7 +55,7 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: default
+      view_mode: card_basic
       link: false
     third_party_settings:
       field_formatter_class:
@@ -86,6 +87,7 @@ hidden:
   body: true
   created: true
   field_address: true
+  field_commerce_external: true
   field_commerce_products: true
   field_dollar_amount: true
   field_event_categories: true

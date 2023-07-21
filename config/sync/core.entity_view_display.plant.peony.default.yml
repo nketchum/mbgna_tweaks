@@ -1,0 +1,248 @@
+uuid: 853c2cd9-2bf0-4c88-a3ce-e8bdd626dfcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.plant.peony.field_3d_view
+    - field.field.plant.peony.field_breeder
+    - field.field.plant.peony.field_collections
+    - field.field.plant.peony.field_common_name
+    - field.field.plant.peony.field_country_of_origin
+    - field.field.plant.peony.field_cultivar
+    - field.field.plant.peony.field_description
+    - field.field.plant.peony.field_display_image
+    - field.field.plant.peony.field_display_name
+    - field.field.plant.peony.field_donor
+    - field.field.plant.peony.field_family
+    - field.field.plant.peony.field_genus
+    - field.field.plant.peony.field_legacy_id
+    - field.field.plant.peony.field_mbgna_id
+    - field.field.plant.peony.field_origin
+    - field.field.plant.peony.field_peony_color
+    - field.field.plant.peony.field_peony_season
+    - field.field.plant.peony.field_plant_images
+    - field.field.plant.peony.field_species
+    - field.field.plant.peony.field_video
+    - field.field.plant.peony.field_year_acquired
+    - field.field.plant.peony.field_year_introduced
+    - mbgna_plant.plant_type.peony
+  module:
+    - text
+    - user
+id: plant.peony.default
+targetEntityType: plant
+bundle: peony
+mode: default
+content:
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_3d_view:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_breeder:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_collections:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_common_name:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_country_of_origin:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_cultivar:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_display_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_display_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_donor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_family:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_genus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_legacy_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_mbgna_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_origin:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_peony_color:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_peony_season:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_plant_images:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_species:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_video:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_year_acquired:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_year_introduced:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: enabled-disabled
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden: {  }

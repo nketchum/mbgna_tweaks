@@ -1,0 +1,18 @@
+uuid: 31bb20d4-d95a-455d-87c3-3222a6dbb433
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_instagram
+id: instagram
+label: Instagram
+description: 'Provides an Instagram media entity type.'
+source: 'oembed:instagram'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_instagram
+  thumbnails_directory: 'public://instagram_thumbnails/[date:custom:Y-m]'
+  providers:
+    - Instagram
+field_map: {  }

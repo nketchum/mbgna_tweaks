@@ -1,0 +1,23 @@
+uuid: d7088dd6-0309-4981-b470-a73eb51a8f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_year_started
+    - mbgna_plant.plant_type.bonsai
+id: plant.bonsai.field_year_started
+field_name: field_year_started
+entity_type: plant
+bundle: bonsai
+label: 'Year started'
+description: 'Enter a four-digit year.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

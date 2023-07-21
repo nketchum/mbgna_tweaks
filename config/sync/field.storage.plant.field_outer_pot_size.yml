@@ -1,0 +1,21 @@
+uuid: e7bc979c-29ee-4a19-924c-1a8ab14dddef
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant.field_outer_pot_size
+field_name: field_outer_pot_size
+entity_type: plant
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

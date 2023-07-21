@@ -1,0 +1,37 @@
+uuid: 750b53e3-7dd5-4072-823f-8218d6f89138
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_dimensions
+    - mbgna_plant.plant_type.bonsai
+    - paragraphs.paragraphs_type.plant_dimensions
+  module:
+    - entity_reference_revisions
+id: plant.bonsai.field_dimensions
+field_name: field_dimensions
+entity_type: plant
+bundle: bonsai
+label: Dimensions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      plant_dimensions: plant_dimensions
+    negate: 0
+    target_bundles_drag_drop:
+      content_card:
+        weight: 4
+        enabled: false
+      content_section:
+        weight: 5
+        enabled: false
+      plant_dimensions:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

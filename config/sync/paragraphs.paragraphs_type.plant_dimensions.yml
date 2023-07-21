@@ -1,0 +1,10 @@
+uuid: a17fc02c-2e35-401e-80c7-4ad4cc4f17ff
+langcode: en
+status: true
+dependencies: {  }
+id: plant_dimensions
+label: 'Plant dimensions'
+icon_uuid: null
+icon_default: null
+description: 'Provides a paragraph type for plant dimensions.'
+behavior_plugins: {  }

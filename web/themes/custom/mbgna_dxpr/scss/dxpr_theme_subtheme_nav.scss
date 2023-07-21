@@ -1,0 +1,319 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+// MOBILE STYLES
+// Uses the core main navigation menu.
+@media (max-width: 1200px) {
+  .navbar-header {
+    width: 100%;
+  }
+}
+
+.html--dxpr-theme-nav-mobile--open {
+  .body--dxpr-theme-nav-mobile {
+    .dxpr-theme-header {
+      #dxpr-theme-menu-toggle {
+        margin: -8px -10px 0 0 !important;
+        padding: 10px 24px 10px 0;
+
+        @media (min-width: 768px) and (max-width: 1200px) {
+          margin: -42px -30px 0 0 !important;
+        }
+
+        span {
+          &::before, &::after {
+            background-color: $maize-primary;
+          }
+        } 
+      }
+
+      .dxpr-theme-main-menu {
+        @media (max-width: 1200px) {
+          background-color: $blue-primary;
+        }
+
+        .nav-mobile {
+          ul {
+            list-style: none;
+            padding: 0;
+          }
+
+          & > ul {
+            font-size: 20px;
+
+            & > li > span,
+            & > li > a {
+              background: $maize-primary;
+              border-radius: 5px;
+              color: $blue-primary;
+              display: block;
+              font-family: $font-family-serif;
+              font-weight: bold;
+              margin-bottom: 15px;
+              margin-left: -10px;
+              margin-right: -10px;
+              margin-top: 30px;
+              padding: 2.5px 10px;
+
+              &:hover {
+                color: $blue-primary;
+              }
+            }
+
+            & > li:first-child > span,
+            & > li:first-child > a {
+              margin-top: 0;
+            }
+           
+            & > li > ul {
+              font-size: 16px;
+
+              & > li {
+                margin: 5px 0;
+              }
+
+              & > li > a,
+              & > li > span {
+                font-weight: bold;
+              }
+
+              & > li > ul {
+                border-top: 1px solid #ffcb05;
+                font-size: 14px;
+                margin-bottom: 15px;
+                margin-top: 5px;
+                padding-top: 5px;
+
+                a, span {
+                  display: inline-block;
+                  font-size: 12px;
+                  padding: 2.5px 0;
+                }
+              }
+            }
+          }
+
+          li > * {
+            color: $maize-primary;
+          }
+
+          a:hover {
+            color: $maize-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// DESKTOP STYLES
+// Uses the core main navigation menu.
+// These styles mainly affect the top level menu. Dropdown styles are
+// addressed here, but are mainly handled by DXPR drag-n-drop blocks
+// assigned to a top-level tb_megamenu item.
+.body--dxpr-theme-nav-desktop {
+  .dxpr-theme-header--top {
+    // Menu headings
+    h4 {
+      line-height: 1.35em;
+      margin-bottom: 2em;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .nav {
+      float: none;
+    }
+
+    .tb-megamenu {
+      background: transparent;
+
+      &,
+      .dropup,
+      .dropdown {
+        position: static;
+      }
+
+      .block,
+      nav nav {
+        float: left;
+      }
+
+      .nav {
+        li, & > li {
+          &.dropdown.active,
+          &.dropdown.open.active {
+            & > .dropdown-toggle,
+            & > a:hover,
+            & > span.tb-megamenu-no-link:hover {
+              background-color: transparent;
+              color: inherit !important;
+            }
+          }
+        }
+      }
+
+      & > .nav {
+        float: none;
+
+        & > li {
+          height: 100px;
+          padding: 0 60px;
+
+          &.dropdown {
+            cursor: pointer;
+
+            & > .dropdown-toggle {
+              .caret {
+                display: none;
+              }
+
+              &::after {
+                margin-left: 0.255em !important;
+                vertical-align: 0.255em !important;
+                border-top: 0.3em solid !important;
+                border-right: 0.3em solid transparent !important;
+                border-bottom: 0 !important;
+                border-left: 0.3em solid transparent !important;
+              }
+            }
+
+            &.active,
+            &.active.open {
+              & > .dropdown-toggle,
+              & > a:hover,
+              & > span.tb-megamenu-no-link:hover {
+                background-color: transparent;
+                border: none;
+              }
+            }
+
+            &.open {
+              & > .dropdown-toggle {
+                color: inherit; 
+              }
+            }
+          }
+
+          & > a,
+          & > span {
+            border-right: none;
+          }
+
+          .tb-megamenu-submenu {
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+            margin-left: 5%;
+            margin-right: 5%;
+            max-width: 100%;
+            padding: 0 !important;
+            right: 0;
+          }
+        }
+
+        & > li,
+        & .dropdown-menu li {
+          & > a,
+          & > span {
+            color: inherit;
+            height: auto;
+            line-height: 1em;
+            padding: 5px 0;
+            text-transform: none;
+          }
+        }
+
+        & .dropdown-menu {
+          li {
+            min-width: unset;
+            
+            & > a,
+            & > span {
+              color: $blue-secondary;
+              padding: 0.67em 0;
+            }
+
+            &:first-child {
+              & > a,
+              & > span {
+                padding-top: 0 !important;
+              }
+            }
+          }
+        }
+      }
+
+      .row-fluid + .row-fluid {
+        border-top: none;
+      }
+    }
+  }
+}
+
+// Adjust sizing behaviors.
+.navbar-container {
+  display: flex !important;
+
+  .dxpr-theme-main-menu {
+    position: static !important;
+    width: 100%;
+
+    .block-tb-megamenu {
+      float: none;
+
+      & > .tb-megamenu > .nav > li {
+        padding: 0;
+      }
+
+      .tb-megamenu-nav {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+// Tab navigation
+
+.nav-tabs > li > a {
+  color: $blue-secondary;
+}
+
+.nav-tabs {
+  .nav-item {
+    .nav-link {
+      &.active {
+        background: none !important;
+        border: none;
+        box-shadow: none !important;
+        color: $black;
+      }
+    }
+  }
+}
+
+.nav-tabs.left-tabs {
+  margin-top: 15px !important;
+}
+
+.tabs-top {
+  .nav-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 0 30px !important;
+
+    .nav-item {
+      border-bottom: none !important;
+
+      a {
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+uuid: e1ec3ca4-6e7a-485d-9249-ecc1a888ec21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_collections
+    - mbgna_plant.plant_type.peony
+    - node.type.conservatory
+    - node.type.garden
+id: plant.peony.field_collections
+field_name: field_collections
+entity_type: plant
+bundle: peony
+label: Collections
+description: 'Begin typing the name of a garden or conservatory. Separate multiple items with a comma.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      conservatory: conservatory
+      garden: garden
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: conservatory
+field_type: entity_reference

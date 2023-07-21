@@ -1,0 +1,42 @@
+uuid: eec57fdf-266b-42b9-b352-c90d84ef86b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - block_class
+    - block_visibility_conditions_node
+    - node
+    - views
+  theme:
+    - mbgna_dxpr
+third_party_settings:
+  block_class:
+    classes: block-content-followup
+id: views_block__events_block_3
+theme: mbgna_dxpr
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:events-block_3'
+settings:
+  id: 'views_block:events-block_3'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

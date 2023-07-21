@@ -1,0 +1,34 @@
+uuid: ca49e8b8-1fee-4232-89aa-6ef80acf10de
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.plant
+    - field.storage.plant.field_commerce_products
+    - mbgna_plant.plant_type.plant_basic
+  module:
+    - field_display_label
+third_party_settings:
+  field_display_label:
+    display_label: 'Available for purchase'
+id: plant.plant_basic.field_commerce_products
+field_name: field_commerce_products
+entity_type: plant
+bundle: plant_basic
+label: 'Commerce products'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      plant: plant
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 2c9052c5-4117-41eb-90a9-50c0e7c415f2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Peony color'
+vid: peony_color
+description: 'Provides colors for peonies.'
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 20f0a97c-b9a4-4e1e-9163-c0ffb0431af2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_family
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.family
+id: plant.peony.field_family
+field_name: field_family
+entity_type: plant
+bundle: peony
+label: Family
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      family: family
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,35 @@
+uuid: f77102a4-32a0-4534-b8ea-0e978c7e6151
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_donor
+    - mbgna_plant.plant_type.plant_basic
+id: plant.plant_basic.field_donor
+field_name: field_donor
+entity_type: plant
+bundle: plant_basic
+label: Donor
+description: 'You can add and edit new donors <a href="/admin/people" target="_blank"><strong>here</strong></a>. Make sure to assign the "Collections donor" role to the donor account.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: role
+      role:
+        collections_donor: collections_donor
+        editor: '0'
+        super_administrator: '0'
+        working_group_member: '0'
+        fulfillment: '0'
+    include_anonymous: false
+field_type: entity_reference

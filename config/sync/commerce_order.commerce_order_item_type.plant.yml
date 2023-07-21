@@ -1,0 +1,15 @@
+uuid: 73395c42-4152-4930-bb87-38477bb2197d
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: physical_goods
+id: plant
+label: Plant
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: plant

@@ -1,0 +1,45 @@
+uuid: 699c8c99-51bc-40fd-9205-d614fd7f3384
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.plant
+    - field.field.commerce_product.plant.body
+  module:
+    - commerce
+    - commerce_product
+id: commerce_product.plant.default
+targetEntityType: commerce_product
+bundle: plant
+mode: default
+content:
+  stores:
+    type: commerce_entity_select
+    weight: 2
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  variations:
+    type: commerce_product_single_variation
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  path: true
+  status: true
+  uid: true

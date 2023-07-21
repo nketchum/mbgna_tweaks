@@ -1,0 +1,453 @@
+uuid: b5360daa-8099-47d1-a698-a1b8e6a04e46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.plant.peony.field_3d_view
+    - field.field.plant.peony.field_breeder
+    - field.field.plant.peony.field_collections
+    - field.field.plant.peony.field_common_name
+    - field.field.plant.peony.field_country_of_origin
+    - field.field.plant.peony.field_cultivar
+    - field.field.plant.peony.field_description
+    - field.field.plant.peony.field_display_image
+    - field.field.plant.peony.field_display_name
+    - field.field.plant.peony.field_donor
+    - field.field.plant.peony.field_family
+    - field.field.plant.peony.field_genus
+    - field.field.plant.peony.field_legacy_id
+    - field.field.plant.peony.field_mbgna_id
+    - field.field.plant.peony.field_origin
+    - field.field.plant.peony.field_peony_color
+    - field.field.plant.peony.field_peony_season
+    - field.field.plant.peony.field_plant_images
+    - field.field.plant.peony.field_species
+    - field.field.plant.peony.field_video
+    - field.field.plant.peony.field_year_acquired
+    - field.field.plant.peony.field_year_introduced
+    - mbgna_plant.plant_type.peony
+  module:
+    - allowed_formats
+    - field_group
+    - hide_revision_field
+    - inline_entity_form
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_details_:
+      children:
+        - revision_log
+        - group_authoring_information
+      label: Details
+      region: content
+      parent_name: ''
+      weight: 17
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+        weight: 0
+    group_authoring_information:
+      children:
+        - uid
+        - created
+      label: 'Authoring information'
+      region: content
+      parent_name: group_details_
+      weight: 23
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+    group_plant_properties:
+      children:
+        - group_basic_information
+        - group_peony_information
+      label: 'Plant properties'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_basic_information:
+      children:
+        - field_display_name
+        - field_common_name
+        - field_mbgna_id
+        - field_legacy_id
+        - field_genus
+        - field_species
+        - field_family
+        - field_origin
+        - field_collections
+        - field_description
+        - field_display_image
+        - field_plant_images
+        - field_video
+        - field_3d_view
+        - field_donor
+      label: 'Basic information'
+      region: content
+      parent_name: group_plant_properties
+      weight: 7
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+    group_peony_information:
+      children:
+        - field_peony_color
+        - field_peony_season
+        - field_cultivar
+        - field_country_of_origin
+        - field_year_acquired
+        - field_year_introduced
+        - field_breeder
+      label: 'Peony information'
+      region: content
+      parent_name: group_plant_properties
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+id: plant.peony.default
+targetEntityType: plant
+bundle: peony
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_3d_view:
+    type: text_textarea
+    weight: 19
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_breeder:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_collections:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_common_name:
+    type: inline_entity_form_complex
+    weight: 7
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'common name'
+      label_plural: 'common names'
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_country_of_origin:
+    type: inline_entity_form_complex
+    weight: 26
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: country
+      label_plural: countries
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_cultivar:
+    type: inline_entity_form_complex
+    weight: 25
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: cultivar
+      label_plural: cultivars
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea_with_summary
+    weight: 15
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_display_image:
+    type: media_library_widget
+    weight: 16
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_display_name:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_donor:
+    type: entity_reference_autocomplete
+    weight: 20
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_family:
+    type: inline_entity_form_complex
+    weight: 12
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: family
+      label_plural: famlies
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_genus:
+    type: inline_entity_form_complex
+    weight: 10
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: genus
+      label_plural: genera
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_legacy_id:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mbgna_id:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_origin:
+    type: inline_entity_form_complex
+    weight: 13
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: origin
+      label_plural: origins
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_peony_color:
+    type: inline_entity_form_complex
+    weight: 23
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: color
+      label_plural: colors
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_peony_season:
+    type: inline_entity_form_complex
+    weight: 24
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: season
+      label_plural: seasons
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_plant_images:
+    type: media_library_widget
+    weight: 17
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_species:
+    type: inline_entity_form_complex
+    weight: 11
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: species
+      label_plural: species
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_video:
+    type: media_library_widget
+    weight: 18
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_year_acquired:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_year_introduced:
+    type: number
+    weight: 28
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  revision_log:
+    type: hide_revision_field_log_widget
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

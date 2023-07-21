@@ -1,0 +1,8 @@
+uuid: 6b5cabe5-1a40-43bd-8a0c-9277211ef706
+langcode: en
+status: true
+dependencies: {  }
+name: 'Peony season'
+vid: peony_season
+description: 'Provides seasons for peonies.'
+weight: 0

@@ -1,0 +1,35 @@
+uuid: e0d01114-6614-40ba-a208-14b67fd79948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_donor
+    - mbgna_plant.plant_type.peony
+id: plant.peony.field_donor
+field_name: field_donor
+entity_type: plant
+bundle: peony
+label: Donor
+description: 'You can add and edit new donors <a href="/admin/people" target="_blank"><strong>here</strong></a>. Make sure to assign the "Collections donor" role to the donor account.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: role
+      role:
+        collections_donor: collections_donor
+        editor: '0'
+        super_administrator: '0'
+        working_group_member: '0'
+        fulfillment: '0'
+    include_anonymous: false
+field_type: entity_reference

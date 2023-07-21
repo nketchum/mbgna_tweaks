@@ -1,0 +1,29 @@
+uuid: 73ef3459-9d0d-496b-aa83-9ff06f439ae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_common_name
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.common_name
+id: plant.peony.field_common_name
+field_name: field_common_name
+entity_type: plant
+bundle: peony
+label: 'Common name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      common_name: common_name
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

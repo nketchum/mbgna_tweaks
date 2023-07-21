@@ -1,0 +1,14 @@
+uuid: 3a92df00-01ad-4644-ab60-a00deba7d329
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.collections_donor
+  module:
+    - user
+id: user_remove_role_action.collections_donor
+label: 'Remove the Collections donor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: collections_donor

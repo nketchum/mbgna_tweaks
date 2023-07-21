@@ -1,0 +1,19 @@
+uuid: e5c0db55-f886-4d31-8b5f-184b4725c7c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_pot_notes
+    - mbgna_plant.plant_type.bonsai
+id: plant.bonsai.field_pot_notes
+field_name: field_pot_notes
+entity_type: plant
+bundle: bonsai
+label: 'Pot notes'
+description: 'Comments on pot.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

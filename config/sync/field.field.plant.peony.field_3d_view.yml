@@ -1,0 +1,26 @@
+uuid: 30d38c7c-d1c7-42fa-b36f-ffa64be61ba8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_3d_view
+    - mbgna_plant.plant_type.peony
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - code
+id: plant.peony.field_3d_view
+field_name: field_3d_view
+entity_type: plant
+bundle: peony
+label: '3D view'
+description: 'Paste the embed code generated from https://www.360-javascriptviewer.com'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

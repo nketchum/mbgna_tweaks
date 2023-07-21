@@ -1,0 +1,29 @@
+uuid: fa635037-14b4-4290-b180-0d26fb719481
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_origin
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.plant_origin
+id: plant.peony.field_origin
+field_name: field_origin
+entity_type: plant
+bundle: peony
+label: Origin
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      plant_origin: plant_origin
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: 4ab70839-b7c9-40f4-b6c8-649ff0d1be2e
+langcode: en
+status: true
+dependencies: {  }
+id: collections_donor
+label: 'Collections donor'
+weight: 6
+is_admin: null
+permissions: {  }

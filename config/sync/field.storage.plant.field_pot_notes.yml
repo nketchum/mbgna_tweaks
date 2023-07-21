@@ -1,0 +1,21 @@
+uuid: ca7d61fe-b2b0-468d-80d0-e08192e7ba7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant.field_pot_notes
+field_name: field_pot_notes
+entity_type: plant
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

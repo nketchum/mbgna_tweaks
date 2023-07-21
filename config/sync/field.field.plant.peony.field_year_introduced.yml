@@ -1,0 +1,23 @@
+uuid: 2cd1cbb3-bc9a-4ff0-93ed-37af39b8a138
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_year_introduced
+    - mbgna_plant.plant_type.peony
+id: plant.peony.field_year_introduced
+field_name: field_year_introduced
+entity_type: plant
+bundle: peony
+label: 'Year introduced'
+description: 'Enter a four-digit year.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

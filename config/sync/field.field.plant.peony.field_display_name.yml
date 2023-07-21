@@ -1,0 +1,19 @@
+uuid: f8d9f1ce-0c29-4777-89f4-ff0000a33e95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_display_name
+    - mbgna_plant.plant_type.peony
+id: plant.peony.field_display_name
+field_name: field_display_name
+entity_type: plant
+bundle: peony
+label: 'Display name'
+description: 'This is the plant name to be shown to the general public.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

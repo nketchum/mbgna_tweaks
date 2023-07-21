@@ -1,0 +1,23 @@
+uuid: d3e6feca-816e-478d-810a-fe6a906cee0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_year_acquired
+    - mbgna_plant.plant_type.peony
+id: plant.peony.field_year_acquired
+field_name: field_year_acquired
+entity_type: plant
+bundle: peony
+label: 'Year acquired'
+description: 'Enter a four-digit year.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1950
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

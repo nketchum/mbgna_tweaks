@@ -19,9 +19,9 @@ plugin: 'views_exposed_filter_block:events-page_1'
 settings:
   id: 'views_exposed_filter_block:events-page_1'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
-  views_label: Filter
+  views_label: ''
 visibility:
   not_node_type:
     id: not_node_type

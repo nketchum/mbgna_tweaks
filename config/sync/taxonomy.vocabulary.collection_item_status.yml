@@ -1,0 +1,8 @@
+uuid: 08f8bae7-947b-4e94-b74d-d6d455bf2341
+langcode: en
+status: true
+dependencies: {  }
+name: 'Collection item status'
+vid: collection_item_status
+description: 'Status of an item in a collection.'
+weight: 0

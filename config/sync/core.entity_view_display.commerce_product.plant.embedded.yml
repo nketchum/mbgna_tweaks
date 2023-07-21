@@ -1,0 +1,29 @@
+uuid: dc9ff598-a868-4b9e-ad5c-cc29fd57ab07
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.plant
+    - core.entity_view_mode.commerce_product.embedded
+    - field.field.commerce_product.plant.body
+  module:
+    - commerce_product
+id: commerce_product.plant.embedded
+targetEntityType: commerce_product
+bundle: plant
+mode: embedded
+content:
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  created: true
+  stores: true
+  title: true
+  uid: true

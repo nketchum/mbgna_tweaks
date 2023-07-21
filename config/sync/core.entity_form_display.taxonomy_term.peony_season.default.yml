@@ -1,0 +1,24 @@
+uuid: c18cb114-dfc3-4c8e-b46e-166aa998dc40
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.peony_season
+id: taxonomy_term.peony_season.default
+targetEntityType: taxonomy_term
+bundle: peony_season
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

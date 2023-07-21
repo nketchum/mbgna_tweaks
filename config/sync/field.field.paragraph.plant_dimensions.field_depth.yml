@@ -1,0 +1,23 @@
+uuid: acee17ba-8868-45fe-8f0a-3534c346d5d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_depth
+    - paragraphs.paragraphs_type.plant_dimensions
+id: paragraph.plant_dimensions.field_depth
+field_name: field_depth
+entity_type: paragraph
+bundle: plant_dimensions
+label: Depth
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: inches
+field_type: decimal

@@ -1,0 +1,29 @@
+uuid: fb2c64c0-f4da-498c-8db3-b8b2737ef40b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_cultivar
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.cultivar
+id: plant.peony.field_cultivar
+field_name: field_cultivar
+entity_type: plant
+bundle: peony
+label: Cultivar
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cultivar: cultivar
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -18,9 +18,19 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * See the html.html.twig template for the list of variables.
  */
 function mbgna_dxpr_preprocess_html(&$variables) {
-  $variables['dxpr_body_class'] = 'is-not-dxpr-layout'; // default layout.
+  // Page is not dxpr by default.
+  $variables['dxpr_body_class'] = 'is-not-dxpr-layout';
 
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    // Node has an embedded dxpr node reference.
+    if ($node->hasField('field_dxpr_page')) {
+      $dxpr_page = $node->get('field_dxpr_page');
+      if (is_array($dxpr_page->getValue()) && is_numeric($dxpr_page->getValue()[0]['target_id'])) {
+        $variables['dxpr_body_class'] = 'embeds-dxpr-layout';
+      }
+    }
+
+    // Page is a dxpr layout.
     $content_type = $node->bundle();
     if ($content_type == 'drag_and_drop_page') {
       $variables['dxpr_body_class'] = 'is-dxpr-layout';

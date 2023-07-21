@@ -1,0 +1,14 @@
+uuid: 875024d6-4cd4-4103-82f6-e1c783b48a5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.collections_donor
+  module:
+    - user
+id: user_add_role_action.collections_donor
+label: 'Add the Collections donor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: collections_donor

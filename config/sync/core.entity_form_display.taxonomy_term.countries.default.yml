@@ -1,0 +1,24 @@
+uuid: a15d5cf1-eeae-46fb-a094-25edba20560d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.countries
+id: taxonomy_term.countries.default
+targetEntityType: taxonomy_term
+bundle: countries
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

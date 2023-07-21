@@ -1,0 +1,24 @@
+uuid: cacf0212-0b86-4e7e-9752-bf0526d93c39
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.peony_color
+id: taxonomy_term.peony_color.default
+targetEntityType: taxonomy_term
+bundle: peony_color
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

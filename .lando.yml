@@ -1,5 +1,13 @@
 name: m-sandbox-01
 recipe: drupal9
+excludes:
+  - vendor
+  - node_modules
+  - modules/contrib
+  - themes/contrib
+  - "!modules/contrib/mbgna_plant"
+  - "!modules/contrib/mbgna_resource"
+  - "!modules/contrib/mbgna_tweaks"
 config:
   composer_version: '2.2.12'
   config:
@@ -19,8 +27,8 @@ services:
       - chmod -R 777 /app/web/sites/default/files
     overrides:
       volumes:
-        - "/Volumes/MSD01/Sites/m-sandbox-02/public:/app/web/sites/default/files"
-        - "/Volumes/MSD01/Sites/m-sandbox-02/private:/app/private"
+        - "/Volumes/MSD01/Sites/m-sandbox-01/public:/app/web/sites/default/files"
+        - "/Volumes/MSD01/Sites/m-sandbox-01/private:/app/private"
   mailhog:
     type: mailhog
     hogfrom:
