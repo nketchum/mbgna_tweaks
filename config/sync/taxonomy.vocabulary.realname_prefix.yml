@@ -1,0 +1,8 @@
+uuid: 1c772bfe-9e7a-4261-b952-e3fe9208fbd6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Real name prefix'
+vid: realname_prefix
+description: 'Provides prefixes for real names.'
+weight: 0

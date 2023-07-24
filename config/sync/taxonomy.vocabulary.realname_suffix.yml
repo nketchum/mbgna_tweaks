@@ -1,0 +1,8 @@
+uuid: 61d7d72c-9dc2-471e-b19a-73375c8fec97
+langcode: en
+status: true
+dependencies: {  }
+name: 'Real name suffix'
+vid: realname_suffix
+description: 'Provides suffixes for real names.'
+weight: 0

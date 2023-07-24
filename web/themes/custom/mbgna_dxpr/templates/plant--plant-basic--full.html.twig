@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a plant entity.
+ *
+ * This template is used when viewing a canonical plant page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_plant()
+ */
+#}
+{%
+  set classes = [
+    content.bundle|clean_class,
+    content.entity_type|clean_class,
+    not content.status ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{% if content %}
+  <article{{ attributes.addClass(classes) }}>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-12">
+          {{- content.field_mbgna_id -}}
+          {{- content.field_legacy_id -}}
+          {{- content.field_genus -}}
+          {{- content.field_species -}}
+          {{- content.field_family -}}
+          {{- content.field_origin -}}
+          {{- content.field_collections -}}
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          {{- content.field_display_name -}}
+          {{- content.field_common_name -}}
+          {{- content.field_description -}}
+          {{- content.field_display_image -}}
+          {{- drupal_view('plants', 'block_1', content.id) -}}
+          {{- content.field_video -}}
+          {{- content.field_3d_view -}}
+          {{- content.field_commerce -}}
+        </div>
+        <div class="col-lg-2 col-md-8 col-sm-12">
+        </div>
+      </div>
+    </div>
+  </article>
+{% endif %}

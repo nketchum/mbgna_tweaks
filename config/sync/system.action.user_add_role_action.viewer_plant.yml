@@ -1,0 +1,14 @@
+uuid: 54e608ba-6cb0-4d6f-938b-6402e45485d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.viewer_plant
+  module:
+    - user
+id: user_add_role_action.viewer_plant
+label: 'Add the Plant database viewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: viewer_plant

@@ -1,0 +1,31 @@
+uuid: c247006b-fc6f-40eb-80ab-85b43c5d6a5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+id: editor_plant
+label: 'Plant database editor'
+weight: -1
+is_admin: null
+permissions:
+  - 'edit field_dimensions'
+  - 'edit field_last_repot'
+  - 'edit field_legacy_id'
+  - 'edit field_outer_pot_size'
+  - 'edit field_pot_notes'
+  - 'edit field_priority'
+  - 'edit field_status'
+  - 'edit field_status_date'
+  - 'edit field_trunks'
+  - 'edit field_year_acquired'
+  - 'view field_dimensions'
+  - 'view field_last_repot'
+  - 'view field_legacy_id'
+  - 'view field_outer_pot_size'
+  - 'view field_pot_notes'
+  - 'view field_priority'
+  - 'view field_status'
+  - 'view field_status_date'
+  - 'view field_trunks'
+  - 'view field_year_acquired'

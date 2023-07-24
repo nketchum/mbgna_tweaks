@@ -1,0 +1,30 @@
+uuid: d2aeb69e-31bc-491f-846d-d1cfa3818bdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_realname_prefix
+    - taxonomy.vocabulary.realname_prefix
+  module:
+    - user
+id: user.user.field_realname_prefix
+field_name: field_realname_prefix
+entity_type: user
+bundle: user
+label: 'Name prefix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      realname_prefix: realname_prefix
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -33,7 +33,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 11
     region: content
   field_collections:
     type: entity_reference_label
@@ -47,7 +47,7 @@ content:
     region: content
   field_commerce_products:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -60,7 +60,7 @@ content:
       link: false
     third_party_settings:
       field_formatter_class:
-        class: ''
+        class: main-content-subtitle
     weight: 1
     region: content
   field_description:
@@ -86,7 +86,9 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: main-content-title
     weight: 0
     region: content
   field_donor:
@@ -95,7 +97,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 14
+    weight: 13
     region: content
   field_family:
     type: entity_reference_label
@@ -143,15 +145,6 @@ content:
         class: ''
     weight: 7
     region: content
-  field_plant_images:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 11
-    region: content
   field_species:
     type: entity_reference_label
     label: inline
@@ -169,10 +162,22 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 13
+    weight: 12
+    region: content
+  status:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 14
     region: content
 hidden:
   created: true
+  field_plant_images: true
   label: true
-  status: true
   uid: true

@@ -1,0 +1,14 @@
+uuid: 200ad076-4101-49a3-bfb3-708ee9c58a3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.fellow
+  module:
+    - user
+id: user_add_role_action.fellow
+label: 'Add the Fellow role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: fellow

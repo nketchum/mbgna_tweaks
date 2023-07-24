@@ -24,7 +24,7 @@ dependencies:
     - taxonomy
 id: editor
 label: Editor
-weight: 2
+weight: -6
 is_admin: null
 permissions:
   - 'access administration pages'

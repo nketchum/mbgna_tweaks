@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.plant.bonsai.field_3d_view
     - field.field.plant.bonsai.field_collections
+    - field.field.plant.bonsai.field_commerce
     - field.field.plant.bonsai.field_common_name
     - field.field.plant.bonsai.field_description
     - field.field.plant.bonsai.field_dimensions
@@ -34,53 +35,56 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
+    - field_formatter_class
     - options
     - text
-    - user
 id: plant.bonsai.default
 targetEntityType: plant
 bundle: bonsai
 mode: default
 content:
-  created:
-    type: timestamp
-    label: above
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
-    weight: 20
-    region: content
   field_3d_view:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 21
+    weight: 12
     region: content
   field_collections:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 8
+    region: content
+  field_commerce:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
     third_party_settings: {  }
-    weight: 22
+    weight: 27
     region: content
   field_common_name:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
-    weight: 23
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: main-content-subtitle
+    weight: 1
     region: content
   field_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 25
+    weight: 9
     region: content
   field_dimensions:
     type: entity_reference_revisions_entity_view
@@ -89,210 +93,215 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 40
+    weight: 19
     region: content
   field_display_image:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
-    weight: 26
+      view_mode: default
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 10
     region: content
   field_display_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 27
-    region: content
-  field_donor:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 48
-    region: content
-  field_family:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 28
-    region: content
-  field_genus:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 29
-    region: content
-  field_last_repot:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 41
-    region: content
-  field_legacy_id:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 30
-    region: content
-  field_makeup:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 38
-    region: content
-  field_mbgna_id:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 31
-    region: content
-  field_origin:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 32
-    region: content
-  field_outer_pot_size:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 42
-    region: content
-  field_plant_images:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 47
-    region: content
-  field_pot_notes:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 43
-    region: content
-  field_priority:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 46
-    region: content
-  field_species:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 33
-    region: content
-  field_status:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 44
-    region: content
-  field_status_date:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 45
-    region: content
-  field_trained_since:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 37
-    region: content
-  field_trunks:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 39
-    region: content
-  field_video:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 34
-    region: content
-  field_year_acquired:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 36
-    region: content
-  field_year_started:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 35
-    region: content
-  label:
     type: string
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
-    weight: -5
-    region: content
-  status:
-    type: boolean
-    label: above
-    settings:
-      format: enabled-disabled
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: main-content-title
     weight: 0
     region: content
-  uid:
-    type: author
-    label: above
+  field_donor:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 13
+    region: content
+  field_family:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 6
+    region: content
+  field_genus:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 4
+    region: content
+  field_last_repot:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium_date
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 20
+    region: content
+  field_legacy_id:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_makeup:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_mbgna_id:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_origin:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 7
+    region: content
+  field_outer_pot_size:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_pot_notes:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_priority:
+    type: list_default
+    label: inline
     settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_species:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 5
+    region: content
+  field_status:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 23
+    region: content
+  field_status_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium_date
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 24
+    region: content
+  field_trained_since:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_trunks:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_year_acquired:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
     weight: 15
     region: content
-hidden: {  }
+  field_year_started:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  status:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 26
+    region: content
+hidden:
+  created: true
+  field_plant_images: true
+  label: true
+  uid: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8fab3d7d12f0bbd19bca8edd8b5d78b",
+    "content-hash": "d39d0c64f6e79655c5df557f04dbea45",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5355,6 +5355,67 @@
             }
         },
         {
+            "name": "drupal/modules_weight",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/modules_weight.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/modules_weight-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "864154d629490ed356df2e0e1d1cf3733341fa7a"
+            },
+            "require": {
+                "drupal/core": "^9.0|| ^10.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1689089150",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Cid Almaguer (adriancid)",
+                    "homepage": "https://www.drupal.org/u/adriancid",
+                    "email": "adriancid@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Ma'moun Othman (artofeclipse)",
+                    "homepage": "https://www.drupal.org/u/artofeclipse",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "josebc",
+                    "homepage": "https://www.drupal.org/user/1376836"
+                }
+            ],
+            "description": "Allows to change the modules execution order.",
+            "homepage": "https://www.drupal.org/project/modules_weight",
+            "keywords": [
+                "Drupal",
+                "Modules",
+                "Order"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/modules_weight",
+                "issues": "https://www.drupal.org/project/issues/modules_weight"
+            }
+        },
+        {
             "name": "drupal/paragraph_view_mode",
             "version": "3.1.2",
             "source": {
@@ -5669,6 +5730,88 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/quick_node_clone",
                 "issues": "https://www.drupal.org/project/issues/quick_node_clone"
+            }
+        },
+        {
+            "name": "drupal/realname",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/realname.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/realname-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "cbe209423e9f089ce472acce11bd059e860c3537"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/token": "^1.0.0-alpha2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1677775747",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "hass",
+                    "homepage": "https://www.drupal.org/u/hass"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/266280/committers"
+                },
+                {
+                    "name": "hass",
+                    "homepage": "https://www.drupal.org/user/85918"
+                },
+                {
+                    "name": "heddn",
+                    "homepage": "https://www.drupal.org/user/1463982"
+                },
+                {
+                    "name": "NancyDru",
+                    "homepage": "https://www.drupal.org/user/101412"
+                },
+                {
+                    "name": "philltran",
+                    "homepage": "https://www.drupal.org/user/295397"
+                },
+                {
+                    "name": "rmiddle",
+                    "homepage": "https://www.drupal.org/user/192183"
+                },
+                {
+                    "name": "theamoeba",
+                    "homepage": "https://www.drupal.org/user/251700"
+                },
+                {
+                    "name": "tkuldeep17",
+                    "homepage": "https://www.drupal.org/user/2498278"
+                },
+                {
+                    "name": "voxpelli",
+                    "homepage": "https://www.drupal.org/user/341713"
+                }
+            ],
+            "description": "Provides token-based name displays for users.",
+            "homepage": "https://www.drupal.org/project/realname",
+            "support": {
+                "source": "https://git.drupal.org/project/realname.git",
+                "issues": "https://www.drupal.org/project/issues/realname"
             }
         },
         {
@@ -6157,6 +6300,67 @@
             "homepage": "https://www.drupal.org/project/token_custom_plus",
             "support": {
                 "source": "https://git.drupalcode.org/project/token_custom_plus"
+            }
+        },
+        {
+            "name": "drupal/twig_tweak",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/twig_tweak.git",
+                "reference": "3.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-3.2.1.zip",
+                "reference": "3.2.1",
+                "shasum": "89fc08b60f494a7d786251b6c2c493c536218222"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10.0",
+                "ext-json": "*",
+                "php": ">=7.3",
+                "symfony/polyfill-php80": "^1.17",
+                "twig/twig": "^2.12 || ^3.3.8"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Better dump() function for debugging Twig variables"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.2.1",
+                    "datestamp": "1677404306",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Chi",
+                    "homepage": "https://www.drupal.org/user/556138"
+                }
+            ],
+            "description": "A Twig extension with some useful functions and filters for Drupal development.",
+            "homepage": "https://www.drupal.org/project/twig_tweak",
+            "keywords": [
+                "Drupal",
+                "Twig"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/twig_tweak",
+                "issues": "https://www.drupal.org/project/issues/twig_tweak"
             }
         },
         {
@@ -15523,6 +15727,7 @@
     "stability-flags": {
         "drupal/calendar": 15,
         "drupal/gin": 5,
+        "drupal/realname": 10,
         "drupal/tb_megamenu": 15,
         "drupal/token_custom": 15,
         "mbgna/mbgna_plant": 20,

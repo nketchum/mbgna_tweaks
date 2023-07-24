@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\views\ViewExecutable;
 
 /**
  * @file
@@ -207,10 +208,6 @@ function mbgna_dxpr_theme_suggestions_node_alter(array &$suggestions, array $var
 /**
  * Implements hook_views_pre_render().
  */
-use Drupal\views\ViewExecutable;
-/**
- * Implements hook_views_pre_render().
- */
 function mbgna_dxpr_views_pre_render(ViewExecutable $view) {
   // Ensure unique company nodes.
   if ($view->storage->get('id') === 'events') {
@@ -228,3 +225,4 @@ function mbgna_dxpr_views_pre_render(ViewExecutable $view) {
     }
   }
 }
+

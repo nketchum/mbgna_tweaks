@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.plant.bonsai.field_3d_view
     - field.field.plant.bonsai.field_collections
+    - field.field.plant.bonsai.field_commerce
     - field.field.plant.bonsai.field_common_name
     - field.field.plant.bonsai.field_description
     - field.field.plant.bonsai.field_dimensions
@@ -107,6 +108,7 @@ third_party_settings:
         - field_video
         - field_3d_view
         - field_donor
+        - field_commerce
       label: 'Basic information'
       region: content
       parent_name: group_plant_properties
@@ -173,6 +175,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_commerce:
+    type: inline_entity_form_complex
+    weight: 25
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: product
+      label_plural: products
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
   field_common_name:
     type: inline_entity_form_complex
     weight: 11
@@ -206,7 +226,7 @@ content:
         hide_guidelines: '1'
   field_dimensions:
     type: paragraphs
-    weight: 27
+    weight: 28
     region: content
     settings:
       title: dimension
@@ -239,14 +259,22 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_donor:
-    type: entity_reference_autocomplete
+    type: inline_entity_form_complex
     weight: 24
     region: content
     settings:
+      form_mode: default
+      override_labels: true
+      label_singular: donor
+      label_plural: donors
+      allow_new: true
+      allow_existing: true
       match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
     third_party_settings: {  }
   field_family:
     type: inline_entity_form_complex

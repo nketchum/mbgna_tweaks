@@ -4,15 +4,57 @@ status: true
 dependencies:
   config:
     - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_realname_first
+    - field.field.user.user.field_realname_last
+    - field.field.user.user.field_realname_middle
+    - field.field.user.user.field_realname_prefix
+    - field.field.user.user.field_realname_suffix
+    - field.field.user.user.field_title
   module:
+    - text
     - user
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
-content: {  }
+content:
+  field_bio:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_organization:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  realname:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   commerce_remote_id: true
   customer_profiles: true
+  field_realname_first: true
+  field_realname_last: true
+  field_realname_middle: true
+  field_realname_prefix: true
+  field_realname_suffix: true
   member_for: true
   name: true

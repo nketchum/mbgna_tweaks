@@ -4,7 +4,11 @@ status: true
 dependencies:
   module:
     - datetime
+    - field_permissions
     - mbgna_plant
+third_party_settings:
+  field_permissions:
+    permission_type: custom
 id: plant.field_last_repot
 field_name: field_last_repot
 entity_type: plant

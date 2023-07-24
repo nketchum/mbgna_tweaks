@@ -1,0 +1,9 @@
+uuid: 3708dda7-7ce9-4de3-ac1c-73b93b9a81a6
+langcode: en
+status: true
+dependencies: {  }
+id: fellow
+label: Fellow
+weight: -5
+is_admin: null
+permissions: {  }

@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: collections_donor
 label: 'Collections donor'
-weight: 6
+weight: -7
 is_admin: null
 permissions: {  }

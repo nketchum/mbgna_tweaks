@@ -5,55 +5,78 @@
   height: auto;
 }
 
-.path-node.is-not-dxpr-layout {
-  .main-container {
-    & > .row > * {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1920px;
-    }
-  }
-
-  article.full {
-    .field {
-      margin-bottom: 15px;
-
-      &:last-child {
-        margin-bottom: 0;
+.path-node,
+.path-plant {
+  &.is-not-dxpr-layout {
+    .main-container {
+      & > .row > * {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1920px;
       }
     }
-  }
 
-  .article-body-content-column,
-  .article-aside {
-    padding: 0 30px;
-  }
+    article.full {
+      .row > * {
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+      }
 
-  .article-body-content-column {
-    &.article-body-content-column-left {
-      padding-left: 0;
+      h3,
+      .main-content-title {
+        font-family: $font-family-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.15em;
+        margin-bottom: 1em;
+      }
+
+      h4,
+      .main-content-subtitle {
+        font-size: 21px;
+        margin-top: -0.35em;
+      }
+
+      .field {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
-    &.article-body-content-column-right {
-      padding-right: 0;
+    .article-body-content-column,
+    .article-aside {
+      padding: 0 30px;
     }
-  }
 
-  .article-aside {
-    &.article-aside-left {
-      padding-left: 0;
+    .article-body-content-column {
+      &.article-body-content-column-left {
+        padding-left: 0;
+      }
+
+      &.article-body-content-column-right {
+        padding-right: 0;
+      }
     }
-  }
 
-  .article-aside {
-    &.article-aside-right {
-      padding-right: 0;
+    .article-aside {
+      &.article-aside-left {
+        padding-left: 0;
+      }
     }
-  }
 
-  .article-has-aside-right {
-    .article-body-content-column-right {
-      padding-right: 30px;
+    .article-aside {
+      &.article-aside-right {
+        padding-right: 0;
+      }
+    }
+
+    .article-has-aside-right {
+      .article-body-content-column-right {
+        padding-right: 30px;
+      }
     }
   }
 }

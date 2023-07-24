@@ -1,0 +1,14 @@
+uuid: f1e96f39-7d08-4a71-ae06-11cbe33c99ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.author_plant
+  module:
+    - user
+id: user_remove_role_action.author_plant
+label: 'Remove the Plant database author role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: author_plant

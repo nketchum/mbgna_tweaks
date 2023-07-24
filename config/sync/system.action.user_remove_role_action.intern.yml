@@ -1,0 +1,14 @@
+uuid: 35dd3af1-c303-49af-b3a2-6f76bea3078c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.intern
+  module:
+    - user
+id: user_remove_role_action.intern
+label: 'Remove the Intern role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: intern

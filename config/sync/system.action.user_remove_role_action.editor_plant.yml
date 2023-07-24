@@ -1,0 +1,14 @@
+uuid: 80f9bdf9-45d6-470e-ae7d-dc178c5917a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.editor_plant
+  module:
+    - user
+id: user_remove_role_action.editor_plant
+label: 'Remove the Plant editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_plant

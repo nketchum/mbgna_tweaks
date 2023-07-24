@@ -1,0 +1,24 @@
+uuid: 8a06bd19-f84b-4390-8782-deb1f099740d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.realname_suffix
+id: taxonomy_term.realname_suffix.default
+targetEntityType: taxonomy_term
+bundle: realname_suffix
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true
+  status: true

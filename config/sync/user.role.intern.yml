@@ -1,0 +1,9 @@
+uuid: eb990f03-6102-451d-8951-8cbfc287f200
+langcode: en
+status: true
+dependencies: {  }
+id: intern
+label: Intern
+weight: -3
+is_admin: null
+permissions: {  }

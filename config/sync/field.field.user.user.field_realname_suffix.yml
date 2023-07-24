@@ -1,0 +1,30 @@
+uuid: 0209bacf-2b28-4370-87cc-25acb36bf0d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_realname_suffix
+    - taxonomy.vocabulary.realname_suffix
+  module:
+    - user
+id: user.user.field_realname_suffix
+field_name: field_realname_suffix
+entity_type: user
+bundle: user
+label: 'Name suffix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      realname_suffix: realname_suffix
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

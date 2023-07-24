@@ -1,0 +1,14 @@
+uuid: 2a00e146-1496-4dc5-85dc-e51633d8e105
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.intern
+  module:
+    - user
+id: user_add_role_action.intern
+label: 'Add the Intern role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: intern

@@ -1,0 +1,14 @@
+uuid: ee8d80ee-d1f6-4be2-bf72-9b155a47b238
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.editor_plant
+  module:
+    - user
+id: user_add_role_action.editor_plant
+label: 'Add the Plant editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editor_plant

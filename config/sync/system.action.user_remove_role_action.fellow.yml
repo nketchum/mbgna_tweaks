@@ -1,0 +1,14 @@
+uuid: 5fa0b822-6932-40b5-8808-7eeca662dc78
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.fellow
+  module:
+    - user
+id: user_remove_role_action.fellow
+label: 'Remove the Fellow role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: fellow

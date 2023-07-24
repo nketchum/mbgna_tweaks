@@ -1,0 +1,3 @@
+_core:
+  default_config_hash: g5omwWKI2ZAuCm_ECiSW2OfMsp3P5XtDy2vxPQcck0w
+pattern: '[user:field_realname_prefix:entity:name] [user:field_realname_first:value] [user:field_realname_middle:value] [user:field_realname_last:value] [user:field_realname_suffix:entity:name]'

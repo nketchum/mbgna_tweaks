@@ -1,0 +1,21 @@
+uuid: 6067d95b-b482-45b2-a2d7-1549b2550d95
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+id: viewer_plant
+label: 'Plant database viewer'
+weight: 0
+is_admin: null
+permissions:
+  - 'view field_dimensions'
+  - 'view field_last_repot'
+  - 'view field_legacy_id'
+  - 'view field_outer_pot_size'
+  - 'view field_pot_notes'
+  - 'view field_priority'
+  - 'view field_status'
+  - 'view field_status_date'
+  - 'view field_trunks'
+  - 'view field_year_acquired'

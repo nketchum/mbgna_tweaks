@@ -1,0 +1,14 @@
+uuid: ef11754e-e1dd-467e-a431-f06920d5105d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.viewer_plant
+  module:
+    - user
+id: user_remove_role_action.viewer_plant
+label: 'Remove the Plant database viewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: viewer_plant
