@@ -79,6 +79,7 @@
     },
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "drupal/address": "^1.12",
         "drupal/admin_toolbar": "^3.3",
         "drupal/allowed_formats": "^2.0",
@@ -209,6 +210,9 @@
             },
             "drupal/image_widget_crop": {
                 "The Cropper library referenced in the README and in the libraries info is deprecated": "https://www.drupal.org/files/issues/2023-02-17/3093928-17.patch"
+            },
+            "drupal/tb_megamenu": {
+                "Remove array wrapper for menu item caption that sets off an htmlspecialcharacters error in D9.": "patches/tb_megamenu-d9-backwards-compatible.txt"
             }
         },
         "patches-ignore": {},

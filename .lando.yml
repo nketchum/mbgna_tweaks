@@ -4,15 +4,11 @@ excludes:
   - node_modules
   - vendor
   - web/core
-  - web/libraries
-  - web/modules/contrib
   - web/profiles
-  - web/themes/contrib
-  - "!web/modules/custom"
-  - "!web/themes/custom"
-  - "!web/themes/custom/mbgna/node_modules"
-  - "!web/themes/custom/mbgna_dxpr/node_modules"
-  - "!web/themes/custom/mbgna_gin/node_modules"
+  # - web/modules
+  # - web/themes
+  # - "!web/modules/custom"
+  # - "!web/themes/custom"
 config:
   composer_version: '2.2.12'
   config:
