@@ -1,13 +1,18 @@
 name: m-sandbox-01
 recipe: drupal9
 excludes:
-  - vendor
   - node_modules
-  - modules/contrib
-  - themes/contrib
-  - "!modules/contrib/mbgna_plant"
-  - "!modules/contrib/mbgna_resource"
-  - "!modules/contrib/mbgna_tweaks"
+  - vendor
+  - web/core
+  - web/libraries
+  - web/modules/contrib
+  - web/profiles
+  - web/themes/contrib
+  - "!web/modules/custom"
+  - "!web/themes/custom"
+  - "!web/themes/custom/mbgna/node_modules"
+  - "!web/themes/custom/mbgna_dxpr/node_modules"
+  - "!web/themes/custom/mbgna_gin/node_modules"
 config:
   composer_version: '2.2.12'
   config:
