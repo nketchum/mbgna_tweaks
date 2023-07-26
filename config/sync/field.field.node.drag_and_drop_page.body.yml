@@ -6,10 +6,15 @@ dependencies:
     - field.storage.node.body
     - node.type.drag_and_drop_page
   module:
+    - allowed_formats
     - text
   enforced:
     module:
       - dxpr_builder_page
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - code
 _core:
   default_config_hash: LeDS5YeIgahCxEobRhABIh79j3dc21k4XUEjwB3CKaA
 id: node.drag_and_drop_page.body
