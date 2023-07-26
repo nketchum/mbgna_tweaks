@@ -131,6 +131,21 @@
   }
 }
 
+@mixin nav-button {
+  background: $blue-secondary;
+  border-radius: 5px;
+  color: $white;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7.5px 15px;
+
+  &.is-active {
+    color: $white;
+    opacity: 1;
+  }
+}
+
 .body--dxpr-theme-nav-desktop {
   .dxpr-theme-header--top {
     #dxpr-theme-main-menu,
@@ -154,20 +169,17 @@
         & > .nav {
           & > .dropdown {
             a {
-              background: $blue-secondary;
-              border-radius: 5px;
-              color: $white;
-              display: inline-block;
-              font-size: 14px;
-              font-weight: bold;
-              padding: 7.5px 15px;
-
-              &.is-active {
-                color: $white;
-                opacity: 1;
-              }
+              @include nav-button;
             }
           }
+        }
+      }
+
+      .nav-button {
+        @include nav-button;
+
+        &::after {
+          content: ' ›';
         }
       }
     }
@@ -228,6 +240,10 @@
   right: 0;
   top: auto;
   width: auto;
+
+  .tbm-row {
+    margin: 0;
+  }
 }
 
 .tbm-submenu-toggle {
