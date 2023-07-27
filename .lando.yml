@@ -2,9 +2,9 @@ name: m-sandbox-01
 recipe: drupal9
 excludes:
   - node_modules
-  - vendor
-  - web/core
-  - web/profiles
+  # - vendor
+  # - web/core
+  # - web/profiles
   # - web/modules
   # - web/themes
   # - "!web/modules/custom"
