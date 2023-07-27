@@ -1,10 +1,19 @@
 prod:
-  host: hostname.tld
+  host: umich.edu
   user: myuser
   root: /path/to/webroot
   uri:  http://uri.tld
 
 stage:
+  host: nketchum.com
+  user: nketchum
+  root: /var/www/m-stage/web
+  uri:  https://m-stage.nketchum.com
+  paths:
+   - files: /var/www/m-stage/web/sites/default/files
+   - private: /var/www/m-stage/private
+
+sandbox:
   host: nketchum.com
   user: nketchum
   root: /var/www/m-sandbox-01/web

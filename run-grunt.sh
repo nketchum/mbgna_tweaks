@@ -1,1 +1,0 @@
-lando ssh -s node -c 'cd /app/web/themes/custom/mbgna_dxpr && grunt'
