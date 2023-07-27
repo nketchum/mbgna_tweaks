@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - field_permissions
+    - file
 id: author_plant
 label: 'Plant database author'
 weight: -2
@@ -19,6 +20,7 @@ permissions:
   - 'create field_status_date'
   - 'create field_trunks'
   - 'create field_year_acquired'
+  - 'delete own files'
   - 'edit own field_dimensions'
   - 'edit own field_last_repot'
   - 'edit own field_legacy_id'

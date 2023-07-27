@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contact
+    - file
     - filter
     - node
     - system
@@ -23,6 +24,7 @@ permissions:
   - 'create basic_page content'
   - 'delete basic_page revisions'
   - 'delete own basic_page content'
+  - 'delete own files'
   - 'edit own basic_page content'
   - 'edit own comments'
   - 'post comments'

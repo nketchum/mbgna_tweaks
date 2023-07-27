@@ -20,6 +20,5 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'view commerce_product'
-  - 'view field_plant_donations'
   - 'view media'
   - 'view plant'

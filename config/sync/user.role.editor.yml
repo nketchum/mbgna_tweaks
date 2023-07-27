@@ -9,6 +9,7 @@ dependencies:
     - taxonomy.vocabulary.kickers
   module:
     - block
+    - block_content
     - block_content_permissions
     - block_region_permissions
     - comment
@@ -28,6 +29,7 @@ weight: -6
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access block library'
   - 'access comments'
   - 'access content overview'
   - 'access files overview'
@@ -35,6 +37,8 @@ permissions:
   - 'access taxonomy overview'
   - 'access user contact forms'
   - 'access user profiles'
+  - 'administer block content'
+  - 'administer block types'
   - 'administer blocks'
   - 'administer comments'
   - 'administer dxpr_builder_profile'
@@ -53,8 +57,8 @@ permissions:
   - 'create url aliases'
   - 'delete any media'
   - 'delete any simple_text block content'
+  - 'delete own files'
   - 'delete terms in kickers'
-  - 'edit field_plant_donations'
   - 'edit terms in kickers'
   - 'update any media'
   - 'update any simple_text block content'

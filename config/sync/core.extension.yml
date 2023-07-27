@@ -18,8 +18,6 @@ module:
   block_visibility_conditions: 0
   block_visibility_conditions_node: 0
   breakpoint: 0
-  calendar: 0
-  calendar_datetime: 0
   calendar_link: 0
   ckeditor5: 0
   color: 0
@@ -89,6 +87,7 @@ module:
   paragraph_view_mode: 0
   path: 0
   path_alias: 0
+  phpass: 0
   profile: 0
   quick_node_clone: 0
   realname: 0

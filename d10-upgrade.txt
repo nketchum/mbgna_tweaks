@@ -1,0 +1,60 @@
+Upgrading from D9 to D10
+
+1. Update modules:
+	- $ composer update
+
+2. Patch modules: <SKIP THIS STEP> (only way forward is to uninstall two calendar modules in steps 4-6)
+	- calendar: patch 3356537-8 
+
+3. Delete rogue modules not installed and not in composer.json:
+	- layout_builder_admin_theme
+	- layoutcomponents
+	- media_library_form_element
+	- viewsreference
+
+4. Uninstall the awful calendar module
+	- $ drush pm:uninstall calendar
+
+5. Remove the awful calendar_datetime module (manually through the UI)
+	- Manual uninstallation through UI: /admin/modules/uninstall
+	- $ composer remove drupal/calendar_datetime
+
+6. Remove the awful calendar module
+	- $ composer remove drupal/calendar
+
+7. Clear cache
+	- $ drush cr
+
+8. Update core dependencies without running update:
+	- $ composer require 'drupal/core-recommended:^10' 'drupal/core-composer-scaffold:^10' 'drupal/core-project-message:^10' --update-with-dependencies --no-update
+
+9. We usually have core-dev installed too, so similar command:
+	- $ composer require 'drupal/core-dev:^10' --dev --update-with-dependencies --no-update
+
+10. Create a .env file in the project root
+	- $ cp env.example .env
+
+11. Run composer update
+	- $ composer update -W
+
+12. Remove patches from composer
+	- drupal/calendar
+	- drupal/tb_megamenu
+	- delete /patches in the project root
+
+13. Fix an error with tb_megamenu via drush updb
+	- $ drush updb
+	- "PHP Fatal error:  Cannot use Drupal\Component\Utility\Xss as Xss because the name is already in use in /app/web/modules/contrib/tb_megamenu/src/Entity/MegaMenuConfig.php on line 11"
+	- Remove "use Drupal\Component\Utility\Xss;" from line 11
+
+14. Uninstall views_template although it's already uninstalled
+	- $ drush updb
+	- "Currently using Missing or invalid module The following module is marked as installed in the core.extension configuration, but it is missing: views_templates"
+	- 
+	- $ drush pm:uninstall views_template (throws error)
+
+15. Update db
+	- $ drush updb
+
+16. Clear cache
+	- $ drush cr

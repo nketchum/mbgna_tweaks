@@ -1,9 +1,12 @@
 uuid: 18c927f1-1fd3-424e-ac9d-e8a1c3d0d4c3
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - file
 id: fulfillment
 label: Fulfillment
 weight: -4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'delete own files'

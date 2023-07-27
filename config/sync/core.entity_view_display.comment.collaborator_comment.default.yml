@@ -6,6 +6,7 @@ dependencies:
     - comment.type.collaborator_comment
     - field.field.comment.collaborator_comment.comment_body
   module:
+    - manage_display
     - text
 id: comment.collaborator_comment.default
 targetEntityType: comment
@@ -19,5 +20,48 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  created:
+    type: timestamp
+    label: hidden
+    region: content
+    weight: 2
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: ''
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+  pid:
+    type: in_reply_to
+    label: hidden
+    region: content
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: title
+    label: hidden
+    weight: -49
+    settings:
+      tag: h3
+      link_to_entity: true
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: submitted
+    label: hidden
+    weight: -51
+    region: content
+    settings:
+      user_picture: ''
+    third_party_settings: {  }
 hidden:
   links: true

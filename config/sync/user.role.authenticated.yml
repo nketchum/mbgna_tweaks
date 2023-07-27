@@ -8,6 +8,7 @@ dependencies:
     - commerce_payment
     - commerce_product
     - contact
+    - file
     - mbgna_plant
     - media
     - system
@@ -24,10 +25,9 @@ permissions:
   - 'access site-wide contact form'
   - 'access toolbar'
   - 'change own username'
+  - 'delete own files'
   - 'manage own commerce_payment_method'
   - 'view commerce_product'
-  - 'view field_plant_donations'
   - 'view media'
   - 'view own commerce_order'
-  - 'view own field_plant_donations'
   - 'view plant'
