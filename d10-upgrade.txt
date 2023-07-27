@@ -3,17 +3,21 @@ Upgrading from D9 to D10
 1. Update modules:
 	- $ composer update
 
-2. Patch modules: <SKIP THIS STEP> (only way forward is to uninstall two calendar modules in steps 4-6)
-	- calendar: patch 3356537-8 
+SKIP THIS SECOND STEP
+This would be ideal but trips up composer due to D10 version constraints. Instead,
+we will simply uninstall the two related calendar modules and figure something out later.
+2. Patch modules: 
+	- drupal/calendar: 3356537-8 
 
 3. Delete rogue modules not installed and not in composer.json:
-	- layout_builder_admin_theme
-	- layoutcomponents
-	- media_library_form_element
-	- viewsreference
+	- $ rm -rf web/modules/contrib/layout_builder_admin_theme
+	- $ rm -rf web/modules/contrib/layoutcomponents
+	- $ rm -rf web/modules/contrib/media_library_form_element
+	- $ rm -rf web/modules/contrib/viewsreference
 
-4. Uninstall the awful calendar module
+4. Uninstall the awful calendar module and views_templates
 	- $ drush pm:uninstall calendar
+	- $ drush pm:uninstall views_templates
 
 5. Remove the awful calendar_datetime module (manually through the UI)
 	- Manual uninstallation through UI: /admin/modules/uninstall
@@ -21,6 +25,7 @@ Upgrading from D9 to D10
 
 6. Remove the awful calendar module
 	- $ composer remove drupal/calendar
+	- $ composer remove drupal/views_templates
 
 7. Clear cache
 	- $ drush cr
@@ -37,24 +42,17 @@ Upgrading from D9 to D10
 11. Run composer update
 	- $ composer update -W
 
-12. Remove patches from composer
+12. Remove patches from composer.json
 	- drupal/calendar
 	- drupal/tb_megamenu
 	- delete /patches in the project root
 
 13. Fix an error with tb_megamenu via drush updb
-	- $ drush updb
-	- "PHP Fatal error:  Cannot use Drupal\Component\Utility\Xss as Xss because the name is already in use in /app/web/modules/contrib/tb_megamenu/src/Entity/MegaMenuConfig.php on line 11"
-	- Remove "use Drupal\Component\Utility\Xss;" from line 11
+	- $ drush updb -> "PHP Fatal error:  Cannot use Drupal\Component\Utility\Xss as Xss because the name is already in use in /app/web/modules/contrib/tb_megamenu/src/Entity/MegaMenuConfig.php on line 11"
+	- Delete "use Drupal\Component\Utility\Xss;" from line 11 in MegaMenuConfig.php
 
-14. Uninstall views_template although it's already uninstalled
-	- $ drush updb
-	- "Currently using Missing or invalid module The following module is marked as installed in the core.extension configuration, but it is missing: views_templates"
-	- 
-	- $ drush pm:uninstall views_template (throws error)
-
-15. Update db
+14. Update db
 	- $ drush updb
 
-16. Clear cache
+15. Clear cache
 	- $ drush cr
