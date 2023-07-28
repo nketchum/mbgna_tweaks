@@ -23,8 +23,6 @@ content:
   created:
     type: timestamp
     label: hidden
-    region: content
-    weight: 2
     settings:
       date_format: medium
       custom_date_format: ''
@@ -39,29 +37,31 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
+    weight: 2
+    region: content
   pid:
     type: in_reply_to
     label: hidden
-    region: content
-    weight: 1
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
   subject:
     type: title
     label: hidden
-    weight: -49
     settings:
-      tag: h3
       link_to_entity: true
-    region: content
+      tag: h3
     third_party_settings: {  }
+    weight: -49
+    region: content
   uid:
     type: submitted
     label: hidden
-    weight: -51
-    region: content
     settings:
       user_picture: ''
     third_party_settings: {  }
+    weight: -51
+    region: content
 hidden:
   links: true

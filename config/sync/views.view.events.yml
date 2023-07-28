@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.node.listing
     - core.entity_view_mode.node.teaser
     - node.type.event
-    - system.menu.main
     - taxonomy.vocabulary.event_categories
     - taxonomy.vocabulary.location
   module:
@@ -972,11 +971,10 @@ display:
       display_extenders: {  }
       path: events
       menu:
-        type: normal
+        type: none
         title: Events
         description: ''
-        weight: -57
-        enabled: true
+        weight: -94
         expanded: false
         menu_name: main
         parent: ''

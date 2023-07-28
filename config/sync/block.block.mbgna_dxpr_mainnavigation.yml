@@ -1,19 +1,20 @@
-uuid: 79653df2-de88-45a8-9b83-cbf6d43da09f
+uuid: 0051efb2-26bc-43d8-a5b5-07c16dbe26c6
 langcode: en
 status: true
 dependencies:
   module:
     - block_class
+    - block_visibility_conditions_node
     - tb_megamenu
   theme:
     - mbgna_dxpr
 third_party_settings:
   block_class:
     classes: 'hide-on-narrow hide-on-medium'
-id: mainnavigation
+id: mbgna_dxpr_mainnavigation
 theme: mbgna_dxpr
 region: navigation_collapsible
-weight: -7
+weight: -10
 provider: null
 plugin: 'tb_megamenu_menu_block:main'
 settings:
@@ -21,4 +22,8 @@ settings:
   label: 'Main navigation'
   label_display: '0'
   provider: tb_megamenu
-visibility: {  }
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
