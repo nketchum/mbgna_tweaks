@@ -63,6 +63,7 @@
 
 # NK added
 .DS_Store
+*.sql
 Thumbs.db
 node_modules
 /private
