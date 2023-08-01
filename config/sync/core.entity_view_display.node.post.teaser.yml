@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.post.body
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
+    - field.field.node.post.field_image
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
     - node.type.post
@@ -44,6 +45,7 @@ hidden:
   created: true
   field_external_link: true
   field_external_source: true
+  field_image: true
   field_organization: true
   field_post_type: true
   uid: true

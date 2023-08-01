@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.post.body
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
+    - field.field.node.post.field_image
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
     - node.type.post
@@ -14,6 +15,7 @@ dependencies:
     - hide_revision_field
     - inline_entity_form
     - link
+    - media_library
     - path
     - text
 id: node.post.default
@@ -49,6 +51,24 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
+        72851875-292e-4089-b9e0-253559db2ab0:
+          entity_type: node
+          bundle: post
+          dependee: field_post_type
+          settings:
+            state: visible
+            reset: true
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '20'
+            effect: show
+            effect_options: {  }
+            selector: ''
   created:
     type: datetime_timestamp
     weight: 3
@@ -81,13 +101,93 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
+        23fa8990-b81d-4767-be67-64d006b60c18:
+          entity_type: node
+          bundle: post
+          dependee: field_post_type
+          settings:
+            state: '!visible'
+            reset: true
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '20'
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_external_source:
     type: boolean_checkbox
     weight: 9
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        63fb1d3a-84a3-495b-a8ee-a1146f5f0347:
+          entity_type: node
+          bundle: post
+          dependee: field_post_type
+          settings:
+            state: visible
+            reset: true
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '19'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_image:
+    type: media_library_widget
+    weight: 122
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      conditional_fields:
+        78fa1ebd-72d7-4a98-af86-1b2d4ce2560c:
+          entity_type: node
+          bundle: post
+          dependee: field_external_source
+          settings:
+            state: '!visible'
+            reset: true
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        0ab02e0c-a7cf-44a8-ac59-27e3b743242c:
+          entity_type: node
+          bundle: post
+          dependee: field_post_type
+          settings:
+            state: visible
+            reset: true
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '20'
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_organization:
     type: inline_entity_form_complex
     weight: 11
@@ -121,6 +221,24 @@ content:
             values: {  }
             value_form:
               value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        6a71266b-3f79-4f4b-97ac-8a13964cc2e4:
+          entity_type: node
+          bundle: post
+          dependee: field_post_type
+          settings:
+            state: '!visible'
+            reset: true
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '20'
             effect: show
             effect_options: {  }
             selector: ''

@@ -6,7 +6,11 @@ dependencies:
     - field.storage.node.field_external_link
     - node.type.post
   module:
+    - field_display_label
     - link
+third_party_settings:
+  field_display_label:
+    display_label: 'Full story'
 id: node.post.field_external_link
 field_name: field_external_link
 entity_type: node
