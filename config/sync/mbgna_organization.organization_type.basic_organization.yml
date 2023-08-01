@@ -1,0 +1,6 @@
+uuid: 0fd9e8fb-72d6-4833-86fc-e4aa5a214f80
+langcode: en
+status: true
+dependencies: {  }
+id: basic_organization
+label: 'Basic organization'

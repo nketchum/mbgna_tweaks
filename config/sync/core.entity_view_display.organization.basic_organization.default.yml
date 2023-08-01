@@ -1,0 +1,33 @@
+uuid: 8d3e0516-2387-41e2-84f2-a9cfe93044da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.organization.basic_organization.field_description
+    - mbgna_organization.organization_type.basic_organization
+  module:
+    - text
+id: organization.basic_organization.default
+targetEntityType: organization
+bundle: basic_organization
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
