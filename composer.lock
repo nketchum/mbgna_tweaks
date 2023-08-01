@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23761aa4bce33aad2c2d60cfe109fb4d",
+    "content-hash": "481fe15c7d194270652cd4d2c77823f4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7330,6 +7330,36 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.8.0"
             },
             "time": "2023-04-26T07:27:39+00:00"
+        },
+        {
+            "name": "mbgna/mbgna_organization",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nketchum/mbgna_organization.git",
+                "reference": "2d03dbb066f9fb8881624c93ece165fc6bb49656"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nketchum/mbgna_organization/zipball/2d03dbb066f9fb8881624c93ece165fc6bb49656",
+                "reference": "2d03dbb066f9fb8881624c93ece165fc6bb49656",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10",
+                "php": "^8.1"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Provides organization entities for the site.",
+            "support": {
+                "issues": "https://github.com/nketchum/mbgna_organization/issues",
+                "source": "https://github.com/nketchum/mbgna_organization/tree/1.0.1"
+            },
+            "time": "2023-08-01T17:52:47+00:00"
         },
         {
             "name": "mbgna/mbgna_plant",
@@ -15741,6 +15771,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/conditional_fields": 15,
         "drupal/gin": 5,
         "drupal/realname": 10,
         "drupal/tb_megamenu": 15,
@@ -15753,5 +15784,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

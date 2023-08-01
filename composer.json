@@ -138,6 +138,7 @@
         "drush/drush": "^11.0",
         "jackmoore/colorbox": "master",
         "kenwheeler/slick": "^1.7",
+        "mbgna/mbgna_organization": "^1.0",
         "mbgna/mbgna_plant": "dev-main",
         "mbgna/mbgna_resource": "dev-main",
         "mbgna/mbgna_tweaks": "dev-main",
@@ -160,7 +161,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "mglaman/composer-drupal-lenient": true
         },
         "preferred-install": {
             "drupal/core": "dist"
