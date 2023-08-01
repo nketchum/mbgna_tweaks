@@ -31,7 +31,7 @@ content:
     type: link
     label: inline
     settings:
-      trim_length: null
+      trim_length: 80
       url_only: false
       url_plain: false
       rel: nofollow
@@ -45,10 +45,12 @@ content:
     type: boolean
     label: hidden
     settings:
-      format: default
+      format: boolean
       format_custom_false: ''
       format_custom_true: ''
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 6
     region: content
   field_image:
