@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
+    - field.field.node.post.field_external_link
+    - field.field.node.post.field_external_source
+    - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
     - node.type.post
   module:
+    - link
     - manage_display
     - text
 id: node.post.default
@@ -20,6 +24,36 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_external_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_external_source:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_organization:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
     region: content
   field_post_type:
     type: entity_reference_label

@@ -34,6 +34,7 @@ module:
   commerce_promotion: 0
   commerce_store: 0
   commerce_tax: 0
+  conditional_fields: 0
   config: 0
   contact: 0
   crop: 0

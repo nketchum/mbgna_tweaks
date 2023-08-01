@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
+    - field.field.node.post.field_external_link
+    - field.field.node.post.field_external_source
+    - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
     - node.type.post
   module:
@@ -39,5 +42,8 @@ content:
     region: content
 hidden:
   created: true
+  field_external_link: true
+  field_external_source: true
+  field_organization: true
   field_post_type: true
   uid: true
