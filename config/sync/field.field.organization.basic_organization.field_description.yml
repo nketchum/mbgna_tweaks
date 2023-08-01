@@ -1,0 +1,32 @@
+uuid: 0ca95097-b91d-4e06-884b-4c89a998f6da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.organization.field_description
+    - filter.format.full_html
+    - filter.format.minimal_html
+    - mbgna_organization.organization_type.basic_organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: organization.basic_organization.field_description
+field_name: field_description
+entity_type: organization
+bundle: basic_organization
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - minimal_html
+    - full_html
+field_type: text_with_summary

@@ -1,0 +1,23 @@
+uuid: 24b68f6e-6bb7-465e-ac9f-c2f60f0e3787
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_link
+    - node.type.post
+  module:
+    - link
+id: node.post.field_external_link
+field_name: field_external_link
+entity_type: node
+bundle: post
+label: 'External link'
+description: 'If the content originates from an external site, paste the link to the content here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

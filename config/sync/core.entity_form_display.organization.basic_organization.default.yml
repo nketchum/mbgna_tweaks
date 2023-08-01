@@ -1,0 +1,36 @@
+uuid: 67579678-7eef-4f36-82ff-72eaf53cb262
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.organization.basic_organization.field_description
+    - mbgna_organization.organization_type.basic_organization
+  module:
+    - text
+id: organization.basic_organization.default
+targetEntityType: organization
+bundle: basic_organization
+mode: default
+content:
+  field_description:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

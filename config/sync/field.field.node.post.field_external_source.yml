@@ -1,0 +1,21 @@
+uuid: 8073a5b2-d85b-4a25-96f4-c9d74950ad46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_source
+    - node.type.post
+id: node.post.field_external_source
+field_name: field_external_source
+entity_type: node
+bundle: post
+label: 'External source'
+description: 'Check if this content is from an external source.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: External
+  off_label: Internal
+field_type: boolean

@@ -1,21 +1,20 @@
-uuid: 2dd2bdf8-90ef-4a54-9f50-cfd6d6c614e1
+uuid: e833b084-f5b9-484d-810e-75f5d0831e71
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
+    - link
     - node
-    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_post_type
-field_name: field_post_type
+id: node.field_external_link
+field_name: field_external_link
 entity_type: node
-type: entity_reference
-settings:
-  target_type: taxonomy_term
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true

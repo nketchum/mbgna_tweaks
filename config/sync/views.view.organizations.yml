@@ -1,22 +1,18 @@
-uuid: 545b8ffe-4ff5-4307-b1ce-f7c3d166805b
+uuid: f5db161e-1995-4116-8a67-de5865f3ef1f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_media_image
-    - image.style.large_square_ish_rectangle
     - user.role.super_administrator
   module:
-    - blazy
-    - mbgna_plant
-    - media
+    - mbgna_organization
     - user
-id: plants
-label: Plants
+id: organizations
+label: Organizations
 module: views
-description: 'Provides a view for plant entities.'
+description: 'Provides a list of organizations.'
 tag: ''
-base_table: plant
+base_table: organization
 base_field: id
 display:
   default:
@@ -25,11 +21,11 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Plants
+      title: Organizations
       fields:
         label:
           id: label
-          table: plant
+          table: organization
           field: label
           relationship: none
           group_type: group
@@ -37,7 +33,7 @@ display:
           entity_type: null
           entity_field: label
           plugin_id: field
-          label: Title
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -81,7 +77,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -94,15 +90,15 @@ display:
           field_api_classes: false
         bundle:
           id: bundle
-          table: plant
+          table: organization
           field: bundle
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           entity_field: bundle
           plugin_id: field
-          label: 'Plant type'
+          label: 'Organization type'
           exclude: false
           alter:
             alter_text: false
@@ -224,12 +220,12 @@ display:
           field_api_classes: false
         status:
           id: status
-          table: plant
+          table: organization
           field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           entity_field: status
           plugin_id: field
           label: Status
@@ -291,15 +287,15 @@ display:
           field_api_classes: false
         changed:
           id: changed
-          table: plant
+          table: organization
           field: changed
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           entity_field: changed
           plugin_id: field
-          label: Update
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -368,12 +364,12 @@ display:
           field_api_classes: false
         operations:
           id: operations
-          table: plant
+          table: organization
           field: operations
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           plugin_id: entity_operations
           label: 'Operations links'
           exclude: false
@@ -418,26 +414,9 @@ display:
           hide_alter_empty: true
           destination: false
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          items_per_page: 50
-          total_pages: null
-          id: 0
-          tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -452,87 +431,18 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: tag
         options: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: true
-          content: 'No plants available.'
-          tokenize: false
+      empty: {  }
       sorts: {  }
       arguments: {  }
       filters: {  }
-      filter_groups:
-        operator: AND
-        groups: {  }
       style:
-        type: table
+        type: default
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          columns:
-            label: label
-            bundle: bundle
-            name: name
-            status: status
-            changed: changed
-            operations: operations
-          default: '-1'
-          info:
-            label:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            bundle:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            name:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            status:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            changed:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            operations:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          override: true
-          sticky: true
-          summary: ''
-          empty_table: true
-          caption: ''
-          description: ''
       row:
         type: fields
       query:
@@ -546,12 +456,12 @@ display:
       relationships:
         uid:
           id: uid
-          table: plant
+          table: organization
           field: uid
           relationship: none
           group_type: group
           admin_label: User
-          entity_type: plant
+          entity_type: organization
           entity_field: uid
           plugin_id: standard
           required: true
@@ -563,179 +473,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
       tags: {  }
-  block_1:
-    id: block_1
-    display_title: Block
-    display_plugin: block
-    position: 2
-    display_options:
-      title: Photos
-      fields:
-        field_media_image:
-          id: field_media_image
-          table: media__field_media_image
-          field: field_media_image
-          relationship: field_plant_images
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: blazy
-          settings:
-            caption:
-              title: title
-              alt: alt
-            background: false
-            box_caption: title
-            box_caption_custom: ''
-            loading: ''
-            preload: false
-            box_style: ''
-            image_style: ''
-            media_switch: colorbox
-            ratio: ''
-            thumbnail_style: large_square_ish_rectangle
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-      pager:
-        type: none
-        options:
-          offset: 0
-      empty: {  }
-      arguments:
-        id:
-          id: id
-          table: plant
-          field: id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: plant
-          entity_field: id
-          plugin_id: numeric
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: node
-          default_argument_options: {  }
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-      style:
-        type: blazy
-        options:
-          style: column
-          grid: '3'
-          grid_medium: ''
-          grid_small: ''
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
-      defaults:
-        empty: false
-        title: false
-        pager: false
-        style: false
-        row: false
-        relationships: false
-        fields: false
-        arguments: false
-      relationships:
-        field_plant_images:
-          id: field_plant_images
-          table: plant__field_plant_images
-          field: field_plant_images
-          relationship: none
-          group_type: group
-          admin_label: 'field_plant_images: Media'
-          plugin_id: standard
-          required: true
-      display_extenders: {  }
-      block_description: 'Plant images'
-      block_hide_empty: true
-      allow:
-        items_per_page: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-      tags:
-        - 'config:field.storage.media.field_media_image'
   page_1:
     id: page_1
     display_title: Page
@@ -780,17 +518,17 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No plants available.'
+          content: 'No organizations available.'
           tokenize: false
       filters:
         label:
           id: label
-          table: plant
+          table: organization
           field: label
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           entity_field: label
           plugin_id: string
           operator: contains
@@ -799,7 +537,7 @@ display:
           exposed: true
           expose:
             operator_id: label_op
-            label: Title
+            label: Name
             description: ''
             use_operator: false
             operator: label_op
@@ -840,12 +578,12 @@ display:
             group_items: {  }
         bundle:
           id: bundle
-          table: plant
+          table: organization
           field: bundle
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           entity_field: bundle
           plugin_id: bundle
           operator: in
@@ -854,7 +592,7 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: 'Plant type'
+            label: 'Organization type'
             description: ''
             use_operator: false
             operator: bundle_op
@@ -867,10 +605,19 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              author: '0'
+              collections_donor: '0'
               editor: '0'
-              super_administrator: '0'
-              working_group_member: '0'
+              fellow: '0'
               fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
+              super_administrator: '0'
+              volunteer: '0'
+              working_group_member: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -886,16 +633,16 @@ display:
             group_items: {  }
         status:
           id: status
-          table: plant
+          table: organization
           field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           entity_field: status
           plugin_id: boolean
           operator: '='
-          value: ''
+          value: '1'
           group: 1
           exposed: true
           expose:
@@ -934,12 +681,12 @@ display:
                 value: '0'
         status_1:
           id: status_1
-          table: plant
+          table: organization
           field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: plant
+          entity_type: organization
           entity_field: status
           plugin_id: boolean
           operator: '='
@@ -983,7 +730,7 @@ display:
           plugin_id: user_permissions
           operator: or
           value:
-            'administer plant types': 'administer plant types'
+            'administer organization types': 'administer organization types'
           group: 2
           exposed: false
           expose:
@@ -1097,7 +844,7 @@ display:
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-low
+              responsive: ''
             status:
               sortable: true
               default_sort_order: asc
@@ -1137,10 +884,10 @@ display:
         filters: false
         filter_groups: false
       display_extenders: {  }
-      path: admin/content/plant
+      path: admin/content/organization
       menu:
         type: tab
-        title: Plants
+        title: Organizations
         description: ''
         weight: 0
         expanded: false
