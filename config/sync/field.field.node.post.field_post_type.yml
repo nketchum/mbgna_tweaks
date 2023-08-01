@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_post_type
     - node.type.post
     - taxonomy.vocabulary.post_type
+  content:
+    - 'taxonomy_term:post_type:fddb5bd2-c4e4-4d56-8f77-2b599d01dcac'
 id: node.post.field_post_type
 field_name: field_post_type
 entity_type: node
@@ -14,7 +16,9 @@ label: 'Post type'
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: fddb5bd2-c4e4-4d56-8f77-2b599d01dcac
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
