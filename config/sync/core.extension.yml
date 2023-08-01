@@ -44,6 +44,7 @@ module:
   dblog: 0
   devel: 0
   devel_entity_updates: 0
+  devel_generate: 0
   devel_kint_extras: 0
   dxpr_builder_block: 0
   dxpr_builder_page: 0
