@@ -12,16 +12,6 @@
   .field--name-field-date-smart {
     margin-top: 30px !important;
     margin-bottom: 60px !important;
-
-    & > .field__item {
-      background: $black;
-      border-radius: 5px;
-      color: $white;
-      display: inline-block;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 15px;
-    }
   }
 
   .field--type-link {

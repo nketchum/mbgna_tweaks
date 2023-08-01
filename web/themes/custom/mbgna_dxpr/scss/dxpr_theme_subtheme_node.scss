@@ -18,8 +18,25 @@
 
     article.full {
       .row > * {
-        padding-left: calc(var(--bs-gutter-x) * 0.5);
-        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 1.25);
+        padding-right: calc(var(--bs-gutter-x) * 1.25);
+      }
+
+      .row > .row {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .row > .article-body-content-column {
+        &.article-body-content-column-left {
+          padding-left: 0;
+        }
+      }
+
+      .row > .article-aside {
+        &.article-aside-right {
+          padding-right: 0;
+        }
       }
 
       h3,
@@ -83,10 +100,7 @@
 
 .field--name-field-event-categories {
   .field__item {
-    color: #777;
-    font-size: 16px;    
-    font-weight: 100;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
   }
 }
