@@ -1,16 +1,16 @@
-uuid: 5d6f47f2-63e7-497e-9297-cff0088605ec
+uuid: 89cbcdd7-0cee-4a4f-a366-dad0e7f5821f
 langcode: en
 status: true
 dependencies:
   module:
-    - mbgna_resource
+    - mbgna_facility
     - user
-id: resources
-label: Resources
+id: facility
+label: Facility
 module: views
-description: ' Find and manage resources.'
+description: 'Provides a list of facilities.'
 tag: ''
-base_table: resource
+base_table: facility
 base_field: id
 display:
   default:
@@ -19,11 +19,11 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Resources
+      title: Facilities
       fields:
         label:
           id: label
-          table: resource
+          table: facility
           field: label
           relationship: none
           group_type: group
@@ -31,7 +31,184 @@ display:
           entity_type: null
           entity_field: label
           plugin_id: field
-          label: Title
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts: {  }
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: facility
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: facility
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      style:
+        type: default
+      row:
+        type: 'entity:facility'
+        options:
+          relationship: none
+          view_mode: default
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      fields:
+        label:
+          id: label
+          table: facility
+          field: label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: null
+          entity_field: label
+          plugin_id: field
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -88,15 +265,15 @@ display:
           field_api_classes: false
         bundle:
           id: bundle
-          table: resource
+          table: facility
           field: bundle
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: facility
           entity_field: bundle
           plugin_id: field
-          label: 'Resource type'
+          label: 'Facility type'
           exclude: false
           alter:
             alter_text: false
@@ -151,79 +328,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        name:
-          id: name
-          table: users_field_data
-          field: name
-          relationship: uid
-          group_type: group
-          admin_label: ''
-          entity_type: user
-          entity_field: name
-          plugin_id: field
-          label: Author
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: user_name
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         status:
           id: status
-          table: resource
+          table: facility
           field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: facility
           entity_field: status
           plugin_id: field
           label: Status
@@ -283,133 +395,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        changed:
-          id: changed
-          table: resource
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: resource
-          entity_field: changed
-          plugin_id: field
-          label: Updated
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: short
-            custom_date_format: ''
-            timezone: ''
-            tooltip:
-              date_format: ''
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        operations:
-          id: operations
-          table: resource
-          field: operations
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: resource
-          plugin_id: entity_operations
-          label: 'Operations links'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          destination: false
       pager:
         type: full
         options:
@@ -418,8 +403,8 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
+            next: ››
+            previous: ‹‹
             first: '« First'
             last: 'Last »'
           expose:
@@ -431,22 +416,12 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       access:
         type: perm
         options:
           perm: 'access content overview'
       cache:
-        type: tag
+        type: none
         options: {  }
       empty:
         area_text_custom:
@@ -458,19 +433,17 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No resources available.'
+          content: 'No facilities available.'
           tokenize: false
-      sorts: {  }
-      arguments: {  }
       filters:
         label:
           id: label
-          table: resource
+          table: facility
           field: label
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: facility
           entity_field: label
           plugin_id: string
           operator: contains
@@ -479,21 +452,31 @@ display:
           exposed: true
           expose:
             operator_id: label_op
-            label: Title
+            label: Name
             description: ''
             use_operator: false
             operator: label_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: title
+            identifier: name
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              author: '0'
+              collections_donor: '0'
               editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
               super_administrator: '0'
+              volunteer: '0'
               working_group_member: '0'
             placeholder: ''
           is_grouped: false
@@ -510,12 +493,12 @@ display:
             group_items: {  }
         bundle:
           id: bundle
-          table: resource
+          table: facility
           field: bundle
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: facility
           entity_field: bundle
           plugin_id: bundle
           operator: in
@@ -524,7 +507,7 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: Type
+            label: 'Facility type'
             description: ''
             use_operator: false
             operator: bundle_op
@@ -537,8 +520,18 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              author: '0'
+              collections_donor: '0'
               editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
               super_administrator: '0'
+              volunteer: '0'
               working_group_member: '0'
             reduce: false
           is_grouped: false
@@ -555,12 +548,12 @@ display:
             group_items: {  }
         status:
           id: status
-          table: resource
+          table: facility
           field: status
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: resource
+          entity_type: facility
           entity_field: status
           plugin_id: boolean
           operator: '='
@@ -601,6 +594,10 @@ display:
                 title: Unpublished
                 operator: '='
                 value: '0'
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: table
         options:
@@ -609,115 +606,46 @@ display:
           default_row_class: true
           columns:
             label: label
-            bundle: bundle
-            name: name
-            status: status
-            changed: changed
-            operations: operations
-          default: changed
+          default: '-1'
           info:
             label:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            bundle:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            name:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-low
-            status:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            changed:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            operations:
-              align: ''
-              separator: ''
-              empty_column: false
               responsive: ''
           override: true
-          sticky: true
+          sticky: false
           summary: ''
-          empty_table: true
+          empty_table: false
           caption: ''
           description: ''
       row:
-        type: fields
-      query:
-        type: views_query
-        options:
-          query_comment: ''
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_tags: {  }
-      relationships:
-        uid:
-          id: uid
-          table: resource
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: User
-          entity_type: resource
-          entity_field: uid
-          plugin_id: standard
-          required: true
-      header: {  }
-      footer: {  }
+        type: 'entity:facility'
+        options: {  }
+      defaults:
+        empty: false
+        access: false
+        cache: false
+        pager: false
+        style: false
+        row: false
+        relationships: true
+        fields: false
+        filters: false
+        filter_groups: false
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user.permissions
-      tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: admin/content/resources/%
+      path: admin/content/facility
       menu:
-        type: 'default tab'
-        title: Resources
+        type: tab
+        title: Facilities
         description: ''
         weight: 0
         expanded: false
-        menu_name: main
+        menu_name: admin
         parent: ''
         context: '0'
-      tab_options:
-        type: normal
-        title: Resources
-        description: 'Find and manage resources'
-        weight: 0
     cache_metadata:
       max-age: -1
       contexts:
