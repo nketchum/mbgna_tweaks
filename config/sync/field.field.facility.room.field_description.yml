@@ -1,0 +1,32 @@
+uuid: 9f2e2e6a-61cd-46a6-b09b-08a582ab3e03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_description
+    - filter.format.full_html
+    - filter.format.minimal_html
+    - mbgna_facility.facility_type.room
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: facility.room.field_description
+field_name: field_description
+entity_type: facility
+bundle: room
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - minimal_html
+    - full_html
+field_type: text_with_summary

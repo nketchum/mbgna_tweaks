@@ -1,0 +1,29 @@
+uuid: 9b275ce2-b515-4430-9b5c-e557a687d2ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_image
+    - mbgna_facility.facility_type.room
+    - media.type.image
+id: facility.room.field_image
+field_name: field_image
+entity_type: facility
+bundle: room
+label: Image
+description: 'Display image that is placed above the body text.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 091fdabd-9da0-4712-a9de-836c8e8c63e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_capacity
+    - mbgna_facility.facility_type.room
+id: facility.room.field_capacity
+field_name: field_capacity
+entity_type: facility
+bundle: room
+label: Capacity
+description: 'Enter a whole number.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

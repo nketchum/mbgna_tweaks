@@ -1,0 +1,70 @@
+uuid: eeb637e8-f798-432c-8be6-d12510268d55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.facility.room.field_capacity
+    - field.field.facility.room.field_description
+    - field.field.facility.room.field_image
+    - field.field.facility.room.field_images
+    - mbgna_facility.facility_type.room
+  module:
+    - text
+id: facility.room.default
+targetEntityType: facility
+bundle: room
+mode: default
+content:
+  field_capacity:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_images:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: enabled-disabled
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
