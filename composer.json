@@ -134,7 +134,7 @@
         "drupal/token_custom": "^1.0@alpha",
         "drupal/token_custom_plus": "^2.0",
         "drupal/twig_tweak": "^3.2",
-        "drupal/webform": "^6.1",
+        "drupal/webform": "^6.2@beta",
         "drush/drush": "^11.0",
         "jackmoore/colorbox": "master",
         "kenwheeler/slick": "^1.7",
