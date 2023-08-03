@@ -1,16 +1,18 @@
-uuid: 30150f10-b455-42ed-977a-49e2a03cb6c6
+uuid: 0a6ca413-f001-480f-a297-e0fbea6417e8
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.room
+    - node.type.webform
   module:
     - text
-id: node.room.body
+_core:
+  default_config_hash: '-Qu0UyzQ0jD4TDYq8fOasS-D-vGd3gSwzi15PzRJUD4'
+id: node.webform.body
 field_name: body
 entity_type: node
-bundle: room
+bundle: webform
 label: Body
 description: ''
 required: false
@@ -20,4 +22,5 @@ default_value_callback: ''
 settings:
   display_summary: true
   required_summary: false
+  allowed_formats: {  }
 field_type: text_with_summary

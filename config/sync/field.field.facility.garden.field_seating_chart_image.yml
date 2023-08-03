@@ -1,0 +1,29 @@
+uuid: f80bb4d0-0663-449a-8752-2d2e7c29faeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_seating_chart_image
+    - mbgna_facility.facility_type.garden
+    - media.type.image
+id: facility.garden.field_seating_chart_image
+field_name: field_seating_chart_image
+entity_type: facility
+bundle: garden
+label: 'Seating chart'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

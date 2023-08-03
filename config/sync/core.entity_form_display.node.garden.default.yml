@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.garden.body
     - field.field.node.garden.field_dxpr_page
+    - field.field.node.garden.field_facilities
     - node.type.garden
   module:
     - commerce
     - hide_revision_field
+    - inline_entity_form
     - path
     - text
 id: node.garden.default
@@ -41,6 +43,24 @@ content:
       autocomplete_threshold: 7
       autocomplete_size: 60
       autocomplete_placeholder: ''
+    third_party_settings: {  }
+  field_facilities:
+    type: inline_entity_form_complex
+    weight: 123
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: facility
+      label_plural: facilities
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
     third_party_settings: {  }
   path:
     type: path

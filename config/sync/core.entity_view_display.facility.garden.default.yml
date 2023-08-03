@@ -1,0 +1,161 @@
+uuid: 9cbb52a6-a681-4516-9efc-b6c1468a84c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.facility.garden.field_capacity
+    - field.field.facility.garden.field_description
+    - field.field.facility.garden.field_garden
+    - field.field.facility.garden.field_inquiry_webform
+    - field.field.facility.garden.field_location_map_image
+    - field.field.facility.garden.field_pricing_rates
+    - field.field.facility.garden.field_seating_chart_image
+    - image.style.medium_square_ish_rectangle
+    - mbgna_facility.facility_type.garden
+  module:
+    - blazy
+    - entity_reference_revisions
+    - field_formatter_class
+    - text
+    - webform
+id: facility.garden.default
+targetEntityType: facility
+bundle: garden
+mode: default
+content:
+  field_capacity:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_garden:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_inquiry_webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 4
+    region: content
+  field_location_map_image:
+    type: blazy_media
+    label: above
+    settings:
+      caption:
+        title: '0'
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: auto
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: colorbox
+      ratio: ''
+      thumbnail_style: medium_square_ish_rectangle
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 6
+    region: content
+  field_pricing_rates:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_seating_chart_image:
+    type: blazy_media
+    label: above
+    settings:
+      caption:
+        title: '0'
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: auto
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: colorbox
+      ratio: ''
+      thumbnail_style: medium_square_ish_rectangle
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 7
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  status: true

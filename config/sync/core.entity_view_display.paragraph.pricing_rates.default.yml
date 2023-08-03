@@ -1,0 +1,33 @@
+uuid: 3bec8166-db83-4507-94e9-0d38874cf372
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pricing_rates.field_amount
+    - field.field.paragraph.pricing_rates.field_amount_per
+    - paragraphs.paragraphs_type.pricing_rates
+id: paragraph.pricing_rates.default
+targetEntityType: paragraph
+bundle: pricing_rates
+mode: default
+content:
+  field_amount:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_amount_per:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

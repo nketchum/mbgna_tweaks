@@ -1,19 +1,20 @@
-uuid: 70d19c19-cce7-4aa2-8f02-a4209b5b601f
+uuid: e85f687c-7c8d-43b1-a2cb-b347d0e41e18
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_dxpr_page
+    - field.storage.facility.field_garden
+    - mbgna_facility.facility_type.garden
     - node.type.drag_and_drop_page
-    - node.type.room
-id: node.room.field_dxpr_page
-field_name: field_dxpr_page
-entity_type: node
-bundle: room
-label: 'DXPR page'
+    - node.type.garden
+id: facility.garden.field_garden
+field_name: field_garden
+entity_type: facility
+bundle: garden
+label: Garden
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -21,9 +22,10 @@ settings:
   handler_settings:
     target_bundles:
       drag_and_drop_page: drag_and_drop_page
+      garden: garden
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: drag_and_drop_page
 field_type: entity_reference

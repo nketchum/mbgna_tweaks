@@ -6,7 +6,10 @@ dependencies:
     - commerce_checkout
     - commerce_product
     - contact
+    - mbgna_facility
+    - mbgna_organization
     - mbgna_plant
+    - mbgna_resource
     - media
     - system
 _core:
@@ -20,5 +23,8 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'view commerce_product'
+  - 'view facility'
   - 'view media'
+  - 'view organization'
   - 'view plant'
+  - 'view resource'

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.garden.body
     - field.field.node.garden.field_dxpr_page
+    - field.field.node.garden.field_facilities
     - node.type.garden
   module:
     - manage_display
@@ -40,4 +41,5 @@ content:
 hidden:
   created: true
   field_dxpr_page: true
+  field_facilities: true
   uid: true

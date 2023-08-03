@@ -1,0 +1,44 @@
+uuid: 46dd9908-3e7d-48c5-ba58-3bea6798ce86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_pricing_rates
+    - mbgna_facility.facility_type.room
+    - paragraphs.paragraphs_type.pricing_rates
+  module:
+    - entity_reference_revisions
+    - field_display_label
+third_party_settings:
+  field_display_label:
+    display_label: Rate
+id: facility.room.field_pricing_rates
+field_name: field_pricing_rates
+entity_type: facility
+bundle: room
+label: 'Pricing rates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      pricing_rates: pricing_rates
+    negate: 0
+    target_bundles_drag_drop:
+      content_card:
+        weight: 5
+        enabled: false
+      content_section:
+        weight: 6
+        enabled: false
+      plant_dimensions:
+        weight: 7
+        enabled: false
+      pricing_rates:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

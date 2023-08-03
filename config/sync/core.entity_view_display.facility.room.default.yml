@@ -7,9 +7,17 @@ dependencies:
     - field.field.facility.room.field_description
     - field.field.facility.room.field_image
     - field.field.facility.room.field_images
+    - field.field.facility.room.field_inquiry_webform
+    - field.field.facility.room.field_pricing_rates
+    - image.style.large_square_ish_rectangle
+    - image.style.medium_square_ish_rectangle
     - mbgna_facility.facility_type.room
   module:
+    - blazy
+    - entity_reference_revisions
+    - field_formatter_class
     - text
+    - webform
 id: facility.room.default
 targetEntityType: facility
 bundle: room
@@ -22,32 +30,116 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_image:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
     third_party_settings: {  }
     weight: 2
     region: content
+  field_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        title: title
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: large_square_ish_rectangle
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
   field_images:
-    type: entity_reference_entity_view
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        title: title
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: grid
+      background: false
+      box_caption: title
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: true
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: large_square_ish_rectangle
+      media_switch: colorbox
+      ratio: ''
+      thumbnail_style: medium_square_ish_rectangle
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 6
+    region: content
+  field_inquiry_webform:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+      lazy: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 5
+    region: content
+  field_pricing_rates:
+    type: entity_reference_revisions_entity_view
     label: above
     settings:
       view_mode: default
-      link: false
+      link: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   label:
     type: string
@@ -55,16 +147,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -5
-    region: content
-  status:
-    type: boolean
-    label: above
-    settings:
-      format: enabled-disabled
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  status: true

@@ -7,6 +7,7 @@ excludes:
   - web/profiles
   - web/modules
   - web/themes
+  - "!web/modules/contrib/mbgna_facility"
   - "!web/modules/contrib/mbgna_organization"
   - "!web/modules/contrib/mbgna_plant"
   - "!web/modules/contrib/mbgna_resource"

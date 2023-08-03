@@ -1,0 +1,110 @@
+uuid: a71b222b-6e45-4715-b3e5-6b2b0e764aef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.facility.garden.field_capacity
+    - field.field.facility.garden.field_description
+    - field.field.facility.garden.field_garden
+    - field.field.facility.garden.field_inquiry_webform
+    - field.field.facility.garden.field_location_map_image
+    - field.field.facility.garden.field_pricing_rates
+    - field.field.facility.garden.field_seating_chart_image
+    - mbgna_facility.facility_type.garden
+  module:
+    - allowed_formats
+    - media_library
+    - paragraphs
+    - text
+    - webform
+id: facility.garden.default
+targetEntityType: facility
+bundle: garden
+mode: default
+content:
+  field_capacity:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_garden:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_inquiry_webform:
+    type: webform_entity_reference_select
+    weight: 7
+    region: content
+    settings:
+      default_data: false
+      webforms: {  }
+    third_party_settings: {  }
+  field_location_map_image:
+    type: media_library_widget
+    weight: 5
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_pricing_rates:
+    type: paragraphs
+    weight: 4
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_seating_chart_image:
+    type: media_library_widget
+    weight: 6
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+hidden: {  }

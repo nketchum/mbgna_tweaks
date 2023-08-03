@@ -2,6 +2,8 @@ uuid: d476ad88-db71-4a29-bbd0-33ef13769d22
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.webform_default
   module:
     - commerce_checkout
     - commerce_order
@@ -9,7 +11,11 @@ dependencies:
     - commerce_product
     - contact
     - file
+    - filter
+    - mbgna_facility
+    - mbgna_organization
     - mbgna_plant
+    - mbgna_resource
     - media
     - system
     - toolbar
@@ -27,7 +33,11 @@ permissions:
   - 'change own username'
   - 'delete own files'
   - 'manage own commerce_payment_method'
+  - 'use text format webform_default'
   - 'view commerce_product'
+  - 'view facility'
   - 'view media'
+  - 'view organization'
   - 'view own commerce_order'
   - 'view plant'
+  - 'view resource'

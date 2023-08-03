@@ -1,0 +1,29 @@
+uuid: e6c196dd-80bb-42fa-b951-9163cc05e475
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_location_map_image
+    - mbgna_facility.facility_type.garden
+    - media.type.image
+id: facility.garden.field_location_map_image
+field_name: field_location_map_image
+entity_type: facility
+bundle: garden
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

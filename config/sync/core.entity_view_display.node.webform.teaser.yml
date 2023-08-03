@@ -1,43 +1,45 @@
-uuid: 28b57f3c-a331-475b-9100-6bb77d90f7f6
+uuid: 67bfdb7e-5a64-4510-989b-8b46a51372f1
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.room.body
-    - field.field.node.room.field_dxpr_page
-    - node.type.room
+    - field.field.node.webform.body
+    - field.field.node.webform.webform
+    - node.type.webform
   module:
     - manage_display
     - text
-id: node.room.teaser
+_core:
+  default_config_hash: Ls5l3Xs7-YstJnurxFLKj38Exqr2JMZs1j9YeX1Kh2o
+id: node.webform.teaser
 targetEntityType: node
-bundle: room
+bundle: webform
 mode: teaser
 content:
   body:
-    type: text_summary_or_trimmed
     label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 101
     region: content
   links:
+    weight: 100
     settings: {  }
     third_party_settings: {  }
-    weight: 100
     region: content
   title:
     type: title
     label: hidden
-    settings:
-      link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
     weight: -49
     region: content
+    settings:
+      tag: h2
+      link_to_entity: true
+    third_party_settings: {  }
 hidden:
   created: true
-  field_dxpr_page: true
   uid: true
+  webform: true

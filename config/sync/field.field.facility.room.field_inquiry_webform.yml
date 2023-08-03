@@ -1,0 +1,29 @@
+uuid: 75fd67fe-d6cc-4af6-ab55-afd329f6d9f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_inquiry_webform
+    - mbgna_facility.facility_type.room
+  module:
+    - field_display_label
+    - webform
+third_party_settings:
+  field_display_label:
+    display_label: Inquiries
+id: facility.room.field_inquiry_webform
+field_name: field_inquiry_webform
+entity_type: facility
+bundle: room
+label: 'Inquiry webform'
+description: 'Add a webform to this facility to let visitors contact MBGNA.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

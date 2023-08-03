@@ -1,0 +1,23 @@
+uuid: 73649cfe-5ac8-4b93-a5d6-1cc0eafb4c58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_capacity
+    - mbgna_facility.facility_type.garden
+id: facility.garden.field_capacity
+field_name: field_capacity
+entity_type: facility
+bundle: garden
+label: Capacity
+description: 'Enter a whole number.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,32 @@
+uuid: fdb79a8a-02ca-42a9-96cf-39fffb54984c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_inquiry_webform
+    - mbgna_facility.facility_type.garden
+    - webform.webform.inquiries_facility
+  module:
+    - webform
+id: facility.garden.field_inquiry_webform
+field_name: field_inquiry_webform
+entity_type: facility
+bundle: garden
+label: 'Reserve this garden'
+description: 'Add a webform to this facility to let visitors contact MBGNA.'
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 8c36edea-862d-4e5e-986d-e3634b6a4330
+    default_data: null
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

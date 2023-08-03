@@ -1,0 +1,8 @@
+uuid: 382cb489-db2b-4eee-ac1a-51369d4e12b3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Topics of interest'
+vid: interest
+description: 'Provides a list of interest topics for form submissions and custom reports.'
+weight: 0

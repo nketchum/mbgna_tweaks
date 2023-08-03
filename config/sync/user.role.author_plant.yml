@@ -5,6 +5,7 @@ dependencies:
   module:
     - field_permissions
     - file
+    - mbgna_plant
 id: author_plant
 label: 'Plant database author'
 weight: -2
@@ -20,6 +21,7 @@ permissions:
   - 'create field_status_date'
   - 'create field_trunks'
   - 'create field_year_acquired'
+  - 'create plant'
   - 'delete own files'
   - 'edit own field_dimensions'
   - 'edit own field_last_repot'

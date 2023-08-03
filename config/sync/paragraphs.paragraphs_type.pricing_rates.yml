@@ -1,0 +1,10 @@
+uuid: 81edad5e-66fc-4cc7-be2f-0c28060c35f1
+langcode: en
+status: true
+dependencies: {  }
+id: pricing_rates
+label: 'Pricing rates'
+icon_uuid: null
+icon_default: null
+description: 'Provides granular pricing rates.'
+behavior_plugins: {  }

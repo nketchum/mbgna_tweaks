@@ -1,0 +1,31 @@
+uuid: ff14d5f6-fad5-49bb-a040-f0fa685c9465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pricing_rates.field_amount
+    - field.field.paragraph.pricing_rates.field_amount_per
+    - paragraphs.paragraphs_type.pricing_rates
+id: paragraph.pricing_rates.default
+targetEntityType: paragraph
+bundle: pricing_rates
+mode: default
+content:
+  field_amount:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_amount_per:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

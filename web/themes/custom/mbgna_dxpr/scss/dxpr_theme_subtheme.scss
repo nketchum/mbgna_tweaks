@@ -2,6 +2,7 @@
 
 @import "./dxpr_theme_subtheme_block.scss";
 @import "./dxpr_theme_subtheme_component.scss";
+@import "./dxpr_theme_subtheme_entity_facility.scss";
 @import "./dxpr_theme_subtheme_font.scss";
 @import "./dxpr_theme_subtheme_node.scss";
 @import "./dxpr_theme_subtheme_node_event.scss";
@@ -18,4 +19,9 @@ a:focus,
 
 .smaller {
   line-height: 1.25em;
+}
+
+.container {
+  padding-left: unset;
+  padding-right: unset;
 }

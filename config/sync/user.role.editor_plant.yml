@@ -5,12 +5,15 @@ dependencies:
   module:
     - field_permissions
     - file
+    - mbgna_plant
 id: editor_plant
 label: 'Plant database editor'
 weight: -1
 is_admin: null
 permissions:
+  - 'create plant'
   - 'delete own files'
+  - 'delete plant'
   - 'edit field_dimensions'
   - 'edit field_last_repot'
   - 'edit field_legacy_id'
@@ -21,6 +24,7 @@ permissions:
   - 'edit field_status_date'
   - 'edit field_trunks'
   - 'edit field_year_acquired'
+  - 'edit plant'
   - 'view field_dimensions'
   - 'view field_last_repot'
   - 'view field_legacy_id'

@@ -17,12 +17,17 @@ dependencies:
     - dxpr_builder
     - file
     - filter
+    - mbgna_facility
+    - mbgna_organization
+    - mbgna_plant
+    - mbgna_resource
     - media
     - menu_admin_per_menu
     - node
     - path
     - system
     - taxonomy
+    - webform
 id: editor
 label: Editor
 weight: -6
@@ -32,17 +37,23 @@ permissions:
   - 'access block library'
   - 'access comments'
   - 'access content overview'
+  - 'access facility overview'
   - 'access files overview'
   - 'access media overview'
+  - 'access organization overview'
+  - 'access plant overview'
+  - 'access resource overview'
   - 'access taxonomy overview'
   - 'access user contact forms'
   - 'access user profiles'
+  - 'access webform overview'
   - 'administer block content'
   - 'administer block types'
   - 'administer blocks'
   - 'administer comments'
   - 'administer dxpr_builder_profile'
   - 'administer footer menu items'
+  - 'administer internal menu items'
   - 'administer main menu items'
   - 'administer mbgna_dxpr content_bottom'
   - 'administer mbgna_dxpr footer'
@@ -50,15 +61,28 @@ permissions:
   - 'administer nodes'
   - 'administer pre-footer menu items'
   - 'administer users'
+  - 'administer webform submission'
   - 'bypass node access'
+  - 'create facility'
   - 'create media'
+  - 'create organization'
+  - 'create plant'
+  - 'create resource'
   - 'create simple_text block content'
   - 'create terms in kickers'
   - 'create url aliases'
   - 'delete any media'
   - 'delete any simple_text block content'
+  - 'delete facility'
+  - 'delete organization'
   - 'delete own files'
+  - 'delete plant'
+  - 'delete resource'
   - 'delete terms in kickers'
+  - 'edit facility'
+  - 'edit organization'
+  - 'edit plant'
+  - 'edit resource'
   - 'edit terms in kickers'
   - 'update any media'
   - 'update any simple_text block content'
