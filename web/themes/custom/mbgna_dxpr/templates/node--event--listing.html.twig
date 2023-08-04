@@ -80,13 +80,12 @@
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content').addClass('row') }}>
     <div class="col-md-6 col-lg-4 col-secondary">
-      <div class="field field--name-field-date-smart-wrapper field--type-field-wrapper">
-        {{ content.field_date_smart }}
-      </div>
+      {{ content.field_image }} 
     </div>
     <div class="col-md-6 col-lg-8 col-main">
       {{ content.field_event_categories }}
       {{ content.title }}
+      {{ content.field_date_smart }}
       {{ content.body }}
       {{ content.field_dollar_amount }}
       {{ content.field_location }}
