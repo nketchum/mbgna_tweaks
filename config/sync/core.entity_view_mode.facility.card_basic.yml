@@ -1,0 +1,10 @@
+uuid: 6946ce02-9d86-485c-8736-29c33fc37d1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_facility
+id: facility.card_basic
+label: 'Card (basic)'
+targetEntityType: facility
+cache: true

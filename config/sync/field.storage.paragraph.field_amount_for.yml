@@ -1,20 +1,21 @@
-uuid: e32dc06d-96d1-48a1-bc21-ca6c534c1730
+uuid: 1ad3952c-50d3-46b0-89c9-a282af0022f4
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - node
-    - taxonomy
+    - paragraphs
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_location
-field_name: field_location
-entity_type: node
-type: entity_reference
+id: paragraph.field_amount_for
+field_name: field_amount_for
+entity_type: paragraph
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

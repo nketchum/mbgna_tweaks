@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a facility entity.
+ *
+ * This template is used when viewing a canonical facility page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_facility()
+ */
+#}
+<article{{ attributes.addClass('facility', 'item', view_mode) }}>
+  <div class="row">
+    <div class="col-md-12">
+      {% if content %}
+        {{- content.field_image -}}
+        <h4><a href="{{- url -}}">{{- content.label|render|striptags -}}</a></h4>
+        {% if content.field_location %}
+          <div class="field field--name-field-location field--type-entity-reference field--label-hidden field__item">
+            <span clas="location-label"><strong>Location:</strong></span>
+            <span class="location-value">{{ content.field_location|render|striptags }}</span>
+          </div>
+        {% endif %}
+        {% if content.field_capacity %}
+          <div class="field field--name-field-capacity field--type-integer field--label-hidden field__item">
+            <span class="capacity-label"><strong>Capacity:</strong></span>
+            <span class="capacity-number">{{- content.field_capacity.0 -}}</span>
+          </div>
+        {% endif %}
+        {% if url %}
+          <div class="field field--name-label field--type-string field--label-hidden field__item"><a href="{{- url -}}" class="btn btn-default">Rental info ›</a></div>
+        {% endif %}        
+      {% endif %}
+    </div>
+  </div>
+</article>

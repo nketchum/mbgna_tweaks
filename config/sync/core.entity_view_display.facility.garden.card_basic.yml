@@ -1,0 +1,66 @@
+uuid: adffec41-7f96-4444-a0ea-6c73374fd09d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.facility.card_basic
+    - field.field.facility.garden.field_capacity
+    - field.field.facility.garden.field_description
+    - field.field.facility.garden.field_garden
+    - field.field.facility.garden.field_image
+    - field.field.facility.garden.field_images
+    - field.field.facility.garden.field_inquiry_webform
+    - field.field.facility.garden.field_location_map_image
+    - field.field.facility.garden.field_pricing_rates
+    - field.field.facility.garden.field_seating_chart_image
+    - image.style.large_square_ish_rectangle
+    - mbgna_facility.facility_type.garden
+  module:
+    - field_formatter_class
+    - media
+id: facility.garden.card_basic
+targetEntityType: facility
+bundle: garden
+mode: card_basic
+content:
+  field_capacity:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large_square_ish_rectangle
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden:
+  field_description: true
+  field_garden: true
+  field_images: true
+  field_inquiry_webform: true
+  field_location_map_image: true
+  field_pricing_rates: true
+  field_seating_chart_image: true
+  status: true

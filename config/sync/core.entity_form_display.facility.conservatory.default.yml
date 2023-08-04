@@ -1,39 +1,48 @@
-uuid: a71b222b-6e45-4715-b3e5-6b2b0e764aef
+uuid: d396fb3e-fb58-44a8-99aa-3688a15273c7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.facility.garden.field_capacity
-    - field.field.facility.garden.field_description
-    - field.field.facility.garden.field_garden
-    - field.field.facility.garden.field_image
-    - field.field.facility.garden.field_images
-    - field.field.facility.garden.field_inquiry_webform
-    - field.field.facility.garden.field_location_map_image
-    - field.field.facility.garden.field_pricing_rates
-    - field.field.facility.garden.field_seating_chart_image
-    - mbgna_facility.facility_type.garden
+    - field.field.facility.conservatory.field_capacity
+    - field.field.facility.conservatory.field_conservatory
+    - field.field.facility.conservatory.field_description
+    - field.field.facility.conservatory.field_image
+    - field.field.facility.conservatory.field_images
+    - field.field.facility.conservatory.field_inquiry_webform
+    - field.field.facility.conservatory.field_location
+    - field.field.facility.conservatory.field_pricing_rates
+    - mbgna_facility.facility_type.conservatory
   module:
     - allowed_formats
     - media_library
     - paragraphs
     - text
     - webform
-id: facility.garden.default
+id: facility.conservatory.default
 targetEntityType: facility
-bundle: garden
+bundle: conservatory
 mode: default
 content:
   field_capacity:
     type: number
-    weight: 3
+    weight: 4
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_conservatory:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_description:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 9
@@ -44,48 +53,37 @@ content:
       allowed_formats:
         hide_help: '1'
         hide_guidelines: '1'
-  field_garden:
-    type: entity_reference_autocomplete
-    weight: 1
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 7
+    weight: 6
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_images:
     type: media_library_widget
-    weight: 8
+    weight: 7
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_inquiry_webform:
     type: webform_entity_reference_select
-    weight: 9
+    weight: 8
     region: content
     settings:
       default_data: false
       webforms: {  }
     third_party_settings: {  }
-  field_location_map_image:
-    type: media_library_widget
-    weight: 5
+  field_location:
+    type: options_select
+    weight: 1
     region: content
-    settings:
-      media_types: {  }
+    settings: {  }
     third_party_settings: {  }
   field_pricing_rates:
     type: paragraphs
-    weight: 4
+    weight: 5
     region: content
     settings:
       title: Paragraph
@@ -101,13 +99,6 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_seating_chart_image:
-    type: media_library_widget
-    weight: 6
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   label:
     type: string_textfield
     weight: 0
@@ -118,7 +109,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 9
     region: content
     settings:
       display_label: false

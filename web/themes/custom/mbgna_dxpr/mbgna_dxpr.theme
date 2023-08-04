@@ -81,6 +81,8 @@ function mbgna_dxpr_preprocess_page(&$variables) {
  * Implements template_preprocess_node()
  */
 function mbgna_dxpr_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+  
   // // Convert times to timestamps for iCal.
   // if (array_key_exists('field_date_smart', $variables['elements'])) {
   //   // Get the timestamps.

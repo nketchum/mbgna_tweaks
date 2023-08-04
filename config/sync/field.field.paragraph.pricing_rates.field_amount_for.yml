@@ -1,0 +1,19 @@
+uuid: 109bed3d-4ba0-4a73-9530-9abb6b040c94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_amount_for
+    - paragraphs.paragraphs_type.pricing_rates
+id: paragraph.pricing_rates.field_amount_for
+field_name: field_amount_for
+entity_type: paragraph
+bundle: pricing_rates
+label: For
+description: 'The amount or variety or description relating to this particular price.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

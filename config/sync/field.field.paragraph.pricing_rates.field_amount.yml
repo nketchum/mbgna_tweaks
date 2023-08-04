@@ -16,7 +16,7 @@ entity_type: paragraph
 bundle: pricing_rates
 label: Amount
 description: 'Provide a dollar amount, e.g. "9.99" (do not include quotes or the dollar sign).'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

@@ -1,22 +1,22 @@
-uuid: e85f687c-7c8d-43b1-a2cb-b347d0e41e18
+uuid: c83940e4-dcdf-4b13-830f-9ea12fe20a73
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.facility.field_garden
-    - mbgna_facility.facility_type.garden
+    - field.storage.facility.field_conservatory
+    - mbgna_facility.facility_type.conservatory
+    - node.type.conservatory
     - node.type.drag_and_drop_page
-    - node.type.garden
   module:
     - field_display_label
 third_party_settings:
   field_display_label:
-    display_label: 'Garden details'
-id: facility.garden.field_garden
-field_name: field_garden
+    display_label: 'Conservatory details'
+id: facility.conservatory.field_conservatory
+field_name: field_conservatory
 entity_type: facility
-bundle: garden
-label: 'Garden page'
+bundle: conservatory
+label: 'Conservatory page'
 description: ''
 required: false
 translatable: false
@@ -26,11 +26,11 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      conservatory: conservatory
       drag_and_drop_page: drag_and_drop_page
-      garden: garden
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: drag_and_drop_page
+    auto_create_bundle: conservatory
 field_type: entity_reference

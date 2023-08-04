@@ -19,6 +19,23 @@
       margin-top: 5px !important;
     }
   }
+
 }
 
+.event.listing {
+  .field--name-field-date-smart {
+    font-size: 18px;
+    font-weight: bold;
+  }
 
+  .field--name-field-location {
+    .field__label {
+      font-weight: normal;
+      padding-right: 0;
+
+      &::after {
+        content: "\a0";
+      }
+    }
+  }
+}

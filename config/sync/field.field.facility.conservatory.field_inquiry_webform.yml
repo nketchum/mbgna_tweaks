@@ -1,10 +1,10 @@
-uuid: fdb79a8a-02ca-42a9-96cf-39fffb54984c
+uuid: f192a42f-d098-43c6-b157-227ae718ba0a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.facility.field_inquiry_webform
-    - mbgna_facility.facility_type.garden
+    - mbgna_facility.facility_type.conservatory
     - webform.webform.inquiries_facility
   module:
     - field_display_label
@@ -12,10 +12,10 @@ dependencies:
 third_party_settings:
   field_display_label:
     display_label: Inquiries
-id: facility.garden.field_inquiry_webform
+id: facility.conservatory.field_inquiry_webform
 field_name: field_inquiry_webform
 entity_type: facility
-bundle: garden
+bundle: conservatory
 label: 'Inquiry webform'
 description: 'Add a webform to this facility to let visitors contact MBGNA.'
 required: false

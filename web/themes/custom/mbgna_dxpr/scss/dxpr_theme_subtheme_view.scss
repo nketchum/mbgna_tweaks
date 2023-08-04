@@ -20,3 +20,32 @@
     padding: 0 30px;
   }
 }
+
+.view {
+  &.grid {
+    & > .view-content {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+
+      @media (min-width: 1201px) {
+        margin: 0 -45px;
+      }
+
+      & > .views-row {
+        align-items: flex-end;
+        display: flex;
+        flex-basis: 33%;
+        padding: 15px;
+
+        @media (min-width: 1201px) {
+          padding: 45px;
+        }
+
+        .field--name-field-image img {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

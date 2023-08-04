@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a facility entity.
+ *
+ * This template is used when viewing a canonical facility page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_facility()
+ */
+#}
+<article{{ attributes.addClass('facility', view_mode) }}>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="article-heading">
+        {% if view_mode == 'full' %}
+          <h2 class="page-title">{{ title_prefix }}{{ content.label|render|striptags|trim }}{{ title_suffix }}</h2>
+          {{- content.field_garden -}}
+          {{- content.field_conservatory -}}
+        {% else %}
+          <h3>{{ title_prefix }}{{ content.label|render|striptags|trim }}{{ title_suffix }}</h3>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="article-body row">
+    <div class="article-body-content col-md-8">
+      {% if content %}
+        {{- content|without('field_capacity', 'field_pricing_rates', 'field_garden', 'field_seating_chart_image', 'field_location_map_image', 'field_garden', 'field_conservatory') -}}
+      {% endif %}
+    </div>
+    <div class="col-md-4 article-aside article-aside-right">
+      {% if content %}
+        {{- content.field_capacity -}}
+        {{- content.field_pricing_rates -}}
+        {{- content.field_seating_chart_image -}}
+        {{- content.field_location_map_image -}}
+      {% endif %}
+    </div>
+  </div>
+</article>

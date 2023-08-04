@@ -1,0 +1,23 @@
+uuid: 6b3e86d8-4fc1-4964-acf5-97fa491e11a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_capacity
+    - mbgna_facility.facility_type.conservatory
+id: facility.conservatory.field_capacity
+field_name: field_capacity
+entity_type: facility
+bundle: conservatory
+label: Capacity
+description: 'Enter a whole number.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

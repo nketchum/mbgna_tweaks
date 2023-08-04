@@ -30,7 +30,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_description:
     type: text_default
@@ -44,7 +44,7 @@ content:
     label: hidden
     settings:
       caption:
-        title: title
+        title: '0'
         alt: '0'
       class: ''
       id: ''
@@ -85,7 +85,7 @@ content:
     label: hidden
     settings:
       caption:
-        title: title
+        title: '0'
         alt: '0'
       class: ''
       id: ''
@@ -113,24 +113,24 @@ content:
       media_switch: colorbox
       ratio: ''
       thumbnail_style: medium_square_ish_rectangle
-      grid: ''
-      grid_medium: ''
-      grid_small: ''
+      grid: '3'
+      grid_medium: '3'
+      grid_small: '1'
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 6
+    weight: 3
     region: content
   field_inquiry_webform:
     type: webform_entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       source_entity: true
       lazy: true
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 5
+    weight: 6
     region: content
   field_pricing_rates:
     type: entity_reference_revisions_entity_view
@@ -139,7 +139,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   label:
     type: string

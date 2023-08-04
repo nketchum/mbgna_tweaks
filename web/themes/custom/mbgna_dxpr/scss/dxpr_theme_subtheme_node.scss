@@ -115,3 +115,11 @@
     }
   }
 }
+
+article.listing {
+  & > .content {
+    & > .col-secondary {
+      padding-right: 60px;
+    }
+  }
+}

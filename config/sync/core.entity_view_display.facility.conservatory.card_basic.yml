@@ -1,0 +1,73 @@
+uuid: 35d85b3c-fabd-4f37-af0d-fb601ca906eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.facility.card_basic
+    - field.field.facility.conservatory.field_capacity
+    - field.field.facility.conservatory.field_conservatory
+    - field.field.facility.conservatory.field_description
+    - field.field.facility.conservatory.field_image
+    - field.field.facility.conservatory.field_images
+    - field.field.facility.conservatory.field_inquiry_webform
+    - field.field.facility.conservatory.field_location
+    - field.field.facility.conservatory.field_pricing_rates
+    - image.style.large_square_ish_rectangle
+    - mbgna_facility.facility_type.conservatory
+  module:
+    - field_formatter_class
+    - media
+id: facility.conservatory.card_basic
+targetEntityType: facility
+bundle: conservatory
+mode: card_basic
+content:
+  field_capacity:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large_square_ish_rectangle
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 2
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden:
+  field_conservatory: true
+  field_description: true
+  field_images: true
+  field_inquiry_webform: true
+  field_pricing_rates: true
+  status: true

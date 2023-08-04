@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.pricing_rates.field_amount
-    - field.field.paragraph.pricing_rates.field_amount_per
+    - field.field.paragraph.pricing_rates.field_amount_for
     - paragraphs.paragraphs_type.pricing_rates
 id: paragraph.pricing_rates.default
 targetEntityType: paragraph
@@ -18,9 +18,9 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
-  field_amount_per:
+  field_amount_for:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60

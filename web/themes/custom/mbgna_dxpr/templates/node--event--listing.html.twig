@@ -80,16 +80,14 @@
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content').addClass('row') }}>
     <div class="col-md-6 col-lg-4 col-secondary">
-      {{ content.field_image }} 
+      {{ content.field_image }}
     </div>
     <div class="col-md-6 col-lg-8 col-main">
       {{ content.field_event_categories }}
       {{ content.title }}
       {{ content.field_date_smart }}
-      {{ content.body }}
-      {{ content.field_dollar_amount }}
       {{ content.field_location }}
-      {{ content.field_website }}
+      {{ content.body }}
       <div class="clearfix text-formatted field field--name-event-link field--type-button field__item"><a href="{{ url }}" class="btn btn-primary">Learn more ›</a></div>
     </div>
   </div>

@@ -1,22 +1,17 @@
-uuid: 37060660-e3dc-46f9-8243-ce1182f8cfad
+uuid: 3cad4ce3-3b79-44ca-bf74-8a23ff32090c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_location
-    - node.type.event
+    - field.storage.facility.field_location
+    - mbgna_facility.facility_type.conservatory
     - taxonomy.vocabulary.location
-  module:
-    - field_display_label
-third_party_settings:
-  field_display_label:
-    display_label: At
-id: node.event.field_location
+id: facility.conservatory.field_location
 field_name: field_location
-entity_type: node
-bundle: event
-label: 'MBGNA Location'
-description: 'Select a location if this event occurs at a major MBGNA location.'
+entity_type: facility
+bundle: conservatory
+label: Location
+description: ''
 required: false
 translatable: false
 default_value: {  }

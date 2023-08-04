@@ -1,19 +1,19 @@
-uuid: c3cc1c80-55d7-4a17-8c73-d4cb5a665cde
+uuid: c3863a30-88f4-474e-80fc-8b6e605e60b6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.facility.field_images
+    - mbgna_facility.facility_type.garden
     - media.type.image
-    - node.type.event
-id: node.event.field_image
-field_name: field_image
-entity_type: node
-bundle: event
-label: Image
+id: facility.garden.field_images
+field_name: field_images
+entity_type: facility
+bundle: garden
+label: 'Image gallery'
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
