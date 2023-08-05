@@ -28,7 +28,7 @@ settings:
   level: 1
   depth: 1
   expand_all_items: false
-  parent: 'main:menu_link_content:a5bc3382-c9e8-4af3-a4a4-536220e6a128'
+  parent: 'main:menu_link_content:66bcd41e-1444-4f9d-b0d8-aef1088d58d9'
   suggestion: main
 visibility:
   not_node_type:

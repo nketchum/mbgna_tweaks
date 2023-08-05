@@ -1,24 +1,24 @@
-uuid: b5c6659d-7cb6-4990-b039-8bdd628a191e
+uuid: 4ffa3187-82d6-4c74-b845-3529cd03af30
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:drag_and_drop_block:e249be35-afe8-491f-bd75-982630eab3d9'
+    - 'block_content:drag_and_drop_block:0e5aa75c-a57d-42dd-a83d-b867c03ca4b0'
   module:
     - block_content
     - block_visibility_conditions_node
     - system
   theme:
     - mbgna_dxpr
-id: eventsheaderbanner
+id: mbgna_dxpr_facilitiesheaderbanner
 theme: mbgna_dxpr
 region: highlighted
 weight: 0
 provider: null
-plugin: 'block_content:e249be35-afe8-491f-bd75-982630eab3d9'
+plugin: 'block_content:0e5aa75c-a57d-42dd-a83d-b867c03ca4b0'
 settings:
-  id: 'block_content:e249be35-afe8-491f-bd75-982630eab3d9'
-  label: 'Events header banner'
+  id: 'block_content:0e5aa75c-a57d-42dd-a83d-b867c03ca4b0'
+  label: 'Facilities header banner'
   label_display: '0'
   provider: block_content
   status: true
@@ -32,4 +32,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /events
+    pages: '/facilities*'
