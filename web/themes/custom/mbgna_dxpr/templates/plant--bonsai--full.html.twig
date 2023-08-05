@@ -15,18 +15,22 @@
 #}
 {%
   set classes = [
-    content.bundle|clean_class,
-    content.entity_type|clean_class,
-    not content.status ? 'is-unpublished',
+    'plant',
+    bundle|clean_class,
     view_mode ? view_mode|clean_class,
+    status ? 'is-published' : 'is-unpublished',
     'clearfix',
   ]
 %}
-{% if content %}
-  <article{{ attributes.addClass(classes) }}>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2 col-md-2 col-sm-12">
+<article{{ attributes.addClass(classes) }}>
+  <div class="article-heading">
+    {{- content.field_display_name -}}
+    {{- content.field_common_name -}}
+  </div>
+  <div class="article-body article-has-aside article-has-aside-right row">
+    {% block content %}
+      <div class="article-body-content col-lg-8 col-md-6 row">
+        <div class="col-lg-4 col-md-6 article-body-content-column article-body-content-column-left article-body-content-column">
           {{- content.field_mbgna_id -}}
           {{- content.field_legacy_id -}}
           {{- content.field_genus -}}
@@ -35,9 +39,7 @@
           {{- content.field_origin -}}
           {{- content.field_collections -}}
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-12">
-          {{- content.field_display_name -}}
-          {{- content.field_common_name -}}
+        <div class="col-lg-8 col-md-6 article-body-content-column article-body-content-column-right article-body-content-column-main">
           {{- content.field_description -}}
           {{- content.field_display_image -}}
           {{- content.field_plant_images -}}
@@ -46,7 +48,10 @@
           {{- content.field_3d_view -}}
           {{- content.field_commerce -}}
         </div>
-        <div class="col-lg-2 col-md-8 col-sm-12">
+      </div>
+    {% endblock %}
+    <div class="article-aside article-aside-right col-lg-4 col-md-6">
+      <div class="article-aside-content">
           {{- content.field_donor -}}
           {{- content.field_year_started -}}
           {{- content.field_year_acquired -}}
@@ -59,8 +64,7 @@
           {{- content.field_status -}}
           {{- content.field_status_date -}}
           {{- content.field_priority -}}
-        </div>
       </div>
     </div>
-  </article>
-{% endif %}
+  </div>
+</article>

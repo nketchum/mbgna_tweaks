@@ -1,0 +1,41 @@
+uuid: d197c8bb-95a0-4027-bac1-6450f1006d9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_visibility_conditions_node
+    - menu_block
+    - system
+  theme:
+    - mbgna_dxpr
+id: mbgna_dxpr_mainnavigation_2
+theme: mbgna_dxpr
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: visible
+  provider: menu_block
+  follow: true
+  follow_parent: active
+  label_link: false
+  label_type: fixed
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'main:menu_link_content:a5bc3382-c9e8-4af3-a4a4-536220e6a128'
+  suggestion: main
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/facilities*'

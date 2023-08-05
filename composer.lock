@@ -15776,6 +15776,7 @@
         "drupal/realname": 10,
         "drupal/tb_megamenu": 15,
         "drupal/token_custom": 15,
+        "drupal/webform": 10,
         "mbgna/mbgna_plant": 20,
         "mbgna/mbgna_resource": 20,
         "mbgna/mbgna_tweaks": 20

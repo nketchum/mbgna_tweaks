@@ -1,19 +1,41 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
 .facility.full {
-  .field {
-    margin-bottom: 15px;
-  }
+  .article-body-content-column {
+    & > .field {
+      margin-bottom: 90px;
+    }
 
-  .field--type-webform {
-    margin: 60px 0;
+    .field__label {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 0.5em;
+    }
   }
 
   .webform-submission-form {
     background: $light-gray;
     border-radius: 10px;
-    padding: 15px 30px;
-    margin: 30px 0;
+    padding: 7%;
+  }
+
+  .field--name-field-capacity,
+  .field--name-field-pricing-rates {
+    // position: relative;
+    border-left: 2px solid $gray;
+    padding-left: 30px;
+
+    // &::after {
+    //   color: #ccc;
+    //   content: "▸";
+    //   display: block;
+    //   font-size: 30px;
+    //   left: -5px;
+    //   line-height: 30px;
+    //   margin-top: -15px;
+    //   position: absolute;
+    //   top: 50%;
+    // }
   }
 
   .field--name-field-capacity {
@@ -29,6 +51,36 @@
       text-transform: uppercase;
     }
   }
+
+  .field--name-field-description {
+    &, p {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  .field--name-field-seating-chart-image,
+  .field--name-field-location-map-image {
+    // position: relative;
+    border-left: 2px solid $gray;
+    padding-bottom: 2em;
+    padding-left: 30px;
+
+    // &::after {
+    //   color: #ccc;
+    //   content: "▸";
+    //   display: block;
+    //   font-size: 30px;
+    //   left: -5px;
+    //   line-height: 30px;
+    //   margin-top: -15px;
+    //   position: absolute;
+    //   top: 50%;
+    // }
+
+    img {
+      border-radius: 6px;
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
 }
-
-

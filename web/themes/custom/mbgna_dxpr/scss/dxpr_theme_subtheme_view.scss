@@ -26,10 +26,10 @@
     & > .view-content {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -15px;
+      margin: -15px;
 
       @media (min-width: 1201px) {
-        margin: 0 -45px;
+        margin: -45px;
       }
 
       & > .views-row {

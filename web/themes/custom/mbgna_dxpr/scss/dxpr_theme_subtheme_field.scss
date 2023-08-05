@@ -1,1 +1,52 @@
 @import "./dxpr_theme_subtheme.variables.scss";
+
+.field > img {
+  width: 100%;
+  height: auto;
+}
+
+.field--name-field-event-categories {
+  .field__item {
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+}
+
+.field--name-field-commerce-products {
+  .field__item {
+    article {
+      border: 1px solid $gray;
+      background-color: $lightest-gray;
+      margin: 60px 0;
+      padding: 15px 30px;
+    }
+  }
+}
+
+.field--name-field-pricing-rates {
+  & > .field__item {
+    margin-bottom: 30px;
+  }
+}
+
+.article-heading {
+  margin: 30px 0;
+}
+
+.article-heading .page-title {
+  margin: 0;
+}
+
+.article-heading .page-subtitle {
+  margin: 15px 0 0 !important;
+}
+
+.block-grid, 
+.blazy.block-grid, 
+.item-list > .block-grid {
+  margin: 0 -15px;
+}
+
+.block-grid > .grid {
+  padding: 0 15px 30px;
+}

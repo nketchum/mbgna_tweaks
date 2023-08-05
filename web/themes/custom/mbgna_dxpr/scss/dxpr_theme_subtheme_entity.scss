@@ -1,11 +1,9 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
-.field > img {
-  width: 100%;
-  height: auto;
-}
-
+.path-facility,
 .path-node,
+.path-organization,
+.path-resource,
 .path-plant {
   &.is-not-dxpr-layout {
     .main-container {
@@ -18,8 +16,8 @@
 
     article.full {
       .row > * {
-        padding-left: calc(var(--bs-gutter-x) * 1.25);
-        padding-right: calc(var(--bs-gutter-x) * 1.25);
+        padding-left: calc(var(--bs-gutter-x) * 2);
+        padding-right: calc(var(--bs-gutter-x) * 2);
       }
 
       .row > .row {
@@ -54,12 +52,18 @@
         margin-top: -0.35em;
       }
 
-      .field {
-        margin-bottom: 15px;
+      // .field {
+      //   margin-bottom: 15px;
 
-        &:last-child {
-          margin-bottom: 0;
-        }
+      //   &:last-child {
+      //     margin-bottom: 0;
+      //   }
+      // }
+      
+      .article-kicker {
+        letter-spacing: 0.5px;
+        margin-bottom: 60px;
+        text-transform: uppercase;
       }
     }
 
@@ -94,24 +98,6 @@
       .article-body-content-column-right {
         padding-right: 30px;
       }
-    }
-  }
-}
-
-.field--name-field-event-categories {
-  .field__item {
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-}
-
-.field--name-field-commerce-products {
-  .field__item {
-    article {
-      border: 1px solid $gray;
-      background-color: $lightest-gray;
-      margin: 60px 0;
-      padding: 15px 30px;
     }
   }
 }

@@ -15,19 +15,19 @@ categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text
-    '#text': '<h3>Inquire to Make a Reservation</h3>'
+    '#text': '<h4>Inquire to Make a Reservation</h4>'
     '#format': full_html
   name:
     '#type': webform_name
     '#title': Name
     '#title__access': false
     '#first__title': 'First Name'
-    '#first__placeholder': Jane
+    '#first__placeholder': 'Type your first name...'
     '#first__title_display': inline
     '#first__required': true
     '#middle__access': false
     '#last__title': 'Last Name'
-    '#last__placeholder': Doe
+    '#last__placeholder': 'Type your last name...'
     '#last__title_display': inline
     '#last__required': true
     '#suffix__access': false
@@ -35,17 +35,19 @@ elements: |-
   email:
     '#type': email
     '#title': Email
-    '#placeholder': your@email.com
+    '#placeholder': 'Type your email address...'
     '#required': true
   phone:
     '#type': tel
     '#title': Phone
-    '#help': '<p>Please include the area code.</p>'
+    '#help': '<p>Please include the area code. Also include country code if outside the United States.</p>'
+    '#help_display': title_before
+    '#size': 30
     '#placeholder': '(555) 555-5555'
   message:
     '#type': textarea
     '#title': Message
-    '#placeholder': 'Start typing a message...'
+    '#placeholder': 'Type a message if you would like...'
   facility:
     '#type': entity_autocomplete
     '#title': Facility

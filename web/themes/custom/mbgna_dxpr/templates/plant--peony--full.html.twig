@@ -15,10 +15,10 @@
 #}
 {%
   set classes = [
-    content.bundle|clean_class,
-    content.entity_type|clean_class,
-    not content.status ? 'is-unpublished',
+    'plant',
+    bundle|clean_class,
     view_mode ? view_mode|clean_class,
+    status ? 'is-published' : 'is-unpublished',
     'clearfix',
   ]
 %}

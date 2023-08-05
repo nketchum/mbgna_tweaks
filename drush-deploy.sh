@@ -53,7 +53,7 @@ fi
 
 # Run drush.
 printf "Syncing code...\n"
-drush --exclude-paths=sites/default/files:sites/default/settings.php:sites/default/settings.prod.php:sites/default/settings.stage.php:sites/default/settings.sandbox.php:sites/default/settings.local.php:node_modules:themes/custom/mbgna_dxpr/node_modules rsync -y $1:$origin_webroot $2:$destination_webroot
+drush --exclude-paths=sites/default/files:sites/default/settings.php:sites/default/settings.prod.php:sites/default/settings.stage.php:sites/default/settings.sandbox.php:sites/default/settings.local.php:node_modules:themes/custom/mbgna_dxpr/node_modules rsync -y $1:$origin_webroot $2:$destination_webroot  -- --exclude="._*" # exclude the quaranted fork resource files from docker/lando.
 printf "Complete.\n\n"
 printf "Syncing database...\n"
 drush sql:sync -y $1 $2
@@ -62,7 +62,7 @@ printf "Clearing cache...\n"
 drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"
 printf "Syncing files...\n"
-drush rsync -y $1:%files $2:%files
+drush rsync -y $1:%files $2:%files -- --exclude="._*" # exclude the quaranted fork resource files from docker/lando.
 printf "Complete.\n\n"
 
 printf "Deployment finished.\n\n"
