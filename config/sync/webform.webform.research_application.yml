@@ -1,4 +1,4 @@
-uuid: 8c36edea-862d-4e5e-986d-e3634b6a4330
+uuid: 20ca6058-c23f-4cc9-8fb2-d2379f98d504
 langcode: en
 status: open
 dependencies: {  }
@@ -8,64 +8,15 @@ close: null
 uid: 1
 template: false
 archive: false
-id: inquiries_facility
-title: 'Inquiries (facility)'
+id: research_application
+title: 'Research Application'
 description: ''
 categories: {  }
 elements: |-
-  processed_text:
-    '#type': processed_text
-    '#text': '<h4>Reservations</h4>'
-    '#format': full_html
-  name:
-    '#type': webform_name
-    '#title': Name
-    '#title__access': false
-    '#first__title': 'First Name'
-    '#first__placeholder': 'Type your first name...'
-    '#first__title_display': inline
-    '#first__required': true
-    '#middle__access': false
-    '#last__title': 'Last Name'
-    '#last__placeholder': 'Type your last name...'
-    '#last__title_display': inline
-    '#last__required': true
-    '#suffix__access': false
-    '#degree__access': false
-  email:
-    '#type': email
-    '#title': Email
-    '#placeholder': 'Type your email address...'
+  project_name_or_title:
+    '#type': textfield
+    '#title': 'Project name or title'
     '#required': true
-  phone:
-    '#type': tel
-    '#title': Phone
-    '#help': '<p>Please include the area code. Also include country code if outside the United States.</p>'
-    '#help_display': title_before
-    '#size': 30
-    '#placeholder': '(555) 555-5555'
-  message:
-    '#type': textarea
-    '#title': Message
-    '#placeholder': 'Type a message if you would like...'
-  facility:
-    '#type': entity_autocomplete
-    '#title': Facility
-    '#prepopulate': true
-    '#states':
-      visible:
-        ':input[name="facility"]':
-          empty: true
-    '#states_clear': false
-    '#target_type': facility
-    '#selection_handler': 'default:facility'
-    '#selection_settings':
-      target_bundles:
-        garden: garden
-        room: room
-      sort:
-        field: label
-        direction: ASC
 css: ''
 javascript: ''
 settings:
@@ -74,7 +25,7 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: false
+  page: true
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
@@ -83,7 +34,7 @@ settings:
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
-  form_previous_submissions: false
+  form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
   form_disable_remote_addr: false
@@ -118,7 +69,7 @@ settings:
   submission_label: ''
   submission_exception_message: ''
   submission_locked_message: ''
-  submission_log: true
+  submission_log: false
   submission_excluded_elements: {  }
   submission_exclude_empty: false
   submission_exclude_empty_checkbox: false
@@ -170,10 +121,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
+  confirmation_type: page
   confirmation_url: ''
-  confirmation_title: 'Inquiry successfully sent!'
-  confirmation_message: '<p>Thank you for submitting your inquiry, we will respond as soon as possible.</p>'
+  confirmation_title: ''
+  confirmation_message: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -183,18 +134,18 @@ settings:
   confirmation_update: false
   limit_total: null
   limit_total_interval: null
-  limit_total_message: '<p>You have already submitted an inquiry.</p>'
+  limit_total_message: ''
   limit_total_unique: false
   limit_user: null
   limit_user_interval: null
-  limit_user_message: '<p>No more inquiries are permitted currently.</p>'
+  limit_user_message: ''
   limit_user_unique: false
   entity_limit_total: null
   entity_limit_total_interval: null
-  entity_limit_user: 1
-  entity_limit_user_interval: 86400
-  purge: draft
-  purge_days: 1
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
@@ -249,42 +200,5 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers:
-  email:
-    id: email
-    handler_id: email
-    label: Email
-    notes: ''
-    status: true
-    conditions: {  }
-    weight: 0
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: _default
-      body: _default
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
+handlers: {  }
 variants: {  }

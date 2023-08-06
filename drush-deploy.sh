@@ -58,11 +58,13 @@ printf "Complete.\n\n"
 printf "Syncing database...\n"
 drush sql:sync -y $1 $2
 printf "Complete.\n\n"
-printf "Clearing cache...\n"
+printf "Clearing cache for a moment...\n"
 drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"
 printf "Syncing files...\n"
-drush rsync -y $1:%files $2:%files -- --exclude="._*" # exclude the quaranted fork resource files from docker/lando.
+drush rsync -y $1:%files $2:%files -- --exclude="._*"  --perms --chmod=777 # exclude the quaranted fork resource files from docker/lando and make publicly writable.
+printf "Clearing cache one last time...\n"
+drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"
 
 printf "Deployment finished.\n\n"

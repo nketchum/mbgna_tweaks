@@ -3,7 +3,7 @@
 .facility.full {
   .article-body-content-column {
     & > .field {
-      margin-bottom: 90px;
+      margin-bottom: 60px;
     }
 
     .field__label {
@@ -21,21 +21,9 @@
 
   .field--name-field-capacity,
   .field--name-field-pricing-rates {
-    // position: relative;
-    border-left: 2px solid $gray;
+    border-left: 2px solid $black;
     padding-left: 30px;
-
-    // &::after {
-    //   color: #ccc;
-    //   content: "▸";
-    //   display: block;
-    //   font-size: 30px;
-    //   left: -5px;
-    //   line-height: 30px;
-    //   margin-top: -15px;
-    //   position: absolute;
-    //   top: 50%;
-    // }
+    padding: 15px 0 15px 30px;
   }
 
   .field--name-field-capacity {
@@ -61,22 +49,9 @@
 
   .field--name-field-seating-chart-image,
   .field--name-field-location-map-image {
-    // position: relative;
-    border-left: 2px solid $gray;
+    border-left: 2px solid $black;
     padding-bottom: 2em;
-    padding-left: 30px;
-
-    // &::after {
-    //   color: #ccc;
-    //   content: "▸";
-    //   display: block;
-    //   font-size: 30px;
-    //   left: -5px;
-    //   line-height: 30px;
-    //   margin-top: -15px;
-    //   position: absolute;
-    //   top: 50%;
-    // }
+    padding: 15px 0 15px 30px;
 
     img {
       border-radius: 6px;

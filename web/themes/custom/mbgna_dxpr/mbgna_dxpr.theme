@@ -82,6 +82,17 @@ function mbgna_dxpr_preprocess_page(&$variables) {
  */
 function mbgna_dxpr_preprocess_node(&$variables) {
   $node = $variables['elements']['#node'];
+  if ($node->getType() == 'event') {
+    $terms = $node->get('field_event_categories');
+    $variables['field_event_categories_url_names'] = [];
+    foreach ($terms->referencedEntities() as $term) {
+      $variables['field_event_categories_url_names'][] = array(
+        'human_name' => $term->getName(),
+        'url_name' => str_replace(' ', '-', strtolower($term->getName())),
+      );
+      // $variables['field_event_categories_url_names'][]['url-name'] = str_replace(' ', '-', strtolower($term->getName()));
+    }
+  }
   
   // // Convert times to timestamps for iCal.
   // if (array_key_exists('field_date_smart', $variables['elements'])) {

@@ -52,53 +52,104 @@
         margin-top: -0.35em;
       }
 
-      // .field {
-      //   margin-bottom: 15px;
-
-      //   &:last-child {
-      //     margin-bottom: 0;
-      //   }
-      // }
-      
       .article-kicker {
         letter-spacing: 0.5px;
         margin-bottom: 60px;
         text-transform: uppercase;
       }
-    }
 
-    .article-body-content-column,
-    .article-aside {
-      padding: 0 30px;
-    }
-
-    .article-body-content-column {
-      &.article-body-content-column-left {
-        padding-left: 0;
+      .article-body-content-column,
+      .article-aside {
+        padding: 0 30px;
       }
 
-      &.article-body-content-column-right {
-        padding-right: 0;
+      .article-body-content-column {
+        &.article-body-content-column-left {
+          padding-left: 0;
+        }
+
+        &.article-body-content-column-right {
+          padding-right: 0;
+        }
       }
+
+      .article-aside {
+        &.article-aside-left {
+          padding-left: 0;
+        }
+      }
+
+      .article-aside {
+        &.article-aside-right {
+          padding-right: 0;
+        }
+      }
+
+      .article-has-aside-right {
+        .article-body-content-column-right {
+          padding-right: 30px;
+        }
+      }
+
+      .article-has-no-aside-left {
+        .article-body-content-column-main {
+          padding-left: 0;
+        }
+      }
+
+      .article-has-no-aside-right {
+        .article-body-content-column-main {
+          padding-right: 0;
+        }
+      }
+
     }
 
-    .article-aside {
-      &.article-aside-left {
-        padding-left: 0;
-      }
-    }
+    // .article-body-content-column,
+    // .article-aside {
+    //   padding: 0 30px;
+    // }
 
-    .article-aside {
-      &.article-aside-right {
-        padding-right: 0;
-      }
-    }
+    // .article-body-content-column {
+    //   &.article-body-content-column-left {
+    //     padding-left: 0;
+    //   }
 
-    .article-has-aside-right {
-      .article-body-content-column-right {
-        padding-right: 30px;
-      }
-    }
+    //   &.article-body-content-column-right {
+    //     padding-right: 0;
+    //   }
+    // }
+
+    // .article-aside {
+    //   &.article-aside-left {
+    //     padding-left: 0;
+    //   }
+    // }
+
+    // .article-aside {
+    //   &.article-aside-right {
+    //     padding-right: 0;
+    //   }
+    // }
+
+    // .article-has-aside-right {
+    //   .article-body-content-column-right {
+    //     padding-right: 30px;
+    //   }
+    // }
+
+    // .article-has-no-aside-left {
+    //   .article-body-content-column-main {
+    //     padding-left: 0;
+    //   }
+    // }
+
+    // .article-has-no-aside-right {
+    //   .article-body-content-column-main {
+    //     padding-right: 0;
+    //   }
+    // }
+
   }
 }
 

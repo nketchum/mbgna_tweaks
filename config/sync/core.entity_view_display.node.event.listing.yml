@@ -54,7 +54,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 5
+    weight: 3
     region: content
   field_date_smart:
     type: smartdate_default
@@ -79,7 +79,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 3
+    weight: 2
     region: content
   field_event_categories:
     type: entity_reference_label
@@ -87,7 +87,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
   field_image:
     type: blazy_media
@@ -132,13 +132,13 @@ content:
     region: content
   field_location:
     type: entity_reference_label
-    label: inline
+    label: hidden
     settings:
       link: false
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 4
+    weight: 5
     region: content
   title:
     type: title
@@ -149,7 +149,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 2
+    weight: 1
     region: content
 hidden:
   created: true

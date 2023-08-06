@@ -1,2 +1,7 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
+form {
+  label {
+    font-family: $font-family-sans-serif;
+  }
+}

@@ -10,7 +10,7 @@ dependencies:
     - field_display_label
 third_party_settings:
   field_display_label:
-    display_label: At
+    display_label: Location
 id: node.event.field_location
 field_name: field_location
 entity_type: node

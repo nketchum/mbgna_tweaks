@@ -15,10 +15,9 @@
 .field--name-field-commerce-products {
   .field__item {
     article {
-      border: 1px solid $gray;
-      background-color: $lightest-gray;
-      margin: 60px 0;
-      padding: 15px 30px;
+      background: $light-gray;
+      border-radius: 10px;
+      padding: 7%;
     }
   }
 }
@@ -26,6 +25,10 @@
 .field--name-field-pricing-rates {
   & > .field__item {
     margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -34,19 +37,36 @@
 }
 
 .article-heading .page-title {
-  margin: 0;
+  font-size: 32px;
+  margin: 0 0 60px;
 }
 
 .article-heading .page-subtitle {
-  margin: 15px 0 0 !important;
+  margin: -45px 0 0 !important;
+}
+
+.article-body-content .field--name-field-image img {
+  border-radius: 10px;
 }
 
 .block-grid, 
 .blazy.block-grid, 
 .item-list > .block-grid {
-  margin: 0 -15px;
+  margin: 0 -30px;
+
+  @media (max-width: 1200px) {
+    margin :0 -15px;
+  }
 }
 
 .block-grid > .grid {
-  padding: 0 15px 30px;
+  padding: 0 30px 60px;
+
+  @media (max-width: 1200px) {
+    padding :0 15px 30px;
+  }
+
+  .grid__content img {
+    border-radius: 5px;
+  }
 }
