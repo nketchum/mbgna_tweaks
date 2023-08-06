@@ -79,18 +79,9 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <div class="article-heading">
-    {% if view_mode == 'full' %}
-      {{ content.field_event_categories }}
-      <h2 class="page-title">{{ title_prefix }}{{ node.label|render|striptags|trim }}{{ title_suffix }}</h2>
-      {% if content.field_conservatory %}
-        <h4 class="page-subtitle"><a href="{{- content.field_conservatory.0['#url'].toString() -}}">{{- content.field_conservatory.0['#entity'].getTitle() -}}</a></h4>
-      {% endif %}
-      {% if content.field_garden %}
-        <h4 class="page-subtitle"><a href="{{- content.field_garden.0['#url'].toString() -}}">{{- content.field_garden.0['#entity'].getTitle() -}}</a></h4>
-      {% endif %}
-    {% else %}
-      <h2>{{ title_prefix }}{{ node.label|render|striptags|trim }}{{ title_suffix }}</h2>
-    {% endif %}
+    {{ content.field_event_categories }}
+    <h2 class="page-title">{{ title_prefix }}{{ node.label|render|striptags|trim }}{{ title_suffix }}</h2>
+    {{ content.field_date_smart }}
   </div>
   <div class="article-body article-has-aside article-has-aside-right row">
     {% block content %}
