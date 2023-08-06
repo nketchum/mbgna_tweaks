@@ -18,7 +18,7 @@ provider: null
 plugin: 'menu_block:main'
 settings:
   id: 'menu_block:main'
-  label: 'Main navigation'
+  label: 'Main navigation (rentals section)'
   label_display: visible
   provider: menu_block
   follow: true
@@ -28,7 +28,7 @@ settings:
   level: 1
   depth: 1
   expand_all_items: false
-  parent: 'main:menu_link_content:66bcd41e-1444-4f9d-b0d8-aef1088d58d9'
+  parent: 'main:menu_link_content:9f74a9ef-61a4-4ef4-ae7a-ed6389806650'
   suggestion: main
 visibility:
   not_node_type:
