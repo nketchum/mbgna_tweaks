@@ -79,7 +79,14 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <div class="article-heading">
-    {{ content.field_event_categories }}
+    {%  if content.field_event_categories %}
+      <div class="field field--name-field-event-categories field--type-entity-reference field--label-hidden field__items">
+        <div class="field__item"><a href="/events">All Events</a></div>
+        {% for item in field_event_categories_url_names %}
+         &nbsp;&rsaquo;&nbsp; <div class="field__item"><a href="/events/{{ item.url_name }}">{{ item.human_name }}</a></div>
+        {% endfor %}
+      </div>
+    {% endif %}
     <h2 class="page-title">{{ title_prefix }}{{ node.label|render|striptags|trim }}{{ title_suffix }}</h2>
     {{ content.field_date_smart }}
   </div>

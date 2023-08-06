@@ -61,6 +61,7 @@ elements: |-
     '#selection_handler': 'default:facility'
     '#selection_settings':
       target_bundles:
+        conservatory: conservatory
         garden: garden
         room: room
       sort:

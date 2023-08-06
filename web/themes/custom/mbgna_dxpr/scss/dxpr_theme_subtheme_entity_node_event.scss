@@ -1,8 +1,11 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
 .event.full {
+  margin-bottom: 90px;
+  
   .field--name-field-event-categories {
     margin-bottom: 60px;
+    display: flex;
   }
 
   .field--name-field-image {
@@ -31,6 +34,13 @@
 }
 
 .event.listing {
+
+  .field--name-field-event-categories {
+    .field__item {
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
 
   img {
     border-radius: 5px;
