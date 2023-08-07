@@ -9,6 +9,7 @@ dependencies:
     - field.field.facility.room.field_image
     - field.field.facility.room.field_images
     - field.field.facility.room.field_inquiry_webform
+    - field.field.facility.room.field_mbgna_location
     - field.field.facility.room.field_pricing_rates
     - image.style.large_square_ish_rectangle
     - mbgna_facility.facility_type.room
@@ -56,5 +57,6 @@ hidden:
   field_description: true
   field_images: true
   field_inquiry_webform: true
+  field_mbgna_location: true
   field_pricing_rates: true
   status: true

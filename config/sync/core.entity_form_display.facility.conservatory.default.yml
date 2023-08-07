@@ -10,6 +10,7 @@ dependencies:
     - field.field.facility.conservatory.field_images
     - field.field.facility.conservatory.field_inquiry_webform
     - field.field.facility.conservatory.field_location
+    - field.field.facility.conservatory.field_mbgna_location
     - field.field.facility.conservatory.field_pricing_rates
     - mbgna_facility.facility_type.conservatory
   module:
@@ -78,6 +79,12 @@ content:
   field_location:
     type: options_select
     weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_mbgna_location:
+    type: options_select
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

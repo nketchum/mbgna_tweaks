@@ -212,6 +212,10 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
       exposed_form:
         type: basic
         options:
@@ -516,6 +520,7 @@ display:
       defaults:
         query: false
         css_class: false
+        pager: false
         exposed_form: false
         style: false
         row: false
@@ -525,6 +530,7 @@ display:
         arguments: false
         filters: false
         filter_groups: false
+        header: false
       relationships:
         field_pricing_rates:
           id: field_pricing_rates
@@ -537,6 +543,12 @@ display:
           required: false
       css_class: 'grid grid-cards'
       display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
       exposed_block: true
       display_extenders: {  }
       path: facilities
@@ -546,7 +558,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user.permissions
       tags: {  }
   page_1:

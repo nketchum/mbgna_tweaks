@@ -1,0 +1,29 @@
+uuid: d46ec5ed-0f8a-4f2e-8a88-5b78ca8d3b54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.facility.field_mbgna_location
+    - mbgna_facility.facility_type.conservatory
+    - taxonomy.vocabulary.location
+id: facility.conservatory.field_mbgna_location
+field_name: field_mbgna_location
+entity_type: facility
+bundle: conservatory
+label: 'MBGNA location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -25,8 +25,9 @@
 <article{{ attributes.addClass(classes) }}>
   <div class="article-heading">
     {% if view_mode == 'full' %}
-      <div class="article-kicker">Rentals</div>
+      <div class="article-kicker"><a href="/facilities">Rentals</a></div>
       <h2 class="page-title">{{ title_prefix }}{{ content.label|render|striptags|trim }}{{ title_suffix }}</h2>
+      {{- content.field_mbgna_location -}}
       {% if content.field_conservatory %}
         <h4 class="page-subtitle"><a href="{{- content.field_conservatory.0['#url'].toString() -}}">{{- content.field_conservatory.0['#entity'].getTitle() -}}</a></h4>
       {% endif %}
@@ -42,7 +43,7 @@
       <div class="article-body-content col-lg-8 col-md-6 row">
         <div class="col-md-8 article-body-content-column article-body-content-column-left article-body-content-column-main">
           {% if content %}
-            {{- content|without('field_location', 'field_capacity', 'field_pricing_rates', 'field_garden', 'field_seating_chart_image', 'field_location_map_image', 'field_garden', 'field_conservatory', 'field_inquiry_webform') -}}
+            {{- content|without('field_location', 'field_capacity', 'field_pricing_rates', 'field_garden', 'field_seating_chart_image', 'field_location_map_image', 'field_garden', 'field_conservatory', 'field_inquiry_webform', 'field_mbgna_location') -}}
           {% endif %}
         </div>
         <div class="col-md-4 article-body-content-column article-body-content-column-right">

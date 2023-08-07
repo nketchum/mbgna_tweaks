@@ -1,6 +1,16 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
 .facility.full {
+  .article-heading {
+    .page-title {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .page-subtitle {
+      margin-top: 0 !important;
+    }
+  }
   .article-body-content-column {
     & > .field {
       margin-bottom: 60px;
