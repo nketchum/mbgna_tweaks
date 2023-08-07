@@ -11,3 +11,17 @@
     font-size: 22px;
   }
 }
+
+.simple-header {
+  .banner-thin {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .breadcrumb {
+    color: $black;
+
+    a {
+      color: $blue-secondary;
+    }
+  }
+}
