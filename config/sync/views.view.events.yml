@@ -403,8 +403,8 @@ display:
       use_more: true
       use_more_always: true
       use_more_text: 'More events ›'
-      link_display: page_1
-      link_url: ''
+      link_display: custom_url
+      link_url: /events
       display_extenders: {  }
       block_description: 'Events carousel'
       block_hide_empty: true
@@ -665,8 +665,8 @@ display:
       use_more: true
       use_more_always: false
       use_more_text: 'More events ›'
-      link_display: page_1
-      link_url: ''
+      link_display: custom_url
+      link_url: /events
       display_extenders: {  }
       block_hide_empty: true
     cache_metadata:

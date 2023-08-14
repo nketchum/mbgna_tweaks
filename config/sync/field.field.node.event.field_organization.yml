@@ -1,26 +1,26 @@
-uuid: c3cc1c80-55d7-4a17-8c73-d4cb5a665cde
+uuid: 2b7e6319-2cc3-4d67-92b1-3c48b69b2bec
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - media.type.image
+    - field.storage.node.field_organization
+    - mbgna_organization.organization_type.basic_organization
     - node.type.event
-id: node.event.field_image
-field_name: field_image
+id: node.event.field_organization
+field_name: field_organization
 entity_type: node
 bundle: event
-label: Image
+label: Organization
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:organization'
   handler_settings:
     target_bundles:
-      image: image
+      basic_organization: basic_organization
     sort:
       field: _none
       direction: ASC

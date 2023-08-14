@@ -97,7 +97,7 @@
           {% if content %}
             {{ content.field_image }}
             {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 
-            'field_location', 'field_address', 'field_map_link', 'field_dollar_amount', 'field_website', 'field_phone', 'field_commerce_external', 'field_commerce_products') }}
+            'field_location', 'field_address', 'field_map_link', 'field_dollar_amount', 'field_website', 'field_phone', 'field_commerce_external', 'field_commerce_products', 'field_contact_email', 'field_contact_name', 'field_organization') }}
           {% endif %}
         </div>
         <div class="col-md-4 article-body-content-column article-body-content-column-right">
@@ -107,6 +107,7 @@
     {% endblock %}
     <div class="article-aside article-aside-right col-lg-4 col-md-6">
       <div class="article-aside-content">
+        {{ content.field_commerce_external }}
         {{ content.field_commerce_products }}
       </div>
     </div>

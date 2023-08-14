@@ -57,22 +57,12 @@ span[style*="color:#888888;"] > mark,
 }
 
 .btn {
-  font-size: 14px !important;
-  margin-top: 15px !important;
-
   &.btn-primary,
-  &.btn-success {
-    padding: 4px 8px;
-    margin-left: 0;
-    font-size: 14px;
-    border-radius: 6px;
-  }
-
-  &.btn-primary,
-  &.btn-success {
-    color: #26292b;
-    border-color: #ffcb05;
-    background-color: #ffcb05;
+  &.btn-success,
+  &:active {
+    color: $black !important;
+    border-color: $maize-primary !important;
+    background-color: $maize-primary !important;
 
     a {
       color: $black;
@@ -154,8 +144,7 @@ h3, h4, h5, h6 {
 
 .section-heading h1, .section-heading h2, .section-heading h3, .section-heading h4,
 .views-title > h1, .views-title > h2, .views-title > h3, .views-title > h4,
-h1.display, h2.display, h3.display, h4.display, p.display,
-h1.marginless-display, h2.marginless-display, h3.marginless-display, h4.marginless-display, p.marginless-display {
+h1.display, h2.display, h3.display, h4.display, p.display {
   font-family: "Playfair Display", Georgia, serif;
 }
 
@@ -165,27 +154,19 @@ h1.display, h2.display, h3.display, h4.display, p.display {
   margin-bottom: 2em;
 }
 
-h1.marginless-display, h2.marginless-display, h3.marginless-display, h4.marginless-display, p.marginless-display {
-  margin-bottom: 1em;
-}
-
-.section-heading h1, .views-title > h1, 
-h1.display, h1.marginless-display, {
+.section-heading h1, .views-title > h1, h1.display {
   font-size: 32px;
 }
 
-.section-heading h2, .views-title > h2, 
-h2.display, h2.marginless-display, {
+.section-heading h2, .views-title > h2, h2.display {
   font-size: 26px;
 }
 
-.section-heading h3, .views-title > h3, 
-h3.display, h3.marginless-display, {
+.section-heading h3, .views-title > h3, h3.display {
   font-size: 22px;
 }
 
-.section-heading h4, .views-title > h4, 
-h4.display, h4.marginless-display, {
+.section-heading h4, .views-title > h4, h4.display {
   font-size: 16px;
 }
 
@@ -825,23 +806,37 @@ body {
   background-size: 30%;
 }
 
-.know-before-you-go {
+.icon {
   a {
-    display: inline-block;
-    font-weight: bold;
     position: relative;
-    padding-left: 45px !important;
  
-    &::before {
+    &:before {
+      height: 20px;
+      position: absolute;
+      width: 20px;
+    }
+
+    &.btn-sm:before {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  &.icon-checkmark {
+    a:before {
       border: 1px solid #000;
       content: '\2713';
       font-size: 32px;
-      height: 20px;
       left: 10px;
       line-height: 22px;
-      position: absolute;
-      top: 16px;
-      width: 20px;
+      top: 8px;
+    }
+
+    a.btn-sm:before {
+      font-size: 26px;
+      left: 10px;
+      line-height: 15px;
+      top: 7px;
     }
   }
 }
@@ -1229,9 +1224,13 @@ body {
     z-index: 100;
   }
 
-  .az-text {
+  .az-ctnr.container-fluid {
     position: relative;
     z-index: 1000;
+  }
+
+  .az-element {
+    position: relative;
 
     &, & a,
     & h1, & h2, & h3, & h4, & h5, & h6 {

@@ -1,6 +1,6 @@
 bootstrap: bs5
 cke_fonts: 'Display/Playfair Display, Georgia, serif;'
-cke_stylesset: "h1 display=h1.display\r\nh2 display=h2.display\r\nh3 display=h3.display\r\nh4 display=h4.display\r\nh5 display=h5.display\r\nh6 display=h6.display\r\np display=p.display\r\nh1 marginless display=h1.marginless-display\r\nh2 marginless display=h2.marginless-display\r\nh3 marginless display=h3.marginless-display\r\nh4 marginless display=h4.marginless-display\r\nh5 marginless display=h5.marginless-display\r\nh6 marginless display=h6.marginless-display\r\np lead=p.lead\r\np marginless display=p.marginless-display\r\np small=p.small\r\np smaller=p.smaller\r\nul outdented=ul.outdented\r\nol outdented=ol.outdented"
+cke_stylesset: "paragraph (normal)=p\r\nparagraph (larger)=p.larger\r\nparagraph (large)=p.large\r\nparagraph (small)=p.small\r\nparagraph (smaller)=p.smaller\r\nparagraph (no margins)=p.no-margins\r\nh1 (display)=h1.display\r\nh2 (display)=h2.display\r\nh3 (display)=h3.display\r\nh4 (display)=h4.display\r\nh5 (display)=h5.display\r\nh6 (display)=h6.display\r\nh1 (no margins)=h1.no-margins\r\nh2 (no margins)=h2.no-margins\r\nh3 (no margins)=h3.no-margins\r\nh4 (no margins)=h4.no-margins\r\nh5 (no margins)=h5.no-margins\r\nh6 (no margins)=h6.no-margins\r\nul (outdented)=ul.outdented\r\nol (outdented)=ol.outdented"
 editor_assets_source: null
 format_filters: 0
 media_browser: ''

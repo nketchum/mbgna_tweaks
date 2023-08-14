@@ -8,12 +8,15 @@ dependencies:
     - field.field.node.event.field_address
     - field.field.node.event.field_commerce_external
     - field.field.node.event.field_commerce_products
+    - field.field.node.event.field_contact_email
+    - field.field.node.event.field_contact_name
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
     - field.field.node.event.field_event_categories
     - field.field.node.event.field_image
     - field.field.node.event.field_location
     - field.field.node.event.field_map_link
+    - field.field.node.event.field_organization
     - field.field.node.event.field_phone
     - field.field.node.event.field_website
     - node.type.event
@@ -89,9 +92,12 @@ hidden:
   field_address: true
   field_commerce_external: true
   field_commerce_products: true
+  field_contact_email: true
+  field_contact_name: true
   field_dollar_amount: true
   field_event_categories: true
   field_map_link: true
+  field_organization: true
   field_phone: true
   field_website: true
   links: true

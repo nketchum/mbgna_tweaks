@@ -10,7 +10,7 @@
     attach(context, settings) {
     	// Runs on page load.
     	function resize_banner() {
-	    	var items = $('.header-banner-text');
+	    	var items = $('.header-banner-content');
 	    	var max_height = 0;
 	    	$(items).each(function(index, element) {
 	    		$(element).css({'height': ''});

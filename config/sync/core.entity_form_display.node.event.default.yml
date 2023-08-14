@@ -7,18 +7,22 @@ dependencies:
     - field.field.node.event.field_address
     - field.field.node.event.field_commerce_external
     - field.field.node.event.field_commerce_products
+    - field.field.node.event.field_contact_email
+    - field.field.node.event.field_contact_name
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
     - field.field.node.event.field_event_categories
     - field.field.node.event.field_image
     - field.field.node.event.field_location
     - field.field.node.event.field_map_link
+    - field.field.node.event.field_organization
     - field.field.node.event.field_phone
     - field.field.node.event.field_website
     - node.type.event
   module:
     - address
     - allowed_formats
+    - conditional_fields
     - hide_revision_field
     - inline_entity_form
     - link
@@ -34,7 +38,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 14
+    weight: 4
     region: content
     settings:
       rows: 9
@@ -47,19 +51,19 @@ content:
         hide_guidelines: '0'
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_address:
     type: address_default
-    weight: 10
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_commerce_external:
     type: link_default
-    weight: 19
+    weight: 14
     region: content
     settings:
       placeholder_url: ''
@@ -67,7 +71,7 @@ content:
     third_party_settings: {  }
   field_commerce_products:
     type: inline_entity_form_complex
-    weight: 18
+    weight: 13
     region: content
     settings:
       form_mode: default
@@ -83,9 +87,25 @@ content:
       revision: false
       removed_reference: keep
     third_party_settings: {  }
+  field_contact_email:
+    type: email_default
+    weight: 12
+    region: content
+    settings:
+      placeholder: jdoe@umich.edu
+      size: 60
+    third_party_settings: {  }
+  field_contact_name:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Jane Doe'
+    third_party_settings: {  }
   field_date_smart:
     type: smartdate_default
-    weight: 11
+    weight: 1
     region: content
     settings:
       modal: false
@@ -99,51 +119,106 @@ content:
       show_extra: false
       hide_date: false
       allday: true
+      remove_seconds: false
     third_party_settings: {  }
   field_dollar_amount:
     type: number
-    weight: 16
+    weight: 5
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_event_categories:
     type: options_select
-    weight: 15
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 8
+    weight: 3
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_location:
     type: options_select
-    weight: 9
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_map_link:
     type: link_default
-    weight: 17
+    weight: 8
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_organization:
+    type: inline_entity_form_complex
+    weight: 11
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: organization
+      label_plural: organizations
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings:
+      conditional_fields:
+        c6ff4a1d-359a-4498-9178-253f9cf447ca:
+          entity_type: node
+          bundle: post
+          dependee: field_external_source
+          settings:
+            state: visible
+            reset: true
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        6a71266b-3f79-4f4b-97ac-8a13964cc2e4:
+          entity_type: node
+          bundle: post
+          dependee: field_post_type
+          settings:
+            state: '!visible'
+            reset: true
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '20'
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_phone:
     type: telephone_default
-    weight: 12
+    weight: 10
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_website:
     type: link_default
-    weight: 13
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -151,20 +226,20 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 2
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 5
+    weight: 19
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   revision_log:
     type: hide_revision_field_log_widget
-    weight: 1
+    weight: 15
     region: content
     settings:
       rows: 5
@@ -176,14 +251,14 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 21
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 6
+    weight: 20
     region: content
     settings:
       display_label: true
@@ -198,7 +273,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 17
     region: content
     settings:
       match_operator: CONTAINS

@@ -117,10 +117,6 @@
       white-space: nowrap;
     }
 
-    p.display {
-      margin-bottom: 0;
-    }
-
     .btn-default {
       color: $white;
 
@@ -306,8 +302,8 @@
   & > span {
     border-bottom: 1px dotted #eee;
     display: block;
-    margin-bottom: 12.5px;
-    padding: 0 0 12.5px;
+    margin-bottom: 10px;
+    padding: 0 0 10px;
   }
 
   &:last-child {

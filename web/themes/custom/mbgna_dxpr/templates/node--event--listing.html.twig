@@ -80,7 +80,18 @@
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content').addClass('row') }}>
     <div class="col-md-6 col-lg-4 col-secondary">
-      {{ content.field_image }}
+      {% if content.field_image|render|trim %}
+        {{ content.field_image }}
+      {% else %}
+          {# Use a placeholder if no image was uploaded. #}
+          <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item">
+            <article class="media media--type-image media--view-mode-full">
+              <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+                <img class="img-fluid" src="/themes/custom/mbgna_dxpr/images/placeholder-event.png" />
+              </div>
+            </article>
+          </div>
+      {% endif %}
     </div>
     <div class="col-md-6 col-lg-8 col-main">
       {%  if content.field_event_categories %}
