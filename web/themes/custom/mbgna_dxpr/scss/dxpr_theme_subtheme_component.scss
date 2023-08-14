@@ -39,13 +39,38 @@
 .font-condensed {}
 
 // Highlighted CKeditor text. Tricky because DXPR text editing
-//  applies styles direclty and does not assign the span any css class.
-//  .highlighted is for the mbgna custom text editing.
+// applies styles direclty and does not assign the span any css class.
+// .highlighted is for the mbgna custom text editing.
 span[style*="color:#888888;"] > mark,
 .highlighted {
   background: $maize-primary;
   color: $black;
   padding: 0.15em;
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+
+  &.larger {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  &.large {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  &.small {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &.smaller {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 
 .outdented {
@@ -58,45 +83,29 @@ span[style*="color:#888888;"] > mark,
 
 .btn {
   &.btn-primary,
-  &.btn-success,
-  &:active {
-    color: $black !important;
-    border-color: $maize-primary !important;
-    background-color: $maize-primary !important;
-
-    a {
-      color: $black;
+  &.btn-success {
+    &, &:active {
+      background-color: $maize-primary !important;
+      border-color: $maize-primary !important;
+      color: $black !important;
     }
   }
-}
 
-.az-text {
-  & > .btn {
-    &.btn-primary,
-    &.btn-success {
-      margin-top: 0 !important;
+  &.btn-secondary {
+    &, &:active {
+      background-color: $blue-secondary !important;
+      border-color: $blue-secondary !important;
+      color: $white !important;
     }
   }
-}
 
-.form-btn {
-  background: white;
-  border-radius: 6px;
-  border-width: 0 !important;
-  color: #9a3324 !important;
-  font-size: 14px;
-  height: 42px;
-  line-height: 31px;
-  margin-left: 5px;
-  padding: 6px 12px;
-}
-
-.form-textfield {
-  background: #fff !important;
-  border: none !important;
-  border-radius: 6px !important;
-  color: $black !important;
-  height: 42px !important;
+  &.btn-light {
+    &, &:active {
+      background-color: $white !important;
+      border-color: $white !important;
+      color: $red !important;
+    }
+  }
 }
 
 h1 a {
@@ -702,6 +711,10 @@ body {
   }
 }
 
+.header-banner-content {
+  z-index: 1001;
+}
+
 .header-banner-video .inlinePlayButton {
   display: none;
 }
@@ -766,7 +779,7 @@ body {
 .landing-card-large {
   .landing-link-list {
     ul {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: bold;
       list-style: none;
       margin: 0;
@@ -774,7 +787,7 @@ body {
 
       li {
         border-bottom: 1px solid #ddd;
-        padding: 10px 0;
+        padding: 15px 0;
 
         &:last-child {
           border-bottom: 0;
@@ -806,8 +819,9 @@ body {
   background-size: 30%;
 }
 
+// Icons for bootstrap buttons.
 .icon {
-  a {
+  a.btn {
     position: relative;
  
     &:before {
@@ -860,13 +874,6 @@ body {
     }
   }
 
-  .landing-text-blurb {
-    margin-left: -15px !important;
-    margin-right: -15px !important;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
   .landing-card-large > div {
     padding-left: 5% !important;
     padding-right: 5% !important;
@@ -892,15 +899,14 @@ body {
   }
 }
 
+.landing-text-blurb {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(720px + 10%);
+}
+
 @media (max-width: 767px) {
   .page-bottom-action-panel {
-    .newsletter-form {
-      input {
-        width: 180px;
-        height: 35px;
-      }
-    }
-
     .vr-right-white {
       border: none;
     }
@@ -935,12 +941,7 @@ body {
   }
 
   #footer {
-    p {
-      // font-size: 11px !important;
-    }
-
     h2 {
-      // font-size: 12px !important;
       margin-right: 10px !important;
       line-height: 20px !important;
     }
@@ -948,7 +949,6 @@ body {
       a {
         padding-top: 2.5px;
         padding-bottom: 2.5px;
-        // font-size: 11px;
       }
     }
 
@@ -1035,8 +1035,7 @@ body {
   padding: 60px;
   border-radius: 15px;
 
-  h2,
-  label {
+  h2, label {
     font-family: $font-family-sans-serif;
   }
 
@@ -1115,15 +1114,6 @@ body {
     position: absolute;
     top: -7.5px;
     right: 0;
-
-    a {
-      background: $maize-primary;
-      border-radius: 5px;
-      color: $black;
-      display: inline-block;
-      font-weight: 700;
-      padding: 5px 15px;
-    }
   }
 }
 

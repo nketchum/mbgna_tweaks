@@ -5,3 +5,22 @@ form {
     font-family: $font-family-sans-serif;
   }
 }
+
+.prefooter-form-newsletter {
+  form {
+    display: flex;  
+  }
+  
+  input, button {
+    display: block;
+  }
+
+  input {
+    background: #fff !important;
+    border-radius: 6px !important;
+    border: none !important;
+    color: $black !important;
+    height: 38px !important;
+    width: 180px;
+  }
+}

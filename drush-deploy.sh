@@ -53,7 +53,7 @@ fi
 
 # Run drush.
 printf "Syncing code...\n"
-drush --exclude-paths=sites/default/files:sites/default/settings.php:sites/default/settings.prod.php:sites/default/settings.stage.php:sites/default/settings.sandbox.php:sites/default/settings.local.php:node_modules:themes/custom/mbgna_dxpr/node_modules rsync -y $1:$origin_webroot $2:$destination_webroot  -- --exclude="._*" # exclude the quaranted fork resource files from docker/lando.
+drush --exclude-paths=sites/default/files:sites/default/settings.php:sites/default/settings.prod.php:sites/default/settings.stage.php:sites/default/settings.sandbox.php:sites/default/settings.local.php:node_modules:themes/custom/mbgna_dxpr/node_modules rsync -y $1:$origin_webroot $2:$destination_webroot -- --exclude="._*" --perms --recursive --times
 printf "Complete.\n\n"
 printf "Syncing database...\n"
 drush sql:sync -y $1 $2
@@ -62,7 +62,7 @@ printf "Clearing cache for a moment...\n"
 drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"
 printf "Syncing files...\n"
-drush rsync -y $1:%files $2:%files -- --exclude="._*"  --perms --chmod=777 # exclude the quaranted fork resource files from docker/lando and make publicly writable.
+drush rsync -y $1:%files $2:%files -- --exclude="._*" --perms --recursive --times --chmod=777
 printf "Clearing cache one last time...\n"
 drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"
