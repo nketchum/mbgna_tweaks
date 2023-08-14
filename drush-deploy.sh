@@ -66,5 +66,4 @@ drush rsync -y $1:%files $2:%files -- --exclude="._*" --perms --recursive --time
 printf "Clearing cache one last time...\n"
 drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"
-
 printf "Deployment finished.\n\n"
