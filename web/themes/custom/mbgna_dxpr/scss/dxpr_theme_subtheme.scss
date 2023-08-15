@@ -22,8 +22,9 @@ a:focus,
   text-decoration: none;
 }
 
-.smaller {
-  line-height: 1.25em;
+.wrap-containers {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .container {
