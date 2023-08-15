@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - blazy
     - editor
     - media
 name: 'Full HTML'
@@ -15,7 +16,7 @@ filters:
     status: false
     weight: -50
     settings:
-      allowed_html: '<p class="highlighted"> <span class="highlighted">'
+      allowed_html: '<div class="largest larger large small smaller smallest"> <p class="largest larger large small smaller smallest"> <ul class="largest larger large small smaller smallest indented"> <ol class="largest larger large small smaller smallest indented"> <span class="largest larger large small smaller smallest">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_url:
@@ -83,3 +84,17 @@ filters:
     status: true
     weight: -46
     settings: {  }
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: 3
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'

@@ -1,0 +1,252 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+h1 {
+  font-family: $font-family-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.67em;
+}
+
+.section-heading,
+.views-title {
+  h1, h2, h3, h4, h5, h6, // When .section-heading class is on the parent div containing the heading.
+  &.h1, &.h2, &.h3, &.h4, &.h5, &.h6 // When .section-heading class is on the heading itself.
+  {
+    margin: 0 0 1.5em; // The reciprocal of the normal bottom margin (1 / 0.67).
+  }
+}
+
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  & strong {
+    & a {
+      font-weight: bold;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    color: #0D57AA;
+  }
+}
+
+.block-title a {
+  color: #0D57AA;
+}
+
+// h4:not(:first-child) {
+//   margin-top: 1.5em;
+// }
+
+ul, ol {
+  margin: 0 0 1.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+body {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+p, li {
+  margin: 0 0 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+p, ul, ol {
+  font-size: 16px;
+  line-height: 26px;
+
+  &.largest {
+    &, li {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  &.larger {
+    &, li {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &.large {
+    &, li {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &.small {
+    &, li {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &.smaller {
+    &, li {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  &.smallest {
+    &, li {
+    font-size: 11px;
+    line-height: 18px;
+    }
+  }
+}
+
+ul, ol {
+  list-style-position: outside;
+  margin: 1.5em 0;
+  padding-left: 1em;
+
+  &.indented {
+    list-style-position: inside;
+  }
+}
+
+a:hover, a:focus, .btn-link:hover, .btn-link:focus {
+  color: #247ADB;
+}
+
+a.highlight {
+  background-color: $maize-primary !important;
+  border-bottom-right-radius: 5px;
+  color: $black !important;
+}
+
+a,
+.btn-link,
+.nav-link {
+  color: $blue-secondary;
+}
+
+.btn {
+  &.btn-primary,
+  &.btn-success {
+    &, &:active {
+      background-color: $maize-primary !important;
+      border-color: $maize-primary !important;
+      color: $black !important;
+    }
+  }
+
+  &.btn-secondary {
+    &, &:active {
+      background-color: $blue-secondary !important;
+      border-color: $blue-secondary !important;
+      color: $white !important;
+    }
+  }
+
+  &.btn-light {
+    &, &:active {
+      background-color: $white !important;
+      border-color: $white !important;
+      color: $red !important;
+    }
+  }
+}
+
+// Icons for bootstrap buttons.
+.icon {
+  a.btn {
+    position: relative;
+ 
+    &:before {
+      height: 20px;
+      position: absolute;
+      width: 20px;
+    }
+
+    &.btn-sm:before {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  &.icon-checkmark {
+    a:before {
+      border: 1px solid #000;
+      content: '\2713';
+      font-size: 32px;
+      left: 10px;
+      line-height: 22px;
+      top: 8px;
+    }
+
+    a.btn-sm:before {
+      font-size: 26px;
+      left: 10px;
+      line-height: 15px;
+      top: 7px;
+    }
+  }
+}
+
+.tb-megamenu-submenu,
+.section-heading,
+.views-title {
+  .btn {
+    margin-top: 15px !important;
+  }
+}
+
+.html .nav-tabs > li > a:hover {
+  color: inherit;
+}
+
+hr {
+  border-top-color: #ccc;
+}
+
+body {
+  background: #f9f9f9;
+}

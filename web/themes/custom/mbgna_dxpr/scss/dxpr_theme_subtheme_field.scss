@@ -5,12 +5,26 @@
   height: auto;
 }
 
-.field--name-field-commerce-products {
+.field--name-field-commerce-products,
+.field--name-field-commerce-external {
   .field__item {
     article {
       background: $light-gray;
       border-radius: 10px;
+      margin-bottom: 60px;
       padding: 7%;
+
+      .field {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .form-actions {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -67,4 +81,22 @@
 .frontpage-stats {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+}
+
+.location-label{
+  strong {
+    background: $black;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    margin-right: 5px;
+  }
+}
+
+.gtranslate_wrapper {
+  a {
+    color: $blue-secondary;
+    display: inline-block;
+    margin-right: 10px;
+  }
 }

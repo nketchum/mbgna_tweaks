@@ -8,6 +8,10 @@
   }
 }
 
+.navbar-container {
+  align-items: center;
+}
+
 .html--dxpr-theme-nav-mobile--open {
   .body--dxpr-theme-nav-mobile {
     .dxpr-theme-header {
@@ -218,6 +222,7 @@
 
 .tbm-item.level-1 {
   border-right: none;
+  font-size: 18px;
   display: table;
 }
 
@@ -370,6 +375,73 @@
           display: none !important;
         }
       }
+    }
+  }
+}
+
+// Sidebar menus
+#block-mbgna-dxpr-content,
+#block-mbgna-dxpr-mainnavigation-2 {
+  ul.nav {
+    font-family: $font-family-sans-serif;
+    margin-left: 0;
+    margin-right: 25%;
+    margin-top: 30px;
+
+    & > li {
+      padding: 0 0 14px;
+      border-bottom: 2px solid $lighter-gray;
+      margin: 0 0 14px;
+
+      a {
+        padding: 0;
+      }
+
+      a.is-active {
+        background-color: transparent;
+        color: $blue-primary;
+      }
+
+      a::after {
+        border: none;
+        content: '\203A';
+        display: inline-block;
+        margin-left: 0.25em;
+        vertical-align: inherit;
+      }
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.dxpr-theme-header--side .menu__level {
+  visibility: visible;
+}
+
+.region-sidebar-first,
+.region-sidebar-second,
+.sidebar-left,
+.sidebar-right {
+  ul.nav li > a.hide-on-sidebar {
+    display: none;
+  }
+}
+
+.breadcrumb li:before {
+  content: " \203A ";
+  margin-left: 5px;
+}
+
+.is-not-dxpr-layout {
+  .page-title-container {
+    .breadcrumb {
+      position: static;
+      text-align: left;
+      margin-bottom: -15px;
     }
   }
 }

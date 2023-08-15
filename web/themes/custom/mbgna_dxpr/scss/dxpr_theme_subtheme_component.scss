@@ -48,31 +48,6 @@ span[style*="color:#888888;"] > mark,
   padding: 0.15em;
 }
 
-p {
-  font-size: 16px;
-  line-height: 28px;
-
-  &.larger {
-    font-size: 20px;
-    line-height: 36px;
-  }
-
-  &.large {
-    font-size: 18px;
-    line-height: 32px;
-  }
-
-  &.small {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  &.smaller {
-    font-size: 12px;
-    line-height: 22px;
-  }
-}
-
 .outdented {
   padding-left: 0;
 }
@@ -81,144 +56,34 @@ p {
   text-align: center;
 }
 
-.btn {
-  &.btn-primary,
-  &.btn-success {
-    &, &:active {
-      background-color: $maize-primary !important;
-      border-color: $maize-primary !important;
-      color: $black !important;
-    }
-  }
+// 
+// .section-heading h1, .section-heading h2, .section-heading h3, .section-heading h4,
+// .views-title > h1, .views-title > h2, .views-title > h3, .views-title > h4,
+// h1.display, h2.display, h3.display, h4.display, p.display {
+//   font-family: "Playfair Display", Georgia, serif;
+// }
 
-  &.btn-secondary {
-    &, &:active {
-      background-color: $blue-secondary !important;
-      border-color: $blue-secondary !important;
-      color: $white !important;
-    }
-  }
+// .section-heading h2, .section-heading h3, .section-heading h4,
+// .views-title > h2, .views-title > h3, .views-title > h4
+// h1.display, h2.display, h3.display, h4.display, p.display {
+//   margin-bottom: 2em;
+// }
 
-  &.btn-light {
-    &, &:active {
-      background-color: $white !important;
-      border-color: $white !important;
-      color: $red !important;
-    }
-  }
-}
+// .section-heading h1, .views-title > h1, h1.display {
+//   font-size: 32px;
+// }
 
-h1 a {
-  color: #0D57AA;
-}
-h2 a {
-  color: #0D57AA;
-}
-h3 a, .block-title a {
-  color: #0D57AA;
-}
-h4 a {
-  color: #0D57AA;
-}
-h5 a {
-  color: #0D57AA;
-}
-h6 a {
-  color: #0D57AA;
-}
+// .section-heading h2, .views-title > h2, h2.display {
+//   font-size: 26px;
+// }
 
-h3, h4, h5, h6 {
-  font-family: $font-family-sans-serif;
-}
+// .section-heading h3, .views-title > h3, h3.display {
+//   font-size: 22px;
+// }
 
-h4:not(:first-child) {
-  margin-top: 1.5em;
-}
-
-h3, h4, h5 {
-  & strong {
-    & a {
-      font-weight: bold;
-    }
-  }
-}
-
-h1, h2 {
-  line-height: 1.25em;
-}
-
-h3, h4, h5, h6 {
-  line-height: 1.5em;
-}
-
-.section-heading h1, .section-heading h2, .section-heading h3, .section-heading h4,
-.views-title > h1, .views-title > h2, .views-title > h3, .views-title > h4,
-h1.display, h2.display, h3.display, h4.display, p.display {
-  font-family: "Playfair Display", Georgia, serif;
-}
-
-.section-heading h2, .section-heading h3, .section-heading h4,
-.views-title > h2, .views-title > h3, .views-title > h4
-h1.display, h2.display, h3.display, h4.display, p.display {
-  margin-bottom: 2em;
-}
-
-.section-heading h1, .views-title > h1, h1.display {
-  font-size: 32px;
-}
-
-.section-heading h2, .views-title > h2, h2.display {
-  font-size: 26px;
-}
-
-.section-heading h3, .views-title > h3, h3.display {
-  font-size: 22px;
-}
-
-.section-heading h4, .views-title > h4, h4.display {
-  font-size: 16px;
-}
-
-.tb-megamenu-submenu,
-.section-heading,
-.views-title {
-  .btn {
-    margin-top: 15px !important;
-  }
-}
-
-hr {
-  border-top-color: #ccc;
-}
-
-a.highlight {
-  background-color: $maize-primary !important;
-  border-bottom-right-radius: 5px;
-  color: $black !important;
-}
-
-a,
-.btn-link,
-.nav-link {
-  color: $blue-secondary;
-}
-
-a:hover, a:focus, .btn-link:hover, .btn-link:focus {
-  color: #247ADB;
-}
-
-.html .nav-tabs > li > a:hover {
-  color: inherit;
-}
-
-p.lead {
-  font-size: 1.15em;
-  line-height: 1.5em;
-}
-
-body {
-  background: #f9f9f9;
-}
+// .section-heading h4, .views-title > h4, h4.display {
+//   font-size: 16px;
+// }
 
 .wrap-containers {
   position: relative;
@@ -226,10 +91,6 @@ body {
 
 .accordion-item {
   color: inherit;
-}
-
-.navbar-container {
-  align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -324,7 +185,6 @@ body {
 
 // Top nav.
 #secondary-header {
-
   @media (max-width: 767px) {
     display: none;
   }
@@ -338,6 +198,11 @@ body {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     float:right;
+    margin-top: 0;
+
+    & > li {
+      margin-bottom: 0;
+    }
 
     & > li:first-child a {
       padding-left: 1.5rem;
@@ -494,73 +359,7 @@ body {
   padding: 0;
 }
 
-// Sidebar menus
-#block-mbgna-dxpr-content,
-#block-mbgna-dxpr-mainnavigation-2 {
-  ul.nav {
-    font-family: $font-family-sans-serif;
-    margin-left: 0;
-    margin-right: 25%;
-    margin-top: 30px;
-
-    & > li {
-      padding: 0 0 14px;
-      border-bottom: 2px solid $lighter-gray;
-      margin: 0 0 14px;
-
-      a {
-        padding: 0;
-      }
-
-      a.is-active {
-        background-color: transparent;
-        color: $blue-primary;
-      }
-
-      a::after {
-        border: none;
-        content: '\203A';
-        display: inline-block;
-        margin-left: 0.25em;
-        vertical-align: inherit;
-      }
-
-      &:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-    }
-  }
-}
-
-
-.dxpr-theme-header--side .menu__level {
-  visibility: visible;
-}
-
-.region-sidebar-first,
-.region-sidebar-second,
-.sidebar-left,
-.sidebar-right {
-  ul.nav li > a.hide-on-sidebar {
-    display: none;
-  }
-}
-
-.breadcrumb li:before {
-  content: " \203A ";
-  margin-left: 5px;
-}
-
 .is-not-dxpr-layout {
-  .page-title-container {
-    .breadcrumb {
-      position: static;
-      text-align: left;
-      margin-bottom: -15px;
-    }
-  }
-
   .main-container {
     padding-left: 5%;
     padding-right: 5%;
@@ -655,6 +454,7 @@ body {
   .breadcrumb {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     display: inline-block;
+    margin-top: 0;
     min-width: 50%;
     padding-right: 15px;
     padding-top: 10px;
@@ -662,10 +462,6 @@ body {
     a {
       color: $maize-primary;
     }
-  }
-
-  .banner-hours p {
-    line-height: 1.5em;
   }
 
   &::before {
@@ -788,6 +584,7 @@ body {
       li {
         border-bottom: 1px solid #ddd;
         padding: 15px 0;
+        margin: 0;
 
         &:last-child {
           border-bottom: 0;
@@ -797,62 +594,8 @@ body {
   }  
 }
 
-.location-label{
-  strong {
-    background: $black;
-    border-radius: 5px;
-    color: #fff;
-    padding: 5px;
-    margin-right: 5px;
-  }
-}
-
-.gtranslate_wrapper {
-  a {
-    color: $blue-secondary;
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
-
 .shape-background-tall {
   background-size: 30%;
-}
-
-// Icons for bootstrap buttons.
-.icon {
-  a.btn {
-    position: relative;
- 
-    &:before {
-      height: 20px;
-      position: absolute;
-      width: 20px;
-    }
-
-    &.btn-sm:before {
-      height: 15px;
-      width: 15px;
-    }
-  }
-
-  &.icon-checkmark {
-    a:before {
-      border: 1px solid #000;
-      content: '\2713';
-      font-size: 32px;
-      left: 10px;
-      line-height: 22px;
-      top: 8px;
-    }
-
-    a.btn-sm:before {
-      font-size: 26px;
-      left: 10px;
-      line-height: 15px;
-      top: 7px;
-    }
-  }
 }
 
 @media (max-width: 767px) {
@@ -1222,10 +965,10 @@ body {
   .az-element {
     position: relative;
 
-    &, & a,
-    & h1, & h2, & h3, & h4, & h5, & h6 {
-      color: $white;
-    }
+    // &, & a,
+    // & h1, & h2, & h3, & h4, & h5, & h6 {
+    //   color: $white;
+    // }
   }
 }
 

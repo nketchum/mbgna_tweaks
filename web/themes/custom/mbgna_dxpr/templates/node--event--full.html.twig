@@ -97,17 +97,31 @@
           {% if content %}
             {{ content.field_image }}
             {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 
-            'field_location', 'field_address', 'field_map_link', 'field_dollar_amount', 'field_website', 'field_phone', 'field_commerce_external', 'field_commerce_products', 'field_contact_email', 'field_contact_name', 'field_organization') }}
+            'field_location', 'field_address', 'field_map_link', 'field_dollar_amount', 'field_website', 'field_phone', 
+            'field_commerce_external', 'field_commerce_products', 'field_contact_email', 'field_contact_name', 'field_organization') }}
           {% endif %}
         </div>
         <div class="col-md-4 article-body-content-column article-body-content-column-right">
-          {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 'body', 'field_commerce_products') }}
+          {% if not content.field_commerce_products|render|striptags|trim and not content.field_commerce_external|render|striptags|trim and content.field_dollar_amount|render|striptags|trim %}
+            {{ content.field_dollar_amount }}
+          {% endif %}
+          {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 'field_dollar_amount', 'body', 'field_commerce_external', 
+          'field_commerce_products') }}
         </div>
       </div>
     {% endblock %}
     <div class="article-aside article-aside-right col-lg-4 col-md-6">
       <div class="article-aside-content">
-        {{ content.field_commerce_external }}
+        {% if (content.field_commerce_external|render|striptags|trim)  %}
+          <div class="field field--name-field-commerce-external field--type-link field--label-hidden field__items">
+            <div class="field__item">
+              <article>
+                {{ content.field_commerce_external }}
+                {{ content.field_dollar_amount }}
+              </article>
+            </div>
+          </div>
+        {% endif %}
         {{ content.field_commerce_products }}
       </div>
     </div>

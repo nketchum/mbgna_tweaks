@@ -9,7 +9,7 @@ id: node.event.field_dollar_amount
 field_name: field_dollar_amount
 entity_type: node
 bundle: event
-label: Cost
+label: Price
 description: 'Include a decimal (.) and cents (such as "99") . If no cents are present, include two zeros (e.g. "00") after the decimal.'
 required: false
 translatable: false
