@@ -94,8 +94,16 @@ span[style*="color:#888888;"] > mark,
 }
 
 header > div {
-  max-width: calc(1920px + 2.5%);
+  max-width: 1920px;
   margin: 0 auto;
+
+  // Account for banner/content margins of 60px on each side.
+  // that should line up with the logo.
+  // 1920+60+60 = 2040
+  @media (max-width: 2040px) {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
 }
 
 #secondary-header {
@@ -135,14 +143,14 @@ header > div {
   }
 }
 
-.secondary-header-container.dxpr-theme-fluid,
-.navbar-container.dxpr-theme-fluid,
-.page-title-container.dxpr-theme-fluid,
-.dxpr-theme-prefooter.dxpr-theme-fluid,
-.dxpr-theme-footer.dxpr-theme-fluid {
-  padding-left: 5%;
-  padding-right: 5%;
-}
+// .secondary-header-container.dxpr-theme-fluid,
+// .navbar-container.dxpr-theme-fluid,
+// .page-title-container.dxpr-theme-fluid,
+// .dxpr-theme-prefooter.dxpr-theme-fluid,
+// .dxpr-theme-footer.dxpr-theme-fluid {
+//   padding-left: 5%;
+//   padding-right: 5%;
+// }
 
 .body--dxpr-theme-nav-desktop {
   .dxpr-theme-header {
@@ -491,6 +499,13 @@ header > div {
   }
 }
 
+@media (max-width: 1920px) {
+  .banner-wide {
+    margin-top: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
 @media (max-width: 767px) {
   .banner-wide {
     padding-left: 0 !important;
@@ -498,7 +513,6 @@ header > div {
     margin-left: -15px !important;
     margin-right: -15px !important;
     margin-bottom: 60px !important;
-    border-radius: 0 !important;
 
     & > div {
       padding-left: 5% !important;
@@ -607,8 +621,10 @@ header > div {
   background-size: 30%;
 }
 
+// Add an extra pixel to the width so that monitors with an exact width of 1920px
+// do not get a fade-out gradient for landing card image sections.
 @media (min-width: 1921px) {
-  .landing-card-large-image-left {
+  .landing-card-large-image-right {
     &::before {
       content: ' ';
       display: block;
@@ -621,7 +637,7 @@ header > div {
     }
   }
 
-  .landing-card-large-image-right {
+  .landing-card-large-image-left {
     &::before {
       content: ' ';
       display: block;
@@ -631,6 +647,22 @@ header > div {
       top: 0;
       right: 0;
       background: linear-gradient(-90deg, rgba(249, 249, 249, 1) 0%, rgba(249, 249, 249, 0) 100%);
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+  .landing-card-large-image-left {
+    .az-image-content {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+  }
+
+  .landing-card-large-image-right {
+    .az-image-content {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
     }
   }
 }

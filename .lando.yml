@@ -4,16 +4,15 @@ excludes:
   - node_modules
   - vendor
   - web/core
+  - web/libraries
+  - web/modules/contrib
   - web/profiles
-  - web/modules
-  - web/themes
+  - web/themes/contrib
   - "!web/modules/contrib/mbgna_facility"
   - "!web/modules/contrib/mbgna_organization"
   - "!web/modules/contrib/mbgna_plant"
   - "!web/modules/contrib/mbgna_resource"
   - "!web/modules/contrib/mbgna_tweaks"
-  - "!web/modules/custom"
-  - "!web/themes/custom"
   - "web/themes/custom/mbgna/node_modules"
   - "web/themes/custom/mbgna_dxpr/node_modules"
 config:
