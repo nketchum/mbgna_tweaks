@@ -61,8 +61,26 @@ printf "Complete.\n\n"
 printf "Clearing cache for a moment...\n"
 drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"
+printf "Resetting file folder permissions...\n"
+# Reset file permissions if on sandbox.
+if [[ $2 == '@sandbox' ]] ; then
+	ssh nketchum@nketchum.com 'sudo chmod -R 777 /home/nketchum/www/m-sandbox-01/web/sites/default/files && sudo chmod -R 777 /home/nketchum/www/m-sandbox-01/private'
+fi
+# Reset file permissions if on stage.
+if [[ $2 == '@stage' ]] ; then
+	ssh nketchum@nketchum.com 'sudo chmod -R 777 /home/nketchum/www/m-stage-01/web/sites/default/files && sudo chmod -R 777 /home/nketchum/www/m-stage-01/private'
+fi
 printf "Syncing files...\n"
 drush rsync -y $1:%files $2:%files -- --exclude="._*" --perms --recursive --times --chmod=777
+printf "Resetting file folder permissions again...\n"
+# Reset file permissions if on sandbox.
+if [[ $2 == '@sandbox' ]] ; then
+	ssh nketchum@nketchum.com 'sudo chmod -R 777 /home/nketchum/www/m-sandbox-01/web/sites/default/files && sudo chmod -R 777 /home/nketchum/www/m-sandbox-01/private'
+fi
+# Reset file permissions if on stage.
+if [[ $2 == '@stage' ]] ; then
+	ssh nketchum@nketchum.com 'sudo chmod -R 777 /home/nketchum/www/m-stage-01/web/sites/default/files && sudo chmod -R 777 /home/nketchum/www/m-stage-01/private'
+fi
 printf "Clearing cache one last time...\n"
 drush cache:rebuild --uri=$destination_uri
 printf "Complete.\n\n"

@@ -32,6 +32,13 @@ a:focus,
   padding-right: unset;
 }
 
+.bold {
+  &,
+  & > a {
+    font-weight: bold;
+  }
+}
+
 .main-container > .row > section {
   padding-left: initial;
   padding-right: initial;
