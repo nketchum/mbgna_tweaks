@@ -244,16 +244,16 @@
   margin-left: 5%;
 
   &::before {
-    content: ' ';
-    display: block;
-    height: 15px;
-    width: calc(100% + 32px);
     background: $blue-secondary;
-    margin-left: -16px;
-    margin-top: -16px;
-    margin-right: -16px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    content: ' ';
+    display: block;
+    height: 30px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-top: -30px;
+    width: calc(100% + 32px);
   }
 
   .tbm-row {
