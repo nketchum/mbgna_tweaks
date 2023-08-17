@@ -32,10 +32,10 @@ services:
       - apt-get install -y vim
       - chmod -R 777 /app/private
       - chmod -R 777 /app/web/sites/default/files
-    overrides:
-      volumes:
-        - "/Volumes/MSD01/Sites/m-sandbox-01/public:/app/web/sites/default/files"
-        - "/Volumes/MSD01/Sites/m-sandbox-01/private:/app/private"
+    # overrides:
+    #   volumes:
+    #     - "/Volumes/MSD01/Sites/m-sandbox-01/public:/app/web/sites/default/files"
+    #     - "/Volumes/MSD01/Sites/m-sandbox-01/private:/app/private"
   mailhog:
     type: mailhog
     hogfrom:

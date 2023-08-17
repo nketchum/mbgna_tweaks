@@ -256,11 +256,33 @@ header > div {
   }
 }
 
+#prefooter,
+#footer {
+  & > div {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
 #prefooter {
   display: block;
 }
 
+@media (max-width: 1919px) {
+  .page-bottom-action-panel {
+    .az-element.az-color-style {
+      border-radius: 0 !important;
+    }
+  }
+}
+
 #footer {
+
+  @media (max-width: 1919px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
   .views-title {
     float:left;
 
@@ -569,30 +591,6 @@ header > div {
 // Left align dots.
 .st-owl-theme.st-owl-pager-inside .owl-pagination {
   left: 6%;
-}
-
-#cboxClose {
-  border: 0;
-  height: 0;
-  position: absolute;
-  right: 0;
-  text-indent: -10000px;
-  top: 0;
-  width: 0;
-
-  &::after {
-    background: $maize-primary;
-    color: $black;
-    content: '\2715';
-    display: block;
-    font-size: 18px;
-    height: 30px;
-    position: absolute;
-    right: 0;
-    text-indent: 0;
-    top: 0;
-    width: 30px;
-  }
 }
 
 .landing-card-large {

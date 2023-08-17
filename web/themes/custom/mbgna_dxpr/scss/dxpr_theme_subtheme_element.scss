@@ -201,9 +201,18 @@ a,
       color: $red !important;
     }
   }
+
+  &.btn-link {
+    text-decoration: underline;
+
+    &::after {
+      content: '›';
+      position: absolute;
+      margin-left: 0.35em;
+      color: $blue-secondary;
+    }
+  }
 }
-
-
 
 // Icons for bootstrap buttons.
 .icon {

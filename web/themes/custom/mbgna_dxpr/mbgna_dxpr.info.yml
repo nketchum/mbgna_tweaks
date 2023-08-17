@@ -27,6 +27,7 @@ regions:
 libraries:
   - 'mbgna_dxpr/global-styling'
   - 'colorbox/colorbox'
+  - 'colorbox/default'
   - 'gin/sidebar'
 
 libraries-override:
