@@ -186,6 +186,14 @@ a,
     }
   }
 
+  &.btn-info {
+    &, &:active {
+      background: #ddd;
+      border-color: #ddd;
+      color: #333 !important;
+    }
+  }
+
   &.btn-light {
     &, &:active {
       background-color: $white !important;
@@ -194,6 +202,8 @@ a,
     }
   }
 }
+
+
 
 // Icons for bootstrap buttons.
 .icon {
