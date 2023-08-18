@@ -461,6 +461,10 @@ header > div {
   }
 }
 
+.location-card h1 {
+  line-height: 1.15em;
+}
+
 .banner-thin {
   @media (max-width: 767px) {
     background: #0D57AA;
