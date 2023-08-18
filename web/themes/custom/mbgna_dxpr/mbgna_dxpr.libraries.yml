@@ -5,6 +5,7 @@ global-styling:
   js:
     js/minified/colorbox.min.js: { minified: true }
     js/minified/autoplay.min.js: { minified: true }
+    js/minified/header_banner.min.js: { minified: true }
     js/minified/slideshow_banner.min.js: { minified: true }
 
 events:

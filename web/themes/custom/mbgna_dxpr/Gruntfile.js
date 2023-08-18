@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         files: {
           'js/minified/autoplay.min.js': 'js/dist/autoplay.js',
           'js/minified/colorbox.min.js': 'js/dist/colorbox.js',
+          'js/minified/header_banner.min.js': 'js/dist/header_banner.js',
           'js/minified/nav.min.js': 'js/dist/nav.js',
           'js/minified/slideshow_banner.min.js': 'js/dist/slideshow_banner.js'
         }
@@ -24,6 +25,7 @@ module.exports = function(grunt) {
         files: {
           'js/minified/autoplay.min.js': 'js/dist/autoplay.js',
           'js/minified/colorbox.min.js': 'js/dist/colorbox.js',
+          'js/minified/header_banner.min.js': 'js/dist/header_banner.js',
           'js/minified/nav.min.js': 'js/dist/nav.js',
           'js/minified/slideshow_banner.min.js': 'js/dist/slideshow_banner.js'
         },
