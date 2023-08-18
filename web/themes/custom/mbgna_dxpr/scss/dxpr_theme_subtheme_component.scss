@@ -953,9 +953,9 @@ header > div {
 
 .view {
   .more-link {
-    position: absolute;
-    top: -7.5px;
-    right: 0;
+    display: block;
+    margin-top: 45px;
+    text-align: left;
   }
 }
 
@@ -1040,7 +1040,8 @@ header > div {
   }
 }
 
-.header-banner-carousel {
+.banner-wide-container,
+.slideshow-container {
   border-radius: 15px !important;
   overflow: hidden;
 
