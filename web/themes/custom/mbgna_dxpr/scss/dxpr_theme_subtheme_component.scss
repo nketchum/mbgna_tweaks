@@ -1040,6 +1040,12 @@ header > div {
   }
 }
 
+.header-banner-carousel {
+  @media (max-width: 1919px) {
+    margin-top: -30px !important;
+  }
+}
+
 .az-carousel .az-slide.header-banner-image,
 .az-carousel .az-slide.header-banner-video,
 .card-billboard {
@@ -1054,6 +1060,11 @@ header > div {
     top: 0;
     width: 100%;
     z-index: 100;
+
+    @media (min-width: 1920px) {
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
   }
 
   .az-ctnr.container-fluid {
@@ -1063,6 +1074,11 @@ header > div {
 
   .az-element {
     position: relative;
+
+    @media (max-width: 1919px) {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
 
     // &, & a,
     // & h1, & h2, & h3, & h4, & h5, & h6 {
