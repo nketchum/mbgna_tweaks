@@ -1,0 +1,11 @@
+uuid: 9e277105-0dce-47fe-ab60-d0e76ea4413f
+langcode: en
+status: true
+dependencies: {  }
+id: content_card_basic
+label: 'Content card: basic'
+template: |-
+  <div class="az-element az-section container-fluid-wrapper az-element--controls-top-left" style="" data-dxpr-builder-libraries="" data-az-id="gb7b3g5lx7" data-azat-pid="gb7b3g5lx7" id="gb7b3g5lx7" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="yes" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-parallax_speed="0" data-azat-parallax_mode="fixed" data-azat-parallax_mobile_disable="no" data-azat-an_infinite="no" data-azat-box_model="000000"><div class="az-ctnr container-fluid" data-azcnt="true"><div class="az-element az-image" data-az-id="gby5638vx7" data-azat-pid="gby5638vx7" id="gby5638vx7" data-azb="az_image" data-az-human-readable="Image" data-az-human-readable-en="Image" data-azat-image="/-files-directory-/styles/layout_section_listing_image/public/dxpr_builder_images/placeholder-01.png" data-azat-height="" data-azat-link_target="_self" data-azat-an_infinite="no" data-azat-style="margin-bottom:30px;border-radius:5px;"><img class="az-image-content" style="margin-bottom:30px;border-radius:5px;
+   width: 100%;" src="/-files-directory-/styles/layout_section_listing_image/public/dxpr_builder_images/placeholder-01.png" alt="" title=""></div><div class="az-element az-text" style="margin-top:-15px;margin-bottom:15px;" data-az-id="gbd9j6aw6b" data-azat-pid="gbd9j6aw6b" id="gbd9j6aw6b" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style="margin-top:-15px;margin-bottom:15px;" data-azcnt="true"><span style="font-size:12px;"><span style="color:#7f8c8d;">KICKER</span></span></div><div class="az-element az-text" style="" data-az-id="gb8o6y7sow" data-azat-pid="gb8o6y7sow" id="gb8o6y7sow" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azcnt="true"><h4>Lorem ipsum</h4><p>Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><p><a data-cke-saved-href="/node" href="/node">Learn More ›</a></p></div></div></div>
+uid: 1
+global: true

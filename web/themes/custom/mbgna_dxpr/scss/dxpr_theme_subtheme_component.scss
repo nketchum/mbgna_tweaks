@@ -588,6 +588,12 @@ header > div {
   }
 }
 
+@media (min-width: 1520px) {
+  .contain-wide-body-text {
+    max-width: 960px;
+  }
+}
+
 // Left align dots.
 .st-owl-theme.st-owl-pager-inside .owl-pagination {
   left: 6%;
