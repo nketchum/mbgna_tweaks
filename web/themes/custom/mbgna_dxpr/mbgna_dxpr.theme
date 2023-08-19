@@ -2,15 +2,32 @@
 
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\views\ViewExecutable;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
- * @file
- * DXPR Theme sub-theme.
- *
- * Place your custom PHP code in this file.
+ * Implements hook_theme().
  */
+function mbgna_dxpr_theme($existing, $type, $theme, $path) {
+  return [
+    'views_exposed_form__events__page_1' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+ 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+// function mbgna_dxpr_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//   if ($form['#id'] == 'views_exposed_form__events__page_1') {
+//     // Optional, in case, if you want to remove the title and its own placeholder.
+//     if (isset($form['keywords']) && $form['keywords']['#type'] == 'textfield') {
+//       $form['keywords']['#attributes']['placeholder'] = t('My custom placeholder');
+//       unset($form['keywords']['#title']);
+//     }
+//   }
+// }
 
-// phpcs:disable
 /**
  * Prepares variables for the html template. Adds node object.
  *
@@ -76,12 +93,14 @@ function mbgna_dxpr_preprocess_page(&$variables) {
     $variables['#attached']['library'][] = $dxpr_theme_library;
   }
 }
-
+    use Drupal\Core\Form\FormState;
+    use Drupal\views\Views;
 /**
  * Implements template_preprocess_node()
  */
 function mbgna_dxpr_preprocess_node(&$variables) {
   $node = $variables['elements']['#node'];
+
   if ($node->getType() == 'event') {
     $terms = $node->get('field_event_categories');
     $variables['field_event_categories_url_names'] = [];
@@ -90,7 +109,31 @@ function mbgna_dxpr_preprocess_node(&$variables) {
         'human_name' => $term->getName(),
         'url_name' => str_replace(' ', '-', strtolower($term->getName())),
       );
-      // $variables['field_event_categories_url_names'][]['url-name'] = str_replace(' ', '-', strtolower($term->getName()));
+    }
+    
+    // Embed an exposed views filter in full event pages directly
+    // into the twig template.
+    if ($variables['view_mode'] == 'full') {
+      $form = [];
+      $view_id = 'events';
+      $display_id = 'page_1';
+      $view = Views::getView($view_id);
+      if ($view && $view->access($display_id)) {
+        $view->setDisplay($display_id);
+        $view->initHandlers();
+        $form_state = (new FormState())
+          ->setStorage([
+            'view' => $view,
+            'display' => &$view->display_handler->display,
+            'rerender' => TRUE,
+          ])
+          ->setMethod('get')
+          ->setAlwaysProcess()
+          ->disableRedirect();
+        $form_state->set('rerender', NULL);
+        $form = \Drupal::formBuilder()->buildForm('\Drupal\views\Form\ViewsExposedForm', $form_state);
+        $variables['views_form'] = $form;
+      }
     }
   }
   

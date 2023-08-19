@@ -142,7 +142,7 @@ content:
       lazy: true
     third_party_settings:
       field_formatter_class:
-        class: ''
+        class: 'boxed-fields boxed-fields-light'
     weight: 8
     region: content
   field_location_map_image:

@@ -147,7 +147,8 @@
     "require-dev": {
         "drupal/core-dev": "^10",
         "drupal/devel": "^5.0",
-        "kint-php/kint": "^4.0"
+        "kint-php/kint": "^4.0",
+        "mglaman/drupal-check": "^1.4"
     },
     "conflict": {
         "drupal/drupal": "*"

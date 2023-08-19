@@ -102,11 +102,14 @@
           {% endif %}
         </div>
         <div class="col-md-4 article-body-content-column article-body-content-column-right">
-          {% if not content.field_commerce_products|render|striptags|trim and not content.field_commerce_external|render|striptags|trim and content.field_dollar_amount|render|striptags|trim %}
-            {{ content.field_dollar_amount }}
-          {% endif %}
-          {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 'field_dollar_amount', 'body', 'field_commerce_external', 
-          'field_commerce_products') }}
+          <div class="wrapped-fields wrapped-fields-light">
+            <h4>Event Information</h4>
+            {% if not content.field_commerce_products|render|striptags|trim and not content.field_commerce_external|render|striptags|trim and content.field_dollar_amount|render|striptags|trim %}
+              {{ content.field_dollar_amount }}
+            {% endif %}
+            {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 'field_dollar_amount', 'body', 'field_commerce_external', 
+            'field_commerce_products') }}
+          </div>
         </div>
       </div>
     {% endblock %}
@@ -116,6 +119,7 @@
           <div class="field field--name-field-commerce-external field--type-link field--label-hidden field__items">
             <div class="field__item">
               <article>
+                <h4>Event Admission</h4>
                 {{ content.field_commerce_external }}
                 {{ content.field_dollar_amount }}
               </article>
@@ -123,6 +127,12 @@
           </div>
         {% endif %}
         {{ content.field_commerce_products }}
+        {% if views_form %}
+          <div class="boxed-field boxed-field-light">
+            <h4>Search Events</h4>
+            {{ views_form }}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>

@@ -72,6 +72,7 @@ $min-width-wide-plus-120: '2040px';   // @media (min-width: $min-width-wide-plus
 .wrapped-fields-light {
   & > .field {
     border-bottom-color: $gray;
+    border-bottom-style: dotted;
   }
 }
 

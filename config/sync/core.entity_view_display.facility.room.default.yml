@@ -130,7 +130,7 @@ content:
       lazy: true
     third_party_settings:
       field_formatter_class:
-        class: ''
+        class: 'boxed-fields boxed-fields-light'
     weight: 7
     region: content
   field_mbgna_location:
