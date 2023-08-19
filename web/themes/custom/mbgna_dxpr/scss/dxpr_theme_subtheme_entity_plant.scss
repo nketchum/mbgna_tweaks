@@ -2,5 +2,25 @@
 
 .plant.full {
   margin-bottom: 90px;
+
+  .article-body-content-column-main {
+    & > .field:first-child {
+      margin-top: 0;
+    }
+  }
   
+  // .article-aside,
+  // .article-body-content-column-left:not(.article-body-content-column-main),
+  // .article-body-content-column-right:not(.article-body-content-column-main) {
+  //   .field {
+  //     @extend .boxed-field;
+  //     @extend .boxed-field-light;
+
+  //     .field {
+  //       background: none;
+  //       border-radius: 0;
+  //       padding: 0;
+  //     }
+  //   }
+  // }
 }

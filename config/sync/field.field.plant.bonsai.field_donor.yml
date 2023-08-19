@@ -27,9 +27,17 @@ settings:
       type: role
       role:
         collections_donor: collections_donor
+        author: '0'
         editor: '0'
-        super_administrator: '0'
-        working_group_member: '0'
+        fellow: '0'
         fulfillment: '0'
+        intern: '0'
+        author_plant: '0'
+        editor_plant: '0'
+        viewer_plant: '0'
+        staff: '0'
+        super_administrator: '0'
+        volunteer: '0'
+        working_group_member: '0'
     include_anonymous: false
 field_type: entity_reference

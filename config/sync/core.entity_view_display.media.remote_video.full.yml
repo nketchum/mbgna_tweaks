@@ -1,0 +1,44 @@
+uuid: 191e4fec-3459-402d-af75-8ae9f1a35146
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - blazy
+    - field_formatter_class
+id: media.remote_video.full
+targetEntityType: media
+bundle: remote_video
+mode: full
+content:
+  field_media_oembed_video:
+    type: blazy_oembed
+    label: visually_hidden
+    settings:
+      caption: {  }
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: eager
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

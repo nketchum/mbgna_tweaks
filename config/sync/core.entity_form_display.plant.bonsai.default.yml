@@ -8,6 +8,7 @@ dependencies:
     - field.field.plant.bonsai.field_commerce
     - field.field.plant.bonsai.field_common_name
     - field.field.plant.bonsai.field_description
+    - field.field.plant.bonsai.field_description_heading
     - field.field.plant.bonsai.field_dimensions
     - field.field.plant.bonsai.field_display_image
     - field.field.plant.bonsai.field_display_name
@@ -102,6 +103,7 @@ third_party_settings:
         - field_family
         - field_origin
         - field_collections
+        - field_description_heading
         - field_description
         - field_display_image
         - field_plant_images
@@ -160,7 +162,7 @@ content:
     third_party_settings: {  }
   field_3d_view:
     type: text_textarea
-    weight: 23
+    weight: 24
     region: content
     settings:
       rows: 5
@@ -177,7 +179,7 @@ content:
     third_party_settings: {  }
   field_commerce:
     type: inline_entity_form_complex
-    weight: 25
+    weight: 26
     region: content
     settings:
       form_mode: default
@@ -213,7 +215,7 @@ content:
     third_party_settings: {  }
   field_description:
     type: text_textarea_with_summary
-    weight: 19
+    weight: 20
     region: content
     settings:
       rows: 9
@@ -224,9 +226,20 @@ content:
       allowed_formats:
         hide_help: '1'
         hide_guidelines: '1'
+  field_description_heading:
+    type: text_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
   field_dimensions:
     type: paragraphs
-    weight: 28
+    weight: 39
     region: content
     settings:
       title: dimension
@@ -245,7 +258,7 @@ content:
     third_party_settings: {  }
   field_display_image:
     type: media_library_widget
-    weight: 20
+    weight: 21
     region: content
     settings:
       media_types: {  }
@@ -260,7 +273,7 @@ content:
     third_party_settings: {  }
   field_donor:
     type: inline_entity_form_complex
-    weight: 24
+    weight: 25
     region: content
     settings:
       form_mode: default
@@ -314,7 +327,7 @@ content:
     third_party_settings: {  }
   field_last_repot:
     type: datetime_default
-    weight: 29
+    weight: 40
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -328,7 +341,7 @@ content:
     third_party_settings: {  }
   field_makeup:
     type: string_textfield
-    weight: 25
+    weight: 37
     region: content
     settings:
       size: 60
@@ -362,7 +375,7 @@ content:
     third_party_settings: {  }
   field_outer_pot_size:
     type: string_textfield
-    weight: 30
+    weight: 41
     region: content
     settings:
       size: 60
@@ -370,14 +383,14 @@ content:
     third_party_settings: {  }
   field_plant_images:
     type: media_library_widget
-    weight: 21
+    weight: 22
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_pot_notes:
     type: string_textfield
-    weight: 31
+    weight: 42
     region: content
     settings:
       size: 60
@@ -385,7 +398,7 @@ content:
     third_party_settings: {  }
   field_priority:
     type: options_select
-    weight: 34
+    weight: 45
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -409,46 +422,46 @@ content:
     third_party_settings: {  }
   field_status:
     type: options_select
-    weight: 32
+    weight: 43
     region: content
     settings: {  }
     third_party_settings: {  }
   field_status_date:
     type: datetime_default
-    weight: 33
+    weight: 44
     region: content
     settings: {  }
     third_party_settings: {  }
   field_trained_since:
     type: number
-    weight: 24
+    weight: 36
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_trunks:
     type: options_select
-    weight: 26
+    weight: 38
     region: content
     settings: {  }
     third_party_settings: {  }
   field_video:
     type: media_library_widget
-    weight: 22
+    weight: 23
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_year_acquired:
     type: number
-    weight: 23
+    weight: 35
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_year_started:
     type: number
-    weight: 22
+    weight: 34
     region: content
     settings:
       placeholder: ''

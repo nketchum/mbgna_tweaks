@@ -212,6 +212,9 @@
             },
             "drupal/image_widget_crop": {
                 "The Cropper library referenced in the README and in the libraries info is deprecated": "https://www.drupal.org/files/issues/2023-02-17/3093928-17.patch"
+            },
+            "drupal/core": {
+                "2966656 Negotiate max width/height of oEmbed assets more intelligently": "https://www.drupal.org/files/issues/2023-01-31/2966656-34.patch"
             }
         },
         "patches-ignore": {},

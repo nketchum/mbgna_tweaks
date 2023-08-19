@@ -37,3 +37,71 @@ $min-width-mobile: '0px';       // @media (min-width: $min-width-mobile)
 
 $min-width-wide-plus-one: '1921px';   // @media (min-width: $min-width-wide-plus-one) This used for left/right watermark fades.
 $min-width-wide-plus-120: '2040px';   // @media (min-width: $min-width-wide-plus-120) 1920 + 60 + 60. (accounts for left/right margins)
+
+.wrapped-field,
+.wrapped-fields,
+.boxed-field,
+.boxed-fields {
+  padding: 30px;
+}
+
+.wrapped-fields,
+.boxed-fields {
+  border-bottom: none !important;
+  margin-bottom: 60px !important;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.wrapped-fields {
+  & > .field {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+
+.wrapped-fields-light {
+  & > .field {
+    border-bottom-color: $gray;
+  }
+}
+
+.boxed-field,
+.boxed-fields {
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.boxed-fields {
+  & > .field {
+    border-bottom: 1px solid;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.boxed-field-light,
+.boxed-fields-light {
+  background: $light-gray;
+}
+
+.boxed-fields-light {
+  & > .field {
+    border-color: $gray;
+  }
+}

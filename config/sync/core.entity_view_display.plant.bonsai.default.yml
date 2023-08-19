@@ -8,6 +8,7 @@ dependencies:
     - field.field.plant.bonsai.field_commerce
     - field.field.plant.bonsai.field_common_name
     - field.field.plant.bonsai.field_description
+    - field.field.plant.bonsai.field_description_heading
     - field.field.plant.bonsai.field_dimensions
     - field.field.plant.bonsai.field_display_image
     - field.field.plant.bonsai.field_display_name
@@ -31,8 +32,11 @@ dependencies:
     - field.field.plant.bonsai.field_video
     - field.field.plant.bonsai.field_year_acquired
     - field.field.plant.bonsai.field_year_started
+    - image.style.colorbox_large
+    - image.style.medium_square_ish_rectangle
     - mbgna_plant.plant_type.bonsai
   module:
+    - blazy
     - datetime
     - entity_reference_revisions
     - field_formatter_class
@@ -48,7 +52,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_collections:
     type: entity_reference_label
@@ -65,9 +69,11 @@ content:
     label: hidden
     settings:
       view_mode: default
-      link: true
-    third_party_settings: {  }
-    weight: 27
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: 'boxed-fields boxed-field-light'
+    weight: 29
     region: content
   field_common_name:
     type: entity_reference_label
@@ -84,6 +90,15 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 10
+    region: content
+  field_description_heading:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: main-body-text-heading
     weight: 9
     region: content
   field_dimensions:
@@ -93,7 +108,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 19
+    weight: 21
     region: content
   field_display_image:
     type: entity_reference_entity_view
@@ -104,7 +119,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 10
+    weight: 11
     region: content
   field_display_name:
     type: string
@@ -124,7 +139,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 13
+    weight: 15
     region: content
   field_family:
     type: entity_reference_label
@@ -155,7 +170,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 20
+    weight: 22
     region: content
   field_legacy_id:
     type: string
@@ -171,7 +186,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 17
+    weight: 19
     region: content
   field_mbgna_id:
     type: string
@@ -197,7 +212,48 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 21
+    weight: 23
+    region: content
+  field_plant_images:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        alt: alt
+        title: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: grid
+      background: false
+      box_caption: alt
+      box_caption_custom: ''
+      box_media_style: colorbox_large
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: colorbox_large
+      image_style: ''
+      media_switch: colorbox
+      ratio: ''
+      thumbnail_style: medium_square_ish_rectangle
+      grid: '3'
+      grid_medium: '3'
+      grid_small: '1'
+    third_party_settings:
+      field_formatter_class:
+        class: field--name-field-plant-images
+    weight: 14
     region: content
   field_pot_notes:
     type: string
@@ -205,14 +261,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 22
+    weight: 24
     region: content
   field_priority:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 25
+    weight: 27
     region: content
   field_species:
     type: entity_reference_label
@@ -232,7 +288,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 23
+    weight: 25
     region: content
   field_status_date:
     type: datetime_default
@@ -243,7 +299,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 24
+    weight: 26
     region: content
   field_trained_since:
     type: number_integer
@@ -252,23 +308,25 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 16
+    weight: 18
     region: content
   field_trunks:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 18
+    weight: 20
     region: content
   field_video:
     type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
-      link: true
-    third_party_settings: {  }
-    weight: 11
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 12
     region: content
   field_year_acquired:
     type: number_integer
@@ -277,7 +335,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 15
+    weight: 17
     region: content
   field_year_started:
     type: number_integer
@@ -286,7 +344,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 14
+    weight: 16
     region: content
   status:
     type: boolean
@@ -298,10 +356,9 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 26
+    weight: 28
     region: content
 hidden:
   created: true
-  field_plant_images: true
   label: true
   uid: true

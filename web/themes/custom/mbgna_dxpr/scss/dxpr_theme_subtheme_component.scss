@@ -1245,3 +1245,10 @@ article.full.content-main {
 .accordion-item {
   background-color: transparent;
 }
+
+.article-body-content-column-main {
+  .field--name-field-commerce,
+  .field--name-field-commerce-external {
+    margin: 60px 0;
+  }  
+}

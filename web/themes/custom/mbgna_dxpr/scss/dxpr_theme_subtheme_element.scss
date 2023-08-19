@@ -1,6 +1,6 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
-h1 {
+h1, .main-content-title {
   font-family: $font-family-serif;
 }
 
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-h1 {
+h1, .main-content-title {
   font-size: 32px;
   line-height: 40px;
 }
@@ -32,7 +32,7 @@ h2 {
   line-height: 36px;
 }
 
-h3 {
+h3, .main-content-subtitle {
   font-size: 22px;
   line-height: 32px;
 }

@@ -37,19 +37,9 @@
         }
       }
 
-      h3,
       .main-content-title {
-        font-family: $font-family-serif;
-        font-size: 28px;
         font-weight: 700;
-        line-height: 1.15em;
-        margin-bottom: 1em;
-      }
-
-      h4,
-      .main-content-subtitle {
-        font-size: 21px;
-        margin-top: 0;
+        margin-bottom: 0.65em;
       }
 
       .main-content-subtitle {
@@ -60,17 +50,6 @@
         letter-spacing: 0.5px;
         margin-bottom: 60px;
         text-transform: uppercase;
-      }
-
-      .article-aside,
-      .article-body-content-column-left:not(.article-body-content-column-main),
-      .article-body-content-column-right:not(.article-body-content-column-main) {
-        .field {
-          background: #eee;
-          border-radius: 5px;
-          margin-bottom: 30px;
-          padding: 15px;
-        }
       }
 
       .article-body-content-column-main {
@@ -131,9 +110,14 @@
           margin-bottom: 60px;
 
           img {
-            border-radius: 15px;
+            border-radius: 10px;
           }
         }
+      }
+
+      .blazy--field-plant-images.block-grid {
+        margin-top: 60px;
+        margin-bottom: 60px;
       }
     }
   }
