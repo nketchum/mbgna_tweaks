@@ -40,8 +40,9 @@
           {{- content.field_collections -}}
         </div>
         <div class="col-lg-8 col-md-6 article-body-content-column article-body-content-column-right article-body-content-column-main">
-          {{- content.field_description -}}
           {{- content.field_display_image -}}
+          {{- content.field_description_heading -}}
+          {{- content.field_description -}}
           {{- content.field_plant_images -}}
           {{- drupal_view('plants', 'block_1', content.id) -}}
           {{- content.field_video -}}

@@ -40,7 +40,7 @@
 }
 
 .article-heading {
-  margin: 30px 0;
+  margin: 60px 0 45px;
 }
 
 .article-heading .page-title {
@@ -99,4 +99,9 @@
     display: inline-block;
     margin-right: 10px;
   }
+}
+
+.main-body-text-heading > p {
+  font-size: 21px;
+  margin-bottom: 1em;
 }

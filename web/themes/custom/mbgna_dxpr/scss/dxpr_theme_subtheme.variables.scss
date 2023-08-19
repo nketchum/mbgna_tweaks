@@ -25,3 +25,15 @@ $white:                   #FFFFFF;
 
 $font-family-sans-serif:  'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-serif:  'Playfair Display', 'Georgia', serif;
+
+$max-width-wide: '1919px';   // @media (min-width: $min-width-desktop)
+$min-width-wide: '1920px';   // @media (max-width: $max-width-desktop)
+$max-width-desktop: '1199px';    // @media (min-width: $max-width-tablet)
+$min-width-desktop: '1200px';     // @media (min-width: $min-width-tablet)
+$max-width-tablet: '1199px';    // @media (min-width: $max-width-tablet)
+$min-width-tablet: '768px';     // @media (min-width: $min-width-tablet)
+$max-width-mobile: '767px';     // @media (max-width: $min-width-mobile)
+$min-width-mobile: '0px';       // @media (min-width: $min-width-mobile)
+
+$min-width-wide-plus-one: '1921px';   // @media (min-width: $min-width-wide-plus-one) This used for left/right watermark fades.
+$min-width-wide-plus-120: '2040px';   // @media (min-width: $min-width-wide-plus-120) 1920 + 60 + 60. (accounts for left/right margins)

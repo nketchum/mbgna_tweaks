@@ -52,10 +52,31 @@
         margin-top: 0;
       }
 
+      .main-content-subtitle {
+        margin-top: -15px !important;
+      }
+
       .article-kicker {
         letter-spacing: 0.5px;
         margin-bottom: 60px;
         text-transform: uppercase;
+      }
+
+      .article-aside,
+      .article-body-content-column-left:not(.article-body-content-column-main),
+      .article-body-content-column-right:not(.article-body-content-column-main) {
+        .field {
+          background: #eee;
+          border-radius: 5px;
+          margin-bottom: 30px;
+          padding: 15px;
+        }
+      }
+
+      .article-body-content-column-main {
+        .field {
+          margin-bottom: 30px;
+        }
       }
 
       .article-body-content-column,
@@ -100,6 +121,18 @@
       .article-has-no-aside-right {
         .article-body-content-column-main {
           padding-right: 0;
+        }
+      }
+
+      // Individual fields
+
+      .field {
+        &.field--name-field-display-image {
+          margin-bottom: 60px;
+
+          img {
+            border-radius: 15px;
+          }
         }
       }
     }
