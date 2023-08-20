@@ -1,0 +1,9 @@
+uuid: 8fa7db88-7bee-4918-b91e-425135fef7e5
+langcode: en
+status: true
+dependencies: {  }
+id: content_sidebar_lead_paragraph_section
+label: 'Content sidebar lead paragraph section'
+template: '<div class="az-element az-section az-element--controls-top-left az-element--controls-spacer" style="margin-bottom:30px;" data-dxpr-builder-libraries="" data-az-id="gb08zwww8i" data-azat-pid="gb8w28l916" id="gb8w28l916" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-box_model="000000" data-azat-style="margin-bottom:30px;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbofhq9nup" data-azat-pid="gbi3mnuiq0" id="gbi3mnuiq0" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-an_infinite="no" data-azat-box_model="000000" data-azcnt="true"><h3>More Information</h3><p class="large">To schedule a virtual field trip or for more information contact Youth Education Coordinator Liz Glynn.</p></div></div></div>'
+uid: 1
+global: true

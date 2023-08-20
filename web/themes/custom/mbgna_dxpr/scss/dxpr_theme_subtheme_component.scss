@@ -564,7 +564,7 @@ header > div {
 
 @media (min-width: 1520px) {
   .contain-wide-body-text {
-    max-width: 960px;
+    max-width: 768px;
   }
 }
 
@@ -593,6 +593,10 @@ header > div {
       }
     }
   }  
+
+  .photo-grid-section {
+    max-width: 480px;
+  }
 }
 
 .shape-background-tall {

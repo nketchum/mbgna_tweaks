@@ -1,0 +1,12 @@
+uuid: 7f89f537-e215-4198-8b8c-d085023a2ff0
+langcode: en
+status: true
+dependencies: {  }
+id: content_sidebar_text_block_light
+label: 'Content sidebar text block: light'
+template: |-
+  <div class="az-element az-section container-fluid-wrapper az-color-style az-element--controls-top-left az-element--controls-spacer" style="padding-top:30px;padding-bottom:30px;padding-left:30px;padding-right:30px; color:#ffffff;border-radius:10px;background-color:#eeeeee;" data-dxpr-builder-libraries="" data-az-id="gbjlh0labb" data-azat-pid="gb0x0v65vg" id="gb0x0v65vg" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="yes" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-parallax_speed="0" data-azat-parallax_mode="fixed" data-azat-parallax_mobile_disable="no" data-azat-an_infinite="no" data-azat-box_model="000000" data-azat-style="padding-top:30px;padding-bottom:30px;padding-left:30px;padding-right:30px; color:#ffffff;border-radius:10px;background-color:#eeeeee;"><div class="az-ctnr container-fluid" data-azcnt="true"><div class="az-element az-text az-color-style" style="color:#000000;" data-az-id="gbkpqng7vs" data-azat-pid="gbkpqng7vs" id="gbkpqng7vs" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-an_infinite="no" data-azat-box_model="000000" data-azat-style=" color:#000000;" data-azcnt="true"><h4>Apply to Conduct Research</h4><p>If interested in conducting research at Matthaei-Nichols click the button below to begin the application process.<br type="_moz"></p></div><div class="az-element az-button az-button-content" data-az-id="gbfo92nwrb" data-azat-pid="gbfo92nwrb" id="gbfo92nwrb" data-azb="az_button" data-az-human-readable="Button" data-az-human-readable-en="Button" data-azat-title="Learn more ›" data-azat-link="/node/107" data-azat-link_target="_self" data-azat-type="secondary" data-azat-block="no" data-azat-outlined="no" data-azat-size="btn-sm" data-azat-box_model="000000" data-azat-style="margin-top:15px;"><a href="/node/107" class="az-button-content btn btn-sm btn-secondary" style="margin-top:15px;" target="_self" role="button">
+      Learn more ›
+  </a></div></div></div>
+uid: 1
+global: true

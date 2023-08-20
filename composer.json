@@ -142,6 +142,7 @@
         "mbgna/mbgna_plant": "dev-main",
         "mbgna/mbgna_resource": "dev-main",
         "mbgna/mbgna_tweaks": "dev-main",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "vlucas/phpdotenv": "^5.4"
     },
     "require-dev": {
@@ -219,6 +220,9 @@
             }
         },
         "patches-ignore": {},
-        "composer-exit-on-patch-failure": false
+        "composer-exit-on-patch-failure": false,
+        "drupal-lenient": {
+            "allowed-list": ["drupal/commerce_cybersource"]
+        }
     }
 }
