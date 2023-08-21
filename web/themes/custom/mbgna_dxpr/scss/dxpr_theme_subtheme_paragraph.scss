@@ -1,8 +1,22 @@
-.paragraph.paragraph--type--pricing-rates .field__item {
-  margin-bottom: 0;
-}
+.paragraph.paragraph--type--pricing-rates {
+  .field__item {
+    margin-bottom: 0;
+  }
 
-.paragraph.paragraph--type--pricing-rates .field--name-field-amount {
+  .field--name-field-amount {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  .field--name-field-amount-for {
+    padding-left: 1.15em;
+  }
+
+  .field--name-field-event-type {
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
 }

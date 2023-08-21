@@ -3,8 +3,9 @@ global-styling:
     theme:
       css/dxpr_theme_subtheme.css: {weight: 10}
   js:
-    js/minified/colorbox.min.js: { minified: true }
     js/minified/autoplay.min.js: { minified: true }
+    js/minified/colorbox.min.js: { minified: true }
+    js/minified/forms.min.js: { minified: true }
     js/minified/header_banner.min.js: { minified: true }
     js/minified/slideshow_banner.min.js: { minified: true }
 

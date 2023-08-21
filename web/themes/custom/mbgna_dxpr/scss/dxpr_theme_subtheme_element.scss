@@ -70,10 +70,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #0D57AA;
 }
 
-// h4:not(:first-child) {
-//   margin-top: 1.5em;
-// }
-
 ul, ol {
   margin: 0 0 1.5em;
 
@@ -94,6 +90,20 @@ p, li {
     margin-bottom: 0;
   }
 }
+
+.field--name-body,
+.field--name-field-body,
+.field--name-field-description {
+  &, p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  
+  li {
+    margin-bottom: 0.67em;
+  }
+}
+
 
 p, ul, ol {
   font-size: 16px;
@@ -268,4 +278,9 @@ hr {
 
 body {
   background: #f9f9f9;
+}
+
+.region-sidebar-first a, 
+.region-sidebar-second a {
+  color: $blue-secondary;
 }

@@ -19,12 +19,12 @@ function mbgna_dxpr_theme($existing, $type, $theme, $path) {
  * Implements hook_form_FORM_ID_alter().
  */
 // function mbgna_dxpr_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-//   if ($form['#id'] == 'views_exposed_form__events__page_1') {
-//     // Optional, in case, if you want to remove the title and its own placeholder.
-//     if (isset($form['keywords']) && $form['keywords']['#type'] == 'textfield') {
-//       $form['keywords']['#attributes']['placeholder'] = t('My custom placeholder');
-//       unset($form['keywords']['#title']);
-//     }
+//   if ($form['#id'] == 'views-exposed-form-events-page-1') {
+//     $form['title']['#title'] = '';
+//     $form['date_wrapper']['date_wrapper']['date']['min']['#title'] = '';
+//     $form['date_wrapper']['date_wrapper']['date']['max']['#title'] = '';
+//     $form['categories']['#title'] = '';
+//     $form['location']['#title'] = '';
 //   }
 // }
 

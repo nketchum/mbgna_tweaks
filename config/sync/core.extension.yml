@@ -134,5 +134,5 @@ theme:
   stable9: 0
   bootstrap5: 0
   dxpr_theme: 0
-  mbgna_dxpr: 0
+  mbgna_dxpr: 200
 profile: minimal

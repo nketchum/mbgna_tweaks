@@ -24,3 +24,8 @@ form {
     width: 180px;
   }
 }
+
+select.form-control {
+  color: #666; // Same color as placeholders until a valid option is selected.
+               // See forms.js in the theme.
+}
