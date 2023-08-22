@@ -15,39 +15,51 @@ categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text
-    '#text': '<h4>Reservations</h4>'
+    '#wrapper_attributes':
+      style: 'margin-bottom: 30px;'
+    '#text': '<h3>Make a reservation</h3><p class="larger">Complete and submit this form to inquire about reservations. We offer several options for various kinds of events and options.</p>'
     '#format': full_html
   name:
     '#type': webform_name
     '#title': Name
     '#title__access': false
     '#first__title': 'First Name'
-    '#first__placeholder': 'Type your first name...'
-    '#first__title_display': inline
+    '#first__placeholder': 'First name'
+    '#first__title_display': invisible
     '#first__required': true
     '#middle__access': false
     '#last__title': 'Last Name'
-    '#last__placeholder': 'Type your last name...'
-    '#last__title_display': inline
+    '#last__placeholder': 'Last name'
+    '#last__title_display': invisible
     '#last__required': true
     '#suffix__access': false
     '#degree__access': false
+    '#required': true
   email:
     '#type': email
     '#title': Email
-    '#placeholder': 'Type your email address...'
+    '#title_display': invisible
+    '#placeholder': 'Email address'
     '#required': true
   phone:
     '#type': tel
     '#title': Phone
     '#help': '<p>Please include the area code. Also include country code if outside the United States.</p>'
+    '#title_display': invisible
     '#help_display': title_before
     '#size': 30
-    '#placeholder': '(555) 555-5555'
+    '#placeholder': 'Phone number'
+  event_type:
+    '#type': webform_term_select
+    '#title': 'Event type'
+    '#title_display': invisible
+    '#empty_option': 'Type of event'
+    '#vocabulary': event_type
   message:
     '#type': textarea
     '#title': Message
-    '#placeholder': 'Type a message if you would like...'
+    '#title_display': invisible
+    '#placeholder': 'Message or inquiry'
   facility:
     '#type': entity_autocomplete
     '#title': Facility

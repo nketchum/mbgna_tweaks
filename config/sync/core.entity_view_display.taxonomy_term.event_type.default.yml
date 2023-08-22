@@ -1,0 +1,24 @@
+uuid: b27674b1-12e1-4f52-b0f2-67b540d1419f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.event_type
+  module:
+    - manage_display
+id: taxonomy_term.event_type.default
+targetEntityType: taxonomy_term
+bundle: event_type
+mode: default
+content:
+  name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true

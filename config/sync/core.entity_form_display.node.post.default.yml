@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
     - field.field.node.post.field_image
+    - field.field.node.post.field_images
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
     - node.type.post
@@ -17,6 +18,7 @@ dependencies:
     - link
     - media_library
     - path
+    - scheduler
     - text
 id: node.post.default
 targetEntityType: node
@@ -188,6 +190,13 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
+  field_images:
+    type: media_library_widget
+    weight: 123
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_organization:
     type: inline_entity_form_complex
     weight: 11
@@ -261,6 +270,12 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 52
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   revision_log:
     type: hide_revision_field_log_widget
     weight: 7
@@ -272,6 +287,11 @@ content:
       default: ''
       permission_based: false
       allow_user_settings: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -304,5 +324,11 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 54
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

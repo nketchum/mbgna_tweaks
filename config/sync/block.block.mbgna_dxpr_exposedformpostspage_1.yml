@@ -1,27 +1,27 @@
-uuid: f727f286-1132-4271-bb1a-7468a8ddedde
+uuid: 234d0291-3e85-462c-82be-81d16fff6900
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.events
+    - views.view.posts
   module:
     - block_visibility_conditions_node
     - system
     - views
   theme:
     - mbgna_dxpr
-id: exposedformeventspage_1
+id: mbgna_dxpr_exposedformpostspage_1
 theme: mbgna_dxpr
 region: sidebar_first
 weight: 0
 provider: null
-plugin: 'views_exposed_filter_block:events-page_1'
+plugin: 'views_exposed_filter_block:posts-page_1'
 settings:
-  id: 'views_exposed_filter_block:events-page_1'
+  id: 'views_exposed_filter_block:posts-page_1'
   label: ''
   label_display: visible
   provider: views
-  views_label: 'Search Events'
+  views_label: Filter
 visibility:
   not_node_type:
     id: not_node_type
@@ -30,4 +30,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '/events*'
+    pages: '/articles*'

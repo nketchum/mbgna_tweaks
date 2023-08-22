@@ -76,37 +76,16 @@
     'node',
   ]
 %}
+{% 
+  set is_external_source = content.field_external_source|render|striptags|trim
+%}
 <article{{ attributes.addClass(classes) }}>
-  <div class="content">
-    <div class="standard-layout simple-header container-fluid-wrapper">
-      <div class="container-fluid">
-        <div class="row banner-thin">
-          <div class="col-md-4">
-            {{ drupal_block('system_breadcrumb_block') }}
-            {{ content.field_post_type }}
-            <h1>{{ node.label }}</h1>
-          </div>
-          <div class="col-md-8">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 col-lg-3">
-          {{ content.field_image }}
-        </div>
-        <div class="col-md-6 col-lg-6">
-          <div{{ content_attributes.addClass('content') }}>
-            {% block content %}    
-              {{ content|without('flippy_pager', 'field_post_type', 'field_external_source', 'field_image') }}
-            {% endblock %}
-          </div>
-        </div>
-        <div class="col-md-3 col-lg-3">
-          more stories
-        </div>
-      </div>
-    </div>
-  </div>
+  {{ content.field_image }}
+
+  {% if is_external_source == 1 %}
+    {% set url = content.field_external_link|render|striptags|trim %}
+    <h5{{ title_attributes }}><a href="{{ url }}" target="_blank">{{ node.label }}</a></h5>
+  {% else %}
+    <h5{{ title_attributes }}><a href="{{ url }}">{{ node.label }}</a></h5>
+  {% endif %}
 </article>

@@ -29,7 +29,6 @@ visibility:
       drag_and_drop_page: drag_and_drop_page
       garden: garden
       landing_page: landing_page
-      room: room
       trail: trail
     negate: null
   request_path:

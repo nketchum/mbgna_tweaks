@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.field.paragraph.pricing_rates.field_amount
     - field.field.paragraph.pricing_rates.field_amount_for
+    - field.field.paragraph.pricing_rates.field_event_type
     - paragraphs.paragraphs_type.pricing_rates
+  module:
+    - inline_entity_form
 id: paragraph.pricing_rates.default
 targetEntityType: paragraph
 bundle: pricing_rates
@@ -25,6 +28,24 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_event_type:
+    type: inline_entity_form_complex
+    weight: 3
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'event type'
+      label_plural: 'event types'
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
     third_party_settings: {  }
 hidden:
   created: true

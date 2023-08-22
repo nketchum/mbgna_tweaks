@@ -80,26 +80,43 @@
   set is_external_source = content.field_external_source|render|striptags|trim
 %}
 <article{{ attributes.addClass(classes) }}>
-  {{ content.field_post_type }}
-
-  {% if is_external_source == 1 %}
-    {% set url = content.field_external_link|render|striptags|trim %}
-    <h2{{ title_attributes }}><a href="{{ url }}" target="_blank">{{ node.label }}</a></h2>
-  {% else %}
-    <h2{{ title_attributes }}><a href="{{ url }}">{{ node.label }}</a></h2>
-  {% endif %}
-
   <div{{ content_attributes.addClass('content') }}>
-    {% block content %}    
-      {% if is_external_source == 1 %}
-        {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source', 'field_external_link') }}
-      {% else %}
-        {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source') }}
-        <div class="field field--name-field-organization field--type-entity-reference field--label-inline clearfix">
-          <div class="field__label">Organization</div>
-          <div class="field__item">Matthaei Botanical Gardens &amp; Nichols Arboretum</div>
+    <div class="row">
+      <div class="col-lg-2 col-md-2">
+        {{ content.field_image }}
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="field field--name-field-post-type field--type-entity-reference field--label-hidden field__item">
+          <a href="/articles/{{ content.field_post_type|render|striptags|trim|lower }}">{{ content.field_post_type|render|striptags|trim }}</a>
         </div>
-      {% endif %}
-    {% endblock %}
+        
+        {% if is_external_source|render|striptags|trim == 1 %}
+          {% set url = content.field_external_link|render|striptags|trim %}
+          <h3{{ title_attributes }}><a href="{{ content.field_external_link.0['#url'].toString() }}" target="_blank">{{ node.label }}</a></h3>
+        {% else %}
+          <h3{{ title_attributes }}><a href="{{ url }}">{{ node.label }}</a></h3>
+        {% endif %}
+
+        {% block content %}
+          {% if is_external_source == 1 %}
+            {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source', 'field_external_link', 'field_image', 'field_images', 'field_organization') }}
+          {% else %}
+            {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source', 'field_image', 'field_organization', 'field_external_link') }}
+          {% endif %}
+        {% endblock %}
+
+        {% if content.field_post_type|render|striptags|trim == 'News' %}
+          {% if content.field_organization|render|striptags|trim %}
+            {{ content.field_organization }}
+          {% else %}
+            <div class="field field--name-field-organization field--label-hidden field__item">Matthaei Botanical Gardens &amp; Nichols Arboretum</div>
+          {% endif %}   
+        {% else %}
+            <div class="field field--name-field-organization field--label-hidden field__item">Matthaei Botanical Gardens &amp; Nichols Arboretum</div>
+        {% endif %}
+      </div>
+      <div class="col-lg-4 col-md-4">
+      </div>
+    </div>
   </div>
 </article>

@@ -1128,6 +1128,19 @@ header > div {
   margin: 0;
 }
 
+.bef-exposed-form {
+  .form-item-published-min,
+  .form-item-published-max {
+    label {
+      display: none;
+    }
+  }
+
+  .form-wrapper {
+    margin-top: -0.5em;
+  }
+}
+
 .bef-exposed-form .form--inline > .form-item {
   float: none;
 }

@@ -1,0 +1,52 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+.post.full {
+  .block-grid, 
+  .blazy.block-grid, 
+  .item-list > .block-grid {
+    margin-top: 60px;
+
+    @media (max-width: 1200px) {
+      margin-top :0;
+    }
+  }
+}
+
+.post.teaser {
+  margin-bottom: 60px;
+
+  & > .content {
+    .row {
+      & > * { // all columns in the row
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 15px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  img {
+    border-radius: 5px;
+  }
+
+  .field--name-field-organization {
+    font-size: 14px;
+    margin-top: -15px;
+    color: #999;
+  }
+}
+
+.post.card-basic {
+  .field--name-field-image {
+    margin-bottom: 15px;
+  }
+}

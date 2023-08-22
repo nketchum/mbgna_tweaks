@@ -9,8 +9,8 @@ id: paragraph.pricing_rates.field_amount_for
 field_name: field_amount_for
 entity_type: paragraph
 bundle: pricing_rates
-label: For
-description: 'The amount or variety or description relating to this particular price.'
+label: 'Price unit'
+description: 'The unit corresponding to the price, i.e. "per hour" or "per person".'
 required: false
 translatable: false
 default_value: {  }

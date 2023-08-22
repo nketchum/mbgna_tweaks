@@ -826,7 +826,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: 'Event Name'
+            label: ''
             description: ''
             use_operator: false
             operator: title_op
@@ -839,10 +839,20 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              author: '0'
+              collections_donor: '0'
               editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
               super_administrator: '0'
+              volunteer: '0'
               working_group_member: '0'
-            placeholder: 'Search one or more words...'
+            placeholder: 'Name of event...'
           is_grouped: false
           group_info:
             label: ''
@@ -919,7 +929,7 @@ display:
           exposed: true
           expose:
             operator_id: field_event_categories_target_id_op
-            label: Category
+            label: ''
             description: ''
             use_operator: false
             operator: field_event_categories_target_id_op
@@ -932,8 +942,18 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              author: '0'
+              collections_donor: '0'
               editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
               super_administrator: '0'
+              volunteer: '0'
               working_group_member: '0'
             reduce: false
           is_grouped: false
@@ -954,6 +974,13 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+          save_lineage: false
+          force_deepest: false
+          parent: null
+          level_labels: ''
+          hierarchy_depth: 0
+          required_depth: 0
+          none_label: '- Please select -'
         field_location_target_id:
           id: field_location_target_id
           table: node__field_location
@@ -968,7 +995,7 @@ display:
           exposed: true
           expose:
             operator_id: field_location_target_id_op
-            label: Location
+            label: ''
             description: ''
             use_operator: false
             operator: field_location_target_id_op
@@ -981,8 +1008,18 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              author: '0'
+              collections_donor: '0'
               editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
               super_administrator: '0'
+              volunteer: '0'
               working_group_member: '0'
             reduce: false
           is_grouped: false
@@ -1003,6 +1040,13 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+          save_lineage: false
+          force_deepest: false
+          parent: null
+          level_labels: ''
+          hierarchy_depth: 0
+          required_depth: 0
+          none_label: '- Please select -'
       filter_groups:
         operator: AND
         groups:
