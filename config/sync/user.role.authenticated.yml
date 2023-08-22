@@ -30,6 +30,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'access toolbar'
+  - 'access user profiles'
   - 'change own username'
   - 'delete own files'
   - 'manage own commerce_payment_method'

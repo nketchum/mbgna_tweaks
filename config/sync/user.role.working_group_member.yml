@@ -20,7 +20,6 @@ permissions:
   - 'access comments'
   - 'access content overview'
   - 'access user contact forms'
-  - 'access user profiles'
   - 'create basic_page content'
   - 'delete basic_page revisions'
   - 'delete own basic_page content'

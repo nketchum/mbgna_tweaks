@@ -1,8 +1,9 @@
-uuid: 7a908f37-3e09-46de-adfe-0e0e26bbaceb
+uuid: 5727b4bf-ff63-4b85-90cd-63f9babef41a
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.user.card_basic
     - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_bio
     - field.field.user.user.field_organization
@@ -13,37 +14,64 @@ dependencies:
     - field.field.user.user.field_realname_prefix
     - field.field.user.user.field_realname_suffix
     - field.field.user.user.field_title
+    - image.style.medium_square
   module:
-    - text
+    - blazy
+    - field_formatter_class
     - user
-id: user.user.default
+id: user.user.card_basic
 targetEntityType: user
 bundle: user
-mode: default
+mode: card_basic
 content:
-  field_bio:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_organization:
     type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_photo:
-    type: entity_reference_entity_view
-    label: above
+    type: blazy_media
+    label: hidden
     settings:
+      caption:
+        title: '0'
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
       view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 4
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
     region: content
   field_title:
     type: string
@@ -51,16 +79,17 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   realname:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   commerce_remote_id: true
   customer_profiles: true
+  field_bio: true
   field_realname_first: true
   field_realname_last: true
   field_realname_middle: true

@@ -3,6 +3,7 @@
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\views\ViewExecutable;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
 
 /**
  * Implements hook_theme().
@@ -165,6 +166,14 @@ function mbgna_dxpr_preprocess_node(&$variables) {
   //   }
   // }
 }
+
+// function mbgna_dxpr_preprocess_user(&$variables) {
+//   $variables['user'] = $variables['elements']['#user'];
+//   // Helpful $content variable for templates.
+//   foreach (Element::children($variables['elements']) as $key) {
+//     $variables['content'][$key] = $variables['elements'][$key];
+//   }
+// }
 
 /**
  * Implements template_menu_local_tasks()

@@ -57,3 +57,39 @@
     }
   }
 }
+
+.view-people {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px -30px;
+
+    // Group labels
+    & > h3 {
+      width: 100%;
+      padding-left: 30px;
+      margin-bottom: 15px;
+
+      ul {
+        margin: 0;
+        list-style: none;
+
+        li {
+          margin: 0;
+          font-size: 22px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    .views-row {
+      flex-basis: percentage(1/4);
+      padding: 30px;
+
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}

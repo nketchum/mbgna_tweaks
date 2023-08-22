@@ -45,7 +45,6 @@ permissions:
   - 'access resource overview'
   - 'access taxonomy overview'
   - 'access user contact forms'
-  - 'access user profiles'
   - 'access webform overview'
   - 'administer block content'
   - 'administer block types'
