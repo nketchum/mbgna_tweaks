@@ -1,0 +1,35 @@
+uuid: b5221f28-09f9-48c9-8f01-790a95d8cfa3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:simple_text:271d5f8e-0bff-445c-b53d-299b4663c16d'
+  module:
+    - block_content
+    - block_visibility_conditions_node
+    - system
+  theme:
+    - mbgna_dxpr
+id: mbgna_dxpr_contactussidebar
+theme: mbgna_dxpr
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:271d5f8e-0bff-445c-b53d-299b4663c16d'
+settings:
+  id: 'block_content:271d5f8e-0bff-445c-b53d-299b4663c16d'
+  label: 'Contact us sidebar'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: /form/contact

@@ -18,6 +18,10 @@ title: Contact
 description: 'Basic email contact webform.'
 categories: {  }
 elements: |-
+  processed_text:
+    '#type': processed_text
+    '#text': '<h2>Contact Us</h2><p>Please use the form below for questions about making a gift, educational opportunities, weddings and rentals, research and resources, natural areas, media requests, or to submit feedback or suggestions.</p><p>For all horticultural and botanical questions such as plant diseases or plant identification, appropriate climate zones, native and invasive species, etc., please visit the Michigan State University Extension site.</p>'
+    '#format': full_html
   name:
     '#title': 'Your Name'
     '#type': textfield
@@ -29,24 +33,30 @@ elements: |-
     '#required': true
     '#default_value': '[current-user:mail]'
   subject:
+    '#type': select
     '#title': Subject
-    '#type': textfield
-    '#required': true
-    '#test': 'Testing contact webform from [site:name]'
+    '#options':
+      'General inquiry': 'General inquiryGeneral inquiry'
+      'Research and resources': 'Research and resources'
+      'Give a gift': 'Give a gift'
+      'Education inquiry': 'Education inquiry'
+      'Youth education inquiry': 'Youth education inquiry'
+      'Weddings and rentals': 'Weddings and rentals'
+      'Natural areas': 'Natural areas'
+      'Media request': 'Media request'
+      Volunteering: Volunteering
+      'Feedback and suggestions': 'Feedback and suggestions'
+  topics_of_interest:
+    '#type': webform_term_checkboxes
+    '#title': Interests
+    '#wrapper_type': form_element
+    '#vocabulary': interest
+    '#tree_delimiter': '-'
   message:
     '#title': Message
     '#type': textarea
     '#required': true
     '#test': 'Please ignore this email.'
-  additional_information:
-    '#type': details
-    '#title': 'Additional information'
-    '#open': true
-    topics_of_interest:
-      '#type': webform_term_checkboxes
-      '#title': 'Topics of Interest'
-      '#vocabulary': interest
-      '#tree_delimiter': '-'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'

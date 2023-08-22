@@ -91,74 +91,78 @@ p, li {
   }
 }
 
-.field--name-body,
-.field--name-field-body,
-.field--name-field-description {
-  &, p {
-    font-size: 18px;
-    line-height: 32px;
-  }
-  
-  li {
-    margin-bottom: 0.67em;
-  }
-}
-
-
-p, ul, ol {
-  font-size: 16px;
-  line-height: 26px;
-
-  &.largest {
-    &, li {
-      font-size: 24px;
-      line-height: 34px;
-    }
-  }
-
-  &.larger {
-    &, li {
-      font-size: 20px;
-      line-height: 30px;
-    }
-  }
-
-  &.large {
-    &, li {
+header,
+footer,
+.region-highlighted,
+.region-content {
+  .field--name-body,
+  .field--name-field-body,
+  .field--name-field-description {
+    &, p {
       font-size: 18px;
-      line-height: 28px;
+      line-height: 32px;
+    }
+    
+    li {
+      margin-bottom: 0.67em;
     }
   }
 
-  &.small {
-    &, li {
-      font-size: 14px;
-      line-height: 24px;
+  p, ul, ol {
+    font-size: 16px;
+    line-height: 26px;
+
+    &.largest {
+      &, li {
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+
+    &.larger {
+      &, li {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    &.large {
+      &, li {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    &.small {
+      &, li {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    &.smaller {
+      &, li {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    &.smallest {
+      &, li {
+      font-size: 11px;
+      line-height: 18px;
+      }
     }
   }
 
-  &.smaller {
-    &, li {
-      font-size: 12px;
-      line-height: 20px;
+  ul, ol {
+    list-style-position: outside;
+    margin: 1.5em 0;
+    padding-left: 1em;
+
+    &.indented {
+      list-style-position: inside;
     }
-  }
-
-  &.smallest {
-    &, li {
-    font-size: 11px;
-    line-height: 18px;
-    }
-  }
-}
-
-ul, ol {
-  list-style-position: outside;
-  margin: 1.5em 0;
-  padding-left: 1em;
-
-  &.indented {
-    list-style-position: inside;
   }
 }
 
