@@ -1,0 +1,26 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+.position.full {
+  .article-body-content-column-right,
+  .article-aside-right {
+    padding-top: 45px !important;
+  }
+}
+
+.position.card-basic {
+  .field--name-field-position-type {
+    color: #666;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  h5,
+  .card-basic-title {
+    margin: 0;
+  }
+
+  .field--name-created {
+    color: #666;
+    font-size: 14px;
+  }
+}

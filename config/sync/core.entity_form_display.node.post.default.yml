@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.post.field_images
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
+    - field.field.node.post.field_user
     - node.type.post
   module:
     - conditional_fields
@@ -256,6 +257,16 @@ content:
     weight: 1
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_user:
+    type: entity_reference_autocomplete
+    weight: 124
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

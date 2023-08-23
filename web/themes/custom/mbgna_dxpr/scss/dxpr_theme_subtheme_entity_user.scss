@@ -19,3 +19,41 @@ article.profile {
     font-style: italic;
   }
 }
+
+article.full {
+  .field--name-field-user {
+    border-top: 1px solid $gray;
+    margin-top: 30px;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding-top: 60px;
+
+    article.profile {
+      .field--name-field-photo {
+        float: left;
+        margin: 0 30px 15px 0;
+        width: 25%;
+
+        .field--name-field-media-image {
+          margin-bottom: 0;
+        }
+      }
+
+      .field--name-realname {
+        float: left;
+        margin: 0 0 5px !important;
+        width: calc(100% - 25% - 30px);
+      }
+
+      .field--name-field-bio {
+        float: left;
+        margin-bottom: 0;
+        width: calc(100% - 25% - 30px);
+
+        &, p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

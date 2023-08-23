@@ -30,9 +30,8 @@
       <div class="row banner-thin">
         <div class="col-md-4">
           {{ drupal_block('system_breadcrumb_block') }}
-          {{ content.field_post_type }}
           <h1>{{ node.label }}</h1>
-          <div class="field field--name-created field__item">Published {{ node.getCreatedTime|format_date('medium_date') }}</div>
+          <div class="field field--name-created field__item">Posted on {{ node.getCreatedTime|format_date('medium_date') }}</div>
         </div>
         <div class="col-md-8">
         </div>
@@ -43,19 +42,24 @@
     {% block content %}
     <div class="article-body-content col-lg-12 col-md-12 row">
       <div class="col-lg-4 col-md-4 article-body-content-column article-body-content-column-left article-body-content-column">
-        {{ content.field_image }}
-        {{ content.field_images }}
+        {% if content.field_application_webform|render|striptags|trim %}
+          <div class="boxed-fields boxed-fields-light">
+            {{- content.field_application_webform -}}
+          </div>
+        {% endif %}
       </div>
       <div class="col-lg-6 col-md-6 article-body-content-column article-body-content-column-right article-body-content-column-main">
         <div{{ content_attributes.addClass('content') }}>   
-          {{ content|without('flippy_pager', 'field_post_type', 'field_external_source', 'field_image', 'field_images') }}
+          <h3>Description</h3>
+          {{ content|without('flippy_pager', 'field_application_webform', 'created') }}
+          <p><a href="/positions" class="btn btn-primary btn-sm">‹ Back to jobs</a></p>
       </div>
     </div>
     {% endblock %}
     <div class="article-aside article-aside-right col-lg-2 col-md-2">
       <div class="article-aside-content">
         <h3>More...</h3>
-        {{ drupal_view('posts', 'block_1') }}
+        {{ drupal_view('positions', 'block_1') }}
       </div>
     </div>
   </div>

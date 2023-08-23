@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.post.field_images
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
+    - field.field.node.post.field_user
     - image.style.large_square_ish_rectangle
     - image.style.medium_square_ish_rectangle
     - node.type.post
@@ -126,6 +127,17 @@ content:
       field_formatter_class:
         class: ''
     weight: 3
+    region: content
+  field_user:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 8
     region: content
   title:
     type: title

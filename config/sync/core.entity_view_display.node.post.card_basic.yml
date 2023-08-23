@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.post.field_images
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
+    - field.field.node.post.field_user
     - image.style.medium_square_ish_rectangle
     - node.type.post
   module:
@@ -112,5 +113,6 @@ hidden:
   created: true
   field_images: true
   field_organization: true
+  field_user: true
   links: true
   uid: true

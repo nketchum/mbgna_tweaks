@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.position.body
+    - field.field.node.position.field_application_webform
     - field.field.node.position.field_position_type
     - node.type.position
   module:
@@ -11,6 +12,7 @@ dependencies:
     - hide_revision_field
     - path
     - text
+    - webform
 id: node.position.default
 targetEntityType: node
 bundle: position
@@ -31,6 +33,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_application_webform:
+    type: webform_entity_reference_select
+    weight: 123
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
     third_party_settings: {  }
   field_position_type:
     type: cshs
@@ -102,4 +112,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

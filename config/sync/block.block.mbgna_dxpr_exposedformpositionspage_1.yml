@@ -1,0 +1,33 @@
+uuid: 1a6d3f0c-9ec4-4f5a-9040-6863b7d46ef2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.positions
+  module:
+    - block_visibility_conditions_node
+    - system
+    - views
+  theme:
+    - mbgna_dxpr
+id: mbgna_dxpr_exposedformpositionspage_1
+theme: mbgna_dxpr
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:positions-page_1'
+settings:
+  id: 'views_exposed_filter_block:positions-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: Search
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/positions*'

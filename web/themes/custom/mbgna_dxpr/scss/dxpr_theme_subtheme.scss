@@ -6,6 +6,7 @@
 @import "./dxpr_theme_subtheme_entity_facility.scss";
 @import "./dxpr_theme_subtheme_entity_node.scss";
 @import "./dxpr_theme_subtheme_entity_node_event.scss";
+@import "./dxpr_theme_subtheme_entity_node_position.scss";
 @import "./dxpr_theme_subtheme_entity_node_post.scss";
 @import "./dxpr_theme_subtheme_entity_plant.scss";
 @import "./dxpr_theme_subtheme_entity_user.scss";
@@ -66,4 +67,14 @@ a:focus,
   .hide-on-desktop {
     display: none;
   }  
+}
+
+.media {
+  &.align-left {
+    margin: 1em 2em 1em 0; 
+  }
+
+  &.align-right {
+    margin: 1em 0 1em 2em  
+  }
 }

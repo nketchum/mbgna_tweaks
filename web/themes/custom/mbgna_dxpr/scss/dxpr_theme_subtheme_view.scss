@@ -1,5 +1,18 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
+.view {
+  ul.pager__items { // Mini pagers
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+    li.pager__item {
+      padding: 0;
+      margin-right: 15px;
+    }
+  }
+}
+
 .view-content-row {
   .view-content {
     display: flex;
@@ -58,6 +71,16 @@
   }
 }
 
+.view-positions {
+  &.view-display-id-block_1 {
+    .views-row {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
 .view-people {
   .view-content {
     display: flex;
@@ -73,6 +96,7 @@
       ul {
         margin: 0;
         list-style: none;
+        padding-left: 0;
 
         li {
           margin: 0;

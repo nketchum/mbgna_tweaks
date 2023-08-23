@@ -14,3 +14,18 @@
     }
   }
 }
+
+.webform-submission-position-application-form {
+  label, legend {
+    display: none;
+  }
+
+  .form-type-processed-text {
+    margin-top: 1em;
+    margin-bottom: 30px;
+  }
+
+  .form-item-full-name-title-select {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,35 @@
+uuid: f004439a-5f30-482e-83d8-a97d8e92ecc2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:9bd2e624-2c7e-47cf-a4ac-be7f922832aa'
+  module:
+    - block_content
+    - block_visibility_conditions_node
+    - system
+  theme:
+    - mbgna_dxpr
+id: mbgna_dxpr_positionsheaderblock
+theme: mbgna_dxpr
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:9bd2e624-2c7e-47cf-a4ac-be7f922832aa'
+settings:
+  id: 'block_content:9bd2e624-2c7e-47cf-a4ac-be7f922832aa'
+  label: 'Positions header block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/positions*'

@@ -1,0 +1,37 @@
+uuid: d93c2053-f09e-49c0-9bd5-4594f30c6194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_webform
+    - node.type.position
+    - webform.webform.position_application
+  module:
+    - field_display_label
+    - webform
+third_party_settings:
+  field_display_label:
+    display_label: Apply
+id: node.position.field_application_webform
+field_name: field_application_webform
+entity_type: node
+bundle: position
+label: 'Application webform'
+description: 'Add a webform to this facility to let applicants apply to a position.'
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 522042cd-7501-491b-81b5-8a0122e1f9ec
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    webform_access_group: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

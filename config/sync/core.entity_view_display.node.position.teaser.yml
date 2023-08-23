@@ -5,28 +5,54 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.position.body
+    - field.field.node.position.field_application_webform
     - field.field.node.position.field_position_type
     - node.type.position
   module:
+    - field_formatter_class
     - manage_display
-    - text
+    - smart_trim
 id: node.position.teaser
 targetEntityType: node
 bundle: position
 mode: teaser
 content:
   body:
-    type: text_summary_or_trimmed
+    type: smart_trim
     label: hidden
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
+      trim_length: 300
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+        token_browser: ''
+      summary_handler: trim
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
     region: content
-  links:
-    settings: {  }
+  created:
+    type: timestamp_ago
+    label: hidden
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
   title:
     type: title
@@ -35,9 +61,10 @@ content:
       link_to_entity: true
       tag: h2
     third_party_settings: {  }
-    weight: -49
+    weight: 0
     region: content
 hidden:
-  created: true
+  field_application_webform: true
   field_position_type: true
+  links: true
   uid: true

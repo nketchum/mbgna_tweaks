@@ -1,8 +1,9 @@
-uuid: 7bf2c67c-3cdc-40c6-a758-78494f72e7ca
+uuid: b7743c52-24b3-424b-93b9-1854893d5d29
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card_basic
     - field.field.node.position.body
     - field.field.node.position.field_application_webform
     - field.field.node.position.field_position_type
@@ -10,20 +11,11 @@ dependencies:
   module:
     - field_formatter_class
     - manage_display
-    - text
-    - webform
-id: node.position.default
+id: node.position.card_basic
 targetEntityType: node
 bundle: position
-mode: default
+mode: card_basic
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   created:
     type: timestamp
     label: hidden
@@ -46,25 +38,29 @@ content:
         class: ''
     weight: 2
     region: content
-  field_application_webform:
-    type: webform_entity_reference_entity_view
+  field_position_type:
+    type: entity_reference_label
     label: hidden
     settings:
-      source_entity: true
-      lazy: false
-    third_party_settings: {  }
-    weight: 3
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
     region: content
   title:
     type: title
     label: hidden
     settings:
       link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
-    weight: 0
+      tag: h5
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
     region: content
 hidden:
-  field_position_type: true
+  body: true
+  field_application_webform: true
   links: true
   uid: true

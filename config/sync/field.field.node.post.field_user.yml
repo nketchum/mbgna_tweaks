@@ -1,0 +1,34 @@
+uuid: a5733e07-7b34-4ecf-b453-a0ce470d545f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user
+    - node.type.post
+  module:
+    - field_display_label
+third_party_settings:
+  field_display_label:
+    display_label: Author
+id: node.post.field_user
+field_name: field_user
+entity_type: node
+bundle: post
+label: User
+description: 'Select the user account associated with authorship.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: field_realname_last
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: false
+field_type: entity_reference

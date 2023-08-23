@@ -137,6 +137,33 @@ function mbgna_dxpr_preprocess_node(&$variables) {
       }
     }
   }
+
+  if ($node->getType() == 'position') {
+    // Embed an exposed views filter in full position pages directly
+    // into the twig template.
+    if ($variables['view_mode'] == 'full') {
+      $form = [];
+      $view_id = 'positions';
+      $display_id = 'page_1';
+      $view = Views::getView($view_id);
+      if ($view && $view->access($display_id)) {
+        $view->setDisplay($display_id);
+        $view->initHandlers();
+        $form_state = (new FormState())
+          ->setStorage([
+            'view' => $view,
+            'display' => &$view->display_handler->display,
+            'rerender' => TRUE,
+          ])
+          ->setMethod('get')
+          ->setAlwaysProcess()
+          ->disableRedirect();
+        $form_state->set('rerender', NULL);
+        $form = \Drupal::formBuilder()->buildForm('\Drupal\views\Form\ViewsExposedForm', $form_state);
+        $variables['views_form'] = $form;
+      }
+    }
+  }
   
   // // Convert times to timestamps for iCal.
   // if (array_key_exists('field_date_smart', $variables['elements'])) {
