@@ -1261,7 +1261,8 @@ article.full.content-main {
     .banner-thin {
       padding: 30px 0;
 
-      .field--name-field-post-type {
+      .field--name-field-post-type,
+      .field--name-field-position-type {
         color: #666;
         margin-top: 15px;
         text-transform: uppercase;

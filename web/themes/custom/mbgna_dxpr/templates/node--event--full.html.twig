@@ -87,6 +87,9 @@
         {% endfor %}
       </div>
     {% endif %}
+    <div class="field field--name-field-event-category field--type-entity-reference field--label-hidden field__item">
+      <a href="/events/{{ content.field_event_categories.0|render|striptags|trim|lower|replace({' ': '-'})  }}">{{ content.field_event_categories.0|render|striptags|trim }}</a>
+    </div>
     <h2 class="page-title">{{ title_prefix }}{{ node.label|render|striptags|trim }}{{ title_suffix }}</h2>
     {{ content.field_date_smart }}
   </div>

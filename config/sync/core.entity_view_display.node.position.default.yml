@@ -55,6 +55,16 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_position_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 4
+    region: content
   title:
     type: title
     label: hidden
@@ -65,6 +75,5 @@ content:
     weight: 0
     region: content
 hidden:
-  field_position_type: true
   links: true
   uid: true

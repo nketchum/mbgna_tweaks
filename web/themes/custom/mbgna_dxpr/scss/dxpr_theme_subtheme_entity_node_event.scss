@@ -1,6 +1,22 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
 .event.full {
+  .article-heading {
+    .field--name-field-event-category {
+      color: #666;
+      margin-top: 15px;
+      text-transform: uppercase;
+      margin-top: calc(-60px + 15px);
+      margin-bottom: 60px;
+
+      a {
+        color: #666;
+      }
+    }
+  }
+}
+
+.event.full {
   margin-bottom: 90px;
   
   .field--name-field-event-categories {
