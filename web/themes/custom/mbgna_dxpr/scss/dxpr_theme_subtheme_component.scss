@@ -182,7 +182,7 @@ header > div {
   justify-content: right;
   
   ul.nav {
-    background-color: $light-gray;
+    background-color: $blue-secondary;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     float:right;
@@ -206,12 +206,29 @@ header > div {
     }
 
     & > li > a {
-      font-size: $font-size-small;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
+      color: $white;
+      font-size: 16px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
+
+@media (max-width: 1920px) {
+  .block-system-menu-blocktop-menu {
+    height: 35px;
+
+    ul.nav {
+      position: absolute;
+      right: 0;
+
+      a.highlight {
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+}
+
 
 // Bottom navs.
 #secondary-header,
@@ -495,6 +512,10 @@ header > div {
     }
   }
 }
+
+// .banner-wide {
+//   margin-top: 30px; // TODO this should only apply to wide banners at the very top of the page.
+// }
 
 @media (max-width: 1920px) {
   .banner-wide {
