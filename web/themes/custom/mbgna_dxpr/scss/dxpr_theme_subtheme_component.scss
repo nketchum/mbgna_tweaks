@@ -469,6 +469,7 @@ header > div {
     display: inline-block;
     margin-top: 0;
     min-width: 50%;
+    padding-left: 0;
     padding-right: 15px;
     padding-top: 10px;
 
@@ -1128,43 +1129,6 @@ header > div {
   margin: 0;
 }
 
-.bef-exposed-form {
-  .form-item-published-min,
-  .form-item-published-max {
-    label {
-      display: none;
-    }
-  }
-
-  .form-wrapper {
-    margin-top: -0.5em;
-  }
-}
-
-.bef-exposed-form .form--inline > .form-item {
-  float: none;
-}
-
-.bef-exposed-form .form--inline .form-item {
-  margin-right: 0;
-}
-
-.form-item-date-min,
-.form-item-date-max {
-  width: 50%;
-  float: left !important;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.form-item-date-min {
-  padding-right: 7.5px;
-}
-
-.form-item-date-max {
-  padding-left: 7.5px;
-}
-
 // add padding to bootstrap columns inside full view articles only
 article.full.content-main {
 
@@ -1284,6 +1248,21 @@ article.full.content-main {
 
       h1 {
         margin-top: 5px;
+      }
+    }
+  }
+}
+
+.tabs-top {
+  .nav-tabs {
+    justify-content: flex-start !important;
+
+    li {
+      margin-right: 30px !important;
+
+      a {
+        font-size: 22px;
+        line-height: 36px;
       }
     }
   }

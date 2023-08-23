@@ -108,7 +108,7 @@ footer,
     }
   }
 
-  p, ul, ol {
+  p, ul:not(.nav), ol:not(.breadcrumb) {
     font-size: 16px;
     line-height: 26px;
 
@@ -155,7 +155,7 @@ footer,
     }
   }
 
-  ul, ol {
+  ul:not(.nav), ol:not(.breadcrumb) {
     list-style-position: outside;
     margin: 1.5em 0;
     padding-left: 1em;

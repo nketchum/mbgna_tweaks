@@ -29,3 +29,59 @@ select.form-control {
   color: #666; // Same color as placeholders until a valid option is selected.
                // See forms.js in the theme.
 }
+
+.bef-exposed-form {
+  fieldset {
+    margin-top: 0;
+    margin-right: 0 !important;
+
+    .fieldset-wrapper {
+      & > .form-item {
+        margin-top: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .form-item-published-min,
+  .form-item-published-max {
+    label {
+      display: none;
+    }
+  }
+
+  .form--inline {
+    & > .form-item {
+      float: none;
+      margin-right: 0;
+    }
+  }
+
+  // .form-wrapper {
+  //   margin-top: -0.5em;
+  // }
+}
+
+// .bef-exposed-form .form--inline > .form-item {
+//   float: none;
+// }
+
+// .bef-exposed-form .form--inline .form-item {
+//   margin-right: 0;
+// }
+
+.form-item-date-min,
+.form-item-date-max {
+  width: 50%;
+  float: left !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-item-date-min {
+  padding-right: 7.5px;
+}
+
+.form-item-date-max {
+  padding-left: 7.5px;
+}

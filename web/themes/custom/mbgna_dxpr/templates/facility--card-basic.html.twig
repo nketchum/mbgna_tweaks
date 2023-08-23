@@ -28,21 +28,21 @@
       {% if content %}
         {{- content.field_image -}}
         <h4><a href="{{- url -}}">{{- content.label|render|striptags -}}</a></h4>
-        {% if content.field_location %}
+{#         {% if content.field_location %}
           <div class="field field--name-field-location field--type-entity-reference field--label-hidden field__item">
             <span clas="location-label"><strong>Location:</strong></span>
             <span class="location-value">{{ content.field_location|render|striptags }}</span>
           </div>
-        {% endif %}
+        {% endif %} #}
         {% if content.field_capacity %}
           <div class="field field--name-field-capacity field--type-integer field--label-hidden field__item">
-            <span class="capacity-label"><strong>Capacity:</strong></span>
-            <span class="capacity-number">{{- content.field_capacity.0 -}}</span>
+            <div class="capacity-label">Capacity</div>
+            <div class="capacity-number">{{- content.field_capacity.0 -}}</div>
           </div>
         {% endif %}
-        {% if url %}
+{#         {% if url %}
           <div class="field field--name-label field--type-string field--label-hidden field__item"><a href="{{- url -}}" class="btn btn-default">Rental info ›</a></div>
-        {% endif %}        
+        {% endif %}      #}   
       {% endif %}
     </div>
   </div>

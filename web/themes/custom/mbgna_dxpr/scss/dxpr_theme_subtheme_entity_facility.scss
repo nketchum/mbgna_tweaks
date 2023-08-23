@@ -65,9 +65,33 @@
 }
 
 .facility.card-basic {
+  
+  padding-right: 5px;
+
   h4 {
     margin-top: 15px;
     margin-bottom: 0;
+    float: left;
+    width: 50%;
+    line-height: 1.25em;
+  }
+
+  .field--name-field-capacity {
+    float: left;
+    margin-top: 15px;
+    text-align: right;
+    width: 50%;
+
+    .capacity-label {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .capacity-number {
+      font-size: 22px;
+      font-weight: 300;
+      margin-top: -5px;
+    }
   }
 
   .btn {
