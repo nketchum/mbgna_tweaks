@@ -1,8 +1,8 @@
-uuid: f6a1fd16-89e9-49b2-9d64-000f9c7b81f5
+uuid: 90fde49e-8718-4fb5-b291-75d511f8bcf4
 langcode: en
 status: true
 dependencies: {  }
-id: member_directorscircle
+id: member_directors_circle
 label: 'Director’s circle member'
 weight: 12
 is_admin: null

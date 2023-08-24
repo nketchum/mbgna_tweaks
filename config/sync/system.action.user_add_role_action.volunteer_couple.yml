@@ -1,0 +1,14 @@
+uuid: c092e032-b0d0-4e49-a9f9-ad4abdd47ce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.volunteer_couple
+  module:
+    - user
+id: user_add_role_action.volunteer_couple
+label: 'Add the Couple volunteer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: volunteer_couple

@@ -1,0 +1,14 @@
+uuid: 2bec95db-7339-429e-868f-cc2e429b33f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.volunteer_couple
+  module:
+    - user
+id: user_remove_role_action.volunteer_couple
+label: 'Remove the Couple volunteer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: volunteer_couple

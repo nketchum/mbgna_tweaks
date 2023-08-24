@@ -17,7 +17,7 @@ third_party_settings:
 id: views_block__events_block_3
 theme: mbgna_dxpr
 region: content
-weight: 0
+weight: -10
 provider: null
 plugin: 'views_block:events-block_3'
 settings:

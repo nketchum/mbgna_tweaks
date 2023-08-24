@@ -1,0 +1,9 @@
+uuid: 8c25abcf-818d-4acf-af8b-1101b04461d5
+langcode: en
+status: true
+dependencies: {  }
+id: volunteer_couple
+label: 'Couple volunteer'
+weight: 14
+is_admin: null
+permissions: {  }

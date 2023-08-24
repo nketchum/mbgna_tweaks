@@ -13,6 +13,7 @@ dependencies:
     - field.field.user.user.field_realname_middle
     - field.field.user.user.field_realname_prefix
     - field.field.user.user.field_realname_suffix
+    - field.field.user.user.field_telephone_primary
     - field.field.user.user.field_title
     - image.style.medium_square
   module:
@@ -95,5 +96,6 @@ hidden:
   field_realname_middle: true
   field_realname_prefix: true
   field_realname_suffix: true
+  field_telephone_primary: true
   member_for: true
   name: true

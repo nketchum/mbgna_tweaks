@@ -1,8 +1,8 @@
-uuid: adb93991-3938-46a8-86f9-7dac2b42f47b
+uuid: 8a60c9f6-633c-44a7-9fb0-5eba860366ef
 langcode: en
 status: true
 dependencies: {  }
-id: member_familytree
+id: member_family_tree
 label: 'Family tree member'
 weight: 8
 is_admin: null

@@ -16,7 +16,7 @@
  * @see template_preprocess_user()
  */
 #}
-<article{{ attributes.addClass('profile') }}>
+<article{{ attributes.addClass('profile', view_mode) }}>
   {% if content %}
     {{- content -}}
   {% endif %}

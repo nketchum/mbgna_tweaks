@@ -11,7 +11,7 @@ _core:
 id: mbgna_dxpr_messages
 theme: mbgna_dxpr
 region: content
-weight: -7
+weight: -14
 provider: null
 plugin: system_messages_block
 settings:

@@ -1,0 +1,9 @@
+uuid: 55b25de9-6a95-4daa-9cc0-6436c83128ac
+langcode: en
+status: true
+dependencies: {  }
+id: volunteer_individual
+label: 'Individual volunteer'
+weight: 13
+is_admin: null
+permissions: {  }

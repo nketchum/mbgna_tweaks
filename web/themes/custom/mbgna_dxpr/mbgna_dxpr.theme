@@ -194,13 +194,13 @@ function mbgna_dxpr_preprocess_node(&$variables) {
   // }
 }
 
-// function mbgna_dxpr_preprocess_user(&$variables) {
-//   $variables['user'] = $variables['elements']['#user'];
-//   // Helpful $content variable for templates.
-//   foreach (Element::children($variables['elements']) as $key) {
-//     $variables['content'][$key] = $variables['elements'][$key];
-//   }
-// }
+function mbgna_dxpr_preprocess_user(&$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  
+  if ($realname = $variables['elements']['#user']->realname) {
+    $variables['content']['realname'] = $realname;
+  }
+}
 
 /**
  * Implements template_menu_local_tasks()
@@ -295,6 +295,14 @@ function mbgna_dxpr_theme_suggestions_node_alter(array &$suggestions, array $var
   if ($node) {
     $suggestions[] = 'node__'. $node->getType();
   }
+}
+
+function mbgna_dxpr_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  $view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  $suggestions[] = 'user__' . $view_mode;
+  $current_user = $variables['elements']['#user'];
+  $roles = $current_user->getRoles();
+  $suggestions[] = 'user__' . $view_mode;
 }
 
 /**

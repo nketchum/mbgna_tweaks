@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.user.field_photo
     - media.type.image
+  content:
+    - 'media:image:d18d3da4-151b-48cf-98d5-abeed5e8c4f5'
   module:
     - user
 id: user.user.field_photo
@@ -15,7 +17,10 @@ label: Photo
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: d18d3da4-151b-48cf-98d5-abeed5e8c4f5
+    weight: 0
 default_value_callback: ''
 settings:
   handler: 'default:media'

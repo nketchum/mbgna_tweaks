@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<article{{ attributes.addClass('profile', view_mode) }}>
+  {% if content %}
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="user-photo">
+              {{ content.field_photo }}
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="fields fields-user-identity">
+              {% if content.realname|render|striptags|trim %}
+                <div class="field field--name-field-realname field--type-string field--label-hidden field__item">{{ content.realname }}</div>
+              {% endif %}
+              {{ content.field_title }}
+              {{ content.field_organization }}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="fields fields-user-contact-info">
+              {{ user.email }}
+              {{ content.field_telephone_primary }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        middle
+      </div>
+      <div class="col-lg-4 col-md-4">
+        right
+      </div>
+    </div>
+  {% endif %}
+</article>

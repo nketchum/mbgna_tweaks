@@ -1,0 +1,14 @@
+uuid: 07925993-021c-4202-8267-ce3fb92930be
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.volunteer_individual
+  module:
+    - user
+id: user_remove_role_action.volunteer_individual
+label: 'Remove the Individual volunteer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: volunteer_individual

@@ -1,11 +1,11 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
-.block-system-main-block {
-  & > article.profile {
-    font-size: 28px;
-    font-weight: 700;
-  }
-}
+// .block-system-main-block {
+//   & > article.profile {
+//     font-size: 28px;
+//     font-weight: 700;
+//   }
+// }
 
 article.profile {
   .field--name-realname {
@@ -17,6 +17,37 @@ article.profile {
   .field--name-field-organization {
     color: #999;
     font-style: italic;
+  }
+
+  &.full {
+    .field--name-realname {
+      margin-bottom: 0;
+    }
+
+    .field--name-field-realname {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .fields-user-contact-info {
+      font-size: 14px;
+      padding-top: 15px;
+      margin-top: 15px;
+      border-top: 1px solid #ccc;
+    }
+
+    .user-photo {
+      padding-right: 15px;
+    }
+
+    .fields-user-identity {
+      padding-left: 15px;
+    }
+
+    .field--name-field-organization {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 

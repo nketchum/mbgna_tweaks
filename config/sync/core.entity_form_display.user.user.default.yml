@@ -12,11 +12,13 @@ dependencies:
     - field.field.user.user.field_realname_middle
     - field.field.user.user.field_realname_prefix
     - field.field.user.user.field_realname_suffix
+    - field.field.user.user.field_telephone_primary
     - field.field.user.user.field_title
   module:
     - field_group
     - media_library
     - profile
+    - telephone
     - text
     - user
 third_party_settings:
@@ -125,6 +127,7 @@ third_party_settings:
         - field_organization
         - field_bio
         - field_photo
+        - field_telephone_primary
       label: Details
       region: content
       parent_name: group_account_information_items
@@ -221,6 +224,13 @@ content:
     weight: 25
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_telephone_primary:
+    type: telephone_default
+    weight: 25
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_title:
     type: string_textfield

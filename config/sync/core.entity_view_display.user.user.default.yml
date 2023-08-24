@@ -12,8 +12,13 @@ dependencies:
     - field.field.user.user.field_realname_middle
     - field.field.user.user.field_realname_prefix
     - field.field.user.user.field_realname_suffix
+    - field.field.user.user.field_telephone_primary
     - field.field.user.user.field_title
+    - image.style.medium_square_ish_rectangle
   module:
+    - blazy
+    - field_formatter_class
+    - telephone
     - text
     - user
 id: user.user.default
@@ -26,7 +31,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_organization:
     type: string
@@ -34,16 +39,56 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_photo:
-    type: entity_reference_entity_view
-    label: above
+    type: blazy_media
+    label: hidden
     settings:
+      caption:
+        title: '0'
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
       view_mode: default
-      link: false
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  field_telephone_primary:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_title:
     type: string
@@ -51,12 +96,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   realname:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   commerce_remote_id: true

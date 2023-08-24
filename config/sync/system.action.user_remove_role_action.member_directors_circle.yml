@@ -1,14 +1,14 @@
-uuid: 6d8b3013-5158-4560-b39e-dd5e6285d7ad
+uuid: bcaca623-2c64-41f9-b4a9-d290e5b8c3d2
 langcode: en
 status: true
 dependencies:
   config:
-    - user.role.member_directorscircle
+    - user.role.member_directors_circle
   module:
     - user
-id: user_remove_role_action.member_directorscircle
+id: user_remove_role_action.member_directors_circle
 label: 'Remove the Director’s circle member role from the selected user(s)'
 type: user
 plugin: user_remove_role_action
 configuration:
-  rid: member_directorscircle
+  rid: member_directors_circle
