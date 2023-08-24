@@ -218,6 +218,9 @@
             },
             "drupal/core": {
                 "2966656 Negotiate max width/height of oEmbed assets more intelligently": "https://www.drupal.org/files/issues/2023-01-31/2966656-34.patch"
+            },
+            "drupal/profile": {
+                "Drupal 10.1: fatal error on account creation": "https://www.drupal.org/files/issues/2023-07-24/handle-user-is-anonymous-hardening-3371850-8.patch"
             }
         },
         "patches-ignore": {},
