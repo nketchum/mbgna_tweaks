@@ -101,8 +101,21 @@ $min-width-wide-plus-120: '2040px';   // @media (min-width: $min-width-wide-plus
   background: $light-gray;
 }
 
+.boxed-field-dark,
+.boxed-fields-dark {
+  background: $blue-secondary;
+  color: $white;
+}
+
 .boxed-fields-light {
   & > .field {
     border-color: $gray;
+  }
+}
+
+.boxed-fields-dark {
+  & > .field {
+    border-color: $blue-primary;
+    color: $white;
   }
 }

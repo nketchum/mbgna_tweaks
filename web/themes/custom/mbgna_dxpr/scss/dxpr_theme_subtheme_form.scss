@@ -86,3 +86,32 @@ select.form-select {
 .form-item-date-max {
   padding-left: 7.5px;
 }
+
+
+.path-login {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px !important;
+  max-width: 960px !important;
+
+  .col-left {
+    padding-right: 45px;
+  }
+
+  .col-right {
+    padding-left: 45px;
+
+    h1, h2, h3, h4, h5 {
+      color: $white !important;
+    }
+  }
+}
+
+.login-form {
+  margin-bottom: 0;
+  padding: 30px !important;
+
+  .description {
+    display: none;
+  }
+}
