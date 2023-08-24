@@ -1,0 +1,14 @@
+uuid: 85ee0b74-3b69-4fe2-97b0-0f6c1eceb9f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_directorscircle
+  module:
+    - user
+id: user_add_role_action.member_directorscircle
+label: 'Add the Director’s circle member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_directorscircle

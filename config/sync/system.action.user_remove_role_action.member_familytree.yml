@@ -1,0 +1,14 @@
+uuid: 03592830-37ed-4db7-a232-389c40968892
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_familytree
+  module:
+    - user
+id: user_remove_role_action.member_familytree
+label: 'Remove the Family tree member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: member_familytree

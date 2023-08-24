@@ -1,0 +1,14 @@
+uuid: 70919864-fd10-4bf6-8b05-5a2f1cdb9c7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_sustaining
+  module:
+    - user
+id: user_remove_role_action.member_sustaining
+label: 'Remove the Sustaining member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: member_sustaining

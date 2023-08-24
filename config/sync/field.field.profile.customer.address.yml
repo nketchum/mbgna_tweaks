@@ -24,11 +24,11 @@ settings:
   langcode_override: ''
   field_overrides:
     givenName:
-      override: required
-    additionalName:
       override: optional
+    additionalName:
+      override: hidden
     familyName:
-      override: required
+      override: optional
     organization:
       override: optional
     addressLine1:

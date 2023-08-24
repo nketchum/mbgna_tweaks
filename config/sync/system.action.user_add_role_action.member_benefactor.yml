@@ -1,0 +1,14 @@
+uuid: 21b57d66-1b54-442b-9a8f-ac0535a529eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_benefactor
+  module:
+    - user
+id: user_add_role_action.member_benefactor
+label: 'Add the Benefactor member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_benefactor

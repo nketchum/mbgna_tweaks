@@ -1,0 +1,9 @@
+uuid: 0ef6eb89-9383-4ed0-9c1b-e2c6977808fa
+langcode: en
+status: true
+dependencies: {  }
+id: member_benefactor
+label: 'Benefactor member'
+weight: 11
+is_admin: null
+permissions: {  }

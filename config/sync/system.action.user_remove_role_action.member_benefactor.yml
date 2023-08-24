@@ -1,0 +1,14 @@
+uuid: d0eb9758-2e7b-4a99-9afe-9d110afe53d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_benefactor
+  module:
+    - user
+id: user_remove_role_action.member_benefactor
+label: 'Remove the Benefactor member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: member_benefactor

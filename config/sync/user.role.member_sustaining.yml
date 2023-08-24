@@ -1,0 +1,9 @@
+uuid: 5f41e2e4-685e-4046-ac04-1f2f3075cbaa
+langcode: en
+status: true
+dependencies: {  }
+id: member_sustaining
+label: 'Sustaining member'
+weight: 9
+is_admin: null
+permissions: {  }

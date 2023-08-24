@@ -1,0 +1,14 @@
+uuid: 9b555921-80d3-430b-8b79-ab64395e5b32
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_couple
+  module:
+    - user
+id: user_add_role_action.member_couple
+label: 'Add the Couple member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_couple

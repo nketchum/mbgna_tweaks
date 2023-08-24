@@ -1,0 +1,14 @@
+uuid: f39e35b3-dec8-4fb2-928a-e6ee10ace36d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_individual
+  module:
+    - user
+id: user_add_role_action.member_individual
+label: 'Add the Individual member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_individual

@@ -1,0 +1,9 @@
+uuid: a2067ba5-7e30-4e15-b07b-e85ce012c318
+langcode: en
+status: true
+dependencies: {  }
+id: member_sponsor
+label: 'Sponsor member'
+weight: 10
+is_admin: null
+permissions: {  }

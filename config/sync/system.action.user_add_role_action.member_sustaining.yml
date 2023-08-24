@@ -1,0 +1,14 @@
+uuid: 4883350f-9c86-4b8c-afdf-7ca111dcfbfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_sustaining
+  module:
+    - user
+id: user_add_role_action.member_sustaining
+label: 'Add the Sustaining member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_sustaining

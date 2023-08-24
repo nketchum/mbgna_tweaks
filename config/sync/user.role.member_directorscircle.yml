@@ -1,0 +1,9 @@
+uuid: f6a1fd16-89e9-49b2-9d64-000f9c7b81f5
+langcode: en
+status: true
+dependencies: {  }
+id: member_directorscircle
+label: 'Director’s circle member'
+weight: 12
+is_admin: null
+permissions: {  }

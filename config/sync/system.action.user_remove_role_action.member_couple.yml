@@ -1,0 +1,14 @@
+uuid: 8db421d1-c985-471f-be24-a97101b5fd60
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_couple
+  module:
+    - user
+id: user_remove_role_action.member_couple
+label: 'Remove the Couple member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: member_couple

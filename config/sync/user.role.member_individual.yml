@@ -1,0 +1,9 @@
+uuid: a351cccc-54b2-492b-93a2-6ae7e58b37aa
+langcode: en
+status: true
+dependencies: {  }
+id: member_individual
+label: 'Individual member'
+weight: 6
+is_admin: null
+permissions: {  }

@@ -1,0 +1,14 @@
+uuid: 7a230b92-f774-4a31-8d65-dea3ca6f0465
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_familytree
+  module:
+    - user
+id: user_add_role_action.member_familytree
+label: 'Add the Family tree member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_familytree

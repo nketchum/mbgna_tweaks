@@ -1,0 +1,244 @@
+uuid: ad59f3d8-3fc8-42d8-b899-6124c2a2e275
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_photo
+    - field.field.user.user.field_realname_first
+    - field.field.user.user.field_realname_last
+    - field.field.user.user.field_realname_middle
+    - field.field.user.user.field_realname_prefix
+    - field.field.user.user.field_realname_suffix
+    - field.field.user.user.field_title
+  module:
+    - field_group
+    - media_library
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_account_properties:
+      children:
+        - group_account_information
+        - group_profile_information
+      label: 'Account properties'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_profile_information:
+      children:
+        - group_account_information_items
+      label: 'Profile information'
+      region: content
+      parent_name: group_account_properties
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+    group_account_information:
+      children:
+        - account
+        - timezone
+      label: 'Account information'
+      region: content
+      parent_name: group_account_properties
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: false
+    group_customer_information:
+      children:
+        - customer_profiles
+      label: 'Customer information'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+        direction: vertical
+        width_breakpoint: 640
+    group_account_information_items:
+      children:
+        - group_name
+        - group_profile_details
+      label: 'Profile information'
+      region: content
+      parent_name: group_profile_information
+      weight: 20
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_name:
+      children:
+        - field_realname_prefix
+        - field_realname_first
+        - field_realname_middle
+        - field_realname_last
+        - field_realname_suffix
+      label: Name
+      region: content
+      parent_name: group_account_information_items
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: false
+    group_profile_details:
+      children:
+        - field_title
+        - field_organization
+        - field_bio
+        - field_photo
+      label: Details
+      region: content
+      parent_name: group_account_information_items
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  collections_donor_profiles:
+    type: profile_form
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+  customer_profiles:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bio:
+    type: text_textarea_with_summary
+    weight: 23
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_organization:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_photo:
+    type: media_library_widget
+    weight: 24
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_realname_first:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_realname_last:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_realname_middle:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_realname_prefix:
+    type: options_select
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_realname_suffix:
+    type: options_select
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  timezone:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  commerce_remote_id: true
+  contact: true
+  language: true
+  path: true

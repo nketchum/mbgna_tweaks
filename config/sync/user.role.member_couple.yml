@@ -1,0 +1,9 @@
+uuid: 0a970f0a-6b1b-46b4-a207-9697580a90fd
+langcode: en
+status: true
+dependencies: {  }
+id: member_couple
+label: 'Couple member'
+weight: 7
+is_admin: null
+permissions: {  }

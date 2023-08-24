@@ -1,0 +1,9 @@
+uuid: adb93991-3938-46a8-86f9-7dac2b42f47b
+langcode: en
+status: true
+dependencies: {  }
+id: member_familytree
+label: 'Family tree member'
+weight: 8
+is_admin: null
+permissions: {  }
