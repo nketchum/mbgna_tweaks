@@ -1,10 +1,21 @@
 uuid: 5c58d0ed-1df5-4356-b1f9-ab96802cfdb9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - commerce_license
+third_party_settings:
+  commerce_license:
+    license_types:
+      role: role
+    activate_on_place: false
+    allow_renewal: true
+    interval: '11'
+    period: month
 id: membership
 label: Membership
-traits: {  }
+traits:
+  - commerce_license
 locked: false
-orderItemType: admission
-generateTitle: null
+orderItemType: membership
+generateTitle: true

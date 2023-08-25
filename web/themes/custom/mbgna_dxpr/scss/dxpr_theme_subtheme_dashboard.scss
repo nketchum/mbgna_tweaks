@@ -33,5 +33,26 @@
     }
   }
 
+  .dashboard-row {
+    padding-top: 30px;
+
+    .col-first {
+      padding-left: 0;
+    }
+
+    .col-last {
+      padding-right: 0;
+    }
+
+    @media (min-width: 767px) {
+      .col-first {
+        padding-right: 30px;
+      }
+
+      .col-last {
+        padding-left: 30px;
+      }
+    }
+  }
 }
 

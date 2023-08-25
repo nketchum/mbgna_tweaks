@@ -18,10 +18,10 @@
 #}
 <article{{ attributes.addClass('profile', view_mode) }}>
   {% if content %}
-    <div class="row">
-      <div class="col-level1 col-lg-4 col-md-4">
+    <div class="row dashboard-row dashboard-summary">
+      <div class="col col-level1 col-lg-4 col-md-4">
         <div class="row user-summary">
-          <div class="col-level2 col-lg-4 col-md-4">
+          <div class="col col-level2 col-lg-4 col-md-4">
             <div class="user-photo">
               {{ content.field_photo }}
             </div>
@@ -32,7 +32,7 @@
               </div>
             {% endif %}
           </div>
-          <div class="col-level2 col-lg-8 col-md-8">
+          <div class="col col-level2 col-lg-8 col-md-8">
             <div class="fields fields-user-identity">
               {% if content.realname|render|striptags|trim %}
                 <div class="field field--name-field-realname field--type-string field--label-hidden field__item">{{ content.realname }}</div>
@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="col-level1 col-lg-4 col-md-4">
+      <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
           <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
             {{- drupal_view('posts', 'block_2') -}}
@@ -56,7 +56,7 @@
           </div>
         {% endif %}
       </div>
-      <div class="col-level1 col-lg-4 col-md-4">
+      <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
           <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
             {{ drupal_entity('webform', 'member_contact') }}
@@ -64,40 +64,59 @@
         {% endif %}
       </div>
     </div>
-    <div class="row">
-      <div class="col-level2 col-lg-12 col-md-12">
-        {% if privileged %}
+    {% if privileged %}
+      <div class="row dashboard-row dashboard-commerce">
+        <h2>Membership Information</h2>
+        <div class="col col-first col-level1 col-lg-6 col-md-6">
           <div class="boxed-field boxed-field-light">
-            {{- drupal_view('content_dashboard', 'block_1') -}}
+            {{ drupal_view('commerce_members', 'block_2') }}
           </div>
-        {% endif %}
+        </div>
+        <div class="col col-last col-level1 col-lg-6 col-md-6">
+          <div class="boxed-field boxed-field-light">
+            {{ drupal_view('commerce_members', 'block_1') }}
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-level1 col-lg-4 col-md-4">
+    {% endif %}
+    <div class="row dashboard-row dashboard-publications">
+      {% if privileged %}
+        <h2>My Publications</h2>
+      {% endif %}
+      <div class="col col-first col-level1 col-lg-4 col-md-4">
         {% if drupal_view_result('content_profile', 'block_1', user.id, 'news') is not empty %}
           <div class="boxed-field boxed-field-light">
-            <h2>{% if privileged %}My {% endif %}News</h2>
+            <h3>{% if privileged %}My {% endif %}News</h3>
             {{- drupal_view('content_profile', 'block_1', user.id, 'news') -}}
           </div>
         {% endif %}
       </div>
-      <div class="col-level1 col-lg-4 col-md-4">
+      <div class="col col-level1 col-lg-4 col-md-4">
         {% if drupal_view_result('content_profile', 'block_1', user.id, 'story') is not empty %}
           <div class="boxed-field boxed-field-light">
-            <h2>{% if privileged %}My {% endif %}Stories</h2>
+            <h3>{% if privileged %}My {% endif %}Stories</h3>
             {{- drupal_view('content_profile', 'block_1', user.id, 'story') -}}
           </div>
         {% endif %}
       </div>
-      <div class="col-level1 col-lg-4 col-md-4">
+      <div class="col col-last col-level1 col-lg-4 col-md-4">
         {% if drupal_view_result('content_profile', 'block_1', user.id, 'press-release') is not empty %}
           <div class="boxed-field boxed-field-light">
-            <h2>{% if privileged %}My {% endif %}Press Releases</h2>
+            <h3>{% if privileged %}My {% endif %}Press Releases</h3>
             {{- drupal_view('content_profile', 'block_1', user.id, 'press-release') -}}
           </div>
         {% endif %}
       </div>
     </div>
+    {% if privileged %}
+    <div class="row dashboard-row dashboard-manage">
+      <h2>My Content</h2>
+      <div class="col col-level2 col-lg-12 col-md-12">
+        <div class="boxed-field boxed-field-light">
+          {{- drupal_view('content_dashboard', 'block_1') -}}
+        </div>
+      </div>
+    </div>
+    {% endif %}
   {% endif %}
 </article>

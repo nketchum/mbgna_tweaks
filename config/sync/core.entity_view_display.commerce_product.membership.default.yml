@@ -7,36 +7,22 @@ dependencies:
     - field.field.commerce_product.membership.body
   module:
     - commerce_product
-    - text
 id: commerce_product.membership.default
 targetEntityType: commerce_product
 bundle: membership
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 11
-    region: content
-  title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: -5
-    region: content
   variations:
     type: commerce_add_to_cart
-    label: above
+    label: hidden
     settings:
       combine: true
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
 hidden:
+  body: true
   created: true
   stores: true
+  title: true
   uid: true

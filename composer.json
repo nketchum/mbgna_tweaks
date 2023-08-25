@@ -94,6 +94,8 @@
         "drupal/calendar_link": "^3.0",
         "drupal/colorbox": "^2.0",
         "drupal/commerce": "^2.36",
+        "drupal/commerce_license": "^3.0",
+        "drupal/commerce_recurring": "^1.0@RC",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-project-message": "^10",

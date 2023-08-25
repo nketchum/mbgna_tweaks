@@ -617,7 +617,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<h2>Member News</h2>'
+          content: '<h3>Member News</h3>'
           tokenize: false
       display_extenders: {  }
       block_description: 'Posts block (Dashboard list)'

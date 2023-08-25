@@ -1,0 +1,16 @@
+uuid: e2f3ff80-6de2-4453-b19b-4ee9bfa70ae8
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: physical_goods
+id: membership
+label: Membership
+traits:
+  - commerce_license_order_item_type
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: membership

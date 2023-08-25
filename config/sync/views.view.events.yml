@@ -917,7 +917,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<h2>Member Events</h2>'
+          content: '<h3>Member Events</h3>'
           tokenize: false
       display_extenders: {  }
       block_description: 'Events dashboard list'

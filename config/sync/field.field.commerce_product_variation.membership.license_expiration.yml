@@ -1,0 +1,21 @@
+uuid: dae1dc50-c237-4a52-aa54-b5bf672902f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.membership
+    - field.storage.commerce_product_variation.license_expiration
+  module:
+    - commerce
+id: commerce_product_variation.membership.license_expiration
+field_name: license_expiration
+entity_type: commerce_product_variation
+bundle: membership
+label: 'License Expiration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: 'commerce_plugin_item:commerce_license_period'

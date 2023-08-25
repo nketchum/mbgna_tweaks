@@ -15,7 +15,7 @@ categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text
-    '#text': '<h2>Contact &amp; Support</h2><p class="larger large">Members can reach out directly for information and help. Fill out the form below and we will respond within 24 business hours.</p>'
+    '#text': '<h3>Contact &amp; Support</h3><p class="larger large">Members can reach out directly for information and help. Fill out the form below and we will respond within 24 business hours.</p>'
     '#format': full_html
   full_name:
     '#type': webform_name

@@ -1,0 +1,34 @@
+uuid: 2a46b143-1786-42cb-9643-c28f0af24f34
+langcode: en
+status: true
+dependencies: {  }
+id: tax_exempt
+label: 'Tax exempt'
+plugin: custom
+configuration:
+  display_inclusive: true
+  display_label: tax
+  round: true
+  rates:
+    -
+      id: 7d8f3a8d-d32d-4ff6-928a-a0b9d85bb2ce
+      label: Exempt
+      percentage: '0'
+  territories:
+    -
+      country_code: US
+      administrative_area: ''
+      locality: null
+      dependent_locality: null
+    -
+      country_code: CA
+      administrative_area: ''
+      locality: null
+      dependent_locality: null
+conditions:
+  -
+    plugin: order_product_type
+    configuration:
+      product_types:
+        - membership
+conditionOperator: AND
