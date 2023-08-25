@@ -12,8 +12,8 @@ _core:
   default_config_hash: bqcUyJfypWnp1brZbJafXVGafynv0TAEfKEDh4893qM
 id: mbgna_dxpr_local_tasks
 theme: mbgna_dxpr
-region: content
-weight: -12
+region: hidden
+weight: -9
 provider: null
 plugin: local_tasks_block
 settings:

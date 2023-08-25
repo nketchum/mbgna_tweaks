@@ -84,6 +84,7 @@ module:
   modules_weight: 0
   mysql: 0
   node: 0
+  nodeaccess: 0
   options: 0
   page_cache: 0
   paragraph_view_mode: 0

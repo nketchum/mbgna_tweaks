@@ -1,0 +1,10 @@
+uuid: 59004d20-2cc2-4374-90a8-8c7a79755cdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.listing_minimal
+label: 'Listing (minimal)'
+targetEntityType: node
+cache: true

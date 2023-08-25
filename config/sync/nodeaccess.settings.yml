@@ -1,0 +1,1232 @@
+_core:
+  default_config_hash: ev_QLQNwc0-1EGokxDRzrPpUi1kLXjeBRd5vhwpB6h0
+allowed_grant_operations:
+  grant_view: true
+  grant_update: true
+  grant_delete: true
+bundles_roles_grants:
+  basic_page:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  conservatory:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  drag_and_drop_page:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  event:
+    anonymous:
+      grant_view: 1
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 1
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
+    editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  garden:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  landing_page:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  position:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  post:
+    anonymous:
+      grant_view: 1
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 1
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
+    editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  test:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  trail:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  webform:
+    anonymous:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    super_administrator:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+grants_tab_availability:
+  basic_page: false
+  conservatory: false
+  drag_and_drop_page: false
+  event: true
+  garden: false
+  landing_page: false
+  position: false
+  post: true
+  test: false
+  trail: false
+  webform: false
+map_rid_gid:
+  anonymous: 0
+  authenticated: 1
+  author: 2
+  collections_donor: 3
+  editor: 4
+  fellow: 5
+  fulfillment: 6
+  intern: 7
+  author_plant: 8
+  editor_plant: 9
+  viewer_plant: 10
+  staff: 11
+  super_administrator: 12
+  working_group_member: 13
+  member_student: 14
+  member_individual: 15
+  member_couple: 16
+  member_family_tree: 17
+  member_sustaining: 18
+  member_sponsor: 19
+  member_benefactor: 20
+  member_directors_circle: 21
+  volunteer_individual: 22
+  volunteer_couple: 23
+roles_settings:
+  anonymous:
+    display_name: 'Anonymous user'
+    name: 'Anonymous user'
+    weight: 0
+    selected: false
+  authenticated:
+    display_name: 'Authenticated user'
+    name: 'Authenticated user'
+    weight: 0
+    selected: false
+  author:
+    display_name: Author
+    name: Author
+    weight: 0
+    selected: false
+  collections_donor:
+    display_name: 'Collections donor'
+    name: 'Collections donor'
+    weight: 0
+    selected: false
+  editor:
+    display_name: Editor
+    name: Editor
+    weight: 0
+    selected: false
+  fellow:
+    display_name: Fellow
+    name: Fellow
+    weight: 0
+    selected: false
+  fulfillment:
+    display_name: Fulfillment
+    name: Fulfillment
+    weight: 0
+    selected: false
+  intern:
+    display_name: Intern
+    name: Intern
+    weight: 0
+    selected: true
+  author_plant:
+    display_name: 'Plant database author'
+    name: 'Plant database author'
+    weight: 0
+    selected: false
+  editor_plant:
+    display_name: 'Plant database editor'
+    name: 'Plant database editor'
+    weight: 0
+    selected: false
+  viewer_plant:
+    display_name: 'Plant database viewer'
+    name: 'Plant database viewer'
+    weight: 0
+    selected: false
+  staff:
+    display_name: Staff
+    name: Staff
+    weight: 0
+    selected: true
+  super_administrator:
+    display_name: 'Super administrator'
+    name: 'Super administrator'
+    weight: 0
+    selected: false
+  working_group_member:
+    display_name: 'Working group member'
+    name: 'Working group member'
+    weight: 0
+    selected: false
+  member_student:
+    display_name: 'Student member'
+    name: 'Student member'
+    weight: 0
+    selected: true
+  member_individual:
+    display_name: 'Individual member'
+    name: 'Individual member'
+    weight: 0
+    selected: true
+  member_couple:
+    display_name: 'Couple member'
+    name: 'Couple member'
+    weight: 0
+    selected: true
+  member_family_tree:
+    display_name: 'Family tree member'
+    name: 'Family tree member'
+    weight: 0
+    selected: true
+  member_sustaining:
+    display_name: 'Sustaining member'
+    name: 'Sustaining member'
+    weight: 0
+    selected: true
+  member_sponsor:
+    display_name: 'Sponsor member'
+    name: 'Sponsor member'
+    weight: 0
+    selected: true
+  member_benefactor:
+    display_name: 'Benefactor member'
+    name: 'Benefactor member'
+    weight: 0
+    selected: true
+  member_directors_circle:
+    display_name: 'Director’s circle member'
+    name: 'Director’s circle member'
+    weight: 0
+    selected: true
+  volunteer_individual:
+    display_name: 'Individual volunteer'
+    name: 'Individual volunteer'
+    weight: 0
+    selected: true
+  volunteer_couple:
+    display_name: 'Couple volunteer'
+    name: 'Couple volunteer'
+    weight: 0
+    selected: true

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_commerce_products
     - field.field.node.event.field_contact_email
     - field.field.node.event.field_contact_name
+    - field.field.node.event.field_dashboard_show
     - field.field.node.event.field_date_smart
     - field.field.node.event.field_dollar_amount
     - field.field.node.event.field_event_categories
@@ -207,5 +208,6 @@ content:
     region: content
 hidden:
   created: true
+  field_dashboard_show: true
   links: true
   uid: true

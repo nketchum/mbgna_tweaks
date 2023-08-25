@@ -1,0 +1,31 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+.user-logged-in.path-user {
+
+  .view-posts.view-display-id-block_2,
+  .view-events.view-display-id-block_4 {
+    h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .views-row {
+      margin-bottom: 30px;
+    }
+  }
+
+  .view-posts.view-display-id-block_2,
+  .view-events.view-display-id-block_4,
+  .webform-submission-form {
+    h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .webform-submission-form .form-type-processed-text {
+    margin-top: 0;
+  }
+
+}
+

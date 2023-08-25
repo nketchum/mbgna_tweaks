@@ -18,7 +18,6 @@ dependencies:
   module:
     - blazy
     - field_formatter_class
-    - telephone
     - text
     - user
 id: user.user.default
@@ -83,10 +82,10 @@ content:
     weight: 0
     region: content
   field_telephone_primary:
-    type: telephone_link
+    type: string
     label: hidden
     settings:
-      title: ''
+      link_to_entity: false
     third_party_settings: {  }
     weight: 5
     region: content

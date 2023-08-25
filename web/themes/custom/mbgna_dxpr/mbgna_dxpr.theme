@@ -325,4 +325,3 @@ function mbgna_dxpr_views_pre_render(ViewExecutable $view) {
     }
   }
 }
-

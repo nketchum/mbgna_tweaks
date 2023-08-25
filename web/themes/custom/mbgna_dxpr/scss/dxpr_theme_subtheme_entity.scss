@@ -123,10 +123,59 @@
   }
 }
 
+article.listing,
+article.listing-minimal {
+  .field--name-field-event-categories {
+    .field__item {
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  img {
+    border-radius: 5px;
+  }
+
+  .field--name-created,
+  .field--name-field-date-smart {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .field--name-field-organization,
+  .field--name-field-location {
+    .field__label {
+      font-weight: normal;
+      padding-right: 0;
+
+      &::after {
+        content: "\a0";
+      }
+    }
+  }
+}
+
 article.listing {
   & > .content {
     & > .col-secondary {
       padding-right: 60px;
     }
+  }
+}
+
+article.listing-minimal {
+  h4 {
+    margin-bottom: 0;
+  }
+
+  .field--name-field-organization,
+  .field--name-field-location {
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .field--name-field-image {
+    padding-right: 30px;
   }
 }

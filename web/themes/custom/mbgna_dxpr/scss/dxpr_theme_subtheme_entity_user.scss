@@ -26,14 +26,15 @@ article.profile {
 
     .field--name-field-realname {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 24px;
     }
 
     .fields-user-contact-info {
       font-size: 14px;
       padding-top: 15px;
       margin-top: 15px;
-      border-top: 1px solid #ccc;
+      border-top: 2px solid #E9E9E9;
+      margin-right: 15px;
     }
 
     .user-photo {
@@ -51,7 +52,26 @@ article.profile {
   }
 }
 
-article.full {
+article.profile.full {
+  margin-top: 60px;
+
+  .dxpr-theme-mini-tabs-wrapper {
+    float: none;
+    margin: 0;
+  }
+
+  .col-level1 {
+    padding: 0 30px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
   .field--name-field-user {
     border-top: 1px solid $gray;
     margin-top: 30px;
@@ -86,5 +106,21 @@ article.full {
         }
       }
     }
+  }
+
+  .dxpr-theme-mini-tabs-wrapper .tabs--primary li a {
+    background: transparent;
+    font-size: 14px;
+    text-transform: none;
+  }
+
+  .dxpr-theme-mini-tabs-wrapper .tabs--primary li.active {
+    display: none;
+  }
+
+  .tabs--primary.nav.nav-tabs {
+    display: block;
+    box-shadow: none;
+    margin: 30px 0 !important;
   }
 }

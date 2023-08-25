@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
+    - field.field.node.post.field_dashboard_show
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
     - field.field.node.post.field_image
@@ -77,6 +78,13 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_dashboard_show:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_external_link:
     type: link_default

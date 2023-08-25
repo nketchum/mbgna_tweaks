@@ -1,0 +1,21 @@
+uuid: 2f3c86ee-1447-4f63-a607-5f47b8b9be3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dashboard_show
+    - node.type.post
+id: node.post.field_dashboard_show
+field_name: field_dashboard_show
+entity_type: node
+bundle: post
+label: 'Show on dashboard'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Show
+  off_label: Hide
+field_type: boolean

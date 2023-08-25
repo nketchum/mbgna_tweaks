@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.card_basic
     - field.field.node.post.body
+    - field.field.node.post.field_dashboard_show
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
     - field.field.node.post.field_image
@@ -111,6 +112,7 @@ content:
 hidden:
   body: true
   created: true
+  field_dashboard_show: true
   field_images: true
   field_organization: true
   field_user: true

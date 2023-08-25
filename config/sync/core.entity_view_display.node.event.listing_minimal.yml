@@ -1,9 +1,9 @@
-uuid: 66e3cb77-afa6-4eb7-a402-acf3dbd910fa
+uuid: dec0acf5-16c6-4398-ad4d-2545c5762344
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.listing
+    - core.entity_view_mode.node.listing_minimal
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_commerce_external
@@ -27,39 +27,11 @@ dependencies:
     - field_formatter_class
     - manage_display
     - smart_date
-    - smart_trim
-id: node.event.listing
+id: node.event.listing_minimal
 targetEntityType: node
 bundle: event
-mode: listing
+mode: listing_minimal
 content:
-  body:
-    type: smart_trim
-    label: hidden
-    settings:
-      trim_length: 250
-      trim_type: chars
-      trim_suffix: ...
-      wrap_output: false
-      wrap_class: trimmed
-      more:
-        display_link: false
-        target_blank: false
-        link_trim_only: false
-        class: more-link
-        text: More
-        aria_label: 'Read more about [node:title]'
-        token_browser: ''
-      summary_handler: trim
-      trim_options:
-        text: true
-        trim_zero: false
-        replace_tokens: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 3
-    region: content
   field_date_smart:
     type: smartdate_default
     label: hidden
@@ -85,14 +57,6 @@ content:
         class: ''
     weight: 2
     region: content
-  field_event_categories:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_image:
     type: blazy_media
     label: hidden
@@ -108,7 +72,7 @@ content:
       title: ''
       vanilla: false
       layout: ''
-      view_mode: default
+      view_mode: full
       cache: 0
       skin: ''
       lazy: ''
@@ -142,20 +106,21 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 5
+    weight: 3
     region: content
   title:
     type: title
     label: hidden
     settings:
       link_to_entity: true
-      tag: h3
+      tag: h4
     third_party_settings:
       field_formatter_class:
         class: ''
     weight: 1
     region: content
 hidden:
+  body: true
   created: true
   field_address: true
   field_commerce_external: true
@@ -164,6 +129,7 @@ hidden:
   field_contact_name: true
   field_dashboard_show: true
   field_dollar_amount: true
+  field_event_categories: true
   field_map_link: true
   field_organization: true
   field_phone: true
