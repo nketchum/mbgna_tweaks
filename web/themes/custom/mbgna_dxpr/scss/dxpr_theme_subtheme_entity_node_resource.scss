@@ -1,0 +1,37 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+article.resource.listing-minimal {
+  .field--name-field-resource-type {
+    color: #999;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+.view-resources.view-display-id-block_1,
+.view-resources.view-display-id-block_2 {
+  .views-row {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+article.resource.full {
+  .banner-thin .field--name-field-resource-type {
+    color: #666;
+    margin-top: 15px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+    a {
+      color: #666;
+    }
+  }
+}

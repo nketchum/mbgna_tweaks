@@ -1289,3 +1289,15 @@ article.full.content-main {
     }
   }
 }
+
+.ui-dialog {
+  .ui-widget-header {
+    .ui-dialog-titlebar-close {
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border-radius: 15px;
+      margin-top: 5px;
+    }
+  }
+}

@@ -59,7 +59,7 @@
       <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
           <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
-            {{ drupal_entity('webform', 'member_contact') }}
+            {{- drupal_view('resources', 'block_2') -}}
           </div>
         {% endif %}
       </div>
@@ -110,11 +110,19 @@
     </div>
     {% if privileged %}
     <div class="row dashboard-row dashboard-manage">
-      <h2>My Content</h2>
-      <div class="col col-level2 col-lg-12 col-md-12">
+      <div class="col col-first col-level1 col-lg-8 col-md-8">
+        <h2>My Content</h2>
         <div class="boxed-field boxed-field-light">
           {{- drupal_view('content_dashboard', 'block_1') -}}
         </div>
+      </div>
+      <div class="col col-last col-level1 col-lg-4 col-md-4">
+      {% if privileged %}
+      <h2>Reach Out</h2>
+      <div class="boxed-field boxed-field-light"">
+        {{ drupal_entity('webform', 'member_contact') }}
+      </div>
+      {% endif %}
       </div>
     </div>
     {% endif %}
