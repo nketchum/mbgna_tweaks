@@ -14,7 +14,7 @@ dependencies:
     - field.field.user.user.field_realname_suffix
     - field.field.user.user.field_telephone_primary
     - field.field.user.user.field_title
-    - image.style.medium_square_ish_rectangle
+    - image.style.medium_square
   module:
     - blazy
     - field_formatter_class
@@ -69,7 +69,7 @@ content:
       responsive_image_style: ''
       use_theme_field: false
       box_style: ''
-      image_style: medium_square_ish_rectangle
+      image_style: medium_square
       media_switch: ''
       ratio: ''
       thumbnail_style: ''

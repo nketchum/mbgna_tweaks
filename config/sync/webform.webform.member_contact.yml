@@ -15,7 +15,7 @@ categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text
-    '#text': '<h2>Contact &amp; Help</h2><p class="larger">Members receive priority responses from Matthaei-Nichols. Fill out the form below and we will contact you as soon as possible.</p>'
+    '#text': '<h2>Contact &amp; Support</h2><p class="larger large">Members can reach out directly for information and help. Fill out the form below and we will respond within 24 business hours.</p>'
     '#format': full_html
   full_name:
     '#type': webform_name

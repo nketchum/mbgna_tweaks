@@ -200,6 +200,16 @@ function mbgna_dxpr_preprocess_user(&$variables) {
   if ($realname = $variables['elements']['#user']->realname) {
     $variables['content']['realname'] = $realname;
   }
+
+  // Only show certain content on user page to privileged users.
+  $current_user = \Drupal::currentUser();
+  $current_user_is_admin = \Drupal::currentUser()->hasPermission('administer users');
+  $profile_user = $variables['elements']['#user'];
+  if ($current_user_is_admin || $current_user->id() == $profile_user->id()) {
+    $variables['privileged'] = TRUE;
+  } else { 
+    $variables['privileged'] = FALSE;
+  }
 }
 
 /**

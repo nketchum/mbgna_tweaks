@@ -8,6 +8,10 @@
 // }
 
 article.profile {
+  .user-summary {
+    padding-bottom: 60px;
+  }
+
   .field--name-realname {
     font-size: 20px;
     line-height: 30px;
@@ -17,6 +21,12 @@ article.profile {
   .field--name-field-organization {
     color: #999;
     font-style: italic;
+  }
+
+  .user-photo {
+    img {
+      border-radius: 5px;
+    }
   }
 
   &.full {
@@ -35,6 +45,12 @@ article.profile {
       margin-top: 15px;
       border-top: 2px solid #E9E9E9;
       margin-right: 15px;
+    }
+
+    .user-email {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .user-photo {

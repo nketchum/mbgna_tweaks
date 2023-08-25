@@ -117,3 +117,13 @@
     }
   }
 }
+
+.view-content-profile {
+  .views-row {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
