@@ -1,0 +1,77 @@
+uuid: 78d0b088-6458-4c75-8e19-583aa530c8cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.bonsai_style_basic.field_display_image
+    - image.style.medium_square_ish_rectangle
+    - taxonomy.vocabulary.bonsai_style_basic
+  module:
+    - blazy
+    - field_formatter_class
+    - manage_display
+    - text
+id: taxonomy_term.bonsai_style_basic.default
+targetEntityType: taxonomy_term
+bundle: bonsai_style_basic
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_display_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        field_media_image_1: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h3
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden: {  }

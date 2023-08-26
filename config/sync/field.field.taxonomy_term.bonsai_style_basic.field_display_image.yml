@@ -1,0 +1,29 @@
+uuid: b7c2d033-6bd2-4cb3-acb9-e5c183f0d0dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_display_image
+    - media.type.image_bonsai
+    - taxonomy.vocabulary.bonsai_style_basic
+id: taxonomy_term.bonsai_style_basic.field_display_image
+field_name: field_display_image
+entity_type: taxonomy_term
+bundle: bonsai_style_basic
+label: 'Display image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image_bonsai: image_bonsai
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

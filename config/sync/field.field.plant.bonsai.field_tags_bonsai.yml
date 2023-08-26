@@ -1,0 +1,29 @@
+uuid: 5d60ae95-502e-4bed-8e98-6a37aa8400c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_tags_bonsai
+    - mbgna_plant.plant_type.bonsai
+    - taxonomy.vocabulary.bonsai_style_tag
+id: plant.bonsai.field_tags_bonsai
+field_name: field_tags_bonsai
+entity_type: plant
+bundle: bonsai
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bonsai_style_tag: bonsai_style_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

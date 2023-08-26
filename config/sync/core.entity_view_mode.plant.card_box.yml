@@ -1,0 +1,10 @@
+uuid: e6ecd0ff-0ba2-42cf-807b-39f2f7cbf6ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant.card_box
+label: 'Card (box)'
+targetEntityType: plant
+cache: true

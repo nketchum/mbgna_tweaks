@@ -1,0 +1,133 @@
+uuid: 6c0d7f78-2fa3-4c73-b402-3947fc60183b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.plant.card_box
+    - field.field.plant.bonsai.field_3d_view
+    - field.field.plant.bonsai.field_additional_style_bonsai
+    - field.field.plant.bonsai.field_collections
+    - field.field.plant.bonsai.field_commerce
+    - field.field.plant.bonsai.field_common_name
+    - field.field.plant.bonsai.field_description
+    - field.field.plant.bonsai.field_description_heading
+    - field.field.plant.bonsai.field_dimensions
+    - field.field.plant.bonsai.field_display_image
+    - field.field.plant.bonsai.field_display_name
+    - field.field.plant.bonsai.field_donor
+    - field.field.plant.bonsai.field_family
+    - field.field.plant.bonsai.field_gallery_images
+    - field.field.plant.bonsai.field_genus
+    - field.field.plant.bonsai.field_last_repot
+    - field.field.plant.bonsai.field_legacy_id
+    - field.field.plant.bonsai.field_makeup
+    - field.field.plant.bonsai.field_mbgna_id
+    - field.field.plant.bonsai.field_origin
+    - field.field.plant.bonsai.field_outer_pot_size
+    - field.field.plant.bonsai.field_pot_notes
+    - field.field.plant.bonsai.field_priority
+    - field.field.plant.bonsai.field_species
+    - field.field.plant.bonsai.field_status
+    - field.field.plant.bonsai.field_status_date
+    - field.field.plant.bonsai.field_style_bonsai
+    - field.field.plant.bonsai.field_tags_bonsai
+    - field.field.plant.bonsai.field_trained_since
+    - field.field.plant.bonsai.field_trunks
+    - field.field.plant.bonsai.field_video
+    - field.field.plant.bonsai.field_year_acquired
+    - field.field.plant.bonsai.field_year_started
+    - image.style.medium_square_ish_rectangle
+    - mbgna_plant.plant_type.bonsai
+  module:
+    - field_formatter_class
+    - manage_display
+    - media
+id: plant.bonsai.card_box
+targetEntityType: plant
+bundle: bonsai
+mode: card_box
+content:
+  field_display_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium_square_ish_rectangle
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  field_display_name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h4
+    third_party_settings:
+      field_formatter_class:
+        class: card-content-title
+    weight: 1
+    region: content
+  field_genus:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 2
+    region: content
+  field_mbgna_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_species:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 3
+    region: content
+hidden:
+  created: true
+  field_3d_view: true
+  field_additional_style_bonsai: true
+  field_collections: true
+  field_commerce: true
+  field_common_name: true
+  field_description: true
+  field_description_heading: true
+  field_dimensions: true
+  field_donor: true
+  field_family: true
+  field_gallery_images: true
+  field_last_repot: true
+  field_legacy_id: true
+  field_makeup: true
+  field_origin: true
+  field_outer_pot_size: true
+  field_pot_notes: true
+  field_priority: true
+  field_status: true
+  field_status_date: true
+  field_style_bonsai: true
+  field_tags_bonsai: true
+  field_trained_since: true
+  field_trunks: true
+  field_video: true
+  field_year_acquired: true
+  field_year_started: true
+  label: true
+  status: true
+  uid: true

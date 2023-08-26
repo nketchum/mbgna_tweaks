@@ -1,0 +1,29 @@
+uuid: ebf59c5f-0244-4c2f-8538-cc5ae5eef686
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_additional_style_bonsai
+    - mbgna_plant.plant_type.bonsai
+    - taxonomy.vocabulary.bonsai_style_additional
+id: plant.bonsai.field_additional_style_bonsai
+field_name: field_additional_style_bonsai
+entity_type: plant
+bundle: bonsai
+label: 'Additional style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bonsai_style_additional: bonsai_style_additional
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

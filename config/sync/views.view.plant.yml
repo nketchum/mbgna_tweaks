@@ -3,13 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.plant.card_box
     - field.storage.media.field_media_image
+    - image.style.colorbox_large
     - image.style.large_square_ish_rectangle
+    - image.style.medium_square_ish_rectangle
+    - mbgna_plant.plant_type.bonsai
+    - taxonomy.vocabulary.bonsai_style_basic
+    - taxonomy.vocabulary.common_name
+    - taxonomy.vocabulary.genus
+    - taxonomy.vocabulary.species
     - user.role.super_administrator
   module:
+    - better_exposed_filters
     - blazy
     - mbgna_plant
     - media
+    - taxonomy
     - user
 id: plant
 label: Plant
@@ -236,13 +246,14 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      enabled: false
       title: Photos
       fields:
         field_media_image:
           id: field_media_image
           table: media__field_media_image
           field: field_media_image
-          relationship: field_plant_images
+          relationship: field_gallery_images
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -298,8 +309,8 @@ display:
             box_caption_custom: ''
             loading: ''
             preload: false
-            box_style: ''
-            image_style: ''
+            box_style: colorbox_large
+            image_style: medium_square_ish_rectangle
             media_switch: colorbox
             ratio: ''
             thumbnail_style: large_square_ish_rectangle
@@ -385,13 +396,13 @@ display:
         filters: false
         filter_groups: false
       relationships:
-        field_plant_images:
-          id: field_plant_images
-          table: plant__field_plant_images
-          field: field_plant_images
+        field_gallery_images:
+          id: field_gallery_images
+          table: plant__field_gallery_images
+          field: field_gallery_images
           relationship: none
           group_type: group
-          admin_label: 'field_plant_images: Media'
+          admin_label: 'field_gallery_images: Media'
           plugin_id: standard
           required: true
       display_extenders: {  }
@@ -408,6 +419,582 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.media.field_media_image'
+  block_2:
+    id: block_2
+    display_title: 'Block: bonsai trees'
+    display_plugin: block
+    position: 3
+    display_options:
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 12
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: minimal_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              field_common_name_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_genus_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_species_target_id:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_year_acquired_value:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  is_secondary: false
+      sorts:
+        field_display_name_value:
+          id: field_display_name_value
+          table: plant__field_display_name
+          field: field_display_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      filters:
+        status:
+          id: status
+          table: plant
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: plant
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        bundle:
+          id: bundle
+          table: plant
+          field: bundle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: plant
+          entity_field: bundle
+          plugin_id: bundle
+          operator: in
+          value:
+            bonsai: bonsai
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_common_name_target_id:
+          id: field_common_name_target_id
+          table: plant__field_common_name
+          field: field_common_name_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: null
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_common_name_target_id_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_common_name_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: common_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              author: '0'
+              collections_donor: '0'
+              editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+              member_student: '0'
+              member_individual: '0'
+              member_couple: '0'
+              member_family_tree: '0'
+              member_sustaining: '0'
+              member_sponsor: '0'
+              member_benefactor: '0'
+              member_directors_circle: '0'
+              volunteer_individual: '0'
+              volunteer_couple: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: common_name
+          type: cshs
+          hierarchy: false
+          limit: true
+          error_message: false
+          save_lineage: false
+          force_deepest: false
+          parent: null
+          level_labels: ''
+          hierarchy_depth: 0
+          required_depth: 0
+          none_label: '- Common Name -'
+        field_style_bonsai_target_id:
+          id: field_style_bonsai_target_id
+          table: plant__field_style_bonsai
+          field: field_style_bonsai_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: null
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_style_bonsai_target_id_op
+            label: Style
+            description: ''
+            use_operator: false
+            operator: field_style_bonsai_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: style
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              author: '0'
+              collections_donor: '0'
+              editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+              member_student: '0'
+              member_individual: '0'
+              member_couple: '0'
+              member_family_tree: '0'
+              member_sustaining: '0'
+              member_sponsor: '0'
+              member_benefactor: '0'
+              member_directors_circle: '0'
+              volunteer_individual: '0'
+              volunteer_couple: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: bonsai_style_basic
+          type: cshs
+          hierarchy: false
+          limit: true
+          error_message: false
+          save_lineage: false
+          force_deepest: false
+          parent: null
+          level_labels: ''
+          hierarchy_depth: 0
+          required_depth: 0
+          none_label: '- Style -'
+        field_genus_target_id:
+          id: field_genus_target_id
+          table: plant__field_genus
+          field: field_genus_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: null
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_genus_target_id_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_genus_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: genus
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              author: '0'
+              collections_donor: '0'
+              editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+              member_student: '0'
+              member_individual: '0'
+              member_couple: '0'
+              member_family_tree: '0'
+              member_sustaining: '0'
+              member_sponsor: '0'
+              member_benefactor: '0'
+              member_directors_circle: '0'
+              volunteer_individual: '0'
+              volunteer_couple: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: genus
+          type: cshs
+          hierarchy: false
+          limit: true
+          error_message: false
+          save_lineage: false
+          force_deepest: false
+          parent: null
+          level_labels: ''
+          hierarchy_depth: 0
+          required_depth: 0
+          none_label: '- Genus -'
+        field_species_target_id:
+          id: field_species_target_id
+          table: plant__field_species
+          field: field_species_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: null
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_species_target_id_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_species_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: species
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              author: '0'
+              collections_donor: '0'
+              editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+              member_student: '0'
+              member_individual: '0'
+              member_couple: '0'
+              member_family_tree: '0'
+              member_sustaining: '0'
+              member_sponsor: '0'
+              member_benefactor: '0'
+              member_directors_circle: '0'
+              volunteer_individual: '0'
+              volunteer_couple: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: species
+          type: cshs
+          hierarchy: false
+          limit: true
+          error_message: false
+          save_lineage: false
+          force_deepest: false
+          parent: null
+          level_labels: ''
+          hierarchy_depth: 0
+          required_depth: 0
+          none_label: '- Species -'
+        field_year_acquired_value:
+          id: field_year_acquired_value
+          table: plant__field_year_acquired
+          field: field_year_acquired_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_year_acquired_value_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_year_acquired_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: year-acquired
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              author: '0'
+              collections_donor: '0'
+              editor: '0'
+              fellow: '0'
+              fulfillment: '0'
+              intern: '0'
+              author_plant: '0'
+              editor_plant: '0'
+              viewer_plant: '0'
+              staff: '0'
+              super_administrator: '0'
+              working_group_member: '0'
+              member_student: '0'
+              member_individual: '0'
+              member_couple: '0'
+              member_family_tree: '0'
+              member_sustaining: '0'
+              member_sponsor: '0'
+              member_benefactor: '0'
+              member_directors_circle: '0'
+              volunteer_individual: '0'
+              volunteer_couple: '0'
+            min_placeholder: 'Earliest year aquired'
+            max_placeholder: 'Latest year aquired'
+            placeholder: 'Year Acquired'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: 'entity:plant'
+        options:
+          relationship: none
+          view_mode: card_box
+      defaults:
+        use_ajax: false
+        pager: false
+        exposed_form: false
+        style: false
+        row: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.permissions
+      tags: {  }
   page_1:
     id: page_1
     display_title: Page

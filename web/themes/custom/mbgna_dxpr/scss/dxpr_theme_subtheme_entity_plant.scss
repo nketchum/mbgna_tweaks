@@ -7,3 +7,106 @@
     }
   }
 }
+
+.plant.card-box {
+  background: $blue-primary;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 1.5em;
+
+  &, a {
+    color: $white;
+  }
+
+  .field--name-field-display-image {
+    margin: -30px -30px 30px;
+  }
+
+  .field--name-field-mbgna-id {
+    opacity: 0.5;
+  }
+}
+
+.view-plant.view-display-id-block_2 {
+  .view-content {
+    display: flex;
+
+    .views-row {
+      margin-bottom: 30px;
+    }
+  }
+
+  .views-exposed-form {
+    margin-bottom: 30px;
+
+    .form--inline {
+      display: flex;
+    }
+
+    label {
+      display: none;
+    }
+
+    .form-select {
+      padding-right: 20px;
+    }
+
+    .fieldset-wrapper {
+      display: flex;
+
+      .form-text {
+        padding: 8px 12px 7.5px 8px;
+      }
+    }
+
+    .form-item-year-acquired-min,
+    .form-item-year-acquired-max {
+      max-width: 180px;
+    }
+
+    .form-item,
+    .form-actions {
+      margin-right: 15px;
+      margin-top: 0;
+    }
+
+    .form-submit {
+      padding: 11.5px 12px;
+    }
+  }
+  
+}
+
+.view-plant-taxonomies.view-display-id-block_1 {
+
+  .view-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -30px;
+  }
+
+  .views-row {
+    display: flex;
+    flex-basis: percentage(1/3);
+    padding: 30px;
+  }
+}
+
+.taxonomy-term.vocabulary-bonsai-style-basic {
+  background: $blue-primary;
+  border-radius: 10px;
+  padding: 30px;
+  overflow: hidden;
+
+  .field--name-field-display-image {
+    margin: -30px -30px 30px;
+  }
+
+  &, a {
+    color: $white;  
+  }
+}
+
