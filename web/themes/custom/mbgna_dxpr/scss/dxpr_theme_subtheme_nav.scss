@@ -222,7 +222,7 @@
 
 .tbm-item.level-1 {
   border-right: none;
-  font-size: 18px;
+  font-size: 20px;
   display: table;
 }
 
@@ -468,6 +468,28 @@
       position: static;
       text-align: left;
       margin-bottom: -15px;
+    }
+  }
+}
+
+#block-mbgna-dxpr-content {
+  .section-nav {
+    ul.nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      margin: 0;
+
+      & > li {
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+          font-weight: bold;
+        }
+      }
     }
   }
 }

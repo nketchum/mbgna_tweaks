@@ -7,22 +7,26 @@ allowed_grant_operations:
 bundles_roles_grants:
   basic_page:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -51,10 +55,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -104,22 +104,26 @@ bundles_roles_grants:
       grant_delete: 0
   conservatory:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -148,10 +152,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -201,22 +201,26 @@ bundles_roles_grants:
       grant_delete: 0
   drag_and_drop_page:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -245,10 +249,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -395,22 +395,26 @@ bundles_roles_grants:
       grant_delete: 0
   garden:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -439,10 +443,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -492,22 +492,26 @@ bundles_roles_grants:
       grant_delete: 0
   landing_page:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -536,10 +540,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -589,22 +589,26 @@ bundles_roles_grants:
       grant_delete: 0
   position:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -633,10 +637,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -685,6 +685,103 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
   post:
+    anonymous:
+      grant_view: 1
+      grant_update: 0
+      grant_delete: 0
+    authenticated:
+      grant_view: 1
+      grant_update: 0
+      grant_delete: 0
+    author:
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
+    editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fellow:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    fulfillment:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    intern:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    author_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    editor_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    viewer_plant:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    staff:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    working_group_member:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_student:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_family_tree:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sustaining:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_sponsor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_benefactor:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    member_directors_circle:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_individual:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+    volunteer_couple:
+      grant_view: 0
+      grant_update: 0
+      grant_delete: 0
+  resource:
     anonymous:
       grant_view: 1
       grant_update: 0
@@ -880,22 +977,26 @@ bundles_roles_grants:
       grant_delete: 0
   trail:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -924,10 +1025,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -977,22 +1074,26 @@ bundles_roles_grants:
       grant_delete: 0
   webform:
     anonymous:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     authenticated:
-      grant_view: 0
+      grant_view: 1
       grant_update: 0
       grant_delete: 0
     author:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    collections_donor:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
+      grant_view: 1
+      grant_update: 1
+      grant_delete: 1
     editor:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    super_administrator:
+      grant_view: 0
+      grant_update: 1
+      grant_delete: 1
+    collections_donor:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -1021,10 +1122,6 @@ bundles_roles_grants:
       grant_update: 0
       grant_delete: 0
     staff:
-      grant_view: 0
-      grant_update: 0
-      grant_delete: 0
-    super_administrator:
       grant_view: 0
       grant_update: 0
       grant_delete: 0
@@ -1081,6 +1178,7 @@ grants_tab_availability:
   landing_page: false
   position: false
   post: true
+  resource: true
   test: false
   trail: false
   webform: false
@@ -1114,12 +1212,12 @@ roles_settings:
     display_name: 'Anonymous user'
     name: 'Anonymous user'
     weight: 0
-    selected: false
+    selected: true
   authenticated:
     display_name: 'Authenticated user'
     name: 'Authenticated user'
     weight: 0
-    selected: false
+    selected: true
   author:
     display_name: Author
     name: Author

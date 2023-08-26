@@ -1,26 +1,26 @@
-uuid: ea8957ce-a9ff-41e3-a922-6e0cc239018c
+uuid: b64abdcc-9cc7-4602-ab42-9556608e403c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.plant.field_display_image
     - mbgna_plant.plant_type.bonsai
-    - media.type.image
+    - media.type.image_bonsai
 id: plant.bonsai.field_display_image
 field_name: field_display_image
 entity_type: plant
 bundle: bonsai
 label: 'Display image'
-description: 'This is the main image to be prominently displayed.'
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      image_bonsai: image_bonsai
     sort:
       field: _none
       direction: ASC

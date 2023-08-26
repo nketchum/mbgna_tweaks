@@ -14,8 +14,8 @@ uid: null
 template: false
 archive: false
 id: contact
-title: Contact
-description: 'Basic email contact webform.'
+title: 'Contact Us'
+description: '<p>Basic email contact webform.</p>'
 categories: {  }
 elements: |-
   processed_text:

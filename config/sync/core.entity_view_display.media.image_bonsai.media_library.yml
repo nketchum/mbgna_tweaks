@@ -1,0 +1,32 @@
+uuid: 5e444fed-3fb9-4b1b-8a8d-b65189493fc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.image_bonsai.field_media_image_1
+    - image.style.medium
+    - media.type.image_bonsai
+  module:
+    - image
+id: media.image_bonsai.media_library
+targetEntityType: media
+bundle: image_bonsai
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_image_1: true
+  name: true
+  uid: true

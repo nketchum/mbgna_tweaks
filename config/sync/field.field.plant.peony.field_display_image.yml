@@ -1,26 +1,26 @@
-uuid: b866f418-4acb-462d-8b82-d452b5bba378
+uuid: f937ae1f-909c-45a0-8d22-d33c66a5054b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.plant.field_display_image
     - mbgna_plant.plant_type.peony
-    - media.type.image
+    - media.type.peony_image
 id: plant.peony.field_display_image
 field_name: field_display_image
 entity_type: plant
 bundle: peony
 label: 'Display image'
-description: 'This is the main image to be prominently displayed.'
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      peony_image: peony_image
     sort:
       field: _none
       direction: ASC

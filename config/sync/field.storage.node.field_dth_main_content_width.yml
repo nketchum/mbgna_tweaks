@@ -3,11 +3,15 @@ langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
     - node
     - options
   enforced:
     module:
       - dxpr_theme_helper
+third_party_settings:
+  field_permissions:
+    permission_type: public
 _core:
   default_config_hash: NdZfKqTnyMGn1zXwktiCh_E3YsP_O7-oeKdc5I8mue4
 id: node.field_dth_main_content_width

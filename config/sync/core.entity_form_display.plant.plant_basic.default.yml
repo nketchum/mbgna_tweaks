@@ -12,11 +12,11 @@ dependencies:
     - field.field.plant.plant_basic.field_display_name
     - field.field.plant.plant_basic.field_donor
     - field.field.plant.plant_basic.field_family
+    - field.field.plant.plant_basic.field_gallery_images
     - field.field.plant.plant_basic.field_genus
     - field.field.plant.plant_basic.field_legacy_id
     - field.field.plant.plant_basic.field_mbgna_id
     - field.field.plant.plant_basic.field_origin
-    - field.field.plant.plant_basic.field_plant_images
     - field.field.plant.plant_basic.field_species
     - field.field.plant.plant_basic.field_video
     - mbgna_plant.plant_type.plant_basic
@@ -92,7 +92,7 @@ third_party_settings:
         - field_collections
         - field_description
         - field_display_image
-        - field_plant_images
+        - field_gallery_images
         - field_video
         - field_3d_view
         - field_donor
@@ -229,6 +229,13 @@ content:
       revision: false
       removed_reference: keep
     third_party_settings: {  }
+  field_gallery_images:
+    type: media_library_widget
+    weight: 13
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_genus:
     type: inline_entity_form_complex
     weight: 6
@@ -280,13 +287,6 @@ content:
       collapsed: false
       revision: false
       removed_reference: keep
-    third_party_settings: {  }
-  field_plant_images:
-    type: media_library_widget
-    weight: 13
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_species:
     type: inline_entity_form_complex

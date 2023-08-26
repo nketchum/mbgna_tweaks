@@ -14,13 +14,13 @@ dependencies:
     - field.field.plant.peony.field_display_name
     - field.field.plant.peony.field_donor
     - field.field.plant.peony.field_family
+    - field.field.plant.peony.field_gallery_images
     - field.field.plant.peony.field_genus
     - field.field.plant.peony.field_legacy_id
     - field.field.plant.peony.field_mbgna_id
     - field.field.plant.peony.field_origin
     - field.field.plant.peony.field_peony_color
     - field.field.plant.peony.field_peony_season
-    - field.field.plant.peony.field_plant_images
     - field.field.plant.peony.field_species
     - field.field.plant.peony.field_video
     - field.field.plant.peony.field_year_acquired
@@ -39,7 +39,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_breeder:
     type: string
@@ -47,7 +47,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 19
+    weight: 20
     region: content
   field_collections:
     type: entity_reference_label
@@ -75,7 +75,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 16
+    weight: 17
     region: content
   field_cultivar:
     type: entity_reference_label
@@ -96,10 +96,10 @@ content:
     region: content
   field_display_image:
     type: entity_reference_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 13
     region: content
@@ -121,7 +121,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 20
+    weight: 21
     region: content
   field_family:
     type: entity_reference_label
@@ -132,6 +132,15 @@ content:
       field_formatter_class:
         class: ''
     weight: 6
+    region: content
+  field_gallery_images:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_genus:
     type: entity_reference_label
@@ -208,7 +217,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 15
+    weight: 16
     region: content
   field_year_acquired:
     type: number_integer
@@ -217,7 +226,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 18
+    weight: 19
     region: content
   field_year_introduced:
     type: number_integer
@@ -226,7 +235,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 17
+    weight: 18
     region: content
   status:
     type: boolean
@@ -238,10 +247,9 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 21
+    weight: 22
     region: content
 hidden:
   created: true
-  field_plant_images: true
   label: true
   uid: true

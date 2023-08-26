@@ -1,0 +1,34 @@
+uuid: 924722c9-8e88-4b50-845b-5c96856ed231
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.image_bonsai.field_media_image_1
+    - image.style.thumbnail
+    - media.type.image_bonsai
+  module:
+    - image
+id: media.image_bonsai.media_library
+targetEntityType: media
+bundle: image_bonsai
+mode: media_library
+content:
+  field_media_image_1:
+    type: image_image
+    weight: -50
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  name: true
+  path: true
+  publish_on: true
+  revision_log_message: true
+  scheduler_settings: true
+  status: true
+  uid: true
+  unpublish_on: true

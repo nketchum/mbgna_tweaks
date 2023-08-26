@@ -12,11 +12,11 @@ dependencies:
     - field.field.plant.plant_basic.field_display_name
     - field.field.plant.plant_basic.field_donor
     - field.field.plant.plant_basic.field_family
+    - field.field.plant.plant_basic.field_gallery_images
     - field.field.plant.plant_basic.field_genus
     - field.field.plant.plant_basic.field_legacy_id
     - field.field.plant.plant_basic.field_mbgna_id
     - field.field.plant.plant_basic.field_origin
-    - field.field.plant.plant_basic.field_plant_images
     - field.field.plant.plant_basic.field_species
     - field.field.plant.plant_basic.field_video
     - mbgna_plant.plant_type.plant_basic
@@ -33,7 +33,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_collections:
     type: entity_reference_label
@@ -51,7 +51,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_common_name:
     type: entity_reference_label
@@ -76,9 +76,7 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
+    third_party_settings: {  }
     weight: 10
     region: content
   field_display_name:
@@ -97,7 +95,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_family:
     type: entity_reference_label
@@ -108,6 +106,15 @@ content:
       field_formatter_class:
         class: ''
     weight: 6
+    region: content
+  field_gallery_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_genus:
     type: entity_reference_label
@@ -162,7 +169,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   status:
     type: boolean
@@ -174,10 +181,9 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 14
+    weight: 15
     region: content
 hidden:
   created: true
-  field_plant_images: true
   label: true
   uid: true

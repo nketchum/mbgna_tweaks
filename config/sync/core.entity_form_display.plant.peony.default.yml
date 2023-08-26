@@ -14,13 +14,13 @@ dependencies:
     - field.field.plant.peony.field_display_name
     - field.field.plant.peony.field_donor
     - field.field.plant.peony.field_family
+    - field.field.plant.peony.field_gallery_images
     - field.field.plant.peony.field_genus
     - field.field.plant.peony.field_legacy_id
     - field.field.plant.peony.field_mbgna_id
     - field.field.plant.peony.field_origin
     - field.field.plant.peony.field_peony_color
     - field.field.plant.peony.field_peony_season
-    - field.field.plant.peony.field_plant_images
     - field.field.plant.peony.field_species
     - field.field.plant.peony.field_video
     - field.field.plant.peony.field_year_acquired
@@ -96,7 +96,7 @@ third_party_settings:
         - field_collections
         - field_description
         - field_display_image
-        - field_plant_images
+        - field_gallery_images
         - field_video
         - field_3d_view
         - field_donor
@@ -279,6 +279,13 @@ content:
       revision: false
       removed_reference: keep
     third_party_settings: {  }
+  field_gallery_images:
+    type: media_library_widget
+    weight: 17
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_genus:
     type: inline_entity_form_complex
     weight: 10
@@ -366,13 +373,6 @@ content:
       collapsed: false
       revision: false
       removed_reference: keep
-    third_party_settings: {  }
-  field_plant_images:
-    type: media_library_widget
-    weight: 17
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_species:
     type: inline_entity_form_complex

@@ -9,7 +9,7 @@ uid: 1
 template: false
 archive: false
 id: inquiries_facility
-title: 'Inquiries (facility)'
+title: 'Facility Inquiries'
 description: ''
 categories: {  }
 elements: |-

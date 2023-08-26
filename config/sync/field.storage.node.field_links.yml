@@ -1,21 +1,20 @@
-uuid: 6b3a5ecf-9dbc-4ac3-9415-b27deea006a5
+uuid: fb6e097c-699b-439c-ad91-879b2d2499ff
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - mbgna_plant
-    - media
+    - link
+    - node
 third_party_settings:
   field_permissions:
     permission_type: public
-id: plant.field_plant_images
-field_name: field_plant_images
-entity_type: plant
-type: entity_reference
-settings:
-  target_type: media
-module: core
+id: node.field_links
+field_name: field_links
+entity_type: node
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: -1
 translatable: true

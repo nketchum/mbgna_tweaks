@@ -1,26 +1,26 @@
-uuid: c2266fe7-d032-408c-adb6-c30292a9baad
+uuid: 57e8139f-37a7-4055-bf55-ff90a266cdc0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.plant.field_plant_images
+    - field.storage.plant.field_gallery_images
     - mbgna_plant.plant_type.peony
-    - media.type.image
-id: plant.peony.field_plant_images
-field_name: field_plant_images
+    - media.type.peony_image
+id: plant.peony.field_gallery_images
+field_name: field_gallery_images
 entity_type: plant
 bundle: peony
-label: 'Plant images'
+label: 'Gallery images'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      peony_image: peony_image
     sort:
       field: _none
       direction: ASC

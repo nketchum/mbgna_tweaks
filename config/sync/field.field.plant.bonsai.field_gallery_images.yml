@@ -1,16 +1,16 @@
-uuid: 97a57eb7-4abf-4191-9fbd-18f2196067f8
+uuid: da23dac9-52af-4f4c-8b85-534e15ba2fe5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.plant.field_display_image
-    - mbgna_plant.plant_type.plant_basic
-    - media.type.plant_image
-id: plant.plant_basic.field_display_image
-field_name: field_display_image
+    - field.storage.plant.field_gallery_images
+    - mbgna_plant.plant_type.bonsai
+    - media.type.image_bonsai
+id: plant.bonsai.field_gallery_images
+field_name: field_gallery_images
 entity_type: plant
-bundle: plant_basic
-label: 'Display image'
+bundle: bonsai
+label: 'Gallery images'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      plant_image: plant_image
+      image_bonsai: image_bonsai
     sort:
       field: _none
       direction: ASC

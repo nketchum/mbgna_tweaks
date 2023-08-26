@@ -14,6 +14,7 @@ dependencies:
     - field.field.plant.bonsai.field_display_name
     - field.field.plant.bonsai.field_donor
     - field.field.plant.bonsai.field_family
+    - field.field.plant.bonsai.field_gallery_images
     - field.field.plant.bonsai.field_genus
     - field.field.plant.bonsai.field_last_repot
     - field.field.plant.bonsai.field_legacy_id
@@ -21,7 +22,6 @@ dependencies:
     - field.field.plant.bonsai.field_mbgna_id
     - field.field.plant.bonsai.field_origin
     - field.field.plant.bonsai.field_outer_pot_size
-    - field.field.plant.bonsai.field_plant_images
     - field.field.plant.bonsai.field_pot_notes
     - field.field.plant.bonsai.field_priority
     - field.field.plant.bonsai.field_species
@@ -116,9 +116,7 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
+    third_party_settings: {  }
     weight: 11
     region: content
   field_display_name:
@@ -150,6 +148,46 @@ content:
       field_formatter_class:
         class: ''
     weight: 6
+    region: content
+  field_gallery_images:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        field_media_image_1: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: grid
+      background: false
+      box_caption: title
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: colorbox_large
+      image_style: medium_square_ish_rectangle
+      media_switch: colorbox
+      ratio: ''
+      thumbnail_style: medium_square_ish_rectangle
+      grid: '3'
+      grid_medium: '3'
+      grid_small: '1'
+    third_party_settings:
+      field_formatter_class:
+        class: field--name-field-gallery-images
+    weight: 12
     region: content
   field_genus:
     type: entity_reference_label
@@ -213,47 +251,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 23
-    region: content
-  field_plant_images:
-    type: blazy_media
-    label: hidden
-    settings:
-      caption:
-        alt: alt
-        title: '0'
-      class: ''
-      id: ''
-      image: ''
-      link: ''
-      overlay: ''
-      title: ''
-      vanilla: false
-      layout: ''
-      view_mode: default
-      cache: 0
-      skin: ''
-      lazy: ''
-      style: grid
-      background: false
-      box_caption: alt
-      box_caption_custom: ''
-      box_media_style: colorbox_large
-      loading: ''
-      preload: false
-      responsive_image_style: ''
-      use_theme_field: false
-      box_style: colorbox_large
-      image_style: ''
-      media_switch: colorbox
-      ratio: ''
-      thumbnail_style: medium_square_ish_rectangle
-      grid: '3'
-      grid_medium: '3'
-      grid_small: '1'
-    third_party_settings:
-      field_formatter_class:
-        class: field--name-field-plant-images
-    weight: 14
     region: content
   field_pot_notes:
     type: string
@@ -326,7 +323,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 12
+    weight: 14
     region: content
   field_year_acquired:
     type: number_integer

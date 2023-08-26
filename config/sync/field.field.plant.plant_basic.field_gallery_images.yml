@@ -1,16 +1,16 @@
-uuid: dec21f43-815d-4894-8522-e93adabe4be2
+uuid: d2210c59-afab-4d16-809b-615610d55f9a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.plant.field_plant_images
+    - field.storage.plant.field_gallery_images
     - mbgna_plant.plant_type.plant_basic
-    - media.type.image
-id: plant.plant_basic.field_plant_images
-field_name: field_plant_images
+    - media.type.plant_image
+id: plant.plant_basic.field_gallery_images
+field_name: field_gallery_images
 entity_type: plant
 bundle: plant_basic
-label: 'Plant images'
+label: 'Gallery images'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      plant_image: plant_image
     sort:
       field: _none
       direction: ASC

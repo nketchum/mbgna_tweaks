@@ -14,6 +14,7 @@ dependencies:
     - field.field.plant.bonsai.field_display_name
     - field.field.plant.bonsai.field_donor
     - field.field.plant.bonsai.field_family
+    - field.field.plant.bonsai.field_gallery_images
     - field.field.plant.bonsai.field_genus
     - field.field.plant.bonsai.field_last_repot
     - field.field.plant.bonsai.field_legacy_id
@@ -21,7 +22,6 @@ dependencies:
     - field.field.plant.bonsai.field_mbgna_id
     - field.field.plant.bonsai.field_origin
     - field.field.plant.bonsai.field_outer_pot_size
-    - field.field.plant.bonsai.field_plant_images
     - field.field.plant.bonsai.field_pot_notes
     - field.field.plant.bonsai.field_priority
     - field.field.plant.bonsai.field_species
@@ -106,7 +106,7 @@ third_party_settings:
         - field_description_heading
         - field_description
         - field_display_image
-        - field_plant_images
+        - field_gallery_images
         - field_video
         - field_3d_view
         - field_donor
@@ -307,6 +307,13 @@ content:
       revision: false
       removed_reference: keep
     third_party_settings: {  }
+  field_gallery_images:
+    type: media_library_widget
+    weight: 22
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_genus:
     type: inline_entity_form_complex
     weight: 14
@@ -380,13 +387,6 @@ content:
     settings:
       size: 60
       placeholder: LxWxH
-    third_party_settings: {  }
-  field_plant_images:
-    type: media_library_widget
-    weight: 22
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_pot_notes:
     type: string_textfield

@@ -20,7 +20,9 @@ label: 'DXPR Main Content Width'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: dxpr-theme-util-full-width-content
 default_value_callback: ''
 settings: {  }
 field_type: list_string
