@@ -1,0 +1,24 @@
+uuid: 7a5ca42c-092f-4733-8dd8-05f04ce5cb9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mbgna_bed
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: bed.field_bed_number
+field_name: field_bed_number
+entity_type: bed
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

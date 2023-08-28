@@ -13,7 +13,7 @@ dependencies:
 id: mbgna_dxpr_facilitiesheaderbanner
 theme: mbgna_dxpr
 region: highlighted
-weight: 0
+weight: -15
 provider: null
 plugin: 'block_content:0e5aa75c-a57d-42dd-a83d-b867c03ca4b0'
 settings:

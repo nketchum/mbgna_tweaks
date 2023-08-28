@@ -1,0 +1,35 @@
+uuid: 65d99e00-7b5d-469e-8c08-9e89f97afc69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.bed.peony.field_bed_number
+    - mbgna_bed.bed_type.peony
+id: bed.peony.default
+targetEntityType: bed
+bundle: peony
+mode: default
+content:
+  field_bed_number:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: 0b7c4473-3c00-41e0-8be1-55ee0db6cd54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_bed
+    - mbgna_bed.bed_type.peony
+    - mbgna_plant.plant_type.peony
+id: plant.peony.field_bed
+field_name: field_bed
+entity_type: plant
+bundle: peony
+label: Bed
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:bed'
+  handler_settings:
+    target_bundles:
+      peony: peony
+    sort:
+      field: field_bed_number
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

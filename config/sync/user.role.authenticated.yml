@@ -12,6 +12,7 @@ dependencies:
     - contact
     - file
     - filter
+    - mbgna_bed
     - mbgna_facility
     - mbgna_organization
     - mbgna_plant
@@ -35,6 +36,7 @@ permissions:
   - 'delete own files'
   - 'manage own commerce_payment_method'
   - 'use text format webform_default'
+  - 'view bed'
   - 'view commerce_product'
   - 'view facility'
   - 'view media'

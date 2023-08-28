@@ -13,7 +13,7 @@ dependencies:
 id: mbgna_dxpr_positionsheaderblock
 theme: mbgna_dxpr
 region: highlighted
-weight: 0
+weight: -14
 provider: null
 plugin: 'block_content:9bd2e624-2c7e-47cf-a4ac-be7f922832aa'
 settings:

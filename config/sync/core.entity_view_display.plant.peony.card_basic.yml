@@ -1,8 +1,9 @@
-uuid: 853c2cd9-2bf0-4c88-a3ce-e8bdd626dfcd
+uuid: 434d1b7a-017e-48c3-9e9b-59eabdb8fc2a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
+    - core.entity_view_mode.plant.card_basic
     - field.field.plant.peony.field_3d_view
     - field.field.plant.peony.field_bed
     - field.field.plant.peony.field_breeder
@@ -26,34 +27,29 @@ dependencies:
     - field.field.plant.peony.field_video
     - field.field.plant.peony.field_year_acquired
     - field.field.plant.peony.field_year_introduced
-    - image.style.colorbox_large
-    - image.style.medium_square_ish_rectangle
     - mbgna_plant.plant_type.peony
   module:
-    - blazy
     - field_formatter_class
     - text
-id: plant.peony.default
+id: plant.peony.card_basic
 targetEntityType: plant
 bundle: peony
-mode: default
+mode: card_basic
 content:
   field_3d_view:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 23
+    weight: 16
     region: content
   field_bed:
     type: entity_reference_label
     label: inline
     settings:
       link: true
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 0
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_breeder:
     type: string
@@ -61,7 +57,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 21
     region: content
   field_collections:
     type: entity_reference_label
@@ -69,7 +65,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 12
     region: content
   field_common_name:
     type: entity_reference_label
@@ -79,7 +75,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: main-content-subtitle
-    weight: 4
+    weight: 1
     region: content
   field_country_of_origin:
     type: entity_reference_label
@@ -89,7 +85,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 5
+    weight: 18
     region: content
   field_cultivar:
     type: entity_reference_label
@@ -99,23 +95,23 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 6
+    weight: 7
     region: content
   field_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 13
     region: content
   field_display_image:
     type: entity_reference_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 8
+    weight: 14
     region: content
   field_display_name:
     type: string
@@ -125,17 +121,17 @@ content:
     third_party_settings:
       field_formatter_class:
         class: main-content-title
-    weight: 9
+    weight: 0
     region: content
   field_donor:
     type: entity_reference_label
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 10
+    weight: 22
     region: content
   field_family:
     type: entity_reference_label
@@ -145,47 +141,16 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 11
+    weight: 6
     region: content
   field_gallery_images:
-    type: blazy_media
-    label: hidden
+    type: entity_reference_entity_view
+    label: above
     settings:
-      caption:
-        field_media_image_2: '0'
-      class: ''
-      id: ''
-      image: ''
-      link: ''
-      overlay: ''
-      title: ''
-      vanilla: false
-      layout: ''
       view_mode: default
-      cache: 0
-      skin: ''
-      lazy: ''
-      style: grid
-      background: false
-      box_caption: title
-      box_caption_custom: ''
-      box_media_style: ''
-      loading: ''
-      preload: false
-      responsive_image_style: ''
-      use_theme_field: false
-      box_style: colorbox_large
-      image_style: medium_square_ish_rectangle
-      media_switch: colorbox
-      ratio: ''
-      thumbnail_style: medium_square_ish_rectangle
-      grid: '3'
-      grid_medium: '3'
-      grid_small: '1'
-    third_party_settings:
-      field_formatter_class:
-        class: field--name-field-gallery-images
-    weight: 12
+      link: false
+    third_party_settings: {  }
+    weight: 15
     region: content
   field_genus:
     type: entity_reference_label
@@ -195,7 +160,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 13
+    weight: 4
     region: content
   field_legacy_id:
     type: string
@@ -203,7 +168,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 15
+    weight: 3
     region: content
   field_mbgna_id:
     type: string
@@ -211,27 +176,27 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 14
+    weight: 2
     region: content
   field_origin:
     type: entity_reference_label
     label: inline
     settings:
-      link: false
+      link: true
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 16
+    weight: 11
     region: content
   field_peony_color:
     type: entity_reference_label
-    label: inline
+    label: hidden
     settings:
       link: false
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 3
+    weight: 10
     region: content
   field_peony_season:
     type: entity_reference_label
@@ -241,7 +206,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 17
+    weight: 8
     region: content
   field_species:
     type: entity_reference_label
@@ -251,16 +216,18 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 18
+    weight: 5
     region: content
   field_video:
     type: entity_reference_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
-      link: true
-    third_party_settings: {  }
-    weight: 20
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 17
     region: content
   field_year_acquired:
     type: number_integer
@@ -269,7 +236,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 21
+    weight: 20
     region: content
   field_year_introduced:
     type: number_integer
@@ -278,7 +245,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 22
+    weight: 19
     region: content
   status:
     type: boolean
@@ -290,7 +257,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 19
+    weight: 23
     region: content
 hidden:
   created: true

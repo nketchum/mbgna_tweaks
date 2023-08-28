@@ -1,0 +1,10 @@
+uuid: 90363edd-9db6-4303-b1bb-e5186dd4e2a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant.card_basic
+label: 'Card (basic)'
+targetEntityType: plant
+cache: true

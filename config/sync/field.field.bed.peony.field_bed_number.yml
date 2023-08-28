@@ -1,0 +1,23 @@
+uuid: 65a8cd70-cd72-41c5-bb2d-7a9e2d7a45c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.bed.field_bed_number
+    - mbgna_bed.bed_type.peony
+id: bed.peony.field_bed_number
+field_name: field_bed_number
+entity_type: bed
+bundle: peony
+label: 'Bed number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

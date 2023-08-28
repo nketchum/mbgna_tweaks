@@ -1,0 +1,9 @@
+status: 1
+pattern: 'Peony bed [bed:field_bed_number:value]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - mbgna_bed.bed_type.peony

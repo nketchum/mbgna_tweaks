@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.plant.peony.field_3d_view
+    - field.field.plant.peony.field_bed
     - field.field.plant.peony.field_breeder
     - field.field.plant.peony.field_collections
     - field.field.plant.peony.field_common_name
@@ -114,6 +115,7 @@ third_party_settings:
         required_fields: false
     group_peony_information:
       children:
+        - field_bed
         - field_peony_color
         - field_peony_season
         - field_cultivar
@@ -146,7 +148,7 @@ content:
     third_party_settings: {  }
   field_3d_view:
     type: text_textarea
-    weight: 19
+    weight: 20
     region: content
     settings:
       rows: 5
@@ -155,9 +157,27 @@ content:
       allowed_formats:
         hide_help: '1'
         hide_guidelines: '1'
+  field_bed:
+    type: inline_entity_form_complex
+    weight: 11
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: bed
+      label_plural: beds
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
   field_breeder:
     type: string_textfield
-    weight: 29
+    weight: 18
     region: content
     settings:
       size: 60
@@ -165,7 +185,7 @@ content:
     third_party_settings: {  }
   field_collections:
     type: options_select
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -189,7 +209,7 @@ content:
     third_party_settings: {  }
   field_country_of_origin:
     type: inline_entity_form_complex
-    weight: 26
+    weight: 15
     region: content
     settings:
       form_mode: default
@@ -207,7 +227,7 @@ content:
     third_party_settings: {  }
   field_cultivar:
     type: inline_entity_form_complex
-    weight: 25
+    weight: 14
     region: content
     settings:
       form_mode: default
@@ -225,7 +245,7 @@ content:
     third_party_settings: {  }
   field_description:
     type: text_textarea_with_summary
-    weight: 15
+    weight: 16
     region: content
     settings:
       rows: 9
@@ -238,7 +258,7 @@ content:
         hide_guidelines: '1'
   field_display_image:
     type: media_library_widget
-    weight: 16
+    weight: 17
     region: content
     settings:
       media_types: {  }
@@ -253,7 +273,7 @@ content:
     third_party_settings: {  }
   field_donor:
     type: entity_reference_autocomplete
-    weight: 20
+    weight: 21
     region: content
     settings:
       match_operator: CONTAINS
@@ -263,7 +283,7 @@ content:
     third_party_settings: {  }
   field_family:
     type: inline_entity_form_complex
-    weight: 12
+    weight: 13
     region: content
     settings:
       form_mode: default
@@ -281,7 +301,7 @@ content:
     third_party_settings: {  }
   field_gallery_images:
     type: media_library_widget
-    weight: 17
+    weight: 18
     region: content
     settings:
       media_types: {  }
@@ -322,7 +342,7 @@ content:
     third_party_settings: {  }
   field_origin:
     type: inline_entity_form_complex
-    weight: 13
+    weight: 14
     region: content
     settings:
       form_mode: default
@@ -340,7 +360,7 @@ content:
     third_party_settings: {  }
   field_peony_color:
     type: inline_entity_form_complex
-    weight: 23
+    weight: 12
     region: content
     settings:
       form_mode: default
@@ -358,7 +378,7 @@ content:
     third_party_settings: {  }
   field_peony_season:
     type: inline_entity_form_complex
-    weight: 24
+    weight: 13
     region: content
     settings:
       form_mode: default
@@ -376,7 +396,7 @@ content:
     third_party_settings: {  }
   field_species:
     type: inline_entity_form_complex
-    weight: 11
+    weight: 12
     region: content
     settings:
       form_mode: default
@@ -394,21 +414,21 @@ content:
     third_party_settings: {  }
   field_video:
     type: media_library_widget
-    weight: 18
+    weight: 19
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_year_acquired:
     type: number
-    weight: 27
+    weight: 16
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_year_introduced:
     type: number
-    weight: 28
+    weight: 17
     region: content
     settings:
       placeholder: ''

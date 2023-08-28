@@ -19,6 +19,7 @@ dependencies:
     - dxpr_builder
     - file
     - filter
+    - mbgna_bed
     - mbgna_facility
     - mbgna_organization
     - mbgna_plant
@@ -65,6 +66,7 @@ permissions:
   - 'administer users'
   - 'administer webform submission'
   - 'bypass node access'
+  - 'create bed'
   - 'create commerce_license'
   - 'create facility'
   - 'create media'
@@ -78,6 +80,7 @@ permissions:
   - 'delete any event content'
   - 'delete any media'
   - 'delete any simple_text block content'
+  - 'delete bed'
   - 'delete facility'
   - 'delete organization'
   - 'delete own event content'
@@ -86,6 +89,7 @@ permissions:
   - 'delete resource'
   - 'delete terms in kickers'
   - 'edit any event content'
+  - 'edit bed'
   - 'edit facility'
   - 'edit organization'
   - 'edit own event content'

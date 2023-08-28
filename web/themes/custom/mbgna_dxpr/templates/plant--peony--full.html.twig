@@ -22,41 +22,51 @@
     'clearfix',
   ]
 %}
-{% if content %}
-  <article{{ attributes.addClass(classes) }}>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2 col-md-2 col-sm-12">
-          {{- content.field_mbgna_id -}}
-          {{- content.field_legacy_id -}}
-          {{- content.field_genus -}}
-          {{- content.field_species -}}
-          {{- content.field_family -}}
-          {{- content.field_origin -}}
-          {{- content.field_collections -}}
+<article{{ attributes.addClass(classes) }}>
+  <div class="article-heading">
+    {{- content.field_display_name -}}
+    {{- content.field_common_name -}}
+  </div>
+  <div class="article-body article-has-aside article-has-aside-right row">
+    {% block content %}
+      <div class="article-body-content col-lg-8 col-md-6 row">
+        <div class="col-lg-4 col-md-6 article-body-content-column article-body-content-column-left article-body-content-column">
+          <div class="boxed-fields boxed-fields-light">
+            <h4>Details</h4>
+            <hr />
+            {{- content.field_mbgna_id -}}
+            {{- content.field_legacy_id -}}
+            {{- content.field_genus -}}
+            {{- content.field_species -}}
+            {{- content.field_family -}}
+            {{- content.field_origin -}}
+            {{- content.field_collections -}}
+          </div>
+          <div class="boxed-fields boxed-fields-light">
+            <h4>Additional Details</h4>
+            <hr />
+            {{- content.field_donor -}}
+            {{- content.field_year_introduced -}}
+            {{- content.field_year_acquired -}}
+          </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-12">
-          {{- content.field_display_name -}}
-          {{- content.field_common_name -}}
+        <div class="col-lg-8 col-md-6 article-body-content-column article-body-content-column-right article-body-content-column-main">
+          {% if content.field_3d_view %}
+            {{- content.field_3d_view -}}
+          {% else %}
+            {{- content.field_display_image -}}
+          {% endif %}
+          {{- content.field_description_heading -}}
           {{- content.field_description -}}
-          {{- content.field_display_image -}}
-          {{- content.field_plant_images -}}
-          {{- drupal_view('plants', 'block_1', content.id) -}}
           {{- content.field_video -}}
-          {{- content.field_3d_view -}}
-          {{- content.field_commerce -}}
-        </div>
-        <div class="col-lg-2 col-md-8 col-sm-12">
-          {{- content.field_donor -}}
-          {{- content.field_year_introduced -}}
-          {{- content.field_year_acquired -}}
-          {{- content.field_country_of_origin -}}
-          {{- content.field_peony_season -}}
-          {{- content.field_peony_color -}}
-          {{- content.field_breeder -}}
-          {{- content.field_cultivar -}}
+          {{- content.field_gallery_images -}}
         </div>
       </div>
+    {% endblock %}
+    <div class="article-aside article-aside-right col-lg-4 col-md-6">
+      <div class="article-aside-content">
+        {{- content.field_commerce -}}
+      </div>
     </div>
-  </article>
-{% endif %}
+  </div>
+</article>

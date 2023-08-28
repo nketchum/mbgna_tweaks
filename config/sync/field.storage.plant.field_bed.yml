@@ -1,0 +1,24 @@
+uuid: 734ac1bb-410c-49e3-94ed-e9477ce88c34
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mbgna_bed
+    - mbgna_plant
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: plant.field_bed
+field_name: field_bed
+entity_type: plant
+type: entity_reference
+settings:
+  target_type: bed
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

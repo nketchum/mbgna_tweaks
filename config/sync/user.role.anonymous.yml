@@ -6,6 +6,7 @@ dependencies:
     - commerce_checkout
     - commerce_product
     - contact
+    - mbgna_bed
     - mbgna_facility
     - mbgna_organization
     - mbgna_plant
@@ -23,6 +24,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'access user profiles'
+  - 'view bed'
   - 'view commerce_product'
   - 'view facility'
   - 'view media'

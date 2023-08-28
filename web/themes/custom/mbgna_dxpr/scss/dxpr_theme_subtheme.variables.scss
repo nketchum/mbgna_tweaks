@@ -99,6 +99,10 @@ $min-width-wide-plus-120: '2040px';   // @media (min-width: $min-width-wide-plus
 .boxed-field-light,
 .boxed-fields-light {
   background: $light-gray;
+
+  hr {
+    opacity: 1;
+  }
 }
 
 .boxed-field-dark,

@@ -1,0 +1,24 @@
+uuid: ee881203-97cb-4d0a-8a86-630f3e7cacd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant
+label: Plant
+type: 'canonical_entities:plant'
+pattern: '[plant:bundle:target_id]/plant/[plant:field_mbgna_id:value]'
+selection_criteria:
+  f88e20d8-72a2-41c7-83b9-e7aedd552f87:
+    id: 'entity_bundle:plant'
+    negate: false
+    uuid: f88e20d8-72a2-41c7-83b9-e7aedd552f87
+    context_mapping:
+      plant: plant
+    bundles:
+      bonsai: bonsai
+      peony: peony
+      plant_basic: plant_basic
+selection_logic: and
+weight: -5
+relationships: {  }
