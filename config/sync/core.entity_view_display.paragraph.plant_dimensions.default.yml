@@ -15,7 +15,7 @@ mode: default
 content:
   field_depth:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -26,7 +26,7 @@ content:
     region: content
   field_height:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -37,7 +37,7 @@ content:
     region: content
   field_width:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -48,7 +48,7 @@ content:
     region: content
   field_year:
     type: number_integer
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
