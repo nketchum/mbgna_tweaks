@@ -1,0 +1,26 @@
+uuid: 97dfd838-0a62-4be0-b747-5f8ecf70a006
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bed_row_space
+id: taxonomy_term.bed_row_space.default
+targetEntityType: taxonomy_term
+bundle: bed_row_space
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  publish_on: true
+  revision_log_message: true
+  status: true
+  unpublish_on: true

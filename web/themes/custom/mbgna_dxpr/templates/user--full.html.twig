@@ -65,21 +65,26 @@
       </div>
     </div>
     {% if privileged %}
+      <hr class="landing-section">
       <div class="row dashboard-row dashboard-commerce">
         <h2>Membership Information</h2>
         <div class="col col-first col-level1 col-lg-6 col-md-6">
           <div class="boxed-field boxed-field-light">
+            {{ drupal_view('commerce_members', 'block_4') }}
             {{ drupal_view('commerce_members', 'block_3') }}
-            {# {{ drupal_view('commerce_members', 'block_2') }} #}
           </div>
         </div>
         <div class="col col-last col-level1 col-lg-6 col-md-6">
           <div class="boxed-field boxed-field-light">
             {{ drupal_view('commerce_members', 'block_1') }}
           </div>
+          <div class="boxed-field boxed-field-light">
+            {{ drupal_entity('webform', 'cancel_membership') }}
+          </div>
         </div>
       </div>
     {% endif %}
+    <hr class="landing-section">
     <div class="row dashboard-row dashboard-publications">
       {% if privileged %}
         <h2>My Publications</h2>
@@ -110,19 +115,19 @@
       </div>
     </div>
     {% if privileged %}
+    <hr class="landing-section">
     <div class="row dashboard-row dashboard-manage">
+      <h2>My Content</h2>
       <div class="col col-first col-level1 col-lg-8 col-md-8">
-        <h2>My Content</h2>
         <div class="boxed-field boxed-field-light">
           {{- drupal_view('content_dashboard', 'block_1') -}}
         </div>
       </div>
       <div class="col col-last col-level1 col-lg-4 col-md-4">
       {% if privileged %}
-      <h2>Reach Out</h2>
-      <div class="boxed-field boxed-field-light"">
-        {{ drupal_entity('webform', 'member_contact') }}
-      </div>
+        <div class="boxed-field boxed-field-light">
+          {{ drupal_entity('webform', 'member_contact') }}
+        </div>
       {% endif %}
       </div>
     </div>

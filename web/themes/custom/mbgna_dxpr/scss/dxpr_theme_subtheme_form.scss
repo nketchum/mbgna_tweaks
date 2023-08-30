@@ -103,3 +103,24 @@ select.form-select {
     display: none;
   }
 }
+
+.commerce-order-item-add-to-cart-form {
+  .field--name-purchased-entity {
+    label {
+      display: none;
+    }
+  }
+}
+
+.webform-submission-cancel-membership-form {
+  overflow: hidden;
+  
+  .form-actions {
+    float: right;
+    margin: 0;
+
+    .form-submit {
+      margin: 0;
+    }
+  }
+}

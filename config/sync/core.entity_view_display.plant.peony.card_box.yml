@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.plant.card_box
     - field.field.plant.peony.field_3d_view
     - field.field.plant.peony.field_bed
+    - field.field.plant.peony.field_bed_row
+    - field.field.plant.peony.field_bed_row_space
     - field.field.plant.peony.field_breeder
     - field.field.plant.peony.field_collections
     - field.field.plant.peony.field_common_name
@@ -27,8 +29,10 @@ dependencies:
     - field.field.plant.peony.field_video
     - field.field.plant.peony.field_year_acquired
     - field.field.plant.peony.field_year_introduced
+    - image.style.medium_square_ish_rectangle
     - mbgna_plant.plant_type.peony
   module:
+    - blazy
     - field_formatter_class
 id: plant.peony.card_box
 targetEntityType: plant
@@ -36,11 +40,43 @@ bundle: peony
 mode: card_box
 content:
   field_display_image:
-    type: entity_reference_label
-    label: above
+    type: blazy_media
+    label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      caption:
+        field_media_image_2: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 0
     region: content
   field_display_name:
@@ -85,6 +121,8 @@ hidden:
   created: true
   field_3d_view: true
   field_bed: true
+  field_bed_row: true
+  field_bed_row_space: true
   field_breeder: true
   field_collections: true
   field_common_name: true

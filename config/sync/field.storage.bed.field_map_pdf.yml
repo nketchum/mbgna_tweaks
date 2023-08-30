@@ -1,24 +1,21 @@
-uuid: 4e357124-a460-4a7a-ac0f-d3601429b9fa
+uuid: 4abd2ceb-b373-4602-99dc-e72b47080ef2
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - file
+    - mbgna_bed
     - media
 third_party_settings:
   field_permissions:
     permission_type: public
-id: media.field_media_file
-field_name: field_media_file
-entity_type: media
-type: file
+id: bed.field_map_pdf
+field_name: field_map_pdf
+entity_type: bed
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-module: file
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

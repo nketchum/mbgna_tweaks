@@ -15,7 +15,23 @@
 #}
 <article{{ attributes }}>
   {% if content %}
-    <h2>Peony Bed {{ bed_id }}</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        {{ content.field_display_image }}
+        <h2>{{ bed_type }} Bed {{ bed_id }}</h2>
+        <div class="bed-maps">
+          {% if content.field_map_pdf %}
+            <a href="{{ content.field_map_pdf|render|striptags|trim }}">PDF Map</a>
+          {% endif %}
+          {% if content.field_map_jpeg %}
+            <a href="{{ content.field_map_jpeg|render|striptags|trim }}">JPEG Map</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6">
+        {{- drupal_view('bed', 'block_3', bed_type) -}}
+      </div>
+    </div>
     {{- drupal_view('bed', 'block_2', bed_id) -}}
   {% endif %}
 </article>

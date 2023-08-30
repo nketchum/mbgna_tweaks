@@ -6,7 +6,7 @@ dependencies:
     - commerce_tax
 third_party_settings:
   commerce_tax:
-    taxable_type: physical_goods
+    taxable_type: digital_goods
 id: membership
 label: Membership
 traits:

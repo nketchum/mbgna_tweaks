@@ -7,6 +7,7 @@ dependencies:
     - field.field.commerce_product.membership.body
   module:
     - commerce_product
+    - field_formatter_class
 id: commerce_product.membership.default
 targetEntityType: commerce_product
 bundle: membership
@@ -17,7 +18,9 @@ content:
     label: hidden
     settings:
       combine: true
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 0
     region: content
 hidden:

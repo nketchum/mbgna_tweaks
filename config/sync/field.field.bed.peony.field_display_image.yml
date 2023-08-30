@@ -1,0 +1,29 @@
+uuid: 40b9893f-d181-486c-a49f-e94628d90bde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.bed.field_display_image
+    - mbgna_bed.bed_type.peony
+    - media.type.image
+id: bed.peony.field_display_image
+field_name: field_display_image
+entity_type: bed
+bundle: peony
+label: 'Display image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

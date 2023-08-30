@@ -272,12 +272,25 @@ a,
   }
 }
 
+.btn.btn-danger {
+  &, &:active {
+    color: $white !important;
+    background: #dc3545 !important;
+    border-color: #dc3545 !important;
+  }
+}
+
 .html .nav-tabs > li > a:hover {
   color: inherit;
 }
 
 hr {
   border-top-color: #ccc;
+
+  &.landing-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
 }
 
 body {

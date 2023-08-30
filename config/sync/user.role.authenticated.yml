@@ -19,7 +19,6 @@ dependencies:
     - mbgna_resource
     - media
     - system
-    - toolbar
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -30,7 +29,6 @@ permissions:
   - 'access checkout'
   - 'access content'
   - 'access site-wide contact form'
-  - 'access toolbar'
   - 'access user profiles'
   - 'change own username'
   - 'delete own files'

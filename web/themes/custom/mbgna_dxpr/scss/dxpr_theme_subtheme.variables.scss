@@ -13,6 +13,7 @@ $maize-primary:           #FFCB05;
 $blue-primary:            #00274C;
 $blue-secondary:          #0D57AA;
 $red:                     #9A3324;
+$teal:                    #00B2A9;
 $lightest-gray:           #F6F6F6;
 $lighter-gray:            #E9E9E9;
 $light-gray:              #EEEEEE;
@@ -80,6 +81,10 @@ $min-width-wide-plus-120: '2040px';   // @media (min-width: $min-width-wide-plus
 .boxed-fields {
   border-radius: 10px;
   margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .boxed-fields {

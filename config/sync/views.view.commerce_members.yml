@@ -4,11 +4,25 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.membership
+    - core.entity_view_mode.commerce_product_variation.summary
     - core.entity_view_mode.commerce_product_variation.teaser
+    - field.storage.commerce_product_variation.attribute_membership
+    - user.role.editor
+    - user.role.member_benefactor
+    - user.role.member_couple
+    - user.role.member_directors_circle
+    - user.role.member_family_tree
+    - user.role.member_individual
+    - user.role.member_sponsor
+    - user.role.member_student
+    - user.role.member_sustaining
+    - user.role.super_administrator
   module:
     - commerce
     - commerce_license
+    - commerce_price
     - commerce_product
+    - options
     - user
 id: commerce_members
 label: 'Commerce (Members)'
@@ -189,193 +203,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags: {  }
-  attachment_1:
-    id: attachment_1
-    display_title: 'Attachment: Current Membership Level'
-    display_plugin: attachment
-    position: 4
-    display_options:
-      fields:
-        rendered_entity:
-          id: rendered_entity
-          table: commerce_product_variation
-          field: rendered_entity
-          relationship: variations_target_id
-          group_type: group
-          admin_label: ''
-          entity_type: commerce_product_variation
-          plugin_id: rendered_entity
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          view_mode: teaser
-      pager:
-        type: none
-        options:
-          offset: 0
-      cache:
-        type: none
-        options: {  }
-      arguments:
-        uid:
-          id: uid
-          table: commerce_license
-          field: uid
-          relationship: reverse__commerce_license__product_variation
-          group_type: group
-          admin_label: ''
-          entity_type: commerce_license
-          entity_field: uid
-          plugin_id: numeric
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: raw
-          default_argument_options:
-            index: 1
-            use_alias: false
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-      filters:
-        status:
-          id: status
-          table: commerce_product_field_data
-          field: status
-          entity_type: commerce_product
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-        type:
-          id: type
-          table: commerce_product_field_data
-          field: type
-          entity_type: commerce_product
-          entity_field: type
-          plugin_id: commerce_entity_bundle
-          value:
-            membership: membership
-          group: 1
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      defaults:
-        cache: false
-        relationships: false
-        fields: false
-        arguments: false
-        filters: false
-        filter_groups: false
-      relationships:
-        variations_target_id:
-          id: variations_target_id
-          table: commerce_product__variations
-          field: variations_target_id
-          relationship: none
-          group_type: group
-          admin_label: 'Product variation'
-          entity_type: commerce_product
-          entity_field: variations
-          plugin_id: standard
-          required: true
-        reverse__commerce_license__product_variation:
-          id: reverse__commerce_license__product_variation
-          table: commerce_product_variation_field_data
-          field: reverse__commerce_license__product_variation
-          relationship: variations_target_id
-          group_type: group
-          admin_label: License
-          entity_type: commerce_product_variation
-          plugin_id: standard
-          required: true
-        uid:
-          id: uid
-          table: commerce_license
-          field: uid
-          relationship: reverse__commerce_license__product_variation
-          group_type: group
-          admin_label: User
-          entity_type: commerce_license
-          entity_field: uid
-          plugin_id: standard
-          required: false
-      display_description: ''
-      display_extenders: {  }
-      displays:
-        block_3: block_3
-      attachment_position: before
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-      tags:
-        - 'config:core.entity_view_display.commerce_product_variation.admission_type.cart'
-        - 'config:core.entity_view_display.commerce_product_variation.admission_type.summary'
-        - 'config:core.entity_view_display.commerce_product_variation.default.cart'
-        - 'config:core.entity_view_display.commerce_product_variation.default.summary'
-        - 'config:core.entity_view_display.commerce_product_variation.membership.default'
-        - 'config:core.entity_view_display.commerce_product_variation.membership.teaser'
   block_1:
     id: block_1
     display_title: 'Block: Memberships'
@@ -592,6 +419,7 @@ display:
         - 'config:core.entity_view_display.commerce_product_variation.default.cart'
         - 'config:core.entity_view_display.commerce_product_variation.default.summary'
         - 'config:core.entity_view_display.commerce_product_variation.membership.default'
+        - 'config:core.entity_view_display.commerce_product_variation.membership.summary'
         - 'config:core.entity_view_display.commerce_product_variation.membership.teaser'
   block_3:
     id: block_3
@@ -650,10 +478,55 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          view_mode: teaser
+          view_mode: summary
+      access:
+        type: role
+        options:
+          role:
+            editor: editor
+            super_administrator: super_administrator
+            member_student: member_student
+            member_individual: member_individual
+            member_couple: member_couple
+            member_family_tree: member_family_tree
+            member_sustaining: member_sustaining
+            member_sponsor: member_sponsor
+            member_benefactor: member_benefactor
+            member_directors_circle: member_directors_circle
       cache:
         type: none
         options: {  }
+      sorts:
+        price__number:
+          id: price__number
+          table: commerce_product_variation_field_data
+          field: price__number
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product_variation
+          entity_field: price
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        product_id:
+          id: product_id
+          table: commerce_product_field_data
+          field: product_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: product_id
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments:
         uid:
           id: uid
@@ -720,12 +593,646 @@ display:
         groups:
           1: AND
       defaults:
+        access: false
         cache: false
         relationships: false
         fields: false
+        sorts: false
         arguments: false
         filters: false
         filter_groups: false
+        header: false
+      relationships:
+        variations_target_id:
+          id: variations_target_id
+          table: commerce_product__variations
+          field: variations_target_id
+          relationship: none
+          group_type: group
+          admin_label: 'Product variation'
+          entity_type: commerce_product
+          entity_field: variations
+          plugin_id: standard
+          required: true
+        reverse__commerce_license__product_variation:
+          id: reverse__commerce_license__product_variation
+          table: commerce_product_variation_field_data
+          field: reverse__commerce_license__product_variation
+          relationship: variations_target_id
+          group_type: group
+          admin_label: License
+          entity_type: commerce_product_variation
+          plugin_id: standard
+          required: false
+        uid:
+          id: uid
+          table: commerce_license
+          field: uid
+          relationship: reverse__commerce_license__product_variation
+          group_type: group
+          admin_label: User
+          entity_type: commerce_license
+          entity_field: uid
+          plugin_id: standard
+          required: false
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<h4>Memberships (Available)</h4>'
+          tokenize: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - user.roles
+      tags:
+        - 'config:core.entity_view_display.commerce_product_variation.admission_type.cart'
+        - 'config:core.entity_view_display.commerce_product_variation.admission_type.summary'
+        - 'config:core.entity_view_display.commerce_product_variation.default.cart'
+        - 'config:core.entity_view_display.commerce_product_variation.default.summary'
+        - 'config:core.entity_view_display.commerce_product_variation.membership.default'
+        - 'config:core.entity_view_display.commerce_product_variation.membership.summary'
+        - 'config:core.entity_view_display.commerce_product_variation.membership.teaser'
+  block_4:
+    id: block_4
+    display_title: 'Block: Membership current level'
+    display_plugin: block
+    position: 4
+    display_options:
+      fields:
+        attribute_membership:
+          id: attribute_membership
+          table: commerce_product_variation__attribute_membership
+          field: attribute_membership
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        state:
+          id: state
+          table: commerce_license
+          field: state
+          relationship: reverse__commerce_license__product_variation
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_license
+          entity_field: state
+          plugin_id: field
+          label: Status
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        granted:
+          id: granted
+          table: commerce_license
+          field: granted
+          relationship: reverse__commerce_license__product_variation
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_license
+          entity_field: granted
+          plugin_id: field
+          label: Activated
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: medium_date
+            custom_date_format: ''
+            timezone: ''
+            tooltip:
+              date_format: medium_date
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
+              description: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        expires:
+          id: expires
+          table: commerce_license
+          field: expires
+          relationship: reverse__commerce_license__product_variation
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_license
+          entity_field: expires
+          plugin_id: field
+          label: Expires
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: medium_date
+            custom_date_format: ''
+            timezone: ''
+            tooltip:
+              date_format: medium_date
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
+              description: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        renewed:
+          id: renewed
+          table: commerce_license
+          field: renewed
+          relationship: reverse__commerce_license__product_variation
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_license
+          entity_field: renewed
+          plugin_id: field
+          label: Renewed
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: 'No renewals found'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: medium_date
+            custom_date_format: ''
+            timezone: ''
+            tooltip:
+              date_format: medium_date
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
+              description: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        price__number:
+          id: price__number
+          table: commerce_product_variation_field_data
+          field: price__number
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product_variation
+          entity_field: price
+          plugin_id: field
+          label: Cost
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: number
+          type: commerce_price_default
+          settings:
+            strip_trailing_zeroes: false
+            currency_display: symbol
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      access:
+        type: role
+        options:
+          role:
+            editor: editor
+            super_administrator: super_administrator
+            member_student: member_student
+            member_individual: member_individual
+            member_couple: member_couple
+            member_family_tree: member_family_tree
+            member_sustaining: member_sustaining
+            member_sponsor: member_sponsor
+            member_benefactor: member_benefactor
+            member_directors_circle: member_directors_circle
+      cache:
+        type: none
+        options: {  }
+      sorts:
+        price__number:
+          id: price__number
+          table: commerce_product_variation_field_data
+          field: price__number
+          relationship: variations_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product_variation
+          entity_field: price
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        product_id:
+          id: product_id
+          table: commerce_product_field_data
+          field: product_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: product_id
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments:
+        uid:
+          id: uid
+          table: commerce_license
+          field: uid
+          relationship: reverse__commerce_license__product_variation
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_license
+          entity_field: uid
+          plugin_id: numeric
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: false
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters:
+        status:
+          id: status
+          table: commerce_product_field_data
+          field: status
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: commerce_product_field_data
+          field: type
+          entity_type: commerce_product
+          entity_field: type
+          plugin_id: commerce_entity_bundle
+          value:
+            membership: membership
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      defaults:
+        access: false
+        cache: false
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        sorts: false
+        arguments: false
+        filters: false
+        filter_groups: false
+        header: false
       relationships:
         variations_target_id:
           id: variations_target_id
@@ -760,16 +1267,25 @@ display:
           plugin_id: standard
           required: false
       display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<h4>{{ attribute_membership }} (Current)</h4>'
+          tokenize: true
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user.roles
       tags:
-        - 'config:core.entity_view_display.commerce_product_variation.admission_type.cart'
-        - 'config:core.entity_view_display.commerce_product_variation.admission_type.summary'
-        - 'config:core.entity_view_display.commerce_product_variation.default.cart'
-        - 'config:core.entity_view_display.commerce_product_variation.default.summary'
-        - 'config:core.entity_view_display.commerce_product_variation.membership.default'
-        - 'config:core.entity_view_display.commerce_product_variation.membership.teaser'
+        - 'config:field.storage.commerce_product_variation.attribute_membership'

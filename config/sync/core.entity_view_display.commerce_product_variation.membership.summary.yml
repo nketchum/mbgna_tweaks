@@ -1,25 +1,29 @@
-uuid: 87b35a4e-4f0e-4c6e-a295-434cb77a4386
+uuid: 36b6c284-bb42-4bb8-8566-6db44e9562a8
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.membership
+    - core.entity_view_mode.commerce_product_variation.summary
     - field.field.commerce_product_variation.membership.attribute_membership
     - field.field.commerce_product_variation.membership.license_expiration
     - field.field.commerce_product_variation.membership.license_type
   module:
     - commerce_price
-id: commerce_product_variation.membership.default
+    - field_formatter_class
+id: commerce_product_variation.membership.summary
 targetEntityType: commerce_product_variation
 bundle: membership
-mode: default
+mode: summary
 content:
   attribute_membership:
     type: entity_reference_label
     label: hidden
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 0
     region: content
   price:

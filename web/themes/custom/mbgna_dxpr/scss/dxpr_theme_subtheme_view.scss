@@ -127,3 +127,57 @@
     }
   }
 }
+
+.view-commerce-members {
+  &.view-display-id-block_1 {
+    overflow: hidden;
+
+    .field--type-commerce-price {
+      float: left;
+      white-space: nowrap;
+    }
+
+    .form-actions {
+      float: right;
+      margin: 0;
+
+      .form-submit {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.view-display-id-block_3,
+  &.view-display-id-block_4 {
+    border: 2px solid $black;
+    border-radius: 5px;
+    padding: 30px;
+
+    .field--name-attribute-membership {
+      font-weight: bold;
+    }
+  }
+
+  &.view-display-id-block_3 {
+    .views-row {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+
+      &:last-child {
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &.view-display-id-block_4 {
+    border-color: $blue-secondary;
+    margin-bottom: 30px;
+
+    &, h4 {
+      color: $blue-secondary;
+    }
+  }
+}

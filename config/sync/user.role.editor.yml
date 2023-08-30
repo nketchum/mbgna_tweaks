@@ -30,6 +30,7 @@ dependencies:
     - path
     - system
     - taxonomy
+    - toolbar
     - webform
 id: editor
 label: Editor
@@ -48,6 +49,7 @@ permissions:
   - 'access plant overview'
   - 'access resource overview'
   - 'access taxonomy overview'
+  - 'access toolbar'
   - 'access user contact forms'
   - 'access webform overview'
   - 'administer block content'

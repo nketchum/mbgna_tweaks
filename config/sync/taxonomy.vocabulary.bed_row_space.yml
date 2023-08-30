@@ -1,0 +1,24 @@
+uuid: 861fe23b-bfb4-45d4-af35-46c55509a29e
+langcode: en
+status: true
+dependencies:
+  module:
+    - scheduler
+third_party_settings:
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Bed row space'
+vid: bed_row_space
+description: 'Provides a list of bed row spaces.'
+weight: 0

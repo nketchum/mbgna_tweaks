@@ -1,4 +1,4 @@
-uuid: bff519f4-b592-477b-a03f-2a5710ba283a
+uuid: 96d09053-c80a-485d-8f8d-83906f6a7005
 langcode: en
 status: open
 dependencies: {  }
@@ -8,57 +8,22 @@ close: null
 uid: 1
 template: false
 archive: false
-id: member_contact
-title: 'Member Contact'
+id: cancel_membership
+title: 'Cancel Membership'
 description: ''
 categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text
-    '#text': '<h3>Member Support</h3><p class="larger large">Members can reach out directly for information and help. Fill out the form below and we will respond within 24 business hours.</p>'
+    '#text': '<h3>Cancel Membership</h3><p>You can cancel your annual membership here or by <a href="/form/contact">contacting us</a> to speak with a representative. Cancelled memberships will not be auto-renewed at the end of the annual billing period.</p>'
     '#format': full_html
-  full_name:
-    '#type': webform_name
-    '#title': 'Full name'
-    '#states':
-      invisible:
-        ':input[name="full_name[first]"]':
-          filled: true
-        ':input[name="full_name[last]"]':
-          filled: true
-    '#states_clear': false
-    '#default_value':
-      first: "[current-user:field_realname_first:value] \t"
-      last: '[current-user:field_realname_last:value]'
-      title: ''
-      middle: ''
-      suffix: ''
-      degree: ''
-    '#title__access': false
-    '#first__placeholder': 'First name'
-    '#middle__access': false
-    '#last__placeholder': 'Last name'
-    '#suffix__access': false
-    '#degree__access': false
-  email_address:
-    '#type': email
-    '#title': 'Email address'
-    '#title_display': invisible
-    '#placeholder': 'Email address'
-    '#default_value': '[current-user:mail]'
-  subject:
-    '#type': select
-    '#title': Subject
-    '#title_display': invisible
-    '#options':
-      'General inquiry': 'General inquiry'
-      'Question about membership': 'Question about membership'
-    '#empty_option': 'Select a subject'
-  message:
-    '#type': textarea
-    '#title': Message
-    '#title_display': invisible
-    '#placeholder': 'Message or inquiry'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Cancel ›'
+    '#submit__attributes':
+      class:
+        - btn-danger
 css: ''
 javascript: ''
 settings:
@@ -71,8 +36,8 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
-  form_submit_once: false
+  form_title: source_entity_webform
+  form_submit_once: true
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
@@ -128,7 +93,7 @@ settings:
   autofill: false
   autofill_message: ''
   autofill_excluded_elements: {  }
-  wizard_progress_bar: true
+  wizard_progress_bar: false
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false

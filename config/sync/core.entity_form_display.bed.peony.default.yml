@@ -4,7 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.bed.peony.field_bed_number
+    - field.field.bed.peony.field_display_image
+    - field.field.bed.peony.field_map_jpeg
+    - field.field.bed.peony.field_map_pdf
     - mbgna_bed.bed_type.peony
+  module:
+    - media_library
 id: bed.peony.default
 targetEntityType: bed
 bundle: peony
@@ -17,6 +22,27 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_display_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_map_jpeg:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_map_pdf:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   label:
     type: string_textfield
     weight: 0
@@ -27,7 +53,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 2
+    weight: 5
     region: content
     settings:
       display_label: false

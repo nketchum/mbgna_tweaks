@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.plant.peony.field_3d_view
     - field.field.plant.peony.field_bed
+    - field.field.plant.peony.field_bed_row
+    - field.field.plant.peony.field_bed_row_space
     - field.field.plant.peony.field_breeder
     - field.field.plant.peony.field_collections
     - field.field.plant.peony.field_common_name
@@ -33,6 +35,7 @@ dependencies:
     - hide_revision_field
     - inline_entity_form
     - media_library
+    - path
     - text
 third_party_settings:
   field_group:
@@ -115,7 +118,7 @@ third_party_settings:
         required_fields: false
     group_peony_information:
       children:
-        - field_bed
+        - group_location
         - field_peony_color
         - field_peony_season
         - field_cultivar
@@ -135,6 +138,61 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: false
+    group_location:
+      children:
+        - group_bed
+        - group_bed_details
+      label: Location
+      region: content
+      parent_name: group_peony_information
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+    group_bed_details:
+      children:
+        - field_bed_row
+        - field_bed_row_space
+      label: 'Bed details'
+      region: content
+      parent_name: group_location
+      weight: 22
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+        formatter: closed
+    group_bed:
+      children:
+        - field_bed
+      label: Bed
+      region: content
+      parent_name: group_location
+      weight: 20
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        required_fields: false
+        element: div
+        show_label: '0'
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 id: plant.peony.default
 targetEntityType: plant
 bundle: peony
@@ -159,7 +217,7 @@ content:
         hide_guidelines: '1'
   field_bed:
     type: inline_entity_form_complex
-    weight: 11
+    weight: 21
     region: content
     settings:
       form_mode: default
@@ -175,9 +233,21 @@ content:
       revision: false
       removed_reference: keep
     third_party_settings: {  }
+  field_bed_row:
+    type: options_select
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bed_row_space:
+    type: options_select
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_breeder:
     type: string_textfield
-    weight: 18
+    weight: 30
     region: content
     settings:
       size: 60
@@ -209,7 +279,7 @@ content:
     third_party_settings: {  }
   field_country_of_origin:
     type: inline_entity_form_complex
-    weight: 15
+    weight: 27
     region: content
     settings:
       form_mode: default
@@ -227,7 +297,7 @@ content:
     third_party_settings: {  }
   field_cultivar:
     type: inline_entity_form_complex
-    weight: 14
+    weight: 26
     region: content
     settings:
       form_mode: default
@@ -360,7 +430,7 @@ content:
     third_party_settings: {  }
   field_peony_color:
     type: inline_entity_form_complex
-    weight: 12
+    weight: 24
     region: content
     settings:
       form_mode: default
@@ -378,7 +448,7 @@ content:
     third_party_settings: {  }
   field_peony_season:
     type: inline_entity_form_complex
-    weight: 13
+    weight: 25
     region: content
     settings:
       form_mode: default
@@ -421,14 +491,14 @@ content:
     third_party_settings: {  }
   field_year_acquired:
     type: number
-    weight: 16
+    weight: 28
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_year_introduced:
     type: number
-    weight: 17
+    weight: 29
     region: content
     settings:
       placeholder: ''
@@ -440,6 +510,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
   revision_log:
     type: hide_revision_field_log_widget
