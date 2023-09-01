@@ -1,0 +1,21 @@
+uuid: c82cbd7d-5782-4a4f-a4af-6c424f76fda6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bed_row
+    - paragraphs.paragraphs_type.bed_space
+  module:
+    - options
+id: paragraph.bed_space.field_bed_row
+field_name: field_bed_row
+entity_type: paragraph
+bundle: bed_space
+label: Row
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

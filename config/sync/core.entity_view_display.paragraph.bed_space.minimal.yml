@@ -1,0 +1,31 @@
+uuid: bf7422a3-cbf4-440f-95f0-1a6c3a4d60e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.minimal
+    - field.field.paragraph.bed_space.field_bed_column
+    - field.field.paragraph.bed_space.field_bed_row
+    - paragraphs.paragraphs_type.bed_space
+  module:
+    - options
+id: paragraph.bed_space.minimal
+targetEntityType: paragraph
+bundle: bed_space
+mode: minimal
+content:
+  field_bed_column:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_bed_row:
+    type: list_key
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

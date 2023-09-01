@@ -1,0 +1,39 @@
+uuid: 2a297056-3910-4c78-b395-e0eaa18e8a2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.peony_location.field_bed
+    - field.field.paragraph.peony_location.field_bed_space
+    - paragraphs.paragraphs_type.peony_location
+  module:
+    - entity_reference_revisions
+    - field_formatter_class
+id: paragraph.peony_location.default
+targetEntityType: paragraph
+bundle: peony_location
+mode: default
+content:
+  field_bed:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  field_bed_space:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden: {  }

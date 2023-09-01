@@ -1,0 +1,10 @@
+uuid: 045d8cba-4657-4ecf-a601-6f4d3aecb937
+langcode: en
+status: true
+dependencies: {  }
+id: peony_location
+label: 'Peony location'
+icon_uuid: null
+icon_default: null
+description: 'Provides assignment to a bed and a particular row and column within the bed.'
+behavior_plugins: {  }

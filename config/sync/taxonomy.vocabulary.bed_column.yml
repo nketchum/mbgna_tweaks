@@ -1,4 +1,4 @@
-uuid: 861fe23b-bfb4-45d4-af35-46c55509a29e
+uuid: 11d8d0a6-d153-4d30-a533-7e5b14565923
 langcode: en
 status: true
 dependencies:
@@ -18,7 +18,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Bed row space'
-vid: bed_row_space
-description: 'Provides a list of bed row spaces.'
+name: 'Bed column'
+vid: bed_column
+description: 'Provides a list of bed columns.'
 weight: 0

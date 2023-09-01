@@ -1,0 +1,55 @@
+uuid: 90f684aa-2e69-4c93-93f8-12da30901de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.peony_location.field_bed
+    - field.field.paragraph.peony_location.field_bed_space
+    - paragraphs.paragraphs_type.peony_location
+  module:
+    - inline_entity_form
+    - paragraphs
+id: paragraph.peony_location.default
+targetEntityType: paragraph
+bundle: peony_location
+mode: default
+content:
+  field_bed:
+    type: inline_entity_form_complex
+    weight: 0
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: bed
+      label_plural: beds
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_bed_space:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

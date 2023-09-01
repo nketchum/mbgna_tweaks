@@ -1,15 +1,15 @@
-uuid: 0b7c4473-3c00-41e0-8be1-55ee0db6cd54
+uuid: ac1ff51a-4b4e-4d0b-af4f-2b3b5902971c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.plant.field_bed
+    - field.storage.paragraph.field_bed
     - mbgna_bed.bed_type.peony
-    - mbgna_plant.plant_type.peony
-id: plant.peony.field_bed
+    - paragraphs.paragraphs_type.peony_location
+id: paragraph.peony_location.field_bed
 field_name: field_bed
-entity_type: plant
-bundle: peony
+entity_type: paragraph
+bundle: peony_location
 label: Bed
 description: ''
 required: false

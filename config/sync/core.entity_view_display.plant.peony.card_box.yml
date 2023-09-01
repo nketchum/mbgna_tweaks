@@ -5,9 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.plant.card_box
     - field.field.plant.peony.field_3d_view
-    - field.field.plant.peony.field_bed
-    - field.field.plant.peony.field_bed_row
-    - field.field.plant.peony.field_bed_row_space
     - field.field.plant.peony.field_breeder
     - field.field.plant.peony.field_collections
     - field.field.plant.peony.field_common_name
@@ -21,6 +18,7 @@ dependencies:
     - field.field.plant.peony.field_gallery_images
     - field.field.plant.peony.field_genus
     - field.field.plant.peony.field_legacy_id
+    - field.field.plant.peony.field_locations
     - field.field.plant.peony.field_mbgna_id
     - field.field.plant.peony.field_origin
     - field.field.plant.peony.field_peony_color
@@ -32,61 +30,36 @@ dependencies:
     - image.style.medium_square_ish_rectangle
     - mbgna_plant.plant_type.peony
   module:
-    - blazy
     - field_formatter_class
+    - manage_display
+    - media
 id: plant.peony.card_box
 targetEntityType: plant
 bundle: peony
 mode: card_box
 content:
   field_display_image:
-    type: blazy_media
+    type: media_thumbnail
     label: hidden
     settings:
-      caption:
-        field_media_image_2: '0'
-      class: ''
-      id: ''
-      image: ''
-      link: ''
-      overlay: ''
-      title: ''
-      vanilla: false
-      layout: ''
-      view_mode: default
-      cache: 0
-      skin: ''
-      lazy: ''
-      style: ''
-      background: false
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      loading: ''
-      preload: false
-      responsive_image_style: ''
-      use_theme_field: false
-      box_style: ''
+      image_link: content
       image_style: medium_square_ish_rectangle
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
-      grid: ''
-      grid_medium: ''
-      grid_small: ''
+      image_loading:
+        attribute: lazy
     third_party_settings:
       field_formatter_class:
         class: ''
     weight: 0
     region: content
   field_display_name:
-    type: string
+    type: title
     label: hidden
     settings:
-      link_to_entity: false
+      link_to_entity: true
+      tag: h4
     third_party_settings:
       field_formatter_class:
-        class: main-content-title
+        class: ''
     weight: 1
     region: content
   field_genus:
@@ -120,9 +93,6 @@ content:
 hidden:
   created: true
   field_3d_view: true
-  field_bed: true
-  field_bed_row: true
-  field_bed_row_space: true
   field_breeder: true
   field_collections: true
   field_common_name: true
@@ -133,6 +103,7 @@ hidden:
   field_family: true
   field_gallery_images: true
   field_legacy_id: true
+  field_locations: true
   field_origin: true
   field_peony_color: true
   field_peony_season: true

@@ -1,0 +1,49 @@
+uuid: c0e3cb18-b237-47f1-a35e-c007d3d213c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_locations
+    - mbgna_plant.plant_type.peony
+    - paragraphs.paragraphs_type.peony_location
+  module:
+    - entity_reference_revisions
+id: plant.peony.field_locations
+field_name: field_locations
+entity_type: plant
+bundle: peony
+label: Locations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      peony_location: peony_location
+    negate: 0
+    target_bundles_drag_drop:
+      bed_space:
+        weight: 8
+        enabled: false
+      content_card:
+        weight: 9
+        enabled: false
+      content_section:
+        weight: 10
+        enabled: false
+      peony_location:
+        weight: 11
+        enabled: true
+      peony_location_2:
+        weight: 12
+        enabled: false
+      plant_dimensions:
+        weight: 13
+        enabled: false
+      pricing_rates:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

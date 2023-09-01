@@ -1,0 +1,10 @@
+uuid: e9e29403-09d1-47c6-a990-98f922966673
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_bed
+id: bed.number
+label: Number
+targetEntityType: bed
+cache: true

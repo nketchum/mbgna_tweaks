@@ -1,12 +1,12 @@
-uuid: 97dfd838-0a62-4be0-b747-5f8ecf70a006
+uuid: 85d788bb-8d31-43df-ac37-c904e35d7954
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.bed_row_space
-id: taxonomy_term.bed_row_space.default
+    - taxonomy.vocabulary.bed_column
+id: taxonomy_term.bed_column.default
 targetEntityType: taxonomy_term
-bundle: bed_row_space
+bundle: bed_column
 mode: default
 content:
   name:

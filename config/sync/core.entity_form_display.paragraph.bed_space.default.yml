@@ -1,0 +1,28 @@
+uuid: f6bc5054-cf39-4c2c-9cc3-4001523e4319
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bed_space.field_bed_column
+    - field.field.paragraph.bed_space.field_bed_row
+    - paragraphs.paragraphs_type.bed_space
+id: paragraph.bed_space.default
+targetEntityType: paragraph
+bundle: bed_space
+mode: default
+content:
+  field_bed_column:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bed_row:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,21 @@
+uuid: 91af44d1-37e6-4b8d-91c2-fd8dcacffcd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bed_column
+    - paragraphs.paragraphs_type.bed_space
+  module:
+    - options
+id: paragraph.bed_space.field_bed_column
+field_name: field_bed_column
+entity_type: paragraph
+bundle: bed_space
+label: Column
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

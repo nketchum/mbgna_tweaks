@@ -32,6 +32,16 @@
         {{- drupal_view('bed', 'block_3', bed_type) -}}
       </div>
     </div>
-    {{- drupal_view('bed', 'block_2', bed_id) -}}
+    {{- drupal_view('plant', 'block_3', bed_id) -}}
+
+    {# {{- content.field_spaces -}} #}
+
+    {% if rows %}
+      <div class="bed-spaces"> 
+        {% for row in rows %}
+          <div class="bed-spaces-space">Space</div>
+        {% endfor %}
+      </div>
+    {% endif %}
   {% endif %}
 </article>

@@ -1,23 +1,24 @@
-uuid: 6068e6ba-2ce2-448f-8fc2-3c7438708baa
+uuid: 062effd5-ef9d-42a4-9345-148db98b93d4
 langcode: en
 status: true
 dependencies:
   module:
+    - entity_reference_revisions
     - field_permissions
     - mbgna_plant
-    - taxonomy
+    - paragraphs
 third_party_settings:
   field_permissions:
     permission_type: public
-id: plant.field_bed_row_space
-field_name: field_bed_row_space
+id: plant.field_locations
+field_name: field_locations
 entity_type: plant
-type: entity_reference
+type: entity_reference_revisions
 settings:
-  target_type: taxonomy_term
-module: core
+  target_type: paragraph
+module: entity_reference_revisions
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

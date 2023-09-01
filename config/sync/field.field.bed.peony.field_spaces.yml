@@ -1,0 +1,49 @@
+uuid: 2a5df3d3-c2e0-4b53-a971-75ccd079491f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.bed.field_spaces
+    - mbgna_bed.bed_type.peony
+    - paragraphs.paragraphs_type.bed_space
+  module:
+    - entity_reference_revisions
+id: bed.peony.field_spaces
+field_name: field_spaces
+entity_type: bed
+bundle: peony
+label: 'Bed spaces'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      bed_space: bed_space
+    negate: 0
+    target_bundles_drag_drop:
+      bed_space:
+        weight: 8
+        enabled: true
+      content_card:
+        weight: 9
+        enabled: false
+      content_section:
+        weight: 10
+        enabled: false
+      peony_location:
+        weight: 11
+        enabled: false
+      peony_location_2:
+        weight: 12
+        enabled: false
+      plant_dimensions:
+        weight: 13
+        enabled: false
+      pricing_rates:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

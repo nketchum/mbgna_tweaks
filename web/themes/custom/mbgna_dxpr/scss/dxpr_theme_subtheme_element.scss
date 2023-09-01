@@ -301,3 +301,14 @@ body {
 .region-sidebar-second a {
   color: $blue-secondary;
 }
+
+.az-element.center-block-element {
+  & > *:not(.dxpr-builder-ui) {
+    &,
+    & > img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

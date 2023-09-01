@@ -1,0 +1,10 @@
+uuid: 624f08d2-3c06-413e-96ce-b11f6e6b25ea
+langcode: en
+status: true
+dependencies: {  }
+id: bed_space
+label: 'Bed space'
+icon_uuid: null
+icon_default: null
+description: 'Provides row and column fields that can be assigned to beds.'
+behavior_plugins: {  }

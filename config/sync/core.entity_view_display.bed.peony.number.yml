@@ -1,0 +1,31 @@
+uuid: 25b4c844-c4ad-4c6b-b8f1-c435676bf85e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.bed.number
+    - field.field.bed.peony.field_bed_number
+    - field.field.bed.peony.field_display_image
+    - field.field.bed.peony.field_map_jpeg
+    - field.field.bed.peony.field_map_pdf
+    - field.field.bed.peony.field_spaces
+    - mbgna_bed.bed_type.peony
+id: bed.peony.number
+targetEntityType: bed
+bundle: peony
+mode: number
+content:
+  field_bed_number:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display_image: true
+  field_map_jpeg: true
+  field_map_pdf: true
+  field_spaces: true
+  label: true
+  status: true

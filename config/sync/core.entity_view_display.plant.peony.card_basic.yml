@@ -5,9 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.plant.card_basic
     - field.field.plant.peony.field_3d_view
-    - field.field.plant.peony.field_bed
-    - field.field.plant.peony.field_bed_row
-    - field.field.plant.peony.field_bed_row_space
     - field.field.plant.peony.field_breeder
     - field.field.plant.peony.field_collections
     - field.field.plant.peony.field_common_name
@@ -21,6 +18,7 @@ dependencies:
     - field.field.plant.peony.field_gallery_images
     - field.field.plant.peony.field_genus
     - field.field.plant.peony.field_legacy_id
+    - field.field.plant.peony.field_locations
     - field.field.plant.peony.field_mbgna_id
     - field.field.plant.peony.field_origin
     - field.field.plant.peony.field_peony_color
@@ -44,14 +42,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 16
-    region: content
-  field_bed:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 9
     region: content
   field_breeder:
     type: string
@@ -263,7 +253,6 @@ content:
     region: content
 hidden:
   created: true
-  field_bed_row: true
-  field_bed_row_space: true
+  field_locations: true
   label: true
   uid: true
