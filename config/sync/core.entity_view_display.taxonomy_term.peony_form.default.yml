@@ -1,0 +1,93 @@
+uuid: 33f9fede-f5d3-4542-9b0d-337b3e2cefa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.peony_form.field_display_image
+    - field.field.taxonomy_term.peony_form.field_peony_icon
+    - image.style.medium
+    - image.style.medium_square_ish_rectangle
+    - taxonomy.vocabulary.peony_form
+  module:
+    - blazy
+    - field_formatter_class
+    - manage_display
+    - media
+    - text
+id: taxonomy_term.peony_form.default
+targetEntityType: taxonomy_term
+bundle: peony_form
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_display_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        field_media_image_1: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  field_peony_icon:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 3
+    region: content
+  name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h3
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden: {  }

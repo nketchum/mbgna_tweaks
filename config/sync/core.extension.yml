@@ -104,6 +104,7 @@ module:
   smart_date_recur: 0
   smart_trim: 0
   state_machine: 0
+  svg_image: 0
   syslog: 0
   system: 0
   taxonomy: 0

@@ -1,45 +1,5 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
-.path-plant {
-  .region-content-top {
-    padding-top: 30px;
-    
-    .section-nav {
-      background-color: $maize-primary;
-      padding-bottom: 15px;
-      padding-left: 60px;
-      padding-right: 60px;
-      padding-top: 15px;
-
-      ul.menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0;
-        max-width: 1520px;
-
-        li {
-          margin-bottom: 0;
-
-          a {
-            color: $blue-primary;
-            font-size: 20px;
-            font-weight: bold;
-
-            &::after {
-              border: none;
-              content: '\203A';
-              display: inline-block;
-              margin-left: 0.25em;
-              vertical-align: inherit;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .plant.full {
   .article-body-content-column-main {
     & > .field:first-child {
@@ -69,7 +29,31 @@
   }
 }
 
-.view-plant.view-display-id-block_2 {
+.plant.minimal {
+  background: $blue-secondary;
+
+  .field--name-field-display-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .field--name-field-display-name {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10%;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.view-plant.view-display-id-block_2,
+.view-plant.view-display-id-block_4 {
   .view-content {
     display: flex;
 
@@ -116,7 +100,21 @@
       padding: 11.5px 12px;
     }
   }
-  
+}
+
+.view-plant.view-display-id-block_3 {
+  .view-empty {
+    background: #eee;
+    border-radius: 5px;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: center;
+    letter-spacing: 0.25px;
+    padding: 15% 5%;
+    text-transform: uppercase;
+  }
 }
 
 .view-plant-taxonomies.view-display-id-block_1 {
@@ -135,6 +133,18 @@
   }
 }
 
+.view-plant-taxonomies.view-display-id-block_2 {
+  .view-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: -45px;
+
+    .views-row {
+      padding: 45px;
+    }
+  }
+}
+
 .taxonomy-term.vocabulary-bonsai-style-basic {
   background: $blue-primary;
   border-radius: 10px;
@@ -147,6 +157,34 @@
 
   &, a {
     color: $white;  
+  }
+}
+
+.taxonomy-term.vocabulary-peony-form {
+  .field--name-field-display-image {
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  .field--name-field-peony-icon {
+    float: left;
+    margin: 0 30px 0 0;
+    width: calc(25% - 30px);
+  }
+
+  h3 {
+    float: left;
+    width: calc(75%);
+  }
+
+  .field--name-description {
+    float: left;
+    width: calc(75%);
   }
 }
 

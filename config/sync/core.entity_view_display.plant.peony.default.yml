@@ -14,6 +14,7 @@ dependencies:
     - field.field.plant.peony.field_display_name
     - field.field.plant.peony.field_donor
     - field.field.plant.peony.field_family
+    - field.field.plant.peony.field_floral_form
     - field.field.plant.peony.field_gallery_images
     - field.field.plant.peony.field_genus
     - field.field.plant.peony.field_legacy_id
@@ -44,7 +45,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 23
+    weight: 24
     region: content
   field_breeder:
     type: string
@@ -138,6 +139,16 @@ content:
         class: ''
     weight: 10
     region: content
+  field_floral_form:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 13
+    region: content
   field_gallery_images:
     type: blazy_media
     label: hidden
@@ -194,7 +205,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_locations:
     type: entity_reference_revisions_entity_view
@@ -205,7 +216,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 14
+    weight: 15
     region: content
   field_mbgna_id:
     type: string
@@ -213,7 +224,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_origin:
     type: entity_reference_label
@@ -223,7 +234,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 16
+    weight: 17
     region: content
   field_peony_color:
     type: entity_reference_label
@@ -243,7 +254,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 17
+    weight: 18
     region: content
   field_species:
     type: entity_reference_label
@@ -253,7 +264,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 18
+    weight: 19
     region: content
   field_video:
     type: entity_reference_entity_view
@@ -262,7 +273,7 @@ content:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 20
+    weight: 21
     region: content
   field_year_acquired:
     type: number_integer
@@ -271,7 +282,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 21
+    weight: 22
     region: content
   field_year_introduced:
     type: number_integer
@@ -280,7 +291,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 22
+    weight: 23
     region: content
   status:
     type: boolean
@@ -292,7 +303,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 19
+    weight: 20
     region: content
 hidden:
   created: true

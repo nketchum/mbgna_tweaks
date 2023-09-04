@@ -1,0 +1,129 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+.bed.full {
+  @media (min-width: 1920px) {
+    margin-top: 30px;
+  }
+
+  .bed-spaces {
+    height: 1px; // Hack so that .views-element-container can be 100% tall in a table cell.
+    margin: -30px;
+    width: calc(100% + 60px);
+
+    .bed-column {
+      width: percentage(1/6);
+      padding: 30px;
+      text-align: center;
+      height: 100%;
+
+      & > .views-element-container {
+        background: #eee;
+        border-radius: 5px;
+        overflow: hidden;
+
+        &, & > .view, & > .view > .view-empty {
+          height: 100%;  
+        }
+      }
+
+      .peony.minimal,
+      .view-empty {
+        aspect-ratio: 1;
+      }
+    }
+  }
+
+  .bed-spaces-arrow {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .wrapper-bed-hero {
+    background-color: $maize-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+  }
+
+  .bed-hero-container {
+    margin-bottom: 90px;
+
+    .bed-maps {
+      a {
+        display: block;
+        margin: 0 0 10px;
+      }
+    }  
+  }
+
+  .bed-hero {
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .bed-map-hint-wrapper {
+    align-items: center;
+    display: flex;
+  }
+
+  .bed-map-hint {
+    background: #eee;
+    border-radius: 10px;
+    color: #666;
+    font-size: 14px;
+    margin-left: 90px;
+    padding: 30px 30px 30px 40px;
+    text-indent: -1.35em;
+  }
+  
+}
+
+.view-bed.view-display-id-block_3 {
+  padding: 15px 0 15px 90px;
+
+  .view-header, .view-footer {
+    text-align: center;
+
+    p {
+      margin: 15px 0;
+    }
+  }
+
+  .bed-spaces-arrow-down {
+    margin-top: -5px; // font line height is weird here
+  }
+
+  .view-content {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    .views-row {
+      flex-basis: percentage(1/3);
+      padding: 5px;
+
+      &:nth-child(1),
+      &:nth-child(3),
+      &:nth-child(26) {
+        margin-right: percentage(1/3);
+      }
+
+      .views-field-field-bed-number .field-content {
+        background: $blue-secondary;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      a {
+        color: $white;
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 40px;
+      }
+    }
+  }
+}

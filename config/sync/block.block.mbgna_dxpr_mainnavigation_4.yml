@@ -1,0 +1,45 @@
+uuid: a03798d7-13c1-4109-b551-4e0ecd694263
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - block_visibility_conditions_node
+    - menu_block
+    - system
+  theme:
+    - mbgna_dxpr
+third_party_settings:
+  block_class:
+    classes: section-nav
+id: mbgna_dxpr_mainnavigation_4
+theme: mbgna_dxpr
+region: content_top
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main:menu_link_content:beff5835-c977-4e68-b84c-09fd7c517354'
+  suggestion: main
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/bed*'

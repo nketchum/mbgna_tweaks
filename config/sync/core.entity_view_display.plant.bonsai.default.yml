@@ -124,12 +124,43 @@ content:
     weight: 6
     region: content
   field_display_image:
-    type: entity_reference_entity_view
+    type: blazy_media
     label: hidden
     settings:
+      caption:
+        field_media_image_1: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
       view_mode: default
-      link: false
-    third_party_settings: {  }
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: display_image_large
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 7
     region: content
   field_display_name:

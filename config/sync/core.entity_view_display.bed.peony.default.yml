@@ -8,10 +8,12 @@ dependencies:
     - field.field.bed.peony.field_map_jpeg
     - field.field.bed.peony.field_map_pdf
     - field.field.bed.peony.field_spaces
+    - image.style.large
     - mbgna_bed.bed_type.peony
   module:
     - entity_reference_revisions
     - field_formatter_class
+    - media
 id: bed.peony.default
 targetEntityType: bed
 bundle: peony
@@ -25,12 +27,16 @@ content:
     weight: 2
     region: content
   field_display_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: ''
     weight: 1
     region: content
   field_map_jpeg:

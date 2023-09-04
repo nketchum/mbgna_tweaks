@@ -134,6 +134,7 @@
         "drupal/scheduler": "^2.0",
         "drupal/smart_date": "^4.0",
         "drupal/smart_trim": "^2.1",
+        "drupal/svg_image": "^3.0",
         "drupal/tb_megamenu": "^3.0@alpha",
         "drupal/token_custom": "^1.0@alpha",
         "drupal/token_custom_plus": "^2.0",

@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a plant entity.
+ *
+ * This template is used when viewing a canonical plant page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_plant()
+ */
+#}
+{%
+  set classes = [
+    'plant',
+    bundle|clean_class,
+    view_mode ? view_mode|clean_class,
+    status ? 'is-published' : 'is-unpublished',
+    'clearfix',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      {{- content.field_display_image -}}
+      {{- content.field_display_name -}}
+    </div>
+  </div>
+</article>

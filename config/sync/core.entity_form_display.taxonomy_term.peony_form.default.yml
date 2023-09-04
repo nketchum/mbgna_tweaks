@@ -1,0 +1,52 @@
+uuid: fa511b65-c337-4199-a9a4-c94887f7efe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.peony_form.field_display_image
+    - field.field.taxonomy_term.peony_form.field_peony_icon
+    - taxonomy.vocabulary.peony_form
+  module:
+    - media_library
+    - text
+id: taxonomy_term.peony_form.default
+targetEntityType: taxonomy_term
+bundle: peony_form
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_display_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_peony_icon:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  path: true
+  publish_on: true
+  revision_log_message: true
+  status: true
+  unpublish_on: true

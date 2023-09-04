@@ -1,0 +1,29 @@
+uuid: cdf39f75-9948-4b63-b977-dbcd1ec85779
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_peony_icon
+    - media.type.image
+    - taxonomy.vocabulary.peony_form
+id: taxonomy_term.peony_form.field_peony_icon
+field_name: field_peony_icon
+entity_type: taxonomy_term
+bundle: peony_form
+label: 'Peony icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

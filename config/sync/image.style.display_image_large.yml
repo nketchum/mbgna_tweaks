@@ -1,0 +1,15 @@
+uuid: c0819e1c-6f49-46cc-84db-fc7bf84b55c8
+langcode: en
+status: true
+dependencies: {  }
+name: display_image_large
+label: 'Display image (large)'
+effects:
+  5980900c-b6b3-468e-92ae-c7a6c6cb4ec7:
+    uuid: 5980900c-b6b3-468e-92ae-c7a6c6cb4ec7
+    id: image_scale
+    weight: 1
+    data:
+      width: 1520
+      height: null
+      upscale: false

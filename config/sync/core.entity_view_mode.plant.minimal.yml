@@ -1,0 +1,10 @@
+uuid: 54d80aa5-a275-4bc9-b4b6-ad8710229c8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_plant
+id: plant.minimal
+label: Minimal
+targetEntityType: plant
+cache: true

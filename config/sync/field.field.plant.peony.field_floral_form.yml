@@ -1,0 +1,29 @@
+uuid: f6bd3803-b381-4843-985d-a3e1dba41581
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.plant.field_floral_form
+    - mbgna_plant.plant_type.peony
+    - taxonomy.vocabulary.peony_form
+id: plant.peony.field_floral_form
+field_name: field_floral_form
+entity_type: plant
+bundle: peony
+label: 'Floral form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      peony_form: peony_form
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

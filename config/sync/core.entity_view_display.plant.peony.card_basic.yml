@@ -15,6 +15,7 @@ dependencies:
     - field.field.plant.peony.field_display_name
     - field.field.plant.peony.field_donor
     - field.field.plant.peony.field_family
+    - field.field.plant.peony.field_floral_form
     - field.field.plant.peony.field_gallery_images
     - field.field.plant.peony.field_genus
     - field.field.plant.peony.field_legacy_id
@@ -253,6 +254,7 @@ content:
     region: content
 hidden:
   created: true
+  field_floral_form: true
   field_locations: true
   label: true
   uid: true

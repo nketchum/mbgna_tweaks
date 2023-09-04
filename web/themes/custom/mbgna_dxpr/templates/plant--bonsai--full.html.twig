@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-6 article-body-content-column article-body-content-column-right article-body-content-column-main">
-          {% if content.field_3d_view %}
+          {% if content.field_3d_view|render|striptags|trim %}
             {{- content.field_3d_view -}}
           {% else %}
             {{- content.field_display_image -}}

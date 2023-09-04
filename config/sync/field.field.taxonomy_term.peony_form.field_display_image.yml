@@ -1,0 +1,29 @@
+uuid: a87f5e7f-8243-4521-b65c-a8bdb19ffa38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_display_image
+    - media.type.peony_image
+    - taxonomy.vocabulary.peony_form
+id: taxonomy_term.peony_form.field_display_image
+field_name: field_display_image
+entity_type: taxonomy_term
+bundle: peony_form
+label: 'Display image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      peony_image: peony_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

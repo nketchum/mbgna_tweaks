@@ -1,0 +1,257 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a bed entity.
+ *
+ * This template is used when viewing a canonical bed page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_bed()
+ */
+#}
+{%
+  set classes = [
+    'bed',
+    bundle|clean_class,
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+
+{% if display_image_url %}
+    {%
+      set display_image_styles = '
+        background-image: url(' ~ display_image_url  ~ ');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+      '
+    %}
+{% endif %}
+
+<article{{ attributes.addClass(classes) }}>
+  {% if content %}
+    <div class="row bed-hero-container">
+      <div class="col-md-7 col-lg-7 bed-hero" style="{{ display_image_styles }}">
+        <div class="wrapper wrapper-bed-hero">
+          <h1 class="main-content-title">{{ bed_type_label }} Bed {{ bed_id }}</h1>
+          <div class="bed-maps">
+            {% if content.field_map_pdf %}
+              <a href="{{ content.field_map_pdf|render|striptags|trim }}" class="btn btn-secondary">PDF Map &rsaquo;</a>
+            {% endif %}
+            {% if content.field_map_jpeg %}
+              <a href="{{ content.field_map_jpeg|render|striptags|trim }}" class="btn btn-secondary">JPEG Map &rsaquo;</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        {{- drupal_view('bed', 'block_3', bed_type_label) -}}
+      </div>
+      <div class="col-md-2 col-lg-2 bed-map-hint-wrapper">
+        <div class="bed-map-hint">&larr; Click a map number to view the peonies for that bed.</div>
+      </div>
+    </div>
+
+    {# Aways render the entire grid for every bed. Bed spaces that do not
+      exist will simple be empty table cells. #}
+    <table class="bed-spaces bed-spaces-{{ bed_type }}">
+      {% if bed_spaces.rows['1'] %}
+        <tr class="bed-row bed-row-1">
+          <td class="bed-column bed-column-a">
+            {# First determine if this bed even has a space. If the space doesn't
+            exist, do nothing and leave a blank area. If there is a space here, the 
+            view will attempt to find a plant for it. If a plant is found, it will
+            be displayed in this space. If a plant is not found, this space will
+            display the "no results found" text in the view. #}
+            {% if bed_spaces.rows['1']['A'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '1', 'A') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-b">
+            {% if bed_spaces.rows['1']['B'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '1', 'B') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-c">
+            {% if bed_spaces.rows['1']['C'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '1', 'C') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-d">
+            {% if bed_spaces.rows['1']['D'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '1', 'D') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-e">
+            {% if bed_spaces.rows['1']['E'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '1', 'E') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-f">
+            {% if bed_spaces.rows['1']['F'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '1', 'F') -}}
+            {% endif %}
+          </td>
+        </tr>
+      {% endif %}
+      {% if bed_spaces.rows['2'] %}
+        <tr class="bed-row bed-row-2">
+          <td class="bed-column bed-column-a">
+            {% if bed_spaces.rows['2']['A'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '2', 'A') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-b">
+            {% if bed_spaces.rows['2']['B'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '2', 'B') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-c">
+            {% if bed_spaces.rows['2']['C'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '2', 'C') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-d">
+            {% if bed_spaces.rows['2']['D'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '2', 'D') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-e">
+            {% if bed_spaces.rows['2']['E'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '2', 'E') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-f">
+            {% if bed_spaces.rows['2']['F'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '2', 'F') -}}
+            {% endif %}
+          </td>
+        </tr>
+      {% endif %}
+      {% if bed_spaces.rows['3'] %} 
+        <tr class="bed-row bed-row-3">
+          <td class="bed-column bed-column-a">
+            {% if bed_spaces.rows['3']['A'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '3', 'A') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-b">
+            {% if bed_spaces.rows['3']['B'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '3', 'B') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-c">
+            {% if bed_spaces.rows['3']['C'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '3', 'C') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-d">
+            {% if bed_spaces.rows['3']['D'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '3', 'D') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-e">
+            {% if bed_spaces.rows['3']['E'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '3', 'E') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-f">
+            {% if bed_spaces.rows['3']['F'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '3', 'F') -}}
+            {% endif %}
+          </td>
+        </tr>
+      {% endif %}
+      {% if bed_spaces.rows['4'] %} 
+        <tr class="bed-row bed-row-4">
+          <td class="bed-column bed-column-a">
+            {% if bed_spaces.rows['4']['A'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '4', 'A') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-b">
+            {% if bed_spaces.rows['4']['B'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '4', 'B') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-c">
+            {% if bed_spaces.rows['4']['C'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '4', 'C') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-d">
+            {% if bed_spaces.rows['4']['D'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '4', 'D') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-e">
+            {% if bed_spaces.rows['4']['E'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '4', 'E') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-f">
+            {% if bed_spaces.rows['4']['F'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '4', 'F') -}}
+            {% endif %}
+          </td>
+        </tr>
+      {% endif %}
+      {% if bed_spaces.rows['5'] %} 
+        <tr class="bed-row bed-row-5">
+          <td class="bed-column bed-column-a">
+            {% if bed_spaces.rows['5']['A'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '5', 'A') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-b">
+            {% if bed_spaces.rows['5']['B'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '5', 'B') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-c">
+            {% if bed_spaces.rows['5']['C'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '5', 'C') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-d">
+            {% if bed_spaces.rows['5']['D'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '5', 'D') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-e">
+            {% if bed_spaces.rows['5']['E'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '5', 'E') -}}
+            {% endif %}
+          </td>
+          <td class="bed-column bed-column-f">
+            {% if bed_spaces.rows['5']['F'] %} 
+              {{- drupal_view('plant', 'block_3', bed_id, '5', 'F') -}}
+            {% endif %}
+          </td>
+        </tr>
+      {% endif %}
+    </table>
+
+{#     {% if bed_spaces.rows %}
+      <div class="bed-spaces">
+        {% for row_ind, row_val in bed_spaces.rows %}
+          <div class="bed-row">
+            {% for col_ind, col_val in row_val %}
+              <span class="bed-column">
+                {{ row_ind }}, {{ col_ind }}
+              </span>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %} #}
+  {% endif %}
+</article>

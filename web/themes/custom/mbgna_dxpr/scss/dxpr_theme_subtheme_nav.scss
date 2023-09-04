@@ -501,3 +501,41 @@
     }
   }
 }
+
+.region-content-top {
+  padding-top: 30px;
+  
+  .section-nav {
+    background-color: $maize-primary;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 15px;
+
+    ul.menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0;
+      max-width: 1520px;
+
+      li {
+        margin-bottom: 0;
+
+        a {
+          color: $blue-primary;
+          font-size: 20px;
+          font-weight: bold;
+
+          &::after {
+            border: none;
+            content: '\203A';
+            display: inline-block;
+            margin-left: 0.25em;
+            vertical-align: inherit;
+          }
+        }
+      }
+    }
+  }
+}
