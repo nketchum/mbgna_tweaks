@@ -56,14 +56,18 @@
 .view-plant.view-display-id-block_4 {
   .view-content {
     display: flex;
+    flex-wrap: wrap;
+    margin: -30px;
 
     .views-row {
-      margin-bottom: 30px;
+      padding: 30px;
     }
   }
 
   .views-exposed-form {
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
 
     .form--inline {
       display: flex;
@@ -92,8 +96,7 @@
 
     .form-item,
     .form-actions {
-      margin-right: 15px;
-      margin-top: 0;
+      margin: 0 15px 0 0;
     }
 
     .form-submit {
