@@ -611,7 +611,7 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: null
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -666,7 +666,7 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: common_name
-          type: cshs
+          type: select
           hierarchy: false
           limit: true
           error_message: false
@@ -686,12 +686,12 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: null
+          value: {  }
           group: 1
           exposed: true
           expose:
             operator_id: field_style_bonsai_target_id_op
-            label: Style
+            label: ''
             description: ''
             use_operator: false
             operator: field_style_bonsai_target_id_op
@@ -741,7 +741,7 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: bonsai_style_basic
-          type: cshs
+          type: select
           hierarchy: false
           limit: true
           error_message: false
@@ -761,7 +761,7 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: null
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -816,7 +816,7 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: genus
-          type: cshs
+          type: select
           hierarchy: false
           limit: true
           error_message: false
@@ -836,7 +836,7 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: null
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -891,7 +891,7 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: species
-          type: cshs
+          type: select
           hierarchy: false
           limit: true
           error_message: false
@@ -902,73 +902,6 @@ display:
           hierarchy_depth: 0
           required_depth: 0
           none_label: '- Species -'
-        field_year_acquired_value:
-          id: field_year_acquired_value
-          table: plant__field_year_acquired
-          field: field_year_acquired_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          operator: between
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_year_acquired_value_op
-            label: ''
-            description: ''
-            use_operator: false
-            operator: field_year_acquired_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: year-acquired
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              author: '0'
-              collections_donor: '0'
-              editor: '0'
-              fellow: '0'
-              fulfillment: '0'
-              intern: '0'
-              author_plant: '0'
-              editor_plant: '0'
-              viewer_plant: '0'
-              staff: '0'
-              super_administrator: '0'
-              working_group_member: '0'
-              member_student: '0'
-              member_individual: '0'
-              member_couple: '0'
-              member_family_tree: '0'
-              member_sustaining: '0'
-              member_sponsor: '0'
-              member_benefactor: '0'
-              member_directors_circle: '0'
-              volunteer_individual: '0'
-              volunteer_couple: '0'
-            min_placeholder: 'Earliest year aquired'
-            max_placeholder: 'Latest year aquired'
-            placeholder: 'Year Acquired'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -1423,7 +1356,7 @@ display:
             offset: false
             offset_label: Offset
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Apply
           reset_button: false
@@ -1432,52 +1365,6 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: 'Select any filter and click on Apply to see results'
-          text_input_required_format: minimal_html
-          bef:
-            general:
-              autosubmit: false
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
-              autosubmit_hide: false
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              secondary_open: false
-              reset_button_always_show: false
-            filter:
-              field_floral_form_target_id:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_peony_season_target_id:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_cultivar_target_id:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_country_of_origin_target_id:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
       cache:
         type: tag
         options: {  }
