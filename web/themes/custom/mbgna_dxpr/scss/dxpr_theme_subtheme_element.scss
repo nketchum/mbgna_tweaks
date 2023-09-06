@@ -313,6 +313,16 @@ body {
   }
 }
 
+.az-element.center-inline-block-element {
+  &,
+  & > *:not(.dxpr-builder-ui) {
+    &,
+    & > img {
+      text-align: center;
+    }
+  }
+}
+
 .inline-element {
   display: inline;
 }
