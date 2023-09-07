@@ -202,9 +202,9 @@ a,
 
   &.btn-info {
     &, &:active {
-      background: #ddd;
-      border-color: #ddd;
-      color: #333 !important;
+      background: $darker-gray;
+      border-color: $darker-gray;
+      color: #fff !important;
     }
   }
 
