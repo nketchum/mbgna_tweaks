@@ -48,7 +48,7 @@ services:
     hosts:
       - database
   node:
-    type: node
+    type: node:18
     build:
       - npm install
     globals:
