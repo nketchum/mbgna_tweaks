@@ -2,18 +2,104 @@ uuid: c247006b-fc6f-40eb-80ab-85b43c5d6a5f
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.code
+    - filter.format.full_html
+    - filter.format.minimal_html
+    - media.type.image_bonsai
+    - media.type.peony_image
+    - media.type.plant_image
+    - taxonomy.vocabulary.bed_column
+    - taxonomy.vocabulary.bed_row
+    - taxonomy.vocabulary.bonsai_style_additional
+    - taxonomy.vocabulary.bonsai_style_basic
+    - taxonomy.vocabulary.bonsai_style_tag
+    - taxonomy.vocabulary.collection_item_status
+    - taxonomy.vocabulary.common_name
+    - taxonomy.vocabulary.countries
+    - taxonomy.vocabulary.cultivar
+    - taxonomy.vocabulary.family
+    - taxonomy.vocabulary.genus
+    - taxonomy.vocabulary.leaf_duration
+    - taxonomy.vocabulary.location
+    - taxonomy.vocabulary.peony_color
+    - taxonomy.vocabulary.peony_form
+    - taxonomy.vocabulary.peony_season
+    - taxonomy.vocabulary.plant_origin
+    - taxonomy.vocabulary.species
   module:
+    - comment
     - field_permissions
     - file
+    - filter
+    - mbgna_bed
     - mbgna_plant
+    - media
+    - node
+    - system
+    - taxonomy
+    - toolbar
 id: editor_plant
 label: 'Plant database editor'
 weight: -1
 is_admin: null
 permissions:
+  - 'access administration pages'
+  - 'access bed overview'
+  - 'access comments'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access plant overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create image_bonsai media'
+  - 'create peony_image media'
   - 'create plant'
+  - 'create plant_image media'
+  - 'create terms in bed_column'
+  - 'create terms in bed_row'
+  - 'create terms in bonsai_style_additional'
+  - 'create terms in bonsai_style_basic'
+  - 'create terms in bonsai_style_tag'
+  - 'create terms in collection_item_status'
+  - 'create terms in common_name'
+  - 'create terms in countries'
+  - 'create terms in cultivar'
+  - 'create terms in family'
+  - 'create terms in genus'
+  - 'create terms in leaf_duration'
+  - 'create terms in location'
+  - 'create terms in peony_color'
+  - 'create terms in peony_form'
+  - 'create terms in peony_season'
+  - 'create terms in plant_origin'
+  - 'create terms in species'
+  - 'delete any image_bonsai media'
+  - 'delete any peony_image media'
+  - 'delete any plant_image media'
   - 'delete own files'
   - 'delete plant'
+  - 'delete terms in bed_column'
+  - 'delete terms in bed_row'
+  - 'delete terms in bonsai_style_additional'
+  - 'delete terms in bonsai_style_basic'
+  - 'delete terms in bonsai_style_tag'
+  - 'delete terms in collection_item_status'
+  - 'delete terms in common_name'
+  - 'delete terms in countries'
+  - 'delete terms in cultivar'
+  - 'delete terms in family'
+  - 'delete terms in genus'
+  - 'delete terms in leaf_duration'
+  - 'delete terms in location'
+  - 'delete terms in peony_color'
+  - 'delete terms in peony_form'
+  - 'delete terms in peony_season'
+  - 'delete terms in plant_origin'
+  - 'delete terms in species'
+  - 'edit any image_bonsai media'
+  - 'edit any peony_image media'
+  - 'edit any plant_image media'
   - 'edit field_dimensions'
   - 'edit field_donor'
   - 'edit field_last_repot'
@@ -28,7 +114,30 @@ permissions:
   - 'edit field_trunks'
   - 'edit field_year_acquired'
   - 'edit field_year_started'
+  - 'edit own comments'
   - 'edit plant'
+  - 'edit terms in bed_column'
+  - 'edit terms in bed_row'
+  - 'edit terms in bonsai_style_additional'
+  - 'edit terms in bonsai_style_basic'
+  - 'edit terms in bonsai_style_tag'
+  - 'edit terms in collection_item_status'
+  - 'edit terms in common_name'
+  - 'edit terms in countries'
+  - 'edit terms in cultivar'
+  - 'edit terms in family'
+  - 'edit terms in genus'
+  - 'edit terms in leaf_duration'
+  - 'edit terms in location'
+  - 'edit terms in peony_color'
+  - 'edit terms in peony_form'
+  - 'edit terms in peony_season'
+  - 'edit terms in plant_origin'
+  - 'edit terms in species'
+  - 'post comments'
+  - 'use text format code'
+  - 'use text format full_html'
+  - 'use text format minimal_html'
   - 'view field_dimensions'
   - 'view field_donor'
   - 'view field_last_repot'
@@ -43,3 +152,6 @@ permissions:
   - 'view field_trunks'
   - 'view field_year_acquired'
   - 'view field_year_started'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

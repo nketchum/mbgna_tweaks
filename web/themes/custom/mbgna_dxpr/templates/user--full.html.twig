@@ -48,19 +48,25 @@
       </div>
       <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
-          <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
-            {{- drupal_view('posts', 'block_2') -}}
-          </div>
-          <div class="boxed-field boxed-field-light">
-            {{- drupal_view('events', 'block_4') -}}
-          </div>
+          {% if drupal_view_result('posts', 'block_2') is not empty %}
+            <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
+              {{- drupal_view('posts', 'block_2') -}}
+            </div>
+          {% endif %}
+          {% if drupal_view_result('events', 'block_4') is not empty %}
+            <div class="boxed-field boxed-field-light">
+              {{- drupal_view('events', 'block_4') -}}
+            </div>
+          {% endif %}
         {% endif %}
       </div>
       <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
-          <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
-            {{- drupal_view('resources', 'block_2') -}}
-          </div>
+          {% if drupal_view_result('resources', 'block_2') is not empty %}
+            <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
+              {{- drupal_view('resources', 'block_2') -}}
+            </div>
+          {% endif %}
         {% endif %}
       </div>
     </div>
@@ -71,16 +77,15 @@
         <div class="col col-first col-level1 col-lg-6 col-md-6">
           <div class="boxed-field boxed-field-light">
             {{ drupal_view('commerce_members', 'block_4') }}
-            {{ drupal_view('commerce_members', 'block_3') }}
           </div>
         </div>
         <div class="col col-last col-level1 col-lg-6 col-md-6">
-          <div class="boxed-field boxed-field-light">
-            {{ drupal_view('commerce_members', 'block_1') }}
-          </div>
-          <div class="boxed-field boxed-field-light">
-            {{ drupal_entity('webform', 'cancel_membership') }}
-          </div>
+          {% if drupal_view_result('commerce_members', 'block_1') is not empty %}
+            <div class="boxed-field boxed-field-light">
+              {{ drupal_view('commerce_members', 'block_1') }}
+              {{ drupal_view('commerce_members', 'block_3') }}
+            </div>
+          {% endif %}
         </div>
       </div>
     {% endif %}

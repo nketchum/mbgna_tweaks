@@ -7,16 +7,7 @@ dependencies:
     - core.entity_view_mode.commerce_product_variation.summary
     - core.entity_view_mode.commerce_product_variation.teaser
     - field.storage.commerce_product_variation.attribute_membership
-    - user.role.editor
-    - user.role.member_benefactor
-    - user.role.member_couple
-    - user.role.member_directors_circle
-    - user.role.member_family_tree
-    - user.role.member_individual
-    - user.role.member_sponsor
-    - user.role.member_student
-    - user.role.member_sustaining
-    - user.role.super_administrator
+    - user.role.authenticated
   module:
     - commerce
     - commerce_license
@@ -126,18 +117,7 @@ display:
       cache:
         type: tag
         options: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: true
-          content: '<p>Nothing to display.</p>'
-          tokenize: false
+      empty: {  }
       sorts:
         product_id:
           id: product_id
@@ -278,6 +258,7 @@ display:
           content: '<h3>Change My Membership</h3>'
           tokenize: false
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -409,6 +390,7 @@ display:
           content: '<h3>Membership Levels</h3>'
           tokenize: false
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -483,16 +465,7 @@ display:
         type: role
         options:
           role:
-            editor: editor
-            super_administrator: super_administrator
-            member_student: member_student
-            member_individual: member_individual
-            member_couple: member_couple
-            member_family_tree: member_family_tree
-            member_sustaining: member_sustaining
-            member_sponsor: member_sponsor
-            member_benefactor: member_benefactor
-            member_directors_circle: member_directors_circle
+            authenticated: authenticated
       cache:
         type: none
         options: {  }
@@ -649,6 +622,7 @@ display:
           content: '<h4>Memberships (Available)</h4>'
           tokenize: false
       display_extenders: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1102,19 +1076,22 @@ display:
         type: role
         options:
           role:
-            editor: editor
-            super_administrator: super_administrator
-            member_student: member_student
-            member_individual: member_individual
-            member_couple: member_couple
-            member_family_tree: member_family_tree
-            member_sustaining: member_sustaining
-            member_sponsor: member_sponsor
-            member_benefactor: member_benefactor
-            member_directors_circle: member_directors_circle
+            authenticated: authenticated
       cache:
         type: none
         options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: "<p>Not a current member.</p>\r\n<p><a href=\"/user/register\" class=\"btn btn-secondary\">Become a member</a></p>"
+          tokenize: false
       sorts:
         price__number:
           id: price__number
@@ -1222,6 +1199,7 @@ display:
           separator: ''
           hide_empty: false
       defaults:
+        empty: false
         access: false
         cache: false
         style: false
@@ -1280,6 +1258,7 @@ display:
           content: '<h4>{{ attribute_membership }} (Current)</h4>'
           tokenize: true
       display_extenders: {  }
+      block_hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:

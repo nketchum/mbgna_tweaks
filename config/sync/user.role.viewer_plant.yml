@@ -3,14 +3,28 @@ langcode: en
 status: true
 dependencies:
   module:
+    - comment
     - field_permissions
     - file
+    - mbgna_bed
+    - mbgna_plant
+    - node
+    - system
+    - toolbar
 id: viewer_plant
 label: 'Plant database viewer'
 weight: 0
 is_admin: null
 permissions:
+  - 'access administration pages'
+  - 'access bed overview'
+  - 'access comments'
+  - 'access content overview'
+  - 'access plant overview'
+  - 'access toolbar'
   - 'delete own files'
+  - 'edit own comments'
+  - 'post comments'
   - 'view field_dimensions'
   - 'view field_donor'
   - 'view field_last_repot'
@@ -25,3 +39,4 @@ permissions:
   - 'view field_trunks'
   - 'view field_year_acquired'
   - 'view field_year_started'
+  - 'view the administration theme'
