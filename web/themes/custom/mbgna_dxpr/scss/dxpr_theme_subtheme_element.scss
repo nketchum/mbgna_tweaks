@@ -326,3 +326,29 @@ body {
 .inline-element {
   display: inline;
 }
+
+.btn-compound {
+  transition: 0.3s;
+  
+  &:hover {
+    background-color: $blue-primary !important;
+  }
+  & > .az-ctnr {
+    & > .az-element {
+      & > p {
+        & > a {
+          display: block;
+          padding: 15px 15px 0;
+        }
+      }
+
+      &:last-child {
+        & > p {
+          & > a {
+            padding: 0 15px 15px;
+          }
+        }
+      }
+    }  
+  }
+}
