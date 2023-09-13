@@ -1,22 +1,22 @@
 name: m-sandbox-01
 recipe: drupal9
-excludes:
-  - node_modules
-  - vendor
-  - web/core
-  - web/libraries
-  - web/modules/contrib
-  - web/profiles
-  - web/themes/contrib
-  - "!web/modules/contrib/mbgna_arcgis"
-  - "!web/modules/contrib/mbgna_bed"
-  - "!web/modules/contrib/mbgna_facility"
-  - "!web/modules/contrib/mbgna_organization"
-  - "!web/modules/contrib/mbgna_plant"
-  - "!web/modules/contrib/mbgna_resource"
-  - "!web/modules/contrib/mbgna_tweaks"
-  - "web/themes/custom/mbgna/node_modules"
-  - "web/themes/custom/mbgna_dxpr/node_modules"
+# excludes:
+  # - node_modules
+  # - vendor
+  # - web/core
+  # - web/libraries
+  # - web/modules/contrib
+  # - web/profiles
+  # - web/themes/contrib
+  # - "!web/modules/contrib/mbgna_arcgis"
+  # - "!web/modules/contrib/mbgna_bed"
+  # - "!web/modules/contrib/mbgna_facility"
+  # - "!web/modules/contrib/mbgna_organization"
+  # - "!web/modules/contrib/mbgna_plant"
+  # - "!web/modules/contrib/mbgna_resource"
+  # - "!web/modules/contrib/mbgna_tweaks"
+  # - "web/themes/custom/mbgna/node_modules"
+  # - "web/themes/custom/mbgna_dxpr/node_modules"
 config:
   composer_version: '2.2.12'
   config:
@@ -48,7 +48,7 @@ services:
     hosts:
       - database
   node:
-    type: node:18
+    type: node
     build:
       - npm install
     globals:

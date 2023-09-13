@@ -255,7 +255,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<h3>Change My Membership</h3>'
+          content: '<h3>Modify Membership</h3>'
           tokenize: false
       display_extenders: {  }
       block_hide_empty: true
@@ -568,6 +568,7 @@ display:
       defaults:
         access: false
         cache: false
+        query: true
         relationships: false
         fields: false
         sorts: false
@@ -619,7 +620,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<h4>Memberships (Available)</h4>'
+          content: '<h3>Available Memberships</h3>'
           tokenize: false
       display_extenders: {  }
       block_hide_empty: true
@@ -1090,7 +1091,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<p>Not a current member.</p>\r\n<p><a href=\"/user/register\" class=\"btn btn-secondary\">Become a member</a></p>"
+          content: '<p>Not a member.</p>'
           tokenize: false
       sorts:
         price__number:
@@ -1254,8 +1255,8 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: text_custom
-          empty: false
-          content: '<h4>{{ attribute_membership }} (Current)</h4>'
+          empty: true
+          content: "<h3>Current Membership</h3>\r\n{{ attribute_membership }}"
           tokenize: true
       display_extenders: {  }
       block_hide_empty: false

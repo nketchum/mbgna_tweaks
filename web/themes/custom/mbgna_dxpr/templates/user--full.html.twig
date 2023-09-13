@@ -76,66 +76,67 @@
         <h2>Membership Information</h2>
         <div class="col col-first col-level1 col-lg-6 col-md-6">
           <div class="boxed-field boxed-field-light">
-            {{ drupal_view('commerce_members', 'block_4') }}
+            {{ drupal_view('membership', 'block_1') }}
+            {# {{ drupal_view('commerce_members', 'block_4') }} #}
+            {# {{ drupal_view('commerce_members', 'block_1') }} #}
+            {# {{ drupal_view('commerce_members', 'block_3') }} #}
           </div>
         </div>
         <div class="col col-last col-level1 col-lg-6 col-md-6">
-          {% if drupal_view_result('commerce_members', 'block_1') is not empty %}
+          <div class="boxed-field boxed-field-light">
+            {{ drupal_entity('webform', 'member_contact') }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% 
+    if drupal_view_result('content_profile', 'block_1', user.id, 'news') is not empty or
+       drupal_view_result('content_profile', 'block_1', user.id, 'story') is not empty or
+       drupal_view_result('content_profile', 'block_1', user.id, 'press-release') is not empty
+    %}
+      <hr class="landing-section">
+      <div class="row dashboard-row dashboard-publications">
+        {% if privileged %}
+          <h2>My Publications</h2>
+        {% endif %}
+        <div class="col col-first col-level1 col-lg-4 col-md-4">
+          {% if drupal_view_result('content_profile', 'block_1', user.id, 'news') is not empty %}
             <div class="boxed-field boxed-field-light">
-              {{ drupal_view('commerce_members', 'block_1') }}
-              {{ drupal_view('commerce_members', 'block_3') }}
+              <h3>{% if privileged %}My {% endif %}News</h3>
+              {{- drupal_view('content_profile', 'block_1', user.id, 'news') -}}
+            </div>
+          {% endif %}
+        </div>
+        <div class="col col-level1 col-lg-4 col-md-4">
+          {% if drupal_view_result('content_profile', 'block_1', user.id, 'story') is not empty %}
+            <div class="boxed-field boxed-field-light">
+              <h3>{% if privileged %}My {% endif %}Stories</h3>
+              {{- drupal_view('content_profile', 'block_1', user.id, 'story') -}}
+            </div>
+          {% endif %}
+        </div>
+        <div class="col col-last col-level1 col-lg-4 col-md-4">
+          {% if drupal_view_result('content_profile', 'block_1', user.id, 'press-release') is not empty %}
+            <div class="boxed-field boxed-field-light">
+              <h3>{% if privileged %}My {% endif %}Press Releases</h3>
+              {{- drupal_view('content_profile', 'block_1', user.id, 'press-release') -}}
             </div>
           {% endif %}
         </div>
       </div>
     {% endif %}
-    <hr class="landing-section">
-    <div class="row dashboard-row dashboard-publications">
-      {% if privileged %}
-        <h2>My Publications</h2>
-      {% endif %}
-      <div class="col col-first col-level1 col-lg-4 col-md-4">
-        {% if drupal_view_result('content_profile', 'block_1', user.id, 'news') is not empty %}
-          <div class="boxed-field boxed-field-light">
-            <h3>{% if privileged %}My {% endif %}News</h3>
-            {{- drupal_view('content_profile', 'block_1', user.id, 'news') -}}
-          </div>
-        {% endif %}
-      </div>
-      <div class="col col-level1 col-lg-4 col-md-4">
-        {% if drupal_view_result('content_profile', 'block_1', user.id, 'story') is not empty %}
-          <div class="boxed-field boxed-field-light">
-            <h3>{% if privileged %}My {% endif %}Stories</h3>
-            {{- drupal_view('content_profile', 'block_1', user.id, 'story') -}}
-          </div>
-        {% endif %}
-      </div>
-      <div class="col col-last col-level1 col-lg-4 col-md-4">
-        {% if drupal_view_result('content_profile', 'block_1', user.id, 'press-release') is not empty %}
-          <div class="boxed-field boxed-field-light">
-            <h3>{% if privileged %}My {% endif %}Press Releases</h3>
-            {{- drupal_view('content_profile', 'block_1', user.id, 'press-release') -}}
-          </div>
-        {% endif %}
-      </div>
-    </div>
     {% if privileged %}
-    <hr class="landing-section">
-    <div class="row dashboard-row dashboard-manage">
-      <h2>My Content</h2>
-      <div class="col col-first col-level1 col-lg-8 col-md-8">
-        <div class="boxed-field boxed-field-light">
-          {{- drupal_view('content_dashboard', 'block_1') -}}
-        </div>
-      </div>
-      <div class="col col-last col-level1 col-lg-4 col-md-4">
-      {% if privileged %}
-        <div class="boxed-field boxed-field-light">
-          {{ drupal_entity('webform', 'member_contact') }}
+      {% if drupal_view_result('content_dashboard', 'block_1') is not empty %}
+        <hr class="landing-section">
+        <div class="row dashboard-row dashboard-manage">
+          <h2>My Content</h2>
+          <div class="col col-first col-level1 col-lg-12 col-md-12">
+            <div class="boxed-field boxed-field-light">
+              {{- drupal_view('content_dashboard', 'block_1') -}}
+            </div>
+          </div>
         </div>
       {% endif %}
-      </div>
-    </div>
     {% endif %}
   {% endif %}
 </article>

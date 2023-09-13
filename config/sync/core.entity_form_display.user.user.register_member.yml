@@ -1,0 +1,92 @@
+uuid: f609b1aa-7d38-484b-ad37-e3d90979707c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register_member
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_photo
+    - field.field.user.user.field_realname_first
+    - field.field.user.user.field_realname_last
+    - field.field.user.user.field_realname_middle
+    - field.field.user.user.field_realname_prefix
+    - field.field.user.user.field_realname_suffix
+    - field.field.user.user.field_telephone_primary
+    - field.field.user.user.field_title
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_account_information:
+      children:
+        - field_realname_first
+        - field_realname_last
+        - account
+      label: 'Create new account'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: false
+id: user.user.register_member
+targetEntityType: user
+bundle: user
+mode: register_member
+content:
+  account:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  collections_donor_profiles:
+    type: profile_form
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+  field_realname_first:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_realname_last:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  commerce_remote_id: true
+  contact: true
+  customer_profiles: true
+  field_bio: true
+  field_organization: true
+  field_photo: true
+  field_realname_middle: true
+  field_realname_prefix: true
+  field_realname_suffix: true
+  field_telephone_primary: true
+  field_title: true
+  language: true
+  path: true
+  timezone: true

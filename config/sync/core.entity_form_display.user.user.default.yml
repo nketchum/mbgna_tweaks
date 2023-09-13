@@ -17,7 +17,6 @@ dependencies:
   module:
     - field_group
     - media_library
-    - profile
     - telephone
     - text
     - user
@@ -31,7 +30,7 @@ third_party_settings:
       label: 'Account properties'
       region: content
       parent_name: ''
-      weight: 1
+      weight: 0
       format_type: tabs
       format_settings:
         classes: ''
@@ -70,23 +69,6 @@ third_party_settings:
         formatter: open
         description: ''
         required_fields: false
-    group_customer_information:
-      children:
-        - customer_profiles
-      label: 'Customer information'
-      region: content
-      parent_name: group_account_properties
-      weight: 22
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        formatter: closed
-        description: ''
-        required_fields: false
-        direction: vertical
-        width_breakpoint: 640
     group_account_information_items:
       children:
         - group_name
@@ -153,13 +135,6 @@ content:
   collections_donor_profiles:
     type: profile_form
     weight: 2
-    region: content
-    settings:
-      form_mode: default
-    third_party_settings: {  }
-  customer_profiles:
-    type: profile_form
-    weight: 23
     region: content
     settings:
       form_mode: default
@@ -248,5 +223,6 @@ content:
 hidden:
   commerce_remote_id: true
   contact: true
+  customer_profiles: true
   language: true
   path: true

@@ -131,6 +131,7 @@
 .view-commerce-members {
   &.view-display-id-block_1 {
     overflow: hidden;
+    margin-bottom: 30px;
 
     .field--type-commerce-price {
       float: left;
@@ -147,6 +148,7 @@
     }
   }
 
+  &.view-display-id-block_1,
   &.view-display-id-block_3,
   &.view-display-id-block_4 {
     border: 2px solid $black;
@@ -173,11 +175,6 @@
   }
 
   &.view-display-id-block_4 {
-    border-color: $blue-secondary;
     margin-bottom: 30px;
-
-    &, h4 {
-      color: $blue-secondary;
-    }
   }
 }
