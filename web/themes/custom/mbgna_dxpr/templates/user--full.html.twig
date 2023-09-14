@@ -91,7 +91,7 @@
     {% endif %}
     {% 
     if drupal_view_result('content_profile', 'block_1', user.id, 'news') is not empty or
-       drupal_view_result('content_profile', 'block_1', user.id, 'story') is not empty or
+       drupal_view_result('content_profile', 'block_1', user.id, 'blog') is not empty or
        drupal_view_result('content_profile', 'block_1', user.id, 'press-release') is not empty
     %}
       <hr class="landing-section">
@@ -108,10 +108,10 @@
           {% endif %}
         </div>
         <div class="col col-level1 col-lg-4 col-md-4">
-          {% if drupal_view_result('content_profile', 'block_1', user.id, 'story') is not empty %}
+          {% if drupal_view_result('content_profile', 'block_1', user.id, 'blog') is not empty %}
             <div class="boxed-field boxed-field-light">
               <h3>{% if privileged %}My {% endif %}Stories</h3>
-              {{- drupal_view('content_profile', 'block_1', user.id, 'story') -}}
+              {{- drupal_view('content_profile', 'block_1', user.id, 'blog') -}}
             </div>
           {% endif %}
         </div>

@@ -26,6 +26,12 @@
   }
 }
 
+.region-sidebar-first {
+  & > .block {
+    margin-bottom: 60px;
+  }
+}
+
 #block-mbgna-dxpr-contactussidebar,
 #block-mbgna-dxpr-contactussidebaradditional {
   padding-top: 1em;

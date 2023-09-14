@@ -13,7 +13,7 @@ dependencies:
 id: mbgna_dxpr_contactussidebaradditional
 theme: mbgna_dxpr
 region: sidebar_first
-weight: 0
+weight: -16
 provider: null
 plugin: 'block_content:8f37540f-c930-4224-82a1-af6c567828a4'
 settings:

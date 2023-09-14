@@ -13,13 +13,13 @@ dependencies:
 id: mbgna_dxpr_mainnavigation_2
 theme: mbgna_dxpr
 region: sidebar_first
-weight: 0
+weight: -12
 provider: null
 plugin: 'menu_block:main'
 settings:
   id: 'menu_block:main'
   label: 'Main navigation (rentals section)'
-  label_display: visible
+  label_display: '0'
   provider: menu_block
   follow: true
   follow_parent: active

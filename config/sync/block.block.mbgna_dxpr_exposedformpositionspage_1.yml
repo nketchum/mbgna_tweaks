@@ -13,7 +13,7 @@ dependencies:
 id: mbgna_dxpr_exposedformpositionspage_1
 theme: mbgna_dxpr
 region: sidebar_first
-weight: 0
+weight: -14
 provider: null
 plugin: 'views_exposed_filter_block:positions-page_1'
 settings:
