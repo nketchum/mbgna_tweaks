@@ -1,0 +1,12 @@
+uuid: a4fb17af-b3e0-48eb-873f-b78f49653c68
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_content_minimal_
+label: 'Sidebar content (minimal)'
+template: |-
+  <div class="az-element az-section az-element--controls-top-left az-element--controls-spacer" style="" data-dxpr-builder-libraries="" data-az-id="gb0bub0mx9" data-azat-pid="gb0bub0mx9" id="gb0bub0mx9" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gb2214lrnh" data-azat-pid="gb2214lrnh" id="gb2214lrnh" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-an_infinite="no" data-azat-box_model="000000" data-azcnt="true"><h4>Support our gardens</h4><p>We need your help to keep our gardens blooming for years to come.</p></div><div class="az-element az-button az-button-content" data-az-id="gbn9hf1joz" data-azat-pid="gbn9hf1joz" id="gbn9hf1joz" data-azb="az_button" data-az-human-readable="Button" data-az-human-readable-en="Button" data-azat-title="Make a gift ›" data-azat-link="https://leadersandbest.umich.edu/find/#!/give/basket/fund/799369" data-azat-link_target="_blank" data-azat-type="primary" data-azat-block="no" data-azat-outlined="no" data-azat-box_model="000000" data-azat-style="margin-top:15px;"><a href="https://leadersandbest.umich.edu/find/#!/give/basket/fund/799369" class="az-button-content btn btn-primary" style="margin-top:15px;" target="_blank" role="button">
+      Make a gift ›
+  </a></div></div></div>
+uid: 1
+global: true

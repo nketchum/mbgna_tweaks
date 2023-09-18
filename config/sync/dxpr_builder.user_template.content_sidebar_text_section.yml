@@ -1,9 +1,0 @@
-uuid: d4dc97e6-6947-4309-a199-5d469ff04794
-langcode: en
-status: true
-dependencies: {  }
-id: content_sidebar_text_section
-label: 'Content sidebar text section'
-template: '<div class="az-element az-section az-element--controls-top-left az-element--controls-spacer" style="margin-bottom:30px;" data-dxpr-builder-libraries="" data-az-id="gbi9jbxeho" data-azat-pid="gbi9jbxeho" id="gbi9jbxeho" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-box_model="000000" data-azat-style="margin-bottom:30px;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbnfj46nuk" data-azat-pid="gbnfj46nuk" id="gbnfj46nuk" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-an_infinite="no" data-azat-box_model="000000" data-azcnt="true"><h5>In Memory of Sandy Hicks</h5><p class="small"><em>The Alexandra Hicks Herb Knot Garden honors “Sandy” Hicks (1934-1991)</em></p><p class="small">We recognize her keen interest in herb gardening, culinary arts, healing plants and her enthusiasm in sharing these interests with others.</p><p class="small">Sandy was a past president of the Herb Study Group at the Gardens. Gifts donated in memory of Sandy helped fund the creation of this garden.</p></div></div></div>'
-uid: 1
-global: true

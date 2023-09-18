@@ -1,0 +1,12 @@
+uuid: 59aa1107-04c6-4657-a846-3c71d8f71435
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_content_highlighted_
+label: 'Sidebar content (highlighted)'
+template: |-
+  <div class="az-element az-section az-color-style az-element--controls-top-left" style="margin-bottom:30px;padding-top:30px;padding-bottom:30px;padding-left:30px;padding-right:30px; color:#ffffff;border-radius:10px;background-color:#2f65a7;" data-dxpr-builder-libraries="" data-az-id="gbrvcetjdm" data-azat-pid="gbjx75e53t" id="gbjx75e53t" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-box_model="000000" data-azat-style="margin-bottom:30px;padding-top:30px;padding-bottom:30px;padding-left:30px;padding-right:30px; color:#ffffff;border-radius:10px;background-color:#2f65a7;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbmpoi1h64" data-azat-pid="gb4z9wgzgi" id="gb4z9wgzgi" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-an_infinite="no" data-azat-box_model="000000" data-azcnt="true"><h3>More Information</h3><p class="large">To schedule a virtual field trip or for more information contact Youth Education Coordinator Liz Glynn.</p></div><div class="az-element az-button az-button-content" data-az-id="gb4vx1u812" data-azat-pid="gbyajfsupq" id="gbyajfsupq" data-azb="az_button" data-az-human-readable="Button" data-az-human-readable-en="Button" data-azat-title="Inquire to book ›" data-azat-link="#" data-azat-link_target="_self" data-azat-type="primary" data-azat-block="no" data-azat-outlined="no" data-azat-box_model="000000" data-azat-style="margin-top:15px;"><a href="#" class="az-button-content btn btn-primary" style="margin-top:15px;" target="_self" role="button">
+      Inquire to book ›
+  </a></div></div></div>
+uid: 1
+global: true

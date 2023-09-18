@@ -1,9 +1,0 @@
-uuid: 4b9fcb8a-035a-4b1d-afdc-5395821a7d8d
-langcode: en
-status: true
-dependencies: {  }
-id: landing_lead_paragraph_section
-label: 'Landing lead paragraph section'
-template: '<div class="az-element az-section container-fluid-wrapper az-element--controls-top-left hover-style-gbj0ytynmg" style="margin-top:10%;margin-bottom:10%;font-size:NaN;border-radius:NaN;opacity:NaN;" data-dxpr-builder-libraries="" data-az-id="gbj0ytynmg" data-azat-pid="gb4obe45vx" id="gb4obe45vx" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="yes" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-parallax_speed="0" data-azat-parallax_mode="fixed" data-azat-parallax_mobile_disable="no" data-azat-an_infinite="no" data-azat-box_model="000000" data-azat-style="margin-top:10%;margin-bottom:10%;font-size:NaN;border-radius:NaN;opacity:NaN;" data-azat-hover_style="font-size:NaN !important;border-radius:NaN !important;opacity:NaN !important;"><div class="az-ctnr container-fluid" data-azcnt="true"><div class="az-element az-text landing-text-blurb" style="" data-az-id="gbs859dype" data-azat-pid="gbfnjvjgfh" id="gbfnjvjgfh" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-an_infinite="no" data-azat-box_model="000000" data-azat-el_class="landing-text-blurb" data-azcnt="true"><h2 style="text-align: center;">Some heading goes here</h2><p style="text-align: center;" class="largest">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p></div></div><div title="Add Section Below" class="control add-section btn btn-default glyphicon glyphicon-plus-sign"></div></div>'
-uid: 1
-global: true

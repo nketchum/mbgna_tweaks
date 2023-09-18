@@ -72,8 +72,8 @@ header > div {
   // that should line up with the logo.
   // 1920+60+60 = 2040
   @media (max-width: 2040px) {
-    padding-left: 60px !important;
-    padding-right: 60px !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
   }
 }
 
@@ -207,7 +207,7 @@ header > div {
 
     & > li > a {
       color: $white;
-      font-size: 16px;
+      font-size: 18px;
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -410,7 +410,7 @@ header > div {
 
   .main-container > .row {
     & > aside:first-child {
-      padding-right: 5%;
+      padding-right: 10%;
     }
 
     & > aside:last-child {
@@ -516,13 +516,6 @@ header > div {
 // .banner-wide {
 //   margin-top: 30px; // TODO this should only apply to wide banners at the very top of the page.
 // }
-
-@media (max-width: 1920px) {
-  .banner-wide {
-    margin-top: 0 !important;
-    border-radius: 0 !important;
-  }
-}
 
 @media (max-width: 767px) {
   .banner-wide {
@@ -1042,12 +1035,10 @@ header > div {
 
 .banner-wide-container,
 .slideshow-container {
-  border-radius: 15px !important;
   overflow: hidden;
 
   @media (max-width: 1919px) {
     border-radius: 0 !important;
-    margin-top: -30px !important;
   }
 
   @media (min-width: 1920px) {
@@ -1256,7 +1247,6 @@ article.full.content-main {
 
 .is-not-dxpr-layout {
   .simple-header {
-    margin-bottom: 3%;
 
     .banner-thin {
       padding: 30px 0;
@@ -1277,10 +1267,11 @@ article.full.content-main {
 
 .tabs-top {
   .nav-tabs {
+    border-bottom: none;
     justify-content: flex-start !important;
 
     li {
-      margin-right: 30px !important;
+      margin-right: 15px !important;
 
       a {
         font-size: 22px;
@@ -1307,7 +1298,7 @@ article.full.content-main {
   overflow: hidden;
 }
 
- #member-level-benefits {
+#member-level-benefits {
   tr:first-child {
     td {
       &:first-child {
@@ -1326,5 +1317,4 @@ article.full.content-main {
       }
     }
   }
-
- }
+}

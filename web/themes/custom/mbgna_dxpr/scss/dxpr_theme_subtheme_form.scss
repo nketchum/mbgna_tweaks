@@ -6,6 +6,13 @@ form {
   }
 }
 
+.webform-submission-form {
+  .form-item,
+  .form-actions {
+    margin: 0;
+  }
+}
+
 .prefooter-form-newsletter {
   form {
     display: flex;  

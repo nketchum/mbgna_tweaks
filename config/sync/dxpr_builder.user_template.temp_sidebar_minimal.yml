@@ -1,0 +1,12 @@
+uuid: e705b359-8d65-4a76-a2fa-e2191fd951a0
+langcode: en
+status: true
+dependencies: {  }
+id: temp_sidebar_minimal
+label: 'temp sidebar minimal'
+template: |-
+  <div class="az-element az-section az-element--controls-top-left az-element--controls-spacer" style="" data-dxpr-builder-libraries="" data-az-id="gbfyuredmm" data-azat-pid="gbfyuredmm" id="gbfyuredmm" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gb7a0lboru" data-azat-pid="gb7a0lboru" id="gb7a0lboru" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-an_infinite="no" data-azat-box_model="000000" data-azcnt="true"><h4>Support our trails</h4><p>We need your support to keep our many trails beautiful and safe for many years to come.</p></div><div class="az-element az-button az-button-content" data-az-id="gbc6n2ml4j" data-azat-pid="gbc6n2ml4j" id="gbc6n2ml4j" data-azb="az_button" data-az-human-readable="Button" data-az-human-readable-en="Button" data-azat-title="Make a gift ›" data-azat-link="https://leadersandbest.umich.edu/find/#!/give/basket/fund/799369" data-azat-link_target="_blank" data-azat-type="primary" data-azat-block="no" data-azat-outlined="no" data-azat-box_model="000000" data-azat-style="margin-top:15px;"><a href="https://leadersandbest.umich.edu/find/#!/give/basket/fund/799369" class="az-button-content btn btn-primary" style="margin-top:15px;" target="_blank" role="button">
+      Make a gift ›
+  </a></div></div></div>
+uid: 1
+global: true

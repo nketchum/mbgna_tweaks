@@ -1,0 +1,12 @@
+uuid: 3a198979-212a-42fb-881e-dcf10186b360
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_content_light_shade_
+label: 'Sidebar content (light shade)'
+template: |-
+  <div class="az-element az-section az-element--controls-top-left az-element--controls-spacer" style="margin-bottom:30px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px;padding-top:30px;padding-bottom:30px;padding-left:30px;padding-right:30px;border-radius:10px;background-color:#eeeeee;" data-dxpr-builder-libraries="" data-az-id="gb40704266" data-azat-pid="gb4iaiiunq" id="gb4iaiiunq" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-parallax_speed="0" data-azat-parallax_mode="fixed" data-azat-parallax_mobile_disable="no" data-azat-an_infinite="no" data-azat-box_model="000000" data-azat-style="margin-bottom:30px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px;padding-top:30px;padding-bottom:30px;padding-left:30px;padding-right:30px;border-radius:10px;background-color:#eeeeee;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbryfbvpuz" data-azat-pid="gbs174o0zj" id="gbs174o0zj" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-box_model="000000" data-azcnt="true"><h3>Activity<br type="_moz"></h3><p>Go on an exciting nature exploration adventure with this guided activity sheet.<br type="_moz"></p></div><div class="az-element az-button az-button-content" data-az-id="gbh0fihh7x" data-azat-pid="gbh0fihh7x" id="gbh0fihh7x" data-azb="az_button" data-az-human-readable="Button" data-az-human-readable-en="Button" data-azat-title="Download ›" data-azat-link="https://m-sandbox-01.lndo.site/-files-directory-/2023-08/Sue-Reichert-Discovery-Trail-Nature-Exploration-Guide.pdf" data-azat-link_target="_self" data-azat-type="primary" data-azat-block="no" data-azat-outlined="no" data-azat-size="btn-sm" data-azat-style="margin-top:15px;" style="position: relative; left: 0px; top: 0px;" data-azat-box_model="000000"><a href="https://m-sandbox-01.lndo.site/-files-directory-/2023-08/Sue-Reichert-Discovery-Trail-Nature-Exploration-Guide.pdf" class="az-button-content btn btn-sm btn-primary" style="margin-top:15px;" target="_self" role="button">
+      Download ›
+  </a></div></div></div>
+uid: 1
+global: true
