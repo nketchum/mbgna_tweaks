@@ -1,0 +1,6 @@
+services:
+  mbgna_tweaks.redirect_subscriber:
+    class: Drupal\mbgna_tweaks\EventSubscriber\PositionRedirectSubscriber
+    arguments: ['@current_route_match', '@entity_type.manager']
+    tags:
+      - { name: 'event_subscriber' }

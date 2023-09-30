@@ -1,12 +1,177 @@
 <?php
 
+use Drupal\user\Entity\Role;
+use Drupal\views\ViewExecutable;
+
 /**
  * @file
  * Primary module hooks for MBGNA Tweaks module.
  */
+
+/**
+ * Implements hook_form_alter()
+ */
 function mbgna_tweaks_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Get current route.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  // See if there's a commerce form on the account page.
+  // if ($route_name == 'entity.user.canonical' && substr($form_id, 0, -2) == 'commerce_order_item_add_to_cart_form_commerce_product') {
+  //   // Get viewed account.
+  //   $account = \Drupal::routeMatch()->getParameter('user');
+
+  //   // There's no easy way to check for user role licenses, so we have to 
+  //   // perform a direct query on the database.
+  //   $database = \Drupal::database();
+  //   $query = $database->query("
+  //     SELECT cl.license_id, clr.license_role_target_id, cpa.name
+  //     FROM {commerce_license} as cl 
+  //     INNER JOIN {commerce_license__license_role} as clr on cl.license_id = clr.entity_id
+  //     INNER JOIN {commerce_product_variation__attribute_membership} as cpv on cl.product_variation = cpv.entity_id
+  //     INNER JOIN {commerce_product_attribute_value_field_data} as cpa on cpv.attribute_membership_target_id = cpa.attribute_value_id
+  //     WHERE cl.uid = :uid AND cl.state = 'active'", [':uid' => $account->id(),]
+  //   );
+  //   $results = $query->fetchAll();
+
+  //   // Nicely store the purchased membership roles.
+  //   $active_memberships = [];
+  //   if ($results) {
+  //     foreach($results as $result) {
+  //       $active_memberships[$result->license_role_target_id] = $result->name;
+  //     }
+  //   }
+
+    // See if the commerce form is the change membership level form.
+    // if (array_key_exists('attribute_membership', $form['purchased_entity']['widget'][0]['attributes'])) {
+    //   $roles = Role::loadMultiple($account->getRoles());
+    //   // Get the original set of options. When unaltered below, this list is simply re-inserted
+    //   // back into the select field.
+    //   $options = $form['purchased_entity']['widget'][0]['attributes']['attribute_membership']['#options'];
+    //   // Check each role to see if it's included in the membership list.
+    //   foreach ($roles as $role) {
+    //     foreach ($options as $key => $value) {
+    //       // ASSUMPTION: the role label and the option value are perfectly identical.
+    //       // If account already has a role in
+    //       // the list of nodes, remove the current
+    //       // role so that the list of nodes represent
+    //       // roles the user does not have.
+    //       if ($role->label() == $value) {
+    //         // Only unset options where the user has both a role
+    //         // AND also has an active license membership for that role.
+    //         // This is a far-out edge case.
+    //         if (array_key_exists($role->id(), $active_memberships)) {
+    //           unset($options[$key]);  
+    //         }
+    //       }
+    //     }
+    //   }
+    //   // Re-insert the select options.
+    //   $form['purchased_entity']['widget'][0]['attributes']['attribute_membership']['#options'] = $options;
+    //   // Customize the form further.
+    //   $form['quantity']['widget'][0]['value']['#type'] = 'hidden';
+    //   $form['actions']['submit']['#submit'][] = '_redirect_to_checkout';
+    //   // dsm($form);
+    //   $form['actions']['submit']['#value'] = t('Continue &rsaquo;');
+    // }
+  // }
+
+  // Set better select default labels.
   if ($form['#id'] == 'views-exposed-form-events-page-1' && isset($form['date_wrapper'])) {
-    $form['date_wrapper']['date_wrapper']['date']['min']['#title'] = t('Starts between');
-    $form['date_wrapper']['date_wrapper']['date']['max']['#title'] = t('and');
+    if (isset($form['categories'])) {
+      $form['categories']['#options']['All'] = t('Select a category...');
+    }
+    if (isset($form['location'])) {
+      $form['location']['#options']['All'] = t('Select a location...');
+    }
+    if (isset($form['date_wrapper'])) {
+      $form['date_wrapper']['date_wrapper']['date']['min']['#title'] = '';
+      $form['date_wrapper']['date_wrapper']['date']['max']['#title'] = '';
+    }
+  }
+
+  // Remove min/max labels from date range fields.
+  if ($form['#id'] == 'views-exposed-form-positions-page-1') {
+    if (isset($form['posted_wrapper'])) {
+      $form['posted_wrapper']['posted_wrapper']['posted']['min']['#title'] = '';
+      $form['posted_wrapper']['posted_wrapper']['posted']['max']['#title'] = '';
+    }
   }
 }
+
+// @see hook_form_alter().
+function _redirect_to_checkout(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $cart_id = $form_state->get('cart_id');
+  $url = \Drupal\Core\Url::fromRoute('commerce_checkout.form',
+    ['commerce_order' => $cart_id]
+  );
+  $form_state->setRedirectUrl($url);
+}
+
+/**
+ * Implements hook_library_info_alter()
+ */
+function mbgna_tweaks_library_info_alter(&$libraries, $extension) {
+  // Add frontend theme to ckeditor5 iframe on the backend.
+  if ($extension === 'ckeditor5') {
+    // $libraries['internal.drupal.ckeditor5.stylesheets']['css']['theme']['/themes/custom/mbgna_dxpr/css/dxpr_theme_subtheme.css'] = [];
+    $libraries['internal.drupal.ckeditor5.stylesheets']['css']['theme']['/modules/contrib/mbgna_tweaks/css/ckeditor5.css'] = [];
+  }
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter()
+ */
+function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, \Drupal\Core\Cache\RefinableCacheableDependencyInterface &$cacheability) {
+  if ($route_name == 'entity.user.canonical') {
+    $data['tabs'][0]['entity.user.canonical']['#link']['title'] = t('My dashboard');
+
+    $data['tabs'][0]['entity.user.edit_form']['#weight'] = -9;
+    $data['tabs'][0]['entity.user.edit_form']['#link']['title'] = t('My profile');
+
+    $data['tabs'][0]['profile.user_page:customer']['#weight'] = -8;
+    $data['tabs'][0]['profile.user_page:customer']['#link']['title'] = t('Purchasing account');
+
+    $data['tabs'][0]['entity.commerce_payment_method.collection']['#weight'] = -7;
+    $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['title'] = t('Payment methods');
+
+    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#weight'] = -6;
+    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#link']['title'] = t('Past orders');
+
+    // $data['tabs'][0]['entity.webform_submission.user']['#weight'] = -5;
+    // $data['tabs'][0]['entity.webform_submission.user']['#link']['title'] = t('Form submissions');
+    unset($data['tabs'][0]['entity.webform_submission.user']);
+
+    $data['tabs'][0]['entity.user.contact_form']['#weight'] = -4;
+    $data['tabs'][0]['entity.user.contact_form']['#link']['title'] = t('Contact');
+
+    $data['tabs'][0]['devel.entities:user.devel_tab']['#weight'] = -3;
+    $data['tabs'][0]['devel.entities:user.devel_tab']['#link']['title'] = t('Devel');
+
+    // The tab we're adding is dependent on a user's access to add content.
+    $cacheability
+      ->addCacheContexts([
+      'user.permissions',
+    ]);
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+// function mbgna_tweaks_views_pre_render(ViewExecutable $view) {
+//   // Ensure unique entities..
+//   if ($view->storage->get('id') === 'commerce_members') {
+//     $i = 0;
+//     $products = [];
+//     foreach ($view->result as $result) {
+//       $entity = $result->_entity;
+//       $id = $entity->id();
+//       dpm($result);
+//       if (in_array($id, $products)) {
+//         unset($view->result[$i]);
+//       } else {
+//         $products[] = $entity->id()->value;
+//       }
+//       $i++;
+//     }
+//   }
+// }
