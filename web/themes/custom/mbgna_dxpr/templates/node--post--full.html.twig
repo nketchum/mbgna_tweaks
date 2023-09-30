@@ -25,7 +25,7 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  {% if content.field_dxpr_drag_drop %}
+  {% if content.field_dxpr_drag_drop|render|striptags|trim %}
     {{ content.field_dxpr_drag_drop }}
   {% else %}
     <div class="standard-layout simple-header container-fluid-wrapper">
