@@ -42,8 +42,8 @@ function mbgna_dxpr_preprocess_html(&$variables) {
 
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     // Node has an embedded dxpr node reference.
-    if ($node->hasField('field_dxpr_page')) {
-      $dxpr_page = $node->get('field_dxpr_page');
+    if ($node->hasField('field_dxpr_drag_drop')) {
+      $dxpr_page = $node->get('field_dxpr_drag_drop');
       if (is_array($dxpr_page->getValue()) && is_numeric($dxpr_page->getValue()[0]['target_id'])) {
         $variables['dxpr_body_class'] = 'embeds-dxpr-layout';
       }

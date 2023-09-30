@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8767487f327faa264f782cb28ec3c0c",
+    "content-hash": "35dd05643dd53d38186a1170ba26a4b6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4262,17 +4262,17 @@
         },
         {
             "name": "drupal/dxpr_builder",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dxpr_builder.git",
-                "reference": "2.3.0"
+                "reference": "2.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dxpr_builder-2.3.0.zip",
-                "reference": "2.3.0",
-                "shasum": "43c6915acb51043093ff41da53853607d46162d6"
+                "url": "https://ftp.drupal.org/files/projects/dxpr_builder-2.4.0.zip",
+                "reference": "2.4.0",
+                "shasum": "93ca6a3881a69b3e59771fbe3ed050efd161083e"
             },
             "require": {
                 "drupal/core": ">=9.3"
@@ -4287,8 +4287,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.3.0",
-                    "datestamp": "1692432837",
+                    "version": "2.4.0",
+                    "datestamp": "1695146145",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5272,6 +5272,51 @@
             }
         },
         {
+            "name": "drupal/instagram_feed_by_username",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/instagram_feed_by_username.git",
+                "reference": "1.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/instagram_feed_by_username-1.1.2.zip",
+                "reference": "1.1.2",
+                "shasum": "bb330c4b2a69187d5bf2c630026858b4525764e4"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.2",
+                    "datestamp": "1678865007",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vivek kumar",
+                    "homepage": "https://www.drupal.org/user/3665529",
+                    "email": "vivekkumar.lnweb@gmail.com"
+                }
+            ],
+            "description": "Provides Instagram user's recent feed posts by their username",
+            "homepage": "https://www.drupal.org/project/instagram_feed_by_username",
+            "support": {
+                "source": "https://git.drupalcode.org/project/instagram_feed_by_username"
+            }
+        },
+        {
             "name": "drupal/interval",
             "version": "1.12.0",
             "source": {
@@ -6185,6 +6230,65 @@
             "homepage": "https://www.drupal.org/project/nodeaccess",
             "support": {
                 "source": "https://git.drupalcode.org/project/nodeaccess"
+            }
+        },
+        {
+            "name": "drupal/office_hours",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/office_hours.git",
+                "reference": "8.x-1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "5a797e47bc91770ca897aa27767b8614895b1a68"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.11",
+                    "datestamp": "1686759510",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Voskuilen",
+                    "homepage": "https://www.drupal.org/user/591042",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikl",
+                    "homepage": "https://www.drupal.org/user/58679"
+                },
+                {
+                    "name": "Ozeuss",
+                    "homepage": "https://www.drupal.org/user/167994"
+                },
+                {
+                    "name": "skwashd",
+                    "homepage": "https://www.drupal.org/user/116305"
+                }
+            ],
+            "description": "Defines a 'weekly office hours' field type, allowing you to specify when an Entity is open or closed.",
+            "homepage": "http://drupal.org/project/office_hours",
+            "support": {
+                "source": "http://cgit.drupalcode.org/office_hours",
+                "issues": "http://drupal.org/project/office_hours",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {

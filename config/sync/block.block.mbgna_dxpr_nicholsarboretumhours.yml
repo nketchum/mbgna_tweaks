@@ -1,0 +1,30 @@
+uuid: a619d6cc-3a9e-4a46-b212-21d4b7030518
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hours:49742653-346c-419e-a99e-2e47fcc8a8b7'
+  module:
+    - block_content
+    - block_visibility_conditions_node
+  theme:
+    - mbgna_dxpr
+id: mbgna_dxpr_nicholsarboretumhours
+theme: mbgna_dxpr
+region: hidden
+weight: 0
+provider: null
+plugin: 'block_content:49742653-346c-419e-a99e-2e47fcc8a8b7'
+settings:
+  id: 'block_content:49742653-346c-419e-a99e-2e47fcc8a8b7'
+  label: 'Nichols Arboretum Hours'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null

@@ -1,0 +1,83 @@
+uuid: d561b6cd-d79f-40cb-a14c-de1941046ddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hours
+    - field.field.block_content.hours.field_annotation
+    - field.field.block_content.hours.field_location_hours
+  module:
+    - field_formatter_class
+    - field_group
+    - office_hours
+third_party_settings:
+  field_group:
+    group_open_hours:
+      children:
+        - field_location_hours
+        - field_annotation
+      label: 'Open hours'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: mbgna-location-hours
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: block_content.hours.default
+targetEntityType: block_content
+bundle: hours
+mode: default
+content:
+  field_annotation:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location_hours:
+    type: office_hours
+    label: hidden
+    settings:
+      day_format: long
+      time_format: g
+      compress: false
+      grouped: false
+      show_closed: current
+      closed_format: 'Closed Today'
+      all_day_format: 'Sunrise to Sunset'
+      separator:
+        days: ''
+        grouped_days: '-'
+        day_hours: ': '
+        hours_hours: ' to '
+        more_hours: ', '
+      current_status:
+        position: before
+        open_text: 'Open Today'
+        closed_text: 'Currently Closed'
+      exceptions:
+        title: 'Exception hours'
+        restrict_exceptions_to_num_days: 7
+        date_format: long
+        all_day_format: 'All day open'
+      timezone_field: ''
+      office_hours_first_day: '0'
+      schema:
+        enabled: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden: {  }

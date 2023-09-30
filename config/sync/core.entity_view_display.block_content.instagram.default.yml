@@ -1,0 +1,22 @@
+uuid: b9b229d0-ad05-486f-8b9b-a4d1b3bc78c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram
+    - field.field.block_content.instagram.field_instagram_username
+  module:
+    - instagram_feed_by_username
+id: block_content.instagram.default
+targetEntityType: block_content
+bundle: instagram
+mode: default
+content:
+  field_instagram_username:
+    type: InstagramFieldByUsernameFieldFormatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

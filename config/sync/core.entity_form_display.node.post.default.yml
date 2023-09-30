@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.post.body
     - field.field.node.post.field_dashboard_show
+    - field.field.node.post.field_dxpr_drag_drop
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
     - field.field.node.post.field_image
@@ -85,6 +86,16 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_dxpr_drag_drop:
+    type: entity_reference_autocomplete
+    weight: 125
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_external_link:
     type: link_default

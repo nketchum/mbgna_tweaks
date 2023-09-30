@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.post.body
     - field.field.node.post.field_dashboard_show
+    - field.field.node.post.field_dxpr_drag_drop
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
     - field.field.node.post.field_image
@@ -33,6 +34,15 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_dxpr_drag_drop:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_external_link:
     type: link
     label: inline
@@ -45,7 +55,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 5
+    weight: 6
     region: content
   field_external_source:
     type: boolean
@@ -57,7 +67,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 7
+    weight: 8
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -117,7 +127,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 6
+    weight: 7
     region: content
   field_post_type:
     type: entity_reference_label
@@ -138,7 +148,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 8
+    weight: 9
     region: content
   title:
     type: title

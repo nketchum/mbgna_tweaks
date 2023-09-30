@@ -32,3 +32,29 @@
 #block-mbgna-dxpr-contactussidebaradditional {
   padding-top: 1em;
 }
+
+.mbgna-location-hours {
+  color: $red;
+  font-size: 20px;
+  line-height: 30px;
+
+  .office-hours-status-text {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .field--name-field-annotation {
+    color: #999;
+    font-size: 14px;
+  }
+}
+
+#node-instagram {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 0;
+
+  img {
+    border-radius: 5px;
+  }
+}

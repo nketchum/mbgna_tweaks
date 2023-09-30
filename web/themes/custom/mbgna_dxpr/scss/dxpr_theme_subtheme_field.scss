@@ -70,6 +70,17 @@ article.post.full {
   margin-top: 45px;
 }
 
+.embeds-dxpr-layout {
+  article.bed.full,
+  article.post.full {
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .article-heading .page-title {
   font-size: 32px;
   margin: 0 0 60px;

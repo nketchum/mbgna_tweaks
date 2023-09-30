@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.listing_minimal
     - field.field.node.post.body
     - field.field.node.post.field_dashboard_show
+    - field.field.node.post.field_dxpr_drag_drop
     - field.field.node.post.field_external_link
     - field.field.node.post.field_external_source
     - field.field.node.post.field_image
@@ -117,6 +118,7 @@ hidden:
   body: true
   created: true
   field_dashboard_show: true
+  field_dxpr_drag_drop: true
   field_images: true
   field_post_type: true
   field_user: true

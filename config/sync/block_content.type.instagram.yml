@@ -1,0 +1,8 @@
+uuid: 1c07f4ca-1296-48bb-bd94-3190f2abe766
+langcode: en
+status: true
+dependencies: {  }
+id: instagram
+label: Instagram
+revision: 0
+description: 'Provides an Instagram block.'

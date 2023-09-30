@@ -1,0 +1,21 @@
+uuid: 02e7eef0-ce53-49fd-8375-11cea471d2da
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram
+    - field.storage.block_content.field_instagram_username
+  module:
+    - instagram_feed_by_username
+id: block_content.instagram.field_instagram_username
+field_name: field_instagram_username
+entity_type: block_content
+bundle: instagram
+label: 'Instagram username'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: instagram_field

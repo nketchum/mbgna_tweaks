@@ -1,0 +1,29 @@
+uuid: 8d95eb08-f545-42bc-92e8-6c2ae1644b6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dxpr_drag_drop
+    - node.type.drag_and_drop_page
+    - node.type.post
+id: node.post.field_dxpr_drag_drop
+field_name: field_dxpr_drag_drop
+entity_type: node
+bundle: post
+label: 'DXPR page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      drag_and_drop_page: drag_and_drop_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

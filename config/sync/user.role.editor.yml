@@ -6,20 +6,22 @@ dependencies:
     - filter.format.code
     - filter.format.full_html
     - filter.format.minimal_html
+    - node.type.drag_and_drop_page
     - node.type.event
+    - node.type.position
+    - node.type.post
+    - node.type.resource
+    - node.type.webform
+    - taxonomy.vocabulary.blog_topics
+    - taxonomy.vocabulary.event_categories
+    - taxonomy.vocabulary.interest
     - taxonomy.vocabulary.kickers
   module:
-    - block
-    - block_content
-    - block_content_permissions
     - block_region_permissions
-    - comment
     - commerce_license
     - contact
     - dxpr_builder
-    - file
     - filter
-    - mbgna_bed
     - mbgna_facility
     - mbgna_organization
     - mbgna_plant
@@ -28,6 +30,7 @@ dependencies:
     - menu_admin_per_menu
     - node
     - path
+    - quick_node_clone
     - system
     - taxonomy
     - toolbar
@@ -38,12 +41,9 @@ weight: -6
 is_admin: null
 permissions:
   - 'access administration pages'
-  - 'access block library'
-  - 'access comments'
   - 'access commerce_license overview'
   - 'access content overview'
   - 'access facility overview'
-  - 'access files overview'
   - 'access media overview'
   - 'access organization overview'
   - 'access plant overview'
@@ -52,60 +52,116 @@ permissions:
   - 'access toolbar'
   - 'access user contact forms'
   - 'access webform overview'
-  - 'administer block content'
-  - 'administer block types'
-  - 'administer blocks'
-  - 'administer comments'
-  - 'administer dxpr_builder_profile'
   - 'administer footer menu items'
   - 'administer internal menu items'
   - 'administer main menu items'
+  - 'administer mbgna_dxpr content'
   - 'administer mbgna_dxpr content_bottom'
-  - 'administer mbgna_dxpr footer'
+  - 'administer mbgna_dxpr highlighted'
+  - 'administer mbgna_dxpr page_bottom'
+  - 'administer mbgna_dxpr page_top'
+  - 'administer mbgna_dxpr prefooter'
+  - 'administer mbgna_dxpr sidebar_first'
   - 'administer mbgna_dxpr sidebar_second'
-  - 'administer nodes'
   - 'administer pre-footer menu items'
   - 'administer users'
   - 'administer webform submission'
   - 'bypass node access'
-  - 'create bed'
+  - 'clone drag_and_drop_page content'
+  - 'clone event content'
+  - 'clone position content'
+  - 'clone post content'
+  - 'clone resource content'
+  - 'clone webform content'
   - 'create commerce_license'
+  - 'create drag_and_drop_page content'
+  - 'create event content'
   - 'create facility'
   - 'create media'
   - 'create organization'
   - 'create plant'
+  - 'create position content'
+  - 'create post content'
   - 'create resource'
-  - 'create simple_text block content'
+  - 'create resource content'
+  - 'create terms in blog_topics'
+  - 'create terms in event_categories'
+  - 'create terms in interest'
   - 'create terms in kickers'
   - 'create url aliases'
+  - 'create webform content'
   - 'delete any commerce_license'
+  - 'delete any drag_and_drop_page content'
   - 'delete any event content'
   - 'delete any media'
-  - 'delete any simple_text block content'
-  - 'delete bed'
+  - 'delete any position content'
+  - 'delete any post content'
+  - 'delete any resource content'
+  - 'delete any webform content'
+  - 'delete drag_and_drop_page revisions'
+  - 'delete event revisions'
   - 'delete facility'
   - 'delete organization'
+  - 'delete own drag_and_drop_page content'
   - 'delete own event content'
-  - 'delete own files'
+  - 'delete own position content'
+  - 'delete own post content'
+  - 'delete own resource content'
+  - 'delete own webform content'
   - 'delete plant'
+  - 'delete position revisions'
+  - 'delete post revisions'
   - 'delete resource'
+  - 'delete resource revisions'
+  - 'delete terms in blog_topics'
+  - 'delete terms in event_categories'
+  - 'delete terms in interest'
   - 'delete terms in kickers'
+  - 'delete webform revisions'
+  - 'edit any drag_and_drop_page content'
   - 'edit any event content'
-  - 'edit bed'
+  - 'edit any position content'
+  - 'edit any post content'
+  - 'edit any resource content'
+  - 'edit any webform content'
   - 'edit facility'
   - 'edit organization'
+  - 'edit own drag_and_drop_page content'
   - 'edit own event content'
+  - 'edit own position content'
+  - 'edit own post content'
+  - 'edit own resource content'
+  - 'edit own webform content'
   - 'edit plant'
   - 'edit resource'
+  - 'edit terms in blog_topics'
+  - 'edit terms in event_categories'
+  - 'edit terms in interest'
   - 'edit terms in kickers'
+  - 'edit with dxpr builder'
+  - 'revert drag_and_drop_page revisions'
+  - 'revert event revisions'
+  - 'revert position revisions'
+  - 'revert post revisions'
+  - 'revert resource revisions'
+  - 'revert webform revisions'
   - 'update any commerce_license'
   - 'update any media'
-  - 'update any simple_text block content'
   - 'use text format code'
   - 'use text format full_html'
   - 'use text format minimal_html'
   - 'view all media revisions'
   - 'view any commerce_license'
+  - 'view drag_and_drop_page revisions'
+  - 'view event revisions'
+  - 'view facility'
+  - 'view organization'
   - 'view own unpublished media'
+  - 'view plant'
+  - 'view position revisions'
+  - 'view post revisions'
+  - 'view resource'
+  - 'view resource revisions'
   - 'view the administration theme'
   - 'view user email addresses'
+  - 'view webform revisions'

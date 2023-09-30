@@ -588,6 +588,19 @@ header > div {
   left: 6%;
 }
 
+// DXPR 2.4.0 sets a huge bottom padding of about 56%
+// to display the whole video, which ruins the
+// banner's proporations.
+// This is a temp fix that relies on padding set
+// on the content inside the slide or some other
+// element that sets the height.
+.owl-item .mb_YTPlayer {
+  // padding: 0 !important;
+  padding: 15% 5% 10% !important;
+  height: auto !important;
+}
+
+
 .landing-card-large {
   .landing-link-list {
     ul {

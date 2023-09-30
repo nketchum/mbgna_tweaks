@@ -1,0 +1,36 @@
+uuid: 3e9a39b8-f357-4060-93f2-85757cafb5b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - field_permissions
+    - office_hours
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: block_content.field_location_hours
+field_name: field_location_hours
+entity_type: block_content
+type: office_hours
+settings:
+  time_format: g
+  element_type: office_hours_datelist
+  increment: 1
+  valhrs: false
+  required_start: false
+  limit_start: ''
+  required_end: false
+  limit_end: ''
+  all_day: true
+  exceptions: true
+  seasons: true
+  comment: 0
+  cardinality_per_day: 1
+module: office_hours
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

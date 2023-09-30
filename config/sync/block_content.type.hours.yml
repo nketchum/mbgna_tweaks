@@ -1,0 +1,8 @@
+uuid: c91491f0-7759-4fb7-ac40-da611463c4b2
+langcode: en
+status: true
+dependencies: {  }
+id: hours
+label: Hours
+revision: 0
+description: 'Provides a block to specify when a location is open.'
