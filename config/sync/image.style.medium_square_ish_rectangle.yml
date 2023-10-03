@@ -1,15 +1,18 @@
 uuid: 7bc42f03-39de-41bc-86e4-4cf8d96329bc
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - crop.type.medium_square_ish_rectangle
+  module:
+    - crop
 name: medium_square_ish_rectangle
 label: 'Medium square-ish rectangle'
 effects:
-  fb344bbd-a4a4-41fb-a44a-a18987710bd8:
-    uuid: fb344bbd-a4a4-41fb-a44a-a18987710bd8
-    id: image_scale_and_crop
+  49425bef-39be-4ef1-8b2c-84efb0621450:
+    uuid: 49425bef-39be-4ef1-8b2c-84efb0621450
+    id: crop_crop
     weight: 1
     data:
-      width: 480
-      height: 360
-      anchor: center-center
+      crop_type: medium_square_ish_rectangle
+      automatic_crop_provider: null

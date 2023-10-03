@@ -85,3 +85,10 @@ a:focus,
 .overflow-hidden {
   overflow: hidden;
 }
+
+.js {
+  .dxpr-shadow-2,
+  .dxpr-shadow-hover-2:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .05);
+  }
+}

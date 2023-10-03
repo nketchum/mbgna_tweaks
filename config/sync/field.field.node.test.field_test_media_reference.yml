@@ -1,0 +1,29 @@
+uuid: 68ea28e7-ea89-4c46-938e-4971afafa1b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test_media_reference
+    - media.type.image
+    - node.type.test
+id: node.test.field_test_media_reference
+field_name: field_test_media_reference
+entity_type: node
+bundle: test
+label: 'Test media reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
