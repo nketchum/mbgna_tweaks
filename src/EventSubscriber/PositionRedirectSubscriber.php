@@ -29,15 +29,19 @@ class PositionRedirectSubscriber implements EventSubscriberInterface {
 
     if (!$query) {
       $route_name = \Drupal::routeMatch()->getRouteName();
-      $current_path = \Drupal::service('path.current')->getPath();
-      $params = \Drupal\Core\Url::fromUserInput($current_path)->getRouteParameters();
 
-      if (isset($params['node'])) {
-        $node = \Drupal\node\Entity\Node::load($params['node']);
-        if ($node->getType() == 'position') {
-          $url = \Drupal\Core\Url::fromRoute($route_name, ['node' => $node->id()], ['query' => ['node' => $node->id()], 'absolute' => FALSE]);
-          $response = new RedirectResponse($url->toString());
-          $event->setResponse($response);
+      if ($route_name == 'entity.node.canonical') {
+        $current_path = \Drupal::service('path.current')->getPath();
+        $params = \Drupal\Core\Url::fromUserInput($current_path)->getRouteParameters();
+
+        if (isset($params['node'])) {
+          $node = \Drupal\node\Entity\Node::load($params['node']);
+
+          if ($node->getType() == 'position') {
+            $url = \Drupal\Core\Url::fromRoute($route_name, ['node' => $node->id()], ['query' => ['node' => $node->id()], 'absolute' => FALSE]);
+            $response = new RedirectResponse($url->toString());
+            $event->setResponse($response);
+          }
         }
       }
     }
