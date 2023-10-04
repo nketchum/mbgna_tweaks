@@ -4,6 +4,7 @@ use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\user\Entity\Role;
 use Drupal\views\ViewExecutable;
+use Drupal\Core\Url;
 
 /**
  * @file
@@ -40,6 +41,19 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       $form['posted_wrapper']['posted_wrapper']['posted']['max']['#title'] = '';
     }
   }
+
+  // Users cannot delete their customer profile. Only privileged users.
+  if ($form['#id'] == 'profile-customer-edit-form' || $form['#id'] == 'profile-customer-add-form') {
+    $markup = <<<HEREB
+      <h2>Purchase account</h2>
+      <p class="larger">Provide your current name and primary address to make new orders for gift shop products, plant sales, ticket purchases and more.</p>
+      HEREB;
+
+    $form['heading'] = array(
+      '#markup' => $markup,
+      '#weight' => -1,
+    );
+  }
 }
 
 // Helper function for form actions/redirects that allows products to be 
@@ -71,7 +85,10 @@ function mbgna_tweaks_library_info_alter(&$libraries, $extension) {
  * Implements hook_menu_local_tasks_alter()
  */
 function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCacheableDependencyInterface &$cacheability) {
+
   if ($route_name == 'entity.user.canonical') {
+    $account = \Drupal::routeMatch()->getParameter('user');
+
     $data['tabs'][0]['entity.user.canonical']['#link']['title'] = t('My dashboard');
 
     $data['tabs'][0]['entity.user.edit_form']['#weight'] = -9;
@@ -80,14 +97,16 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
     $data['tabs'][0]['profile.user_page:customer']['#weight'] = -8;
     $data['tabs'][0]['profile.user_page:customer']['#link']['title'] = t('Purchasing account');
 
+    // Commerce's built-in payment method page is inadequate. Build a better page and
+    // override the default local task so it links to the custom page.
+    $custom_pay_method_url = Url::fromRoute('view.profile_payment_method.page_1', ['arg_0' => $account->id()]);
+    $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['url'] = $custom_pay_method_url;
     $data['tabs'][0]['entity.commerce_payment_method.collection']['#weight'] = -7;
     $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['title'] = t('Payment methods');
 
     $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#weight'] = -6;
     $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#link']['title'] = t('Past orders');
 
-    // Show user webform submissions only for certain editor/admins when
-    // viewing their profile page as well as other user profile pages.
     if (!\Drupal::currentUser()->hasPermission('view any webform submission')) {
       unset($data['tabs'][0]['entity.webform_submission.user']);  
     }
@@ -105,3 +124,4 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
     ]);
   }
 }
+
