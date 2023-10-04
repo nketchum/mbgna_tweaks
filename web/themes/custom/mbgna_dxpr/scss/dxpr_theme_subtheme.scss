@@ -1,5 +1,6 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 @import "./dxpr_theme_subtheme_block.scss";
+@import "./dxpr_theme_subtheme_commerce.scss";
 @import "./dxpr_theme_subtheme_component.scss";
 @import "./dxpr_theme_subtheme_dashboard.scss";
 @import "./dxpr_theme_subtheme_element.scss";
@@ -84,4 +85,23 @@ a:focus,
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.js {
+  .dxpr-shadow-2,
+  .dxpr-shadow-hover-2:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .05);
+  }
+}
+
+.container-white {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  margin: 5% auto;
+  padding: 5%;
+}
+
+.container-squeeze {
+  max-width: 960px;
 }

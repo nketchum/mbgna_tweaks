@@ -63,6 +63,7 @@ permissions:
   - 'administer mbgna_dxpr prefooter'
   - 'administer mbgna_dxpr sidebar_first'
   - 'administer mbgna_dxpr sidebar_second'
+  - 'administer nodes'
   - 'administer pre-footer menu items'
   - 'administer users'
   - 'administer webform submission'

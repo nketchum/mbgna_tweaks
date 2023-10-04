@@ -183,6 +183,8 @@ a,
 }
 
 .btn {
+  margin-left: 0;
+  
   &.btn-primary,
   &.btn-success {
     &, &:active {
@@ -355,4 +357,10 @@ body {
 
 .alert.alert-warning.animated {
   display: none !important;
+}
+
+caption {
+  font-size: 11px;
+  font-style: italic;
+  color: gray;
 }

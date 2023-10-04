@@ -1,0 +1,29 @@
+uuid: ee91547c-8bc7-4454-a34b-7b3cc12baec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.resource.field_internal_resource
+    - mbgna_resource.resource_type.internal
+    - taxonomy.vocabulary.internal_resource
+id: resource.internal.field_internal_resource
+field_name: field_internal_resource
+entity_type: resource
+bundle: internal
+label: 'Internal resource'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      internal_resource: internal_resource
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

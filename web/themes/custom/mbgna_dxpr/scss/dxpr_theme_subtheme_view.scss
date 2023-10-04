@@ -178,3 +178,30 @@
     margin-bottom: 30px;
   }
 }
+
+.view-profile-payment-method {
+  .view-content {
+    margin-bottom: 45px;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .views-view-grid {
+      .views-col {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin: 15px;
+        padding: 30px;
+        width: calc(50% - 30px) !important;
+      }
+    }
+  }
+}
+
+.view.container-white {
+  .view-header {
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
+}

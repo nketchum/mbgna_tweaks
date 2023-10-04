@@ -1,9 +1,11 @@
 <?php
 
 use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\views\ViewExecutable;
+use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Views;
 
 /**
  * Implements hook_theme().
@@ -15,28 +17,20 @@ function mbgna_dxpr_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
- 
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-// function mbgna_dxpr_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-//   if ($form['#id'] == 'views-exposed-form-events-page-1') {
-//     $form['title']['#title'] = '';
-//     $form['date_wrapper']['date_wrapper']['date']['min']['#title'] = '';
-//     $form['date_wrapper']['date_wrapper']['date']['max']['#title'] = '';
-//     $form['categories']['#title'] = '';
-//     $form['location']['#title'] = '';
-//   }
-// }
 
 /**
- * Prepares variables for the html template. Adds node object.
- *
- * Default template: html.html.twig.
- *
- * See the html.html.twig template for the list of variables.
+ * Implements hook_preprocess_html().
  */
 function mbgna_dxpr_preprocess_html(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  // Payment method user profile page needs special styling
+  // for the Drupal "collection" page that commerce payment
+  // uses (unfortunately).
+  if ($route_name == 'entity.commerce_payment_method.collection') {
+    $variables['path_profile_payment'] = 'path-profile-payment';
+  }
+
   // Page is not dxpr by default.
   $variables['dxpr_body_class'] = 'is-not-dxpr-layout';
 
@@ -94,8 +88,7 @@ function mbgna_dxpr_preprocess_page(&$variables) {
     $variables['#attached']['library'][] = $dxpr_theme_library;
   }
 }
-    use Drupal\Core\Form\FormState;
-    use Drupal\views\Views;
+
 /**
  * Implements template_preprocess_node()
  */

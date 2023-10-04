@@ -1,0 +1,8 @@
+uuid: 6f13124f-774d-4cbe-ae34-c8545e380911
+langcode: en
+status: true
+dependencies: {  }
+id: short_month_year
+label: 'Short month/year'
+locked: false
+pattern: n/Y

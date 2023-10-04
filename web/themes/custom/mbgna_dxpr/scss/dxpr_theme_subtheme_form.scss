@@ -6,12 +6,12 @@ form {
   }
 }
 
-.webform-submission-form {
-  .form-item,
-  .form-actions {
-    margin: 0;
-  }
-}
+// .webform-submission-form {
+//   .form-item,
+//   .form-actions {
+//     margin: 0;
+//   }
+// }
 
 .prefooter-form-newsletter {
   form {
@@ -82,7 +82,6 @@ select.form-select {
   padding-left: 7.5px;
 }
 
-
 .path-login {
   margin-left: auto;
   margin-right: auto;
@@ -111,14 +110,6 @@ select.form-select {
   }
 }
 
-.commerce-order-item-add-to-cart-form {
-  .field--name-purchased-entity {
-    label {
-      display: none;
-    }
-  }
-}
-
 .webform-submission-cancel-membership-form {
   overflow: hidden;
   
@@ -129,5 +120,73 @@ select.form-select {
     .form-submit {
       margin: 0;
     }
+  }
+}
+
+.commerce-order-item-add-to-cart-form {
+  .field--name-purchased-entity {
+    label {
+      display: none;
+    }
+  }
+}
+
+.profile-form,
+.contact-message-personal-form {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  margin: 5% auto;
+  max-width: 960px;
+  padding: 5%;
+}
+
+.profile-form {
+  .field--name-address {
+    details {
+      border: inherit;
+      background-color: inherit;
+      margin: 0;
+
+      & > .details-wrapper {
+        padding: 0;
+      }
+    }
+  }
+}
+
+#edit-address-0,
+#edit-address-0-address {
+  // It's hard to form_alter commerce profile
+  // forms but easy via flexbox.
+  display: flex;
+  flex-direction: column;
+
+  // Country should be lower, right above
+  // the street address.
+  #edit-address-0-address-country-code {
+    order: 3;
+  }
+
+  // The rest as they were, but explicity
+  // set here anyway.
+  #edit-address-0-address-container0 {
+    order: 1;
+  }
+
+  .form-item-address-0-address-organization {
+    order: 2;
+  }
+
+  .form-item-address-0-address-address-line1 {
+    order: 4;
+  }
+
+  .form-item-address-0-address-address-line2 {
+    order: 5;
+  }
+
+  #edit-address-0-address-container4 {
+    order: 6;
   }
 }

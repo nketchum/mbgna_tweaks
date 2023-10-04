@@ -1,0 +1,24 @@
+uuid: d6944432-3762-4a8c-a3aa-8de6d31f4bd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - scheduler
+third_party_settings:
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Internal resource'
+vid: internal_resource
+description: 'Provides an internal resource vocabulary.'
+weight: 0

@@ -1,21 +1,20 @@
-uuid: c5fc3fff-3878-4629-9845-104318c9d581
+uuid: 638cd30b-42b6-467c-ba05-18a9f9d08563
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - mbgna_resource
+    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: resource.field_display_name
-field_name: field_display_name
+id: resource.field_internal_resource
+field_name: field_internal_resource
 entity_type: resource
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

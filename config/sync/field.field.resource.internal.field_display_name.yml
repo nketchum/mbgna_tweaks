@@ -1,0 +1,19 @@
+uuid: 8a295c3a-95bb-4dde-9c2d-796668a82441
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.resource.field_display_name
+    - mbgna_resource.resource_type.internal
+id: resource.internal.field_display_name
+field_name: field_display_name
+entity_type: resource
+bundle: internal
+label: 'Display name'
+description: 'This is the resource name to be shown to the general public.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

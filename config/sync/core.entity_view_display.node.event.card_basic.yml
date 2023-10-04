@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.event.field_map_link
     - field.field.node.event.field_organization
     - field.field.node.event.field_phone
+    - field.field.node.event.field_thumbnail_image
     - field.field.node.event.field_website
     - node.type.event
   module:
@@ -101,6 +102,7 @@ hidden:
   field_map_link: true
   field_organization: true
   field_phone: true
+  field_thumbnail_image: true
   field_website: true
   links: true
   uid: true

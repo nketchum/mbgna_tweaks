@@ -1,0 +1,26 @@
+uuid: 5967677d-ae16-4046-96dc-9bb904d72acc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.internal_resource
+id: taxonomy_term.internal_resource.default
+targetEntityType: taxonomy_term
+bundle: internal_resource
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  publish_on: true
+  revision_log_message: true
+  status: true
+  unpublish_on: true
