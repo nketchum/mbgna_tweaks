@@ -221,5 +221,6 @@ content:
 hidden:
   created: true
   field_dashboard_show: true
+  field_thumbnail_image: true
   links: true
   uid: true

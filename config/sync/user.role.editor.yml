@@ -45,7 +45,6 @@ permissions:
   - 'access content overview'
   - 'access facility overview'
   - 'access media overview'
-  - 'access organization overview'
   - 'access plant overview'
   - 'access resource overview'
   - 'access taxonomy overview'

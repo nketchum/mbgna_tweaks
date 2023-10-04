@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a bed entity.
+ *
+ * This template is used when viewing a canonical bed page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_bed()
+ */
+#}
+<article{{ attributes }}>
+  {% if content %}
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        {{ content.field_display_image }}
+        <h2>{{ bed_type }} Bed {{ bed_id }}</h2>
+        <div class="bed-maps">
+          {% if content.field_map_pdf %}
+            <a href="{{ content.field_map_pdf|render|striptags|trim }}">PDF Map</a>
+          {% endif %}
+          {% if content.field_map_jpeg %}
+            <a href="{{ content.field_map_jpeg|render|striptags|trim }}">JPEG Map</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6">
+        {{- drupal_view('bed', 'block_3', bed_type) -}}
+      </div>
+    </div>
+    {{- drupal_view('plant', 'block_3', bed_id) -}}
+
+    {# {{- content.field_spaces -}} #}
+
+    {% if rows %}
+      <div class="bed-spaces"> 
+        {% for row in rows %}
+          <div class="bed-spaces-space">Space</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+</article>
