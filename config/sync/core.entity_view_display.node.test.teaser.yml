@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.test.body
-    - field.field.node.test.field_test_media_reference
     - node.type.test
   module:
     - manage_display
@@ -39,5 +38,4 @@ content:
     region: content
 hidden:
   created: true
-  field_test_media_reference: true
   uid: true

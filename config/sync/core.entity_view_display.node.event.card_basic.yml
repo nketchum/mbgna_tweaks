@@ -54,7 +54,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: card-subheading
-    weight: 4
+    weight: 3
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -75,17 +75,6 @@ content:
     third_party_settings:
       field_formatter_class:
         class: card-kicker
-    weight: 2
-    region: content
-  field_thumbnail_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: card_basic
-      link: false
-    third_party_settings:
-      field_formatter_class:
-        class: card-image
     weight: 1
     region: content
   title:
@@ -97,7 +86,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: card-heading
-    weight: 3
+    weight: 2
     region: content
 hidden:
   body: true

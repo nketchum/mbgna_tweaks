@@ -173,7 +173,7 @@ content:
       responsive_image_style: ''
       use_theme_field: false
       box_style: ''
-      image_style: medium_square_ish_rectangle
+      image_style: ''
       media_switch: ''
       ratio: ''
       thumbnail_style: ''

@@ -56,7 +56,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 3
+    weight: 2
     region: content
   field_image:
     type: blazy_media
@@ -107,48 +107,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 4
-    region: content
-  field_thumbnail_image:
-    type: blazy_media
-    label: hidden
-    settings:
-      caption:
-        title: '0'
-        alt: '0'
-      class: ''
-      id: ''
-      image: ''
-      link: ''
-      overlay: ''
-      title: ''
-      vanilla: false
-      layout: ''
-      view_mode: full
-      cache: 0
-      skin: ''
-      lazy: ''
-      style: ''
-      background: false
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      loading: ''
-      preload: false
-      responsive_image_style: ''
-      use_theme_field: false
-      box_style: ''
-      image_style: medium_square_ish_rectangle
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
-      grid: ''
-      grid_medium: ''
-      grid_small: ''
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 1
+    weight: 3
     region: content
   title:
     type: title
@@ -159,7 +118,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 2
+    weight: 1
     region: content
 hidden:
   body: true
