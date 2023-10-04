@@ -13,6 +13,58 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
+        "mbgna_bed": {
+            "type": "package",
+            "package": {
+                "name": "mbgna/mbgna_bed",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/nketchum/mbgna_bed.git",
+                    "type": "git",
+                    "reference": "origin/main"
+                }
+            }
+        },
+        "mbgna_facility": {
+            "type": "package",
+            "package": {
+                "name": "mbgna/mbgna_facility",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/nketchum/mbgna_facility.git",
+                    "type": "git",
+                    "reference": "origin/main"
+                }
+            }
+        },
+        "mbgna_honor": {
+            "type": "package",
+            "package": {
+                "name": "mbgna/mbgna_honor",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/nketchum/mbgna_honor.git",
+                    "type": "git",
+                    "reference": "origin/main"
+                }
+            }
+        },
+        "mbgna_organization": {
+            "type": "package",
+            "package": {
+                "name": "mbgna/mbgna_organization",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/nketchum/mbgna_organization.git",
+                    "type": "git",
+                    "reference": "origin/main"
+                }
+            }
+        },
         "mbgna_plant": {
             "type": "package",
             "package": {
@@ -147,7 +199,10 @@
         "drush/drush": "^11.0",
         "jackmoore/colorbox": "master",
         "kenwheeler/slick": "^1.7",
-        "mbgna/mbgna_organization": "^1.0",
+        "mbgna/mbgna_bed": "dev-main",
+        "mbgna/mbgna_facility": "dev-main",
+        "mbgna/mbgna_honor": "dev-main",
+        "mbgna/mbgna_organization": "dev-main",
         "mbgna/mbgna_plant": "dev-main",
         "mbgna/mbgna_resource": "dev-main",
         "mbgna/mbgna_tweaks": "dev-main",
