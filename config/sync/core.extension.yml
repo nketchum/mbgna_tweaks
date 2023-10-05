@@ -80,6 +80,7 @@ module:
   link: 0
   link_attributes: 0
   manage_display: 0
+  mbgna_honor: 0
   media: 0
   media_entity_instagram: 0
   media_library: 0

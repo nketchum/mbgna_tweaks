@@ -54,7 +54,7 @@ content:
       compress: false
       grouped: false
       show_closed: current
-      closed_format: 'Closed Today'
+      closed_format: ''
       all_day_format: 'Sunrise to Sunset'
       separator:
         days: ''

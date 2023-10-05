@@ -19,6 +19,7 @@ dependencies:
     - taxonomy.vocabulary.peony_form
     - taxonomy.vocabulary.peony_season
     - taxonomy.vocabulary.species
+    - user.role.editor
     - user.role.super_administrator
   module:
     - better_exposed_filters
@@ -381,10 +382,10 @@ display:
       style:
         type: blazy
         options:
-          style: column
           grid: '3'
           grid_medium: ''
           grid_small: ''
+          style: column
       row:
         type: fields
         options:
@@ -2108,7 +2109,7 @@ display:
           entity_type: plant
           entity_field: changed
           plugin_id: field
-          label: Update
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -2510,6 +2511,7 @@ display:
           plugin_id: user_roles
           operator: or
           value:
+            editor: editor
             super_administrator: super_administrator
           group: 2
           exposed: false
@@ -2576,7 +2578,7 @@ display:
               empty_column: false
               responsive: ''
             name:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''

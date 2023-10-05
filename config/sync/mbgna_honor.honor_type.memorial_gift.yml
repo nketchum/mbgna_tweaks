@@ -1,0 +1,6 @@
+uuid: 45772e0a-7634-49db-b724-66a1e3094dcb
+langcode: en
+status: true
+dependencies: {  }
+id: memorial_gift
+label: 'Memorial gift'
