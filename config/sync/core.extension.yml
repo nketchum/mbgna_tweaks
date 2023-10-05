@@ -42,7 +42,6 @@ module:
   config: 0
   contact: 0
   crop: 0
-  cshs: 0
   ctools: 0
   datetime: 0
   datetime_range: 0
