@@ -48,7 +48,7 @@
       </div>
       <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
-          {% if drupal_view_result('posts', 'block_2') is not empty %}
+          {% if drupal_view_result('posts', 'block_2', 'news') is not empty %}
             <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
               {{- drupal_view('posts', 'block_2') -}}
             </div>
@@ -70,6 +70,7 @@
         {% endif %}
       </div>
     </div>
+
     {% if privileged %}
       <hr class="landing-section">
       <div class="row dashboard-row dashboard-commerce">
@@ -77,9 +78,6 @@
         <div class="col col-first col-level1 col-lg-6 col-md-6">
           <div class="boxed-field boxed-field-light">
             {{ drupal_view('membership', 'block_1') }}
-            {# {{ drupal_view('commerce_members', 'block_4') }} #}
-            {# {{ drupal_view('commerce_members', 'block_1') }} #}
-            {# {{ drupal_view('commerce_members', 'block_3') }} #}
           </div>
         </div>
         <div class="col col-last col-level1 col-lg-6 col-md-6">
@@ -89,6 +87,7 @@
         </div>
       </div>
     {% endif %}
+
     {% 
     if drupal_view_result('content_profile', 'block_1', user.id, 'news') is not empty or
        drupal_view_result('content_profile', 'block_1', user.id, 'blog') is not empty or
@@ -125,6 +124,7 @@
         </div>
       </div>
     {% endif %}
+
     {% if privileged %}
       {% if drupal_view_result('content_dashboard', 'block_1') is not empty %}
         <hr class="landing-section">
