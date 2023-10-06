@@ -1,6 +1,6 @@
 printf "Website backup starting...\n\n"
 
-# Check for two arguments. Folder name and db port number.
+# Check for two arguments. First arg: folder name, Second arg: db port number
 if [[ $# -lt 2  ]] ; then
     printf "Error. the website project folder name and port number must be given. Use \\$ \"lando info\" to get the db port number."
     exit 0
