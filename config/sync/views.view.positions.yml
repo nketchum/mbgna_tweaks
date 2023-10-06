@@ -493,7 +493,7 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: null
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -522,8 +522,17 @@ display:
               viewer_plant: '0'
               staff: '0'
               super_administrator: '0'
-              volunteer: '0'
               working_group_member: '0'
+              member_student: '0'
+              member_individual: '0'
+              member_couple: '0'
+              member_family_tree: '0'
+              member_sustaining: '0'
+              member_sponsor: '0'
+              member_benefactor: '0'
+              member_directors_circle: '0'
+              volunteer_individual: '0'
+              volunteer_couple: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -539,7 +548,7 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: position_type
-          type: cshs
+          type: select
           hierarchy: false
           limit: true
           error_message: true

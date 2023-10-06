@@ -492,6 +492,7 @@ display:
           plugin_id: bundle
           value:
             post: post
+          group: 1
         field_post_type_target_id:
           id: field_post_type_target_id
           table: node__field_post_type
@@ -501,7 +502,8 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value: '19'
+          value:
+            19: 19
           group: 1
           exposed: false
           expose:
@@ -533,17 +535,10 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: post_type
-          type: cshs
+          type: select
           hierarchy: false
           limit: true
           error_message: true
-          save_lineage: false
-          force_deepest: false
-          parent: null
-          level_labels: ''
-          hierarchy_depth: 0
-          required_depth: 0
-          none_label: '- Please select -'
         field_dashboard_show_value:
           id: field_dashboard_show_value
           table: node__field_dashboard_show
