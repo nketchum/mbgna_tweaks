@@ -66,7 +66,6 @@ content:
         title: '0'
         alt: '0'
       class: ''
-      id: ''
       image: ''
       link: ''
       overlay: ''
@@ -75,9 +74,6 @@ content:
       layout: ''
       view_mode: full
       cache: 0
-      skin: ''
-      lazy: ''
-      style: ''
       background: false
       box_caption: ''
       box_caption_custom: ''
@@ -94,6 +90,10 @@ content:
       grid: ''
       grid_medium: ''
       grid_small: ''
+      style: ''
+      id: ''
+      lazy: ''
+      skin: ''
     third_party_settings:
       field_formatter_class:
         class: ''
