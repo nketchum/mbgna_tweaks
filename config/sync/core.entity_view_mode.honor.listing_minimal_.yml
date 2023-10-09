@@ -1,0 +1,10 @@
+uuid: 57a91d06-ac80-4bf5-950c-2b100f4d62d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_honor
+id: honor.listing_minimal_
+label: 'Listing (minimal)'
+targetEntityType: honor
+cache: true

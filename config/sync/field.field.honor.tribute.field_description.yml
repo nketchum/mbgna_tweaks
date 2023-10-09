@@ -1,0 +1,32 @@
+uuid: 1d277c59-4e63-426f-901e-225084dd9ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_description
+    - filter.format.full_html
+    - filter.format.minimal_html
+    - mbgna_honor.honor_type.tribute
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: honor.tribute.field_description
+field_name: field_description
+entity_type: honor
+bundle: tribute
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - minimal_html
+    - full_html
+field_type: text_with_summary

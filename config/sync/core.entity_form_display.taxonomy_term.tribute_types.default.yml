@@ -1,0 +1,26 @@
+uuid: 67776fb4-f5f0-4a8d-b8d2-294da4c8b539
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tribute_types
+id: taxonomy_term.tribute_types.default
+targetEntityType: taxonomy_term
+bundle: tribute_types
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  publish_on: true
+  revision_log_message: true
+  status: true
+  unpublish_on: true

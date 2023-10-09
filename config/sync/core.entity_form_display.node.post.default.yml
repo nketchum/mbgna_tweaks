@@ -236,23 +236,6 @@ content:
       removed_reference: keep
     third_party_settings:
       conditional_fields:
-        c6ff4a1d-359a-4498-9178-253f9cf447ca:
-          entity_type: node
-          bundle: post
-          dependee: field_external_source
-          settings:
-            state: visible
-            reset: true
-            condition: checked
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              value: false
-            effect: show
-            effect_options: {  }
-            selector: ''
         6a71266b-3f79-4f4b-97ac-8a13964cc2e4:
           entity_type: node
           bundle: post

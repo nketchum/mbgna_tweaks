@@ -101,11 +101,10 @@
           {% endfor %}
         </div>
       {% endif %}
-      {{ content.title }}
-      {{ content.field_date_smart }}
-      {{ content.field_location }}
+      <h3 class="listing-title"><a href="{{ url }}">{{ content.title|render|striptags }}</a></h3>
+      <div class="field field--name-field-date-smart field--type-smartdate field--label-hidden field__items"><span class="label-simple">Starts on</span> {{ content.field_date_smart|render|striptags }}</div>
       {{ content.body }}
-      <div class="clearfix text-formatted field field--name-event-link field--type-button field__item"><a href="{{ url }}" class="btn btn-primary">Learn more ›</a></div>
+      <div class="clearfix text-formatted field field--name-event-link field--type-button field__item"><a href="{{ url }}" class="btn btn-primary btn-sm">Read more &rsaquo; </a></div>
     </div>
   </div>
 </article>

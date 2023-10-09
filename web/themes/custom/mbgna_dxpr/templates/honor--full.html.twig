@@ -1,0 +1,98 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a organization entity.
+ *
+ * This template is used when viewing a canonical organization page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_organization()
+ */
+#}
+{%
+  set classes = [
+    'honor',
+    bundle|clean_class,
+    view_mode ? view_mode|clean_class,
+    status ? 'is-published' : 'is-unpublished',
+    'clearfix',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div class="article-heading">
+    <div class="article-kicker"><a href="/honor/{{ bundle }}">&larr; {{ bundle }}s</a></div>
+    <h2 class="page-title">{{ content.field_title|render|striptags|trim }}</h2>
+  </div>
+  <div class="article-body article-has-aside article-has-aside-right row">
+    {% block content %}
+      <div class="article-body-content col-lg-12 col-md-12 row">
+        <div class="col-md-8 article-body-content-column article-body-content-column-left article-body-content-column-main">
+          {% if content %}
+            <div class="col-md-12 col-lg-12 row article-body-content-column-header">
+              <div class="col-md-6 col-lg-6 article-body-content-column-header-column-left">
+                {{- content.field_primary_image -}}
+              </div>
+              <div class="col-md-6 col-lg-6 article-body-content-column-header-column-right">
+                {{- content.field_description -}}
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-12 row article-body-content-column-subheader">
+              <div class="col-md-6 col-lg-6 article-body-content-column-subheader-column-left">
+                {{- content.field_secondary_image -}}
+              </div>
+              <div class="col-md-6 col-lg-6 article-body-content-column-subheader-column-right">
+                {{- content.field_dedication -}}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="col-md-4 article-body-content-column article-body-content-column-right">
+          {% if content %}
+            <div class="basic-fields">
+              <h3>Details</h3>
+              {% if content.field_type|render|striptags|trim %}
+                <div class="field field--name-field-type field--type-text field--label-above">
+                  <div class="field__label" ><span style="text-transform: capitalize;">{{ bundle }}</span> type</div>
+                  <div class="field__item">
+                    {{- content.field_type|render|striptags -}}
+                  </div>
+                </div>
+              {% endif %}
+              {% if content.field_realization_month|render|striptags|trim and content.field_realization_year|render|striptags|trim %}
+                <div class="field field--name-field-realization field--type-text field--label-above">
+                  <div class="field__label">Realized</div>
+                  <div class="field__item">
+                    {{- content.field_realization_month|render|striptags -}}
+                    {{- content.field_realization_year|render|striptags -}}
+                  </div>
+                </div>
+              {% endif %}
+              {% if content.field_availabile|render|striptags|trim %}
+                <div class="field field--name-field-available field--type-text field--label-above">
+                  <div class="field__label">Status</div>
+                  <div class="field__item">
+                    {{- content.field_availabile|render|striptags -}}
+                  </div>
+                </div>
+              {% endif %}
+
+              {{- content.field_location -}}
+
+              {% if content.field_latitude|render|striptags|trim and content.field_longitude|render|striptags|trim %}
+                <div class="field field--name-field-map field--type-map field--label-above">
+                  <div class="field__item">
+                    <iframe src = "https://maps.google.com/maps?q={{- content.field_latitude|render|striptags -}},{{- content.field_longitude|render|striptags -}}&hl=es;z=14&amp;output=embed"></iframe>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+</article>

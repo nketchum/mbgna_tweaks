@@ -1,0 +1,29 @@
+uuid: 12adadc9-0b2a-4783-a4a7-72f8a38d410d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_type
+    - mbgna_honor.honor_type.tribute
+    - taxonomy.vocabulary.tribute_types
+id: honor.tribute.field_type
+field_name: field_type
+entity_type: honor
+bundle: tribute
+label: Types
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tribute_types: tribute_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

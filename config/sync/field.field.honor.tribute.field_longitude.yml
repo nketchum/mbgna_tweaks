@@ -1,0 +1,23 @@
+uuid: 572978ef-48c5-4bc1-8818-5050caff6168
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_longitude
+    - mbgna_honor.honor_type.tribute
+id: honor.tribute.field_longitude
+field_name: field_longitude
+entity_type: honor
+bundle: tribute
+label: Longitude
+description: 'Decimal format, e.g. "-83.665630"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

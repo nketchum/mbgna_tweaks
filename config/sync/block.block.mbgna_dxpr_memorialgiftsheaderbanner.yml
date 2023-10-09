@@ -1,0 +1,35 @@
+uuid: d3a1c5c6-a221-40b2-a283-d768d256f671
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:2c32a4a7-b762-4377-b13a-e2fe64477ce7'
+  module:
+    - block_content
+    - block_visibility_conditions_node
+    - system
+  theme:
+    - mbgna_dxpr
+id: mbgna_dxpr_memorialgiftsheaderbanner
+theme: mbgna_dxpr
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:2c32a4a7-b762-4377-b13a-e2fe64477ce7'
+settings:
+  id: 'block_content:2c32a4a7-b762-4377-b13a-e2fe64477ce7'
+  label: 'Memorial gifts header banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: /honor/memorial_gift

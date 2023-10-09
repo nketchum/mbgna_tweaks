@@ -97,7 +97,8 @@ footer,
 .region-content {
   .field--name-body,
   .field--name-field-body,
-  .field--name-field-description {
+  .field--name-field-description,
+  .field--name-field-dedication {
     &, p {
       font-size: 18px;
       line-height: 32px;
@@ -330,11 +331,6 @@ body {
 }
 
 .btn-compound {
-  transition: 0.3s;
-  
-  &:hover {
-    background-color: $blue-primary !important;
-  }
   & > .az-ctnr {
     & > .az-element {
       & > p {
@@ -363,4 +359,9 @@ caption {
   font-size: 11px;
   font-style: italic;
   color: gray;
+}
+
+.no-hr {
+  border-bottom: none !important;
+  border-top: none !important;
 }

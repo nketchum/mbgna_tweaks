@@ -1,0 +1,21 @@
+uuid: 411ea968-fba0-4398-9389-204d3f9b3740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.organization.field_telephone
+    - mbgna_organization.organization_type.basic_organization
+  module:
+    - telephone
+id: organization.basic_organization.field_telephone
+field_name: field_telephone
+entity_type: organization
+bundle: basic_organization
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

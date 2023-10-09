@@ -1,0 +1,10 @@
+uuid: ddd6fd60-c1e2-41da-82cf-54105e03a500
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_honor
+id: honor.full
+label: Full
+targetEntityType: honor
+cache: true

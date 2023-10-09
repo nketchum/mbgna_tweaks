@@ -1,0 +1,35 @@
+uuid: d6df9e13-943d-4e69-98d1-4798d143a18a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:9cba99de-2fec-4180-a8e2-9bedcea53424'
+  module:
+    - block_content
+    - block_visibility_conditions_node
+    - system
+  theme:
+    - mbgna_dxpr
+id: mbgna_dxpr_organizationsheaderbanner
+theme: mbgna_dxpr
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:9cba99de-2fec-4180-a8e2-9bedcea53424'
+settings:
+  id: 'block_content:9cba99de-2fec-4180-a8e2-9bedcea53424'
+  label: 'Organizations header banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null
+  request_path:
+    id: request_path
+    negate: false
+    pages: /orgs

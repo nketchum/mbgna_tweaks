@@ -1,0 +1,19 @@
+uuid: 9166c353-c6bd-4c4c-8a19-b7e3bc2b5bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.organization.field_contact_email
+    - mbgna_organization.organization_type.basic_organization
+id: organization.basic_organization.field_contact_email
+field_name: field_contact_email
+entity_type: organization
+bundle: basic_organization
+label: 'Contact email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

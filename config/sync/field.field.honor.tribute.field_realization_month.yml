@@ -1,0 +1,21 @@
+uuid: 381f035b-2438-415d-a0f7-5a8ae5c37376
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_realization_month
+    - mbgna_honor.honor_type.tribute
+  module:
+    - options
+id: honor.tribute.field_realization_month
+field_name: field_realization_month
+entity_type: honor
+bundle: tribute
+label: 'Realization month'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

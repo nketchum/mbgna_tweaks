@@ -1,0 +1,29 @@
+uuid: 70797199-2bc0-451e-95ed-790b05afb3de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_secondary_image
+    - mbgna_honor.honor_type.tribute
+    - media.type.image
+id: honor.tribute.field_secondary_image
+field_name: field_secondary_image
+entity_type: honor
+bundle: tribute
+label: 'Secondary image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

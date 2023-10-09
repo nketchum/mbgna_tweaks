@@ -25,7 +25,6 @@ dependencies:
     - taxonomy.vocabulary.plant_origin
     - taxonomy.vocabulary.species
   module:
-    - comment
     - field_permissions
     - file
     - filter
@@ -43,7 +42,6 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access bed overview'
-  - 'access comments'
   - 'access content overview'
   - 'access media overview'
   - 'access plant overview'
@@ -86,7 +84,6 @@ permissions:
   - 'delete own image_bonsai media'
   - 'delete own peony_image media'
   - 'delete own plant_image media'
-  - 'edit own comments'
   - 'edit own field_dimensions'
   - 'edit own field_donor'
   - 'edit own field_last_repot'
@@ -104,7 +101,6 @@ permissions:
   - 'edit own image_bonsai media'
   - 'edit own peony_image media'
   - 'edit own plant_image media'
-  - 'post comments'
   - 'use text format code'
   - 'use text format full_html'
   - 'use text format minimal_html'

@@ -1,0 +1,21 @@
+uuid: af0fc8f3-03f2-455c-9f88-0cf8bac79926
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_available
+    - mbgna_honor.honor_type.tribute
+id: honor.tribute.field_available
+field_name: field_available
+entity_type: honor
+bundle: tribute
+label: Available
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Available
+  off_label: Unavailable
+field_type: boolean

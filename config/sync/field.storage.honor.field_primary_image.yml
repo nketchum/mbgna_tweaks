@@ -1,0 +1,24 @@
+uuid: 43ef6e8e-c403-465a-be0a-428f602ce072
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mbgna_honor
+    - media
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: honor.field_primary_image
+field_name: field_primary_image
+entity_type: honor
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -86,7 +86,6 @@ content:
         title: '0'
         alt: '0'
       class: ''
-      id: ''
       image: ''
       link: ''
       overlay: ''
@@ -95,9 +94,6 @@ content:
       layout: ''
       view_mode: default
       cache: 0
-      skin: ''
-      lazy: ''
-      style: grid
       background: false
       box_caption: title
       box_caption_custom: ''
@@ -114,6 +110,13 @@ content:
       grid: '2'
       grid_medium: '2'
       grid_small: '1'
+      style: grid
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
     third_party_settings:
       field_formatter_class:
         class: ''

@@ -1,0 +1,21 @@
+uuid: c0d465ac-14ee-4e41-b855-817ab7f6fc22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_realization_year
+    - mbgna_honor.honor_type.tribute
+  module:
+    - options
+id: honor.tribute.field_realization_year
+field_name: field_realization_year
+entity_type: honor
+bundle: tribute
+label: 'Realization year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

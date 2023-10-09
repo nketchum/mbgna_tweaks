@@ -6,7 +6,6 @@ dependencies:
     - filter.format.minimal_html
     - node.type.basic_page
   module:
-    - comment
     - contact
     - file
     - filter
@@ -17,18 +16,13 @@ label: 'Working group member'
 weight: 4
 is_admin: null
 permissions:
-  - 'access comments'
   - 'access content overview'
   - 'access user contact forms'
-  - 'create basic_page content'
   - 'delete basic_page revisions'
   - 'delete own basic_page content'
   - 'delete own files'
   - 'edit own basic_page content'
-  - 'edit own comments'
-  - 'post comments'
   - 'revert basic_page revisions'
-  - 'skip comment approval'
   - 'use text format minimal_html'
   - 'view all revisions'
   - 'view own unpublished content'

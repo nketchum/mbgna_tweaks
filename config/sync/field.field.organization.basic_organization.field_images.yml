@@ -1,0 +1,29 @@
+uuid: 145042fd-1c26-4cd0-9220-f2c070331eb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.organization.field_images
+    - mbgna_organization.organization_type.basic_organization
+    - media.type.image
+id: organization.basic_organization.field_images
+field_name: field_images
+entity_type: organization
+bundle: basic_organization
+label: 'Photo gallery'
+description: 'Add additional photos to create a simple image gallery.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

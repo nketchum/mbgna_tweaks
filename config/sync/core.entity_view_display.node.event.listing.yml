@@ -37,7 +37,7 @@ content:
     type: smart_trim
     label: hidden
     settings:
-      trim_length: 250
+      trim_length: 120
       trim_type: chars
       trim_suffix: ...
       wrap_output: false
@@ -126,9 +126,12 @@ content:
       grid_medium: ''
       grid_small: ''
       style: ''
-      id: ''
-      lazy: ''
-      skin: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
     third_party_settings:
       field_formatter_class:
         class: ''
@@ -177,9 +180,12 @@ content:
       grid_medium: ''
       grid_small: ''
       style: ''
-      id: ''
-      lazy: ''
-      skin: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
     third_party_settings:
       field_formatter_class:
         class: ''

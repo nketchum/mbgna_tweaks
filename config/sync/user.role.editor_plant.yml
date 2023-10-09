@@ -28,7 +28,6 @@ dependencies:
     - taxonomy.vocabulary.plant_origin
     - taxonomy.vocabulary.species
   module:
-    - comment
     - field_permissions
     - file
     - filter
@@ -46,7 +45,6 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access bed overview'
-  - 'access comments'
   - 'access content overview'
   - 'access media overview'
   - 'access plant overview'
@@ -114,7 +112,6 @@ permissions:
   - 'edit field_trunks'
   - 'edit field_year_acquired'
   - 'edit field_year_started'
-  - 'edit own comments'
   - 'edit plant'
   - 'edit terms in bed_column'
   - 'edit terms in bed_row'
@@ -134,7 +131,6 @@ permissions:
   - 'edit terms in peony_season'
   - 'edit terms in plant_origin'
   - 'edit terms in species'
-  - 'post comments'
   - 'use text format code'
   - 'use text format full_html'
   - 'use text format minimal_html'

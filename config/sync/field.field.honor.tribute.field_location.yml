@@ -1,0 +1,29 @@
+uuid: 39c937f9-485c-4b25-accc-a33b619e6449
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_location
+    - mbgna_honor.honor_type.tribute
+    - taxonomy.vocabulary.location
+id: honor.tribute.field_location
+field_name: field_location
+entity_type: honor
+bundle: tribute
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

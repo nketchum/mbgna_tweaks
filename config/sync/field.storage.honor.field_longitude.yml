@@ -1,0 +1,22 @@
+uuid: fb6accb3-2229-4119-b545-f82cbd22ca69
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mbgna_honor
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: honor.field_longitude
+field_name: field_longitude
+entity_type: honor
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

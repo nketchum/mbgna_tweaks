@@ -45,6 +45,12 @@
   }
 }
 
+.post.listing {
+  .field--name-field-organization {
+    text-transform: uppercase;
+  }
+}
+
 .post.card-basic {
   .field--name-field-image {
     margin-bottom: 15px;

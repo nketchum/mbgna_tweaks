@@ -3,21 +3,135 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.organization.basic_organization.field_address
+    - field.field.organization.basic_organization.field_contact_email
+    - field.field.organization.basic_organization.field_contact_name
     - field.field.organization.basic_organization.field_description
+    - field.field.organization.basic_organization.field_image
+    - field.field.organization.basic_organization.field_images
+    - field.field.organization.basic_organization.field_telephone
+    - field.field.organization.basic_organization.field_website
+    - image.style.medium_square_ish_rectangle
     - mbgna_organization.organization_type.basic_organization
   module:
+    - address
+    - blazy
+    - field_formatter_class
+    - link
     - text
 id: organization.basic_organization.default
 targetEntityType: organization
 bundle: basic_organization
 mode: default
 content:
+  field_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_contact_email:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 4
+    region: content
+  field_contact_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      class: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 7
+    region: content
+  field_images:
+    type: blazy_entity
+    label: above
+    settings:
+      view_mode: colorbox
+      grid: '3'
+      grid_medium: '3'
+      grid_small: '1'
+      style: grid
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 8
+    region: content
+  field_telephone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
     region: content
   label:
     type: string

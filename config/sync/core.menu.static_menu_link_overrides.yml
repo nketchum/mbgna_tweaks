@@ -7,3 +7,33 @@ definitions:
     weight: -46
     expanded: false
     enabled: false
+  'admin_toolbar_tools__extra_links:node__add__conservatory':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    expanded: false
+    weight: 0
+  'admin_toolbar_tools__extra_links:node__add__garden':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__resource':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__test':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__trail':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false

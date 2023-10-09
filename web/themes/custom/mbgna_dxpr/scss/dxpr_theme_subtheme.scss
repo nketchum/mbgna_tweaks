@@ -7,11 +7,13 @@
 @import "./dxpr_theme_subtheme_entity.scss";
 @import "./dxpr_theme_subtheme_entity_bed.scss";
 @import "./dxpr_theme_subtheme_entity_facility.scss";
+@import "./dxpr_theme_subtheme_entity_honor.scss";
 @import "./dxpr_theme_subtheme_entity_node.scss";
 @import "./dxpr_theme_subtheme_entity_node_event.scss";
 @import "./dxpr_theme_subtheme_entity_node_position.scss";
 @import "./dxpr_theme_subtheme_entity_node_post.scss";
 @import "./dxpr_theme_subtheme_entity_node_resource.scss";
+@import "./dxpr_theme_subtheme_entity_organization.scss";
 @import "./dxpr_theme_subtheme_entity_plant.scss";
 @import "./dxpr_theme_subtheme_entity_user.scss";
 @import "./dxpr_theme_subtheme_entity_webform.scss";
@@ -104,4 +106,8 @@ a:focus,
 
 .container-squeeze {
   max-width: 960px;
+}
+
+.faded {
+  opacity: 0.5;
 }

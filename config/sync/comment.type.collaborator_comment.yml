@@ -1,8 +1,0 @@
-uuid: ff37d438-5f92-40ce-8977-c1cda3d35dbf
-langcode: en
-status: true
-dependencies: {  }
-id: collaborator_comment
-label: 'Collaborator comment'
-target_entity_type_id: node
-description: 'Provides a comment type for collaborators.'

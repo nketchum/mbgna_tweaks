@@ -3,9 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.drag_and_drop_block
+    - block_content.type.simple_text
     - filter.format.code
     - filter.format.full_html
     - filter.format.minimal_html
+    - node.type.basic_page
     - node.type.drag_and_drop_page
     - node.type.event
     - node.type.position
@@ -13,16 +16,47 @@ dependencies:
     - node.type.resource
     - node.type.webform
     - taxonomy.vocabulary.blog_topics
+    - taxonomy.vocabulary.bonsai_style_additional
+    - taxonomy.vocabulary.bonsai_style_basic
+    - taxonomy.vocabulary.bonsai_style_tag
+    - taxonomy.vocabulary.common_name
+    - taxonomy.vocabulary.countries
+    - taxonomy.vocabulary.cultivar
     - taxonomy.vocabulary.event_categories
+    - taxonomy.vocabulary.family
+    - taxonomy.vocabulary.genus
     - taxonomy.vocabulary.interest
+    - taxonomy.vocabulary.internal_resource
     - taxonomy.vocabulary.kickers
+    - taxonomy.vocabulary.leaf_duration
+    - taxonomy.vocabulary.location
+    - taxonomy.vocabulary.peony_color
+    - taxonomy.vocabulary.peony_form
+    - taxonomy.vocabulary.peony_season
+    - taxonomy.vocabulary.plant_origin
+    - taxonomy.vocabulary.realname_prefix
+    - taxonomy.vocabulary.realname_suffix
+    - taxonomy.vocabulary.species
   module:
+    - block_content
+    - block_content_permissions
     - block_region_permissions
+    - commerce
     - commerce_license
+    - commerce_order
+    - commerce_payment
+    - commerce_price
+    - commerce_product
+    - commerce_promotion
+    - commerce_store
     - contact
     - dxpr_builder
+    - field_permissions
+    - file
     - filter
+    - mbgna_bed
     - mbgna_facility
+    - mbgna_honor
     - mbgna_organization
     - mbgna_plant
     - mbgna_resource
@@ -30,139 +64,223 @@ dependencies:
     - menu_admin_per_menu
     - node
     - path
+    - profile
     - quick_node_clone
+    - scheduler
     - system
     - taxonomy
     - toolbar
     - webform
+    - webform_node
+    - webform_submission_log
 id: editor
 label: Editor
 weight: -6
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access bed overview'
+  - 'access block library'
+  - 'access commerce administration pages'
   - 'access commerce_license overview'
+  - 'access commerce_order overview'
+  - 'access commerce_product overview'
+  - 'access commerce_product_attribute overview'
+  - 'access commerce_promotion overview'
+  - 'access commerce_store overview'
   - 'access content overview'
   - 'access facility overview'
+  - 'access files overview'
+  - 'access honor overview'
   - 'access media overview'
   - 'access organization overview'
   - 'access plant overview'
+  - 'access private fields'
+  - 'access profile overview'
   - 'access resource overview'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user contact forms'
   - 'access webform overview'
+  - 'access webform submission log'
+  - 'access webform submission user'
+  - 'add commerce_log commerce_license admin comment'
+  - 'add commerce_log commerce_order admin comment'
+  - 'administer commerce_currency'
+  - 'administer commerce_license'
+  - 'administer commerce_order'
+  - 'administer commerce_payment'
+  - 'administer commerce_payment_method'
+  - 'administer commerce_product'
+  - 'administer commerce_product_attribute'
+  - 'administer commerce_promotion'
+  - 'administer commerce_store'
   - 'administer footer menu items'
   - 'administer internal menu items'
   - 'administer main menu items'
   - 'administer mbgna_dxpr content'
   - 'administer mbgna_dxpr content_bottom'
+  - 'administer mbgna_dxpr content_top'
   - 'administer mbgna_dxpr highlighted'
-  - 'administer mbgna_dxpr page_bottom'
-  - 'administer mbgna_dxpr page_top'
   - 'administer mbgna_dxpr prefooter'
-  - 'administer mbgna_dxpr sidebar_first'
-  - 'administer mbgna_dxpr sidebar_second'
+  - 'administer media'
   - 'administer nodes'
   - 'administer pre-footer menu items'
+  - 'administer profile'
+  - 'administer url aliases'
   - 'administer users'
   - 'administer webform submission'
   - 'bypass node access'
+  - 'clone basic_page content'
   - 'clone drag_and_drop_page content'
   - 'clone event content'
   - 'clone position content'
   - 'clone post content'
-  - 'clone resource content'
   - 'clone webform content'
-  - 'create commerce_license'
+  - 'create basic_page content'
+  - 'create bed'
+  - 'create drag_and_drop_block block content'
   - 'create drag_and_drop_page content'
   - 'create event content'
   - 'create facility'
-  - 'create media'
+  - 'create honor'
   - 'create organization'
   - 'create plant'
   - 'create position content'
   - 'create post content'
   - 'create resource'
-  - 'create resource content'
+  - 'create simple_text block content'
   - 'create terms in blog_topics'
+  - 'create terms in bonsai_style_additional'
+  - 'create terms in bonsai_style_basic'
+  - 'create terms in bonsai_style_tag'
+  - 'create terms in common_name'
+  - 'create terms in countries'
+  - 'create terms in cultivar'
   - 'create terms in event_categories'
+  - 'create terms in family'
+  - 'create terms in genus'
   - 'create terms in interest'
+  - 'create terms in internal_resource'
   - 'create terms in kickers'
+  - 'create terms in leaf_duration'
+  - 'create terms in location'
+  - 'create terms in peony_color'
+  - 'create terms in peony_form'
+  - 'create terms in peony_season'
+  - 'create terms in plant_origin'
+  - 'create terms in realname_prefix'
+  - 'create terms in realname_suffix'
+  - 'create terms in species'
   - 'create url aliases'
   - 'create webform content'
-  - 'delete any commerce_license'
+  - 'delete any drag_and_drop_block block content'
+  - 'delete any drag_and_drop_block block content revisions'
   - 'delete any drag_and_drop_page content'
   - 'delete any event content'
-  - 'delete any media'
+  - 'delete any file'
   - 'delete any position content'
   - 'delete any post content'
-  - 'delete any resource content'
-  - 'delete any webform content'
+  - 'delete any simple_text block content'
+  - 'delete any simple_text block content revisions'
+  - 'delete bed'
   - 'delete drag_and_drop_page revisions'
   - 'delete event revisions'
   - 'delete facility'
+  - 'delete honor'
   - 'delete organization'
-  - 'delete own drag_and_drop_page content'
-  - 'delete own event content'
-  - 'delete own position content'
-  - 'delete own post content'
-  - 'delete own resource content'
   - 'delete own webform content'
   - 'delete plant'
   - 'delete position revisions'
   - 'delete post revisions'
   - 'delete resource'
-  - 'delete resource revisions'
   - 'delete terms in blog_topics'
+  - 'delete terms in bonsai_style_additional'
+  - 'delete terms in bonsai_style_basic'
+  - 'delete terms in bonsai_style_tag'
+  - 'delete terms in common_name'
+  - 'delete terms in countries'
+  - 'delete terms in cultivar'
   - 'delete terms in event_categories'
+  - 'delete terms in family'
+  - 'delete terms in genus'
   - 'delete terms in interest'
   - 'delete terms in kickers'
-  - 'delete webform revisions'
+  - 'delete terms in leaf_duration'
+  - 'delete terms in location'
+  - 'delete terms in peony_color'
+  - 'delete terms in peony_form'
+  - 'delete terms in peony_season'
+  - 'delete terms in plant_origin'
+  - 'delete terms in realname_prefix'
+  - 'delete terms in realname_suffix'
+  - 'delete terms in species'
+  - 'delete webform submissions any node'
+  - 'edit any drag_and_drop_block block content'
   - 'edit any drag_and_drop_page content'
   - 'edit any event content'
   - 'edit any position content'
   - 'edit any post content'
   - 'edit any resource content'
-  - 'edit any webform content'
+  - 'edit any simple_text block content'
+  - 'edit bed'
   - 'edit facility'
+  - 'edit honor'
   - 'edit organization'
   - 'edit own drag_and_drop_page content'
   - 'edit own event content'
   - 'edit own position content'
   - 'edit own post content'
-  - 'edit own resource content'
-  - 'edit own webform content'
   - 'edit plant'
   - 'edit resource'
   - 'edit terms in blog_topics'
+  - 'edit terms in bonsai_style_additional'
+  - 'edit terms in bonsai_style_basic'
+  - 'edit terms in bonsai_style_tag'
   - 'edit terms in event_categories'
+  - 'edit terms in family'
+  - 'edit terms in genus'
   - 'edit terms in interest'
   - 'edit terms in kickers'
+  - 'edit terms in leaf_duration'
+  - 'edit terms in location'
+  - 'edit terms in peony_color'
+  - 'edit terms in peony_form'
+  - 'edit terms in peony_season'
+  - 'edit terms in plant_origin'
+  - 'edit terms in realname_prefix'
+  - 'edit terms in realname_suffix'
+  - 'edit terms in species'
+  - 'edit webform submissions any node'
   - 'edit with dxpr builder'
+  - 'revert basic_page revisions'
   - 'revert drag_and_drop_page revisions'
   - 'revert event revisions'
   - 'revert position revisions'
   - 'revert post revisions'
-  - 'revert resource revisions'
-  - 'revert webform revisions'
-  - 'update any commerce_license'
-  - 'update any media'
+  - 'schedule publishing of commerce_product'
+  - 'schedule publishing of nodes'
+  - 'update any drag_and_drop_block block content'
+  - 'update any hours block content'
+  - 'update any instagram block content'
+  - 'update any simple_text block content'
   - 'use text format code'
   - 'use text format full_html'
   - 'use text format minimal_html'
   - 'view all media revisions'
-  - 'view any commerce_license'
+  - 'view basic_page revisions'
   - 'view drag_and_drop_page revisions'
   - 'view event revisions'
   - 'view facility'
+  - 'view honor'
   - 'view organization'
   - 'view own unpublished media'
   - 'view plant'
   - 'view position revisions'
   - 'view post revisions'
   - 'view resource'
-  - 'view resource revisions'
+  - 'view scheduled commerce_product'
+  - 'view scheduled content'
   - 'view the administration theme'
   - 'view user email addresses'
-  - 'view webform revisions'
+  - 'view webform submissions any node'

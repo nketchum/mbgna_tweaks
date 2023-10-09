@@ -1,0 +1,47 @@
+uuid: 20c19041-bcfc-4b0e-b80b-e628293c5ca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.organization.field_address
+    - mbgna_organization.organization_type.basic_organization
+  module:
+    - address
+id: organization.basic_organization.field_address
+field_name: field_address
+entity_type: organization
+bundle: basic_organization
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    postalCode:
+      override: optional
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    locality:
+      override: optional
+    administrativeArea:
+      override: optional
+  fields: {  }
+field_type: address

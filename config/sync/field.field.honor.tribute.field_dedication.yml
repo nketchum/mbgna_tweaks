@@ -1,0 +1,30 @@
+uuid: 483d2734-ff5a-4a5a-9e3f-75ff1217e622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_dedication
+    - filter.format.full_html
+    - filter.format.minimal_html
+    - mbgna_honor.honor_type.tribute
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: honor.tribute.field_dedication
+field_name: field_dedication
+entity_type: honor
+bundle: tribute
+label: Dedication
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - minimal_html
+    - full_html
+field_type: text_long

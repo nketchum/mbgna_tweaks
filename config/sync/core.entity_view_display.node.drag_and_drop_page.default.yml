@@ -3,16 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.collaborator_comment.default
     - field.field.node.drag_and_drop_page.body
-    - field.field.node.drag_and_drop_page.field_collaborator_comments
     - field.field.node.drag_and_drop_page.field_dth_hide_regions
     - field.field.node.drag_and_drop_page.field_dth_main_content_width
     - field.field.node.drag_and_drop_page.field_dth_page_layout
     - field.field.node.drag_and_drop_page.field_page_type
     - node.type.drag_and_drop_page
   module:
-    - comment
     - dxpr_builder
     - manage_display
   enforced:
@@ -31,15 +28,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_collaborator_comments:
-    type: comment_default
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 1
     region: content
   field_page_type:
     type: entity_reference_label

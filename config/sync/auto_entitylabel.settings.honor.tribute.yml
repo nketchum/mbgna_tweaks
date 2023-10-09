@@ -1,0 +1,9 @@
+status: 1
+pattern: '[honor:field_title:value]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - mbgna_honor.honor_type.tribute

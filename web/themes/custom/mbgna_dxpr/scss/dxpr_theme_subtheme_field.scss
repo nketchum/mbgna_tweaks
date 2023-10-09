@@ -94,6 +94,14 @@ article.post.full {
   border-radius: 10px;
 }
 
+article.listing {
+  .listing-title,
+  .field-name-body,
+  .field--type-button {
+    margin: 10px 0;
+  }
+}
+
 .block-grid, 
 .blazy.block-grid, 
 .item-list > .block-grid {

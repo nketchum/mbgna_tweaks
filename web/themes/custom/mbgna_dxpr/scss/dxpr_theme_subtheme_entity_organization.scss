@@ -1,0 +1,64 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+article.organization.full {
+  .article-kicker {
+    letter-spacing: 0.5px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+  }
+
+  .article-body-content-column-header {
+    border-bottom: 4px solid #eee;
+    padding-bottom: 6.5%;
+
+    .article-body-content-column-header-column-left {
+      padding-right: 10%;
+    }
+  }
+
+  .article-body-content-column-left {
+    padding-right: 10%;
+  }
+
+  .article-body-content-column-right {
+    & > .basic-fields > .field {
+      border-bottom: 2px solid #eee;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+
+      &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    & > .special-fields {
+      margin: 60px 0 0;
+    }
+  }
+}
+
+.view-organization {
+  &.view-display-id-block_1 {
+    margin: 6.5% 0;
+
+    .section-subtitle {
+      margin-top: -30px;
+    }
+
+    & > .view-content {
+      & > .views-row {
+        margin: 5% 0;
+        padding-bottom: 2.5%;
+        border-bottom: 1px solid #ddd;
+
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

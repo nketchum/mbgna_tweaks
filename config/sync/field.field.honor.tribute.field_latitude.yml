@@ -1,0 +1,23 @@
+uuid: fdd4046e-89a2-4151-ab34-8c078318aed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_latitude
+    - mbgna_honor.honor_type.tribute
+id: honor.tribute.field_latitude
+field_name: field_latitude
+entity_type: honor
+bundle: tribute
+label: Latitude
+description: 'Decimal format, e.g. "42.299253"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

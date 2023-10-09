@@ -1,0 +1,25 @@
+uuid: 8d827845-9b51-47f6-9c58-6b6981c9a2bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mbgna_organization
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: organization.field_contact_name
+field_name: field_contact_name
+entity_type: organization
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: 3cec0946-1cc6-48f9-bfb0-a80369c12dbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.honor.field_title
+    - mbgna_honor.honor_type.tribute
+  module:
+    - field_display_label
+third_party_settings:
+  field_display_label:
+    display_label: 'The publicly displayed title or name.'
+id: honor.tribute.field_title
+field_name: field_title
+entity_type: honor
+bundle: tribute
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

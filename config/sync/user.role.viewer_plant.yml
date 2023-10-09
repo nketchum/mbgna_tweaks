@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - comment
     - field_permissions
     - file
     - mbgna_bed
@@ -18,13 +17,10 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access bed overview'
-  - 'access comments'
   - 'access content overview'
   - 'access plant overview'
   - 'access toolbar'
   - 'delete own files'
-  - 'edit own comments'
-  - 'post comments'
   - 'view field_dimensions'
   - 'view field_donor'
   - 'view field_last_repot'

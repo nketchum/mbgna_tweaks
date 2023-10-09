@@ -1,0 +1,139 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+article.honor.full {
+  .article-kicker {
+    letter-spacing: 0.5px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+  }
+
+  .article-body-content-column-header,
+  .article-body-content-column-subheader {
+    padding-bottom: 6.5%;
+
+    .article-body-content-column-header-column-left,
+    .article-body-content-column-subheader-column-left {
+      padding-right: 10%;
+
+      img {
+        border-radius: 10px;
+      }
+    }
+
+    .article-body-content-column-header-column-left,
+    .article-body-content-column-header-column-right,
+    .article-body-content-column-subheader-column-left,
+    .article-body-content-column-subheader-column-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; 
+    }
+  }
+
+  .field--name-field-description,
+  .field--name-field-dedication {
+    background-color: $white;
+    padding: 30px;
+    border-radius: 10px;
+
+    .field__label {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 0.67em;
+    }
+  }
+
+  .field--name-field-map .field__item {
+    margin-top: 10px;
+  }
+
+  iframe {
+    border-radius: 10px;
+    height: 25vh;
+    min-height: 250px;
+    min-width: 250px;
+    width: 35vh;
+  }
+
+  .article-body-content-column-left {
+    padding-right: 10%;
+  }
+
+  .article-body-content-column-right {
+    & > .basic-fields > .field {
+      border-bottom: 2px solid #eee;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+
+      &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+#views-exposed-form-honor-page-2,
+#views-exposed-form-organization-page-2 {
+  background: white;
+  border-radius: 10px;
+  margin: 45px 0;
+  padding: 30px;
+
+  .form--inline {
+    display: flex;
+  }
+
+  .form-item {
+    margin-right: 1em !important;;
+  }
+
+  .form-actions .btn {
+    border-radius: 3px;
+    padding: 12px;
+  }
+
+
+
+}
+
+.view-honor.view-display-id-page_2,
+.view-organization.view-display-id-page_2 {
+  h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  .view-header  {
+    padding: 5% 0 0;;
+  }
+
+  // .page-title {
+  //   text-transform: lowercase;
+
+  //   &:first-letter {
+  //     text-transform: capitalize;
+  //   }
+  // }
+
+  .table {
+    .tablesort--asc {
+      height: 13px;
+    }
+  }
+
+  .table > :not(caption) > * > * {
+    background-color: transparent;
+    padding: 15px;
+    vertical-align: middle;
+  }
+
+  .table {
+    .dropbutton {
+      li, a {
+        margin: inherit !important;
+      }
+    }
+  }
+}

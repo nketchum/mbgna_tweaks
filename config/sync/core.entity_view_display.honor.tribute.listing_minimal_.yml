@@ -1,0 +1,125 @@
+uuid: 2de09cee-9fd9-4e33-82fa-f2ea0b9f7f9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.honor.listing_minimal_
+    - field.field.honor.tribute.field_available
+    - field.field.honor.tribute.field_dedication
+    - field.field.honor.tribute.field_description
+    - field.field.honor.tribute.field_latitude
+    - field.field.honor.tribute.field_location
+    - field.field.honor.tribute.field_longitude
+    - field.field.honor.tribute.field_primary_image
+    - field.field.honor.tribute.field_realization_month
+    - field.field.honor.tribute.field_realization_year
+    - field.field.honor.tribute.field_secondary_image
+    - field.field.honor.tribute.field_title
+    - field.field.honor.tribute.field_type
+    - image.style.medium_square_ish_rectangle
+    - mbgna_honor.honor_type.tribute
+  module:
+    - blazy
+    - field_formatter_class
+    - manage_display
+id: honor.tribute.listing_minimal_
+targetEntityType: honor
+bundle: tribute
+mode: listing_minimal_
+content:
+  field_available:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 3
+    region: content
+  field_primary_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      class: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: title
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      background: false
+      box_caption: title
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: medium_square_ish_rectangle
+      media_switch: content
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  field_title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h3
+    third_party_settings:
+      field_formatter_class:
+        class: listing-title
+    weight: 1
+    region: content
+  field_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 2
+    region: content
+hidden:
+  created: true
+  field_dedication: true
+  field_description: true
+  field_latitude: true
+  field_longitude: true
+  field_realization_month: true
+  field_realization_year: true
+  field_secondary_image: true
+  label: true
+  status: true

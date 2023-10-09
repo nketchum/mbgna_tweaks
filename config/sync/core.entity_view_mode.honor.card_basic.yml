@@ -1,0 +1,10 @@
+uuid: 46a28862-098f-4340-858e-01de1cae813e
+langcode: en
+status: true
+dependencies:
+  module:
+    - mbgna_honor
+id: honor.card_basic
+label: 'Card (basic)'
+targetEntityType: honor
+cache: true
