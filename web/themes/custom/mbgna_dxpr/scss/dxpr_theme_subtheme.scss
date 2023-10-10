@@ -111,3 +111,51 @@ a:focus,
 .faded {
   opacity: 0.5;
 }
+
+@media (min-width: 768px) {
+  .webform-flex--container {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .webform-flexbox {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .webform-flexbox .webform-flexbox {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .webform-address {
+    .webform-flexbox:first-child {
+      margin-top: 0;
+    }
+
+    .webform-flexbox:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .webform-address__city,
+  .webform-address__province {
+    margin-right: 1em;
+  }
+
+  .webform-flex--container > .form-item {
+    margin: 0;
+
+    .webform-flex {
+      margin-right: 1em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
