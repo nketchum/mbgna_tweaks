@@ -190,3 +190,25 @@ select.form-select {
     order: 6;
   }
 }
+
+.webform-multiple-table {
+  margin-bottom: 15px;
+
+  .table > thead {
+    display: none;
+  }
+
+  .table > :not(caption) > * > * {
+    padding: 15px 0;
+    background-color: transparent;
+  }
+}
+
+.webform-multiple-add {
+  // Make it small, like .btn-sm
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 4px;
+  }
+}
