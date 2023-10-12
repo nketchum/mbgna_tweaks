@@ -1,0 +1,113 @@
+uuid: 53da1105-f4fb-46f5-968d-8a173b8320b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.personal.field_organization
+    - field.field.profile.personal.field_phone_primary
+    - field.field.profile.personal.field_photo
+    - field.field.profile.personal.field_realname_first
+    - field.field.profile.personal.field_realname_last
+    - field.field.profile.personal.field_realname_middle
+    - field.field.profile.personal.field_realname_prefix
+    - field.field.profile.personal.field_realname_suffix
+    - field.field.profile.personal.field_title
+    - profile.type.personal
+  module:
+    - field_group
+    - media_library
+    - telephone
+third_party_settings:
+  field_group:
+    group_name:
+      children:
+        - field_realname_prefix
+        - field_realname_first
+        - field_realname_middle
+        - field_realname_last
+        - field_realname_suffix
+      label: Name
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: false
+id: profile.personal.default
+targetEntityType: profile
+bundle: personal
+mode: default
+content:
+  field_organization:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone_primary:
+    type: telephone_default
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_photo:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_realname_first:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_realname_last:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_realname_middle:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_realname_prefix:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_realname_suffix:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  is_default: true
+  revision_log_message: true

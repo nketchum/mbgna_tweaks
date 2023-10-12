@@ -16,7 +16,7 @@ elements: |-
   basic_information:
     '#type': webform_wizard_page
     '#title': 'Basic Information'
-    '#next_button_label': 'Artist Information'
+    '#next_button_label': 'Next page ›'
     processed_text:
       '#type': processed_text
       '#text': '<h2>Art Exhibit Application</h2><p>Matthaei Botanical Gardens is seeking applications from artists to exhibit in our Visitor Center. We are currently booking for 2023 and 2024.</p><p>Matthaei Botanical Gardens is dedicated to promoting environmental enjoyment, stewardship and sustainability. Art exhibits in our Visitor Center connect to a vast audience from the local area and abroad, from young and old, and from a wide variety of backgrounds and experiences.</p><p>Contemporary or traditional approaches to nature-based art are welcome. Artists should have a minimum of 25 works ready for exhibition. Groups are welcome to apply. 2D media preferred, but some 3D work can be arranged on display. Applications will be considered on a rotating basis. Not all who apply will be selected.</p><h4>Questions?</h4><p>Contact Alexis Ford at forda@umich.edu or 734-647-8391</p>'
@@ -26,8 +26,10 @@ elements: |-
       '#title': 'Full name'
       '#title__access': false
       '#first__placeholder': 'First name'
+      '#first__title_display': invisible
       '#middle__access': false
       '#last__placeholder': 'Last name'
+      '#last__title_display': invisible
       '#suffix__access': false
       '#degree__access': false
     address:
@@ -35,14 +37,20 @@ elements: |-
       '#title': Address
       '#address__title': 'Street Address Line 1'
       '#address__placeholder': 'Street Address Line 1'
+      '#address__title_display': invisible
       '#address_2__title': 'Street Address Line 2'
       '#address_2__placeholder': 'Street Address Line 2'
+      '#address_2__title_display': invisible
       '#city__title': City
       '#city__placeholder': City
+      '#city__title_display': invisible
       '#state_province__placeholder': State/Province
+      '#state_province__title_display': invisible
       '#postal_code__title': ZIP/Postal
       '#postal_code__placeholder': ZIP/Postal
+      '#postal_code__title_display': invisible
       '#country__placeholder': Country
+      '#country__title_display': invisible
     phone:
       '#type': tel
       '#title': Phone
@@ -60,11 +68,12 @@ elements: |-
       '#title__access': false
       '#url__title': Website
       '#url__placeholder': Website
+      '#url__title_display': invisible
   artist_information:
     '#type': webform_wizard_page
     '#title': 'Artist Information'
-    '#prev_button_label': 'Basic Information'
-    '#next_button_label': Artwork
+    '#prev_button_label': '‹ Previous'
+    '#next_button_label': 'Next ›'
     artist_bio:
       '#type': textarea
       '#title': 'Artist bio'
@@ -83,10 +92,15 @@ elements: |-
   artwork:
     '#type': webform_wizard_page
     '#title': Artwork
+    '#prev_button_label': '‹ Previous page'
+    '#next_button_label': 'Next page ›'
     image_1:
-      '#type': details
+      '#type': webform_section
       '#title': 'Image 1'
       '#open': true
+      '#title_tag': h3
+      '#attributes':
+        style: 'border: 1px solid #ddd; padding: 30px; border-radius: 10px;'
       image_1_upload:
         '#type': webform_image_file
         '#title': Upload
@@ -106,8 +120,11 @@ elements: |-
         '#title_display': invisible
         '#placeholder': Size
     image_2:
-      '#type': details
+      '#type': webform_section
       '#title': 'Image 2'
+      '#title_tag': h3
+      '#attributes':
+        style: 'border: 1px solid #ddd; padding: 30px; border-radius: 10px;'
       image_2_upload:
         '#type': webform_image_file
         '#title': Upload
@@ -127,11 +144,29 @@ elements: |-
         '#title_display': invisible
         '#placeholder': Size
     image_3:
-      '#type': details
+      '#type': webform_section
       '#title': 'Image 3'
+      '#title_tag': h3
+      '#attributes':
+        style: 'border: 1px solid #ddd; padding: 30px; border-radius: 10px;'
       image_3_upload:
         '#type': webform_image_file
         '#title': Upload
+      image_3_title:
+        '#type': textfield
+        '#title': 'Image Title'
+        '#title_display': invisible
+        '#placeholder': Title
+      image_3_medium:
+        '#type': textfield
+        '#title': Medium
+        '#title_display': invisible
+        '#placeholder': Medium
+      image_3_size:
+        '#type': textfield
+        '#title': Size
+        '#title_display': invisible
+        '#placeholder': Size
 css: ''
 javascript: ''
 settings:
@@ -141,15 +176,15 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: ''
+  page_submit_path: /exhibit-your-art
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
-  form_previous_submissions: true
+  form_previous_submissions: false
   form_confidential: false
   form_confidential_message: ''
   form_disable_remote_addr: false
@@ -173,7 +208,10 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
-  form_attributes: {  }
+  form_attributes:
+    class:
+      - container-white
+      - container-squeeze
   form_method: ''
   form_action: ''
   share: false
@@ -236,12 +274,12 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: inline
   confirmation_url: ''
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: 'Submission successful'
+  confirmation_message: '<p>Thank you for your submission. We will respond as soon as possible.</p><p><a href="/">‹ Back to the home page</a></p>'
   confirmation_attributes: {  }
-  confirmation_back: true
+  confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false

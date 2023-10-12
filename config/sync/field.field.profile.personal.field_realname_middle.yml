@@ -1,0 +1,19 @@
+uuid: 706436ea-b911-4445-90c6-df8fb520eb9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_realname_middle
+    - profile.type.personal
+id: profile.personal.field_realname_middle
+field_name: field_realname_middle
+entity_type: profile
+bundle: personal
+label: 'Middle name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

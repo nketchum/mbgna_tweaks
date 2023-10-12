@@ -1,0 +1,29 @@
+uuid: e7d0de17-ff60-4797-9b99-6ea5f0f502fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_realname_prefix
+    - profile.type.personal
+    - taxonomy.vocabulary.realname_prefix
+id: profile.personal.field_realname_prefix
+field_name: field_realname_prefix
+entity_type: profile
+bundle: personal
+label: 'Name prefix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      realname_prefix: realname_prefix
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

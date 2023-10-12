@@ -1,0 +1,34 @@
+uuid: ef583aff-1f01-4c54-9aa7-98407a4071bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_photo
+    - media.type.image
+    - profile.type.personal
+  content:
+    - 'media:image:d18d3da4-151b-48cf-98d5-abeed5e8c4f5'
+id: profile.personal.field_photo
+field_name: field_photo
+entity_type: profile
+bundle: personal
+label: Photo
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: d18d3da4-151b-48cf-98d5-abeed5e8c4f5
+    weight: 0
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

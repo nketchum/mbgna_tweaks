@@ -1,0 +1,19 @@
+uuid: a31ba7d6-01bb-4b2a-87e3-f1b8f7280e53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_title
+    - profile.type.personal
+id: profile.personal.field_title
+field_name: field_title
+entity_type: profile
+bundle: personal
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
