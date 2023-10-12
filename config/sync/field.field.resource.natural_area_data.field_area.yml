@@ -1,0 +1,29 @@
+uuid: 4f9b9b9a-c12f-4889-8bc6-ee9f4c5773f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.resource.field_area
+    - mbgna_resource.resource_type.natural_area_data
+    - taxonomy.vocabulary.resource_areas
+id: resource.natural_area_data.field_area
+field_name: field_area
+entity_type: resource
+bundle: natural_area_data
+label: Area
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_areas: resource_areas
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

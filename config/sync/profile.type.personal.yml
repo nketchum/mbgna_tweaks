@@ -1,0 +1,20 @@
+uuid: 278b0842-9385-45ea-9c5d-c9f26138d57a
+langcode: en
+status: true
+dependencies: {  }
+id: personal
+label: Personal
+display_label: 'My profile2'
+multiple: false
+registration: false
+roles:
+  member_student: member_student
+  member_individual: member_individual
+  member_couple: member_couple
+  member_family_tree: member_family_tree
+  member_sustaining: member_sustaining
+  member_sponsor: member_sponsor
+  member_benefactor: member_benefactor
+  member_directors_circle: member_directors_circle
+allow_revisions: false
+new_revision: false

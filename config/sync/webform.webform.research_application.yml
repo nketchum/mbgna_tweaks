@@ -13,10 +13,312 @@ title: 'Research Application'
 description: ''
 categories: {  }
 elements: |-
-  project_name_or_title:
-    '#type': textfield
-    '#title': 'Project name or title'
-    '#required': true
+  markup_09:
+    '#type': webform_markup
+    '#markup': '<h2>Research Application</h2>'
+  page_1:
+    '#type': webform_wizard_page
+    '#title': 'Page 1'
+    '#next_button_label': 'Next page ›'
+    markup_03:
+      '#type': webform_markup
+      '#markup': '<h4>Project summary</h4>'
+    project_name_or_title:
+      '#type': textfield
+      '#title': 'Project name or title'
+      '#title_display': invisible
+      '#placeholder': 'Project name'
+      '#required': true
+    length_of_project:
+      '#type': select
+      '#title': 'Length of project'
+      '#title_display': invisible
+      '#options':
+        'Six weeks or less': 'Six weeks or less'
+        'More than six weeks': 'More than six weeks'
+      '#empty_option': 'Length of project'
+    markup:
+      '#type': webform_markup
+      '#wrapper_attributes':
+        style: 'margin-top: 30px;'
+      '#markup': '<h4>Investigator information</h4>'
+    flexbox:
+      '#type': webform_flexbox
+      '#attributes':
+        class:
+          - webform-flexbox-mbgna
+      investigator:
+        '#type': webform_name
+        '#title': Investigator
+        '#title__access': false
+        '#title__placeholder': Title
+        '#title__title_display': invisible
+        '#first__placeholder': "Investigator's first name"
+        '#first__title_display': invisible
+        '#middle__access': false
+        '#last__placeholder': "Investigator's last name"
+        '#last__title_display': invisible
+        '#suffix__access': false
+        '#degree__placeholder': Suffix
+        '#degree__title_display': invisible
+    investigator_email:
+      '#type': email
+      '#title': 'Investigator email'
+      '#title_display': invisible
+      '#placeholder': 'Investigator email'
+    _investigator_phone_number:
+      '#type': tel
+      '#title': ' Investigator Phone Number'
+      '#title_display': invisible
+      '#placeholder': " Investigator's phone number"
+    position:
+      '#type': select
+      '#title': Position
+      '#title_display': invisible
+      '#options':
+        None: None
+        Faculty: Faculty
+        'BS student': 'BS student'
+        'BA student': 'BA student'
+        'MS student': 'MS student'
+        'MA student': 'MA student'
+        'Ph.D. student': 'Ph.D. student'
+        'Ph.D. candidate': 'Ph.D. candidate'
+      '#empty_option': Position
+      '#empty_value': Position
+    markup_01:
+      '#type': webform_markup
+      '#wrapper_attributes':
+        style: 'margin-top: 30px;'
+      '#markup': '<h4>Department/school information</h4>'
+    department_or_school:
+      '#type': textfield
+      '#title': 'Department or school'
+      '#title_display': invisible
+      '#placeholder': 'Department or school'
+    department_or_school_phone_number:
+      '#type': tel
+      '#title': 'Department or school phone number'
+      '#title_display': invisible
+      '#placeholder': 'Department or school phone'
+    department_or_school_address:
+      '#type': webform_address
+      '#title': 'Department or school address'
+      '#address__placeholder': 'Address 1'
+      '#address__title_display': invisible
+      '#address_2__placeholder': 'Address 2'
+      '#address_2__title_display': invisible
+      '#city__title': City
+      '#city__placeholder': City
+      '#city__title_display': invisible
+      '#state_province__placeholder': State/Province
+      '#state_province__title_display': invisible
+      '#postal_code__placeholder': 'ZIP/Postal Code'
+      '#postal_code__title_display': invisible
+      '#country__placeholder': Country
+      '#country__title_display': invisible
+    shortcode:
+      '#type': textfield
+      '#title': Shortcode
+      '#title_display': invisible
+      '#placeholder': Shortcode
+    _faculty_advisor_assistant_or_associate:
+      '#type': textfield
+      '#title': ' Faculty advisor, assistant, or associate'
+      '#title_display': invisible
+      '#placeholder': ' Faculty advisor, assistant, or associate'
+    markup_04:
+      '#type': webform_markup
+      '#wrapper_attributes':
+        style: 'margin-top: 30px;'
+      '#markup': '<h4>Project details</h4>'
+    project_summary:
+      '#type': textfield
+      '#title': 'Project description'
+      '#title_display': invisible
+      '#placeholder': 'Project summary'
+    flexbox_01:
+      '#type': webform_flexbox
+      '#attributes':
+        class:
+          - webform-flexbox-mbgna
+      expected_start_date:
+        '#type': date
+        '#title': 'Expected start'
+        '#title_display': before
+      expected_completion_date_:
+        '#type': date
+        '#title': 'Expected completion'
+        '#title_display': before
+    markup_05:
+      '#type': webform_markup
+      '#wrapper_attributes':
+        style: 'margin-top: 30px;'
+      '#markup': '<h4>Research type</h4>'
+    research_type:
+      '#type': select
+      '#title': 'Research type'
+      '#title_display': invisible
+      '#options':
+        'Faculty led': 'Faculty led'
+        'Student led': 'Student led'
+      '#empty_option': 'Project type'
+    flexbox_02:
+      '#type': webform_flexbox
+      um_project:
+        '#type': select
+        '#title': 'UM project'
+        '#title_display': invisible
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#empty_option': 'Is this a UM project?'
+      outdoor_field_research:
+        '#type': select
+        '#title': 'Outdoor/field research'
+        '#title_display': invisible
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#empty_option': 'Will your project involve outdoor/field research?'
+      indoor_research:
+        '#type': select
+        '#title': 'Indoor research'
+        '#title_display': invisible
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#empty_option': 'Will your project involve indoor research?'
+    markup_06:
+      '#type': webform_markup
+      '#wrapper_attributes':
+        style: 'margin-top: 30px;'
+      '#markup': '<h4>Additional information</h4>'
+    flexbox_03:
+      '#type': webform_flexbox
+      radioactive_materials:
+        '#type': select
+        '#title': 'Radioactive materials'
+        '#title_display': invisible
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#empty_option': 'Does your research include the use of radioactive materials?'
+      protected_species:
+        '#type': select
+        '#title': 'Protected species'
+        '#title_display': invisible
+        '#options':
+          'Yes': 'Yes'
+          'No': 'No'
+        '#empty_option': 'Does your research include the handling or taking of protected species?'
+    processed_text_01:
+      '#type': processed_text
+      '#text': '<p class="smallest">If you answer yes to either of the above, your request <strong>must</strong> submit copies of all the required permits and approvals.</p>'
+      '#format': full_html
+    publicity:
+      '#type': checkbox
+      '#title': 'Check if you do not want this information released for publicity purposes'
+  _page_2:
+    '#type': webform_wizard_page
+    '#title': ' Page 2'
+    '#prev_button_label': '‹ Previous page'
+    '#next_button_label': 'Next page ›'
+    markup_07:
+      '#type': webform_markup
+      '#markup': '<h4>Structures &amp; Major Equipment</h4>'
+    processed_text:
+      '#type': processed_text
+      '#text': '<p>Matthaei-Nichols will consider installations of major equipment and structures that: (a) have sufficient financial backing to support their operation (grants are available); (b) are relevant to Matthaei-Nichol’s mission; (c) are useful for future research; and/or (d) provide value for Matthaei-Nichols operations.</p>'
+      '#format': full_html
+  page_3:
+    '#type': webform_wizard_page
+    '#title': 'Page 3'
+    '#prev_button_label': '‹ Previous page'
+    '#next_button_label': 'Next page ›'
+    markup_08:
+      '#type': webform_markup
+      '#markup': '<h4>Structures &amp; Major Equipment</h4>'
+    description_of_equipment:
+      '#type': textarea
+      '#title': 'Description of equipment'
+      '#title_display': invisible
+      '#placeholder': 'Description of equipment'
+    structures_major_equipment:
+      '#type': select
+      '#title': 'Structures/major equipment'
+      '#title_display': invisible
+      '#options':
+        'Yes': 'Yes'
+        'No': 'No'
+      '#empty_option': 'Will your project need structures or major equipment?'
+    purchase_price:
+      '#type': number
+      '#title': 'Purchase price'
+      '#title_display': invisible
+      '#field_prefix': $
+      '#placeholder': 'Purchase price'
+    year_purchased:
+      '#type': number
+      '#title': 'Year purchased'
+      '#title_display': invisible
+      '#placeholder': 'Year purchased'
+      '#min': 1900
+      '#max': 2040
+      '#step': 1
+    requested_installation_date:
+      '#type': datelist
+      '#title': 'Requested installation date'
+      '#date_part_order':
+        - year
+        - month
+        - day
+    electrical_requirements:
+      '#type': select
+      '#title': 'Electrical requirements'
+      '#title_display': invisible
+      '#options':
+        Light: Light
+      '#empty_option': 'Electrical requirements'
+    heating_requirements:
+      '#type': select
+      '#title': 'Heating requirements'
+      '#title_display': invisible
+      '#options':
+        'Room temp': 'Room temp'
+      '#empty_option': 'Heating requirements'
+    other:
+      '#type': textfield
+      '#title': Other
+      '#title_display': invisible
+      '#placeholder': Other
+    shortcode_for_installation:
+      '#type': textfield
+      '#title': 'Shortcode for installation'
+      '#title_display': invisible
+      '#placeholder': 'Shortcode for installation costs'
+    removal:
+      '#type': datelist
+      '#title': Removal
+      '#date_part_order':
+        - year
+        - month
+        - day
+    removal_costs:
+      '#type': number
+      '#title': 'Removal costs'
+      '#title_display': invisible
+      '#field_prefix': $
+      '#placeholder': 'Anticipated removal costs'
+    shortcode_for_removal:
+      '#type': textfield
+      '#title': 'Shortcode for removal'
+      '#title_display': invisible
+      '#placeholder': 'Shortcode for removal costs'
+    processed_text_02:
+      '#type': processed_text
+      '#text': '<p class="smallest">Please contact <a href="mailto:mdpalmer@umich.edu">Mike Palmer</a> for assistance with installation requirements.</p>'
+      '#format': full_html
 css: ''
 javascript: ''
 settings:
@@ -26,15 +328,15 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: ''
+  page_submit_path: /research-application
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
-  form_previous_submissions: true
+  form_previous_submissions: false
   form_confidential: false
   form_confidential_message: ''
   form_disable_remote_addr: false
@@ -58,7 +360,10 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
-  form_attributes: {  }
+  form_attributes:
+    class:
+      - container-white
+      - container-squeeze
   form_method: ''
   form_action: ''
   share: false
@@ -121,12 +426,12 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: inline
   confirmation_url: ''
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: 'Submission successful'
+  confirmation_message: '<p>Your submission was successful. We will respond as soon as possible.</p><p><a href="/">‹ Return to the home page</a></p>'
   confirmation_attributes: {  }
-  confirmation_back: true
+  confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false

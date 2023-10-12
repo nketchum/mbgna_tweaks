@@ -1,0 +1,24 @@
+uuid: dc023a41-e56e-4567-beb1-b66559d1fe54
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mbgna_resource
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: resource.field_area
+field_name: field_area
+entity_type: resource
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

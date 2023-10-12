@@ -1,0 +1,29 @@
+uuid: ec4cb858-b55c-4f56-9b30-8f207afec3a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_realname_suffix
+    - profile.type.personal
+    - taxonomy.vocabulary.realname_suffix
+id: profile.personal.field_realname_suffix
+field_name: field_realname_suffix
+entity_type: profile
+bundle: personal
+label: 'Name suffix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      realname_suffix: realname_suffix
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
