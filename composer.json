@@ -281,6 +281,9 @@
             "drupal/core": {
                 "2966656 Negotiate max width/height of oEmbed assets more intelligently": "https://www.drupal.org/files/issues/2023-01-31/2966656-34.patch"
             },
+            "drupal/office_hours": {
+                "Fix Field cache for Anonymous users, only if Internal Page Cache is enabled": "https://www.drupal.org/files/issues/2023-09-04/office_hours_3385133-anonymous-cache.patch"
+            },
             "drupal/profile": {
                 "Drupal 10.1: fatal error on account creation": "https://www.drupal.org/files/issues/2023-07-24/handle-user-is-anonymous-hardening-3371850-8.patch"
             }
