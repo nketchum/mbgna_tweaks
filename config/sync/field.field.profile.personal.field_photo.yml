@@ -1,13 +1,12 @@
-uuid: ef583aff-1f01-4c54-9aa7-98407a4071bc
+uuid: 69bcb663-9797-41c6-ba6a-a745d6350cba
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.profile.field_photo
-    - media.type.image
     - profile.type.personal
-  content:
-    - 'media:image:d18d3da4-151b-48cf-98d5-abeed5e8c4f5'
+  module:
+    - image
 id: profile.personal.field_photo
 field_name: field_photo
 entity_type: profile
@@ -16,19 +15,24 @@ label: Photo
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    target_uuid: d18d3da4-151b-48cf-98d5-abeed5e8c4f5
-    weight: 0
+default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
-  handler_settings:
-    target_bundles:
-      image: image
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
-field_type: entity_reference
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: profiles
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 MB'
+  max_resolution: ''
+  min_resolution: 200x200
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: b622bcd5-83c2-4c68-8b70-ebea7a262122
+    alt: 'Default profile photo'
+    title: ''
+    width: 1200
+    height: 1600
+field_type: image

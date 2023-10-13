@@ -1,0 +1,10 @@
+uuid: de6c9d21-3b89-4205-9066-377f9db8d1bd
+langcode: en
+status: true
+dependencies: {  }
+id: admission
+label: Admission
+traits: {  }
+locked: false
+orderItemType: admission
+generateTitle: true

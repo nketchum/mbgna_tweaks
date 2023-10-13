@@ -203,6 +203,60 @@ function mbgna_dxpr_preprocess_user(&$variables) {
   } else { 
     $variables['privileged'] = FALSE;
   }
+
+  // Get other profile info in addition to account info.
+  // This is the "personal" profile for the user being viewed.
+  $profiles = \Drupal::entityTypeManager()
+    ->getStorage('profile')
+    ->loadByProperties([
+      'uid' => $profile_user->id(),
+      'type' => 'personal',
+    ]);
+
+  if ($profiles) {
+    // There will only ever be one personal
+    // profile for a user, therefore we can reset()
+    // the array pointer to the first (and only) 
+    // element and return that.
+    $profile = reset($profiles);
+
+    // Title from custom personal profile.
+    if (!$profile->get('field_title')->isEmpty()) {
+      $variables['profile']['field_title'] = $profile->get('field_title')->first()->getValue()['value'];
+    }
+
+    // Organization from custom personal profile.
+    if (!$profile->get('field_organization')->isEmpty()) {
+      $variables['profile']['field_organization'] = $profile->get('field_organization')->first()->getValue()['value'];
+    }
+
+    // Phone from custom personal profile.
+    if (!$profile->get('field_phone_primary')->isEmpty()) {
+      $variables['profile']['field_phone_primary'] = $profile->get('field_phone_primary')->first()->getValue()['value'];
+    }
+
+    // User photo from custom personal profile.
+    if ($profile->get('field_photo')->first() && $field = $profile->get('field_photo')->first()->getValue()) {
+      // Show user-uploaded photo.
+      $file = \Drupal\file\Entity\File::load($field['target_id']);
+      $image_uri = $file->getFileUri();
+      $style = Drupal\image\Entity\ImageStyle::load('medium_square');
+      $url = $style->buildUrl($image_uri);
+      $markup = '<img src="'. $url .'" class="img-fluid">';
+      $variables['profile']['field_photo'] = $markup;    
+    } else {
+      // Show default photo.
+      $field_info = Drupal\field\Entity\FieldConfig::loadByName('profile', 'personal', 'field_photo');
+      $image_uuid = $field_info->getSetting('default_image')['uuid'];
+      $file = Drupal::service('entity.repository')->loadEntityByUuid('file', $image_uuid);
+      $image_uri = $file->getFileUri();
+      $style = Drupal\image\Entity\ImageStyle::load('medium_square');
+      $url = $style->buildUrl($image_uri);
+      $markup = '<img src="'. $url .'" class="img-fluid">';
+      $variables['profile']['field_photo'] = $markup;
+    }
+
+  }
 }
 
 /**

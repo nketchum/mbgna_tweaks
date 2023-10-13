@@ -18,6 +18,21 @@
       return $(this).css('color', '#666666');
         }
       });
+
+      var account_form = $('.user-form .form-type-password-confirm');
+      if (account_form) {
+        var pass1 = $(account_form).find('.form-item-pass-pass1');
+        var pass1_label = $(pass1).find('label');
+        $(pass1_label).addClass('hidden');
+        var pass1_input = $(pass1).find('input');
+        $(pass1_input).attr('placeholder', 'Password...');
+
+        var pass2 = $(account_form).find('.form-item-pass-pass2');
+        var pass2_label = $(pass2).find('label');
+        $(pass2_label).addClass('hidden');
+        var pass2_input = $(pass2).find('input');
+        $(pass2_input).attr('placeholder', 'Confirm password...');
+      }
     }
   }
 })(jQuery, Drupal, once);

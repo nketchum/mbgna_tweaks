@@ -2,9 +2,12 @@ uuid: 278b0842-9385-45ea-9c5d-c9f26138d57a
 langcode: en
 status: true
 dependencies: {  }
+third_party_settings:
+  commerce_order:
+    customer_profile_type: false
 id: personal
 label: Personal
-display_label: 'My profile2'
+display_label: 'My profile'
 multiple: false
 registration: false
 roles:

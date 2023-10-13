@@ -5,16 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.user.full_name
     - field.field.user.user.commerce_remote_id
-    - field.field.user.user.field_bio
-    - field.field.user.user.field_organization
-    - field.field.user.user.field_photo
     - field.field.user.user.field_realname_first
     - field.field.user.user.field_realname_last
-    - field.field.user.user.field_realname_middle
-    - field.field.user.user.field_realname_prefix
-    - field.field.user.user.field_realname_suffix
-    - field.field.user.user.field_telephone_primary
-    - field.field.user.user.field_title
   module:
     - user
 id: user.user.full_name
@@ -30,15 +22,9 @@ content:
 hidden:
   commerce_remote_id: true
   customer_profiles: true
-  field_bio: true
-  field_organization: true
-  field_photo: true
+  dxpr_user_is_disavowed: true
   field_realname_first: true
   field_realname_last: true
-  field_realname_middle: true
-  field_realname_prefix: true
-  field_realname_suffix: true
-  field_telephone_primary: true
-  field_title: true
   member_for: true
   name: true
+  personal_profiles: true

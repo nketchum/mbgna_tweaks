@@ -40,20 +40,14 @@ content:
     weight: 2
     region: content
   field_photo:
-    type: blazy_media
+    type: blazy
     label: hidden
     settings:
       caption:
         alt: '0'
         title: '0'
-      class: ''
-      image: ''
-      link: ''
-      overlay: ''
-      title: ''
-      vanilla: false
       layout: ''
-      view_mode: default
+      view_mode: ''
       cache: 0
       background: false
       box_caption: ''
@@ -72,12 +66,6 @@ content:
       grid_medium: ''
       grid_small: ''
       style: ''
-      svg_inline: false
-      svg_fill: false
-      svg_sanitize: true
-      svg_sanitize_remote: false
-      svg_hide_caption: false
-      svg_attributes: ''
     third_party_settings:
       field_formatter_class:
         class: ''

@@ -6,12 +6,12 @@ form {
   }
 }
 
-// .webform-submission-form {
-//   .form-item,
-//   .form-actions {
-//     margin: 0;
-//   }
-// }
+.form-item {
+  .description,
+  .password-confirm-message {
+    color: #999;
+  }
+}
 
 .prefooter-form-newsletter {
   form {
@@ -210,5 +210,57 @@ select.form-select {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     border-radius: 4px;
+  }
+}
+
+.profile-form {
+  fieldset.form-item {
+    margin-bottom: -1em;
+  }
+
+  .field--widget-image-image {
+    max-width: 250px;
+
+    label {
+      display: none;
+    }
+
+    .form-type-managed-file {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px; 
+    }
+
+    input[type="file"] {
+      border: none;
+      padding: 0;
+      margin: 15px 0 0;
+    }
+
+    .description {
+      display: none;
+    }
+  }
+}
+
+// First/middle/last name fields.
+.profile-form {
+  #edit-group-name {
+    .fieldset-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }  
+}
+
+.user-form,
+.user-register-form {
+  .confirm-parent,
+  .password-parent {
+    margin: inherit;
+  }
+
+  .password-confirm-message {
+    font-size: 0.85em;
   }
 }

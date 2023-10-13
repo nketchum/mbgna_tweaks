@@ -5,83 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.user.card_basic
     - field.field.user.user.commerce_remote_id
-    - field.field.user.user.field_bio
-    - field.field.user.user.field_organization
-    - field.field.user.user.field_photo
     - field.field.user.user.field_realname_first
     - field.field.user.user.field_realname_last
-    - field.field.user.user.field_realname_middle
-    - field.field.user.user.field_realname_prefix
-    - field.field.user.user.field_realname_suffix
-    - field.field.user.user.field_telephone_primary
-    - field.field.user.user.field_title
-    - image.style.medium_square
   module:
-    - blazy
-    - field_formatter_class
     - user
 id: user.user.card_basic
 targetEntityType: user
 bundle: user
 mode: card_basic
 content:
-  field_organization:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_photo:
-    type: blazy_media
-    label: hidden
-    settings:
-      caption:
-        title: '0'
-        alt: '0'
-      class: ''
-      id: ''
-      image: ''
-      link: ''
-      overlay: ''
-      title: ''
-      vanilla: false
-      layout: ''
-      view_mode: default
-      cache: 0
-      skin: ''
-      lazy: ''
-      style: ''
-      background: false
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      loading: ''
-      preload: false
-      responsive_image_style: ''
-      use_theme_field: false
-      box_style: ''
-      image_style: medium_square
-      media_switch: ''
-      ratio: ''
-      thumbnail_style: ''
-      grid: ''
-      grid_medium: ''
-      grid_small: ''
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 0
-    region: content
-  field_title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
   realname:
     settings: {  }
     third_party_settings: {  }
@@ -90,12 +22,9 @@ content:
 hidden:
   commerce_remote_id: true
   customer_profiles: true
-  field_bio: true
+  dxpr_user_is_disavowed: true
   field_realname_first: true
   field_realname_last: true
-  field_realname_middle: true
-  field_realname_prefix: true
-  field_realname_suffix: true
-  field_telephone_primary: true
   member_for: true
   name: true
+  personal_profiles: true

@@ -1,10 +1,11 @@
-uuid: 4364d70c-eca2-4639-8251-5037bf49ad12
+uuid: 6e8df313-4a67-4d80-b7d2-1b8aff0760cb
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - media
+    - file
+    - image
     - profile
 third_party_settings:
   field_permissions:
@@ -12,10 +13,19 @@ third_party_settings:
 id: profile.field_photo
 field_name: field_photo
 entity_type: profile
-type: entity_reference
+type: image
 settings:
-  target_type: media
-module: core
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 15b54cce-0b7d-46a0-bbca-ff1b92f2ebd2
+    alt: 'Default profile photo'
+    title: ''
+    width: 1200
+    height: 1600
+module: image
 locked: false
 cardinality: 1
 translatable: true

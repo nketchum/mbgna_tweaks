@@ -231,6 +231,11 @@ a,
   }
 }
 
+.btn-danger, .button--danger {
+  border-color: $red !important;
+  background-color: $red !important;
+}
+
 // Icons for bootstrap buttons.
 .icon {
   a.btn {

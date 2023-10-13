@@ -5,43 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.commerce_remote_id
-    - field.field.user.user.field_bio
-    - field.field.user.user.field_organization
-    - field.field.user.user.field_photo
     - field.field.user.user.field_realname_first
     - field.field.user.user.field_realname_last
-    - field.field.user.user.field_realname_middle
-    - field.field.user.user.field_realname_prefix
-    - field.field.user.user.field_realname_suffix
-    - field.field.user.user.field_telephone_primary
-    - field.field.user.user.field_title
   module:
-    - field_formatter_class
-    - text
     - user
 id: user.user.compact
 targetEntityType: user
 bundle: user
 mode: compact
 content:
-  field_bio:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_photo:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: card_basic
-      link: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 0
-    region: content
   realname:
     settings: {  }
     third_party_settings: {  }
@@ -50,13 +22,9 @@ content:
 hidden:
   commerce_remote_id: true
   customer_profiles: true
-  field_organization: true
+  dxpr_user_is_disavowed: true
   field_realname_first: true
   field_realname_last: true
-  field_realname_middle: true
-  field_realname_prefix: true
-  field_realname_suffix: true
-  field_telephone_primary: true
-  field_title: true
   member_for: true
   name: true
+  personal_profiles: true
