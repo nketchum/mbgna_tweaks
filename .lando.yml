@@ -8,9 +8,11 @@ recipe: drupal9
   # - web/modules/contrib
   # - web/profiles
   # - web/themes/contrib
-  # - "!web/modules/contrib/mbgna_arcgis"
+  # - "!web/modules/custom/mbgna_arcgis"
   # - "!web/modules/contrib/mbgna_bed"
   # - "!web/modules/contrib/mbgna_facility"
+  # - "!web/modules/contrib/mbgna_honor"
+  # - "!web/modules/contrib/mbgna_menu"
   # - "!web/modules/contrib/mbgna_organization"
   # - "!web/modules/contrib/mbgna_plant"
   # - "!web/modules/contrib/mbgna_resource"
