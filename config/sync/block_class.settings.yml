@@ -2,7 +2,7 @@ maxlength_block_class_field: 255
 field_type: multiple_textfields
 default_case: standard
 allow_only_letters_and_numbers: false
-block_classes_stored: '{"main-nav-dropdown":"main-nav-dropdown","block-content-followup":"block-content-followup","hide-on-wide":"hide-on-wide","nav-mobile":"nav-mobile","hide-on-narrow":"hide-on-narrow","hide-on-medium":"hide-on-medium","hidden":"hidden","popup":"popup","section-menu":"section-menu","section-nav":"section-nav","boxed-fields":"boxed-fields","boxed-fields-light":"boxed-fields-light"}'
+block_classes_stored: '{"main-nav-dropdown":"main-nav-dropdown","block-content-followup":"block-content-followup","hide-on-wide":"hide-on-wide","nav-mobile":"nav-mobile","hide-on-narrow":"hide-on-narrow","hide-on-medium":"hide-on-medium","hidden":"hidden","popup":"popup","section-menu":"section-menu","section-nav":"section-nav","boxed-fields":"boxed-fields","boxed-fields-light":"boxed-fields-light","new-mobile-nav":"new-mobile-nav","mobile-nav":"mobile-nav"}'
 enable_attributes: true
 enable_auto_complete: true
 qty_classes_per_block: 10

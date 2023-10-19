@@ -1,0 +1,8 @@
+uuid: 71da7261-6c4b-4de9-8e06-636befe2f2c5
+langcode: en
+status: true
+dependencies: {  }
+id: nichols_arboretum_hours
+label: 'Nichols Arboretum Hours'
+revision: 0
+description: 'Provides hours for Nichols Arboretum.'

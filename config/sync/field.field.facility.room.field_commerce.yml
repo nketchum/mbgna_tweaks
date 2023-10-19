@@ -1,0 +1,29 @@
+uuid: 22cc6537-9f2d-4668-bc51-29454804847c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rental
+    - field.storage.facility.field_commerce
+    - mbgna_facility.facility_type.room
+id: facility.room.field_commerce
+field_name: field_commerce
+entity_type: facility
+bundle: room
+label: Commerce
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      rental: rental
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

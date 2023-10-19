@@ -1,0 +1,40 @@
+uuid: e6c7d942-af21-4dd8-9bac-cba7df48486f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nichols_arboretum_hours
+    - field.field.block_content.nichols_arboretum_hours.field_annotation
+    - field.field.block_content.nichols_arboretum_hours.field_location_hours
+  module:
+    - office_hours
+id: block_content.nichols_arboretum_hours.default
+targetEntityType: block_content
+bundle: nichols_arboretum_hours
+mode: default
+content:
+  field_annotation:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location_hours:
+    type: office_hours_default
+    weight: 1
+    region: content
+    settings:
+      collapsed: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  revision_log: true

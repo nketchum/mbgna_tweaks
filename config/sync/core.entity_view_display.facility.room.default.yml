@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.facility.room.field_capacity
+    - field.field.facility.room.field_commerce
     - field.field.facility.room.field_description
     - field.field.facility.room.field_image
     - field.field.facility.room.field_images
@@ -33,6 +34,17 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_commerce:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: 'boxed-fields boxed-field-light'
+    weight: 7
+    region: content
   field_description:
     type: text_default
     label: hidden
@@ -48,7 +60,6 @@ content:
         title: '0'
         alt: '0'
       class: ''
-      id: ''
       image: ''
       link: ''
       overlay: ''
@@ -57,9 +68,6 @@ content:
       layout: ''
       view_mode: default
       cache: 0
-      skin: ''
-      lazy: ''
-      style: ''
       background: false
       box_caption: ''
       box_caption_custom: ''
@@ -76,6 +84,13 @@ content:
       grid: ''
       grid_medium: ''
       grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
     third_party_settings:
       field_formatter_class:
         class: ''
@@ -89,7 +104,6 @@ content:
         title: '0'
         alt: '0'
       class: ''
-      id: ''
       image: ''
       link: ''
       overlay: ''
@@ -98,9 +112,6 @@ content:
       layout: ''
       view_mode: default
       cache: 0
-      skin: ''
-      lazy: ''
-      style: grid
       background: false
       box_caption: title
       box_caption_custom: ''
@@ -117,6 +128,13 @@ content:
       grid: '3'
       grid_medium: '3'
       grid_small: '1'
+      style: grid
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
     third_party_settings:
       field_formatter_class:
         class: ''
@@ -131,7 +149,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: 'boxed-fields boxed-fields-light'
-    weight: 7
+    weight: 8
     region: content
   field_mbgna_location:
     type: entity_reference_label

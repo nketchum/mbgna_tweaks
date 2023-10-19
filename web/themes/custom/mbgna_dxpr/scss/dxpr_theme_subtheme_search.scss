@@ -1,0 +1,40 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+.path-search {
+  .region-content {
+    h2, h3 {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #edit-help-link {
+      display: none;
+    }
+
+    .search-form {
+      button::after {
+        display: none;
+      }
+    }
+
+    .node_search-results {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+    }
+
+    .pagination .page-item .page-link {
+      border-color: $black;
+      color: $black;
+      background-color: transparent;
+    }
+
+    .pagination .page-item.active .page-link {
+      border-color: $blue-secondary;
+      color: $white;
+      background-color: $blue-secondary;
+    }
+  }
+}
+

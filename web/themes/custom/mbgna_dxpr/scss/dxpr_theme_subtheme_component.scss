@@ -317,6 +317,10 @@ header > div {
 }
 
 #menu-prefooter {
+  @media (max-width: 767px) {
+    padding-bottom: 0 !important;
+  }
+
   .nav {
     a {
       background-color: $maize-primary;
@@ -503,11 +507,16 @@ header > div {
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.80), rgba(0,0,0,0.20) 100%);
     }
   }
-}
 
-// .banner-wide {
-//   margin-top: 30px; // TODO this should only apply to wide banners at the very top of the page.
-// }
+  .field--name-field-location-hours {
+    line-height: 1.5em;
+
+    .office-hours-status-text {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
 
 @media (max-width: 767px) {
   .banner-wide {
@@ -588,7 +597,7 @@ header > div {
 // element that sets the height.
 .owl-item .mb_YTPlayer {
   // padding: 0 !important;
-  padding: 15% 5% 10% !important;
+  padding: 20% 5% 5% !important;
   height: auto !important;
 }
 
@@ -796,19 +805,25 @@ header > div {
       margin: 45px 0 30px !important;
       padding: 0 !important;
 
-      .address-1,
-      .address-2 {
-        float: left;
-        width: 50%;
+      @media (max-width: 767px) {
+        & > div {
+          margin-bottom: 30px !important;
+        }
       }
 
-      .address-1 {
-        padding-right: 15px !important;
-      }
+      // .address-1,
+      // .address-2 {
+      //   float: left;
+      //   width: 50%;
+      // }
 
-      .address-2 {
-        padding-left: 15px !important;
-      }
+      // .address-1 {
+      //   padding-right: 15px !important;
+      // }
+
+      // .address-2 {
+      //   padding-left: 15px !important;
+      // }
     }
 
     .social-icons {
@@ -816,6 +831,10 @@ header > div {
       justify-content: center;
       margin: 45px 0 0;
       padding: 30px 0 0;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
 
       & > div {
         float: left;
@@ -830,19 +849,33 @@ header > div {
     }
 
     .footer-content {
-      margin-top: 0 !important;
-      text-align: center;
+      @media (max-width: 767px) {
+        margin: 0 !important;
 
-      ul.nav {
-        justify-content: center;
+        .footer-logo {
+          margin-top: 30px;
+
+          img {
+            width: 100% !important;
+          }
+        }
       }
     }
 
-    .gtranslate_wrapper {
-      border-top: 1px solid #ccc;
-      font-size: 11px;
-      padding: 10px 0;
-    }
+    // .footer-content {
+    //   margin-top: 0 !important;
+    //   text-align: center;
+
+    //   ul.nav {
+    //     justify-content: center;
+    //   }
+    // }
+
+    // .gtranslate_wrapper {
+    //   border-top: 1px solid #ccc;
+    //   font-size: 11px;
+    //   padding: 10px 0;
+    // }
   }
 }
 
@@ -954,6 +987,11 @@ header > div {
     display: block;
     margin-top: 45px;
     text-align: left;
+
+    @media (max-width: 767px) {
+      margin-top: -30px;
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -1321,5 +1359,42 @@ article.full.content-main {
         border-bottom-left-radius: 10px;
       }
     }
+  }
+}
+
+.instagram-photos {
+  @media (max-width: 767px) {
+    margin-top: 5% !important;
+  }
+}
+
+.fact-cards {
+  @media (max-width: 767px) {
+    margin-bottom: 5% !important;
+
+    .az-row > .az-column {
+      margin-bottom: 30px !important;
+    }
+  }
+}
+
+.page-bottom-action-panel {
+  @media (max-width: 767px) {
+    margin-top: 0 !important;
+
+    .container-fluid > .az-row  {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+
+      & > .az-column {
+        margin: 30px 0 !important;
+      }
+    }
+  }
+}
+
+.front-location-card {
+  @media (max-width: 767px) {
+    margin: 30px 0;
   }
 }

@@ -1,0 +1,15 @@
+uuid: 11071cac-485c-41c2-b579-31f8dbe9fdb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: services
+id: class
+label: Class
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: class

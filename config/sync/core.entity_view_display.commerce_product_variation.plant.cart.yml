@@ -1,0 +1,32 @@
+uuid: 319826dc-df0e-400e-8c6d-48db1f188b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.plant
+    - core.entity_view_mode.commerce_product_variation.cart
+id: commerce_product_variation.plant.cart
+targetEntityType: commerce_product_variation
+bundle: plant
+mode: cart
+content:
+  product_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  list_price: true
+  price: true
+  sku: true

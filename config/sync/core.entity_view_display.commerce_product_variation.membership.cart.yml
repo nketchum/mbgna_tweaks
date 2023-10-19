@@ -1,0 +1,40 @@
+uuid: 4cd810ea-e5aa-4932-9412-651a828e9fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.membership
+    - core.entity_view_mode.commerce_product_variation.cart
+    - field.field.commerce_product_variation.membership.license_expiration
+    - field.field.commerce_product_variation.membership.license_type
+  module:
+    - field_formatter_class
+id: commerce_product_variation.membership.cart
+targetEntityType: commerce_product_variation
+bundle: membership
+mode: cart
+content:
+  product_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  license_expiration: true
+  license_type: true
+  list_price: true
+  price: true
+  sku: true

@@ -1,7 +1,0 @@
-uuid: 283c2464-0194-4a0d-9ade-f070413c63e0
-langcode: en
-status: true
-dependencies: {  }
-id: admission_attributes
-label: Admission
-elementType: select

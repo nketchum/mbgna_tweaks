@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.facility.card_basic
     - field.field.facility.conservatory.field_capacity
+    - field.field.facility.conservatory.field_commerce
     - field.field.facility.conservatory.field_conservatory
     - field.field.facility.conservatory.field_description
     - field.field.facility.conservatory.field_image
@@ -66,6 +67,7 @@ content:
     weight: 1
     region: content
 hidden:
+  field_commerce: true
   field_conservatory: true
   field_description: true
   field_images: true

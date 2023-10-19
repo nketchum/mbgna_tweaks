@@ -12,7 +12,7 @@ dependencies:
 id: mbgna_dxpr_instagramfeed
 theme: mbgna_dxpr
 region: hidden
-weight: 0
+weight: -11
 provider: null
 plugin: 'block_content:a8298365-d4c5-4c26-a469-73cf63862c87'
 settings:

@@ -1,0 +1,60 @@
+uuid: 0ba4a79c-36bb-4203-aebc-4295fa4f02a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.class
+    - core.entity_view_mode.commerce_product.teaser
+    - field.field.commerce_product.class.body
+  module:
+    - field_formatter_class
+    - manage_display
+    - smart_trim
+id: commerce_product.class.teaser
+targetEntityType: commerce_product
+bundle: class
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 150
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+        token_browser: ''
+      summary_handler: trim
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h3
+    third_party_settings:
+      field_formatter_class:
+        class: teaser-title
+    weight: 0
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true
+  variations: true

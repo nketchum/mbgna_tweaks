@@ -1,0 +1,40 @@
+uuid: 6f8c0871-4137-4f65-b858-11d28e02f213
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.matthaei_botanical_gardens_hours
+    - field.field.block_content.matthaei_botanical_gardens_hours.field_annotation
+    - field.field.block_content.matthaei_botanical_gardens_hours.field_location_hours
+  module:
+    - office_hours
+id: block_content.matthaei_botanical_gardens_hours.default
+targetEntityType: block_content
+bundle: matthaei_botanical_gardens_hours
+mode: default
+content:
+  field_annotation:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location_hours:
+    type: office_hours_default
+    weight: 1
+    region: content
+    settings:
+      collapsed: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  revision_log: true

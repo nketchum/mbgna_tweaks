@@ -264,3 +264,46 @@ select.form-select {
     font-size: 0.85em;
   }
 }
+
+.navbar {
+  .search-form {
+    .toggle-nav-search,
+    .toggle-nav-search:hover {
+      background-image: url('/themes/custom/mbgna_dxpr/images/search-icon.svg') !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      height: 25px;
+      text-indent: -10000px;
+      width: 16px;
+    } 
+
+    &.open {
+      .toggle-nav-search {
+        margin-top: 31px;
+        border-bottom: 2px solid;
+      }
+    }
+  }
+
+
+  .search-block-form {
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    display: none; // This is displayed when "Search" is clicked in the main menu.
+    padding: 25px;
+    position: absolute !important;
+    right: 5% !important;
+    top: 90px !important;
+    min-width: 25vw;
+    max-width: 500px;
+
+    .btn.btn-link {
+      padding-right: 0 !important;
+    }
+
+    .btn.btn-link::after {
+      display: none;
+    }
+  }
+}

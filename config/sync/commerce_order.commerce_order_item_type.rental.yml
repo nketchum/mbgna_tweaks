@@ -1,0 +1,15 @@
+uuid: ab8594d0-17be-4aff-8d59-449f00f62c1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: services
+id: rental
+label: Rental
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: rental

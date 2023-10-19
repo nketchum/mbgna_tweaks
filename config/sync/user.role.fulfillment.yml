@@ -3,10 +3,33 @@ langcode: en
 status: true
 dependencies:
   module:
+    - commerce
+    - commerce_license
+    - commerce_order
+    - commerce_payment
+    - commerce_product
+    - commerce_promotion
     - file
+    - toolbar
 id: fulfillment
 label: Fulfillment
 weight: -4
 is_admin: null
 permissions:
+  - 'access commerce administration pages'
+  - 'access commerce_license overview'
+  - 'access commerce_order overview'
+  - 'access commerce_product overview'
+  - 'access commerce_promotion overview'
+  - 'access toolbar'
+  - 'add commerce_log commerce_license admin comment'
+  - 'add commerce_log commerce_order admin comment'
+  - 'administer commerce_license'
+  - 'administer commerce_order'
+  - 'administer commerce_payment'
+  - 'administer commerce_payment_gateway'
+  - 'administer commerce_payment_method'
+  - 'administer commerce_product'
+  - 'administer commerce_promotion'
   - 'delete own files'
+  - 'view user email addresses'

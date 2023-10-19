@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.membership
-    - field.field.commerce_product.membership.body
   module:
     - commerce_product
     - field_formatter_class
@@ -24,7 +23,6 @@ content:
     weight: 0
     region: content
 hidden:
-  body: true
   created: true
   stores: true
   title: true

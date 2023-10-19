@@ -382,3 +382,61 @@ function mbgna_dxpr_views_pre_render(ViewExecutable $view) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mbgna_dxpr_preprocess_office_hours(&$variables) {
+  $office_hours = $variables['office_hours'];
+  $label_length = 3;
+  $values = [];
+
+  // Get the current hour in 24 hour-format, two digit
+  // hour with leading zero, two digit minute with leading zero.
+  $current_hour = date('H');
+  $current_minute = date('i');
+  $current_second = date('s');
+  $original_time = new DateTime();
+  $original_time->setTime($current_hour, $current_minute, $current_second);
+  $config = \Drupal::config('system.date');
+  $site_timezone = $config->get('timezone.default'); // Use the sitewide timezone.
+  $target_timezone = new DateTimeZone($site_timezone);
+  $original_time->setTimezone($target_timezone);
+  $converted_time = $original_time->format('Gi');
+
+  // Get the opening and closing hours (already formatted for the sitewide timezone).
+  // 
+  // If showing only a single day, there is only one row in the array. We use the
+  // key() function, since the numeric key of the one element is not 0, but the number
+  // of the day of the week.
+  $slot_start_hour = $office_hours[key($office_hours)]['slots'][0]['start'];
+  $slot_end_hour = $office_hours[key($office_hours)]['slots'][0]['end'];
+
+  // Loop once for a single slot.
+  foreach ($office_hours as $info) {
+    // Set more detailed labels based on day and status of
+    // an event.
+    $today_day_name = date('l');
+    $label = substr($info['label'], 0, -2); // remove the colon and trailing space.
+    if (($today_day_name === $label) && ($converted_time < $slot_start_hour)) {
+      $label = 'Opens Today – ';
+    } else if ($today_day_name === $label) {
+      $label = '';
+    } else {
+      $label = 'Opens '. $label .' – ';  
+    }
+
+    // Create output.
+    $label_length = max($label_length, mb_strlen($label));
+    $values[] = [
+      'label' => $label,
+      'slots' => ['#type' => 'markup', '#markup' => $info['formatted_slots']],
+      'comments' => ['#type' => 'markup', '#markup' => $info['comments']],
+      'suffix' => $variables['item_separator'],
+    ];
+  }
+
+  // Add to theme variables.
+  $variables['items'] = $values;
+  $variables['label_length'] = $label_length;
+}

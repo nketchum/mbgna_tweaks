@@ -1,0 +1,8 @@
+uuid: 5aff3949-9682-4b8d-9af0-6784432abb66
+langcode: en
+status: true
+dependencies: {  }
+id: matthaei_botanical_gardens_hours
+label: 'Matthaei Botanical Gardens Hours'
+revision: 0
+description: 'Provides hours for Matthaei Botanical Gardens.'

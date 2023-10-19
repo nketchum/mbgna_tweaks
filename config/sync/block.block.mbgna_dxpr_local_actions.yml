@@ -9,7 +9,7 @@ _core:
 id: mbgna_dxpr_local_actions
 theme: mbgna_dxpr
 region: content
-weight: -13
+weight: -16
 provider: null
 plugin: local_actions_block
 settings:

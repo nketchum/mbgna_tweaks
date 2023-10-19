@@ -466,10 +466,23 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: mini
         options:
           offset: 0
           items_per_page: 3
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Prev'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       arguments: {  }
       filters:
         status:
@@ -591,6 +604,7 @@ display:
           view_mode: listing_minimal
       defaults:
         title: true
+        use_ajax: false
         pager: false
         style: false
         row: false
@@ -601,6 +615,7 @@ display:
         filter_groups: false
         header: false
       relationships: {  }
+      use_ajax: true
       display_description: ''
       header:
         area_text_custom:
@@ -621,6 +636,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions

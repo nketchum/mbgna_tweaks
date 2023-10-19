@@ -1,0 +1,21 @@
+uuid: 88da356e-8432-4723-ba4e-dbb7dc17e105
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.matthaei_botanical_gardens_hours
+    - field.storage.block_content.field_location_hours
+  module:
+    - office_hours
+id: block_content.matthaei_botanical_gardens_hours.field_location_hours
+field_name: field_location_hours
+entity_type: block_content
+bundle: matthaei_botanical_gardens_hours
+label: Hours
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: office_hours

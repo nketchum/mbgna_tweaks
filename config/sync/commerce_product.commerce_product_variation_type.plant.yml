@@ -7,4 +7,4 @@ label: Plant
 traits: {  }
 locked: false
 orderItemType: plant
-generateTitle: true
+generateTitle: false

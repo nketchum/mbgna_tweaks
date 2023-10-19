@@ -1,0 +1,10 @@
+uuid: be68b847-c14a-45e6-a8b4-c83b31de5450
+langcode: en
+status: true
+dependencies: {  }
+id: rental
+label: Rental
+traits: {  }
+locked: false
+orderItemType: rental
+generateTitle: false

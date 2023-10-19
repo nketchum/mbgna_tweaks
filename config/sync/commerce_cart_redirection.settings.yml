@@ -1,0 +1,12 @@
+product_bundles:
+  admission: admission
+  class: class
+  rental: rental
+  membership: 0
+  merchandise: 0
+  plant: 0
+negate_product_bundles: 0
+redirection_route_path: checkout
+redirection_route_path_other: ''
+add_to_cart_replacement_text: 'Purchase ›'
+clear_cart_before_add: 0

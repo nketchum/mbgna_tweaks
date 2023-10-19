@@ -1,0 +1,15 @@
+uuid: f362172c-84fd-4d2d-8e01-d7590e681202
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: physical_goods
+id: merchandise
+label: Merchandise
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: merchandise

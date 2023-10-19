@@ -1,0 +1,35 @@
+uuid: 9f4852d9-127b-47dc-ae63-3c1398fe47de
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.admission
+  module:
+    - commerce_price
+id: commerce_product_variation.admission.default
+targetEntityType: commerce_product_variation
+bundle: admission
+mode: default
+content:
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  product_id: true
+  sku: true
+  title: true

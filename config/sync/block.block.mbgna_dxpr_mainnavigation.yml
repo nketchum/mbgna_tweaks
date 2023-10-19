@@ -14,7 +14,7 @@ third_party_settings:
 id: mbgna_dxpr_mainnavigation
 theme: mbgna_dxpr
 region: navigation_collapsible
-weight: -10
+weight: -19
 provider: null
 plugin: 'tb_megamenu_menu_block:main'
 settings:

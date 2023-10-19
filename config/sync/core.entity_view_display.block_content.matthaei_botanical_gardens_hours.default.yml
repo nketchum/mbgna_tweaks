@@ -1,0 +1,60 @@
+uuid: 0684bd19-a399-48db-a7ff-8b3980d3a03a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.matthaei_botanical_gardens_hours
+    - field.field.block_content.matthaei_botanical_gardens_hours.field_annotation
+    - field.field.block_content.matthaei_botanical_gardens_hours.field_location_hours
+  module:
+    - field_formatter_class
+    - office_hours
+id: block_content.matthaei_botanical_gardens_hours.default
+targetEntityType: block_content
+bundle: matthaei_botanical_gardens_hours
+mode: default
+content:
+  field_annotation:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location_hours:
+    type: office_hours
+    label: hidden
+    settings:
+      day_format: long
+      time_format: g
+      compress: false
+      grouped: false
+      show_closed: next
+      closed_format: Closed
+      all_day_format: 'Open All Day'
+      separator:
+        days: '<br />'
+        grouped_days: ' - '
+        day_hours: ': '
+        hours_hours: ' to '
+        more_hours: ', '
+      current_status:
+        position: before
+        open_text: 'Currently Open'
+        closed_text: 'Currently Closed'
+      exceptions:
+        title: 'Exception hours'
+        restrict_exceptions_to_num_days: 7
+        date_format: long
+        all_day_format: 'All day open'
+      timezone_field: ''
+      office_hours_first_day: '0'
+      schema:
+        enabled: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden: {  }

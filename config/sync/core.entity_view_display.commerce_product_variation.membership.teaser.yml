@@ -1,11 +1,10 @@
 uuid: b2d59688-69b0-4cdf-be5c-bbff5be1e41c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.membership
     - core.entity_view_mode.commerce_product_variation.teaser
-    - field.field.commerce_product_variation.membership.attribute_membership
     - field.field.commerce_product_variation.membership.license_expiration
     - field.field.commerce_product_variation.membership.license_type
   module:
@@ -33,7 +32,6 @@ content:
     weight: 0
     region: content
 hidden:
-  attribute_membership: true
   license_expiration: true
   license_type: true
   list_price: true

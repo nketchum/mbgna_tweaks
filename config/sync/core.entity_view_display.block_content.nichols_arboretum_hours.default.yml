@@ -1,0 +1,60 @@
+uuid: 65fb09e7-aacd-4851-a292-2ae3fa4c8946
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nichols_arboretum_hours
+    - field.field.block_content.nichols_arboretum_hours.field_annotation
+    - field.field.block_content.nichols_arboretum_hours.field_location_hours
+  module:
+    - field_formatter_class
+    - office_hours
+id: block_content.nichols_arboretum_hours.default
+targetEntityType: block_content
+bundle: nichols_arboretum_hours
+mode: default
+content:
+  field_annotation:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location_hours:
+    type: office_hours
+    label: hidden
+    settings:
+      day_format: long
+      time_format: g
+      compress: false
+      grouped: false
+      show_closed: current
+      closed_format: ''
+      all_day_format: 'Sunrise to Sunset'
+      separator:
+        days: ''
+        grouped_days: '-'
+        day_hours: ': '
+        hours_hours: ' to '
+        more_hours: ', '
+      current_status:
+        position: before
+        open_text: 'Open Today'
+        closed_text: 'Closed Today'
+      exceptions:
+        title: 'Exception hours'
+        restrict_exceptions_to_num_days: 7
+        date_format: long
+        all_day_format: 'All day open'
+      timezone_field: ''
+      office_hours_first_day: '0'
+      schema:
+        enabled: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+hidden: {  }

@@ -18,4 +18,4 @@ traits:
   - commerce_license
 locked: false
 orderItemType: membership
-generateTitle: true
+generateTitle: false

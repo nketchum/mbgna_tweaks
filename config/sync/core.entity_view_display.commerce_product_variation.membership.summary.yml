@@ -5,27 +5,15 @@ dependencies:
   config:
     - commerce_product.commerce_product_variation_type.membership
     - core.entity_view_mode.commerce_product_variation.summary
-    - field.field.commerce_product_variation.membership.attribute_membership
     - field.field.commerce_product_variation.membership.license_expiration
     - field.field.commerce_product_variation.membership.license_type
   module:
     - commerce_price
-    - field_formatter_class
 id: commerce_product_variation.membership.summary
 targetEntityType: commerce_product_variation
 bundle: membership
 mode: summary
 content:
-  attribute_membership:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 0
-    region: content
   price:
     type: commerce_price_default
     label: inline

@@ -19,6 +19,8 @@
         }
       });
 
+      // Set placeholders in password fields, which
+      // is not possible using Drupal's form api.
       var account_form = $('.user-form .form-type-password-confirm');
       if (account_form) {
         var pass1 = $(account_form).find('.form-item-pass-pass1');
@@ -33,6 +35,13 @@
         var pass2_input = $(pass2).find('input');
         $(pass2_input).attr('placeholder', 'Confirm password...');
       }
+
+      // Navbar search functionailty.
+      var search_nav_link = $('.navbar .toggle-nav-search');
+      var search_nav_form = $('.navbar .search-block-form');
+      $(search_nav_link).click(function() {
+        $(search_nav_form).toggle();
+      });
     }
   }
 })(jQuery, Drupal, once);

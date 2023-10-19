@@ -1,0 +1,35 @@
+uuid: 9ca1f8c3-d8b4-4fb7-ab0e-4297d2767254
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.rental
+  module:
+    - commerce_price
+id: commerce_product_variation.rental.default
+targetEntityType: commerce_product_variation
+bundle: rental
+mode: default
+content:
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  product_id: true
+  sku: true
+  title: true

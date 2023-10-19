@@ -1,0 +1,10 @@
+uuid: ca01d888-4c02-4474-aedc-5b5ba6e639b7
+langcode: en
+status: true
+dependencies: {  }
+id: merchandise
+label: Merchandise
+traits: {  }
+locked: false
+orderItemType: merchandise
+generateTitle: false

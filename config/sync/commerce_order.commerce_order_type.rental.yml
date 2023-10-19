@@ -1,0 +1,26 @@
+uuid: e6d73726-24e9-4fc5-a2cc-a22c7563001f
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+third_party_settings:
+  commerce_cart:
+    cart_block_view: commerce_cart_block
+    cart_form_view: commerce_cart_form
+    cart_expiration: {  }
+    enable_cart_message: true
+  commerce_checkout:
+    checkout_flow: default
+id: rental
+label: Rental
+traits: {  }
+locked: false
+workflow: order_default
+numberPattern: null
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+receiptSubject: ''

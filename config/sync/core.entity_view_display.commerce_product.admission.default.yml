@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.admission
-    - field.field.commerce_product.admission.body
   module:
     - commerce_product
 id: commerce_product.admission.default
@@ -29,7 +28,6 @@ content:
     weight: 1
     region: content
 hidden:
-  body: true
   created: true
   stores: true
   uid: true

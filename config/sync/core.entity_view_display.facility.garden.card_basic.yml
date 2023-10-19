@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.facility.card_basic
     - field.field.facility.garden.field_capacity
+    - field.field.facility.garden.field_commerce
     - field.field.facility.garden.field_description
     - field.field.facility.garden.field_garden
     - field.field.facility.garden.field_image
@@ -57,6 +58,7 @@ content:
     weight: 1
     region: content
 hidden:
+  field_commerce: true
   field_description: true
   field_garden: true
   field_images: true

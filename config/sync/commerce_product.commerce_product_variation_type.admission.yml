@@ -7,4 +7,4 @@ label: Admission
 traits: {  }
 locked: false
 orderItemType: admission
-generateTitle: true
+generateTitle: false

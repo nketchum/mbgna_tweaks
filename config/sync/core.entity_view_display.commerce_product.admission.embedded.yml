@@ -5,7 +5,6 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.admission
     - core.entity_view_mode.commerce_product.embedded
-    - field.field.commerce_product.admission.body
   module:
     - commerce_product
 id: commerce_product.admission.embedded
@@ -22,7 +21,6 @@ content:
     weight: 0
     region: content
 hidden:
-  body: true
   created: true
   stores: true
   title: true

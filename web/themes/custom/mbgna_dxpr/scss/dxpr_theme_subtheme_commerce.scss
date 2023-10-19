@@ -1,3 +1,48 @@
 .path_profile_payment {
-	
+
+}
+
+.cart-block-contents-links a {
+  display: inline-block;
+  padding: 6px 11px;
+  background: #FFCB05;
+  border-radius: 7px;
+  color: black;
+
+  &:hover, &:active, &:focus {
+    color: black;
+  }
+}
+
+#edit-contact-information, // This div shows up on anonymous checkout.
+#edit-payment-information,
+#edit-review-contact-information {
+  margin-top: 0;
+
+  & > legend {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 26px;
+    margin-bottom: 0.67em;
+  }
+
+  .fieldgroup legend {
+    display: none;
+  }
+}
+
+#edit-review-payment-information {
+  legend {
+    font-weight: bold;
+  }
+}
+
+.checkout-order-summary table {
+  width: 100%;
+  margin-bottom: 15px;
+
+  th, td {
+    background: #eee;
+    padding: 5px;
+  }
 }

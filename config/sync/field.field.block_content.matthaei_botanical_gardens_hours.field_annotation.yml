@@ -1,0 +1,19 @@
+uuid: 9af072db-cc89-41da-bebd-3d803a8a2ee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.matthaei_botanical_gardens_hours
+    - field.storage.block_content.field_annotation
+id: block_content.matthaei_botanical_gardens_hours.field_annotation
+field_name: field_annotation
+entity_type: block_content
+bundle: matthaei_botanical_gardens_hours
+label: Annotation
+description: 'Provides space for additional text beneath open hours.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

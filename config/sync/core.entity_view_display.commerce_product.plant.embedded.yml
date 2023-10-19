@@ -5,7 +5,6 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.plant
     - core.entity_view_mode.commerce_product.embedded
-    - field.field.commerce_product.plant.body
   module:
     - commerce_product
 id: commerce_product.plant.embedded
@@ -15,14 +14,13 @@ mode: embedded
 content:
   variations:
     type: commerce_add_to_cart
-    label: above
+    label: hidden
     settings:
       combine: true
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
-  body: true
   created: true
   stores: true
   title: true

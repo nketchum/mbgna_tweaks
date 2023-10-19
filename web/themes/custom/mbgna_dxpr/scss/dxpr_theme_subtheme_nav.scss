@@ -8,6 +8,11 @@
   }
 }
 
+.mobile-nav {
+  display: none;
+  padding: 7% 5%;
+}
+
 .navbar-container {
   align-items: center;
 }
@@ -594,4 +599,24 @@
     margin: 10px 0;
     border-top-width: 2px;
   }
+}
+
+.tbm-submenu {
+  .field--name-field-location-hours {
+    line-height: 1.25em;
+    font-weight: bold;
+    color: #9a3324;
+
+    .office-hours-status--open,
+    .office-hours-status--closed {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
+
+// What the hell?
+// Suddenly the main menu floated to the right on a Monday.
+.body--dxpr-theme-nav-desktop .dxpr-theme-header--top .block, .body--dxpr-theme-nav-desktop .dxpr-theme-header--top nav nav {
+  float: none;
 }

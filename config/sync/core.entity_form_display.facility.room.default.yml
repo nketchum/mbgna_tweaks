@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.facility.room.field_capacity
+    - field.field.facility.room.field_commerce
     - field.field.facility.room.field_description
     - field.field.facility.room.field_image
     - field.field.facility.room.field_images
@@ -13,6 +14,7 @@ dependencies:
     - mbgna_facility.facility_type.room
   module:
     - allowed_formats
+    - inline_entity_form
     - media_library
     - paragraphs
     - text
@@ -24,10 +26,28 @@ mode: default
 content:
   field_capacity:
     type: number
-    weight: 4
+    weight: 3
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_commerce:
+    type: inline_entity_form_complex
+    weight: 8
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: product
+      label_plural: products
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
     third_party_settings: {  }
   field_description:
     type: text_textarea_with_summary
@@ -44,21 +64,21 @@ content:
         hide_guidelines: '1'
   field_image:
     type: media_library_widget
-    weight: 6
+    weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_images:
     type: media_library_widget
-    weight: 7
+    weight: 6
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_inquiry_webform:
     type: webform_entity_reference_select
-    weight: 8
+    weight: 7
     region: content
     settings:
       default_data: false
@@ -72,7 +92,7 @@ content:
     third_party_settings: {  }
   field_pricing_rates:
     type: paragraphs
-    weight: 5
+    weight: 4
     region: content
     settings:
       title: Paragraph

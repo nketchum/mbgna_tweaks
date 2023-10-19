@@ -1,0 +1,36 @@
+uuid: 3194eda6-76b9-48cc-bc6f-9ba44d75895f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.admission
+    - core.entity_view_mode.commerce_product_variation.cart
+  module:
+    - field_formatter_class
+id: commerce_product_variation.admission.cart
+targetEntityType: commerce_product_variation
+bundle: admission
+mode: cart
+content:
+  product_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  list_price: true
+  price: true
+  sku: true

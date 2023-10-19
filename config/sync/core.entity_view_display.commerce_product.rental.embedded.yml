@@ -1,0 +1,27 @@
+uuid: f7e985c3-0f5f-4a39-8a81-bbd5b4186adc
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rental
+    - core.entity_view_mode.commerce_product.embedded
+  module:
+    - commerce_product
+id: commerce_product.rental.embedded
+targetEntityType: commerce_product
+bundle: rental
+mode: embedded
+content:
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  stores: true
+  title: true
+  uid: true

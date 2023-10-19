@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.facility.garden.field_capacity
+    - field.field.facility.garden.field_commerce
     - field.field.facility.garden.field_description
     - field.field.facility.garden.field_garden
     - field.field.facility.garden.field_image
@@ -16,6 +17,7 @@ dependencies:
     - mbgna_facility.facility_type.garden
   module:
     - allowed_formats
+    - inline_entity_form
     - media_library
     - paragraphs
     - text
@@ -31,6 +33,24 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_commerce:
+    type: inline_entity_form_complex
+    weight: 11
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: product
+      label_plural: products
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
     third_party_settings: {  }
   field_description:
     type: text_textarea_with_summary
@@ -125,7 +145,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 12
     region: content
     settings:
       display_label: false
