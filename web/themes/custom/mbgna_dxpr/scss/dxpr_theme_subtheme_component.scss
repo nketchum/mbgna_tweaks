@@ -229,6 +229,13 @@ header > div {
   }
 }
 
+@media (min-width: 1921px) {
+  .block-system-menu-blocktop-menu {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
 
 // Bottom navs.
 #secondary-header,
@@ -476,6 +483,7 @@ header > div {
 .banner-wide {
   position: relative;
   overflow: hidden;
+  background-size: cover;
 
   .breadcrumb {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -1396,5 +1404,34 @@ article.full.content-main {
 .front-location-card {
   @media (max-width: 767px) {
     margin: 30px 0;
+  }
+}
+
+// Make full width on widescreen
+// regardless of site container margins
+// from edge of browser viewport.
+.widescreen-full-width {
+  .banner-content {
+    margin: 0 auto;
+    max-width: 1920px;
+
+    & > .az-ctnr {
+      margin-left: 5%;
+      margin-right: 5%;
+
+      @media (min-width: 961px) {
+        padding-right: 67%;
+      }
+    }
+  }
+
+  @media (min-width: 1921px) {
+    width: 100vw;  
+    translate: calc(calc(-1 * (100vw - 1920px) / 2));
+
+    & > .az-column {
+      width: 1920px;
+      margin: 0 auto;
+    }
   }
 }

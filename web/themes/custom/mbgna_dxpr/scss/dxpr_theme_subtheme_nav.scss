@@ -1,12 +1,18 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
-// // MOBILE STYLES
-// // Uses the core main navigation menu.
-@media (max-width: 1200px) {
-  .navbar-header {
+
+.navbar-header {
+  @media (max-width: 1200px) {
     width: 100%;
   }
+
+  @media (min-width: 1921px) {
+    margin-left: 5%;
+  }
 }
+
+// // MOBILE STYLES
+// // Uses the core main navigation menu.
 
 .mobile-nav {
   display: none;
