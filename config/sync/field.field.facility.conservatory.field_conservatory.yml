@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.facility.field_conservatory
     - mbgna_facility.facility_type.conservatory
-    - node.type.conservatory
     - node.type.drag_and_drop_page
   module:
     - field_display_label
@@ -26,11 +25,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      conservatory: conservatory
       drag_and_drop_page: drag_and_drop_page
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: conservatory
+    auto_create_bundle: null
 field_type: entity_reference

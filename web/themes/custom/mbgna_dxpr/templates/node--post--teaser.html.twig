@@ -99,9 +99,9 @@
 
         {% block content %}
           {% if is_external_source == 1 %}
-            {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source', 'field_external_link', 'field_image', 'field_images', 'field_organization') }}
+            {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source', 'field_external_link', 'field_image', 'field_images', 'field_organization', 'field_external_source') }}
           {% else %}
-            {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source', 'field_image', 'field_organization', 'field_external_link') }}
+            {{ content|without('title', 'flippy_pager', 'field_post_type', 'field_external_source', 'field_image', 'field_organization', 'field_external_link',field_external_source) }}
           {% endif %}
         {% endblock %}
 

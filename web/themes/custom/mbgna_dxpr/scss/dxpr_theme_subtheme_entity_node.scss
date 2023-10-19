@@ -1,3 +1,10 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
-// Should not need this, instead use entity
+.path-node.is-not-dxpr-layout {
+  header#navbar::after {
+    content: ' ';
+    background: $blue-secondary;
+    height: 30px;
+    display: block;
+  }
+}

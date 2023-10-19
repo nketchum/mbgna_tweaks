@@ -607,8 +607,39 @@ header > div {
   // padding: 0 !important;
   padding: 20% 5% 5% !important;
   height: auto !important;
-}
 
+  @media (min-width: 1921px) {
+    padding-left: 0;
+    padding-right: 0;
+
+    & > .az-ctnr {
+      width: 1920px;
+      margin: 0 auto;
+
+      & > .az-element {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+  }
+
+  // Banner content width depends on screen width.
+  @media (min-width: 768px) {
+    & > .az-ctnr > .az-element > .az-element {
+      width: percentage(2/3);
+    }
+  }
+  @media (min-width: 1520px) {
+    & > .az-ctnr > .az-element > .az-element {
+      width: percentage(1/2);
+    }
+  }
+  @media (min-width: 1921px) {
+    & > .az-ctnr > .az-element > .az-element {
+      width: percentage(1/3);
+    }
+  }
+}
 
 .landing-card-large {
   .landing-link-list {

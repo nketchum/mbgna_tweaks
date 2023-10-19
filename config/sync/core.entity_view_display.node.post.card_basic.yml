@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.post.field_images
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
+    - field.field.node.post.field_tags
     - field.field.node.post.field_user
     - image.style.medium_square_ish_rectangle
     - node.type.post
@@ -60,7 +61,6 @@ content:
         title: '0'
         alt: '0'
       class: ''
-      id: ''
       image: ''
       link: ''
       overlay: ''
@@ -69,9 +69,6 @@ content:
       layout: ''
       view_mode: default
       cache: 0
-      skin: ''
-      lazy: ''
-      style: ''
       background: false
       box_caption: ''
       box_caption_custom: ''
@@ -88,6 +85,13 @@ content:
       grid: ''
       grid_medium: ''
       grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
     third_party_settings:
       field_formatter_class:
         class: ''
@@ -117,6 +121,7 @@ hidden:
   field_dxpr_drag_drop: true
   field_images: true
   field_organization: true
+  field_tags: true
   field_user: true
   links: true
   uid: true

@@ -61,30 +61,49 @@
       </div>
       <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
-          {% if drupal_view_result('posts', 'block_2', 'news') is not empty %}
-            <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
-              {{- drupal_view('posts', 'block_2') -}}
-            </div>
-          {% endif %}
-          {% if drupal_view_result('events', 'block_4') is not empty %}
-            <div class="boxed-field boxed-field-light">
-              {{- drupal_view('events', 'block_4') -}}
-            </div>
-          {% endif %}
+          <div class="boxed-field boxed-field-light">
+            {{ drupal_view('membership', 'block_1') }}
+          </div>
         {% endif %}
       </div>
       <div class="col col-level1 col-lg-4 col-md-4">
         {% if privileged %}
-          {% if drupal_view_result('resource', 'block_1') is not empty %}
-            <div class="boxed-field boxed-field-light" style="margin-top: -30px;">
-              {{- drupal_view('resource', 'block_1') -}}
-            </div>
-          {% endif %}
+          <div class="boxed-field boxed-field-light">
+            {{ drupal_entity('webform', 'member_contact') }}
+          </div>
         {% endif %}
       </div>
     </div>
 
     {% if privileged %}
+      <hr class="landing-section">
+      <div class="row dashboard-row dashboard-content">
+        <h2>Member Content</h2>
+        <div class="col col-first col-level1 col-lg-4 col-md-4">
+          {% if drupal_view_result('posts', 'block_2', 'news') is not empty %}
+            <div class="boxed-field boxed-field-light">
+              {{- drupal_view('posts', 'block_2') -}}
+            </div>
+          {% endif %}
+        </div>
+        <div class="col col-first col-level1 col-lg-4 col-md-4">
+          {% if drupal_view_result('events', 'block_4') is not empty %}
+            <div class="boxed-field boxed-field-light">
+              {{- drupal_view('events', 'block_4') -}}
+            </div>
+          {% endif %}
+        </div>
+        <div class="col col-last col-level1 col-lg-4 col-md-4">
+          {% if drupal_view_result('resource', 'block_1') is not empty %}
+            <div class="boxed-field boxed-field-light">
+              {{- drupal_view('resource', 'block_1') -}}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+{#     {% if privileged %}
       <hr class="landing-section">
       <div class="row dashboard-row dashboard-commerce">
         <h2>Membership Information</h2>
@@ -99,7 +118,7 @@
           </div>
         </div>
       </div>
-    {% endif %}
+    {% endif %} #}
 
       <hr class="landing-section">
       <div class="row dashboard-row dashboard-commerce">

@@ -561,8 +561,6 @@
   .section-nav {
     background-color: $maize-primary;
     padding-bottom: 15px;
-    padding-left: 60px;
-    padding-right: 60px;
     padding-top: 15px;
 
     ul.menu {
@@ -570,10 +568,18 @@
       flex-direction: row;
       justify-content: space-between;
       margin: 0 auto;
-      max-width: 1520px;
+      max-width: 1920px;
 
       li {
         margin-bottom: 0;
+
+        &:first-child {
+          margin-left: 5%;
+        }
+
+        &:last-child {
+          margin-right: 5%;
+        }
 
         a {
           color: $blue-primary;
@@ -625,4 +631,15 @@
 // Suddenly the main menu floated to the right on a Monday.
 .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .block, .body--dxpr-theme-nav-desktop .dxpr-theme-header--top nav nav {
   float: none;
+}
+
+@media (min-width: 1921px) {
+  .region-content-top {
+    .section-nav {
+      margin-bottom: 60px;
+      margin-top: -30px;
+      translate: calc(-1 * (100vw - 1920px) / 2);
+      width: 100vw;
+    }
+  }
 }

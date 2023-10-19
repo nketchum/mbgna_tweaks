@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.post.field_images
     - field.field.node.post.field_organization
     - field.field.node.post.field_post_type
+    - field.field.node.post.field_tags
     - field.field.node.post.field_user
     - image.style.medium_square_ish_rectangle
     - node.type.post
@@ -158,6 +159,7 @@ hidden:
   field_dashboard_show: true
   field_dxpr_drag_drop: true
   field_images: true
+  field_tags: true
   field_user: true
   links: true
   uid: true

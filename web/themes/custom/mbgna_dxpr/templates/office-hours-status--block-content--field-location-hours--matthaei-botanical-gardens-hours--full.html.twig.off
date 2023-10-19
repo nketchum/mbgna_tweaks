@@ -1,7 +1,0 @@
-<div class="office-hours-status-text">
-  {% if is_open %}
-    {{ open_text }}
-  {% else %}
-    {{ closed_text }}
-  {% endif %}
-</div>

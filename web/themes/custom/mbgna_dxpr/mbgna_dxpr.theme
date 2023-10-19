@@ -6,6 +6,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
 use Drupal\views\ViewExecutable;
 use Drupal\views\Views;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_theme().
@@ -185,6 +186,17 @@ function mbgna_dxpr_preprocess_node(&$variables) {
   //     $variables['date_smart_ical_all_day'] = TRUE;
   //   }
   // }
+}
+
+function mbgna_dxpr_preprocess_field(&$variables, $hook) {
+  // Post templates need to know the post type in order
+  // to provide links back to the view.
+  $node = $variables['element']['#object'];
+  if ($node->bundle() == 'post') {
+    $term_id = $node->get('field_post_type')->getValue()[0]['target_id'];
+    $term_name = strtolower(Term::load($term_id)->get('name')->value);
+    $variables['post_type'] = $term_name;
+  }
 }
 
 function mbgna_dxpr_preprocess_user(&$variables) {

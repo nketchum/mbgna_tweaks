@@ -1,14 +1,10 @@
-uuid: b2565642-44aa-45b0-8a7f-62e634afa394
+uuid: 973eed18-2c1f-4ec8-a762-015b6b84fc92
 langcode: en
 status: true
 dependencies:
   module:
-    - menu_ui
     - scheduler
 third_party_settings:
-  menu_ui:
-    available_menus: {  }
-    parent: ''
   scheduler:
     expand_fieldset: when_required
     fields_display_mode: vertical_tab
@@ -22,10 +18,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: Resource
-type: resource
-description: 'Provides a resource content type.'
-help: ''
-new_revision: false
-preview_mode: 0
-display_submitted: true
+name: Tags
+vid: tags
+description: 'Provides tags for posts, events, and other content.'
+weight: 0

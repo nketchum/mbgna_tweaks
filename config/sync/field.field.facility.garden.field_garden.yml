@@ -6,7 +6,6 @@ dependencies:
     - field.storage.facility.field_garden
     - mbgna_facility.facility_type.garden
     - node.type.drag_and_drop_page
-    - node.type.garden
   module:
     - field_display_label
 third_party_settings:
@@ -27,7 +26,6 @@ settings:
   handler_settings:
     target_bundles:
       drag_and_drop_page: drag_and_drop_page
-      garden: garden
     sort:
       field: _none
       direction: ASC

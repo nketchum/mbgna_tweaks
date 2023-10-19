@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.plant.field_collections
     - mbgna_plant.plant_type.bonsai
-    - node.type.conservatory
-    - node.type.garden
 id: plant.bonsai.field_collections
 field_name: field_collections
 entity_type: plant
@@ -20,9 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles:
-      conservatory: conservatory
-      garden: garden
+    target_bundles: {  }
     sort:
       field: _none
       direction: ASC

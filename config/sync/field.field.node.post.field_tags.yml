@@ -1,16 +1,16 @@
-uuid: 87ee0fe1-df1b-4446-a66a-e7cb107b2ec1
+uuid: 105ee33f-3967-4baf-a54b-6a689192d537
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_resource_type
-    - node.type.resource
-    - taxonomy.vocabulary.resource_type
-id: node.resource.field_resource_type
-field_name: field_resource_type
+    - field.storage.node.field_tags
+    - node.type.post
+    - taxonomy.vocabulary.tags
+id: node.post.field_tags
+field_name: field_tags
 entity_type: node
-bundle: resource
-label: 'Resource type'
+bundle: post
+label: Tags
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      resource_type: resource_type
+      tags: tags
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

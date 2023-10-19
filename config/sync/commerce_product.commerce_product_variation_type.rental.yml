@@ -6,5 +6,5 @@ id: rental
 label: Rental
 traits: {  }
 locked: false
-orderItemType: rental
+orderItemType: default
 generateTitle: false

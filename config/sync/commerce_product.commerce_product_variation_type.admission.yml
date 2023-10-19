@@ -6,5 +6,5 @@ id: admission
 label: Admission
 traits: {  }
 locked: false
-orderItemType: admission
+orderItemType: default
 generateTitle: false

@@ -126,6 +126,16 @@
   }
 }
 
+.path-plant {
+  &.is-not-dxpr-layout {
+    article.full {
+      .main-content-subtitle {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
 article.listing,
 article.listing-minimal {
   .field--name-field-event-categories {

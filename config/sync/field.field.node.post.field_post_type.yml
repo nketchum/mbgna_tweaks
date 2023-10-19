@@ -1,4 +1,4 @@
-uuid: 5ce5cd35-95f6-453b-9113-b2bfb7cefcc5
+uuid: 1cd658f4-efb1-4006-9aff-8b8607a5bf61
 langcode: en
 status: true
 dependencies:
@@ -6,19 +6,15 @@ dependencies:
     - field.storage.node.field_post_type
     - node.type.post
     - taxonomy.vocabulary.post_type
-  content:
-    - 'taxonomy_term:post_type:fddb5bd2-c4e4-4d56-8f77-2b599d01dcac'
 id: node.post.field_post_type
 field_name: field_post_type
 entity_type: node
 bundle: post
 label: 'Post type'
 description: ''
-required: true
+required: false
 translatable: false
-default_value:
-  -
-    target_uuid: fddb5bd2-c4e4-4d56-8f77-2b599d01dcac
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

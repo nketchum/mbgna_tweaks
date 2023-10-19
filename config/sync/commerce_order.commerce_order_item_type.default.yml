@@ -1,0 +1,15 @@
+uuid: 2fb6d2d6-a285-4f76-95ae-261d04c24267
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: services
+id: default
+label: Default
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: default

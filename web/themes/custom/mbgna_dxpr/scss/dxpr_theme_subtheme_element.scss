@@ -370,3 +370,29 @@ caption {
   border-bottom: none !important;
   border-top: none !important;
 }
+
+#edit-back-to-dash-link,
+#edit-back-to-dash-link--2, // Delete these extras after merging shopping carts
+#edit-back-to-dash-link--3,
+#edit-back-to-dash-link--4,
+#edit-back-to-dash-link--5,
+#edit-back-to-addresses-link,
+#edit-back-to-payments-link {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.info-table {
+  tr {
+    border-bottom: 2px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  td {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}

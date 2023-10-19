@@ -6,5 +6,5 @@ id: class
 label: Class
 traits: {  }
 locked: false
-orderItemType: class
+orderItemType: default
 generateTitle: false
