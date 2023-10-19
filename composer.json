@@ -187,6 +187,7 @@
         "drupal/quick_node_clone": "^1.16",
         "drupal/realname": "^2.0@beta",
         "drupal/scheduler": "^2.0",
+        "drupal/sitewide_alert": "^2.1",
         "drupal/smart_date": "^4.0",
         "drupal/smart_trim": "^2.1",
         "drupal/svg_image": "^3.0",

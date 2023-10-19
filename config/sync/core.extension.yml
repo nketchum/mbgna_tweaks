@@ -103,6 +103,7 @@ module:
   realname: 0
   scheduler: 0
   search: 0
+  sitewide_alert: 0
   smart_date: 0
   smart_date_recur: 0
   smart_trim: 0

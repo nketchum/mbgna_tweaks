@@ -15,6 +15,7 @@ dependencies:
     - mbgna_resource
     - media
     - search
+    - sitewide_alert
     - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
@@ -36,4 +37,5 @@ permissions:
   - 'view media'
   - 'view organization'
   - 'view plant'
+  - 'view published sitewide alert entities'
   - 'view resource'

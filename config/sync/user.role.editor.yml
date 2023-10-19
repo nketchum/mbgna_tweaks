@@ -13,7 +13,6 @@ dependencies:
     - node.type.event
     - node.type.position
     - node.type.post
-    - node.type.resource
     - node.type.webform
     - taxonomy.vocabulary.blog_topics
     - taxonomy.vocabulary.bonsai_style_additional
@@ -220,7 +219,6 @@ permissions:
   - 'edit any event content'
   - 'edit any position content'
   - 'edit any post content'
-  - 'edit any resource content'
   - 'edit any simple_text block content'
   - 'edit bed'
   - 'edit facility'
@@ -260,7 +258,6 @@ permissions:
   - 'schedule publishing of commerce_product'
   - 'schedule publishing of nodes'
   - 'update any drag_and_drop_block block content'
-  - 'update any hours block content'
   - 'update any instagram block content'
   - 'update any simple_text block content'
   - 'use text format code'
