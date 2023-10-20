@@ -194,8 +194,10 @@ function mbgna_dxpr_preprocess_field(&$variables, $hook) {
   $node = $variables['element']['#object'];
   if ($node->bundle() == 'post') {
     $term_id = $node->get('field_post_type')->getValue()[0]['target_id'];
-    $term_name = strtolower(Term::load($term_id)->get('name')->value);
-    $variables['post_type'] = $term_name;
+    if ($term_id) {
+      $term_name = strtolower(Term::load($term_id)->get('name')->value);
+      $variables['post_type'] = $term_name;
+    }
   }
 }
 
