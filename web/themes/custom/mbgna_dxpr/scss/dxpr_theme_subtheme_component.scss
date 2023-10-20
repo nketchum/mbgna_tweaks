@@ -71,7 +71,7 @@ header > div {
   // Account for banner/content margins of 60px on each side.
   // that should line up with the logo.
   // 1920+60+60 = 2040
-  @media (max-width: 2040px) {
+  @media (max-width: 1920px) {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
@@ -456,6 +456,8 @@ header > div {
 }
 
 .banner-thin {
+  flex-wrap: nowrap;
+
   @media (max-width: 767px) {
     background: #0D57AA;
     &,
@@ -472,6 +474,23 @@ header > div {
 
   .banner-image {
     border-bottom-left-radius: 90px;
+
+    // Streth the right-hand side background all the way 
+    // across the screen without affecting the left-hand
+    // side margin.
+    width: calc(0.6666 * 1920px + (100vw - 1920px) / 2);
+
+    @media (min-width: 1921px) {
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgb(249,249,249);
+        background: linear-gradient(90deg, rgba(249,249,249,0) 0%, rgba(249,249,249,0) 50%, rgba(249,249,249,0.45) 75%, rgba(249,249,249,0.95) 100%);;
+      }
+    }
   }
 
   .breadcrumb {
