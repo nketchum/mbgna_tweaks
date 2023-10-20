@@ -150,6 +150,7 @@
         "drupal/commerce_cart_redirection": "^3.2",
         "drupal/commerce_license": "^3.0",
         "drupal/commerce_recurring": "^1.0@RC",
+        "drupal/commerce_ticketing": "^2.0@alpha",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-project-message": "^10",
@@ -284,12 +285,15 @@
             },
             "drupal/profile": {
                 "Drupal 10.1: fatal error on account creation": "https://www.drupal.org/files/issues/2023-07-24/handle-user-is-anonymous-hardening-3371850-8.patch"
+            },
+            "drupal/commerce_ticketing": {
+                "Drupal 10 upgrade": "https://raw.githubusercontent.com/nketchum/d10_contrib_patches/main/commerce_ticketing/commerce-ticketing-drupal10.patch"
             }
         },
         "patches-ignore": {},
         "composer-exit-on-patch-failure": false,
         "drupal-lenient": {
-            "allowed-list": ["drupal/commerce_cybersource"]
+            "allowed-list": ["drupal/commerce_cybersource", "drupal/commerce_ticketing"]
         }
     }
 }
