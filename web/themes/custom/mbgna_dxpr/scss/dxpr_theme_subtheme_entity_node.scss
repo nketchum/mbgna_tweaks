@@ -1,5 +1,9 @@
 @import "./dxpr_theme_subtheme.variables.scss";
 
+.path-product,
+.path-resource,
+.path-facility,
+.path-honor,
 .path-node.is-not-dxpr-layout {
   header#navbar::after {
     content: ' ';

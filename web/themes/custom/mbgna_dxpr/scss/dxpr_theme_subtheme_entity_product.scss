@@ -1,0 +1,125 @@
+@import "./dxpr_theme_subtheme.variables.scss";
+
+.product.full {
+  .article-heading {
+    .page-title {
+      margin: inherit;
+    }
+
+    .field--name-field-product-category {
+      margin-bottom: 60px !important;
+      margin-top: -30px;
+
+      & > * {
+        margin: 0;
+      }
+    }
+  }
+
+  .article-body-content-column-main {
+    .field--name-field-image {
+      margin-bottom: 60px !important; 
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .column-title,
+  .boxed-field-title {
+    margin-bottom: 30px;
+  }
+
+  .article-body-content-column-right {
+    .field {
+      margin-bottom: 15px !important;
+      padding-bottom: 15px !important;
+      border-bottom: 1px solid #ccc;
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .block-grid > .grid {
+    padding: 0 30px 30px;
+
+    @media (max-width: 1200px) {
+      padding :0 15px 30px;
+    }
+
+    .grid__content img {
+      border-radius: 5px;
+    }
+  }
+
+  .item-list--blazy-grid {
+    margin-top: 60px;
+  }
+}
+
+.product.teaser {
+  overflow: hidden;
+  margin-bottom: 0;
+
+  img {
+    border-radius: 5px;
+  }
+
+  .field--type-commerce-price {
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  .field--name-field-category,
+  .field--name-sku {
+    font-size: 14px;
+    color: #999;
+    margin-top: -5px;
+  }
+
+  .field--name-sku {
+    font-size: 12px;
+  }
+
+  .field--name-field-image {
+    float: left;
+    min-width: 0;
+    padding-right: 5%;
+
+    @media (min-width: 1200px){
+      width: percentage(1/3);
+    }
+  }
+}
+
+.product.full.admission,
+.product.full.class,
+.product.full.rental {
+  .page-title {
+    margin-bottom: 15px;
+  }
+}
+
+.product.full.admission {
+  .article-heading {
+    .field--name-field-date-smart {
+      display: inline-block;
+      margin-bottom: 0 !important;
+      margin-left: 0.5em;
+      font-style: italic;
+
+      .field__label {
+        display: none;
+      }
+
+      .field__item {
+        display: inline;
+        font-style: italic;
+      }
+    }
+  }
+}

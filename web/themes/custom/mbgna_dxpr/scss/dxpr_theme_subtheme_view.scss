@@ -215,3 +215,21 @@
     }
   }
 }
+
+.view-products-mbgna.view-display-id-page_1 {
+  & > .view-content {
+    display: flex;
+    flex-direction: column;
+
+    & > .views-row {
+      margin-bottom: 45px;
+      padding-bottom: 45px;
+      border-bottom: 3px solid #eee;
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}

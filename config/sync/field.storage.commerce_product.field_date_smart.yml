@@ -1,0 +1,23 @@
+uuid: 8e19ba7d-c73f-4d2c-8fb1-158bed17d2c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+    - smart_date
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product.field_date_smart
+field_name: field_date_smart
+entity_type: commerce_product
+type: smartdate
+settings: {  }
+module: smart_date
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

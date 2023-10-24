@@ -34,8 +34,8 @@ configuration:
       step: complete
       weight: 4
       message:
-        value: "Your order number is [commerce_order:order_number].\r\nYou can view your order on your account page when logged in."
-        format: plain_text
+        value: '<h2>Thank you!</h2><p><strong>Your order has been successfully placed!&nbsp;</strong></p><p>Your order number is [commerce_order:order_number]. You can view all of your orders on your <a href="/user">dashboard</a> when logged in.</p><hr><h4>Order Information</h4><strong>Placed on: </strong>[commerce_order:placed]<div class="field"><div class="field__label"><strong>Items</strong></div><div class="field__item">[commerce_order:order_items]</div></div><br><h4>Payment Information</h4><p><strong>Method: </strong>[commerce_order:payment_method:entity]<br><strong>Total: </strong>[commerce_order:total_price]<br><strong>Paid: </strong>[commerce_order:total_paid]<br><br></p><p><a href="/">&lsaquo; Go to the home page</a></p>'
+        format: code
     order_summary:
       step: _sidebar
       weight: 5

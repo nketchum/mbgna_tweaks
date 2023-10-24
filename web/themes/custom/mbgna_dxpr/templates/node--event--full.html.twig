@@ -79,16 +79,8 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <div class="article-heading">
-    {%  if content.field_event_categories %}
-      <div class="field field--name-field-event-categories field--type-entity-reference field--label-hidden field__items">
-        <div class="field__item"><a href="/events">All Events</a></div>
-        {% for item in field_event_categories_url_names %}
-         &nbsp;&rsaquo;&nbsp; <div class="field__item"><a href="/events/{{ item.url_name }}">{{ item.human_name }}</a></div>
-        {% endfor %}
-      </div>
-    {% endif %}
-    <div class="field field--name-field-event-category field--type-entity-reference field--label-hidden field__item">
-      <a href="/events/{{ content.field_event_categories.0|render|striptags|trim|lower|replace({' ': '-'})  }}">{{ content.field_event_categories.0|render|striptags|trim }}</a>
+    <div class="field field--name-field-event-category field--type-entity-reference field--label-hidden field__items">
+      <h4><a href="/events">Events</a></h4>
     </div>
     <h2 class="page-title">{{ title_prefix }}{{ node.label|render|striptags|trim }}{{ title_suffix }}</h2>
     {{ content.field_date_smart }}
@@ -112,6 +104,12 @@
             {% endif %}
             {{ content|without('flippy_pager', 'field_event_categories', 'field_date_smart', 'field_image', 'field_dollar_amount', 'body', 'field_commerce_external', 
             'field_commerce_products') }}
+            {% if content.field_event_categories|render|striptags|trim %}
+              <div class="field field--name-field-event-category field--type-entity-reference field--label-hidden field__item">
+                <div class="field__label">Category</div>
+                <div class="field__item"><a href="/events/{{ content.field_event_categories.0|render|striptags|trim|lower|replace({' ': '-'})  }}">{{ content.field_event_categories.0|render|striptags|trim }}</a></div>
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>

@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="product teaser {{ product.title['#bundle'] }}">
+  {{- product.field_image -}}
+  {{- product.title -}}
+  {{- product.body -}}
+  {{- product.variation_price -}}
+  {% if product.field_category %}
+    {% set category_tid = product.field_category.0['#entity'].tid.getValue.0.value %}
+    <div class="field field--name-field-category field--type-entity-reference inline-block field--label-hidden field__item">
+      <a href="/shop?category={{category_tid}}">{{- product.field_category|render|striptags|trim -}}</a>
+    </div>
+  {% endif %}
+  {%  if product.field_category and product.variation_sku %}
+    <span class="vertical-div">|</span>
+  {% endif %}
+  {% if product.variation_sku %}
+    <div class="field field--name-sku field--type-string field--label-hidden inline-block field__item">
+      {{- product.variation_sku|render|striptags|trim -}}
+    </div>
+  {% endif %}
+</article>

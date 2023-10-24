@@ -433,24 +433,6 @@ header > div {
   }
 }
 
-.page-node-type-garden,
-.page-node-type-conservatory,
-.page-node-type-trail,
-.page-node-type-room,
-.path-product {
-  .main-container {
-    padding-left: 0;
-    padding-right: 0;
-
-    & > .row {
-      & > * {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
-  }
-}
-
 .location-card h1 {
   line-height: 1.15em;
 }
@@ -1004,6 +986,7 @@ header > div {
   }
 }
 
+.path-product,
 .path-node.page-node-type-basic-page {
   .breadcrumb {
     left: auto !important;
@@ -1011,11 +994,12 @@ header > div {
 
   .main-container {
     .block-system-main-block {
-      margin: 0 5%;
+      // margin: 0 5%;
 
+      article.product.full,
       article.basic-page.full {
         margin: 60px auto;
-        padding: 0 60px;
+        // padding: 0 60px;
 
         .field {
           margin-bottom: 30px;
@@ -1354,13 +1338,15 @@ article.full.content-main {
 
       .field--name-field-post-type,
       .field--name-field-position-type {
-        color: #666;
-        margin-top: 15px;
-        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bold;
+        margin-bottom: 60px;
       }
 
       h1 {
         margin-top: 45px;
+        margin-bottom: 15px;
       }
     }
   }

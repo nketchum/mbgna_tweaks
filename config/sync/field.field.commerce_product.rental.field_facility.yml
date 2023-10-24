@@ -1,0 +1,33 @@
+uuid: 46d0d9cd-d736-44a4-8171-b937b7460e03
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.rental
+    - field.storage.commerce_product.field_facility
+    - mbgna_facility.facility_type.conservatory
+    - mbgna_facility.facility_type.garden
+    - mbgna_facility.facility_type.room
+id: commerce_product.rental.field_facility
+field_name: field_facility
+entity_type: commerce_product
+bundle: rental
+label: Facility
+description: 'Optional. Reference the publicly-viewed facility page to which this rental applies.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:facility'
+  handler_settings:
+    target_bundles:
+      conservatory: conservatory
+      garden: garden
+      room: room
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: garden
+field_type: entity_reference

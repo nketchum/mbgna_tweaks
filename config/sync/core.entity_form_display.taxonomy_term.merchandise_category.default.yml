@@ -1,0 +1,26 @@
+uuid: e2377024-35c0-4315-bd18-a479316a8936
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.merchandise_category
+id: taxonomy_term.merchandise_category.default
+targetEntityType: taxonomy_term
+bundle: merchandise_category
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  publish_on: true
+  revision_log_message: true
+  status: true
+  unpublish_on: true

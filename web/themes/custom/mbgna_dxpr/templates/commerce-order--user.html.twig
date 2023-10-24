@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Template for orders in the 'user' view mode.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - order: The rendered order fields.
+ *   Use 'order' to print them all, or print a subset such as
+ *   'order.order_number'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ order|without('order_number') }}
+ *   @endcode
+ * - order_entity: The order entity.
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass(['container-white', 'container-squeeze']) }}>
+  {% set order_number = order_entity.order_number.0.getValue.value %}
+  <a href="/user/{{- order.uid['#items'].0.getValue.target_id -}}/orders" id="edit-back-to-orders-link">&larr; Back to my orders</a>
+  <h1 class="page-title">Order {{ order_number }}</h1>
+  <div class="customer-information">
+    {% if order.billing_information %}
+      <div class="customer-billing">
+        <div class="field__label">{{ 'Billing information'|t }}</div>
+        {{ order.billing_information }}
+        <hr>
+      </div>
+    {% endif %}
+    {% if order.shipping_information %}
+      <div class="customer-information__shipping">
+        <div class="field__label">{{ 'Shipping information'|t }}</div>
+        {{ order.shipping_information }}
+        <hr>
+      </div>
+    {% endif %}
+  </div>
+  <div class="order-information">
+    {{ order.completed }}
+    {{ order.placed }}
+    {{ order.mail }}
+    <hr>
+    {{ order.state }}
+    {{ order.order_items }}<br>
+    {{ order.total_price }}
+    {{ additional_order_fields }}
+  </div>
+</div>

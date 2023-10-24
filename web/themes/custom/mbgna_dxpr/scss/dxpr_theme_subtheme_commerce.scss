@@ -1,6 +1,4 @@
-.path_profile_payment {
-
-}
+@import "./dxpr_theme_subtheme.variables.scss";
 
 .cart-block-contents-links a {
   display: inline-block;
@@ -44,5 +42,41 @@
   th, td {
     background: #eee;
     padding: 5px;
+  }
+}
+
+// Let the entire main block
+// act like a white centered container.
+.path_address_book_overview {
+  .block-system-main-block {
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+    max-width: 960px;
+    padding: 5%;
+  }
+}
+
+// Address book is not very customizable.
+// We'll need to abuse css before spending
+// extraneous time extending the module.
+.path_address_book_overview {
+  .address-book__add-link {
+    background-color: $blue-secondary;
+    border-radius: 6px;
+    color: $white !important;
+    display: inline-block;
+    margin: 15px 0 30px 0;
+    padding: 6px 12px;
+  }
+
+  .address-book__profile {
+    margin-left: 0;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

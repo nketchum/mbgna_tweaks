@@ -5,17 +5,18 @@ dependencies:
   config:
     - filter.format.webform_default
   module:
+    - captcha
     - commerce_checkout
     - commerce_order
     - commerce_payment
     - commerce_product
     - commerce_promotion
     - contact
-    - devel
     - file
     - filter
     - mbgna_bed
     - mbgna_facility
+    - mbgna_honor
     - mbgna_organization
     - mbgna_plant
     - mbgna_resource
@@ -33,7 +34,6 @@ is_admin: false
 permissions:
   - 'access checkout'
   - 'access content'
-  - 'access devel information'
   - 'access site-wide contact form'
   - 'access user profiles'
   - 'change own username'
@@ -43,6 +43,7 @@ permissions:
   - 'delete own files'
   - 'manage own commerce_payment_method'
   - 'search content'
+  - 'skip CAPTCHA'
   - 'update own customer profile'
   - 'update own personal profile'
   - 'use text format webform_default'
@@ -50,6 +51,7 @@ permissions:
   - 'view commerce_product'
   - 'view commerce_promotion'
   - 'view facility'
+  - 'view honor'
   - 'view media'
   - 'view organization'
   - 'view own commerce_order'

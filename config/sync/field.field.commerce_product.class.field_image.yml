@@ -1,0 +1,29 @@
+uuid: 802e3fbb-4c36-4ef9-b9c4-65415c4993fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.class
+    - field.storage.commerce_product.field_image
+    - media.type.image
+id: commerce_product.class.field_image
+field_name: field_image
+entity_type: commerce_product
+bundle: class
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: 99efe219-e8a8-40d0-9ffd-81d7846e1b87
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - datetime_range
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product.field_dates
+field_name: field_dates
+entity_type: commerce_product
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

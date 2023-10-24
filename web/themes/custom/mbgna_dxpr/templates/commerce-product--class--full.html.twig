@@ -1,0 +1,79 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="product full {{ product.title['#bundle'] }}">
+  <div class="article-heading">
+    <div class="field field--name-field-product-category field--type-entity-reference field--label-hidden field__item">
+      <h4>{#<a href="/classes">#}Classes{#</a>#}</h4>
+    </div>
+    <h1 class="page-title">{{- product.title|render|striptags|trim -}}</h1>
+    {% if product.field_dates|render|striptags|trim %}
+      {% if product.field_dates|render|striptags|trim %}
+        <div class="field field--name-field-dates field__item">{{ product.field_dates }}</div>
+      {% endif %}
+    {% endif %}
+  </div>
+  <div class="article-body article-has-aside article-has-aside-right row">
+    {% block content %}
+      <div class="article-body-content col-lg-8 col-md-6 row">
+        <div class="col-md-8 article-body-content-column article-body-content-column-left article-body-content-column-main">
+          {{- product|without('field_category', 'field_dates', 'field_location', 'field_address', 'field_webform', 'variation_attributes', 'variation_price', 'variations', 'variation_sku') -}}
+        </div>
+        <div class="col-md-4 article-body-content-column article-body-content-column-right">
+          <div class="wrapped-fields">
+            <div class="field">
+              <h4 class="column-title">Class Information</h4>
+              {{- product.variation_price -}}
+              {{- product.variation_sku -}}
+              {{- product.field_location -}}
+              {{- product.field_address -}}
+              {% if product.field_category|render|striptags|trim %}
+                {% set category_tid = product.field_category.0['#entity'].tid.getValue.0.value %}
+                <div class="field field--name-field-category field--type-entity-reference field--label-hidden field__item">
+                  <div class="field__label">Category</div>
+                  <div class="field__item">{#<a href="/shop?category={{category_tid}}">#}{{- product.field_category|render|striptags|trim -}}{#</a>#}</div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+    <div class="article-aside article-aside-right col-lg-4 col-md-6">
+      <div class="article-aside-content">
+        <div class="field boxed-field boxed-field-light">
+          <h4 class="boxed-field-title">Register</h4>
+          {{- product.variations -}}
+        </div>
+        {% if product.field_webform|render|striptags|trim %}
+          <div class="field boxed-field boxed-field-light">
+            <h4 class="boxed-field-title">Inquiries</h4>
+            {{- product.field_webform -}}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>

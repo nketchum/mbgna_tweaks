@@ -25,6 +25,12 @@ function mbgna_dxpr_theme($existing, $type, $theme, $path) {
 function mbgna_dxpr_preprocess_html(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
 
+  // Address book pages should provide a class or something
+  // to enable css styling!
+  if ($route_name == 'commerce_order.address_book.overview') {
+    $variables['path_address_book_overview'] = 'path_address_book_overview';
+  }
+
   // Payment method user profile page needs special styling
   // for the Drupal "collection" page that commerce payment
   // uses (unfortunately).

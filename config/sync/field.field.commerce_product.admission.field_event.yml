@@ -1,0 +1,29 @@
+uuid: e7246634-190f-47d6-90a8-e3d0cf631b94
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.admission
+    - field.storage.commerce_product.field_event
+    - node.type.event
+id: commerce_product.admission.field_event
+field_name: field_event
+entity_type: commerce_product
+bundle: admission
+label: Event
+description: 'Optional. Provides a link back to the referenced event if one is present.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

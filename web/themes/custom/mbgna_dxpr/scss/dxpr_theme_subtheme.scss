@@ -15,6 +15,7 @@
 @import "./dxpr_theme_subtheme_entity_node_resource.scss";
 @import "./dxpr_theme_subtheme_entity_organization.scss";
 @import "./dxpr_theme_subtheme_entity_plant.scss";
+@import "./dxpr_theme_subtheme_entity_product.scss";
 @import "./dxpr_theme_subtheme_entity_user.scss";
 @import "./dxpr_theme_subtheme_entity_webform.scss";
 @import "./dxpr_theme_subtheme_field.scss";
@@ -24,6 +25,10 @@
 @import "./dxpr_theme_subtheme_paragraph.scss";
 @import "./dxpr_theme_subtheme_search.scss";
 @import "./dxpr_theme_subtheme_view.scss";
+
+.ajax-progress {
+  display: none !important;
+}
 
 a:hover, 
 a:focus, 

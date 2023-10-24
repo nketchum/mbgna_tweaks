@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="product full {{ product.title['#bundle'] }}">
+  <div class="article-heading">
+    <div class="field field--name-field-product-category field--type-entity-reference field--label-hidden field__item">
+      <h4><a href="/facilities">Rentals</a></h4>
+    </div>
+    <h1 class="page-title">{{- product.title|render|striptags -}}</h1>
+    {% if product.field_facility|render|striptags|trim %}
+      <div class="field field--name-field-facility field--type-entity-reference field--label-above">
+        <div class="field__item"><a href="/facility/{{ product.field_facility.0['#entity'].id() }}">{{ product.field_facility.0['#entity'].label() }}</a></div>
+      </div>
+    {% endif %}
+  </div>
+  <div class="article-body article-has-aside article-has-aside-right row">
+    {% block content %}
+      <div class="article-body-content col-lg-8 col-md-6 row">
+        <div class="col-md-8 article-body-content-column article-body-content-column-left article-body-content-column-main">
+          {{- product|without('field_category', 'field_location', 'field_address', 'field_facility', 'variation_attributes', 'variation_price', 'variations', 'variation_sku') -}}
+        </div>
+        <div class="col-md-4 article-body-content-column article-body-content-column-right">
+          <div class="wrapped-fields">
+            <div class="field">
+              <h4 class="column-title">Rental Information</h4>
+              {{- product.variation_price -}}
+              {{- product.field_location -}}
+              {{- product.field_address -}}
+              {{- product.field_facility -}}
+              {{- product.variation_sku -}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+    <div class="article-aside article-aside-right col-lg-4 col-md-6">
+      <div class="article-aside-content">
+        <div class="boxed-fields boxed-fields-light">
+          <div class="field">
+            <h4 class="boxed-field-title">Rental Deposits</h4>
+            {{- product.variations -}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

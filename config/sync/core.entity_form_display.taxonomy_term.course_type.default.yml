@@ -1,0 +1,26 @@
+uuid: f40540cd-2b36-4c9b-8a27-7ed40c6dcd41
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.course_type
+id: taxonomy_term.course_type.default
+targetEntityType: taxonomy_term
+bundle: course_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  publish_on: true
+  revision_log_message: true
+  status: true
+  unpublish_on: true

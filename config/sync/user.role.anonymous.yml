@@ -7,9 +7,9 @@ dependencies:
     - commerce_product
     - commerce_promotion
     - contact
-    - devel
     - mbgna_bed
     - mbgna_facility
+    - mbgna_honor
     - mbgna_organization
     - mbgna_plant
     - mbgna_resource
@@ -26,7 +26,6 @@ is_admin: false
 permissions:
   - 'access checkout'
   - 'access content'
-  - 'access devel information'
   - 'access site-wide contact form'
   - 'access user profiles'
   - 'search content'
@@ -34,6 +33,7 @@ permissions:
   - 'view commerce_product'
   - 'view commerce_promotion'
   - 'view facility'
+  - 'view honor'
   - 'view media'
   - 'view organization'
   - 'view plant'

@@ -1,0 +1,29 @@
+uuid: 3a0e20a8-38b4-4c9d-bdf3-99cfb87176d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.admission
+    - field.storage.commerce_product.field_image
+    - media.type.image
+id: commerce_product.admission.field_image
+field_name: field_image
+entity_type: commerce_product
+bundle: admission
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -376,6 +376,7 @@ caption {
 #edit-back-to-dash-link--3,
 #edit-back-to-dash-link--4,
 #edit-back-to-dash-link--5,
+#edit-back-to-orders-link,
 #edit-back-to-addresses-link,
 #edit-back-to-payments-link {
   display: inline-block;
@@ -395,4 +396,10 @@ caption {
     padding-top: 1em;
     padding-bottom: 1em;
   }
+}
+
+.vertical-div {
+  font-weight: 300;
+  opacity: 0.25;
+  padding: 0 2px;
 }

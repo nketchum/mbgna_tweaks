@@ -8,7 +8,6 @@ dxpr_editor: false
 weight: 0
 roles:
   - editor
-  - super_administrator
 elements:
   - az_accordion
   - az_alert
@@ -100,6 +99,7 @@ blocks:
   - az_block-webform_block
   - az_block-webform_submission_limit_block
   - az_block-webform_access_group_entity
+  - az_block-mbgna_tweaks_shop_view_filters
   - az_block-license_info
   - 'az_block-dxpr_builder_webform:cancel_membership'
   - 'az_block-dxpr_builder_webform:contact'
@@ -113,16 +113,6 @@ blocks:
   - az_block-local_actions_block
   - az_block-local_tasks_block
 views:
-  - az_view-scheduler_scheduled_commerce_product-default
-  - az_view-scheduler_scheduled_commerce_product-overview
-  - az_view-scheduler_scheduled_content-default
-  - az_view-scheduler_scheduled_content-overview
-  - az_view-scheduler_scheduled_content-user_page
-  - az_view-scheduler_scheduled_media-default
-  - az_view-scheduler_scheduled_media-overview
-  - az_view-scheduler_scheduled_media-user_page
-  - az_view-scheduler_scheduled_taxonomy_term-default
-  - az_view-scheduler_scheduled_taxonomy_term-overview
   - az_view-advancedqueue_jobs-default
   - az_view-advancedqueue_jobs-page_1
   - az_view-bed-default
@@ -214,6 +204,8 @@ views:
   - az_view-posts-block_1
   - az_view-posts-block_2
   - az_view-posts-page_1
+  - az_view-products_mbgna-default
+  - az_view-products_mbgna-page_1
   - az_view-products_mbgna_-default
   - az_view-products_mbgna_-page_1
   - az_view-profile_payment_method-default
@@ -227,6 +219,16 @@ views:
   - az_view-resource-page_1
   - az_view-scheduled_publish-default
   - az_view-scheduled_publish-block_1
+  - az_view-scheduler_scheduled_commerce_product-default
+  - az_view-scheduler_scheduled_commerce_product-overview
+  - az_view-scheduler_scheduled_content-default
+  - az_view-scheduler_scheduled_content-overview
+  - az_view-scheduler_scheduled_content-user_page
+  - az_view-scheduler_scheduled_media-default
+  - az_view-scheduler_scheduled_media-overview
+  - az_view-scheduler_scheduled_media-user_page
+  - az_view-scheduler_scheduled_taxonomy_term-default
+  - az_view-scheduler_scheduled_taxonomy_term-overview
   - az_view-taxonomy_term-default
   - az_view-taxonomy_term-feed_1
   - az_view-taxonomy_term-page_1
@@ -247,7 +249,7 @@ page_templates: {  }
 user_templates:
   - 4844bff6-d111-4a86-80b5-095d3db903a6
   - f52f566a-2602-43c3-a1c0-cdf0df19ae13
-  - 051418d8-155b-4272-9629-2252f72b995f
+  - 82b33f04-f914-434d-a512-3301bee92532
   - 1e305985-d611-4567-bb6c-202fa7930602
   - 5149abee-441e-4cdd-9f7b-b057db12a16b
   - c7ef3ac0-9bb4-4316-b0a3-9665983af627
@@ -263,7 +265,6 @@ user_templates:
   - 59aa1107-04c6-4657-a846-3c71d8f71435
   - 3a198979-212a-42fb-881e-dcf10186b360
   - a4fb17af-b3e0-48eb-873f-b78f49653c68
-  - 1a57107a-1684-4eda-a201-972544789494
 inline_buttons:
   - Bold
   - Italic

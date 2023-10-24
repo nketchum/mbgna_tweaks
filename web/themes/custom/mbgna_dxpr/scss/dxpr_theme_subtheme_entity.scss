@@ -4,7 +4,8 @@
 .path-node,
 .path-organization,
 .path-resource,
-.path-plant {
+.path-plant,
+.path-product {
   &.is-not-dxpr-layout {
     .main-container {
       & > .row > * {
@@ -50,9 +51,9 @@
       }
 
       .article-kicker {
-        letter-spacing: 0.5px;
+        font-weight: bold;
+        margin-top: 30px;
         margin-bottom: 60px;
-        text-transform: uppercase;
       }
 
       .article-body-content-column-main {

@@ -1,0 +1,34 @@
+uuid: 82f3191e-599f-4ecd-bfc7-1e8e9d957fe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.plant
+    - field.storage.commerce_product.body
+    - filter.format.full_html
+    - filter.format.minimal_html
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - minimal_html
+      - full_html
+id: commerce_product.plant.body
+field_name: body
+entity_type: commerce_product
+bundle: plant
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - minimal_html
+    - full_html
+field_type: text_with_summary

@@ -1,0 +1,26 @@
+uuid: b4e5d38a-a291-4cf7-8629-a3dae1a5bdb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.plant_category
+id: taxonomy_term.plant_category.default
+targetEntityType: taxonomy_term
+bundle: plant_category
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  publish_on: true
+  revision_log_message: true
+  status: true
+  unpublish_on: true

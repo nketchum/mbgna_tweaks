@@ -25,14 +25,14 @@
 <article{{ attributes.addClass(classes) }}>
   <div class="article-heading">
     <div class="article-kicker"><a href="/facilities">Rentals</a></div>
-    {% if content.field_conservatory %}
+    {% if content.field_conservatory|render|striptags|trim %}
       <a href="{{- content.field_conservatory.0['#url'].toString() -}}" class="btn btn-secondary btn-sm">View the {{ content.field_conservatory.0['#entity'].getTitle() }} &rsaquo;</a>
     {% endif %}
-    {% if content.field_garden %}
+    {% if content.field_garden|render|striptags|trim %}
       <a href="{{- content.field_garden.0['#url'].toString() -}}" class="btn btn-secondary btn-sm">View the {{ content.field_garden.0['#entity'].getTitle() }} &rsaquo;</a>
     {% endif %}
     <h2 class="page-title">{{ title_prefix }}{{ content.label|render|striptags|trim }}{{ title_suffix }}</h2>
-    {% if content.field_mbgna_location %}
+    {% if content.field_mbgna_location|render|striptags|trim %}
       <div class="field field--name-field-mbgna-location field--type-entity-reference field--label-hidden field__item">
         At {{ content.field_mbgna_location.0 }}
       </div>
@@ -47,7 +47,7 @@
           {% endif %}
         </div>
         <div class="col-md-4 article-body-content-column article-body-content-column-right">
-          {% if content.field_capacity %}
+          {% if content.field_capacity|render|striptags|trim %}
             <div class="field field--name-field-capacity field--type-integer field--label-below">
               <div class="field__item">{{- content.field_capacity.0 -}}</div>
               <div class="field__label">Capacity</div>

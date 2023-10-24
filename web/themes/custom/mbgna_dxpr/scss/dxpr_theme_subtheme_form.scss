@@ -307,3 +307,15 @@ select.form-select {
     }
   }
 }
+
+
+.block-views-exposed-filter-blockproducts-mbgna-page-1 {
+  .form--inline {
+    display: flex;
+    flex-direction: column;
+
+    .form-item {
+      margin-bottom: 0;
+    }
+  }
+}

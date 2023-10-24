@@ -1,0 +1,29 @@
+uuid: a89e559d-4069-40ce-9cf7-35a3521dbc3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.merchandise
+    - field.storage.commerce_product.field_category
+    - taxonomy.vocabulary.merchandise_category
+id: commerce_product.merchandise.field_category
+field_name: field_category
+entity_type: commerce_product
+bundle: merchandise
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      merchandise_category: merchandise_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

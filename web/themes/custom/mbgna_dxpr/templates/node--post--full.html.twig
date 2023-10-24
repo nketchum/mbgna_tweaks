@@ -32,9 +32,8 @@
       <div class="container-fluid">
         <div class="row banner-thin">
           <div class="col-md-4">
-            {{ drupal_block('system_breadcrumb_block') }}
             <div class="field field--name-field-post-type field--type-entity-reference field--label-hidden field__item">
-              <a href="/articles/{{ content.field_post_type|render|striptags|trim|lower  }}">{{ content.field_post_type|render|striptags|trim }}</a>
+              <a href="/articles/{{ content.field_post_type|render|striptags|trim|lower  }}">{{ content.field_post_type|render|striptags|trim }}s</a>
             </div>
             <h1>{{ node.label }}</h1>
             <div class="field field--name-created field__item">Published {{ node.getCreatedTime|format_date('medium_date') }}</div>

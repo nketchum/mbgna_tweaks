@@ -1,13 +1,21 @@
 printf "Database backup starting...\n\n"
 
-# Check for two arguments.
-if [[ $# -lt 2  ]] ; then
-    printf "Error. the website project folder name and port number must be given. Use \\$ \"lando info\" to get the db port number."
-    exit 0
-fi
+read -p "Database name [drupal9]:" dbname
+dbname=${dbname:-drupal9}
+read -p "Database user [drupal9]:" dbuser
+dbuser=${dbuser:-drupal9}
+read -p "Database password [drupal9]:" dbpass
+dbpass=${dbpass:-drupal9}
+read -p "Database host [database]:" dbhost
+dbhost=${dbhost:-database}
+read -p "Database port [3306]:" dbport
+dbport=${dbport:-3306}
 
-mysqldump -udrupal9 -pdrupal9 -h127.0.0.1 drupal9 --port=$2 > $1.db.sql
-tar -cvzf $1.db.tar.gz $1.db.sql
-rm $1.db.sql
+current_dir=$PWD
+cd /app
+mysqldump -u$dbuser -p$dbpass -h$dbhost $dbname --port=$dbport > $dbname.db.sql
+tar -cvzf $dbname.db.tar.gz $dbname.db.sql
+rm $dbname.db.sql
+cd $current_dir
 
 printf "Complete.\n\n"

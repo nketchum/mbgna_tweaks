@@ -4,17 +4,97 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.admission
+    - field.field.commerce_product.admission.body
+    - field.field.commerce_product.admission.field_address
+    - field.field.commerce_product.admission.field_date_smart
+    - field.field.commerce_product.admission.field_event
+    - field.field.commerce_product.admission.field_image
+    - field.field.commerce_product.admission.field_location
   module:
+    - address
     - commerce
-    - commerce_product
+    - inline_entity_form
+    - media_library
+    - smart_date
+    - text
 id: commerce_product.admission.default
 targetEntityType: commerce_product
 bundle: admission
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_smart:
+    type: smartdate_only
+    weight: 2
+    region: content
+    settings:
+      hide_date: '1'
+      separator: to
+      allday: 0
+      remove_seconds: 0
+      modal: false
+      default_duration: 60
+      default_duration_increments: |-
+        30
+        60|1 hour
+        90
+        120|2 hours
+        custom
+      show_extra: false
+    third_party_settings: {  }
+  field_event:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 6
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_location:
+    type: inline_entity_form_complex
+    weight: 4
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: location
+      label_plural: locations
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
   stores:
     type: commerce_entity_select
-    weight: 2
+    weight: 7
     region: content
     settings:
       hide_single_entity: true
@@ -30,12 +110,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  variations:
-    type: commerce_product_single_variation
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   created: true
   path: true
@@ -43,3 +117,4 @@ hidden:
   status: true
   uid: true
   unpublish_on: true
+  variations: true

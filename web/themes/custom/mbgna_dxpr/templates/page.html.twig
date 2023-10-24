@@ -149,24 +149,6 @@
   {% endblock %}
 {% endif %}
 
-{# Page Title #}
-{% if page.page_title and not (theme.settings.page_title_home_hide and is_front) %}
-
-  {% block page_title %}
-  {% if title_bg_image_path %}
-    <style>
-      #page-title-full-width-container::after{ background-image:url({{ file_url(title_bg_image_path) }});}
-    </style>
-  {% endif %}
-    <div{{ page_title_attributes }} class="page-title-full-width-container" id="page-title-full-width-container">
-    {% set container = theme.settings.full_width_containers.cnt_page_title ? 'dxpr-theme-fluid' : 'container' %}
-      <header role="banner" id="page-title" class="{{ container }} page-title-container">
-        {{ page.page_title }}
-      </header>
-    </div>
-  {% endblock %}
-{% endif %}
-
 {# Content Top #}
 {% if page.content_top %}
   {% block content_top %}

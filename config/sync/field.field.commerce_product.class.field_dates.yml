@@ -1,0 +1,21 @@
+uuid: bbd5cb2d-2e0a-4e15-86fd-4dc937a512ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.class
+    - field.storage.commerce_product.field_dates
+  module:
+    - datetime_range
+id: commerce_product.class.field_dates
+field_name: field_dates
+entity_type: commerce_product
+bundle: class
+label: Date(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

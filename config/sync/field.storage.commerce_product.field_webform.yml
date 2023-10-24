@@ -1,0 +1,24 @@
+uuid: 8e0225da-15c5-46d3-8709-b94c37dfcde1
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+    - webform
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product.field_webform
+field_name: field_webform
+entity_type: commerce_product
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

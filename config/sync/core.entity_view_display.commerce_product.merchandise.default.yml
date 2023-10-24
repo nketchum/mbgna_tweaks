@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.merchandise
     - field.field.commerce_product.merchandise.body
+    - field.field.commerce_product.merchandise.field_category
     - field.field.commerce_product.merchandise.field_image
     - field.field.commerce_product.merchandise.field_images
     - image.style.medium_square_ish_rectangle
@@ -24,7 +25,17 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
     region: content
   field_image:
     type: blazy_media
@@ -68,7 +79,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 1
+    weight: 2
     region: content
   field_images:
     type: blazy_entity
@@ -82,7 +93,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 4
+    weight: 5
     region: content
   title:
     type: title
@@ -93,7 +104,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: page-title
-    weight: 0
+    weight: 1
     region: content
   variations:
     type: commerce_add_to_cart
@@ -101,7 +112,7 @@ content:
     settings:
       combine: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden:
   created: true
