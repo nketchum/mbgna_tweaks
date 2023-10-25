@@ -4,3 +4,13 @@ services:
     arguments: ['@current_route_match', '@entity_type.manager']
     tags:
       - { name: 'event_subscriber' }
+  mbgna_tweaks.controller_alter:
+    class: Drupal\mbgna_tweaks\EventSubscriber\ControllerAlterSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+  mbgna_tweaks.cart_subscriber:
+    class: Drupal\mbgna_tweaks\EventSubscriber\CartEventSubscriber
+    arguments: ['@messenger', '@string_translation', '@entity_type.manager']
+    tags:
+      - { name: event_subscriber }

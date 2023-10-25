@@ -2,9 +2,12 @@
 
 use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\user\Entity\Role;
-use Drupal\views\ViewExecutable;
+use Drupal\Core\Link;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
+use Drupal\user\Entity\Role;
+use Drupal\user\Entity\User;
+use Drupal\views\ViewExecutable;
 
 /**
  * @file
@@ -19,6 +22,244 @@ use Drupal\Core\Url;
  */
 function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $route_name = \Drupal::routeMatch()->getRouteName();
+  $current_user = \Drupal::currentUser();
+
+  // Load the user being viewed, if being viewed.
+  if (\Drupal::routeMatch()->getParameter('user')) {
+
+    $account = \Drupal::routeMatch()->getParameter('user');
+
+    if (!is_object($account) && (int) $account > 0) {
+      // Some pages such as add payment method, the user parameter
+      // is simply the uid as a string!
+      $account_uid = \Drupal::routeMatch()->getParameter('user');
+    }
+    else if (is_object($account) && method_exists($account, 'id')) {
+      // On other pages such as edit profile, the user parameter
+      // is the actual user object!
+      $account_uid = \Drupal::routeMatch()->getParameter('user')->id();
+    }
+
+    // Now we can load the account.
+    $account_user = User::load($account_uid);
+
+    // Create the "back" links.
+    $back_to_dash_url = Url::fromRoute('entity.user.canonical', ['user' => $account_uid]);
+    $back_to_payments_url = Url::fromRoute('entity.commerce_payment_method.collection', ['user' => $account_uid]);
+    $back_to_addresses_url = Url::fromRoute('commerce_order.address_book.overview', ['user' => $account_uid]);
+
+    // Insert directly into a a form field element.
+    $back_to_dash_link = array(
+      '#type' => 'link',
+      '#url' => $back_to_dash_url,
+      '#title' => t('&larr; My dashboard'),
+      '#weight' => -99,
+    );
+
+    // Insert directly into a a form field element.
+    $back_to_payments_link = array(
+      '#type' => 'link',
+      '#url' => $back_to_payments_url,
+      '#title' => t('&larr; My payment methods'),
+      '#weight' => -99,
+    );
+
+    // Insert directly into a a form field element.
+    $back_to_addresses_link = array(
+      '#type' => 'link',
+      '#url' => $back_to_addresses_url,
+      '#title' => t('&larr; My addresses'),
+      '#weight' => -99,
+    );
+  }
+
+  if (substr($form['#id'], 0, 33) == 'views-exposed-form-products-mbgna') {
+    $form['type']['#options']['All'] = t('Product type...');
+    $form['category']['#options']['All'] = t('Product category...');
+  }
+
+  if ($form['#id'] == 'search-form') {
+    $form['#attributes']['class'][] = 'container-white';
+    $form['#attributes']['class'][] = 'container-squeeze';
+  }
+
+  if (substr($form['#id'], 0, -8) == 'commerce-checkout-flow-multistep') {
+    $form['#attributes']['class'][] = 'container-white';
+    $form['#attributes']['class'][] = 'container-squeeze';
+  }
+
+  // Target all shopping cart forms.
+  if (substr($form['#id'], 0, -11) == 'views-form-commerce-cart-form') {
+    $markup = '<h1 class="page-title">'. t('My shopping cart') .'</h1>';
+    $form['title'] = array(
+      '#type' => 'markup',
+      '#markup' => $markup,
+      '#weight' => -98,
+    );
+
+    // Shopping cart "back" links can only use the 
+    // current user, not the profile account being viewed.
+    if ($current_user->id() > 0) {
+      $form['back_to_dash_link'] = array(
+        '#type' => 'link',
+        '#url' => Url::fromRoute('entity.user.canonical', ['user' => $current_user->id()]),
+        '#title' => t('&larr; My dashboard'),
+        '#weight' => -99,
+      );
+    }
+
+    $form['#attributes']['class'][] = 'container-white';
+    $form['#attributes']['class'][] = 'container-squeeze';
+  }
+
+  // Payment method add/edit form
+  if ($form['#id'] == 'commerce-payment-method-add-form' || $form['#id'] == 'commerce-payment-method-credit-card-edit-form') {
+    $form['back_to_payments_link'] = $back_to_payments_link;
+
+    if ($form['#id'] == 'commerce-payment-method-credit-card-edit-form') {
+      $page_title = t('Edit payment method');  
+    }
+
+    if ($form['#id'] == 'commerce-payment-method-add-form') {
+      $page_title = t('Add payment method');  
+    }
+    
+    $form['title'] = array(
+      '#type' => 'markup',
+      '#markup' => '<h1 class="page-title">'. $page_title .'</h1>',
+      '#weight' => -1,
+    );
+  }
+
+  // Address book add/edit form
+  if ($form['#id'] == 'profile-customer-address-book-edit-form' || $form['#id'] == 'profile-customer-address-book-add-form' ) {
+    $form['back_to_addresses_link'] = $back_to_addresses_link;
+
+    if ($form['#id'] == 'profile-customer-address-book-edit-form') {
+      $page_title = t('Edit address');  
+    }
+
+    if ($form['#id'] == 'profile-customer-address-book-add-form') {
+      $page_title = t('Add address');  
+    }
+    
+    $form['title'] = array(
+      '#type' => 'markup',
+      '#markup' => '<h1 class="page-title">'. $page_title .'</h1>',
+      '#weight' => -1,
+    );
+  }
+
+  // Personal profile add/edit form.
+  if ($form['#id'] == 'profile-personal-add-form' || $form['#id'] == 'profile-personal-edit-form') {
+    $form['back_to_dash_link'] = $back_to_dash_link;
+
+    $page_title = t('My profile');
+    $form['title'] = array(
+      '#type' => 'markup',
+      '#markup' => '<h1 class="page-title">'. $page_title .'</h1>',
+      '#weight' => -1,
+    );
+
+    unset($form['field_realname_prefix']['widget']['#title']);
+    $form['field_realname_prefix']['widget']['#options']['_none'] = 'Prefix...';
+
+    unset($form['field_realname_suffix']['widget']['#title']);
+    $form['field_realname_suffix']['widget']['#options']['_none'] = 'Suffix...';
+
+    // Loop through all fields and remove titles from
+    // form widgets.
+    foreach ($form as $key => $value) {
+      if (substr($key, 0, 6) == 'field_') {
+        if (array_key_exists('#title', $form[$key]['widget'])) {
+          unset($form[$key]['widget']['#title']);
+
+          if (array_key_exists(0, $form[$key]['widget']) && array_key_exists('#title', $form[$key]['widget'][0])) {
+            unset($form[$key]['widget'][0]['#title']);
+
+            if (array_key_exists('value', $form[$key]['widget'][0]) && array_key_exists('#title', $form[$key]['widget'][0]['value'])) {
+              unset($form[$key]['widget'][0]['value']['#title']);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // User account create/edit form.
+  if ($form['#id'] == 'user-form' || $form['#id'] == 'user-register-form') {
+
+    // Add a "back" link.
+    $form['back_to_dash_link'] = $back_to_dash_link;
+
+    // Modify the title of the account form depending
+    // on if the current user is an existing account
+    // or if it is anonymous.
+    if ($current_user->id()) {
+      $page_title = t('My account');
+    } else {
+      $page_title = t('Create an account');
+    }
+    $form['title'] = array(
+      '#type' => 'markup',
+      '#markup' => '<h1 class="page-title">'. $page_title .'</h1>',
+      '#weight' => -98,
+    );
+
+    // Email
+    $form['account']['mail']['#weight'] = 1;
+    $form['account']['mail']['#placeholder'] = t('Email...');
+    $form['account']['mail']['#label_classes'] = ['hidden'];
+
+    // Username
+    $form['account']['name']['#weight'] = 2;
+    $form['account']['name']['#placeholder'] = t('Username');
+    $form['account']['name']['#label_classes'] = ['hidden'];
+
+    // Password and confirmation
+    // This field is not easily editable. Use javascript to
+    // hide the labels and set the placeholders.
+    $form['account']['pass']['#weight'] = 5;
+
+    // Current password
+    $form['account']['current_pass']['#weight'] = 6;
+    $form['account']['current_pass']['#placeholder'] = t('Current password...');
+    $form['account']['current_pass']['#label_classes'] = ['hidden'];
+    $form['account']['current_pass']['#description'] = t('Required to change <em class="placeholder">email</em> or <em class="placeholder">password</em>. <a href="/user/password" title="Send password reset instructions via email.">Reset your password</a>.');
+
+    // First name
+    $form['account']['field_realname_first'] = $form['field_realname_first'];
+    $form['account']['field_realname_first']['#weight'] = 3;
+    $form['account']['field_realname_first']['widget'][0]['value']['#placeholder'] = t('First name...');
+    $form['account']['field_realname_first']['widget'][0]['value']['#label_classes'] = ['hidden'];
+    unset($form['field_realname_first']);
+
+    // Last name
+    $form['account']['field_realname_last'] = $form['field_realname_last'];
+    $form['account']['field_realname_last']['#weight'] = 4;
+    $form['account']['field_realname_last']['widget'][0]['value']['#placeholder'] = t('Last name...');
+    $form['account']['field_realname_last']['widget'][0]['value']['#label_classes'] = ['hidden'];
+    unset($form['field_realname_last']);
+
+    // Remove descriptions
+    unset($form['account']['mail']['#description']);
+    unset($form['account']['name']['#description']);
+    unset($form['account']['pass']['#description']);
+  }
+
+  // // MAYBE WE SHOULD JUST TARGET THE FIRST USER REGISTRATION PAGE AND THE
+  // // COMMERCE REGISTRATOIN PAGE AND HIDE AND SET THE DEFAULT VALUE TO 
+  // // FALSE ON JUST THAT FORM? OTHERWISE JUST HIDE IT AND KEEP THE
+  // // EXISTING DEFAULT VALUE, WHICH IS ALSO THE VALUE?!
+  if (array_key_exists('dxpr_user_is_disavowed', $form)) {
+    // Hide dxpr drag-and-drop field for non-privileged users.
+    if (!$current_user->hasPermission('administer users')) {
+      // $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
+      $form['dxpr_user_is_disavowed']['#access'] = FALSE;
+    }
+    // Users cannot use dxpr drag-and-drop by default.
+    // $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = TRUE;
+  }
 
   // Set default selection labels for "better select" views filter module.
   if ($form['#id'] == 'views-exposed-form-events-page-1' && isset($form['date_wrapper'])) {
@@ -42,17 +283,46 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     }
   }
 
-  // Users cannot delete their customer profile. Only privileged users.
-  if ($form['#id'] == 'profile-customer-edit-form' || $form['#id'] == 'profile-customer-add-form') {
-    $markup = <<<HEREB
-      <h2>Purchase account</h2>
-      <p class="larger">Provide your current name and primary address to make new orders for gift shop products, plant sales, ticket purchases and more.</p>
-      HEREB;
+  if ($form['#id'] == 'profile-customer-address-book-delete-form') {
+    $form['#attributes']['class'][] = 'container-white';
+    $form['#attributes']['class'][] = 'container-squeeze';
 
-    $form['heading'] = array(
+    $markup = '<h2>Delete address?</h2>';
+    $form['title'] = array(
+      '#type' => 'markup',
       '#markup' => $markup,
-      '#weight' => -1,
+      '#weight' => -98,
     );
+  }
+
+  // Disabled. Address book replaces this.
+  // Only privileged users can delete customer profiles.
+  // if ($form['#id'] == 'profile-customer-edit-form' || $form['#id'] == 'profile-customer-add-form') {
+  //   $markup = <<<HEREB
+  //     <h2>Purchase account</h2>
+  //     <p class="larger">Provide your current name and primary address to make new orders for gift shop products, plant sales, ticket purchases and more.</p>
+  //     HEREB;
+
+  //   $form['heading'] = array(
+  //     '#markup' => $markup,
+  //     '#weight' => -1,
+  //   );
+  // }
+
+  // Style the container.
+  if ($form['#id'] == 'user-form' || $form['#id'] == 'user-register-form' || $form['#id'] == 'commerce-payment-method-add-form' || $form['#id'] == 'commerce-payment-method-credit-card-edit-form') {
+    $form['#attributes']['class'][] = 'container-white';
+    $form['#attributes']['class'][] = 'container-squeeze';
+  }
+}
+
+/**
+* Implementation of hook_preprocess_form_element
+* @param $variables
+*/
+function mbgna_tweaks_preprocess_form_element(&$variables) {
+  if (isset($variables['element']['#label_classes'])) {
+    $variables['label']['#attributes']['class'] = $variables['element']['#label_classes'];
   }
 }
 
@@ -92,29 +362,48 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
     $data['tabs'][0]['entity.user.canonical']['#link']['title'] = t('My dashboard');
 
     $data['tabs'][0]['entity.user.edit_form']['#weight'] = -9;
-    $data['tabs'][0]['entity.user.edit_form']['#link']['title'] = t('My profile');
+    $data['tabs'][0]['entity.user.edit_form']['#link']['title'] = t('My account');
 
-    $data['tabs'][0]['profile.user_page:customer']['#weight'] = -8;
-    $data['tabs'][0]['profile.user_page:customer']['#link']['title'] = t('Purchasing account');
+    $data['tabs'][0]['profile.user_page:personal']['#weight'] = -8;
+    $data['tabs'][0]['profile.user_page:personal']['#link']['title'] = t('My profile');
+
+    // Disabled. Address book replaces this.
+    // $data['tabs'][0]['profile.user_page:customer']['#weight'] = -7;
+    // $data['tabs'][0]['profile.user_page:customer']['#link']['title'] = t('Purchasing account');
+
+    $data['tabs'][0]['commerce_order.address_book.overview']['#weight'] = -6;
+    $data['tabs'][0]['commerce_order.address_book.overview']['#link']['title'] = t('My addresses');
 
     // Commerce's built-in payment method page is inadequate. Build a better page and
     // override the default local task so it links to the custom page.
-    $custom_pay_method_url = Url::fromRoute('view.profile_payment_method.page_1', ['arg_0' => $account->id()]);
-    $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['url'] = $custom_pay_method_url;
-    $data['tabs'][0]['entity.commerce_payment_method.collection']['#weight'] = -7;
-    $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['title'] = t('Payment methods');
+    $data['tabs'][0]['entity.commerce_payment_method.collection']['#weight'] = -5;
+    $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['title'] = t('My payment methods');
 
-    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#weight'] = -6;
-    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#link']['title'] = t('Past orders');
+    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#weight'] = -4;
+    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#link']['title'] = t('My past orders');
 
+    $data['tabs'][0]['entity.user.contact_form']['#weight'] = -3;
+    $data['tabs'][0]['entity.user.contact_form']['#link']['title'] = t('Contact');
+
+    $data['tabs'][0]['entity.webform_submission.user']['#weight'] = 98;
     if (!\Drupal::currentUser()->hasPermission('view any webform submission')) {
       unset($data['tabs'][0]['entity.webform_submission.user']);  
     }
 
-    $data['tabs'][0]['entity.user.contact_form']['#weight'] = -4;
-    $data['tabs'][0]['entity.user.contact_form']['#link']['title'] = t('Contact');
+    $curr_user_cart_link = array(
+      '#theme' => 'menu_local_task',
+      '#link' => array(
+        'title' => t('My shopping cart'),
+        'url' => Url::fromRoute('commerce_cart.page'),
+        'localized_options' => array(),
+      ),
+      '#active' => FALSE,
+      '#access' => TRUE,
+      '#weight' => -6,
+    );
+    $data['tabs'][0]['commerce_cart.page'] = $curr_user_cart_link;
 
-    $data['tabs'][0]['devel.entities:user.devel_tab']['#weight'] = -3;
+    $data['tabs'][0]['devel.entities:user.devel_tab']['#weight'] = 99;
     $data['tabs'][0]['devel.entities:user.devel_tab']['#link']['title'] = t('Devel');
 
     // The tab we're adding is dependent on a user's access to add content.
@@ -125,3 +414,9 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
   }
 }
 
+function mbgna_tweaks_menu_local_actions_alter(&$local_actions) {
+  // Remove default "Add payment method" button on payment methods page.
+  if (array_key_exists('entity.commerce_payment_method.add_form', $local_actions)) {
+    unset($local_actions['entity.commerce_payment_method.add_form']);
+  }
+}
