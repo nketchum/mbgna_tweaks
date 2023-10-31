@@ -206,6 +206,9 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     unset($form['field_realname_suffix']['widget']['#title']);
     $form['field_realname_suffix']['widget']['#options']['_none'] = 'Suffix...';
 
+    $form['field_bio']['widget'][0]['#placeholder'] = 'Short biography...';
+    $form['field_public_email']['widget'][0]['value']['#placeholder'] = 'Public email...';
+
     // Loop through all fields and remove titles from
     // form widgets.
     foreach ($form as $key => $value) {
