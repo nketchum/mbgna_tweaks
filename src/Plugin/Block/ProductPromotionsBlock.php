@@ -140,24 +140,63 @@ class ProductPromotionsBlock extends BlockBase {
       $promotions_filtered = array_values($promotions_filtered);
 
       // Get the coupons.
-      $coupons = '';
+      $output = '';
       foreach ($promotions_filtered as $promotion_filtered) {
+        // Promo wrap
+        $output .= '<div class="product-promotion">';
+
+        $display_name = $promotion_filtered->getDisplayName();
+        if ($display_name) {
+          $output .= '<h4>'. $display_name .'</h4>';
+        }
+
+        $description = $promotion_filtered->getDescription();
+        if ($description) {
+          $output .= '<div class="promo-description">'. $description .'</div>';
+        }
+
+        $start_date = $promotion_filtered->getStartDate();
+        $end_date = $promotion_filtered->getEndDate();
+
+        if ($start_date || $end_date) {
+          $output .= '<p class="promo-start-end smaller">';
+        }
+
+        if ($start_date) {
+          $start_date = new \DateTime($start_date, new \DateTimeZone('UTC'));
+          $start_date = $start_date->format('F h, Y \a\t g:i A');
+          $output .= '<span class="promo-start smaller"> Valid from '. $start_date .'</span>';
+        }
+        
+        if ($end_date) {
+          $end_date = new \DateTime($end_date, new \DateTimeZone('UTC'));
+          $end_date = $end_date->format('F h, Y \a\t g:i A');
+          $output .= '<span class="promo-end smaller"> to '. $end_date .'</span>';
+        }
+
+        if ($start_date || $end_date) {
+          $output .= '</p>';
+        }
+
         foreach ($promotion_filtered->getCoupons() as $coupon) {
           // Render the coupon.
           $view_builder = \Drupal::entityTypeManager()->getViewBuilder('commerce_promotion_coupon');
           $pre_render = $view_builder->view($coupon, 'full');
-          $coupons .= \Drupal::service('renderer')->render($pre_render);
+          $output .= \Drupal::service('renderer')->render($pre_render);
         }
+
+        // End promo wrap
+        $output .= '</div>';
       }
 
       // No coupons then no block.
-      if (!$coupons) {
+      if (!$output) {
         return;
       }
 
       // Otherwise add output and return.
       $build = [];
-      $build['#markup'] = $coupons;
+      $build['#markup'] = $output;
 
       return $build;
     }

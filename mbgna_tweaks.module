@@ -112,6 +112,45 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     $form['#attributes']['class'][] = 'container-squeeze';
   }
 
+  // Add titles to "add to cart" blocks;
+  if (substr($form['#id'], 0, 54) == 'commerce-order-item-add-to-cart-form-commerce-product-') {
+    if ($route_name == 'entity.commerce_product.canonical') {
+      if ($product = \Drupal::routeMatch()->getParameter('commerce_product')) {
+        $type = $product->type->getValue()[0]['target_id'];
+      }
+    }
+
+    if ($route_name == 'entity.node.canonical') {
+      if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $type = $node->getType();
+      }
+    }
+
+    switch ($type) {
+      case 'admission':
+        $markup = t('Register');
+        break;
+      case 'class':
+        $markup = t('Register');
+        break;
+      case 'merchandise':
+        $markup = t('Purchase');
+        break;
+      case 'plant':
+        $markup = t('Purchase');
+        break;
+      default:
+        $markup = t('Purchase');
+        break;
+    }
+
+    $form['title'] = array(
+      '#type' => 'markup',
+      '#markup' => '<h4>'. $markup .'</h4>',
+      '#weight' => -99,
+    );
+  }
+
   // Payment method add/edit form
   if ($form['#id'] == 'commerce-payment-method-add-form' || $form['#id'] == 'commerce-payment-method-credit-card-edit-form') {
     $form['back_to_payments_link'] = $back_to_payments_link;
@@ -247,18 +286,18 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     unset($form['account']['pass']['#description']);
   }
 
-  // // MAYBE WE SHOULD JUST TARGET THE FIRST USER REGISTRATION PAGE AND THE
-  // // COMMERCE REGISTRATOIN PAGE AND HIDE AND SET THE DEFAULT VALUE TO 
-  // // FALSE ON JUST THAT FORM? OTHERWISE JUST HIDE IT AND KEEP THE
-  // // EXISTING DEFAULT VALUE, WHICH IS ALSO THE VALUE?!
+  // Hide and disable DXPR editing for new registrations.
   if (array_key_exists('dxpr_user_is_disavowed', $form)) {
-    // Hide dxpr drag-and-drop field for non-privileged users.
     if (!$current_user->hasPermission('administer users')) {
-      // $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
-      $form['dxpr_user_is_disavowed']['#access'] = FALSE;
+      $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
+      $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
     }
-    // Users cannot use dxpr drag-and-drop by default.
-    // $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = TRUE;
+  }
+
+  // Hide and disable DXPR editing for new checkout accounts.
+  if ($form['#id'] == 'commerce-checkout-flow-multistep-default') {
+    $form['login']['register']['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
+    $form['login']['register']['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
   }
 
   // Set default selection labels for "better select" views filter module.
