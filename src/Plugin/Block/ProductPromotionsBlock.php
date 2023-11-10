@@ -197,10 +197,13 @@ class ProductPromotionsBlock extends BlockBase {
       // Otherwise add output and return.
       $build = [];
       $build['#markup'] = $output;
-      $build['#cache'] = ['max-age' => 0];
 
       return $build;
     }
+  }
+
+  public function getCacheMaxAge() {
+      return 0;
   }
 
 }
