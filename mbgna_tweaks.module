@@ -24,6 +24,12 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   $route_name = \Drupal::routeMatch()->getRouteName();
   $current_user = \Drupal::currentUser();
 
+  // Set DXPR field to "off" and hide it for any non-super administrators.
+  if (!in_array('super_administrator', $current_user->getRoles())) {
+    $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = TRUE;
+    $form['dxpr_user_is_disavowed']['#access'] = FALSE;
+  }
+
   // Load the user being viewed, if being viewed.
   if (\Drupal::routeMatch()->getParameter('user')) {
 
