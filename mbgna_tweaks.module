@@ -331,6 +331,20 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     }
   }
 
+  // Remove min/max labels from date range fields.
+  if ($form['#id'] == 'views-exposed-form-classes-page-1') {
+    if (isset($form['type'])) {
+      $form['type']['#options']['All'] = t('Select a class type...');
+    }
+    if (isset($form['institution'])) {
+      $form['institution']['#options']['All'] = t('Select an institution...');
+    }
+    if (isset($form['dates_wrapper'])) {
+      $form['dates_wrapper']['dates_wrapper']['dates']['min']['#title'] = '';
+      $form['dates_wrapper']['dates_wrapper']['dates']['max']['#title'] = '';
+    }
+  }
+
   if ($form['#id'] == 'profile-customer-address-book-delete-form') {
     $form['#attributes']['class'][] = 'container-white';
     $form['#attributes']['class'][] = 'container-squeeze';
