@@ -179,6 +179,10 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     switch ($type) {
       case 'admission':
         $markup = t('<h5>Register</h5>');
+        // Change out of stock label while we're here.
+        if ($form['actions']['submit']['#value']->render() === 'Out of stock') {
+          $form['actions']['submit']['#value'] = t('Full &#x00d7;'); // Add an "X" after label text.
+        }
         break;
       case 'class':
         $markup = t('<h5>Register</h5>');
