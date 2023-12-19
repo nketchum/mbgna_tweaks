@@ -98,16 +98,18 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     );
   }
 
+  // Select all products_mbgna views.
   if (substr($form['#id'], 0, 33) === 'views-exposed-form-products-mbgna') {
-    $form['type']['#options']['All'] = t('Product type...');
-    $form['category']['#options']['All'] = t('Product category...');
+    $form['category']['#options']['All'] = t('Category...');
   }
 
+  // Style search input.
   if ($form['#id'] === 'search-form') {
     $form['#attributes']['class'][] = 'container-white';
     $form['#attributes']['class'][] = 'container-squeeze';
   }
 
+  // Style checkout panes.
   if (substr($form['#id'], 0, -8) === 'commerce-checkout-flow-multistep') {
     $form['#attributes']['class'][] = 'container-white';
     $form['#attributes']['class'][] = 'container-squeeze';
@@ -283,8 +285,11 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   // User account create/edit form.
   if ($form['#id'] === 'user-form' || $form['#id'] === 'user-register-form') {
 
-    // Add a "back" link.
-    $form['back_to_dash_link'] = $back_to_dash_link;
+    // If NOT on a password reset page.
+    if (!\Drupal::request()->get('pass-reset-token')) {
+      // Add a "back" link.
+      $form['back_to_dash_link'] = $back_to_dash_link;
+    }
 
     // Modify the title of the account form depending
     // on if the current user is an existing account
@@ -350,7 +355,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   }
 
   // Hide and disable DXPR editing for new checkout accounts.
-  // 
+
   // Target ALL checkout flows. Remove last bit of form id that denotes
   // the type of checkout flow.
   if (substr($form['#id'], 0, 33) === 'commerce-checkout-flow-multistep-') {
@@ -358,7 +363,6 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     $form['login']['register']['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
 
     if ($form['#step_id'] === 'order_information') {
-      // dpm($form);
       // Best bet is to send people back to the shopping cart
       // because they may not have a dashboard, we can't be sure
       // if the product went directly to checkout, and redirecting
@@ -428,20 +432,6 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       '#weight' => -98,
     );
   }
-
-  // Disabled. Address book replaces this.
-  // Only privileged users can delete customer profiles.
-  // if ($form['#id'] === 'profile-customer-edit-form' || $form['#id'] === 'profile-customer-add-form') {
-  //   $markup = <<<HEREB
-  //     <h2>Purchase account</h2>
-  //     <p class="larger">Provide your current name and primary address to make new orders for gift shop products, plant sales, ticket purchases and more.</p>
-  //     HEREB;
-
-  //   $form['heading'] = array(
-  //     '#markup' => $markup,
-  //     '#weight' => -1,
-  //   );
-  // }
 
   // Style the container.
   if ($form['#id'] === 'user-form' || $form['#id'] === 'user-register-form' || $form['#id'] === 'commerce-payment-method-add-form' || $form['#id'] === 'commerce-payment-method-credit-card-edit-form') {
@@ -549,4 +539,9 @@ function mbgna_tweaks_menu_local_actions_alter(&$local_actions) {
   if (array_key_exists('entity.commerce_payment_method.add_form', $local_actions)) {
     unset($local_actions['entity.commerce_payment_method.add_form']);
   }
+}
+
+function mbgna_tweaks_blazy_item_alter(array &$settings, array &$attributes, array &$item_attributes) {
+  $blazies = $settings['blazies'];
+  $blazies->set('item.title_tag', 'p');
 }
