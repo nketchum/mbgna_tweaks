@@ -322,27 +322,48 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     // Password and confirmation
     // This field is not easily editable. Use javascript to
     // hide the labels and set the placeholders.
-    $form['account']['pass']['#weight'] = 5;
+    $form['account']['pass']['#weight'] = 8;
 
     // Current password
-    $form['account']['current_pass']['#weight'] = 6;
+    $form['account']['current_pass']['#weight'] = 9;
     $form['account']['current_pass']['#placeholder'] = t('Current password...');
     $form['account']['current_pass']['#label_classes'] = ['hidden'];
     $form['account']['current_pass']['#description'] = t('Required to change <em class="placeholder">email</em> or <em class="placeholder">password</em>. <a href="/user/password" title="Send password reset instructions via email.">Reset your password</a>.');
 
+    // Name prefix
+    $form['account']['field_realname_prefix'] = $form['field_realname_prefix'];
+    unset($form['account']['field_realname_prefix']['widget']['#title']);
+    $form['account']['field_realname_prefix']['widget']['#options']['_none'] = 'Name prefix...';
+    $form['account']['field_realname_prefix']['#weight'] = 3;
+    unset($form['field_realname_prefix']);
+
     // First name
     $form['account']['field_realname_first'] = $form['field_realname_first'];
-    $form['account']['field_realname_first']['#weight'] = 3;
+    $form['account']['field_realname_first']['#weight'] = 4;
     $form['account']['field_realname_first']['widget'][0]['value']['#placeholder'] = t('First name...');
     $form['account']['field_realname_first']['widget'][0]['value']['#label_classes'] = ['hidden'];
     unset($form['field_realname_first']);
 
+    // Middle name
+    $form['account']['field_realname_middle'] = $form['field_realname_middle'];
+    $form['account']['field_realname_middle']['#weight'] = 5;
+    $form['account']['field_realname_middle']['widget'][0]['value']['#placeholder'] = t('M.I.');
+    $form['account']['field_realname_middle']['widget'][0]['value']['#label_classes'] = ['hidden'];
+    unset($form['field_realname_middle']);
+
     // Last name
     $form['account']['field_realname_last'] = $form['field_realname_last'];
-    $form['account']['field_realname_last']['#weight'] = 4;
+    $form['account']['field_realname_last']['#weight'] = 6;
     $form['account']['field_realname_last']['widget'][0]['value']['#placeholder'] = t('Last name...');
     $form['account']['field_realname_last']['widget'][0]['value']['#label_classes'] = ['hidden'];
     unset($form['field_realname_last']);
+
+    // Name suffix
+    $form['account']['field_realname_suffix'] = $form['field_realname_suffix'];
+    unset($form['account']['field_realname_suffix']['widget']['#title']);
+    $form['account']['field_realname_suffix']['widget']['#options']['_none'] = 'Name suffix...';
+    $form['account']['field_realname_suffix']['#weight'] = 7;
+    unset($form['field_realname_suffix']);
 
     // Remove descriptions
     unset($form['account']['mail']['#description']);
