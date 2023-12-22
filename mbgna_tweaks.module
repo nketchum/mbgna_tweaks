@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
@@ -289,8 +290,14 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   // User account create/edit form.
   if ($form['#id'] === 'user-form' || $form['#id'] === 'user-register-form') {
 
-    // If NOT on a password reset page.
-    if (!\Drupal::request()->get('pass-reset-token')) {
+    // Invalidate cache when submitting the form.
+    if ($form['#id'] == 'user-form') {
+      $form['#submit'][] = 'cache_clear_on_user_submit';
+    }
+
+    // Some pages like user-create cannot have a $back_to_dash_link.
+    // Also the link should not appear on a password reset page.
+    if ($back_to_dash_link && !\Drupal::request()->get('pass-reset-token')) {
       // Add a "back" link.
       $form['back_to_dash_link'] = $back_to_dash_link;
     }
@@ -463,6 +470,16 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     $form['#attributes']['class'][] = 'container-white';
     $form['#attributes']['class'][] = 'container-squeeze';
   }
+}
+
+// Helper function for form_alter hook that
+// invalidates cache when a user account form
+// is submitted with potential changes.
+function clear_cache_on_user_submit() {
+  $account = \Drupal::routeMatch()->getParameter('user');
+  $uid = $account->id();
+  $cache_tags = ['user:' . $uid];
+  // Cache::invalidateTags($cache_tags);
 }
 
 /**
