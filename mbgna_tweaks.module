@@ -2,12 +2,13 @@
 
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
+use Drupal\profile\Entity\Profile;
 use Drupal\user\Entity\Role;
 use Drupal\user\Entity\User;
 use Drupal\views\ViewExecutable;
@@ -285,6 +286,9 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
         }
       }
     }
+
+    // Clear the user_view cache.
+    array_unshift($form['actions']['submit']['#submit'], 'clear_profile_cache_on_submit');
   }
 
   // User account create/edit form.
@@ -292,7 +296,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
 
     // Invalidate cache when submitting the form.
     if ($form['#id'] == 'user-form') {
-      $form['#submit'][] = 'cache_clear_on_user_submit';
+      array_unshift($form['actions']['submit']['#submit'], 'clear_user_cache_on_submit');
     }
 
     // Some pages like user-create cannot have a $back_to_dash_link.
@@ -475,10 +479,20 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
 // Helper function for form_alter hook that
 // invalidates cache when a user account form
 // is submitted with potential changes.
-function clear_cache_on_user_submit() {
+function clear_user_cache_on_submit() {
   $account = \Drupal::routeMatch()->getParameter('user');
   $uid = $account->id();
   $cache_tags = ['user:' . $uid];
+  Cache::invalidateTags($cache_tags);
+}
+
+// Helper function for form_alter hook that
+// invalidates cache when a user profile form
+// is submitted with potential changes.
+function clear_profile_cache_on_submit() {
+  $account = \Drupal::routeMatch()->getParameter('user');
+  $uid = $account->id();
+  $cache_tags = ['user_view'];
   Cache::invalidateTags($cache_tags);
 }
 
@@ -542,7 +556,7 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
     $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['title'] = t('My payment methods');
 
     $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#weight'] = -4;
-    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#link']['title'] = t('My past orders');
+    $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#link']['title'] = t('My orders');
 
     $data['tabs'][0]['entity.user.contact_form']['#weight'] = -3;
     $data['tabs'][0]['entity.user.contact_form']['#link']['title'] = t('Contact');
@@ -555,7 +569,7 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
     $curr_user_cart_link = array(
       '#theme' => 'menu_local_task',
       '#link' => array(
-        'title' => t('My shopping cart'),
+        'title' => t('My cart'),
         'url' => Url::fromRoute('commerce_cart.page'),
         'localized_options' => array(),
       ),
