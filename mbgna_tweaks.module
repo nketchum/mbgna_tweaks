@@ -44,8 +44,8 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     } 
   }
 
-  // Set DXPR field to "off" and hide it for any non-super administrators.
-  if (!in_array('super_administrator', $current_user->getRoles())) {
+  // Set DXPR field to "off" for everyone except superadmin user 1.
+  if ($current_user->id() != 1) {
     $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = TRUE;
     $form['dxpr_user_is_disavowed']['#access'] = FALSE;
   }
@@ -297,7 +297,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
 
     // Some pages like user-create cannot have a $back_to_dash_link.
     // Also the link should not appear on a password reset page.
-    if ($back_to_dash_link && !\Drupal::request()->get('pass-reset-token')) {
+    if (isset($back_to_dash_link) && !\Drupal::request()->get('pass-reset-token')) {
       // Add a "back" link.
       $form['back_to_dash_link'] = $back_to_dash_link;
     }
@@ -479,7 +479,7 @@ function clear_cache_on_user_submit() {
   $account = \Drupal::routeMatch()->getParameter('user');
   $uid = $account->id();
   $cache_tags = ['user:' . $uid];
-  // Cache::invalidateTags($cache_tags);
+  Cache::invalidateTags($cache_tags);
 }
 
 /**
