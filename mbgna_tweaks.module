@@ -406,7 +406,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       $form['go_back'] = array(
         '#type' => 'link',
         '#url' => Url::fromRoute('commerce_cart.page'),
-        '#title' => t('&larr; Back to cart'),
+        '#title' => t('&#x00d7; Cancel'),
         '#weight' => -99,
       );
 
