@@ -2,14 +2,9 @@
 
 namespace Drupal\mbgna_tweaks\Plugin\Block;
 
-use Drupal\commerce_promotion\Entity\PromotionInterface;
-use Drupal\Core\Block\BlockBase;
-use Drupal\user\Entity\User;
-
-
-use Drupal\commerce_price\Price;
-use Drupal\commerce_order\Entity\OrderItem;
 use Drupal\commerce_order\Entity\Order;
+use Drupal\commerce_order\Entity\OrderItem;
+use Drupal\Core\Block\BlockBase;
 
 /**
  * Provides a product promotions block.

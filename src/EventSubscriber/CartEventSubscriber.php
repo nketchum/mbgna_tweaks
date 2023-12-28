@@ -2,8 +2,8 @@
 
 namespace Drupal\mbgna_tweaks\EventSubscriber;
 
-use Drupal\commerce_cart\EventSubscriber\CartEventSubscriber as CommerceCartEventSubscriber;
 use Drupal\commerce_cart\Event\CartEntityAddEvent;
+use Drupal\commerce_cart\EventSubscriber\CartEventSubscriber as CommerceCartEventSubscriber;
 use Drupal\Core\Url;
 
 /**

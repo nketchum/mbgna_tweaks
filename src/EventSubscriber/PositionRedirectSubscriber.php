@@ -2,11 +2,11 @@
 
 namespace Drupal\mbgna_tweaks\EventSubscriber;
 
-use Symfony\Component\HttpKernel\KernelEvents;
-use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Drupal\Core\Url;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Drupal\Core\Url;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
  * Redirects position urls by appending a querystring.
