@@ -419,11 +419,25 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       }
     }
 
-    // Disable the address book because we are using a
-    // hosted payment solution which stores that information
-    // for us.
-    $form['payment_information']['billing_information']['copy_to_address_book']['#type'] = 'hidden';
-    $form['payment_information']['billing_information']['copy_to_address_book']['#default_value'] = 0;
+    if ($form['#step_id'] === 'complete') {
+      // Remove superfluous name fields for quicker registration.
+      $form['completion_register']['field_realname_prefix']['#access'] = FALSE;
+      $form['completion_register']['field_realname_suffix']['#access'] = FALSE;
+      $form['completion_register']['field_realname_middle']['#access'] = FALSE;
+
+      // Put names into a container.
+      $form['completion_register']['realname_full'] = array(
+        '#type' => 'container',
+        'field_realname_first' => $form['completion_register']['field_realname_first'],
+        'field_realname_last' => $form['completion_register']['field_realname_last'],
+      );
+      unset($form['completion_register']['field_realname_first']);
+      unset($form['completion_register']['field_realname_last']);
+
+      // User is dissavowed from DXPR editing.
+      $form['completion_register']['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
+      $form['completion_register']['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
+    }
   }
 
   // Set default selection labels for "better select" views filter module.
@@ -552,12 +566,8 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
     $data['tabs'][0]['profile.user_page:personal']['#weight'] = -8;
     $data['tabs'][0]['profile.user_page:personal']['#link']['title'] = t('My profile');
 
-    // $data['tabs'][0]['commerce_order.address_book.overview']['#weight'] = -6;
-    // $data['tabs'][0]['commerce_order.address_book.overview']['#link']['title'] = t('My addresses');
-
-    // Disable address book after switching to payment interstitual. Leave above commented out.
-    // Permissions are disabled for regular users, but the button still shows up for admins.
-    $data['tabs'][0]['commerce_order.address_book.overview']['#access'] = FALSE;
+    $data['tabs'][0]['commerce_order.address_book.overview']['#weight'] = -2;
+    $data['tabs'][0]['commerce_order.address_book.overview']['#link']['title'] = t('My addresses');
 
     // Commerce's built-in payment method page is inadequate. Build a better page and
     // override the default local task so it links to the custom page.
@@ -602,12 +612,12 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
   }
 }
 
-function mbgna_tweaks_menu_local_actions_alter(&$local_actions) {
-  // Remove default "Add payment method" button on payment methods page.
-  if (array_key_exists('entity.commerce_payment_method.add_form', $local_actions)) {
-    unset($local_actions['entity.commerce_payment_method.add_form']);
-  }
-}
+// function mbgna_tweaks_menu_local_actions_alter(&$local_actions) {
+//   // Remove default "Add payment method" button on payment methods page.
+//   if (array_key_exists('entity.commerce_payment_method.add_form', $local_actions)) {
+//     unset($local_actions['entity.commerce_payment_method.add_form']);
+//   }
+// }
 
 function mbgna_tweaks_blazy_item_alter(array &$settings, array &$attributes, array &$item_attributes) {
   $blazies = $settings['blazies'];
