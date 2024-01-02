@@ -167,7 +167,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   // Add titles to "add to cart" blocks;
   if (substr($form['#id'], 0, 54) === 'commerce-order-item-add-to-cart-form-commerce-product-') {
     $type = NULL;
-    
+
     if ($route_name === 'entity.commerce_product.canonical') {
       if ($product = \Drupal::routeMatch()->getParameter('commerce_product')) {
         $type = $product->type->getValue()[0]['target_id'];
@@ -413,16 +413,15 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       );
 
       // Custom checkout fields from order types.
-      if ($form['order_fields:checkout']) {
-        if ($form['order_fields:checkout']['field_attendee_name']) {
-          $form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#placeholder'] = $form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#title'] . '...';
-          unset($form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#title']);
-        }
+      if (array_key_exists('order_fields:checkout', $form) && array_key_exists('field_attendee_name', $form['order_fields:checkout'])) {
+        $form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#placeholder'] = $form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#title'] . '...';
+        unset($form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#title']);
       }
     }
 
-    if ($form['#step_id'] === 'complete') {
-      // Remove superfluous name fields for quicker registration.
+    // Remove superfluous name fields for quicker registration.
+    // Also disable DXPR editor field.
+    if ($form['#step_id'] === 'complete' && array_key_exists('completion_register', $form)) {
       $form['completion_register']['field_realname_prefix']['#access'] = FALSE;
       $form['completion_register']['field_realname_suffix']['#access'] = FALSE;
       $form['completion_register']['field_realname_middle']['#access'] = FALSE;
@@ -571,12 +570,14 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
     $data['tabs'][0]['commerce_order.address_book.overview']['#weight'] = -2;
     $data['tabs'][0]['commerce_order.address_book.overview']['#link']['title'] = t('My addresses');
 
+    // Disabled on-site payment functionality in lieu of a hosted solution.
+    // Keep this commented-out function in case that changes later.
     // Commerce's built-in payment method page is inadequate. Build a better page and
     // override the default local task so it links to the custom page.
     // $data['tabs'][0]['entity.commerce_payment_method.collection']['#weight'] = -5;
     // $data['tabs'][0]['entity.commerce_payment_method.collection']['#link']['title'] = t('My payment methods');
 
-    // Disable payment method after switching to payment interstitual. Leave above commented out.
+    // Disable payment method after switching to payment interstitual.
     $data['tabs'][0]['entity.commerce_payment_method.collection']['#access'] = FALSE;
 
     $data['tabs'][0]['views_view:view.commerce_user_orders.order_page']['#weight'] = -4;
@@ -614,6 +615,8 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
   }
 }
 
+// Disabled on-site payment functionality in lieu of a hosted solution.
+// Keep this commented-out function in case that changes later.
 // function mbgna_tweaks_menu_local_actions_alter(&$local_actions) {
 //   // Remove default "Add payment method" button on payment methods page.
 //   if (array_key_exists('entity.commerce_payment_method.add_form', $local_actions)) {
@@ -624,4 +627,16 @@ function mbgna_tweaks_menu_local_tasks_alter(&$data, $route_name, RefinableCache
 function mbgna_tweaks_blazy_item_alter(array &$settings, array &$attributes, array &$item_attributes) {
   $blazies = $settings['blazies'];
   $blazies->set('item.title_tag', 'p');
+}
+
+/**
+ * Implements hook_form_webform_submission_form_alter()
+ */
+function mbgna_tweaks_webform_submission_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'webform_submission_research_application_add_form') {
+    if (array_key_exists('progress', $form) && array_key_exists('#weight', $form['progress']) && array_key_exists('#current_page', $form['progress'])) {
+      // Move progress block from top to bottom of form.
+      $form['progress']['#weight'] = 100;
+    }
+  }
 }
