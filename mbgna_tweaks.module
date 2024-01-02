@@ -166,13 +166,15 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
 
   // Add titles to "add to cart" blocks;
   if (substr($form['#id'], 0, 54) === 'commerce-order-item-add-to-cart-form-commerce-product-') {
+    $type = NULL;
+    
     if ($route_name === 'entity.commerce_product.canonical') {
       if ($product = \Drupal::routeMatch()->getParameter('commerce_product')) {
         $type = $product->type->getValue()[0]['target_id'];
       }
     }
 
-    if ($route_name === 'entity.node.canonical') {
+    if ($route_name === 'entity.node.canonical' || $route_name === 'entity.plant.canonical') {
       if ($node = \Drupal::routeMatch()->getParameter('node')) {
         $type = $node->getType();
       }
