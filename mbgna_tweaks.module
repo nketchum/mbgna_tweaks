@@ -635,10 +635,8 @@ function mbgna_tweaks_blazy_item_alter(array &$settings, array &$attributes, arr
  * Implements hook_form_webform_submission_form_alter()
  */
 function mbgna_tweaks_webform_submission_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id === 'webform_submission_research_application_add_form') {
-    if (array_key_exists('progress', $form) && array_key_exists('#weight', $form['progress']) && array_key_exists('#current_page', $form['progress'])) {
-      // Move progress block from top to bottom of form.
-      $form['progress']['#weight'] = 100;
-    }
+  // Move progress block from top to bottom of form if it exists.
+  if (array_key_exists('progress', $form) && array_key_exists('#weight', $form['progress']) && array_key_exists('#current_page', $form['progress'])) {
+    $form['progress']['#weight'] = 100;
   }
 }
