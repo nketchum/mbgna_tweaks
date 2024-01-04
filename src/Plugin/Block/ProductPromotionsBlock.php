@@ -30,6 +30,9 @@ class ProductPromotionsBlock extends BlockBase {
       // Load the product.
       $product = \Drupal::routeMatch()->getParameter('commerce_product');
 
+      // Get mbgna settings/configs.
+      $config = \Drupal::config('mbgna_settings.settings');
+
       /**
        * Create a temporary "model" order. 
        * 
@@ -60,7 +63,7 @@ class ProductPromotionsBlock extends BlockBase {
         'store_id' => 1, // Assume no promo condition.
         'order_items' => $order_items,
         'placed' => \Drupal::time()->getCurrentTime(),
-        'payment_gateway' => 'credit_card', // Assume no promo condition.
+        'payment_gateway' => $config->get('promo_calc_pay_method') ? $config->get('promo_calc_pay_method') : 'credit_card', // Assume no promo condition.
         'checkout_step' => 'order_summary',
         'state' => 'draft',
       ]);

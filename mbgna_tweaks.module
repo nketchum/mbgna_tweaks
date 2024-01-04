@@ -384,11 +384,13 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     unset($form['account']['pass']['#description']);
   }
 
-  // Hide and disable DXPR editing for new registrations.
+  // Disable DXPR editing for new registrations.
   if (array_key_exists('dxpr_user_is_disavowed', $form)) {
+    $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
+
+    // Hide DXPR editing for unprivileged accounts.
     if (!$current_user->hasPermission('administer users')) {
       $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
-      $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
     }
   }
 
