@@ -104,7 +104,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   if (substr($form['#id'], 0, 33) === 'views-exposed-form-products-mbgna') {
     $form['category']['#options']['All'] = t('Category...');
   }
-
+  
   // Style search input.
   if ($form['#id'] === 'search-form') {
     $form['#attributes']['class'][] = 'container-white';
@@ -254,20 +254,14 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   // Personal profile add/edit form.
   if ($form['#id'] === 'profile-personal-add-form' || $form['#id'] === 'profile-personal-edit-form') {
     $form['back_to_dash_link'] = $back_to_dash_link;
-
     $page_title = t('My profile');
     $form['title'] = array(
       '#type' => 'markup',
       '#markup' => '<h1 class="page-title">'. $page_title .'</h1>',
       '#weight' => -1,
     );
-
-    unset($form['field_realname_prefix']['widget']['#title']);
     $form['field_realname_prefix']['widget']['#options']['_none'] = 'Prefix...';
-
-    unset($form['field_realname_suffix']['widget']['#title']);
     $form['field_realname_suffix']['widget']['#options']['_none'] = 'Suffix...';
-
     $form['field_bio']['widget'][0]['#placeholder'] = 'Short biography...';
     $form['field_public_email']['widget'][0]['value']['#placeholder'] = 'Public email...';
 
@@ -276,13 +270,13 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     foreach ($form as $key => $value) {
       if (substr($key, 0, 6) === 'field_') {
         if (array_key_exists('#title', $form[$key]['widget'])) {
-          unset($form[$key]['widget']['#title']);
-
+          $form[$key]['widget']['#title_display'] = 'invisible';
+          
           if (array_key_exists(0, $form[$key]['widget']) && array_key_exists('#title', $form[$key]['widget'][0])) {
-            unset($form[$key]['widget'][0]['#title']);
+            $form[$key]['widget'][0]['#title_display'] = 'invisible';
 
             if (array_key_exists('value', $form[$key]['widget'][0]) && array_key_exists('#title', $form[$key]['widget'][0]['value'])) {
-              unset($form[$key]['widget'][0]['value']['#title']);
+              $form[$key]['widget'][0]['value']['#title_display'] = 'invisible';
             }
           }
         }
@@ -325,12 +319,12 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     // Email
     $form['account']['mail']['#weight'] = 1;
     $form['account']['mail']['#placeholder'] = t('Email...');
-    $form['account']['mail']['#label_classes'] = ['hidden'];
+    $form['account']['mail']['#label_classes'] = ['visually-hidden'];
 
     // Username
     $form['account']['name']['#weight'] = 2;
     $form['account']['name']['#placeholder'] = t('Username');
-    $form['account']['name']['#label_classes'] = ['hidden'];
+    $form['account']['name']['#label_classes'] = ['visually-hidden'];
 
     // Password and confirmation
     // This field is not easily editable. Use javascript to
@@ -340,13 +334,13 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     // Current password
     $form['account']['current_pass']['#weight'] = 9;
     $form['account']['current_pass']['#placeholder'] = t('Current password...');
-    $form['account']['current_pass']['#label_classes'] = ['hidden'];
+    $form['account']['current_pass']['#label_classes'] = ['visually-hidden'];
     $form['account']['current_pass']['#description'] = t('Required to change <em class="placeholder">email</em> or <em class="placeholder">password</em>. <a href="/user/password" title="Send password reset instructions via email.">Reset your password</a>.');
 
     // Name prefix
     $form['account']['field_realname_prefix'] = $form['field_realname_prefix'];
-    unset($form['account']['field_realname_prefix']['widget']['#title']);
     $form['account']['field_realname_prefix']['widget']['#options']['_none'] = 'Name prefix...';
+    $form['account']['field_realname_prefix']['widget']['#title_display'] = 'invisible';
     $form['account']['field_realname_prefix']['#weight'] = 3;
     unset($form['field_realname_prefix']);
 
@@ -354,27 +348,27 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     $form['account']['field_realname_first'] = $form['field_realname_first'];
     $form['account']['field_realname_first']['#weight'] = 4;
     $form['account']['field_realname_first']['widget'][0]['value']['#placeholder'] = t('First name...');
-    $form['account']['field_realname_first']['widget'][0]['value']['#label_classes'] = ['hidden'];
+    $form['account']['field_realname_first']['widget'][0]['value']['#label_classes'] = ['visually-hidden'];
     unset($form['field_realname_first']);
 
     // Middle name
     $form['account']['field_realname_middle'] = $form['field_realname_middle'];
     $form['account']['field_realname_middle']['#weight'] = 5;
     $form['account']['field_realname_middle']['widget'][0]['value']['#placeholder'] = t('M.I.');
-    $form['account']['field_realname_middle']['widget'][0]['value']['#label_classes'] = ['hidden'];
+    $form['account']['field_realname_middle']['widget'][0]['value']['#label_classes'] = ['visually-hidden'];
     unset($form['field_realname_middle']);
 
     // Last name
     $form['account']['field_realname_last'] = $form['field_realname_last'];
     $form['account']['field_realname_last']['#weight'] = 6;
     $form['account']['field_realname_last']['widget'][0]['value']['#placeholder'] = t('Last name...');
-    $form['account']['field_realname_last']['widget'][0]['value']['#label_classes'] = ['hidden'];
+    $form['account']['field_realname_last']['widget'][0]['value']['#label_classes'] = ['visually-hidden'];
     unset($form['field_realname_last']);
 
     // Name suffix
     $form['account']['field_realname_suffix'] = $form['field_realname_suffix'];
-    unset($form['account']['field_realname_suffix']['widget']['#title']);
     $form['account']['field_realname_suffix']['widget']['#options']['_none'] = 'Name suffix...';
+    $form['account']['field_realname_suffix']['widget']['#title_display'] = 'invisible';
     $form['account']['field_realname_suffix']['#weight'] = 7;
     unset($form['field_realname_suffix']);
 
@@ -390,7 +384,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
 
     // Hide DXPR editing for unprivileged accounts.
     if (!$current_user->hasPermission('administer users')) {
-      $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
+      $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'visually-hidden';
     }
   }
 
@@ -399,7 +393,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   // Target ALL checkout flows. Remove last bit of form id that denotes
   // the type of checkout flow.
   if (substr($form['#id'], 0, 33) === 'commerce-checkout-flow-multistep-') {
-    $form['login']['register']['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
+    $form['login']['register']['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'visually-hidden';
     $form['login']['register']['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
 
     if ($form['#step_id'] === 'order_information') {
@@ -417,7 +411,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       // Custom checkout fields from order types.
       if (array_key_exists('order_fields:checkout', $form) && array_key_exists('field_attendee_name', $form['order_fields:checkout'])) {
         $form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#placeholder'] = $form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#title'] . '...';
-        unset($form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#title']);
+        $form['order_fields:checkout']['field_attendee_name']['widget'][0]['value']['#title_display'] = 'invisible';
       }
     }
 
@@ -438,7 +432,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       unset($form['completion_register']['field_realname_last']);
 
       // User is dissavowed from DXPR editing.
-      $form['completion_register']['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'hidden';
+      $form['completion_register']['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'visually-hidden';
       $form['completion_register']['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
     }
   }
@@ -452,16 +446,16 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       $form['location']['#options']['All'] = t('Select a location...');
     }
     if (isset($form['date_wrapper'])) {
-      $form['date_wrapper']['date_wrapper']['date']['min']['#title'] = '';
-      $form['date_wrapper']['date_wrapper']['date']['max']['#title'] = '';
+      $form['date_wrapper']['date_wrapper']['date']['min']['#title_display'] = 'invisible';
+      $form['date_wrapper']['date_wrapper']['date']['max']['#title_display'] = 'invisible';
     }
   }
 
   // Remove min/max labels from date range fields.
   if ($form['#id'] === 'views-exposed-form-positions-page-1') {
     if (isset($form['posted_wrapper'])) {
-      $form['posted_wrapper']['posted_wrapper']['posted']['min']['#title'] = '';
-      $form['posted_wrapper']['posted_wrapper']['posted']['max']['#title'] = '';
+      $form['posted_wrapper']['posted_wrapper']['posted']['min']['#title_display'] = 'invisible';
+      $form['posted_wrapper']['posted_wrapper']['posted']['max']['#title_display'] = 'invisible';
     }
   }
 
@@ -474,8 +468,8 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
       $form['institution']['#options']['All'] = t('Select an institution...');
     }
     if (isset($form['dates_wrapper'])) {
-      $form['dates_wrapper']['dates_wrapper']['dates']['min']['#title'] = '';
-      $form['dates_wrapper']['dates_wrapper']['dates']['max']['#title'] = '';
+      $form['dates_wrapper']['dates_wrapper']['dates']['min']['#title_display'] = 'invisible';
+      $form['dates_wrapper']['dates_wrapper']['dates']['max']['#title_display'] = 'invisible';
     }
   }
 
@@ -638,5 +632,58 @@ function mbgna_tweaks_webform_submission_form_alter(&$form, FormStateInterface $
   // Move progress block from top to bottom of form if it exists.
   if (array_key_exists('progress', $form) && array_key_exists('#weight', $form['progress']) && array_key_exists('#current_page', $form['progress'])) {
     $form['progress']['#weight'] = 100;
+  }
+}
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function mbgna_tweaks_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-events-page-1') {
+    $form['title']['#title_display'] = 'invisible';
+    $form['date_wrapper']['date_wrapper']['#title_display'] = 'invisible';
+  }
+
+  if ($form['#id'] === 'views-exposed-form-posts-page-1') {
+    $form['title']['#title_display'] = 'invisible';
+    $form['tags']['#title_display'] = 'invisible';
+  }
+
+  if ($form['#id'] === 'views-exposed-form-positions-page-1') {
+    $form['type']['#title_display'] = 'invisible';
+    $form['name']['#title_display'] = 'invisible';
+    $form['description']['#title_display'] = 'invisible';
+    $form['posted_wrapper']['posted_wrapper']['#title_display'] = 'invisible';
+  }
+
+  if ($form['#id'] === 'views-exposed-form-classes-page-1') {
+    $form['title']['#title_display'] = 'invisible';
+    $form['type']['#title_display'] = 'invisible';
+    $form['dates']['#title_display'] = 'invisible';
+    $form['institution']['#title_display'] = 'invisible';
+  }
+
+  if ($form['#id'] === 'views-exposed-form-organization-page-2') {
+    $form['label']['#title_display'] = 'invisible';
+  }
+
+  if ($form['#id'] === 'views-exposed-form-plant-block-2') {
+    $form['common_name']['#title_display'] = 'invisible';
+    $form['style']['#title_display'] = 'invisible';
+    $form['genus']['#title_display'] = 'invisible';
+    $form['species']['#title_display'] = 'invisible';
+  }
+
+  if ($form['#id'] === 'views-exposed-form-plant-block-4') {
+    $form['form']['#title_display'] = 'invisible';
+    $form['season']['#title_display'] = 'invisible';
+    $form['cultivar']['#title_display'] = 'invisible';
+    $form['country']['#title_display'] = 'invisible';
+  }
+
+  if ($form['#id'] === 'views-exposed-form-products-mbgna-page-1' || $form['#id'] === 'views-exposed-form-products-mbgna-page-2') {
+    $form['title']['#title_display'] = 'invisible';
+    $form['category']['#title_display'] = 'invisible';
   }
 }
