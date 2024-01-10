@@ -45,6 +45,24 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     } 
   }
 
+  // // Set DXPR field to "off" for everyone except superadmin user 1.
+  // if ($current_user->id() != 1) {
+  //   $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = TRUE;
+  //   $form['dxpr_user_is_disavowed']['#access'] = FALSE;
+  // }
+
+  // Disable DXPR editing for new registrations.
+  if ($current_user->id() != 1 && array_key_exists('dxpr_user_is_disavowed', $form)) {
+    $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
+    $form['dxpr_user_is_disavowed']['#access'] = FALSE;
+
+    // // Hide DXPR editing for unprivileged accounts.
+    // if (!$current_user->hasPermission('administer users')) {
+    //   $form['dxpr_user_is_disavowed']['#access'] = FALSE;
+    //   $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'visually-hidden';
+    // }
+  }
+
   // Load the user being viewed, if being viewed.
   if (\Drupal::routeMatch()->getParameter('user')) {
     // Attempt loading the full user account from the url.
@@ -370,25 +388,6 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     unset($form['account']['mail']['#description']);
     unset($form['account']['name']['#description']);
     unset($form['account']['pass']['#description']);
-  }
-
-  // Get privileged user roles.
-  $privileged_user = FALSE;
-  $config = \Drupal::config('mbgna_settings.settings');
-  foreach ($current_user->getRoles() as $role) {
-    if (in_array($role, $config->get('privileged_user_roles'))) {
-      $privileged_user = TRUE; 
-    }
-  }
-
-  // Disable DXPR editing by default for all non-privileged users.
-  if (!$privileged_user && array_key_exists('dxpr_user_is_disavowed', $form)) {
-    $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
-  }
-
-  // Hide DXPR editing for non superusers.
-  if ($current_user->id() != 1) {
-    $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'visually-hidden';
   }
 
   // Target ALL checkout flows. Remove last bit of form id that denotes
