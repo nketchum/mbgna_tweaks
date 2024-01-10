@@ -45,22 +45,10 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
     } 
   }
 
-  // // Set DXPR field to "off" for everyone except superadmin user 1.
-  // if ($current_user->id() != 1) {
-  //   $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = TRUE;
-  //   $form['dxpr_user_is_disavowed']['#access'] = FALSE;
-  // }
-
   // Disable DXPR editing for new registrations.
   if ($current_user->id() != 1 && array_key_exists('dxpr_user_is_disavowed', $form)) {
     $form['dxpr_user_is_disavowed']['widget']['value']['#default_value'] = 1;
     $form['dxpr_user_is_disavowed']['#access'] = FALSE;
-
-    // // Hide DXPR editing for unprivileged accounts.
-    // if (!$current_user->hasPermission('administer users')) {
-    //   $form['dxpr_user_is_disavowed']['#access'] = FALSE;
-    //   $form['dxpr_user_is_disavowed']['widget']['value']['#type'] = 'visually-hidden';
-    // }
   }
 
   // Load the user being viewed, if being viewed.
