@@ -688,35 +688,37 @@ function mbgna_tweaks_user_update($account) {
   $config_mbgna = \Drupal::config('mbgna_settings.settings');
   $config_system = \Drupal::config('system.site');
 
-  // Send an internal email notification when a member changes their account information.
+  // Send an internal email notification when a member changes their email address.
   foreach ($account->getRoles() as $role) {
     if (in_array($role, $config_mbgna->get('membership_user_roles'))) {
-      // Email
-      $email = $account->getEmail();
+      if ($account->original->getEmail() != $account->getEmail()) {
+        // Email
+        $email = $account->getEmail();
 
-      // Realname
-      $name_prefix_tid = $account->get('field_realname_prefix')->target_id;
-      if ($name_prefix_tid) {
-        $name_prefix_term = \Drupal\taxonomy\Entity\Term::load($name_prefix_tid);
-        $name_prefix = $name_prefix_term->getName() .' ';
+        // Realname
+        $name_prefix_tid = $account->get('field_realname_prefix')->target_id;
+        if ($name_prefix_tid) {
+          $name_prefix_term = \Drupal\taxonomy\Entity\Term::load($name_prefix_tid);
+          $name_prefix = $name_prefix_term->getName() .' ';
+        }
+        $name_first = $account->get('field_realname_first')->value ? $account->get('field_realname_first')->value .' ' : '';
+        $name_middle = $account->get('field_realname_middle')->value ? $account->get('field_realname_middle')->value .' ' : '';
+        $name_last = $account->get('field_realname_last')->value; // no trailing space, suffix has leading space if suffix is present.
+        $name_suffix_tid = $account->get('field_realname_suffix')->target_id;
+        if ($name_suffix_tid) {
+          $name_suffix_term = \Drupal\taxonomy\Entity\Term::load($name_suffix_tid);
+          $name_suffix = $name_suffix_term->getName();
+        }
+        $full_name = $name_prefix . $name_first . $name_middle . $name_last . $name_suffix;
+
+        // Send email.
+        $to = $config_mbgna->get('member_activity_notification_email') ? $config_mbgna->get('member_activity_notification_email') : $config_system->get('mail');
+        $subject = 'Member account information change';
+        $message = 'A member ('. $account->getAccountName() .') has updated their account information. Email:'. $email .'; Full Name: '. $full_name;
+        mail($to, $subject, $message);
+
+        break; // Member role found. Terminate loop.
       }
-      $name_first = $account->get('field_realname_first')->value ? $account->get('field_realname_first')->value .' ' : '';
-      $name_middle = $account->get('field_realname_middle')->value ? $account->get('field_realname_middle')->value .' ' : '';
-      $name_last = $account->get('field_realname_last')->value; // no trailing space, suffix has leading space if suffix is present.
-      $name_suffix_tid = $account->get('field_realname_suffix')->target_id;
-      if ($name_suffix_tid) {
-        $name_suffix_term = \Drupal\taxonomy\Entity\Term::load($name_suffix_tid);
-        $name_suffix = $name_suffix_term->getName();
-      }
-      $full_name = $name_prefix . $name_first . $name_middle . $name_last . $name_suffix;
-
-      // Send email.
-      $to = $config_mbgna->get('member_activity_notification_email') ? $config_mbgna->get('member_activity_notification_email') : $config_system->get('mail');
-      $subject = 'Member account information change';
-      $message = 'A member ('. $account->getAccountName() .') has updated their account information. Email:'. $email .'; Full Name: '. $full_name;
-      mail($to, $subject, $message);
-
-      break; // Member role found. Terminate loop.
     }
   }
 }
