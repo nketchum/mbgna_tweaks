@@ -441,10 +441,12 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
 
   // Remove min/max labels from date range fields.
   if ($form['#id'] === 'views-exposed-form-positions-page-1') {
-    if (isset($form['posted_wrapper'])) {
-      $form['posted_wrapper']['posted_wrapper']['posted']['min']['#title_display'] = 'invisible';
-      $form['posted_wrapper']['posted_wrapper']['posted']['max']['#title_display'] = 'invisible';
-    }
+    $form['type']['#options']['All'] = t('Type of position...');
+    $form['posted']['#title_display'] = 'invisible';
+    // if (isset($form['posted_wrapper'])) {
+    //   $form['posted_wrapper']['posted_wrapper']['posted']['min']['#title_display'] = 'invisible';
+    //   $form['posted_wrapper']['posted_wrapper']['posted']['max']['#title_display'] = 'invisible';
+    // }
   }
 
   // Remove min/max labels from date range fields.
