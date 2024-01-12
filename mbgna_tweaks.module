@@ -481,7 +481,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
 
   // Rename openid login button.
   if ($form['#id'] === 'openid-connect-login-form') {
-    $form['openid_connect_client_generic_login']['#value'] = t('Staff Login');
+    $form['openid_connect_client_generic_login']['#value'] = t('Staff');
   }
 }
 
