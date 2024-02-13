@@ -724,3 +724,24 @@ function mbgna_tweaks_user_update($account) {
     }
   }
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function mbgna_tweaks_views_pre_render(ViewExecutable $view) {
+  // Ensure unique nodes.
+  if ($view->storage->get('id') === 'posts') {
+    $i = 0;
+    $nodes = [];
+    foreach ($view->result as $result) {
+      $entity = $result->_entity;
+      $nid = $entity->get('nid')->value;
+      if (in_array($nid, $nodes)) {
+        unset($view->result[$i]);
+      } else {
+        $nodes[] = $entity->get('nid')->value;
+      }
+      $i++;
+    }
+  }
+}
