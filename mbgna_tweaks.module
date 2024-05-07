@@ -745,3 +745,20 @@ function mbgna_tweaks_views_pre_render(ViewExecutable $view) {
     }
   }
 }
+
+/**
+ * Implements hook_js_alter().
+ */
+function mbgna_tweaks_js_alter(&$javascript, $extension) {
+  // Gin tries to load its admin-side js on the front end,
+  // which breaks js when it's included in the aggregation.
+  $excluded_files = [
+    'themes/contrib/gin/dist/js/sidebar.js',
+  ];
+
+  foreach ($javascript as $key => $file) {
+    if (in_array($file['data'], $excluded_files)) {
+      unset($javascript[$key]);
+    }
+  }
+}
