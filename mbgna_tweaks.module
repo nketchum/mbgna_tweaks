@@ -28,6 +28,20 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   $route_name = \Drupal::routeMatch()->getRouteName();
   $current_user = \Drupal::currentUser();
 
+  // Drupal commerce promotional coupons and commerce_checkout_order_fields do not
+  // play along, entering coupon codes does not update totals when extra order
+  // fields are present. So, let's keep the extra fields on the "order_information" step
+  // and suppress the coupon sidebar pane, and only show that on the "review" step.
+  if ($form['#id'] === 'commerce-checkout-flow-multistep-default') {
+    if ($form['#step_id'] === 'order_information') {
+      unset($form['sidebar']['coupon_redemption']);
+      $form['sidebar']['coupon_notice'] = array(
+        '#type' => 'markup',
+        '#markup' => '<div class="checkout-pane-coupon-redemption"><div id="edit-sidebar-coupon-redemption-form"><h5>Coupon code</h5><p class="small">If you have any coupon code(s) you can add them at the next checkout step.</p></div></div>',
+      );
+    }
+  }
+
   // Class dates are complicated enough as it is. Recurring dates requires a multiple date
   // field, and can use an individual date to specify entire ranges of dates. This is already
   // rather powerful. Currently, we can select which days a class occurs, the time (applies 
