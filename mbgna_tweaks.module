@@ -132,7 +132,7 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   }
 
   // Target all shopping cart forms.
-  if (substr($form['#id'], 0, -11) === 'views-form-commerce-cart-form') {
+  if (substr($form['#id'], 0, 37) === 'views-form-commerce-cart-form-default') {
     // Get the cart order type;
     $cart_view = $form['output'][0]['#view'];
     foreach ($cart_view->result as $row_id => $row) {

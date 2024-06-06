@@ -6,3 +6,5 @@ core_version_requirement: ^9 || ^10
 dependencies:
   - ckeditor5:ckeditor5
   - mbgna_settings
+  - drupal:commerce
+  - drupal:commerce_stock

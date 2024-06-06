@@ -14,3 +14,8 @@ services:
     arguments: ['@messenger', '@string_translation', '@entity_type.manager']
     tags:
       - { name: event_subscriber }
+  mbgna_tweaks.event_subscriber:
+    class: Drupal\mbgna_tweaks\EventSubscriber\OrderEventSubscriber
+    arguments: ['@commerce_stock.service_manager', '@entity_type.manager']
+    tags:
+      - { name: event_subscriber }
