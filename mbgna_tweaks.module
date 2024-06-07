@@ -144,13 +144,13 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
           if ($shopping_cart_order_type != 'default' && 
             $shopping_cart_order_type != 'merchandise' &&
             $shopping_cart_order_type != 'class') {
-            $cart_title = 'My shopping cart – '. $shopping_cart_order_type. 's';
+            $cart_title = ucfirst($shopping_cart_order_type). 's shopping cart';
           } elseif ($shopping_cart_order_type === 'class') {
             // "Class" uses "es" when pluralized.
-            $cart_title = 'My shopping cart – '. $shopping_cart_order_type. 'es';
+            $cart_title = ucfirst($shopping_cart_order_type). 'es shopping cart';
           } elseif ($shopping_cart_order_type === 'merchandise') {
             // "Merchandise" is already pluralized.
-            $cart_title = 'My shopping cart – '. $shopping_cart_order_type;
+            $cart_title = ucfirst($shopping_cart_order_type). ' shopping cart';
           }
         }
       }
