@@ -440,16 +440,12 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   }
 
   // Set default selection labels for "better select" views filter module.
-  if ($form['#id'] === 'views-exposed-form-events-page-1' && isset($form['date_wrapper'])) {
+  if ($form['#id'] === 'views-exposed-lan-events-page-1') {
     if (isset($form['categories'])) {
       $form['categories']['#options']['All'] = t('Select a category...');
     }
     if (isset($form['location'])) {
       $form['location']['#options']['All'] = t('Select a location...');
-    }
-    if (isset($form['date_wrapper'])) {
-      $form['date_wrapper']['date_wrapper']['date']['min']['#title_display'] = 'invisible';
-      $form['date_wrapper']['date_wrapper']['date']['max']['#title_display'] = 'invisible';
     }
   }
 
