@@ -648,6 +648,13 @@ function mbgna_tweaks_form_views_exposed_form_alter(&$form, $form_state, $form_i
   if ($form['#id'] === 'views-exposed-form-events-page-1') {
     $form['title']['#title_display'] = 'invisible';
     $form['date_wrapper']['date_wrapper']['#title_display'] = 'invisible';
+
+    if (isset($form['categories'])) {
+      $form['categories']['#options']['All'] = t('Select a category...');
+    }
+    if (isset($form['location'])) {
+      $form['location']['#options']['All'] = t('Select a location...');
+    }
   }
 
   if ($form['#id'] === 'views-exposed-form-posts-page-1') {
