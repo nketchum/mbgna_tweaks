@@ -1,0 +1,32 @@
+/* Override admin theme */
+
+@media print {
+  /* Global */
+  body {
+    padding: 0 !important;
+  }
+  body > .toolbar,
+  .gin-secondary-toolbar,
+  .region-sticky-watcher,
+  .region-sticky,
+  .sticky-shadow,
+  .content-header,
+  .region-highlighted {
+    display: none !important;
+  }
+  .page-wrapper > .layout-container,
+  .page-wrapper > .layout-container > .page-content {
+    margin: 0 !important;
+  }
+
+  /* Commerce receipt styles */
+  .block-system-main-block > table > tbody > tr > td > table:first-child {
+    display: none !important;
+  }
+  .block-system-main-block > table > tbody > tr {
+    border-bottom: none !important;
+  }
+  body > div.page-wrapper > div.layout-container:not(.gin-secondary-toolbar) {
+    display: block !important;
+  }
+}

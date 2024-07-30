@@ -779,3 +779,13 @@ function mbgna_tweaks_js_alter(&$javascript, $extension) {
     }
   }
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function mbgna_tweaks_page_attachments(array &$attachments) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  if ($theme == 'gin') {
+    $attachments['#attached']['library'][] = 'mbgna_tweaks/extra.admin';
+  }
+}
