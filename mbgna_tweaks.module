@@ -28,6 +28,11 @@ function mbgna_tweaks_form_alter(&$form, FormStateInterface $form_state, $form_i
   $route_name = \Drupal::routeMatch()->getRouteName();
   $current_user = \Drupal::currentUser();
 
+  if ($form['#id'] === 'protected-pages-enter-password') {
+    $form['#attributes']['class'][] = 'container-squeeze';
+    $form['#attributes']['class'][] = 'container-white';
+  }
+
   // Drupal commerce promotional coupons and commerce_checkout_order_fields do not
   // play along, entering coupon codes does not update totals when extra order
   // fields are present. So, let's keep the extra fields on the "order_information" step
